@@ -67,3 +67,6 @@ export default defineConfig({
     },
   },
 });
+
+// https://tina.io/docs/tina-cloud/
+// add authentication later when we have an account
