@@ -1,48 +1,200 @@
+# Phlebologist website
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with
 [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Technologies used:
+
+- Next.js (app router)
+- TypeScript
+- Tailwind CSS
+- Tina CMS
+
+## Design Layout
+
+_(in progress)_
 
 ## Getting Started
 
-First, run the development server:
+1. Clone repo
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git@github.com:SoftRyzen-internship/phlebologist.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the
-result.
+> if you don't have access to repo - contact
+> [@LanaSvetCat](https://t.me/LanaSvetCat) in telegram
 
-You can start editing the page by modifying `app/page.tsx`. The page
-auto-updates as you edit the file.
+1. Recommended for use **npm** - `npm i` or `npm install`
+2. Create file `.env.local` in the project root using `.env.local.example` as a
+   template
+3. Run the local server via `npm run dev` command
+4. Open `http://localhost:3000`.
 
-This project uses
-[`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to
-automatically optimize and load Inter, a custom Google Font.
+### Personal branch
 
-## Learn More
+1. Go to **dev** branch (`git checkout dev`) and fetch the contents
+   (`git pull`).
+2. Create your working branch from **dev**. The naming policy for the branches
+   is: **add/update/fix/delete** + **feature name** + **your surname**.
 
-To learn more about Next.js, take a look at the following resources:
+### Pre-commit actions
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js
-  features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Run `npm run format` so that prettier could check and adjust your formatting.
+2. Run `npm run test-all` if you'd like to perform a full code test. This
+   command will also be executed automatically before commiting your changes to
+   GH.
+3. Fix the errors and if there are none - you can go ahead with commiting your
+   changes to your branch.
 
-You can check out
-[the Next.js GitHub repository](https://github.com/vercel/next.js/) - your
-feedback and contributions are welcome!
+### Pull requests
 
-## Deploy on Vercel
+1. Before creating a PR, make sure to `git pull` the current version of **dev**
+   into your branch and resolve the conflicts locally.
+2. When creating a PR, make sure to chose **dev** as a branch to merge your
+   working branch into.
+3. Request your PR to be reviewed by the Team Lead - Yana Palamarchuk
+   (Yana-Palam).
 
-The easiest way to deploy your Next.js app is to use the
-[Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme)
-from the creators of Next.js.
+## Project structure
 
-Check out our
-[Next.js deployment documentation](https://nextjs.org/docs/deployment) for more
-details.
+> Attention! The project structure is not final and can be changed at any time.
+
+**☝️ Create a components folder for each module**
+
+<details>
+
+<summary><b>💡 Example:</b></summary>
+
+<br/>
+
+```
+# ✅ Good
+
+├── components
+    ├── Header
+        ├── Header.tsx
+    ├── Footer
+        ├── Footer.tsx
+```
+
+</details>
+
+---
+
+**☝️ Use the default export for the component**
+
+<details>
+
+<summary><b>💡 Example:</b></summary>
+
+<br/>
+
+```ts
+# ✅ Good
+
+const Header = () => { ... }
+
+export default Header;
+```
+
+</details>
+
+---
+
+**☝️ Perform a re-export of your component from the `index.ts` file in the
+`components` folder**
+
+<details>
+
+<summary><b>💡 Example:</b></summary>
+
+<br/>
+
+```ts
+# ✅ Good
+
+// @/components/index.ts
+
+export { default as Header } from '@/components/Header/Header';
+```
+
+</details>
+
+---
+
+**☝️ Reusable css classes should be placed in the `styles` folder .**
+
+<details>
+
+<summary><b>💡 Example:</b></summary>
+
+<br/>
+
+```css
+/*globals.css */
+
+@layer components {
+  .your-class {
+    @apply ...;
+  }
+}
+```
+
+</details>
+
+---
+
+**☝️ Description of object structure**
+
+<details>
+
+<summary><b>💡 Structure: </b></summary>
+
+<br/>
+
+```
+|-- components -> folder with reusable components
+  |-- NameComponent -> folders for each component
+    |-- NameComponent.tsx -> main component
+    |-- NameComponent.props.ts -> prop types for this component
+    |-- NameComponent.module.css -> additional styles for the component (only if necessary)
+  |-- index.ts -> file for re-exports
+|-- app
+  |-- [lang] -> layout, pages and routing
+|-- public -> static files
+  |-- icons -> folder with icons
+  |-- images -> folder with images
+|-- styles -> global styles
+|-- sections -> folder with section components
+  |-- SectionComponent -> folders for each section component
+    |-- SectionComponent.tsx -> main section component
+    |-- SectionComponent.props.ts -> prop types for this section component
+    |-- SectionComponent.module.css -> additional styles for the component (only if necessary)
+  |-- index.ts -> file for re-exports
+|-- types -> global types
+|-- dictionaries -> website content for different locales
+|-- data -> data for the project (can be created if necessary)
+|-- hooks -> custom users hooks (can be created if necessary)
+|-- utils -> helpers, functions, etc.
+|-- api -> data fetching requests
+```
+
+</details>
+
+---
+
+## 📚 Components API
+
+Each reusable component has its own API. You can find it in the component's
+folder. This is a list of most common components and their API.
+
+This is example of API for component `Title`
+
+- ### Title
+
+| Prop        | Default     | Description                                     |
+| ----------- | ----------- | ----------------------------------------------- |
+| `tag`       | `h2`        | choose the tag of title you'd need: `h1` - `h3` |
+| `variant`   | `primary`   | `main`, `primary`, `secondary`                  |
+| `children`  | `undefined` | required, any content                           |
+| `className` | `undefined` | add custom or additional css class you'd need   |
