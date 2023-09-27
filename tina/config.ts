@@ -49,7 +49,7 @@ export default defineConfig({
                     type: 'rich-text',
                   },
                   {
-                    name: 'subtitle',
+                    name: 'description',
                     type: 'rich-text',
                   },
                 ],

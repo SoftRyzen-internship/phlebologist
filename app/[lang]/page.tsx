@@ -4,6 +4,7 @@ import { getDictionary } from '@/utils/dictionary';
 import client from '@/tina/__generated__/client';
 
 import { Test } from '@/components';
+import { TestSection } from '@/sections';
 
 export default async function Home({
   params: { lang },
@@ -20,6 +21,7 @@ export default async function Home({
       <p className="text-base text-gray-700">{page.page.home.description}</p>
 
       <Test {...result} />
+      <TestSection {...result} />
     </main>
   );
 }
