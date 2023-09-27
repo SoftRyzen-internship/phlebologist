@@ -9,7 +9,7 @@ const TestHero = (props: PageSectionsHero) => {
         <TinaMarkdown content={props.title} />
       </h2>
 
-      {/* variant 2 - works in the video tutorial but does not apply styles in my case o_O */}
+      {/* variant 2 - needs double-checking */}
       <TinaMarkdown
         content={props.subtitle}
         components={{
