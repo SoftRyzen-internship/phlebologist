@@ -60,4 +60,10 @@ export default defineConfig({
       },
     ],
   },
+  media: {
+    tina: {
+      publicFolder: 'public',
+      mediaRoot: 'uploads',
+    },
+  },
 });

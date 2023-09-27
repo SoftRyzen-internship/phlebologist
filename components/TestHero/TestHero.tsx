@@ -14,7 +14,7 @@ const TestHero = (props: PageSectionsHero) => {
         content={props.subtitle}
         components={{
           h3: props => (
-            <h2 className="mt-4 text-center text-lg uppercase" {...props} />
+            <h3 className="mt-4 text-center text-lg uppercase" {...props} />
           ),
         }}
       />

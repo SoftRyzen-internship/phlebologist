@@ -76,7 +76,9 @@
         "namespace": ["page"]
       }
     ],
-    "config": {}
+    "config": {
+      "media": { "tina": { "publicFolder": "public", "mediaRoot": "uploads" } }
+    }
   },
   "lookup": {
     "DocumentConnection": {
