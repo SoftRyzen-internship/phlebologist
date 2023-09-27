@@ -20,6 +20,42 @@ export default defineConfig({
             name: 'title',
             type: 'string',
           },
+          {
+            name: 'sections',
+            label: 'Sections',
+            type: 'object',
+            list: true,
+            templates: [
+              {
+                name: 'hero',
+                label: 'Hero',
+                fields: [
+                  {
+                    name: 'title',
+                    type: 'rich-text',
+                  },
+                  {
+                    name: 'subtitle',
+                    type: 'rich-text',
+                  },
+                ],
+              },
+              {
+                name: 'about',
+                label: 'About',
+                fields: [
+                  {
+                    name: 'title',
+                    type: 'rich-text',
+                  },
+                  {
+                    name: 'subtitle',
+                    type: 'rich-text',
+                  },
+                ],
+              },
+            ],
+          },
         ],
       },
     ],
