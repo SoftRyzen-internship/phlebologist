@@ -27,8 +27,10 @@ git@github.com:SoftRyzen-internship/phlebologist.git
 1. Recommended for use **npm** - `npm i` or `npm install`
 2. Create file `.env.local` in the project root using `.env.local.example` as a
    template
-3. Run the local server via `npm run dev` command
-4. Open `http://localhost:3000`.
+3. Run the local server via `npm run dev` command. The `dev` command launches
+   CMS first and then launches the main server.
+4. Access the website at `http://localhost:3000`. The admin panel is available
+   at `http://localhost:3000/admin`.
 
 ### Personal branch
 
@@ -45,15 +47,18 @@ git@github.com:SoftRyzen-internship/phlebologist.git
    GH.
 3. Fix the errors and if there are none - you can go ahead with commiting your
    changes to your branch.
+4. Make sure to give your commit a name that clearly states what has been done:
+   **add/update/fix/remove** + **feature/component name**. Example: _"update
+   Header types & styles"_.
 
 ### Pull requests
 
 1. Before creating a PR, make sure to `git pull` the current version of **dev**
    into your branch and resolve the conflicts locally.
-2. When creating a PR, make sure to chose **dev** as a branch to merge your
+2. When creating a PR, make sure to choose **dev** as a branch to merge your
    working branch into.
-3. Request your PR to be reviewed by the Team Lead - Yana Palamarchuk
-   (Yana-Palam).
+3. Request your PR to be reviewed by the Team Lead - **Yana Palamarchuk**
+   (**Yana-Palam**).
 
 ## Project structure
 
