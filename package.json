@@ -3,25 +3,47 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "tinacms dev -c \"next dev\"",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "format": "prettier --write .",
+    "check-types": "tsc --pretty --noEmit",
+    "check-format": "prettier --check .",
+    "check-lint": "eslint . --ext ts --ext tsx --ext js",
+    "test-all": "npm run check-format && npm run check-lint && npm run check-types && npm run build",
+    "prepare": "husky install"
   },
   "dependencies": {
+    "@formatjs/intl-localematcher": "^0.4.2",
+    "@tinacms/cli": "^1.5.29",
+    "@typescript-eslint/eslint-plugin": "^6.7.3",
+    "@typescript-eslint/parser": "^6.7.3",
+    "classnames": "^2.3.2",
+    "negotiator": "^0.6.3",
+    "next": "latest",
     "react": "latest",
     "react-dom": "latest",
-    "next": "latest"
+    "react-hook-form": "^7.46.2",
+    "react-hook-form-persist": "^3.0.0",
+    "tinacms": "^1.5.20"
   },
   "devDependencies": {
-    "typescript": "latest",
-    "@types/react": "latest",
+    "@svgr/webpack": "^8.1.0",
     "@types/node": "latest",
+    "@types/react": "latest",
     "@types/react-dom": "latest",
     "autoprefixer": "latest",
-    "postcss": "latest",
-    "tailwindcss": "latest",
     "eslint": "latest",
-    "eslint-config-next": "latest"
+    "eslint-config-next": "latest",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.33.2",
+    "postcss": "latest",
+    "prettier": "^2.8.4",
+    "prettier-plugin-tailwindcss": "^0.3.0",
+    "tailwindcss": "latest",
+    "typescript": "latest",
+    "husky": "^8.0.0"
   }
 }
