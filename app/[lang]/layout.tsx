@@ -1,4 +1,6 @@
 import '@/styles/global.css';
+
+import React from 'react';
 import type { Metadata } from 'next';
 import { Locale } from '@/i18n.config';
 import { Inter } from 'next/font/google';
