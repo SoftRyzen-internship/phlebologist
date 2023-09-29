@@ -3,3 +3,9 @@ export { default as LocaleSwitcher } from '@/components/LocaleSwitcher/LocaleSwi
 
 // tina testing
 export { default as Test } from '@/components/Test/Test';
+
+// heading
+export { default as Heading } from '@/components/Heading/Heading';
+
+// buttons
+export { default as ButtonPrimary } from '@/components/Buttons/ButtonPrimary/ButtonPrimary';

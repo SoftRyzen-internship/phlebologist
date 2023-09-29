@@ -4,6 +4,7 @@ import { getDictionary } from '@/utils/dictionary';
 import { fetchGeneral } from '@/api/fetchAbout';
 
 import { Test } from '@/components';
+import { ButtonPrimary } from '@/components';
 
 export default async function Home({
   params: { lang },
@@ -20,8 +21,13 @@ export default async function Home({
       {/* local data rendering */}
       <h1 className="text-2xl">{page.page.home.title}</h1>
       <p className="text-base text-gray-700">{page.page.home.description}</p>
+
       {/* admin data rendering */}
       <Test data={general} />
+
+      <ButtonPrimary buttonsize="large">
+        Записатись на консультацію
+      </ButtonPrimary>
     </main>
   );
 }
