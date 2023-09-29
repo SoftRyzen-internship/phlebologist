@@ -3,4 +3,3 @@ export { default as LocaleSwitcher } from '@/components/LocaleSwitcher/LocaleSwi
 
 // tina testing
 export { default as Test } from '@/components/Test/Test';
-export { default as TestHero } from '@/components/TestHero/TestHero';
