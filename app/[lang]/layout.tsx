@@ -7,7 +7,11 @@ import { Inter } from 'next/font/google';
 
 import { Header } from '@/components';
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({
+  subsets: ['latin', 'cyrillic'],
+  display: 'swap',
+  variable: '--font-inter',
+});
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -23,7 +27,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang={params.lang}>
-      <body className={inter.className}>
+      <body className={(inter.className, 'leading-normal')}>
         <Header lang={params.lang} />
         {children}
       </body>

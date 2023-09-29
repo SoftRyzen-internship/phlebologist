@@ -5,6 +5,7 @@ import client from '@/tina/__generated__/client';
 
 import { Test } from '@/components';
 import { TestSection } from '@/sections';
+import { ButtonPrimary } from '@/components';
 
 export default async function Home({
   params: { lang },
@@ -22,6 +23,9 @@ export default async function Home({
 
       <Test {...result} />
       <TestSection {...result} />
+      <ButtonPrimary buttonsize="large">
+        Записатись на консультацію
+      </ButtonPrimary>
     </main>
   );
 }
