@@ -2,12 +2,7 @@ import { HTMLAttributes } from 'react';
 
 type HeadingTag = 'h1' | 'h2' | 'h3';
 
-type HeadingVariant =
-  | 'main'
-  | 'primary'
-  | 'secondary'
-  | 'tertiary'
-  | 'privacy-policy';
+type HeadingVariant = 'main' | 'primary' | 'secondary' | 'tertiary';
 
 export interface HeadingElementProps {
   className?: string;
