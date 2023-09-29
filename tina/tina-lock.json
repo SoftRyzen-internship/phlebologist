@@ -74,6 +74,169 @@
           }
         ],
         "namespace": ["page"]
+      },
+      {
+        "name": "about",
+        "label": "About",
+        "path": "content/about",
+        "format": "md",
+        "fields": [
+          {
+            "name": "general",
+            "label": "General",
+            "type": "object",
+            "required": true,
+            "fields": [
+              {
+                "name": "uk",
+                "label": "UK",
+                "type": "object",
+                "fields": [
+                  {
+                    "name": "name",
+                    "label": "Name",
+                    "type": "string",
+                    "namespace": ["about", "general", "uk", "name"],
+                    "searchable": true
+                  },
+                  {
+                    "name": "profession",
+                    "label": "Profession",
+                    "type": "rich-text",
+                    "namespace": ["about", "general", "uk", "profession"],
+                    "searchable": true,
+                    "parser": { "type": "markdown" }
+                  },
+                  {
+                    "name": "education",
+                    "label": "Education",
+                    "type": "object",
+                    "list": true,
+                    "fields": [
+                      {
+                        "name": "institution",
+                        "label": "Institution",
+                        "type": "string",
+                        "namespace": [
+                          "about",
+                          "general",
+                          "uk",
+                          "education",
+                          "institution"
+                        ],
+                        "searchable": true
+                      }
+                    ],
+                    "ui": { "defaultItem": { "institution": "" } },
+                    "namespace": ["about", "general", "uk", "education"],
+                    "searchable": true
+                  },
+                  {
+                    "name": "experience",
+                    "label": "Experience",
+                    "type": "object",
+                    "list": true,
+                    "fields": [
+                      {
+                        "name": "point",
+                        "label": "Point",
+                        "type": "string",
+                        "namespace": [
+                          "about",
+                          "general",
+                          "uk",
+                          "experience",
+                          "point"
+                        ],
+                        "searchable": true
+                      }
+                    ],
+                    "ui": { "defaultItem": { "point": "" } },
+                    "namespace": ["about", "general", "uk", "experience"],
+                    "searchable": true
+                  }
+                ],
+                "namespace": ["about", "general", "uk"],
+                "searchable": true
+              },
+              {
+                "name": "en",
+                "label": "EN",
+                "type": "object",
+                "fields": [
+                  {
+                    "name": "name",
+                    "label": "Name",
+                    "type": "string",
+                    "namespace": ["about", "general", "en", "name"],
+                    "searchable": true
+                  },
+                  {
+                    "name": "profession",
+                    "label": "Profession",
+                    "type": "rich-text",
+                    "namespace": ["about", "general", "en", "profession"],
+                    "searchable": true,
+                    "parser": { "type": "markdown" }
+                  },
+                  {
+                    "name": "education",
+                    "label": "Education",
+                    "type": "object",
+                    "list": true,
+                    "fields": [
+                      {
+                        "name": "institution",
+                        "label": "Institution",
+                        "type": "string",
+                        "namespace": [
+                          "about",
+                          "general",
+                          "en",
+                          "education",
+                          "institution"
+                        ],
+                        "searchable": true
+                      }
+                    ],
+                    "ui": { "defaultItem": { "institution": "" } },
+                    "namespace": ["about", "general", "en", "education"],
+                    "searchable": true
+                  },
+                  {
+                    "name": "experience",
+                    "label": "Experience",
+                    "type": "object",
+                    "list": true,
+                    "fields": [
+                      {
+                        "name": "point",
+                        "label": "Point",
+                        "type": "string",
+                        "namespace": [
+                          "about",
+                          "general",
+                          "en",
+                          "experience",
+                          "point"
+                        ],
+                        "searchable": true
+                      }
+                    ],
+                    "ui": { "defaultItem": { "point": "" } },
+                    "namespace": ["about", "general", "en", "experience"],
+                    "searchable": true
+                  }
+                ],
+                "namespace": ["about", "general", "en"],
+                "searchable": true
+              }
+            ],
+            "namespace": ["about", "general"],
+            "searchable": true
+          }
+        ],
+        "namespace": ["about"]
       }
     ],
     "config": {
@@ -84,7 +247,7 @@
     "DocumentConnection": {
       "type": "DocumentConnection",
       "resolveType": "multiCollectionDocumentList",
-      "collections": ["page"]
+      "collections": ["page", "about"]
     },
     "Node": { "type": "Node", "resolveType": "nodeDocument" },
     "DocumentNode": {
@@ -109,6 +272,18 @@
       "type": "PageConnection",
       "resolveType": "collectionDocumentList",
       "collection": "page"
+    },
+    "About": {
+      "type": "About",
+      "resolveType": "collectionDocument",
+      "collection": "about",
+      "createAbout": "create",
+      "updateAbout": "update"
+    },
+    "AboutConnection": {
+      "type": "AboutConnection",
+      "resolveType": "collectionDocumentList",
+      "collection": "about"
     }
   },
   "graphql": {
@@ -641,6 +816,88 @@
                 "name": { "kind": "Name", "value": "PageConnection" }
               }
             }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "about" },
+            "arguments": [
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "relativePath" },
+                "type": {
+                  "kind": "NamedType",
+                  "name": { "kind": "Name", "value": "String" }
+                }
+              }
+            ],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "About" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "aboutConnection" },
+            "arguments": [
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "before" },
+                "type": {
+                  "kind": "NamedType",
+                  "name": { "kind": "Name", "value": "String" }
+                }
+              },
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "after" },
+                "type": {
+                  "kind": "NamedType",
+                  "name": { "kind": "Name", "value": "String" }
+                }
+              },
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "first" },
+                "type": {
+                  "kind": "NamedType",
+                  "name": { "kind": "Name", "value": "Float" }
+                }
+              },
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "last" },
+                "type": {
+                  "kind": "NamedType",
+                  "name": { "kind": "Name", "value": "Float" }
+                }
+              },
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "sort" },
+                "type": {
+                  "kind": "NamedType",
+                  "name": { "kind": "Name", "value": "String" }
+                }
+              },
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "filter" },
+                "type": {
+                  "kind": "NamedType",
+                  "name": { "kind": "Name", "value": "AboutFilter" }
+                }
+              }
+            ],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "AboutConnection" }
+              }
+            }
           }
         ]
       },
@@ -654,6 +911,14 @@
             "type": {
               "kind": "NamedType",
               "name": { "kind": "Name", "value": "PageFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "about" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "AboutFilter" }
             }
           }
         ]
@@ -906,6 +1171,7 @@
         "directives": [],
         "types": [
           { "kind": "NamedType", "name": { "kind": "Name", "value": "Page" } },
+          { "kind": "NamedType", "name": { "kind": "Name", "value": "About" } },
           { "kind": "NamedType", "name": { "kind": "Name", "value": "Folder" } }
         ]
       },
@@ -1288,6 +1554,520 @@
         "kind": "ObjectTypeDefinition",
         "interfaces": [],
         "directives": [],
+        "name": { "kind": "Name", "value": "AboutGeneralUkEducation" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "institution" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": { "kind": "Name", "value": "AboutGeneralUkExperience" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "point" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": { "kind": "Name", "value": "AboutGeneralUk" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "name" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "profession" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "JSON" }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "education" },
+            "arguments": [],
+            "type": {
+              "kind": "ListType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "AboutGeneralUkEducation" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "experience" },
+            "arguments": [],
+            "type": {
+              "kind": "ListType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "AboutGeneralUkExperience" }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": { "kind": "Name", "value": "AboutGeneralEnEducation" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "institution" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": { "kind": "Name", "value": "AboutGeneralEnExperience" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "point" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": { "kind": "Name", "value": "AboutGeneralEn" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "name" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "profession" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "JSON" }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "education" },
+            "arguments": [],
+            "type": {
+              "kind": "ListType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "AboutGeneralEnEducation" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "experience" },
+            "arguments": [],
+            "type": {
+              "kind": "ListType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "AboutGeneralEnExperience" }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": { "kind": "Name", "value": "AboutGeneral" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "uk" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "AboutGeneralUk" }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "en" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "AboutGeneralEn" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [
+          { "kind": "NamedType", "name": { "kind": "Name", "value": "Node" } },
+          {
+            "kind": "NamedType",
+            "name": { "kind": "Name", "value": "Document" }
+          }
+        ],
+        "directives": [],
+        "name": { "kind": "Name", "value": "About" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "general" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "AboutGeneral" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "id" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "ID" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "_sys" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "SystemInfo" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "_values" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "JSON" }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "AboutGeneralUkEducationFilter" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "institution" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "AboutGeneralUkExperienceFilter" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "point" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "AboutGeneralUkFilter" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "name" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "profession" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "RichTextFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "education" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "AboutGeneralUkEducationFilter"
+              }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "experience" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "AboutGeneralUkExperienceFilter"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "AboutGeneralEnEducationFilter" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "institution" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "AboutGeneralEnExperienceFilter" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "point" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "AboutGeneralEnFilter" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "name" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "profession" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "RichTextFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "education" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "AboutGeneralEnEducationFilter"
+              }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "experience" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "AboutGeneralEnExperienceFilter"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "AboutGeneralFilter" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "uk" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "AboutGeneralUkFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "en" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "AboutGeneralEnFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "AboutFilter" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "general" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "AboutGeneralFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": { "kind": "Name", "value": "AboutConnectionEdges" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "cursor" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "String" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "node" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "About" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [
+          {
+            "kind": "NamedType",
+            "name": { "kind": "Name", "value": "Connection" }
+          }
+        ],
+        "directives": [],
+        "name": { "kind": "Name", "value": "AboutConnection" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "pageInfo" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "PageInfo" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "totalCount" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "Float" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "edges" },
+            "arguments": [],
+            "type": {
+              "kind": "ListType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "AboutConnectionEdges" }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
         "name": { "kind": "Name", "value": "Mutation" },
         "fields": [
           {
@@ -1523,6 +2303,76 @@
                 "name": { "kind": "Name", "value": "Page" }
               }
             }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "updateAbout" },
+            "arguments": [
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "relativePath" },
+                "type": {
+                  "kind": "NonNullType",
+                  "type": {
+                    "kind": "NamedType",
+                    "name": { "kind": "Name", "value": "String" }
+                  }
+                }
+              },
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "params" },
+                "type": {
+                  "kind": "NonNullType",
+                  "type": {
+                    "kind": "NamedType",
+                    "name": { "kind": "Name", "value": "AboutMutation" }
+                  }
+                }
+              }
+            ],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "About" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "createAbout" },
+            "arguments": [
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "relativePath" },
+                "type": {
+                  "kind": "NonNullType",
+                  "type": {
+                    "kind": "NamedType",
+                    "name": { "kind": "Name", "value": "String" }
+                  }
+                }
+              },
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "params" },
+                "type": {
+                  "kind": "NonNullType",
+                  "type": {
+                    "kind": "NamedType",
+                    "name": { "kind": "Name", "value": "AboutMutation" }
+                  }
+                }
+              }
+            ],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "About" }
+              }
+            }
           }
         ]
       },
@@ -1536,6 +2386,14 @@
             "type": {
               "kind": "NamedType",
               "name": { "kind": "Name", "value": "PageMutation" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "about" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "AboutMutation" }
             }
           },
           {
@@ -1558,6 +2416,14 @@
             "type": {
               "kind": "NamedType",
               "name": { "kind": "Name", "value": "PageMutation" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "about" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "AboutMutation" }
             }
           }
         ]
@@ -1649,6 +2515,198 @@
                 "kind": "NamedType",
                 "name": { "kind": "Name", "value": "PageSectionsMutation" }
               }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "AboutGeneralUkEducationMutation" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "institution" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "AboutGeneralUkExperienceMutation" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "point" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "AboutGeneralUkMutation" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "name" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "profession" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "JSON" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "education" },
+            "type": {
+              "kind": "ListType",
+              "type": {
+                "kind": "NamedType",
+                "name": {
+                  "kind": "Name",
+                  "value": "AboutGeneralUkEducationMutation"
+                }
+              }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "experience" },
+            "type": {
+              "kind": "ListType",
+              "type": {
+                "kind": "NamedType",
+                "name": {
+                  "kind": "Name",
+                  "value": "AboutGeneralUkExperienceMutation"
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "AboutGeneralEnEducationMutation" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "institution" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "AboutGeneralEnExperienceMutation" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "point" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "AboutGeneralEnMutation" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "name" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "profession" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "JSON" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "education" },
+            "type": {
+              "kind": "ListType",
+              "type": {
+                "kind": "NamedType",
+                "name": {
+                  "kind": "Name",
+                  "value": "AboutGeneralEnEducationMutation"
+                }
+              }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "experience" },
+            "type": {
+              "kind": "ListType",
+              "type": {
+                "kind": "NamedType",
+                "name": {
+                  "kind": "Name",
+                  "value": "AboutGeneralEnExperienceMutation"
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "AboutGeneralMutation" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "uk" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "AboutGeneralUkMutation" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "en" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "AboutGeneralEnMutation" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "AboutMutation" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "general" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "AboutGeneralMutation" }
             }
           }
         ]
