@@ -9,73 +9,6 @@
     "meta": { "flags": ["experimentalData"] },
     "collections": [
       {
-        "name": "page",
-        "label": "Page",
-        "path": "content/page",
-        "format": "md",
-        "fields": [
-          {
-            "name": "title",
-            "type": "string",
-            "namespace": ["page", "title"],
-            "searchable": true
-          },
-          {
-            "name": "sections",
-            "label": "Sections",
-            "type": "object",
-            "list": true,
-            "templates": [
-              {
-                "name": "hero",
-                "label": "Hero",
-                "fields": [
-                  {
-                    "name": "title",
-                    "type": "rich-text",
-                    "namespace": ["page", "sections", "hero", "title"],
-                    "searchable": true,
-                    "parser": { "type": "markdown" }
-                  },
-                  {
-                    "name": "subtitle",
-                    "type": "rich-text",
-                    "namespace": ["page", "sections", "hero", "subtitle"],
-                    "searchable": true,
-                    "parser": { "type": "markdown" }
-                  }
-                ],
-                "namespace": ["page", "sections", "hero"]
-              },
-              {
-                "name": "about",
-                "label": "About",
-                "fields": [
-                  {
-                    "name": "title",
-                    "type": "rich-text",
-                    "namespace": ["page", "sections", "about", "title"],
-                    "searchable": true,
-                    "parser": { "type": "markdown" }
-                  },
-                  {
-                    "name": "description",
-                    "type": "rich-text",
-                    "namespace": ["page", "sections", "about", "description"],
-                    "searchable": true,
-                    "parser": { "type": "markdown" }
-                  }
-                ],
-                "namespace": ["page", "sections", "about"]
-              }
-            ],
-            "namespace": ["page", "sections"],
-            "searchable": true
-          }
-        ],
-        "namespace": ["page"]
-      },
-      {
         "name": "about",
         "label": "About",
         "path": "content/about",
@@ -237,6 +170,65 @@
           }
         ],
         "namespace": ["about"]
+      },
+      {
+        "name": "banner",
+        "label": "Banner",
+        "path": "content/banner",
+        "format": "md",
+        "fields": [
+          {
+            "name": "uk",
+            "label": "UK",
+            "type": "object",
+            "fields": [
+              {
+                "name": "title",
+                "label": "Title",
+                "type": "rich-text",
+                "namespace": ["banner", "uk", "title"],
+                "searchable": true,
+                "parser": { "type": "markdown" }
+              },
+              {
+                "name": "description",
+                "label": "Description",
+                "type": "rich-text",
+                "namespace": ["banner", "uk", "description"],
+                "searchable": true,
+                "parser": { "type": "markdown" }
+              }
+            ],
+            "namespace": ["banner", "uk"],
+            "searchable": true
+          },
+          {
+            "name": "en",
+            "label": "EN",
+            "type": "object",
+            "fields": [
+              {
+                "name": "title",
+                "label": "Title",
+                "type": "rich-text",
+                "namespace": ["banner", "en", "title"],
+                "searchable": true,
+                "parser": { "type": "markdown" }
+              },
+              {
+                "name": "description",
+                "label": "Description",
+                "type": "rich-text",
+                "namespace": ["banner", "en", "description"],
+                "searchable": true,
+                "parser": { "type": "markdown" }
+              }
+            ],
+            "namespace": ["banner", "en"],
+            "searchable": true
+          }
+        ],
+        "namespace": ["banner"]
       }
     ],
     "config": {
@@ -247,7 +239,7 @@
     "DocumentConnection": {
       "type": "DocumentConnection",
       "resolveType": "multiCollectionDocumentList",
-      "collections": ["page", "about"]
+      "collections": ["about", "banner"]
     },
     "Node": { "type": "Node", "resolveType": "nodeDocument" },
     "DocumentNode": {
@@ -255,23 +247,6 @@
       "resolveType": "multiCollectionDocument",
       "createDocument": "create",
       "updateDocument": "update"
-    },
-    "PageSections": {
-      "type": "PageSections",
-      "resolveType": "unionData",
-      "typeMap": { "hero": "PageSectionsHero", "about": "PageSectionsAbout" }
-    },
-    "Page": {
-      "type": "Page",
-      "resolveType": "collectionDocument",
-      "collection": "page",
-      "createPage": "create",
-      "updatePage": "update"
-    },
-    "PageConnection": {
-      "type": "PageConnection",
-      "resolveType": "collectionDocumentList",
-      "collection": "page"
     },
     "About": {
       "type": "About",
@@ -284,6 +259,18 @@
       "type": "AboutConnection",
       "resolveType": "collectionDocumentList",
       "collection": "about"
+    },
+    "Banner": {
+      "type": "Banner",
+      "resolveType": "collectionDocument",
+      "collection": "banner",
+      "createBanner": "create",
+      "updateBanner": "update"
+    },
+    "BannerConnection": {
+      "type": "BannerConnection",
+      "resolveType": "collectionDocumentList",
+      "collection": "banner"
     }
   },
   "graphql": {
@@ -737,88 +724,6 @@
           },
           {
             "kind": "FieldDefinition",
-            "name": { "kind": "Name", "value": "page" },
-            "arguments": [
-              {
-                "kind": "InputValueDefinition",
-                "name": { "kind": "Name", "value": "relativePath" },
-                "type": {
-                  "kind": "NamedType",
-                  "name": { "kind": "Name", "value": "String" }
-                }
-              }
-            ],
-            "type": {
-              "kind": "NonNullType",
-              "type": {
-                "kind": "NamedType",
-                "name": { "kind": "Name", "value": "Page" }
-              }
-            }
-          },
-          {
-            "kind": "FieldDefinition",
-            "name": { "kind": "Name", "value": "pageConnection" },
-            "arguments": [
-              {
-                "kind": "InputValueDefinition",
-                "name": { "kind": "Name", "value": "before" },
-                "type": {
-                  "kind": "NamedType",
-                  "name": { "kind": "Name", "value": "String" }
-                }
-              },
-              {
-                "kind": "InputValueDefinition",
-                "name": { "kind": "Name", "value": "after" },
-                "type": {
-                  "kind": "NamedType",
-                  "name": { "kind": "Name", "value": "String" }
-                }
-              },
-              {
-                "kind": "InputValueDefinition",
-                "name": { "kind": "Name", "value": "first" },
-                "type": {
-                  "kind": "NamedType",
-                  "name": { "kind": "Name", "value": "Float" }
-                }
-              },
-              {
-                "kind": "InputValueDefinition",
-                "name": { "kind": "Name", "value": "last" },
-                "type": {
-                  "kind": "NamedType",
-                  "name": { "kind": "Name", "value": "Float" }
-                }
-              },
-              {
-                "kind": "InputValueDefinition",
-                "name": { "kind": "Name", "value": "sort" },
-                "type": {
-                  "kind": "NamedType",
-                  "name": { "kind": "Name", "value": "String" }
-                }
-              },
-              {
-                "kind": "InputValueDefinition",
-                "name": { "kind": "Name", "value": "filter" },
-                "type": {
-                  "kind": "NamedType",
-                  "name": { "kind": "Name", "value": "PageFilter" }
-                }
-              }
-            ],
-            "type": {
-              "kind": "NonNullType",
-              "type": {
-                "kind": "NamedType",
-                "name": { "kind": "Name", "value": "PageConnection" }
-              }
-            }
-          },
-          {
-            "kind": "FieldDefinition",
             "name": { "kind": "Name", "value": "about" },
             "arguments": [
               {
@@ -898,6 +803,88 @@
                 "name": { "kind": "Name", "value": "AboutConnection" }
               }
             }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "banner" },
+            "arguments": [
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "relativePath" },
+                "type": {
+                  "kind": "NamedType",
+                  "name": { "kind": "Name", "value": "String" }
+                }
+              }
+            ],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "Banner" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "bannerConnection" },
+            "arguments": [
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "before" },
+                "type": {
+                  "kind": "NamedType",
+                  "name": { "kind": "Name", "value": "String" }
+                }
+              },
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "after" },
+                "type": {
+                  "kind": "NamedType",
+                  "name": { "kind": "Name", "value": "String" }
+                }
+              },
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "first" },
+                "type": {
+                  "kind": "NamedType",
+                  "name": { "kind": "Name", "value": "Float" }
+                }
+              },
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "last" },
+                "type": {
+                  "kind": "NamedType",
+                  "name": { "kind": "Name", "value": "Float" }
+                }
+              },
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "sort" },
+                "type": {
+                  "kind": "NamedType",
+                  "name": { "kind": "Name", "value": "String" }
+                }
+              },
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "filter" },
+                "type": {
+                  "kind": "NamedType",
+                  "name": { "kind": "Name", "value": "BannerFilter" }
+                }
+              }
+            ],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "BannerConnection" }
+              }
+            }
           }
         ]
       },
@@ -907,18 +894,18 @@
         "fields": [
           {
             "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "page" },
-            "type": {
-              "kind": "NamedType",
-              "name": { "kind": "Name", "value": "PageFilter" }
-            }
-          },
-          {
-            "kind": "InputValueDefinition",
             "name": { "kind": "Name", "value": "about" },
             "type": {
               "kind": "NamedType",
               "name": { "kind": "Name", "value": "AboutFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "banner" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "BannerFilter" }
             }
           }
         ]
@@ -1170,384 +1157,12 @@
         "name": { "kind": "Name", "value": "DocumentNode" },
         "directives": [],
         "types": [
-          { "kind": "NamedType", "name": { "kind": "Name", "value": "Page" } },
           { "kind": "NamedType", "name": { "kind": "Name", "value": "About" } },
+          {
+            "kind": "NamedType",
+            "name": { "kind": "Name", "value": "Banner" }
+          },
           { "kind": "NamedType", "name": { "kind": "Name", "value": "Folder" } }
-        ]
-      },
-      {
-        "kind": "ObjectTypeDefinition",
-        "interfaces": [],
-        "directives": [],
-        "name": { "kind": "Name", "value": "PageSectionsHero" },
-        "fields": [
-          {
-            "kind": "FieldDefinition",
-            "name": { "kind": "Name", "value": "title" },
-            "arguments": [],
-            "type": {
-              "kind": "NamedType",
-              "name": { "kind": "Name", "value": "JSON" }
-            }
-          },
-          {
-            "kind": "FieldDefinition",
-            "name": { "kind": "Name", "value": "subtitle" },
-            "arguments": [],
-            "type": {
-              "kind": "NamedType",
-              "name": { "kind": "Name", "value": "JSON" }
-            }
-          }
-        ]
-      },
-      {
-        "kind": "ObjectTypeDefinition",
-        "interfaces": [],
-        "directives": [],
-        "name": { "kind": "Name", "value": "PageSectionsAbout" },
-        "fields": [
-          {
-            "kind": "FieldDefinition",
-            "name": { "kind": "Name", "value": "title" },
-            "arguments": [],
-            "type": {
-              "kind": "NamedType",
-              "name": { "kind": "Name", "value": "JSON" }
-            }
-          },
-          {
-            "kind": "FieldDefinition",
-            "name": { "kind": "Name", "value": "description" },
-            "arguments": [],
-            "type": {
-              "kind": "NamedType",
-              "name": { "kind": "Name", "value": "JSON" }
-            }
-          }
-        ]
-      },
-      {
-        "kind": "UnionTypeDefinition",
-        "name": { "kind": "Name", "value": "PageSections" },
-        "directives": [],
-        "types": [
-          {
-            "kind": "NamedType",
-            "name": { "kind": "Name", "value": "PageSectionsHero" }
-          },
-          {
-            "kind": "NamedType",
-            "name": { "kind": "Name", "value": "PageSectionsAbout" }
-          }
-        ]
-      },
-      {
-        "kind": "ObjectTypeDefinition",
-        "interfaces": [
-          { "kind": "NamedType", "name": { "kind": "Name", "value": "Node" } },
-          {
-            "kind": "NamedType",
-            "name": { "kind": "Name", "value": "Document" }
-          }
-        ],
-        "directives": [],
-        "name": { "kind": "Name", "value": "Page" },
-        "fields": [
-          {
-            "kind": "FieldDefinition",
-            "name": { "kind": "Name", "value": "title" },
-            "arguments": [],
-            "type": {
-              "kind": "NamedType",
-              "name": { "kind": "Name", "value": "String" }
-            }
-          },
-          {
-            "kind": "FieldDefinition",
-            "name": { "kind": "Name", "value": "sections" },
-            "arguments": [],
-            "type": {
-              "kind": "ListType",
-              "type": {
-                "kind": "NamedType",
-                "name": { "kind": "Name", "value": "PageSections" }
-              }
-            }
-          },
-          {
-            "kind": "FieldDefinition",
-            "name": { "kind": "Name", "value": "id" },
-            "arguments": [],
-            "type": {
-              "kind": "NonNullType",
-              "type": {
-                "kind": "NamedType",
-                "name": { "kind": "Name", "value": "ID" }
-              }
-            }
-          },
-          {
-            "kind": "FieldDefinition",
-            "name": { "kind": "Name", "value": "_sys" },
-            "arguments": [],
-            "type": {
-              "kind": "NonNullType",
-              "type": {
-                "kind": "NamedType",
-                "name": { "kind": "Name", "value": "SystemInfo" }
-              }
-            }
-          },
-          {
-            "kind": "FieldDefinition",
-            "name": { "kind": "Name", "value": "_values" },
-            "arguments": [],
-            "type": {
-              "kind": "NonNullType",
-              "type": {
-                "kind": "NamedType",
-                "name": { "kind": "Name", "value": "JSON" }
-              }
-            }
-          }
-        ]
-      },
-      {
-        "kind": "InputObjectTypeDefinition",
-        "name": { "kind": "Name", "value": "StringFilter" },
-        "fields": [
-          {
-            "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "startsWith" },
-            "type": {
-              "kind": "NamedType",
-              "name": { "kind": "Name", "value": "String" }
-            }
-          },
-          {
-            "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "eq" },
-            "type": {
-              "kind": "NamedType",
-              "name": { "kind": "Name", "value": "String" }
-            }
-          },
-          {
-            "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "exists" },
-            "type": {
-              "kind": "NamedType",
-              "name": { "kind": "Name", "value": "Boolean" }
-            }
-          },
-          {
-            "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "in" },
-            "type": {
-              "kind": "ListType",
-              "type": {
-                "kind": "NamedType",
-                "name": { "kind": "Name", "value": "String" }
-              }
-            }
-          }
-        ]
-      },
-      {
-        "kind": "InputObjectTypeDefinition",
-        "name": { "kind": "Name", "value": "RichTextFilter" },
-        "fields": [
-          {
-            "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "startsWith" },
-            "type": {
-              "kind": "NamedType",
-              "name": { "kind": "Name", "value": "String" }
-            }
-          },
-          {
-            "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "eq" },
-            "type": {
-              "kind": "NamedType",
-              "name": { "kind": "Name", "value": "String" }
-            }
-          },
-          {
-            "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "exists" },
-            "type": {
-              "kind": "NamedType",
-              "name": { "kind": "Name", "value": "Boolean" }
-            }
-          }
-        ]
-      },
-      {
-        "kind": "InputObjectTypeDefinition",
-        "name": { "kind": "Name", "value": "PageSectionsHeroFilter" },
-        "fields": [
-          {
-            "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "title" },
-            "type": {
-              "kind": "NamedType",
-              "name": { "kind": "Name", "value": "RichTextFilter" }
-            }
-          },
-          {
-            "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "subtitle" },
-            "type": {
-              "kind": "NamedType",
-              "name": { "kind": "Name", "value": "RichTextFilter" }
-            }
-          }
-        ]
-      },
-      {
-        "kind": "InputObjectTypeDefinition",
-        "name": { "kind": "Name", "value": "PageSectionsAboutFilter" },
-        "fields": [
-          {
-            "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "title" },
-            "type": {
-              "kind": "NamedType",
-              "name": { "kind": "Name", "value": "RichTextFilter" }
-            }
-          },
-          {
-            "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "description" },
-            "type": {
-              "kind": "NamedType",
-              "name": { "kind": "Name", "value": "RichTextFilter" }
-            }
-          }
-        ]
-      },
-      {
-        "kind": "InputObjectTypeDefinition",
-        "name": { "kind": "Name", "value": "PageSectionsFilter" },
-        "fields": [
-          {
-            "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "hero" },
-            "type": {
-              "kind": "NamedType",
-              "name": { "kind": "Name", "value": "PageSectionsHeroFilter" }
-            }
-          },
-          {
-            "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "about" },
-            "type": {
-              "kind": "NamedType",
-              "name": { "kind": "Name", "value": "PageSectionsAboutFilter" }
-            }
-          }
-        ]
-      },
-      {
-        "kind": "InputObjectTypeDefinition",
-        "name": { "kind": "Name", "value": "PageFilter" },
-        "fields": [
-          {
-            "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "title" },
-            "type": {
-              "kind": "NamedType",
-              "name": { "kind": "Name", "value": "StringFilter" }
-            }
-          },
-          {
-            "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "sections" },
-            "type": {
-              "kind": "NamedType",
-              "name": { "kind": "Name", "value": "PageSectionsFilter" }
-            }
-          }
-        ]
-      },
-      {
-        "kind": "ObjectTypeDefinition",
-        "interfaces": [],
-        "directives": [],
-        "name": { "kind": "Name", "value": "PageConnectionEdges" },
-        "fields": [
-          {
-            "kind": "FieldDefinition",
-            "name": { "kind": "Name", "value": "cursor" },
-            "arguments": [],
-            "type": {
-              "kind": "NonNullType",
-              "type": {
-                "kind": "NamedType",
-                "name": { "kind": "Name", "value": "String" }
-              }
-            }
-          },
-          {
-            "kind": "FieldDefinition",
-            "name": { "kind": "Name", "value": "node" },
-            "arguments": [],
-            "type": {
-              "kind": "NamedType",
-              "name": { "kind": "Name", "value": "Page" }
-            }
-          }
-        ]
-      },
-      {
-        "kind": "ObjectTypeDefinition",
-        "interfaces": [
-          {
-            "kind": "NamedType",
-            "name": { "kind": "Name", "value": "Connection" }
-          }
-        ],
-        "directives": [],
-        "name": { "kind": "Name", "value": "PageConnection" },
-        "fields": [
-          {
-            "kind": "FieldDefinition",
-            "name": { "kind": "Name", "value": "pageInfo" },
-            "arguments": [],
-            "type": {
-              "kind": "NonNullType",
-              "type": {
-                "kind": "NamedType",
-                "name": { "kind": "Name", "value": "PageInfo" }
-              }
-            }
-          },
-          {
-            "kind": "FieldDefinition",
-            "name": { "kind": "Name", "value": "totalCount" },
-            "arguments": [],
-            "type": {
-              "kind": "NonNullType",
-              "type": {
-                "kind": "NamedType",
-                "name": { "kind": "Name", "value": "Float" }
-              }
-            }
-          },
-          {
-            "kind": "FieldDefinition",
-            "name": { "kind": "Name", "value": "edges" },
-            "arguments": [],
-            "type": {
-              "kind": "ListType",
-              "type": {
-                "kind": "NamedType",
-                "name": { "kind": "Name", "value": "PageConnectionEdges" }
-              }
-            }
-          }
         ]
       },
       {
@@ -1802,6 +1417,77 @@
                 "kind": "NamedType",
                 "name": { "kind": "Name", "value": "JSON" }
               }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "StringFilter" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "startsWith" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "eq" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "exists" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "Boolean" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "in" },
+            "type": {
+              "kind": "ListType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "String" }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "RichTextFilter" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "startsWith" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "eq" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "exists" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "Boolean" }
             }
           }
         ]
@@ -2068,6 +1754,270 @@
         "kind": "ObjectTypeDefinition",
         "interfaces": [],
         "directives": [],
+        "name": { "kind": "Name", "value": "BannerUk" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "title" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "JSON" }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "description" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "JSON" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": { "kind": "Name", "value": "BannerEn" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "title" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "JSON" }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "description" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "JSON" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [
+          { "kind": "NamedType", "name": { "kind": "Name", "value": "Node" } },
+          {
+            "kind": "NamedType",
+            "name": { "kind": "Name", "value": "Document" }
+          }
+        ],
+        "directives": [],
+        "name": { "kind": "Name", "value": "Banner" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "uk" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "BannerUk" }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "en" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "BannerEn" }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "id" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "ID" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "_sys" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "SystemInfo" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "_values" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "JSON" }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "BannerUkFilter" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "title" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "RichTextFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "description" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "RichTextFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "BannerEnFilter" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "title" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "RichTextFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "description" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "RichTextFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "BannerFilter" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "uk" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "BannerUkFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "en" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "BannerEnFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": { "kind": "Name", "value": "BannerConnectionEdges" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "cursor" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "String" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "node" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "Banner" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [
+          {
+            "kind": "NamedType",
+            "name": { "kind": "Name", "value": "Connection" }
+          }
+        ],
+        "directives": [],
+        "name": { "kind": "Name", "value": "BannerConnection" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "pageInfo" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "PageInfo" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "totalCount" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "Float" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "edges" },
+            "arguments": [],
+            "type": {
+              "kind": "ListType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "BannerConnectionEdges" }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
         "name": { "kind": "Name", "value": "Mutation" },
         "fields": [
           {
@@ -2236,76 +2186,6 @@
           },
           {
             "kind": "FieldDefinition",
-            "name": { "kind": "Name", "value": "updatePage" },
-            "arguments": [
-              {
-                "kind": "InputValueDefinition",
-                "name": { "kind": "Name", "value": "relativePath" },
-                "type": {
-                  "kind": "NonNullType",
-                  "type": {
-                    "kind": "NamedType",
-                    "name": { "kind": "Name", "value": "String" }
-                  }
-                }
-              },
-              {
-                "kind": "InputValueDefinition",
-                "name": { "kind": "Name", "value": "params" },
-                "type": {
-                  "kind": "NonNullType",
-                  "type": {
-                    "kind": "NamedType",
-                    "name": { "kind": "Name", "value": "PageMutation" }
-                  }
-                }
-              }
-            ],
-            "type": {
-              "kind": "NonNullType",
-              "type": {
-                "kind": "NamedType",
-                "name": { "kind": "Name", "value": "Page" }
-              }
-            }
-          },
-          {
-            "kind": "FieldDefinition",
-            "name": { "kind": "Name", "value": "createPage" },
-            "arguments": [
-              {
-                "kind": "InputValueDefinition",
-                "name": { "kind": "Name", "value": "relativePath" },
-                "type": {
-                  "kind": "NonNullType",
-                  "type": {
-                    "kind": "NamedType",
-                    "name": { "kind": "Name", "value": "String" }
-                  }
-                }
-              },
-              {
-                "kind": "InputValueDefinition",
-                "name": { "kind": "Name", "value": "params" },
-                "type": {
-                  "kind": "NonNullType",
-                  "type": {
-                    "kind": "NamedType",
-                    "name": { "kind": "Name", "value": "PageMutation" }
-                  }
-                }
-              }
-            ],
-            "type": {
-              "kind": "NonNullType",
-              "type": {
-                "kind": "NamedType",
-                "name": { "kind": "Name", "value": "Page" }
-              }
-            }
-          },
-          {
-            "kind": "FieldDefinition",
             "name": { "kind": "Name", "value": "updateAbout" },
             "arguments": [
               {
@@ -2373,6 +2253,76 @@
                 "name": { "kind": "Name", "value": "About" }
               }
             }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "updateBanner" },
+            "arguments": [
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "relativePath" },
+                "type": {
+                  "kind": "NonNullType",
+                  "type": {
+                    "kind": "NamedType",
+                    "name": { "kind": "Name", "value": "String" }
+                  }
+                }
+              },
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "params" },
+                "type": {
+                  "kind": "NonNullType",
+                  "type": {
+                    "kind": "NamedType",
+                    "name": { "kind": "Name", "value": "BannerMutation" }
+                  }
+                }
+              }
+            ],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "Banner" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "createBanner" },
+            "arguments": [
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "relativePath" },
+                "type": {
+                  "kind": "NonNullType",
+                  "type": {
+                    "kind": "NamedType",
+                    "name": { "kind": "Name", "value": "String" }
+                  }
+                }
+              },
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "params" },
+                "type": {
+                  "kind": "NonNullType",
+                  "type": {
+                    "kind": "NamedType",
+                    "name": { "kind": "Name", "value": "BannerMutation" }
+                  }
+                }
+              }
+            ],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "Banner" }
+              }
+            }
           }
         ]
       },
@@ -2382,18 +2332,18 @@
         "fields": [
           {
             "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "page" },
-            "type": {
-              "kind": "NamedType",
-              "name": { "kind": "Name", "value": "PageMutation" }
-            }
-          },
-          {
-            "kind": "InputValueDefinition",
             "name": { "kind": "Name", "value": "about" },
             "type": {
               "kind": "NamedType",
               "name": { "kind": "Name", "value": "AboutMutation" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "banner" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "BannerMutation" }
             }
           },
           {
@@ -2412,109 +2362,18 @@
         "fields": [
           {
             "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "page" },
-            "type": {
-              "kind": "NamedType",
-              "name": { "kind": "Name", "value": "PageMutation" }
-            }
-          },
-          {
-            "kind": "InputValueDefinition",
             "name": { "kind": "Name", "value": "about" },
             "type": {
               "kind": "NamedType",
               "name": { "kind": "Name", "value": "AboutMutation" }
             }
-          }
-        ]
-      },
-      {
-        "kind": "InputObjectTypeDefinition",
-        "name": { "kind": "Name", "value": "PageSectionsHeroMutation" },
-        "fields": [
-          {
-            "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "title" },
-            "type": {
-              "kind": "NamedType",
-              "name": { "kind": "Name", "value": "JSON" }
-            }
           },
           {
             "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "subtitle" },
+            "name": { "kind": "Name", "value": "banner" },
             "type": {
               "kind": "NamedType",
-              "name": { "kind": "Name", "value": "JSON" }
-            }
-          }
-        ]
-      },
-      {
-        "kind": "InputObjectTypeDefinition",
-        "name": { "kind": "Name", "value": "PageSectionsAboutMutation" },
-        "fields": [
-          {
-            "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "title" },
-            "type": {
-              "kind": "NamedType",
-              "name": { "kind": "Name", "value": "JSON" }
-            }
-          },
-          {
-            "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "description" },
-            "type": {
-              "kind": "NamedType",
-              "name": { "kind": "Name", "value": "JSON" }
-            }
-          }
-        ]
-      },
-      {
-        "kind": "InputObjectTypeDefinition",
-        "name": { "kind": "Name", "value": "PageSectionsMutation" },
-        "fields": [
-          {
-            "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "hero" },
-            "type": {
-              "kind": "NamedType",
-              "name": { "kind": "Name", "value": "PageSectionsHeroMutation" }
-            }
-          },
-          {
-            "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "about" },
-            "type": {
-              "kind": "NamedType",
-              "name": { "kind": "Name", "value": "PageSectionsAboutMutation" }
-            }
-          }
-        ]
-      },
-      {
-        "kind": "InputObjectTypeDefinition",
-        "name": { "kind": "Name", "value": "PageMutation" },
-        "fields": [
-          {
-            "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "title" },
-            "type": {
-              "kind": "NamedType",
-              "name": { "kind": "Name", "value": "String" }
-            }
-          },
-          {
-            "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "sections" },
-            "type": {
-              "kind": "ListType",
-              "type": {
-                "kind": "NamedType",
-                "name": { "kind": "Name", "value": "PageSectionsMutation" }
-              }
+              "name": { "kind": "Name", "value": "BannerMutation" }
             }
           }
         ]
@@ -2707,6 +2566,72 @@
             "type": {
               "kind": "NamedType",
               "name": { "kind": "Name", "value": "AboutGeneralMutation" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "BannerUkMutation" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "title" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "JSON" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "description" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "JSON" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "BannerEnMutation" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "title" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "JSON" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "description" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "JSON" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "BannerMutation" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "uk" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "BannerUkMutation" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "en" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "BannerEnMutation" }
             }
           }
         ]

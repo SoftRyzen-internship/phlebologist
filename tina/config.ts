@@ -11,54 +11,6 @@ export default defineConfig({
   schema: {
     collections: [
       {
-        name: 'page',
-        label: 'Page',
-        path: 'content/page',
-        format: 'md',
-        fields: [
-          {
-            name: 'title',
-            type: 'string',
-          },
-          {
-            name: 'sections',
-            label: 'Sections',
-            type: 'object',
-            list: true,
-            templates: [
-              {
-                name: 'hero',
-                label: 'Hero',
-                fields: [
-                  {
-                    name: 'title',
-                    type: 'rich-text',
-                  },
-                  {
-                    name: 'subtitle',
-                    type: 'rich-text',
-                  },
-                ],
-              },
-              {
-                name: 'about',
-                label: 'About',
-                fields: [
-                  {
-                    name: 'title',
-                    type: 'rich-text',
-                  },
-                  {
-                    name: 'description',
-                    type: 'rich-text',
-                  },
-                ],
-              },
-            ],
-          },
-        ],
-      },
-      {
         name: 'about',
         label: 'About',
         path: 'content/about',
@@ -199,6 +151,48 @@ export default defineConfig({
                     },
                   },
                 ],
+              },
+            ],
+          },
+        ],
+      },
+      {
+        name: 'banner',
+        label: 'Banner',
+        path: 'content/banner',
+        format: 'md',
+        fields: [
+          {
+            name: 'uk',
+            label: 'UK',
+            type: 'object',
+            fields: [
+              {
+                name: 'title',
+                label: 'Title',
+                type: 'rich-text',
+              },
+              {
+                name: 'description',
+                label: 'Description',
+                type: 'rich-text',
+              },
+            ],
+          },
+          {
+            name: 'en',
+            label: 'EN',
+            type: 'object',
+            fields: [
+              {
+                name: 'title',
+                label: 'Title',
+                type: 'rich-text',
+              },
+              {
+                name: 'description',
+                label: 'Description',
+                type: 'rich-text',
               },
             ],
           },

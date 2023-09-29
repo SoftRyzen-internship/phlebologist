@@ -1,6 +1,6 @@
 import client from '@/tina/__generated__/client';
 
-export const fetchGeneral = async lang => {
+export const fetchGeneral = async (lang: string) => {
   const result = await client.queries.about({ relativePath: 'about.md' });
 
   // return data for the currently selected locale
