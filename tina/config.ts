@@ -166,6 +166,7 @@ export default defineConfig({
             name: 'uk',
             label: 'UK',
             type: 'object',
+            required: true,
             fields: [
               {
                 name: 'title',
@@ -198,12 +199,102 @@ export default defineConfig({
           },
         ],
       },
+      {
+        name: 'results',
+        label: 'Results',
+        path: 'content/results',
+        format: 'md',
+        fields: [
+          {
+            name: 'case',
+            label: 'Case',
+            type: 'object',
+            list: true,
+            fields: [
+              {
+                name: 'date',
+                label: 'Date',
+                type: 'datetime',
+              },
+              {
+                name: 'content',
+                label: 'Content',
+                type: 'object',
+                fields: [
+                  {
+                    name: 'uk',
+                    label: 'UK',
+                    type: 'object',
+                    fields: [
+                      {
+                        name: 'title',
+                        label: 'Title',
+                        type: 'string',
+                      },
+                      {
+                        name: 'description',
+                        label: 'Description',
+                        type: 'rich-text',
+                      },
+                    ],
+                  },
+                  {
+                    name: 'en',
+                    label: 'EN',
+                    type: 'object',
+                    fields: [
+                      {
+                        name: 'title',
+                        label: 'Title',
+                        type: 'string',
+                      },
+                      {
+                        name: 'description',
+                        label: 'Description',
+                        type: 'rich-text',
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: 'before',
+                label: 'Before',
+                type: 'image',
+              },
+              {
+                name: 'after',
+                label: 'After',
+                type: 'image',
+              },
+            ],
+            ui: {
+              itemProps: item => {
+                return { label: `${item?.content?.uk?.title}` };
+              },
+              defaultItem: {
+                // date: '',
+                content: {
+                  uk: {
+                    title: '',
+                    // description: ''
+                  },
+                  en: {
+                    title: '',
+                    // description: ''
+                  },
+                },
+              },
+            },
+          },
+        ],
+      },
     ],
   },
   media: {
     tina: {
       publicFolder: 'public',
-      mediaRoot: 'uploads',
+      mediaRoot: '/en/uploads',
     },
   },
 });
