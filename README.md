@@ -201,3 +201,29 @@ folder. This is a list of most common components and their API.
 | `variant`   | `primary`   | `main`, `primary`, `secondary`, `tertiary`      |
 | `children`  | `undefined` | required, any content                           |
 | `className` | `undefined` | add custom or additional css class you'd need   |
+
+- ### ButtonPrimary
+
+The Primary Button has `button` tag and performs an action when clicked.
+
+| Prop            | Default     | Description                                      |
+| --------------- | ----------- | ------------------------------------------------ |
+| `buttonsize`    | `small`     | choose the size: `small`, `medium` or `large`    |
+| `type`          | `button`    | optional, can be `button`, `submit` or undefined |
+| `disabled`      | `false`     | choose the disabled state: `false` or `true`     |
+| `className`     | `undefined` | add any custom styles                            |
+| `children`      | `undefined` | a necessary prop. any text content               |
+| `actionHandler` | `black`     | a function that is executed when clicked         |
+
+- ### ButtonSecondary
+
+The Secondary Button has `a` tag and performs a transition to another part of
+the site when pressed.
+
+| Prop         | Default     | Description                                 |
+| ------------ | ----------- | ------------------------------------------- |
+| `linkto `    | `undefined` | a necessary prop. the address of the link   |
+| `buttonsize` | `medium`    | choose the size: `medium` or `large`        |
+| `loading`    | `false`     | choose the loading state: `false` or `true` |
+| `className`  | `undefined` | add any custom styles                       |
+| `children`   | `undefined` | a necessary prop. any text content          |
