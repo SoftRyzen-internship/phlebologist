@@ -5,7 +5,7 @@ import client from '@/tina/__generated__/client';
 
 import { Test } from '@/components';
 import { TestSection } from '@/sections';
-import { ButtonPrimary } from '@/components';
+import { ButtonPrimary, SliderBeforeAfter } from '@/components';
 
 export default async function Home({
   params: { lang },
@@ -26,6 +26,7 @@ export default async function Home({
       <ButtonPrimary buttonsize="large">
         Записатись на консультацію
       </ButtonPrimary>
+      <SliderBeforeAfter />
     </main>
   );
 }

@@ -10,3 +10,8 @@ export { default as Heading } from '@/components/Heading/Heading';
 
 // buttons
 export { default as ButtonPrimary } from '@/components/Buttons/ButtonPrimary/ButtonPrimary';
+
+// slider before-after
+export { default as SliderBeforeAfter } from '@/components/SliderBeforeAfter/SliderBeforeAfter';
+
+export { default as SliderBeforeAfterHandle } from '@/components/SliderBeforeAfterHandle/SliderBeforeAfterHandle';
