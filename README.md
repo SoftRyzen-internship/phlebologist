@@ -206,24 +206,22 @@ folder. This is a list of most common components and their API.
 
 The Primary Button has `button` tag and performs an action when clicked.
 
-| Prop            | Default     | Description                                      |
-| --------------- | ----------- | ------------------------------------------------ |
-| `buttonsize`    | `small`     | choose the size: `small`, `medium` or `large`    |
-| `type`          | `button`    | optional, can be `button`, `submit` or undefined |
-| `disabled`      | `false`     | choose the disabled state: `false` or `true`     |
-| `className`     | `undefined` | add any custom styles                            |
-| `children`      | `undefined` | a necessary prop. any text content               |
-| `actionHandler` | `black`     | a function that is executed when clicked         |
+| Prop            | Default     | Description                                                                    |
+| --------------- | ----------- | ------------------------------------------------------------------------------ |
+| `view`          | `undefined` | if the button is used in Header, specify `header`                              |
+| `active`        | `false`     | if the button is used as tab-title, choose the active state: `false` or `true` |
+| `className`     | `undefined` | add any custom styles                                                          |
+| `children`      | `undefined` | a necessary prop. any text content                                             |
+| `actionHandler` | `black`     | a function that is executed when clicked                                       |
 
 - ### ButtonSecondary
 
 The Secondary Button has `a` tag and performs a transition to another part of
 the site when pressed.
 
-| Prop         | Default     | Description                                 |
-| ------------ | ----------- | ------------------------------------------- |
-| `linkto `    | `undefined` | a necessary prop. the address of the link   |
-| `buttonsize` | `medium`    | choose the size: `medium` or `large`        |
-| `loading`    | `false`     | choose the loading state: `false` or `true` |
-| `className`  | `undefined` | add any custom styles                       |
-| `children`   | `undefined` | a necessary prop. any text content          |
+| Prop        | Default     | Description                                           |
+| ----------- | ----------- | ----------------------------------------------------- |
+| `linkto `   | `undefined` | a necessary prop. the address of the link             |
+| `view`      | `undefined` | if the button is used in Hero section, specify `hero` |
+| `className` | `undefined` | add any custom styles                                 |
+| `children`  | `undefined` | a necessary prop. any text content                    |

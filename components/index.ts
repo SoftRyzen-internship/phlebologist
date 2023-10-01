@@ -10,3 +10,5 @@ export { default as Heading } from '@/components/Heading/Heading';
 
 // buttons
 export { default as ButtonPrimary } from '@/components/Buttons/ButtonPrimary/ButtonPrimary';
+export { default as ButtonSecondary } from '@/components/Buttons/ButtonSecondary/ButtonSecondary';
+export { default as ButtonTertiary } from '@/components/Buttons/ButtonTertiary/ButtonTertiary';
