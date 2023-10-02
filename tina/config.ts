@@ -11,46 +11,668 @@ export default defineConfig({
   schema: {
     collections: [
       {
-        name: 'page',
-        label: 'Page',
-        path: 'content/page',
+        name: 'about',
+        label: 'About',
+        path: 'content/about',
         format: 'md',
         fields: [
           {
-            name: 'title',
-            type: 'string',
+            name: 'photo',
+            label: 'Photo',
+            type: 'image',
+            required: true,
           },
           {
-            name: 'sections',
-            label: 'Sections',
+            name: 'general',
+            label: 'General',
             type: 'object',
-            list: true,
-            templates: [
+            required: true,
+            fields: [
               {
-                name: 'hero',
-                label: 'Hero',
+                name: 'uk',
+                label: 'UK',
+                type: 'object',
+                fields: [
+                  {
+                    name: 'name',
+                    label: 'Name',
+                    type: 'string',
+                    required: true,
+                  },
+                  {
+                    name: 'profession',
+                    label: 'Profession',
+                    type: 'rich-text',
+                    required: true,
+                  },
+                  {
+                    name: 'education',
+                    label: 'Education',
+                    type: 'object',
+                    list: true,
+                    fields: [
+                      {
+                        name: 'institution',
+                        label: 'Institution',
+                        type: 'string',
+                      },
+                    ],
+                    ui: {
+                      itemProps: item => {
+                        // if the institution field type is changed to rich-text,
+                        // this part will need re-writing
+                        // as we would be handling a deeper object
+                        return { label: `${item?.institution}` };
+                      },
+                      defaultItem: {
+                        institution: '',
+                      },
+                    },
+                  },
+                  {
+                    name: 'experience',
+                    label: 'Experience',
+                    type: 'object',
+                    list: true,
+                    fields: [
+                      {
+                        name: 'point',
+                        label: 'Point',
+                        type: 'string',
+                      },
+                    ],
+                    ui: {
+                      itemProps: item => {
+                        // if the point field type is changed to rich-text,
+                        // this part will need re-writing
+                        // as we would be handling a deeper object
+                        return { label: `${item?.point}` };
+                      },
+                      defaultItem: {
+                        point: '',
+                      },
+                    },
+                  },
+                ],
+                ui: {
+                  defaultItem: {
+                    name: '',
+                  },
+                },
+              },
+              {
+                name: 'en',
+                label: 'EN',
+                type: 'object',
+                fields: [
+                  {
+                    name: 'name',
+                    label: 'Name',
+                    type: 'string',
+                    required: true,
+                  },
+                  {
+                    name: 'profession',
+                    label: 'Profession',
+                    type: 'rich-text',
+                    required: true,
+                  },
+                  {
+                    name: 'education',
+                    label: 'Education',
+                    type: 'object',
+                    list: true,
+                    fields: [
+                      {
+                        name: 'institution',
+                        label: 'Institution',
+                        type: 'string',
+                      },
+                    ],
+                    ui: {
+                      itemProps: item => {
+                        // if the institution field type is changed to rich-text,
+                        // this part will need re-writing
+                        // as we would be handling a deeper object
+                        return { label: `${item?.institution}` };
+                      },
+                      defaultItem: {
+                        institution: '',
+                      },
+                    },
+                  },
+                  {
+                    name: 'experience',
+                    label: 'Experience',
+                    type: 'object',
+                    list: true,
+                    fields: [
+                      {
+                        name: 'point',
+                        label: 'Point',
+                        type: 'string',
+                      },
+                    ],
+                    ui: {
+                      itemProps: item => {
+                        // if the point field type is changed to rich-text,
+                        // this part will need re-writing
+                        // as we would be handling a deeper object
+                        return { label: `${item?.point}` };
+                      },
+                      defaultItem: {
+                        point: '',
+                      },
+                    },
+                  },
+                ],
+                ui: {
+                  defaultItem: {
+                    name: '',
+                  },
+                },
+              },
+            ],
+          },
+          {
+            name: 'education',
+            label: 'Education',
+            type: 'object',
+            required: true,
+            fields: [
+              {
+                name: 'uk',
+                label: 'UK',
+                type: 'object',
                 fields: [
                   {
                     name: 'title',
-                    type: 'rich-text',
+                    label: 'Title',
+                    type: 'string',
+                    required: true,
                   },
                   {
-                    name: 'subtitle',
-                    type: 'rich-text',
+                    name: 'institutions',
+                    label: 'Institutions',
+                    type: 'object',
+                    list: true,
+                    fields: [
+                      {
+                        name: 'institution',
+                        label: 'Institution',
+                        type: 'string',
+                      },
+                    ],
+                    ui: {
+                      itemProps: item => {
+                        // if the institution field type is changed to rich-text,
+                        // this part will need re-writing
+                        // as we would be handling a deeper object
+                        return { label: `${item?.institution}` };
+                      },
+                      defaultItem: {
+                        institution: '',
+                      },
+                    },
+                  },
+                ],
+                ui: {
+                  defaultItem: {
+                    title: '',
+                  },
+                },
+              },
+              {
+                name: 'en',
+                label: 'EN',
+                type: 'object',
+                fields: [
+                  {
+                    name: 'title',
+                    label: 'Title',
+                    type: 'string',
+                    required: true,
+                  },
+                  {
+                    name: 'institutions',
+                    label: 'Institutions',
+                    type: 'object',
+                    list: true,
+                    fields: [
+                      {
+                        name: 'institution',
+                        label: 'Institution',
+                        type: 'string',
+                      },
+                    ],
+                    ui: {
+                      itemProps: item => {
+                        // if the institution field type is changed to rich-text,
+                        // this part will need re-writing
+                        // as we would be handling a deeper object
+                        return { label: `${item?.institution}` };
+                      },
+                      defaultItem: {
+                        institution: '',
+                      },
+                    },
+                  },
+                ],
+                ui: {
+                  defaultItem: {
+                    title: '',
+                  },
+                },
+              },
+            ],
+          },
+          {
+            name: 'career',
+            label: 'Career',
+            type: 'object',
+            required: true,
+            fields: [
+              {
+                name: 'uk',
+                label: 'UK',
+                type: 'object',
+                fields: [
+                  {
+                    name: 'title',
+                    label: 'Title',
+                    type: 'string',
+                    required: true,
+                  },
+                  {
+                    name: 'institutions',
+                    label: 'Institutions',
+                    type: 'object',
+                    list: true,
+                    fields: [
+                      {
+                        name: 'period',
+                        label: 'Period',
+                        type: 'string',
+                      },
+                      {
+                        name: 'institution',
+                        label: 'Institution',
+                        type: 'string',
+                      },
+                    ],
+                    ui: {
+                      itemProps: item => {
+                        // if the institution field type is changed to rich-text,
+                        // this part will need re-writing
+                        // as we would be handling a deeper object
+                        return { label: `${item?.institution}` };
+                      },
+                      defaultItem: {
+                        institution: '',
+                      },
+                    },
+                  },
+                ],
+                ui: {
+                  defaultItem: {
+                    title: '',
+                  },
+                },
+              },
+              {
+                name: 'en',
+                label: 'EN',
+                type: 'object',
+                fields: [
+                  {
+                    name: 'title',
+                    label: 'Title',
+                    type: 'string',
+                    required: true,
+                  },
+                  {
+                    name: 'institutions',
+                    label: 'Institutions',
+                    type: 'object',
+                    list: true,
+                    fields: [
+                      {
+                        name: 'period',
+                        label: 'Period',
+                        type: 'string',
+                      },
+                      {
+                        name: 'institution',
+                        label: 'Institution',
+                        type: 'string',
+                      },
+                    ],
+                    ui: {
+                      itemProps: item => {
+                        // if the institution field type is changed to rich-text,
+                        // this part will need re-writing
+                        // as we would be handling a deeper object
+                        return { label: `${item?.institution}` };
+                      },
+                      defaultItem: {
+                        institution: '',
+                      },
+                    },
+                  },
+                ],
+                ui: {
+                  defaultItem: {
+                    title: '',
+                  },
+                },
+              },
+            ],
+          },
+          {
+            name: 'certificates',
+            label: 'Certificates',
+            type: 'object',
+            required: true,
+            list: true,
+            fields: [
+              {
+                name: 'photo',
+                label: 'Photo',
+                type: 'image',
+                required: true,
+              },
+              {
+                name: 'description',
+                label: 'Description',
+                type: 'object',
+                fields: [
+                  {
+                    name: 'uk',
+                    label: 'UK',
+                    type: 'object',
+                    fields: [
+                      {
+                        name: 'alt',
+                        label: 'Alt',
+                        type: 'string',
+                        required: true,
+                      },
+                    ],
+                  },
+                  {
+                    name: 'en',
+                    label: 'EN',
+                    type: 'object',
+                    fields: [
+                      {
+                        name: 'alt',
+                        label: 'Alt',
+                        type: 'string',
+                        required: true,
+                      },
+                    ],
+                  },
+                ],
+              },
+            ],
+            ui: {
+              itemProps: item => {
+                // if the institution field type is changed to rich-text,
+                // this part will need re-writing
+                // as we would be handling a deeper object
+                return { label: `${item?.description.uk.alt}` };
+              },
+              defaultItem: {
+                description: {
+                  uk: {
+                    alt: '',
+                  },
+                },
+              },
+            },
+          },
+        ],
+      },
+      {
+        name: 'banner',
+        label: 'Banner',
+        path: 'content/banner',
+        format: 'md',
+        fields: [
+          {
+            name: 'uk',
+            label: 'UK',
+            type: 'object',
+            required: true,
+            fields: [
+              {
+                name: 'title',
+                label: 'Title',
+                type: 'rich-text',
+                required: true,
+              },
+              {
+                name: 'description',
+                label: 'Description',
+                type: 'rich-text',
+                required: true,
+              },
+            ],
+          },
+          {
+            name: 'en',
+            label: 'EN',
+            type: 'object',
+            fields: [
+              {
+                name: 'title',
+                label: 'Title',
+                type: 'rich-text',
+                required: true,
+              },
+              {
+                name: 'description',
+                label: 'Description',
+                type: 'rich-text',
+                required: true,
+              },
+            ],
+          },
+        ],
+      },
+      {
+        name: 'results',
+        label: 'Results',
+        path: 'content/results',
+        format: 'md',
+        fields: [
+          {
+            name: 'case',
+            label: 'Case',
+            type: 'object',
+            list: true,
+            fields: [
+              {
+                name: 'date',
+                label: 'Date',
+                type: 'datetime',
+                required: true,
+              },
+              {
+                name: 'content',
+                label: 'Content',
+                type: 'object',
+                fields: [
+                  {
+                    name: 'uk',
+                    label: 'UK',
+                    type: 'object',
+                    fields: [
+                      {
+                        name: 'title',
+                        label: 'Title',
+                        type: 'string',
+                        required: true,
+                      },
+                      {
+                        name: 'description',
+                        label: 'Description',
+                        type: 'rich-text',
+                        required: true,
+                      },
+                    ],
+                  },
+                  {
+                    name: 'en',
+                    label: 'EN',
+                    type: 'object',
+                    fields: [
+                      {
+                        name: 'title',
+                        label: 'Title',
+                        type: 'string',
+                        required: true,
+                      },
+                      {
+                        name: 'description',
+                        label: 'Description',
+                        type: 'rich-text',
+                        required: true,
+                      },
+                    ],
                   },
                 ],
               },
               {
-                name: 'about',
-                label: 'About',
+                name: 'before',
+                label: 'Before',
+                type: 'image',
+                required: true,
+              },
+              {
+                name: 'after',
+                label: 'After',
+                type: 'image',
+                required: true,
+              },
+            ],
+            ui: {
+              itemProps: item => {
+                return { label: `${item?.content?.uk?.title}` };
+              },
+              defaultItem: {
+                content: {
+                  uk: {
+                    title: '',
+                  },
+                  en: {
+                    title: '',
+                  },
+                },
+              },
+            },
+          },
+        ],
+      },
+      {
+        name: 'reviews',
+        label: 'Reviews',
+        path: 'content/reviews',
+        format: 'md',
+        fields: [
+          {
+            name: 'uk',
+            label: 'UK',
+            type: 'object',
+            fields: [
+              {
+                name: 'case',
+                label: 'Case',
+                type: 'object',
+                list: true,
                 fields: [
                   {
-                    name: 'title',
-                    type: 'rich-text',
+                    name: 'date',
+                    label: 'Date',
+                    type: 'datetime',
+                    required: true,
                   },
                   {
-                    name: 'description',
+                    name: 'photo',
+                    label: 'Photo',
+                    type: 'image',
+                    required: true,
+                  },
+                  {
+                    name: 'name',
+                    label: 'Name',
+                    type: 'string',
+                    required: true,
+                  },
+                  {
+                    name: 'procedure',
+                    label: 'Procedure',
+                    type: 'string',
+                    required: true,
+                  },
+                  {
+                    name: 'review',
+                    label: 'Review',
                     type: 'rich-text',
+                    required: true,
+                  },
+                ],
+                ui: {
+                  itemProps: item => {
+                    return { label: `${item?.name}` };
+                  },
+                  defaultItem: {
+                    name: '',
+                  },
+                },
+              },
+            ],
+          },
+          {
+            name: 'en',
+            label: 'EN',
+            type: 'object',
+            fields: [
+              {
+                name: 'case',
+                label: 'Case',
+                type: 'object',
+                list: true,
+                fields: [
+                  {
+                    name: 'date',
+                    label: 'Date',
+                    type: 'datetime',
+                    required: true,
+                  },
+                  {
+                    name: 'photo',
+                    label: 'Photo',
+                    type: 'image',
+                    required: true,
+                  },
+                  {
+                    name: 'name',
+                    label: 'Name',
+                    type: 'string',
+                    required: true,
+                  },
+                  {
+                    name: 'procedure',
+                    label: 'Procedure',
+                    type: 'string',
+                    required: true,
+                  },
+                  {
+                    name: 'review',
+                    label: 'Review',
+                    type: 'rich-text',
+                    required: true,
                   },
                 ],
               },
