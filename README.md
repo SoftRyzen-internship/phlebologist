@@ -227,3 +227,38 @@ the site when pressed.
 | `loading`    | `false`     | choose the loading state: `false` or `true` |
 | `className`  | `undefined` | add any custom styles                       |
 | `children`   | `undefined` | a necessary prop. any text content          |
+
+- ### IconBtn
+
+The Icon Button has either `anchor` or `button` tag.
+
+| Prop           | Type          | Description                                           |
+| -------------- | ------------- | ----------------------------------------------------- |
+| `icon`         | 'tiktok'      | - Anchor that leads to Tiktok page,                   |
+|                | 'facebook'    | - Anchor that leads to Facebook page,                 |
+|                | 'instagram'   | - Anchor that leads to Instagram page,                |
+|                | 'arrow'       | - Navigation button with arrow to the right,          |
+|                | 'location'    | - Geolocation anchor,                                 |
+|                |               |                                                       |
+| `variant`      | 'result'      | - Button in treatment result section,                 |
+|                | 'feedback'    | - Button in feedback section,                         |
+|                | 'contacts'    | - Button in contacts section,                         |
+|                | 'footer'      | - Button in footer section,                           |
+|                | 'location'    | - Geolocation button,                                 |
+|                |               |                                                       |
+| `onClick`      | void function | Optional, click handler                               |
+|                |               |                                                       |
+| `reverse`      | boolean       | Optional, false by default, turns icon by 180 degrees |
+|                |               |                                                       |
+| `className`    | string        | Optional, add additional tailwind classes,            |
+|                |               | e.g. to position component                            |
+|                |               |                                                       |
+| `iconFunction` | string        | Aria-label on button/anchor element,                  |
+|                |               | taken from dictionary.ts                              |
+|                |               |                                                       |
+| `iconLabel`    | string        | Aria-label on svg element, taken from dictionary.ts   |
+|                |               |                                                       |
+| `url`          | string        | Optional, url address, applies anchor element         |
+|                |               | instead of button element,                            |
+|                |               | and is used inside `href` attribute                   |
+|                |               |                                                       |

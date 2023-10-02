@@ -6,7 +6,33 @@
   "page": {
     "home": {
       "title": "Willkommen bei NextJs i18n",
-      "description": "Internationalisierung im NextJs 13 App-Router"
+      "description": "Internationalisierung im NextJs 13 App-Router",
+      "iconBtnData": {
+        "tiktok": {
+          "iconFunction": "Кнопка Тікток",
+          "iconLabel": "Іконка Тікток"
+        },
+        "facebook": {
+          "iconFunction": "Кнопка Фейсбук",
+          "iconLabel": "Іконка Фейсбук"
+        },
+        "instagram": {
+          "iconFunction": "Кнопка Інстаграм",
+          "iconLabel": "Іконка Фейсбук"
+        },
+        "arrowRight": {
+          "iconFunction": "Наступний слайд",
+          "iconLabel": "Стрілка праворуч"
+        },
+        "arrowLeft": {
+          "iconFunction": "Попередній слайд",
+          "iconLabel": "Стрілка ліворуч"
+        },
+        "location": {
+          "iconFunction": "Кнопка місцезнаходження",
+          "iconLabel": "Іконка геолокації"
+        }
+      }
     },
     "about": {
       "title": "Über uns",

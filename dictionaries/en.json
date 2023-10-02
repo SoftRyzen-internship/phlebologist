@@ -6,7 +6,33 @@
   "page": {
     "home": {
       "title": "Welcome to NextJs i18n",
-      "description": "Internationalization in NextJs 13 App router"
+      "description": "Internationalization in NextJs 13 App router",
+      "iconBtnData": {
+        "tiktok": {
+          "iconFunction": "Tiktok Button",
+          "iconLabel": "Tiktok Icon"
+        },
+        "facebook": {
+          "iconFunction": "Facebook Button",
+          "iconLabel": "Facebook Icon"
+        },
+        "instagram": {
+          "iconFunction": "Instagram Button",
+          "iconLabel": "Instagram Icon"
+        },
+        "arrowRight": {
+          "iconFunction": "Next Slide Button",
+          "iconLabel": "Arrow Right Icon"
+        },
+        "arrowLeft": {
+          "iconFunction": "Previuos Slide Button",
+          "iconLabel": "Arrow Left Icon"
+        },
+        "location": {
+          "iconFunction": "Location Button",
+          "iconLabel": "Geolocation Icon"
+        }
+      }
     },
     "about": {
       "title": "About Us",
