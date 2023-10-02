@@ -8,8 +8,9 @@ case:
           шалала
       en:
         title: ''
-    before: /en/uploads/results/0000-0000-3154835-696.jpg
-    after: /en/uploads/results/0000-0000-3154847-696.jpg
+        description: ''
+    before: /uploads/results/1294303696_x_5c4ad3be.jpg
+    after: /uploads/results/0000-0000-3154841-696.jpg
   - date: 2023-08-31T21:00:00.000Z
     content:
       uk:
@@ -21,6 +22,6 @@ case:
           пройшла швидко і безболісно, і що ще важливіше - без залишених рубців.
           За 1,5 години я знову мав здорові ноги, біль відступив, а набряки
           зникли.
-    before: /en/uploads/results/1294303696_x_5c4ad3be.jpg
-    after: /en/uploads/results/0000-0000-3154841-696.jpg
+    before: /uploads/results/0000-0000-3154833-696.jpg
+    after: /uploads/results/0000-0000-3154836-696.jpg
 ---

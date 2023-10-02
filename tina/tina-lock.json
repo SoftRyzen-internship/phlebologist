@@ -96,6 +96,7 @@
                     "searchable": true
                   }
                 ],
+                "ui": { "defaultItem": { "name": "" } },
                 "namespace": ["about", "general", "uk"],
                 "searchable": true
               },
@@ -168,11 +169,294 @@
                     "searchable": true
                   }
                 ],
+                "ui": { "defaultItem": { "name": "" } },
                 "namespace": ["about", "general", "en"],
                 "searchable": true
               }
             ],
             "namespace": ["about", "general"],
+            "searchable": true
+          },
+          {
+            "name": "education",
+            "label": "Education",
+            "type": "object",
+            "required": true,
+            "fields": [
+              {
+                "name": "uk",
+                "label": "UK",
+                "type": "object",
+                "fields": [
+                  {
+                    "name": "title",
+                    "label": "Title",
+                    "type": "string",
+                    "namespace": ["about", "education", "uk", "title"],
+                    "searchable": true
+                  },
+                  {
+                    "name": "institutions",
+                    "label": "Institutions",
+                    "type": "object",
+                    "list": true,
+                    "fields": [
+                      {
+                        "name": "institution",
+                        "label": "Institution",
+                        "type": "string",
+                        "namespace": [
+                          "about",
+                          "education",
+                          "uk",
+                          "institutions",
+                          "institution"
+                        ],
+                        "searchable": true
+                      }
+                    ],
+                    "ui": { "defaultItem": { "institution": "" } },
+                    "namespace": ["about", "education", "uk", "institutions"],
+                    "searchable": true
+                  }
+                ],
+                "ui": { "defaultItem": { "title": "" } },
+                "namespace": ["about", "education", "uk"],
+                "searchable": true
+              },
+              {
+                "name": "en",
+                "label": "EN",
+                "type": "object",
+                "fields": [
+                  {
+                    "name": "title",
+                    "label": "Title",
+                    "type": "string",
+                    "namespace": ["about", "education", "en", "title"],
+                    "searchable": true
+                  },
+                  {
+                    "name": "institutions",
+                    "label": "Institutions",
+                    "type": "object",
+                    "list": true,
+                    "fields": [
+                      {
+                        "name": "institution",
+                        "label": "Institution",
+                        "type": "string",
+                        "namespace": [
+                          "about",
+                          "education",
+                          "en",
+                          "institutions",
+                          "institution"
+                        ],
+                        "searchable": true
+                      }
+                    ],
+                    "ui": { "defaultItem": { "institution": "" } },
+                    "namespace": ["about", "education", "en", "institutions"],
+                    "searchable": true
+                  }
+                ],
+                "ui": { "defaultItem": { "title": "" } },
+                "namespace": ["about", "education", "en"],
+                "searchable": true
+              }
+            ],
+            "namespace": ["about", "education"],
+            "searchable": true
+          },
+          {
+            "name": "career",
+            "label": "Career",
+            "type": "object",
+            "required": true,
+            "fields": [
+              {
+                "name": "uk",
+                "label": "UK",
+                "type": "object",
+                "fields": [
+                  {
+                    "name": "title",
+                    "label": "Title",
+                    "type": "string",
+                    "namespace": ["about", "career", "uk", "title"],
+                    "searchable": true
+                  },
+                  {
+                    "name": "institutions",
+                    "label": "Institutions",
+                    "type": "object",
+                    "list": true,
+                    "fields": [
+                      {
+                        "name": "period",
+                        "label": "Period",
+                        "type": "string",
+                        "namespace": [
+                          "about",
+                          "career",
+                          "uk",
+                          "institutions",
+                          "period"
+                        ],
+                        "searchable": true
+                      },
+                      {
+                        "name": "institution",
+                        "label": "Institution",
+                        "type": "string",
+                        "namespace": [
+                          "about",
+                          "career",
+                          "uk",
+                          "institutions",
+                          "institution"
+                        ],
+                        "searchable": true
+                      }
+                    ],
+                    "ui": { "defaultItem": { "institution": "" } },
+                    "namespace": ["about", "career", "uk", "institutions"],
+                    "searchable": true
+                  }
+                ],
+                "ui": { "defaultItem": { "title": "" } },
+                "namespace": ["about", "career", "uk"],
+                "searchable": true
+              },
+              {
+                "name": "en",
+                "label": "EN",
+                "type": "object",
+                "fields": [
+                  {
+                    "name": "title",
+                    "label": "Title",
+                    "type": "string",
+                    "namespace": ["about", "career", "en", "title"],
+                    "searchable": true
+                  },
+                  {
+                    "name": "institutions",
+                    "label": "Institutions",
+                    "type": "object",
+                    "list": true,
+                    "fields": [
+                      {
+                        "name": "period",
+                        "label": "Period",
+                        "type": "string",
+                        "namespace": [
+                          "about",
+                          "career",
+                          "en",
+                          "institutions",
+                          "period"
+                        ],
+                        "searchable": true
+                      },
+                      {
+                        "name": "institution",
+                        "label": "Institution",
+                        "type": "string",
+                        "namespace": [
+                          "about",
+                          "career",
+                          "en",
+                          "institutions",
+                          "institution"
+                        ],
+                        "searchable": true
+                      }
+                    ],
+                    "ui": { "defaultItem": { "institution": "" } },
+                    "namespace": ["about", "career", "en", "institutions"],
+                    "searchable": true
+                  }
+                ],
+                "ui": { "defaultItem": { "title": "" } },
+                "namespace": ["about", "career", "en"],
+                "searchable": true
+              }
+            ],
+            "namespace": ["about", "career"],
+            "searchable": true
+          },
+          {
+            "name": "certificates",
+            "label": "Certificates",
+            "type": "object",
+            "required": true,
+            "list": true,
+            "fields": [
+              {
+                "name": "photo",
+                "label": "Photo",
+                "type": "image",
+                "namespace": ["about", "certificates", "photo"],
+                "searchable": false
+              },
+              {
+                "name": "description",
+                "label": "Description",
+                "type": "object",
+                "fields": [
+                  {
+                    "name": "uk",
+                    "label": "UK",
+                    "type": "object",
+                    "fields": [
+                      {
+                        "name": "alt",
+                        "label": "Alt",
+                        "type": "string",
+                        "namespace": [
+                          "about",
+                          "certificates",
+                          "description",
+                          "uk",
+                          "alt"
+                        ],
+                        "searchable": true
+                      }
+                    ],
+                    "namespace": ["about", "certificates", "description", "uk"],
+                    "searchable": true
+                  },
+                  {
+                    "name": "en",
+                    "label": "EN",
+                    "type": "object",
+                    "fields": [
+                      {
+                        "name": "alt",
+                        "label": "Alt",
+                        "type": "string",
+                        "namespace": [
+                          "about",
+                          "certificates",
+                          "description",
+                          "en",
+                          "alt"
+                        ],
+                        "searchable": true
+                      }
+                    ],
+                    "namespace": ["about", "certificates", "description", "en"],
+                    "searchable": true
+                  }
+                ],
+                "namespace": ["about", "certificates", "description"],
+                "searchable": true
+              }
+            ],
+            "ui": { "defaultItem": { "description": { "uk": { "alt": "" } } } },
+            "namespace": ["about", "certificates"],
             "searchable": true
           }
         ],
@@ -366,9 +650,7 @@
       }
     ],
     "config": {
-      "media": {
-        "tina": { "publicFolder": "public", "mediaRoot": "/en/uploads" }
-      }
+      "media": { "tina": { "publicFolder": "public", "mediaRoot": "uploads" } }
     }
   },
   "lookup": {
@@ -1603,6 +1885,361 @@
       },
       {
         "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": { "kind": "Name", "value": "AboutEducationUkInstitutions" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "institution" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": { "kind": "Name", "value": "AboutEducationUk" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "title" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "institutions" },
+            "arguments": [],
+            "type": {
+              "kind": "ListType",
+              "type": {
+                "kind": "NamedType",
+                "name": {
+                  "kind": "Name",
+                  "value": "AboutEducationUkInstitutions"
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": { "kind": "Name", "value": "AboutEducationEnInstitutions" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "institution" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": { "kind": "Name", "value": "AboutEducationEn" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "title" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "institutions" },
+            "arguments": [],
+            "type": {
+              "kind": "ListType",
+              "type": {
+                "kind": "NamedType",
+                "name": {
+                  "kind": "Name",
+                  "value": "AboutEducationEnInstitutions"
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": { "kind": "Name", "value": "AboutEducation" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "uk" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "AboutEducationUk" }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "en" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "AboutEducationEn" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": { "kind": "Name", "value": "AboutCareerUkInstitutions" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "period" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "institution" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": { "kind": "Name", "value": "AboutCareerUk" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "title" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "institutions" },
+            "arguments": [],
+            "type": {
+              "kind": "ListType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "AboutCareerUkInstitutions" }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": { "kind": "Name", "value": "AboutCareerEnInstitutions" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "period" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "institution" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": { "kind": "Name", "value": "AboutCareerEn" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "title" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "institutions" },
+            "arguments": [],
+            "type": {
+              "kind": "ListType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "AboutCareerEnInstitutions" }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": { "kind": "Name", "value": "AboutCareer" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "uk" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "AboutCareerUk" }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "en" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "AboutCareerEn" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": { "kind": "Name", "value": "AboutCertificatesDescriptionUk" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "alt" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": { "kind": "Name", "value": "AboutCertificatesDescriptionEn" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "alt" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": { "kind": "Name", "value": "AboutCertificatesDescription" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "uk" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "AboutCertificatesDescriptionUk"
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "en" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "AboutCertificatesDescriptionEn"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": { "kind": "Name", "value": "AboutCertificates" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "photo" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "description" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "AboutCertificatesDescription"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
         "interfaces": [
           { "kind": "NamedType", "name": { "kind": "Name", "value": "Node" } },
           {
@@ -1631,6 +2268,48 @@
               "type": {
                 "kind": "NamedType",
                 "name": { "kind": "Name", "value": "AboutGeneral" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "education" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "AboutEducation" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "career" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "AboutCareer" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "certificates" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "ListType",
+                "type": {
+                  "kind": "NonNullType",
+                  "type": {
+                    "kind": "NamedType",
+                    "name": { "kind": "Name", "value": "AboutCertificates" }
+                  }
+                }
               }
             }
           },
@@ -1952,6 +2631,318 @@
       },
       {
         "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "AboutEducationUkInstitutionsFilter"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "institution" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "AboutEducationUkFilter" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "title" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "institutions" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "AboutEducationUkInstitutionsFilter"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "AboutEducationEnInstitutionsFilter"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "institution" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "AboutEducationEnFilter" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "title" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "institutions" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "AboutEducationEnInstitutionsFilter"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "AboutEducationFilter" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "uk" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "AboutEducationUkFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "en" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "AboutEducationEnFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "AboutCareerUkInstitutionsFilter" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "period" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "institution" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "AboutCareerUkFilter" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "title" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "institutions" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "AboutCareerUkInstitutionsFilter"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "AboutCareerEnInstitutionsFilter" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "period" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "institution" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "AboutCareerEnFilter" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "title" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "institutions" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "AboutCareerEnInstitutionsFilter"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "AboutCareerFilter" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "uk" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "AboutCareerUkFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "en" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "AboutCareerEnFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "AboutCertificatesDescriptionUkFilter"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "alt" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "AboutCertificatesDescriptionEnFilter"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "alt" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "AboutCertificatesDescriptionFilter"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "uk" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "AboutCertificatesDescriptionUkFilter"
+              }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "en" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "AboutCertificatesDescriptionEnFilter"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "AboutCertificatesFilter" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "photo" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "ImageFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "description" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "AboutCertificatesDescriptionFilter"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
         "name": { "kind": "Name", "value": "AboutFilter" },
         "fields": [
           {
@@ -1968,6 +2959,30 @@
             "type": {
               "kind": "NamedType",
               "name": { "kind": "Name", "value": "AboutGeneralFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "education" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "AboutEducationFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "career" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "AboutCareerFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "certificates" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "AboutCertificatesFilter" }
             }
           }
         ]
@@ -3376,6 +4391,336 @@
       },
       {
         "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "AboutEducationUkInstitutionsMutation"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "institution" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "AboutEducationUkMutation" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "title" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "institutions" },
+            "type": {
+              "kind": "ListType",
+              "type": {
+                "kind": "NamedType",
+                "name": {
+                  "kind": "Name",
+                  "value": "AboutEducationUkInstitutionsMutation"
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "AboutEducationEnInstitutionsMutation"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "institution" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "AboutEducationEnMutation" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "title" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "institutions" },
+            "type": {
+              "kind": "ListType",
+              "type": {
+                "kind": "NamedType",
+                "name": {
+                  "kind": "Name",
+                  "value": "AboutEducationEnInstitutionsMutation"
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "AboutEducationMutation" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "uk" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "AboutEducationUkMutation" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "en" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "AboutEducationEnMutation" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "AboutCareerUkInstitutionsMutation"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "period" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "institution" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "AboutCareerUkMutation" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "title" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "institutions" },
+            "type": {
+              "kind": "ListType",
+              "type": {
+                "kind": "NamedType",
+                "name": {
+                  "kind": "Name",
+                  "value": "AboutCareerUkInstitutionsMutation"
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "AboutCareerEnInstitutionsMutation"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "period" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "institution" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "AboutCareerEnMutation" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "title" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "institutions" },
+            "type": {
+              "kind": "ListType",
+              "type": {
+                "kind": "NamedType",
+                "name": {
+                  "kind": "Name",
+                  "value": "AboutCareerEnInstitutionsMutation"
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "AboutCareerMutation" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "uk" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "AboutCareerUkMutation" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "en" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "AboutCareerEnMutation" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "AboutCertificatesDescriptionUkMutation"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "alt" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "AboutCertificatesDescriptionEnMutation"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "alt" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "AboutCertificatesDescriptionMutation"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "uk" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "AboutCertificatesDescriptionUkMutation"
+              }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "en" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "AboutCertificatesDescriptionEnMutation"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "AboutCertificatesMutation" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "photo" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "description" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "AboutCertificatesDescriptionMutation"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
         "name": { "kind": "Name", "value": "AboutMutation" },
         "fields": [
           {
@@ -3392,6 +4737,33 @@
             "type": {
               "kind": "NamedType",
               "name": { "kind": "Name", "value": "AboutGeneralMutation" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "education" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "AboutEducationMutation" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "career" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "AboutCareerMutation" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "certificates" },
+            "type": {
+              "kind": "ListType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "AboutCertificatesMutation" }
+              }
             }
           }
         ]
