@@ -1,13 +1,18 @@
+import Image from 'next/image';
 import { TinaMarkdown } from 'tinacms/dist/rich-text';
 
+// does not require 'lang' as an argument
+import { fetchImage } from '@/api/fetchAbout';
+
 // types for data props will be defined once we have a fixed collection structure
-const Test = ({ data }) => {
+const Test = async ({ data }) => {
   // temporary fix (when data is undefined) - need proper error handling
   if (!data) {
     return;
   }
 
   const { name, profession, education, experience } = data;
+  const img = await fetchImage();
 
   return (
     <>
@@ -15,6 +20,8 @@ const Test = ({ data }) => {
       <h2 className="uppercase">
         <TinaMarkdown content={profession} />
       </h2>
+
+      <Image src={img as string} alt={name} width={250} height={250} />
 
       <h3 className="mt-3 font-semibold">Освіта:</h3>
       <ul className="list-inside list-disc">

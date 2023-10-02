@@ -1,16 +1,15 @@
 ---
 case:
-  - date: 2023-08-27T21:00:00.000Z
+  - date: 2023-09-19T21:00:00.000Z
     content:
       uk:
         title: Тестова процедура
         description: |
-          Було дуже круто
+          шалала
       en:
         title: ''
-        description: ''
-    before: /en/uploads/results/0000-0000-3154836-696.jpg
-    after: /en/uploads/results/171.jpg
+    before: /en/uploads/results/0000-0000-3154835-696.jpg
+    after: /en/uploads/results/0000-0000-3154847-696.jpg
   - date: 2023-08-31T21:00:00.000Z
     content:
       uk:

@@ -1,19 +1,22 @@
 import client from '@/tina/__generated__/client';
 
 export const fetchResults = async (lang: string) => {
-  const result = await client.queries.results({ relativePath: 'results.md' });
+  try {
+    const result = await client.queries.results({ relativePath: 'results.md' });
 
-  const data = result.data.results.case?.map((item: any) => {
-    return {
-      date: item.date,
-      content: item.content[lang],
-      before: item.before,
-      after: item.after,
-    };
-  });
+    const data = result.data.results.case?.map((item: any) => {
+      return {
+        ...item,
+        content: item.content[lang],
+      };
+    });
 
-  // return data for the currently selected locale
-  return data;
+    return data;
+  } catch (error) {
+    console.log(error);
+
+    return null;
+  }
 };
 
 // === in your component ===

@@ -17,6 +17,11 @@ export default defineConfig({
         format: 'md',
         fields: [
           {
+            name: 'photo',
+            label: 'Photo',
+            type: 'image',
+          },
+          {
             name: 'general',
             label: 'General',
             type: 'object',
@@ -273,15 +278,12 @@ export default defineConfig({
                 return { label: `${item?.content?.uk?.title}` };
               },
               defaultItem: {
-                // date: '',
                 content: {
                   uk: {
                     title: '',
-                    // description: ''
                   },
                   en: {
                     title: '',
-                    // description: ''
                   },
                 },
               },
