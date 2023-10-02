@@ -4,5 +4,6 @@
 
 /* Slider Before-After */
 [data-testid='container'] {
-  height: 497px !important;
+  width: 100% !important;
+  height: 100% !important;
 }

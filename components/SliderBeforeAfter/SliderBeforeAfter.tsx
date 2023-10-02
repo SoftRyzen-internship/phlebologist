@@ -3,26 +3,39 @@
 import React from 'react';
 
 import ReactCompareImage from 'react-compare-image';
+import classnames from 'classnames';
 
+import { SliderBeforeAfterProps } from './SliderBeforeAfter.props';
 import SliderBeforeAfterHandle from '../SliderBeforeAfterHandle/SliderBeforeAfterHandle';
-// import css from './SliderBeforeAfter.module.css';
 
-const SliderBeforeAfter = () => {
+const SliderBeforeAfter: React.FC<SliderBeforeAfterProps> = ({
+  page,
+  className = '',
+}) => {
+  // TODO get photos from Tina
   const before = 'images/before-after/1.jpg';
   const after = 'images/before-after/2.jpg';
 
+  // TODO get ALT-text from Tina
+  const { beforeAltText, afterAltText } = page.page.home.patient_results.slider;
+
+  const sliderWrapperClass = classnames(
+    'mx-auto w-[256px] h-[380px] rounded-[20px] md:w-[320px] md:h-[497px] md:rounded-3xl xl:w-[560px] xl:h-[503px] bg-gray-light overflow-hidden',
+    className,
+  );
+
   return (
-    <ReactCompareImage
-      leftImage={before}
-      leftImageCss={{ objectPosition: 'right', width: 320 }}
-      leftImageAlt="Before Image"
-      rightImage={after}
-      rightImageCss={{ objectPosition: 'right', width: 320 }}
-      rightImageAlt="After Image"
-      handle={<SliderBeforeAfterHandle />}
-      sliderLineWidth={3}
-      sliderLineColor="#ECEEF2"
-    />
+    <div className={sliderWrapperClass}>
+      <ReactCompareImage
+        leftImage={before}
+        leftImageAlt={beforeAltText}
+        rightImage={after}
+        rightImageAlt={afterAltText}
+        handle={<SliderBeforeAfterHandle page={page} />}
+        sliderLineWidth={3}
+        sliderLineColor="#ECEEF2"
+      />
+    </div>
   );
 };
 

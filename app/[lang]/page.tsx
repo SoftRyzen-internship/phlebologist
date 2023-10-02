@@ -26,7 +26,7 @@ export default async function Home({
       <ButtonPrimary buttonsize="large">
         Записатись на консультацію
       </ButtonPrimary>
-      <SliderBeforeAfter />
+      <SliderBeforeAfter page={page} />
     </main>
   );
 }

@@ -6,7 +6,15 @@
   "page": {
     "home": {
       "title": "Willkommen bei NextJs i18n",
-      "description": "Internationalisierung im NextJs 13 App-Router"
+      "description": "Internationalisierung im NextJs 13 App-Router",
+      "patient_results": {
+        "slider": {
+          "beforeAltText": "Зображення до лікування",
+          "afterAltText": "Зображення після лікування",
+          "beforeHandleText": "До",
+          "afterHandleText": "Після"
+        }
+      }
     },
     "about": {
       "title": "Über uns",
