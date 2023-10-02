@@ -32,6 +32,14 @@
           "iconFunction": "Кнопка місцезнаходження",
           "iconLabel": "Іконка геолокації"
         }
+      },
+      "patient_results": {
+        "slider": {
+          "beforeAltText": "Зображення до лікування",
+          "afterAltText": "Зображення після лікування",
+          "beforeHandleText": "До",
+          "afterHandleText": "Після"
+        }
       }
     },
     "about": {

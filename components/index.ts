@@ -3,7 +3,6 @@ export { default as LocaleSwitcher } from '@/components/LocaleSwitcher/LocaleSwi
 
 // tina testing
 export { default as Test } from '@/components/Test/Test';
-export { default as TestHero } from '@/components/TestHero/TestHero';
 
 // heading
 export { default as Heading } from '@/components/Heading/Heading';
@@ -11,3 +10,8 @@ export { default as Heading } from '@/components/Heading/Heading';
 // buttons
 export { default as ButtonPrimary } from '@/components/Buttons/ButtonPrimary/ButtonPrimary';
 export { default as IconBtn } from '@/components/Buttons/IconBtn/IconBtn';
+
+// slider before-after
+export { default as SliderBeforeAfter } from '@/components/SliderBeforeAfter/SliderBeforeAfter';
+
+export { default as SliderBeforeAfterHandle } from '@/components/SliderBeforeAfterHandle/SliderBeforeAfterHandle';
