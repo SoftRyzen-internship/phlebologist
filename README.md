@@ -206,13 +206,13 @@ folder. This is a list of most common components and their API.
 
 The Primary Button has `button` tag and performs an action when clicked.
 
-| Prop            | Default     | Description                                                                    |
-| --------------- | ----------- | ------------------------------------------------------------------------------ |
-| `view`          | `undefined` | if the button is used in Header, specify `header`                              |
-| `active`        | `false`     | if the button is used as tab-title, choose the active state: `false` or `true` |
-| `className`     | `undefined` | add any custom styles                                                          |
-| `children`      | `undefined` | a necessary prop. any text content                                             |
-| `actionHandler` | `black`     | a function that is executed when clicked                                       |
+| Prop            | Default     | Description                                               |
+| --------------- | ----------- | --------------------------------------------------------- |
+| `view`          | `undefined` | if the button is used in Header, specify `header`         |
+| `variant`       | `light`     | choose the color variant of the button: `light` or `dark` |
+| `className`     | `undefined` | add any custom styles                                     |
+| `children`      | `undefined` | a necessary prop. any text content                        |
+| `actionHandler` | `black`     | a function that is executed when clicked                  |
 
 - ### ButtonSecondary
 

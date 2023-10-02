@@ -5,7 +5,12 @@ import { fetchGeneral } from '@/api';
 
 import { Test } from '@/components';
 
-import { ButtonPrimary, SliderBeforeAfter } from '@/components';
+import {
+  ButtonPrimary,
+  ButtonSecondary,
+  ButtonTertiary,
+  SliderBeforeAfter,
+} from '@/components';
 
 export default async function Home({
   params: { lang },
@@ -25,9 +30,15 @@ export default async function Home({
 
       {/* admin data rendering */}
       <Test data={general} />
+      <div className="flex flex-col items-center justify-center gap-6 bg-green-300 py-12">
+        <ButtonPrimary view="header" className="w-[290px]">
+          Записатись на консультацію
+        </ButtonPrimary>
+        <ButtonSecondary linkto="">Записатись</ButtonSecondary>
 
-      <ButtonPrimary>Записатись на консультацію</ButtonPrimary>
-      <SliderBeforeAfter page={page} />
+        <ButtonTertiary>Написати у Telegram</ButtonTertiary>
+        <SliderBeforeAfter page={page} />
+      </div>
     </main>
   );
 }

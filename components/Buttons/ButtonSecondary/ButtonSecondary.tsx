@@ -12,15 +12,15 @@ const ButtonSecondary: React.FC<ButtonSecondaryProps> = ({
 }: ButtonSecondaryProps) => {
   const secondaryBtnClass = classnames(
     {
-      'text-primary-dark-100 md:w-[262px] xl:w-[312px]': view === 'hero',
+      'md:w-[262px] xl:w-auto': view === 'hero',
     },
-    { 'text-primary-dark-200 md:w-[186px]': view !== 'hero' }, // на мобілці яка буде ширина кнопки?
-    'outline-without flex items-center justify-center w-[256px] rounded-normal bg-white-light font-bold text-base px-[23px] xl:px-12 py-4 leading-normal -tracking-[0.64px]',
+    { 'md:w-[186px] xl:w-auto': view !== 'hero' },
 
-    'mediaHover:hover:bg-gray-light mediaHover:hover:text-black-dark focus:bg-gray-light focus:text-black-dark',
+    'outline-without flex items-center justify-center w-[256px] h-[51px] rounded-normal bg-white-light font-bold xl:px-12 xl:font-medium xl:bg-gray-light text-primary-dark-400 text-base leading-normal -tracking-[0.64px]',
+
+    'mediaHover:hover:bg-white focus:bg-white mediaHover:hover:font-bold focus:font-bold',
 
     'transition-all duration-300',
-
     className,
   );
 

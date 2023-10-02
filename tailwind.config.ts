@@ -44,10 +44,16 @@ module.exports = {
           DEFAULT: 'rgba(48, 48, 54, 0.5)',
           light: '#ECEEF2',
           dark: '#EAEAEA',
+          extra: '#E3E3E3',
         },
         primary: {
           light: { 100: 'rgba(48, 48, 54, 0.5)' },
-          dark: { 100: '#6D91A4', 200: '#263850' },
+          dark: {
+            100: '#6D91A4',
+            200: '#263850',
+            300: '#354C69',
+            400: '#273951',
+          },
         },
         notify: {
           error: '#FF5660',

@@ -1,6 +1,6 @@
 export interface ButtonPrimaryProps {
   view?: 'header' | undefined;
-  active?: boolean;
+  variant?: 'light' | 'dark';
   className?: string;
   children: string;
   actionHandler?: () => void;
