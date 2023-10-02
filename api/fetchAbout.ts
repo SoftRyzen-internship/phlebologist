@@ -2,11 +2,11 @@ import client from '@/tina/__generated__/client';
 
 export const fetchImage = async () => {
   try {
-    const result = await client.queries.about({ relativePath: 'about.md' });
+    const { data } = await client.queries.about({ relativePath: 'about.md' });
 
-    const data = result.data.about.photo;
+    const result = data.about.photo;
 
-    return data;
+    return result;
   } catch (error) {
     console.log(error);
 
@@ -16,11 +16,11 @@ export const fetchImage = async () => {
 
 export const fetchGeneral = async (lang: string) => {
   try {
-    const result = await client.queries.about({ relativePath: 'about.md' });
+    const { data } = await client.queries.about({ relativePath: 'about.md' });
 
-    const data = result.data.about.general[lang];
+    const result = data.about.general[lang];
 
-    return data;
+    return result;
   } catch (error) {
     console.log(error);
 
@@ -30,11 +30,11 @@ export const fetchGeneral = async (lang: string) => {
 
 export const fetchEducation = async (lang: string) => {
   try {
-    const result = await client.queries.about({ relativePath: 'about.md' });
+    const { data } = await client.queries.about({ relativePath: 'about.md' });
 
-    const data = result.data.about.education[lang];
+    const result = data.about.education[lang];
 
-    return data;
+    return result;
   } catch (error) {
     console.log(error);
 
@@ -44,11 +44,11 @@ export const fetchEducation = async (lang: string) => {
 
 export const fetchCareer = async (lang: string) => {
   try {
-    const result = await client.queries.about({ relativePath: 'about.md' });
+    const { data } = await client.queries.about({ relativePath: 'about.md' });
 
-    const data = result.data.about.career[lang];
+    const result = data.about.career[lang];
 
-    return data;
+    return result;
   } catch (error) {
     console.log(error);
 
@@ -58,16 +58,16 @@ export const fetchCareer = async (lang: string) => {
 
 export const fetchCertificates = async (lang: string) => {
   try {
-    const result = await client.queries.about({ relativePath: 'about.md' });
+    const { data } = await client.queries.about({ relativePath: 'about.md' });
 
-    const data = result.data.about.certificates.map((item: any) => {
+    const result = data.about.certificates.map((item: any) => {
       return {
         ...item,
         description: item.description[lang],
       };
     });
 
-    return data;
+    return result;
   } catch (error) {
     console.log(error);
 

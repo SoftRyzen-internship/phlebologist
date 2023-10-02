@@ -1,12 +1,12 @@
 import client from '@/tina/__generated__/client';
 
-export const fetchBanner = async (lang: string) => {
+const fetchBanner = async (lang: string) => {
   try {
-    const result = await client.queries.banner({ relativePath: 'banner.md' });
+    const { data } = await client.queries.banner({ relativePath: 'banner.md' });
 
-    const data = result.data.banner[lang];
+    const result = data.banner[lang];
 
-    return data;
+    return result;
   } catch (error) {
     console.log(error);
 
@@ -14,9 +14,11 @@ export const fetchBanner = async (lang: string) => {
   }
 };
 
+export default fetchBanner;
+
 // === in your component ===
 
 // import { fetchBanner } from '@/api/fetchBanner';
 
 // const banner = await fetchBanner(lang);
-// console.log(banner); - check the data
+// console.log(banner);

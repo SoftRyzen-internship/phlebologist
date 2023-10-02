@@ -1,7 +1,7 @@
 import { Locale } from '@/i18n.config';
 import { getDictionary } from '@/utils/dictionary';
 
-import { fetchGeneral } from '@/api/fetchAbout';
+import { fetchGeneral } from '@/api';
 
 import { Test } from '@/components';
 import { ButtonPrimary } from '@/components';

@@ -44,7 +44,7 @@ career:
   uk:
     title: Карʼєра лікаря
     institutions:
-      - period: '2013-2016 '
+      - period: 2013-2016
         institution: 'КМКЛ №6 / Хірургічне відділення №1, №2'
       - period: 2013-2016
         institution:

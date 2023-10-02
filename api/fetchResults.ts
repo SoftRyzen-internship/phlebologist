@@ -1,17 +1,19 @@
 import client from '@/tina/__generated__/client';
 
-export const fetchResults = async (lang: string) => {
+const fetchResults = async (lang: string) => {
   try {
-    const result = await client.queries.results({ relativePath: 'results.md' });
+    const { data } = await client.queries.results({
+      relativePath: 'results.md',
+    });
 
-    const data = result.data.results.case?.map((item: any) => {
+    const result = data.results.case?.map((item: any) => {
       return {
         ...item,
         content: item.content[lang],
       };
     });
 
-    return data;
+    return result;
   } catch (error) {
     console.log(error);
 
@@ -19,9 +21,11 @@ export const fetchResults = async (lang: string) => {
   }
 };
 
+export default fetchResults;
+
 // === in your component ===
 
 // import { fetchResults } from '@/api/fetchResults';
 
 // const results = await fetchResults(lang);
-// console.log(results); - check the data
+// console.log(results);

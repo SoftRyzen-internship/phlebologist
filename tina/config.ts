@@ -20,6 +20,7 @@ export default defineConfig({
             name: 'photo',
             label: 'Photo',
             type: 'image',
+            required: true,
           },
           {
             name: 'general',
@@ -36,11 +37,13 @@ export default defineConfig({
                     name: 'name',
                     label: 'Name',
                     type: 'string',
+                    required: true,
                   },
                   {
                     name: 'profession',
                     label: 'Profession',
                     type: 'rich-text',
+                    required: true,
                   },
                   {
                     name: 'education',
@@ -106,11 +109,13 @@ export default defineConfig({
                     name: 'name',
                     label: 'Name',
                     type: 'string',
+                    required: true,
                   },
                   {
                     name: 'profession',
                     label: 'Profession',
                     type: 'rich-text',
+                    required: true,
                   },
                   {
                     name: 'education',
@@ -184,6 +189,7 @@ export default defineConfig({
                     name: 'title',
                     label: 'Title',
                     type: 'string',
+                    required: true,
                   },
                   {
                     name: 'institutions',
@@ -225,6 +231,7 @@ export default defineConfig({
                     name: 'title',
                     label: 'Title',
                     type: 'string',
+                    required: true,
                   },
                   {
                     name: 'institutions',
@@ -274,6 +281,7 @@ export default defineConfig({
                     name: 'title',
                     label: 'Title',
                     type: 'string',
+                    required: true,
                   },
                   {
                     name: 'institutions',
@@ -320,6 +328,7 @@ export default defineConfig({
                     name: 'title',
                     label: 'Title',
                     type: 'string',
+                    required: true,
                   },
                   {
                     name: 'institutions',
@@ -370,6 +379,7 @@ export default defineConfig({
                 name: 'photo',
                 label: 'Photo',
                 type: 'image',
+                required: true,
               },
               {
                 name: 'description',
@@ -385,6 +395,7 @@ export default defineConfig({
                         name: 'alt',
                         label: 'Alt',
                         type: 'string',
+                        required: true,
                       },
                     ],
                   },
@@ -397,6 +408,7 @@ export default defineConfig({
                         name: 'alt',
                         label: 'Alt',
                         type: 'string',
+                        required: true,
                       },
                     ],
                   },
@@ -437,11 +449,13 @@ export default defineConfig({
                 name: 'title',
                 label: 'Title',
                 type: 'rich-text',
+                required: true,
               },
               {
                 name: 'description',
                 label: 'Description',
                 type: 'rich-text',
+                required: true,
               },
             ],
           },
@@ -454,11 +468,13 @@ export default defineConfig({
                 name: 'title',
                 label: 'Title',
                 type: 'rich-text',
+                required: true,
               },
               {
                 name: 'description',
                 label: 'Description',
                 type: 'rich-text',
+                required: true,
               },
             ],
           },
@@ -480,6 +496,7 @@ export default defineConfig({
                 name: 'date',
                 label: 'Date',
                 type: 'datetime',
+                required: true,
               },
               {
                 name: 'content',
@@ -495,11 +512,13 @@ export default defineConfig({
                         name: 'title',
                         label: 'Title',
                         type: 'string',
+                        required: true,
                       },
                       {
                         name: 'description',
                         label: 'Description',
                         type: 'rich-text',
+                        required: true,
                       },
                     ],
                   },
@@ -512,11 +531,13 @@ export default defineConfig({
                         name: 'title',
                         label: 'Title',
                         type: 'string',
+                        required: true,
                       },
                       {
                         name: 'description',
                         label: 'Description',
                         type: 'rich-text',
+                        required: true,
                       },
                     ],
                   },
@@ -526,11 +547,13 @@ export default defineConfig({
                 name: 'before',
                 label: 'Before',
                 type: 'image',
+                required: true,
               },
               {
                 name: 'after',
                 label: 'After',
                 type: 'image',
+                required: true,
               },
             ],
             ui: {
@@ -548,6 +571,112 @@ export default defineConfig({
                 },
               },
             },
+          },
+        ],
+      },
+      {
+        name: 'reviews',
+        label: 'Reviews',
+        path: 'content/reviews',
+        format: 'md',
+        fields: [
+          {
+            name: 'uk',
+            label: 'UK',
+            type: 'object',
+            fields: [
+              {
+                name: 'case',
+                label: 'Case',
+                type: 'object',
+                list: true,
+                fields: [
+                  {
+                    name: 'date',
+                    label: 'Date',
+                    type: 'datetime',
+                    required: true,
+                  },
+                  {
+                    name: 'photo',
+                    label: 'Photo',
+                    type: 'image',
+                    required: true,
+                  },
+                  {
+                    name: 'name',
+                    label: 'Name',
+                    type: 'string',
+                    required: true,
+                  },
+                  {
+                    name: 'procedure',
+                    label: 'Procedure',
+                    type: 'string',
+                    required: true,
+                  },
+                  {
+                    name: 'review',
+                    label: 'Review',
+                    type: 'rich-text',
+                    required: true,
+                  },
+                ],
+                ui: {
+                  itemProps: item => {
+                    return { label: `${item?.name}` };
+                  },
+                  defaultItem: {
+                    name: '',
+                  },
+                },
+              },
+            ],
+          },
+          {
+            name: 'en',
+            label: 'EN',
+            type: 'object',
+            fields: [
+              {
+                name: 'case',
+                label: 'Case',
+                type: 'object',
+                list: true,
+                fields: [
+                  {
+                    name: 'date',
+                    label: 'Date',
+                    type: 'datetime',
+                    required: true,
+                  },
+                  {
+                    name: 'photo',
+                    label: 'Photo',
+                    type: 'image',
+                    required: true,
+                  },
+                  {
+                    name: 'name',
+                    label: 'Name',
+                    type: 'string',
+                    required: true,
+                  },
+                  {
+                    name: 'procedure',
+                    label: 'Procedure',
+                    type: 'string',
+                    required: true,
+                  },
+                  {
+                    name: 'review',
+                    label: 'Review',
+                    type: 'rich-text',
+                    required: true,
+                  },
+                ],
+              },
+            ],
           },
         ],
       },
