@@ -1,28 +1,33 @@
 import { Locale } from '@/i18n.config';
 import { getDictionary } from '@/utils/dictionary';
 
-import client from '@/tina/__generated__/client';
+import { fetchGeneral } from '@/api';
 
 import { Test } from '@/components';
+
 import { TestSection } from '@/sections';
 import { ButtonPrimary, SliderBeforeAfter } from '@/components';
+
 
 export default async function Home({
   params: { lang },
 }: {
   params: { lang: Locale };
 }) {
+  // fetching local data for the selected lang
   const page = await getDictionary(lang);
-
-  const result = await client.queries.page({ relativePath: 'home.md' });
+  // fetching admin data for the selected lang
+  const general = await fetchGeneral(lang);
 
   return (
     <main>
+      {/* local data rendering */}
       <h1 className="text-2xl">{page.page.home.title}</h1>
       <p className="text-base text-gray-700">{page.page.home.description}</p>
 
-      <Test {...result} />
-      <TestSection {...result} />
+      {/* admin data rendering */}
+      <Test data={general} />
+
       <ButtonPrimary buttonsize="large">
         Записатись на консультацію
       </ButtonPrimary>
