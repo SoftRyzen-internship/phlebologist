@@ -4,7 +4,10 @@ import { getDictionary } from '@/utils/dictionary';
 import { fetchGeneral } from '@/api';
 
 import { Test } from '@/components';
-import { ButtonPrimary } from '@/components';
+
+import { TestSection } from '@/sections';
+import { ButtonPrimary, SliderBeforeAfter } from '@/components';
+
 
 export default async function Home({
   params: { lang },
@@ -28,6 +31,7 @@ export default async function Home({
       <ButtonPrimary buttonsize="large">
         Записатись на консультацію
       </ButtonPrimary>
+      <SliderBeforeAfter page={page} />
     </main>
   );
 }
