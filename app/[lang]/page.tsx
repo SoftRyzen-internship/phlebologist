@@ -4,7 +4,8 @@ import { getDictionary } from '@/utils/dictionary';
 import { fetchGeneral } from '@/api';
 
 import { Test } from '@/components';
-import { ButtonPrimary } from '@/components';
+
+import { ButtonPrimary, SliderBeforeAfter } from '@/components';
 
 export default async function Home({
   params: { lang },
@@ -24,7 +25,9 @@ export default async function Home({
 
       {/* admin data rendering */}
       <Test data={general} />
+
       <ButtonPrimary>Записатись на консультацію</ButtonPrimary>
+      <SliderBeforeAfter page={page} />
     </main>
   );
 }

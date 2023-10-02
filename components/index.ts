@@ -11,3 +11,8 @@ export { default as Heading } from '@/components/Heading/Heading';
 export { default as ButtonPrimary } from '@/components/Buttons/ButtonPrimary/ButtonPrimary';
 export { default as ButtonSecondary } from '@/components/Buttons/ButtonSecondary/ButtonSecondary';
 export { default as ButtonTertiary } from '@/components/Buttons/ButtonTertiary/ButtonTertiary';
+
+// slider before-after
+export { default as SliderBeforeAfter } from '@/components/SliderBeforeAfter/SliderBeforeAfter';
+
+export { default as SliderBeforeAfterHandle } from '@/components/SliderBeforeAfterHandle/SliderBeforeAfterHandle';
