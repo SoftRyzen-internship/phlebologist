@@ -206,24 +206,70 @@ folder. This is a list of most common components and their API.
 
 The Primary Button has `button` tag and performs an action when clicked.
 
-| Prop            | Default     | Description                                      |
-| --------------- | ----------- | ------------------------------------------------ |
-| `buttonsize`    | `small`     | choose the size: `small`, `medium` or `large`    |
-| `type`          | `button`    | optional, can be `button`, `submit` or undefined |
-| `disabled`      | `false`     | choose the disabled state: `false` or `true`     |
-| `className`     | `undefined` | add any custom styles                            |
-| `children`      | `undefined` | a necessary prop. any text content               |
-| `actionHandler` | `black`     | a function that is executed when clicked         |
+| Prop            | Default     | Description                                               |
+| --------------- | ----------- | --------------------------------------------------------- |
+| `view`          | `undefined` | if the button is used in Header, specify `header`         |
+| `variant`       | `light`     | choose the color variant of the button: `light` or `dark` |
+| `className`     | `undefined` | add any custom styles                                     |
+| `children`      | `undefined` | a necessary prop. any text content                        |
+| `actionHandler` | `undefined` | a function that is executed when clicked                  |
 
 - ### ButtonSecondary
 
 The Secondary Button has `a` tag and performs a transition to another part of
 the site when pressed.
 
-| Prop         | Default     | Description                                 |
-| ------------ | ----------- | ------------------------------------------- |
-| `linkto `    | `undefined` | a necessary prop. the address of the link   |
-| `buttonsize` | `medium`    | choose the size: `medium` or `large`        |
-| `loading`    | `false`     | choose the loading state: `false` or `true` |
-| `className`  | `undefined` | add any custom styles                       |
-| `children`   | `undefined` | a necessary prop. any text content          |
+| Prop        | Default     | Description                                           |
+| ----------- | ----------- | ----------------------------------------------------- |
+| `linkto `   | `undefined` | a necessary prop. the address of the link             |
+| `view`      | `undefined` | if the button is used in Hero section, specify `hero` |
+| `className` | `undefined` | add any custom styles                                 |
+| `children`  | `undefined` | a necessary prop. any text content                    |
+
+- ### ButtonTertiary
+
+The Tertiary Button has `button` or `a` tag.
+
+| Prop            | Default     | Description                                            |
+| --------------- | ----------- | ------------------------------------------------------ |
+| `isLink`        | `false`     | if the component needs to have `a` tag, choose `true`  |
+| `type`          | `button`    | choose the button type `button` or `submit`            |
+| `linkto `       | `undefined` | add if `isLink` was specified. The address of the link |
+| `className`     | `undefined` | add any custom styles                                  |
+| `children`      | `undefined` | a necessary prop. any text content                     |
+| `actionHandler` | `undefined` | a function that is executed when clicked               |
+
+- ### IconBtn
+
+The Icon Button has either `anchor` or `button` tag.
+
+| Prop           | Type          | Description                                           |
+| -------------- | ------------- | ----------------------------------------------------- |
+| `icon`         | 'tiktok'      | - Anchor that leads to Tiktok page,                   |
+|                | 'facebook'    | - Anchor that leads to Facebook page,                 |
+|                | 'instagram'   | - Anchor that leads to Instagram page,                |
+|                | 'arrow'       | - Navigation button with arrow to the right,          |
+|                | 'location'    | - Geolocation anchor,                                 |
+|                |               |                                                       |
+| `variant`      | 'result'      | - Button in treatment result section,                 |
+|                | 'feedback'    | - Button in feedback section,                         |
+|                | 'contacts'    | - Button in contacts section,                         |
+|                | 'footer'      | - Button in footer section,                           |
+|                | 'location'    | - Geolocation button,                                 |
+|                |               |                                                       |
+| `onClick`      | void function | Optional, click handler                               |
+|                |               |                                                       |
+| `reverse`      | boolean       | Optional, false by default, turns icon by 180 degrees |
+|                |               |                                                       |
+| `className`    | string        | Optional, add additional tailwind classes,            |
+|                |               | e.g. to position component                            |
+|                |               |                                                       |
+| `iconFunction` | string        | Aria-label on button/anchor element,                  |
+|                |               | taken from dictionary.ts                              |
+|                |               |                                                       |
+| `iconLabel`    | string        | Aria-label on svg element, taken from dictionary.ts   |
+|                |               |                                                       |
+| `url`          | string        | Optional, url address, applies anchor element         |
+|                |               | instead of button element,                            |
+|                |               | and is used inside `href` attribute                   |
+|                |               |                                                       |
