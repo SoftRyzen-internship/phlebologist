@@ -16,13 +16,17 @@ const ButtonTertiary: React.FC<ButtonTertiaryProps> = ({
 }: ButtonTertiaryProps) => {
   const tertiaryBtnClass = classnames(
     {
-      'font-bold w-[224px] md:w-[252px] md:font-normal xl:w-[344px] xl:bg-white':
+      'font-bold w-[224px] md:w-[252px] md:font-normal xl:w-[464px] xl:bg-white xl:font-medium mediaHover:hover:font-bold focus:font-bold':
         isLink,
     },
-    { 'font-normal w-[256px] md:w-auto md:px-12 xl:bg-white-light': !isLink },
-    'outline-without flex items-center justify-center h-[51px] py-4 bg-gray-light text-black-dark text-base rounded-normal leading-normal -tracking-[0.64px]',
+    {
+      'font-normal w-[256px] md:w-auto md:px-12 xl:bg-white-light xl:mediaHover:hover:font-bold xl:focus:font-bold':
+        !isLink,
+    },
 
-    'mediaHover:hover:bg-gray-dark focus:bg-gray-dark mediaHover:hover:cursor-pointer',
+    'outline-without flex items-center justify-center h-[51px] bg-gray-light text-black-dark text-base rounded-normal leading-normal -tracking-[0.64px]',
+
+    'mediaHover:hover:bg-gray-light focus:bg-gray-light mediaHover:hover:cursor-pointer',
 
     'transition-all duration-300',
     className,
