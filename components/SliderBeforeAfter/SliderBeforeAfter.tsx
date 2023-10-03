@@ -6,7 +6,7 @@ import ReactCompareImage from 'react-compare-image';
 import classnames from 'classnames';
 
 import { SliderBeforeAfterProps } from './SliderBeforeAfter.props';
-import SliderBeforeAfterHandle from '../SliderBeforeAfterHandle/SliderBeforeAfterHandle';
+import { SliderBeforeAfterHandle } from '@/components';
 
 const SliderBeforeAfter: React.FC<SliderBeforeAfterProps> = ({
   page,

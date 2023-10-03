@@ -11,6 +11,8 @@ import {
   IconBtn,
   Slider,
   FeedbackSlide,
+  ButtonSecondary,
+  ButtonTertiary,
 } from '@/components';
 
 export default async function Home({
@@ -37,12 +39,16 @@ export default async function Home({
       {/* local data rendering */}
       <h1 className="text-2xl">{page.home.title}</h1>
       <p className="text-base text-gray-700">{page.home.description}</p>
+
       {/* admin data rendering */}
       <Test data={general} />
-      <ButtonPrimary buttonsize="large">
-        Записатись на консультацію
-      </ButtonPrimary>
-      <SliderBeforeAfter page={page} />
+      <div className="flex flex-col items-center justify-center gap-6 py-12">
+        <ButtonPrimary>Записатись на консультацію</ButtonPrimary>
+        <ButtonSecondary linkto="">Записатись</ButtonSecondary>
+        <ButtonTertiary>Написати у Telegram</ButtonTertiary>
+        <SliderBeforeAfter page={page} />
+      </div>
+
       <IconBtn
         icon="tiktok"
         variant="contacts"

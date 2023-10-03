@@ -195,38 +195,50 @@ folder. This is a list of most common components and their API.
 
 - ### Heading
 
-| Prop        | Default     | Description                                     |
-| ----------- | ----------- | ----------------------------------------------- |
-| `tag`       | `h2`        | choose the tag of title you'd need: `h1` - `h3` |
-| `variant`   | `primary`   | `main`, `primary`, `secondary`, `tertiary`      |
-| `children`  | `undefined` | required, any content                           |
-| `className` | `undefined` | add custom or additional css class you'd need   |
+| Prop        | Default     | Description                                       |
+| ----------- | ----------- | ------------------------------------------------- |
+| `tag`       | `h2`        | choose the tag of title you'd need: `h1` - `h3`   |
+| `view`      | `undefined` | if the heading is in Hero section, specify `hero` |
+| `variant`   | `primary`   | `main`, `primary`, `secondary`, `tertiary`        |
+| `children`  | `undefined` | required, any content                             |
+| `className` | `undefined` | add custom or additional css class you'd need     |
 
 - ### ButtonPrimary
 
 The Primary Button has `button` tag and performs an action when clicked.
 
-| Prop            | Default     | Description                                      |
-| --------------- | ----------- | ------------------------------------------------ |
-| `buttonsize`    | `small`     | choose the size: `small`, `medium` or `large`    |
-| `type`          | `button`    | optional, can be `button`, `submit` or undefined |
-| `disabled`      | `false`     | choose the disabled state: `false` or `true`     |
-| `className`     | `undefined` | add any custom styles                            |
-| `children`      | `undefined` | a necessary prop. any text content               |
-| `actionHandler` | `black`     | a function that is executed when clicked         |
+| Prop            | Default     | Description                                               |
+| --------------- | ----------- | --------------------------------------------------------- |
+| `view`          | `undefined` | if the button is used in Header, specify `header`         |
+| `variant`       | `light`     | choose the color variant of the button: `light` or `dark` |
+| `className`     | `undefined` | add any custom styles                                     |
+| `children`      | `undefined` | a necessary prop. any text content                        |
+| `actionHandler` | `undefined` | a function that is executed when clicked                  |
 
 - ### ButtonSecondary
 
 The Secondary Button has `a` tag and performs a transition to another part of
 the site when pressed.
 
-| Prop         | Default     | Description                                 |
-| ------------ | ----------- | ------------------------------------------- |
-| `linkto `    | `undefined` | a necessary prop. the address of the link   |
-| `buttonsize` | `medium`    | choose the size: `medium` or `large`        |
-| `loading`    | `false`     | choose the loading state: `false` or `true` |
-| `className`  | `undefined` | add any custom styles                       |
-| `children`   | `undefined` | a necessary prop. any text content          |
+| Prop        | Default     | Description                                           |
+| ----------- | ----------- | ----------------------------------------------------- |
+| `linkto `   | `undefined` | a necessary prop. the address of the link             |
+| `view`      | `undefined` | if the button is used in Hero section, specify `hero` |
+| `className` | `undefined` | add any custom styles                                 |
+| `children`  | `undefined` | a necessary prop. any text content                    |
+
+- ### ButtonTertiary
+
+The Tertiary Button has `button` or `a` tag.
+
+| Prop            | Default     | Description                                            |
+| --------------- | ----------- | ------------------------------------------------------ |
+| `isLink`        | `false`     | if the component needs to have `a` tag, choose `true`  |
+| `type`          | `button`    | choose the button type `button` or `submit`            |
+| `linkto `       | `undefined` | add if `isLink` was specified. The address of the link |
+| `className`     | `undefined` | add any custom styles                                  |
+| `children`      | `undefined` | a necessary prop. any text content                     |
+| `actionHandler` | `undefined` | a function that is executed when clicked               |
 
 - ### IconBtn
 
