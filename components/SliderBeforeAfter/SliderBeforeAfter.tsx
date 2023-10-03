@@ -17,7 +17,7 @@ const SliderBeforeAfter: React.FC<SliderBeforeAfterProps> = ({
   const after = 'images/before-after/2.jpg';
 
   // TODO get ALT-text from Tina
-  const { beforeAltText, afterAltText } = page.page.home.patient_results.slider;
+  const { beforeAltText, afterAltText } = page.home.patient_results.slider;
 
   const sliderWrapperClass = classnames(
     'w-[256px] h-[380px] rounded-[20px] md:w-[320px] md:h-[497px] md:rounded-3xl xl:w-[560px] xl:h-[503px] bg-gray-light overflow-hidden',
