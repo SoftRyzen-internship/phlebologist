@@ -9,6 +9,7 @@ export { default as Heading } from '@/components/Heading/Heading';
 
 // buttons
 export { default as ButtonPrimary } from '@/components/Buttons/ButtonPrimary/ButtonPrimary';
+export { default as IconBtn } from '@/components/Buttons/IconBtn/IconBtn';
 
 // slider before-after
 export { default as SliderBeforeAfter } from '@/components/SliderBeforeAfter/SliderBeforeAfter';
