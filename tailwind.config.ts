@@ -10,6 +10,7 @@ module.exports = {
   theme: {
     // MEDIA QUERIES
     screens: {
+      xs: '320px',
       sm: '480px',
       md: '768px',
       xl: '1280px',
@@ -27,7 +28,14 @@ module.exports = {
       // fontFamily: { inter: ['var(--font-inter)'] },
       fontSize: {},
       // BORDER
-      borderRadius: { normal: '8px', extended: '10px' },
+      borderRadius: {
+        normal: '8px',
+        extended: '10px',
+        medium: '20px',
+        large: '24px',
+        extraLarge: '36px',
+        max: '48px',
+      },
       // ALL COLORS
       colors: {
         body: '#F3F3F3',
