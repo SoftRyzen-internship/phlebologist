@@ -1,13 +1,8 @@
 import { Locale } from '@/i18n.config';
 import { getDictionary } from '@/utils/dictionary';
 
-import { fetchGeneral } from '@/api';
-
-import { Test } from '@/components';
-
-import { TestSection } from '@/sections';
+import { About } from '@/sections';
 import { ButtonPrimary, SliderBeforeAfter } from '@/components';
-
 
 export default async function Home({
   params: { lang },
@@ -15,23 +10,20 @@ export default async function Home({
   params: { lang: Locale };
 }) {
   // fetching local data for the selected lang
-  const page = await getDictionary(lang);
-  // fetching admin data for the selected lang
-  const general = await fetchGeneral(lang);
+  const { page } = await getDictionary(lang);
 
   return (
     <main>
       {/* local data rendering */}
-      <h1 className="text-2xl">{page.page.home.title}</h1>
-      <p className="text-base text-gray-700">{page.page.home.description}</p>
-
-      {/* admin data rendering */}
-      <Test data={general} />
+      <h1 className="text-2xl">{page.home.title}</h1>
+      <p className="text-base text-gray-700">{page.home.description}</p>
 
       <ButtonPrimary buttonsize="large">
         Записатись на консультацію
       </ButtonPrimary>
       <SliderBeforeAfter page={page} />
+
+      <About lang={lang} staticData={page.home.about} />
     </main>
   );
 }

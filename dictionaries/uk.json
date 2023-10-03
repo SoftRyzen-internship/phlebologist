@@ -7,6 +7,27 @@
     "home": {
       "title": "Willkommen bei NextJs i18n",
       "description": "Internationalisierung im NextJs 13 App-Router",
+      "about": {
+        "title": "Про лікаря",
+        "menu": [
+          {
+            "item": "Загальна інформація",
+            "collection": "general"
+          },
+          {
+            "item": "Освіта",
+            "collection": "education"
+          },
+          {
+            "item": "Кар'єра",
+            "collection": "career"
+          },
+          {
+            "item": "Сертифікати",
+            "collection": "certificates"
+          }
+        ]
+      },
       "patient_results": {
         "slider": {
           "beforeAltText": "Зображення до лікування",
@@ -15,10 +36,6 @@
           "afterHandleText": "Після"
         }
       }
-    },
-    "about": {
-      "title": "Über uns",
-      "description": "Dies ist die About-Seite"
     }
   }
 }

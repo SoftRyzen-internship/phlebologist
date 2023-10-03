@@ -1,6 +1,31 @@
+import { Locale } from '@/i18n.config';
 import client from '@/tina/__generated__/client';
 
-export const fetchImage = async () => {
+export const fetchAbout = async (lang: Locale) => {
+  try {
+    const image = await fetchImage();
+    const general = await fetchGeneral(lang);
+    const education = await fetchEducation(lang);
+    const career = await fetchCareer(lang);
+    const certificates = await fetchCertificates(lang);
+
+    const about = {
+      image,
+      general,
+      education,
+      career,
+      certificates,
+    };
+
+    return about;
+  } catch (error) {
+    console.log(error);
+
+    return null;
+  }
+};
+
+const fetchImage = async () => {
   try {
     const { data } = await client.queries.about({ relativePath: 'about.md' });
 
@@ -14,7 +39,7 @@ export const fetchImage = async () => {
   }
 };
 
-export const fetchGeneral = async (lang: string) => {
+const fetchGeneral = async (lang: Locale) => {
   try {
     const { data } = await client.queries.about({ relativePath: 'about.md' });
 
@@ -28,7 +53,7 @@ export const fetchGeneral = async (lang: string) => {
   }
 };
 
-export const fetchEducation = async (lang: string) => {
+const fetchEducation = async (lang: Locale) => {
   try {
     const { data } = await client.queries.about({ relativePath: 'about.md' });
 
@@ -42,7 +67,7 @@ export const fetchEducation = async (lang: string) => {
   }
 };
 
-export const fetchCareer = async (lang: string) => {
+const fetchCareer = async (lang: Locale) => {
   try {
     const { data } = await client.queries.about({ relativePath: 'about.md' });
 
@@ -56,7 +81,7 @@ export const fetchCareer = async (lang: string) => {
   }
 };
 
-export const fetchCertificates = async (lang: string) => {
+const fetchCertificates = async (lang: Locale) => {
   try {
     const { data } = await client.queries.about({ relativePath: 'about.md' });
 
@@ -74,3 +99,5 @@ export const fetchCertificates = async (lang: string) => {
     return null;
   }
 };
+
+export default fetchAbout;

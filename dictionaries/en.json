@@ -7,6 +7,27 @@
     "home": {
       "title": "Welcome to NextJs i18n",
       "description": "Internationalization in NextJs 13 App router",
+      "about": {
+        "title": "About",
+        "menu": [
+          {
+            "item": "General info",
+            "collection": "general"
+          },
+          {
+            "item": "Education",
+            "collection": "education"
+          },
+          {
+            "item": "Career",
+            "collection": "career"
+          },
+          {
+            "item": "Certificates",
+            "collection": "certificates"
+          }
+        ]
+      },
       "patient_results": {
         "slider": {
           "beforeAltText": "Before treatment image",
