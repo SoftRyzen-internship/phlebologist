@@ -121,7 +121,7 @@
                     "type": "string",
                     "required": true,
                     "namespace": ["about", "general", "en", "profession"],
-                    "searchable": true
+
                   },
                   {
                     "name": "education",
@@ -491,6 +491,7 @@
                 "required": true,
                 "namespace": ["banner", "uk", "title"],
                 "searchable": true
+
               },
               {
                 "name": "description",
@@ -2003,6 +2004,7 @@
               "type": {
                 "kind": "NamedType",
                 "name": { "kind": "Name", "value": "String" }
+
               }
             }
           },
@@ -2768,6 +2770,7 @@
             "type": {
               "kind": "NamedType",
               "name": { "kind": "Name", "value": "StringFilter" }
+
             }
           },
           {
@@ -2839,7 +2842,6 @@
             "name": { "kind": "Name", "value": "profession" },
             "type": {
               "kind": "NamedType",
-              "name": { "kind": "Name", "value": "StringFilter" }
             }
           },
           {

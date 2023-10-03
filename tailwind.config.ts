@@ -24,7 +24,7 @@ module.exports = {
     // THEME
     extend: {
       backgroundImage: {},
-      fontFamily: { inter: ['var(--font-inter)'] },
+      // fontFamily: { inter: ['var(--font-inter)'] },
       fontSize: {},
       // BORDER
       borderRadius: { normal: '8px', extended: '10px' },
@@ -44,10 +44,16 @@ module.exports = {
           DEFAULT: 'rgba(48, 48, 54, 0.5)',
           light: '#ECEEF2',
           dark: '#EAEAEA',
+          extra: '#E3E3E3',
         },
         primary: {
           light: { 100: 'rgba(48, 48, 54, 0.5)' },
-          dark: { 100: '#6D91A4' },
+          dark: {
+            100: '#6D91A4',
+            200: '#263850',
+            300: '#354C69',
+            400: '#273951',
+          },
         },
         secondary: {
           DEFAULT: '#354C69',

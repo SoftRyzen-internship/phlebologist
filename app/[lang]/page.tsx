@@ -5,7 +5,13 @@ import { fetchGeneral } from '@/api';
 
 import { Test } from '@/components';
 
-import { ButtonPrimary, SliderBeforeAfter, IconBtn } from '@/components';
+import {
+  ButtonPrimary,
+  ButtonSecondary,
+  ButtonTertiary,
+  SliderBeforeAfter,
+  IconBtn,
+} from '@/components';
 
 export default async function Home({
   params: { lang },
@@ -13,107 +19,108 @@ export default async function Home({
   params: { lang: Locale };
 }) {
   // fetching local data for the selected lang
-  const page = await getDictionary(lang);
+  const { page } = await getDictionary(lang);
   // fetching admin data for the selected lang
   const general = await fetchGeneral(lang);
 
   return (
     <main>
       {/* local data rendering */}
-      <h1 className="text-2xl">{page.page.home.title}</h1>
-      <p className="text-base text-gray-700">{page.page.home.description}</p>
+      <h1 className="text-2xl">{page.home.title}</h1>
+      <p className="text-base text-gray-700">{page.home.description}</p>
 
       {/* admin data rendering */}
       <Test data={general} />
-
-      <ButtonPrimary buttonsize="large">
-        Записатись на консультацію
-      </ButtonPrimary>
-      <SliderBeforeAfter page={page} />
+      <div className="flex flex-col items-center justify-center gap-6 py-12">
+        <ButtonPrimary>Записатись на консультацію</ButtonPrimary>
+        <ButtonSecondary linkto="">Записатись</ButtonSecondary>
+        <ButtonTertiary>Написати у Telegram</ButtonTertiary>
+        <SliderBeforeAfter page={page} />
+      </div>
 
       <IconBtn
         icon="tiktok"
         variant="contacts"
-        iconFunction={page.page.home.iconBtnData.tiktok.iconFunction}
-        iconLabel={page.page.home.iconBtnData.tiktok.iconLabel}
+        iconFunction={page.home.iconBtnData.tiktok.iconFunction}
+        iconLabel={page.home.iconBtnData.tiktok.iconLabel}
         url="#"
       />
 
       <IconBtn
         icon="facebook"
         variant="contacts"
-        iconFunction={page.page.home.iconBtnData.facebook.iconFunction}
-        iconLabel={page.page.home.iconBtnData.facebook.iconLabel}
+        iconFunction={page.home.iconBtnData.facebook.iconFunction}
+        iconLabel={page.home.iconBtnData.facebook.iconLabel}
         url="#"
       />
 
       <IconBtn
         icon="instagram"
         variant="contacts"
-        iconFunction={page.page.home.iconBtnData.instagram.iconFunction}
-        iconLabel={page.page.home.iconBtnData.instagram.iconLabel}
+        iconFunction={page.home.iconBtnData.instagram.iconFunction}
+        iconLabel={page.home.iconBtnData.instagram.iconLabel}
         url="#"
       />
 
       <IconBtn
         icon="arrow"
         variant="result"
-        iconFunction={page.page.home.iconBtnData.arrowRight.iconFunction}
-        iconLabel={page.page.home.iconBtnData.arrowRight.iconLabel}
+        iconFunction={page.home.iconBtnData.arrowRight.iconFunction}
+        iconLabel={page.home.iconBtnData.arrowRight.iconLabel}
       />
 
       <IconBtn
         icon="arrow"
         variant="result"
         reverse
-        iconFunction={page.page.home.iconBtnData.arrowLeft.iconFunction}
-        iconLabel={page.page.home.iconBtnData.arrowLeft.iconLabel}
+        iconFunction={page.home.iconBtnData.arrowLeft.iconFunction}
+        iconLabel={page.home.iconBtnData.arrowLeft.iconLabel}
       />
 
       <IconBtn
         icon="arrow"
         variant="feedback"
-        iconFunction={page.page.home.iconBtnData.tiktok.iconFunction}
-        iconLabel={page.page.home.iconBtnData.tiktok.iconLabel}
+        iconFunction={page.home.iconBtnData.tiktok.iconFunction}
+        iconLabel={page.home.iconBtnData.tiktok.iconLabel}
       />
 
       <IconBtn
         icon="arrow"
         variant="feedback"
         reverse
-        iconFunction={page.page.home.iconBtnData.tiktok.iconFunction}
-        iconLabel={page.page.home.iconBtnData.tiktok.iconLabel}
+        iconFunction={page.home.iconBtnData.tiktok.iconFunction}
+        iconLabel={page.home.iconBtnData.tiktok.iconLabel}
       />
 
       <IconBtn
         icon="tiktok"
         variant="footer"
-        iconFunction={page.page.home.iconBtnData.tiktok.iconFunction}
-        iconLabel={page.page.home.iconBtnData.tiktok.iconLabel}
+        iconFunction={page.home.iconBtnData.tiktok.iconFunction}
+        iconLabel={page.home.iconBtnData.tiktok.iconLabel}
         url="#"
       />
 
       <IconBtn
         icon="facebook"
         variant="footer"
-        iconFunction={page.page.home.iconBtnData.facebook.iconFunction}
-        iconLabel={page.page.home.iconBtnData.facebook.iconLabel}
+        iconFunction={page.home.iconBtnData.facebook.iconFunction}
+        iconLabel={page.home.iconBtnData.facebook.iconLabel}
         url="#"
       />
 
       <IconBtn
         icon="instagram"
         variant="footer"
-        iconFunction={page.page.home.iconBtnData.instagram.iconFunction}
-        iconLabel={page.page.home.iconBtnData.instagram.iconLabel}
+        iconFunction={page.home.iconBtnData.instagram.iconFunction}
+        iconLabel={page.home.iconBtnData.instagram.iconLabel}
         url="#"
       />
 
       <IconBtn
         icon="location"
         variant="location"
-        iconFunction={page.page.home.iconBtnData.location.iconFunction}
-        iconLabel={page.page.home.iconBtnData.location.iconLabel}
+        iconFunction={page.home.iconBtnData.location.iconFunction}
+        iconLabel={page.home.iconBtnData.location.iconLabel}
         url="#"
         className="ml-[200px]"
       />
