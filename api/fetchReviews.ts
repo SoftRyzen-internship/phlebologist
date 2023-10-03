@@ -11,8 +11,7 @@ const fetchReviews = async (lang: string) => {
     return result;
   } catch (error) {
     console.log(error);
-
-    return null;
+    return error;
   }
 };
 
@@ -20,7 +19,7 @@ export default fetchReviews;
 
 // === in your component ===
 
-// import { fetchReviews } from '@/api/fetchReviews';
+// import { fetchReviews } from '@/api';
 
 // const reviews = await fetchReviews(lang);
 // console.log(reviews);

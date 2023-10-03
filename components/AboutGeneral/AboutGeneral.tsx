@@ -1,5 +1,3 @@
-import { TinaMarkdown } from 'tinacms/dist/rich-text';
-
 import { ErrorMessage } from '@/components';
 
 const AboutGeneral = ({ data }) => {
@@ -11,25 +9,30 @@ const AboutGeneral = ({ data }) => {
 
   return (
     <>
-      <h3 className="mt-12 text-3xl font-semibold">{name}</h3>
-      <h4 className="uppercase">
-        <TinaMarkdown content={profession} />
+      <h3 className="mt-6 text-[28px] font-medium tracking-[-2.24px] text-black-dark">
+        {name}
+      </h3>
+      <h4 className="text-base font-medium uppercase tracking-[-0.64px] text-black-dark">
+        {profession}
       </h4>
-      <TinaMarkdown content={profession} />
 
-      <h5 className="mt-3 font-semibold">Освіта:</h5>
-      <ul className="list-inside list-disc">
-        {education &&
-          education.map((item, index) => (
-            <li key={`${item.__typename}${index}`}>{item.institution}</li>
-          ))}
-      </ul>
-
-      <h5 className="mt-3 font-semibold">Досвід:</h5>
-      <ul className="list-inside list-disc">
+      <h5 className="mb-1 mt-6 text-base font-semibold uppercase tracking-[-0.64px] text-black-dark">
+        Досвід:
+      </h5>
+      <ul className="text-base font-normal tracking-[-0.64px] text-black-dark">
         {experience &&
           experience.map((item, index) => (
             <li key={`${item.__typename}${index}`}>{item.point}</li>
+          ))}
+      </ul>
+
+      <h5 className="mb-1 mt-6 text-base font-semibold uppercase tracking-[-0.64px] text-black-dark">
+        Освіта:
+      </h5>
+      <ul className="flex flex-col gap-6 text-base font-normal tracking-[-0.64px] text-black-dark">
+        {education &&
+          education.map((item, index) => (
+            <li key={`${item.__typename}${index}`}>{item.institution}</li>
           ))}
       </ul>
     </>

@@ -20,8 +20,7 @@ export const fetchAbout = async (lang: Locale) => {
     return about;
   } catch (error) {
     console.log(error);
-
-    return null;
+    return error;
   }
 };
 

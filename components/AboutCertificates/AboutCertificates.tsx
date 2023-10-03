@@ -2,7 +2,6 @@ import Image from 'next/image';
 import { ErrorMessage } from '@/components';
 
 const AboutCertificates = ({ data }) => {
-  console.log(data);
   if (!data) {
     return <ErrorMessage />;
   }

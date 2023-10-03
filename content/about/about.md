@@ -16,7 +16,7 @@ general:
       - point: 4000+ проведених операцій
       - point: Більше 10 років практики
       - point: 5000+ вилікуваних пацієнтів
-photo: /uploads/about/photo_2023-09-18_12-41-50.jpg
+photo: /uploads/about/about-img.webp
 education:
   uk:
     title: Освіта лікаря

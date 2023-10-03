@@ -120,7 +120,8 @@
                     "label": "Profession",
                     "type": "string",
                     "required": true,
-                    "namespace": ["about", "general", "en", "profession"]
+                    "namespace": ["about", "general", "en", "profession"],
+                    "searchable": true
                   },
                   {
                     "name": "education",
@@ -2837,7 +2838,8 @@
             "kind": "InputValueDefinition",
             "name": { "kind": "Name", "value": "profession" },
             "type": {
-              "kind": "NamedType"
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
             }
           },
           {
