@@ -27,7 +27,7 @@ module.exports = {
       // fontFamily: { inter: ['var(--font-inter)'] },
       fontSize: {},
       // BORDER
-      borderRadius: { normal: '8px' },
+      borderRadius: { normal: '8px', extended: '10px' },
       // ALL COLORS
       colors: {
         body: '#F3F3F3',
@@ -54,6 +54,10 @@ module.exports = {
             300: '#354C69',
             400: '#273951',
           },
+        },
+        secondary: {
+          DEFAULT: '#354C69',
+          dark: '#263850',
         },
         notify: {
           error: '#FF5660',

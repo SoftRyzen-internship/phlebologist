@@ -10,6 +10,7 @@ import {
   ButtonSecondary,
   ButtonTertiary,
   SliderBeforeAfter,
+  IconBtn,
 } from '@/components';
 
 export default async function Home({
@@ -30,13 +31,99 @@ export default async function Home({
 
       {/* admin data rendering */}
       <Test data={general} />
-      <div className="flex flex-col items-center justify-center gap-6 bg-green-300 py-12">
+      <div className="flex flex-col items-center justify-center gap-6 py-12">
         <ButtonPrimary>Записатись на консультацію</ButtonPrimary>
         <ButtonSecondary linkto="">Записатись</ButtonSecondary>
-
         <ButtonTertiary>Написати у Telegram</ButtonTertiary>
         <SliderBeforeAfter page={page} />
       </div>
+
+      <IconBtn
+        icon="tiktok"
+        variant="contacts"
+        iconFunction={page.home.iconBtnData.tiktok.iconFunction}
+        iconLabel={page.home.iconBtnData.tiktok.iconLabel}
+        url="#"
+      />
+
+      <IconBtn
+        icon="facebook"
+        variant="contacts"
+        iconFunction={page.home.iconBtnData.facebook.iconFunction}
+        iconLabel={page.home.iconBtnData.facebook.iconLabel}
+        url="#"
+      />
+
+      <IconBtn
+        icon="instagram"
+        variant="contacts"
+        iconFunction={page.home.iconBtnData.instagram.iconFunction}
+        iconLabel={page.home.iconBtnData.instagram.iconLabel}
+        url="#"
+      />
+
+      <IconBtn
+        icon="arrow"
+        variant="result"
+        iconFunction={page.home.iconBtnData.arrowRight.iconFunction}
+        iconLabel={page.home.iconBtnData.arrowRight.iconLabel}
+      />
+
+      <IconBtn
+        icon="arrow"
+        variant="result"
+        reverse
+        iconFunction={page.home.iconBtnData.arrowLeft.iconFunction}
+        iconLabel={page.home.iconBtnData.arrowLeft.iconLabel}
+      />
+
+      <IconBtn
+        icon="arrow"
+        variant="feedback"
+        iconFunction={page.home.iconBtnData.tiktok.iconFunction}
+        iconLabel={page.home.iconBtnData.tiktok.iconLabel}
+      />
+
+      <IconBtn
+        icon="arrow"
+        variant="feedback"
+        reverse
+        iconFunction={page.home.iconBtnData.tiktok.iconFunction}
+        iconLabel={page.home.iconBtnData.tiktok.iconLabel}
+      />
+
+      <IconBtn
+        icon="tiktok"
+        variant="footer"
+        iconFunction={page.home.iconBtnData.tiktok.iconFunction}
+        iconLabel={page.home.iconBtnData.tiktok.iconLabel}
+        url="#"
+      />
+
+      <IconBtn
+        icon="facebook"
+        variant="footer"
+        iconFunction={page.home.iconBtnData.facebook.iconFunction}
+        iconLabel={page.home.iconBtnData.facebook.iconLabel}
+        url="#"
+      />
+
+      <IconBtn
+        icon="instagram"
+        variant="footer"
+        iconFunction={page.home.iconBtnData.instagram.iconFunction}
+        iconLabel={page.home.iconBtnData.instagram.iconLabel}
+        url="#"
+      />
+
+      <IconBtn
+        icon="location"
+        variant="location"
+        iconFunction={page.home.iconBtnData.location.iconFunction}
+        iconLabel={page.home.iconBtnData.location.iconLabel}
+        url="#"
+        className="ml-[200px]"
+      />
     </main>
   );
 }
