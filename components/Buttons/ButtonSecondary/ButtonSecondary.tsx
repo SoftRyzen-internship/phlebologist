@@ -9,7 +9,7 @@ const ButtonSecondary: React.FC<ButtonSecondaryProps> = ({
   view = undefined,
   className = '',
   children,
-}: ButtonSecondaryProps) => {
+}) => {
   const secondaryBtnClass = classnames(
     {
       'md:w-[262px] xl:w-auto': view === 'hero',
