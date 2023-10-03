@@ -73,4 +73,8 @@ certificates:
         alt: >-
           Certificate of attendance - Ukrainian scientific virtual conference
           with international participation
+      en:
+        alt: >-
+          Certificate of attendance - Ukrainian scientific virtual conference
+          with international participation
 ---

@@ -28,7 +28,6 @@ const AboutTabs: React.FC<AboutTabsProps> = ({
         <Tab.List as={'ul'} className={'flex gap-3'}>
           {staticData.map((item, index) => (
             <Tab key={`${item.collection}${index}`} as={'li'}>
-              {/* {item.item} */}
               <ButtonPrimary>{item.item}</ButtonPrimary>
             </Tab>
           ))}

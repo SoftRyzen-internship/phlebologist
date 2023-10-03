@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 import { fetchAbout } from '@/api';
 
-import { AboutTabs } from '@/components';
+import { AboutTabs, ErrorMessage } from '@/components';
 
 import { AboutProps } from './About.props';
 
@@ -10,7 +10,7 @@ const About: React.FC<AboutProps> = async ({ lang, staticData }) => {
   const data = await fetchAbout(lang);
 
   if (!data) {
-    return;
+    return <ErrorMessage />;
   }
 
   const { title, menu } = staticData;

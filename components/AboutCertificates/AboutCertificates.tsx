@@ -1,7 +1,25 @@
+import Image from 'next/image';
+import { ErrorMessage } from '@/components';
+
 const AboutCertificates = ({ data }) => {
   console.log(data);
+  if (!data) {
+    return <ErrorMessage />;
+  }
 
-  return <div>Certificates</div>;
+  return (
+    <ul>
+      {data.map((item, index) => (
+        <Image
+          key={`${item.__typename}${index}`}
+          src={item.photo}
+          alt={item.description}
+          width={300}
+          height={270}
+        />
+      ))}
+    </ul>
+  );
 };
 
 export default AboutCertificates;

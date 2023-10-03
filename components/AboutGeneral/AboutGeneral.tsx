@@ -15,6 +15,7 @@ const AboutGeneral = ({ data }) => {
       <h4 className="uppercase">
         <TinaMarkdown content={profession} />
       </h4>
+      <TinaMarkdown content={profession} />
 
       <h5 className="mt-3 font-semibold">Освіта:</h5>
       <ul className="list-inside list-disc">
