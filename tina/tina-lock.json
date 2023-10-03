@@ -44,11 +44,10 @@
                   {
                     "name": "profession",
                     "label": "Profession",
-                    "type": "rich-text",
+                    "type": "string",
                     "required": true,
                     "namespace": ["about", "general", "uk", "profession"],
-                    "searchable": true,
-                    "parser": { "type": "markdown" }
+                    "searchable": true
                   },
                   {
                     "name": "education",
@@ -119,11 +118,10 @@
                   {
                     "name": "profession",
                     "label": "Profession",
-                    "type": "rich-text",
+                    "type": "string",
                     "required": true,
                     "namespace": ["about", "general", "en", "profession"],
-                    "searchable": true,
-                    "parser": { "type": "markdown" }
+
                   },
                   {
                     "name": "education",
@@ -489,20 +487,19 @@
               {
                 "name": "title",
                 "label": "Title",
-                "type": "rich-text",
+                "type": "string",
                 "required": true,
                 "namespace": ["banner", "uk", "title"],
-                "searchable": true,
-                "parser": { "type": "markdown" }
+                "searchable": true
+
               },
               {
                 "name": "description",
                 "label": "Description",
-                "type": "rich-text",
+                "type": "string",
                 "required": true,
                 "namespace": ["banner", "uk", "description"],
-                "searchable": true,
-                "parser": { "type": "markdown" }
+                "searchable": true
               }
             ],
             "namespace": ["banner", "uk"],
@@ -516,20 +513,18 @@
               {
                 "name": "title",
                 "label": "Title",
-                "type": "rich-text",
+                "type": "string",
                 "required": true,
                 "namespace": ["banner", "en", "title"],
-                "searchable": true,
-                "parser": { "type": "markdown" }
+                "searchable": true
               },
               {
                 "name": "description",
                 "label": "Description",
-                "type": "rich-text",
+                "type": "string",
                 "required": true,
                 "namespace": ["banner", "en", "description"],
-                "searchable": true,
-                "parser": { "type": "markdown" }
+                "searchable": true
               }
             ],
             "namespace": ["banner", "en"],
@@ -2008,7 +2003,8 @@
               "kind": "NonNullType",
               "type": {
                 "kind": "NamedType",
-                "name": { "kind": "Name", "value": "JSON" }
+                "name": { "kind": "Name", "value": "String" }
+
               }
             }
           },
@@ -2098,7 +2094,7 @@
               "kind": "NonNullType",
               "type": {
                 "kind": "NamedType",
-                "name": { "kind": "Name", "value": "JSON" }
+                "name": { "kind": "Name", "value": "String" }
               }
             }
           },
@@ -2730,36 +2726,6 @@
       },
       {
         "kind": "InputObjectTypeDefinition",
-        "name": { "kind": "Name", "value": "RichTextFilter" },
-        "fields": [
-          {
-            "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "startsWith" },
-            "type": {
-              "kind": "NamedType",
-              "name": { "kind": "Name", "value": "String" }
-            }
-          },
-          {
-            "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "eq" },
-            "type": {
-              "kind": "NamedType",
-              "name": { "kind": "Name", "value": "String" }
-            }
-          },
-          {
-            "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "exists" },
-            "type": {
-              "kind": "NamedType",
-              "name": { "kind": "Name", "value": "Boolean" }
-            }
-          }
-        ]
-      },
-      {
-        "kind": "InputObjectTypeDefinition",
         "name": { "kind": "Name", "value": "AboutGeneralUkEducationFilter" },
         "fields": [
           {
@@ -2803,7 +2769,8 @@
             "name": { "kind": "Name", "value": "profession" },
             "type": {
               "kind": "NamedType",
-              "name": { "kind": "Name", "value": "RichTextFilter" }
+              "name": { "kind": "Name", "value": "StringFilter" }
+
             }
           },
           {
@@ -2875,7 +2842,6 @@
             "name": { "kind": "Name", "value": "profession" },
             "type": {
               "kind": "NamedType",
-              "name": { "kind": "Name", "value": "RichTextFilter" }
             }
           },
           {
@@ -3374,7 +3340,7 @@
               "kind": "NonNullType",
               "type": {
                 "kind": "NamedType",
-                "name": { "kind": "Name", "value": "JSON" }
+                "name": { "kind": "Name", "value": "String" }
               }
             }
           },
@@ -3386,7 +3352,7 @@
               "kind": "NonNullType",
               "type": {
                 "kind": "NamedType",
-                "name": { "kind": "Name", "value": "JSON" }
+                "name": { "kind": "Name", "value": "String" }
               }
             }
           }
@@ -3406,7 +3372,7 @@
               "kind": "NonNullType",
               "type": {
                 "kind": "NamedType",
-                "name": { "kind": "Name", "value": "JSON" }
+                "name": { "kind": "Name", "value": "String" }
               }
             }
           },
@@ -3418,7 +3384,7 @@
               "kind": "NonNullType",
               "type": {
                 "kind": "NamedType",
-                "name": { "kind": "Name", "value": "JSON" }
+                "name": { "kind": "Name", "value": "String" }
               }
             }
           }
@@ -3504,7 +3470,7 @@
             "name": { "kind": "Name", "value": "title" },
             "type": {
               "kind": "NamedType",
-              "name": { "kind": "Name", "value": "RichTextFilter" }
+              "name": { "kind": "Name", "value": "StringFilter" }
             }
           },
           {
@@ -3512,7 +3478,7 @@
             "name": { "kind": "Name", "value": "description" },
             "type": {
               "kind": "NamedType",
-              "name": { "kind": "Name", "value": "RichTextFilter" }
+              "name": { "kind": "Name", "value": "StringFilter" }
             }
           }
         ]
@@ -3526,7 +3492,7 @@
             "name": { "kind": "Name", "value": "title" },
             "type": {
               "kind": "NamedType",
-              "name": { "kind": "Name", "value": "RichTextFilter" }
+              "name": { "kind": "Name", "value": "StringFilter" }
             }
           },
           {
@@ -3534,7 +3500,7 @@
             "name": { "kind": "Name", "value": "description" },
             "type": {
               "kind": "NamedType",
-              "name": { "kind": "Name", "value": "RichTextFilter" }
+              "name": { "kind": "Name", "value": "StringFilter" }
             }
           }
         ]
@@ -3889,6 +3855,36 @@
                 "kind": "NamedType",
                 "name": { "kind": "Name", "value": "String" }
               }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "RichTextFilter" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "startsWith" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "eq" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "exists" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "Boolean" }
             }
           }
         ]
@@ -5134,7 +5130,7 @@
             "name": { "kind": "Name", "value": "profession" },
             "type": {
               "kind": "NamedType",
-              "name": { "kind": "Name", "value": "JSON" }
+              "name": { "kind": "Name", "value": "String" }
             }
           },
           {
@@ -5212,7 +5208,7 @@
             "name": { "kind": "Name", "value": "profession" },
             "type": {
               "kind": "NamedType",
-              "name": { "kind": "Name", "value": "JSON" }
+              "name": { "kind": "Name", "value": "String" }
             }
           },
           {
@@ -5655,7 +5651,7 @@
             "name": { "kind": "Name", "value": "title" },
             "type": {
               "kind": "NamedType",
-              "name": { "kind": "Name", "value": "JSON" }
+              "name": { "kind": "Name", "value": "String" }
             }
           },
           {
@@ -5663,7 +5659,7 @@
             "name": { "kind": "Name", "value": "description" },
             "type": {
               "kind": "NamedType",
-              "name": { "kind": "Name", "value": "JSON" }
+              "name": { "kind": "Name", "value": "String" }
             }
           }
         ]
@@ -5677,7 +5673,7 @@
             "name": { "kind": "Name", "value": "title" },
             "type": {
               "kind": "NamedType",
-              "name": { "kind": "Name", "value": "JSON" }
+              "name": { "kind": "Name", "value": "String" }
             }
           },
           {
@@ -5685,7 +5681,7 @@
             "name": { "kind": "Name", "value": "description" },
             "type": {
               "kind": "NamedType",
-              "name": { "kind": "Name", "value": "JSON" }
+              "name": { "kind": "Name", "value": "String" }
             }
           }
         ]

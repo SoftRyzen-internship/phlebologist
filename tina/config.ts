@@ -42,7 +42,7 @@ export default defineConfig({
                   {
                     name: 'profession',
                     label: 'Profession',
-                    type: 'rich-text',
+                    type: 'string',
                     required: true,
                   },
                   {
@@ -59,9 +59,6 @@ export default defineConfig({
                     ],
                     ui: {
                       itemProps: item => {
-                        // if the institution field type is changed to rich-text,
-                        // this part will need re-writing
-                        // as we would be handling a deeper object
                         return { label: `${item?.institution}` };
                       },
                       defaultItem: {
@@ -83,9 +80,6 @@ export default defineConfig({
                     ],
                     ui: {
                       itemProps: item => {
-                        // if the point field type is changed to rich-text,
-                        // this part will need re-writing
-                        // as we would be handling a deeper object
                         return { label: `${item?.point}` };
                       },
                       defaultItem: {
@@ -114,7 +108,7 @@ export default defineConfig({
                   {
                     name: 'profession',
                     label: 'Profession',
-                    type: 'rich-text',
+                    type: 'string',
                     required: true,
                   },
                   {
@@ -131,9 +125,6 @@ export default defineConfig({
                     ],
                     ui: {
                       itemProps: item => {
-                        // if the institution field type is changed to rich-text,
-                        // this part will need re-writing
-                        // as we would be handling a deeper object
                         return { label: `${item?.institution}` };
                       },
                       defaultItem: {
@@ -155,9 +146,6 @@ export default defineConfig({
                     ],
                     ui: {
                       itemProps: item => {
-                        // if the point field type is changed to rich-text,
-                        // this part will need re-writing
-                        // as we would be handling a deeper object
                         return { label: `${item?.point}` };
                       },
                       defaultItem: {
@@ -205,9 +193,6 @@ export default defineConfig({
                     ],
                     ui: {
                       itemProps: item => {
-                        // if the institution field type is changed to rich-text,
-                        // this part will need re-writing
-                        // as we would be handling a deeper object
                         return { label: `${item?.institution}` };
                       },
                       defaultItem: {
@@ -247,9 +232,6 @@ export default defineConfig({
                     ],
                     ui: {
                       itemProps: item => {
-                        // if the institution field type is changed to rich-text,
-                        // this part will need re-writing
-                        // as we would be handling a deeper object
                         return { label: `${item?.institution}` };
                       },
                       defaultItem: {
@@ -302,9 +284,6 @@ export default defineConfig({
                     ],
                     ui: {
                       itemProps: item => {
-                        // if the institution field type is changed to rich-text,
-                        // this part will need re-writing
-                        // as we would be handling a deeper object
                         return { label: `${item?.institution}` };
                       },
                       defaultItem: {
@@ -349,9 +328,6 @@ export default defineConfig({
                     ],
                     ui: {
                       itemProps: item => {
-                        // if the institution field type is changed to rich-text,
-                        // this part will need re-writing
-                        // as we would be handling a deeper object
                         return { label: `${item?.institution}` };
                       },
                       defaultItem: {
@@ -417,9 +393,6 @@ export default defineConfig({
             ],
             ui: {
               itemProps: item => {
-                // if the institution field type is changed to rich-text,
-                // this part will need re-writing
-                // as we would be handling a deeper object
                 return { label: `${item?.description.uk.alt}` };
               },
               defaultItem: {
@@ -448,13 +421,13 @@ export default defineConfig({
               {
                 name: 'title',
                 label: 'Title',
-                type: 'rich-text',
+                type: 'string',
                 required: true,
               },
               {
                 name: 'description',
                 label: 'Description',
-                type: 'rich-text',
+                type: 'string',
                 required: true,
               },
             ],
@@ -467,13 +440,13 @@ export default defineConfig({
               {
                 name: 'title',
                 label: 'Title',
-                type: 'rich-text',
+                type: 'string',
                 required: true,
               },
               {
                 name: 'description',
                 label: 'Description',
-                type: 'rich-text',
+                type: 'string',
                 required: true,
               },
             ],
