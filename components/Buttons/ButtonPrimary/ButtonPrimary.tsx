@@ -13,7 +13,7 @@ const ButtonPrimary: React.FC<ButtonPrimaryProps> = ({
   className = '',
   children,
   actionHandler,
-}: ButtonPrimaryProps) => {
+}) => {
   const [width, setWidth] = useState<number | null>(null);
 
   useEffect(() => {

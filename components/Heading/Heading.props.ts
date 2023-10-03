@@ -11,6 +11,7 @@ export interface HeadingElementProps {
 
 export interface HeadingComponentProps extends HeadingElementProps {
   tag?: HeadingTag;
+  view?: 'hero' | undefined;
   variant?: HeadingVariant;
   children: React.ReactNode;
 }

@@ -195,12 +195,13 @@ folder. This is a list of most common components and their API.
 
 - ### Heading
 
-| Prop        | Default     | Description                                     |
-| ----------- | ----------- | ----------------------------------------------- |
-| `tag`       | `h2`        | choose the tag of title you'd need: `h1` - `h3` |
-| `variant`   | `primary`   | `main`, `primary`, `secondary`, `tertiary`      |
-| `children`  | `undefined` | required, any content                           |
-| `className` | `undefined` | add custom or additional css class you'd need   |
+| Prop        | Default     | Description                                       |
+| ----------- | ----------- | ------------------------------------------------- |
+| `tag`       | `h2`        | choose the tag of title you'd need: `h1` - `h3`   |
+| `view`      | `undefined` | if the heading is in Hero section, specify `hero` |
+| `variant`   | `primary`   | `main`, `primary`, `secondary`, `tertiary`        |
+| `children`  | `undefined` | required, any content                             |
+| `className` | `undefined` | add custom or additional css class you'd need     |
 
 - ### ButtonPrimary
 

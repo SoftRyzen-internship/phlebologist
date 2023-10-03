@@ -13,7 +13,7 @@ const ButtonTertiary: React.FC<ButtonTertiaryProps> = ({
   className = '',
   children,
   actionHandler,
-}: ButtonTertiaryProps) => {
+}) => {
   const tertiaryBtnClass = classnames(
     {
       'font-bold w-[224px] md:w-[252px] md:font-normal xl:w-[464px] xl:bg-white xl:font-medium mediaHover:hover:font-bold focus:font-bold':
