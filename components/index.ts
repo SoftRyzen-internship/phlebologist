@@ -22,3 +22,13 @@ export { default as Slider } from '@/components/Slider/Slider';
 
 // feedback
 export { default as FeedbackSlide } from '@/components/FeedbackSlide/FeedbackSlide';
+
+// section About
+export { default as AboutTabs } from '@/components/AboutTabs/AboutTabs';
+export { default as AboutGeneral } from '@/components/AboutGeneral/AboutGeneral';
+export { default as AboutEducation } from '@/components/AboutEducation/AboutEducation';
+export { default as AboutCareer } from '@/components/AboutCareer/AboutCareer';
+export { default as AboutCertificates } from '@/components/AboutCertificates/AboutCertificates';
+
+// error
+export { default as ErrorMessage } from '@/components/ErrorMessage/ErrorMessage';

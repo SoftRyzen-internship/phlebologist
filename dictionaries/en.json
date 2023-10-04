@@ -5,8 +5,6 @@
   },
   "page": {
     "home": {
-      "title": "Welcome to NextJs i18n",
-      "description": "Internationalization in NextJs 13 App router",
       "iconBtnData": {
         "tiktok": {
           "iconFunction": "Tiktok Button",
@@ -32,6 +30,29 @@
           "iconFunction": "Location Button",
           "iconLabel": "Geolocation Icon"
         }
+      },
+      "about": {
+        "title": "About",
+        "firstSubtitle": "Experience:",
+        "secondSubtitle": "Education:",
+        "menu": [
+          {
+            "item": "General info",
+            "collection": "general"
+          },
+          {
+            "item": "Education",
+            "collection": "education"
+          },
+          {
+            "item": "Career",
+            "collection": "career"
+          },
+          {
+            "item": "Certificates",
+            "collection": "certificates"
+          }
+        ]
       },
       "patient_results": {
         "slider": {

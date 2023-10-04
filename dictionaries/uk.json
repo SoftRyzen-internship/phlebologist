@@ -1,12 +1,10 @@
 {
   "navigation": {
-    "home": "Startseite",
-    "about": "Über"
+    "home": "Головна",
+    "about": "Про Лікаря"
   },
   "page": {
     "home": {
-      "title": "Willkommen bei NextJs i18n",
-      "description": "Internationalisierung im NextJs 13 App-Router",
       "iconBtnData": {
         "tiktok": {
           "iconFunction": "Кнопка Тікток",
@@ -33,6 +31,29 @@
           "iconLabel": "Іконка геолокації"
         }
       },
+      "about": {
+        "title": "Про лікаря",
+        "firstSubtitle": "Досвід:",
+        "secondSubtitle": "Освіта:",
+        "menu": [
+          {
+            "item": "Загальна інформація",
+            "collection": "general"
+          },
+          {
+            "item": "Освіта",
+            "collection": "education"
+          },
+          {
+            "item": "Кар'єра",
+            "collection": "career"
+          },
+          {
+            "item": "Сертифікати",
+            "collection": "certificates"
+          }
+        ]
+      },
       "patient_results": {
         "slider": {
           "beforeAltText": "Зображення до лікування",
@@ -41,10 +62,6 @@
           "afterHandleText": "Після"
         }
       }
-    },
-    "about": {
-      "title": "Über uns",
-      "description": "Dies ist die About-Seite"
     }
   }
 }

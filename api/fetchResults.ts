@@ -16,8 +16,7 @@ const fetchResults = async (lang: string) => {
     return result;
   } catch (error) {
     console.log(error);
-
-    return null;
+    return error;
   }
 };
 
@@ -25,7 +24,7 @@ export default fetchResults;
 
 // === in your component ===
 
-// import { fetchResults } from '@/api/fetchResults';
+// import { fetchResults } from '@/api';
 
 // const results = await fetchResults(lang);
 // console.log(results);

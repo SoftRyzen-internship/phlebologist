@@ -1,8 +1,8 @@
-import Image from 'next/image';
+// import Image from 'next/image';
 import { TinaMarkdown } from 'tinacms/dist/rich-text';
 
 // does not require 'lang' as an argument
-import { fetchImage } from '@/api/fetchAbout';
+// import { fetchImage } from '@/api/fetchAbout';
 
 // types for data props will be defined once we have a fixed collection structure
 const Test = async ({ data }) => {
@@ -12,7 +12,7 @@ const Test = async ({ data }) => {
   }
 
   const { name, profession, education, experience } = data;
-  const img = await fetchImage();
+  // const img = await fetchImage();
 
   return (
     <>
@@ -21,20 +21,22 @@ const Test = async ({ data }) => {
         <TinaMarkdown content={profession} />
       </h2>
 
-      <Image src={img as string} alt={name} width={250} height={250} />
+      {/* <Image src={img as string} alt={name} width={250} height={250} /> */}
 
       <h3 className="mt-3 font-semibold">Освіта:</h3>
       <ul className="list-inside list-disc">
         {education &&
-          education.map(item => (
-            <li key={item.__typename}>{item.institution}</li>
+          education.map((item, index) => (
+            <li key={`${item.__typename}${index}`}>{item.institution}</li>
           ))}
       </ul>
 
       <h3 className="mt-3 font-semibold">Досвід:</h3>
       <ul className="list-inside list-disc">
         {experience &&
-          experience.map(item => <li key={item.__typename}>{item.point}</li>)}
+          experience.map((item, index) => (
+            <li key={`${item.__typename}${index}`}>{item.point}</li>
+          ))}
       </ul>
     </>
   );
