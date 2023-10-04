@@ -35,3 +35,5 @@ export { default as AdvantagesList } from '@/components/AdvantagesList/Advantage
 
 // error
 export { default as ErrorMessage } from '@/components/ErrorMessage/ErrorMessage';
+
+export { default as SocialsList } from '@/components/SocialSList/SocialsList';

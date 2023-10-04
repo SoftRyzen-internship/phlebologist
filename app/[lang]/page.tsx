@@ -10,6 +10,7 @@ import {
   FeedbackSlide,
   ButtonSecondary,
   ButtonTertiary,
+  SocialsList,
 } from '@/components';
 
 export default async function Home({
@@ -37,7 +38,7 @@ export default async function Home({
         <ButtonTertiary>Написати у Telegram</ButtonTertiary>
         <SliderBeforeAfter page={page} />
       </div>
-
+      <SocialsList variant="footer" staticData={page.home.iconBtnData} />
       <AboutSection lang={lang} staticData={page.home.about} />
 
       <IconBtn
