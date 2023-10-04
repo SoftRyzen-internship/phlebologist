@@ -59,3 +59,8 @@ export type AboutCertificateType = {
     alt: string;
   };
 };
+
+export interface ISocials {
+  name: IconBtnName;
+  url: string;
+}
