@@ -32,3 +32,5 @@ export { default as AboutCertificates } from '@/components/AboutCertificates/Abo
 
 // error
 export { default as ErrorMessage } from '@/components/ErrorMessage/ErrorMessage';
+
+export { default as SocialsList } from '@/components/SocialSList/SocialsList';
