@@ -13,7 +13,7 @@ const AboutGeneral: React.FC<AboutGeneralProps> = ({
 
   return (
     <div className="text-base font-normal tracking-[-0.64px] text-black-dark">
-      <Heading variant="secondary" className="mt-6">
+      <Heading variant="secondary" tag="h3" className="mt-6">
         {name}
       </Heading>
       <p

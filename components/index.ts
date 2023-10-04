@@ -32,3 +32,7 @@ export { default as AboutCertificates } from '@/components/AboutCertificates/Abo
 
 // error
 export { default as ErrorMessage } from '@/components/ErrorMessage/ErrorMessage';
+
+// section FAQ
+export { default as QuestionsList } from '@/components/QuestionsList/QuestionsList';
+export { default as QuestionListItem } from '@/components/QuestionListItem/QuestionListItem';

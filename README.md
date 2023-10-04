@@ -127,6 +127,32 @@ export { default as Header } from '@/components/Header/Header';
 
 ---
 
+**☝️ Add `Section` to the section name when performing a re-export**
+
+<details>
+
+<summary><b>💡 Example:</b></summary>
+
+<br/>
+
+```ts
+# ✅ Good
+
+// @/sections/About/About.tsx
+
+const About = () => { ... }
+
+export default About;
+
+// @/sections/index.ts
+
+export { default as AboutSection } from '@/sections/About/About';
+```
+
+</details>
+
+---
+
 **☝️ Reusable css classes should be placed in the `styles` folder .**
 
 <details>
