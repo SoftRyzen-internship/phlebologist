@@ -35,6 +35,8 @@
       },
       "about": {
         "title": "Про лікаря",
+        "firstSubtitle": "Досвід:",
+        "secondSubtitle": "Освіта:",
         "menu": [
           {
             "item": "Загальна інформація",

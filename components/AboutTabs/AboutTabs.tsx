@@ -13,7 +13,7 @@ import {
 } from '@/components';
 
 const AboutTabs: React.FC<AboutTabsProps> = ({
-  staticData,
+  staticData: { menu, firstSubtitle, secondSubtitle },
   data: { general, education, career, certificates },
 }) => {
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -25,8 +25,8 @@ const AboutTabs: React.FC<AboutTabsProps> = ({
         selectedIndex={selectedIndex}
         onChange={setSelectedIndex}
       >
-        <Tab.List as={'ul'} className={'flex gap-3'}>
-          {staticData.map((item, index) => (
+        <Tab.List as={'ul'} className={'flex flex-wrap gap-3'}>
+          {menu.map((item, index) => (
             <Tab key={`${item.collection}${index}`} as={'li'}>
               {({ selected }) => (
                 <ButtonPrimary variant={selected ? 'dark' : 'light'}>
@@ -36,9 +36,13 @@ const AboutTabs: React.FC<AboutTabsProps> = ({
             </Tab>
           ))}
         </Tab.List>
+
         <Tab.Panels>
           <Tab.Panel>
-            <AboutGeneral data={general} />
+            <AboutGeneral
+              data={general}
+              staticData={{ firstSubtitle, secondSubtitle }}
+            />
           </Tab.Panel>
           <Tab.Panel>
             <AboutEducation data={education} />

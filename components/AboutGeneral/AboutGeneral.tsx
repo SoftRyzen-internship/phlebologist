@@ -1,41 +1,46 @@
-import { ErrorMessage } from '@/components';
+import { ErrorMessage, Heading } from '@/components';
 
-const AboutGeneral = ({ data }) => {
+import { AboutGeneralProps } from './AboutGeneral.props';
+
+const AboutGeneral: React.FC<AboutGeneralProps> = ({
+  data,
+  staticData: { firstSubtitle, secondSubtitle },
+}) => {
   if (!data) {
     return <ErrorMessage />;
   }
-
   const { name, profession, education, experience } = data;
 
   return (
-    <>
-      <h3 className="mt-6 text-[28px] font-medium tracking-[-2.24px] text-black-dark">
+    <div className="text-base font-normal tracking-[-0.64px] text-black-dark">
+      <Heading variant="secondary" className="mt-6">
         {name}
-      </h3>
-      <h4 className="text-base font-medium uppercase tracking-[-0.64px] text-black-dark">
+      </Heading>
+      <p
+        className="mt-4 font-medium uppercase leading-6
+        md:mt-8 md:w-[234px] xl:w-[296px] xl:text-xl"
+      >
         {profession}
-      </h4>
+      </p>
 
-      <h5 className="mb-1 mt-6 text-base font-semibold uppercase tracking-[-0.64px] text-black-dark">
-        Досвід:
-      </h5>
-      <ul className="text-base font-normal tracking-[-0.64px] text-black-dark">
+      <h4 className="mb-1 mt-6 font-semibold uppercase md:mt-7">
+        {firstSubtitle}
+      </h4>
+      <ul className="flex flex-col gap-1">
         {experience &&
           experience.map((item, index) => (
             <li key={`${item.__typename}${index}`}>{item.point}</li>
           ))}
       </ul>
 
-      <h5 className="mb-1 mt-6 text-base font-semibold uppercase tracking-[-0.64px] text-black-dark">
-        Освіта:
-      </h5>
-      <ul className="flex flex-col gap-6 text-base font-normal tracking-[-0.64px] text-black-dark">
+      <h4 className="mb-1 mt-6 font-semibold uppercase">{secondSubtitle}</h4>
+      <ul className="flex flex-col gap-6">
         {education &&
           education.map((item, index) => (
             <li key={`${item.__typename}${index}`}>{item.institution}</li>
           ))}
       </ul>
-    </>
+    </div>
   );
 };
 

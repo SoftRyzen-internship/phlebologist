@@ -35,6 +35,8 @@
       },
       "about": {
         "title": "About",
+        "firstSubtitle": "Experience:",
+        "secondSubtitle": "Education:",
         "menu": [
           {
             "item": "General info",

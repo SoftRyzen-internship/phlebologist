@@ -7,6 +7,8 @@ export type AboutMenuType = {
 
 type AboutStaticDataType = {
   title: string;
+  firstSubtitle: string;
+  secondSubtitle: string;
   menu: AboutMenuType[];
 };
 

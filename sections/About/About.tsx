@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 import { fetchAbout } from '@/api';
 
-import { AboutTabs, ErrorMessage } from '@/components';
+import { AboutTabs, ErrorMessage, Heading } from '@/components';
 
 import { AboutProps } from './About.props';
 
@@ -10,15 +10,12 @@ const About: React.FC<AboutProps> = async ({ lang, staticData }) => {
   try {
     const data = await fetchAbout(lang);
 
-    const { title, menu } = staticData;
+    const { title, firstSubtitle, secondSubtitle, menu } = staticData;
 
     return (
       // temp styles while the design is not final
       <section>
-        {/* will be replaced with the Heading component */}
-        <h2 className="mb-6 text-[32px] font-medium tracking-[-1.28px] text-black-dark">
-          {title}
-        </h2>
+        <Heading className="mb-6 md:mb-9">{title}</Heading>
 
         <Image
           src={data?.image as string}
@@ -28,7 +25,10 @@ const About: React.FC<AboutProps> = async ({ lang, staticData }) => {
           className="mb-6 rounded-3xl"
         />
 
-        <AboutTabs staticData={menu} data={data} />
+        <AboutTabs
+          staticData={{ menu, firstSubtitle, secondSubtitle }}
+          data={data}
+        />
       </section>
     );
   } catch (error) {

@@ -1,6 +1,8 @@
-import { ErrorMessage } from '@/components';
+import { ErrorMessage, Heading } from '@/components';
 
-const AboutCareer = ({ data }) => {
+import { AboutCareerProps } from './AboutCareer.props';
+
+const AboutCareer: React.FC<AboutCareerProps> = ({ data }) => {
   if (!data) {
     return <ErrorMessage />;
   }
@@ -8,18 +10,26 @@ const AboutCareer = ({ data }) => {
   const { title, institutions } = data;
 
   return (
-    <>
-      <h3 className="mt-12 text-3xl font-semibold">{title}</h3>
+    <div className="text-base font-normal tracking-[-0.64px] text-black-dark">
+      <Heading variant="secondary" className="mt-6">
+        {title}
+      </Heading>
 
-      <ul className="list-inside list-disc">
+      <ul className="ml-4 mt-4 md:mt-8">
         {institutions &&
           institutions.map((item, index) => (
-            <li key={`${item.__typename}${index}`}>
-              {item.period} {item.institution}
+            <li
+              key={`${item.__typename}${index}`}
+              className="flex items-baseline gap-2"
+            >
+              <span className="min-w-[62px] text-end text-xs">
+                {item.period}
+              </span>
+              <span>{item.institution}</span>
             </li>
           ))}
       </ul>
-    </>
+    </div>
   );
 };
 
