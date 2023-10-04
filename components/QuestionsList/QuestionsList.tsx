@@ -2,7 +2,7 @@ import { QuestionListItem } from '@/components';
 
 const QuestionsList = ({ data }) => {
   return (
-    <>
+    <ul className="flex flex-col gap-4">
       {data.map((item, index) => {
         return (
           <QuestionListItem
@@ -12,7 +12,7 @@ const QuestionsList = ({ data }) => {
           />
         );
       })}
-    </>
+    </ul>
   );
 };
 
