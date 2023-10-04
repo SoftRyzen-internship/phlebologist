@@ -16,3 +16,9 @@ export { default as IconBtn } from '@/components/Buttons/IconBtn/IconBtn';
 // slider before-after
 export { default as SliderBeforeAfter } from '@/components/SliderBeforeAfter/SliderBeforeAfter';
 export { default as SliderBeforeAfterHandle } from '@/components/SliderBeforeAfterHandle/SliderBeforeAfterHandle';
+
+// slider
+export { default as Slider } from '@/components/Slider/Slider';
+
+// feedback
+export { default as FeedbackSlide } from '@/components/FeedbackSlide/FeedbackSlide';
