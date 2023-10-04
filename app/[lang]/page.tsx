@@ -31,10 +31,6 @@ export default async function Home({
 
   return (
     <main>
-      {/* local data rendering */}
-      <h1 className="text-2xl">{page.home.title}</h1>
-      <p className="text-base text-gray-700">{page.home.description}</p>
-
       <div className="flex flex-col items-center justify-center gap-6 py-12">
         <ButtonPrimary>Записатись на консультацію</ButtonPrimary>
         <ButtonSecondary linkto="">Записатись</ButtonSecondary>

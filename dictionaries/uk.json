@@ -1,12 +1,10 @@
 {
   "navigation": {
-    "home": "Startseite",
-    "about": "Über"
+    "home": "Головна",
+    "about": "Про Лікаря"
   },
   "page": {
     "home": {
-      "title": "Willkommen bei NextJs i18n",
-      "description": "Internationalisierung im NextJs 13 App-Router",
       "iconBtnData": {
         "tiktok": {
           "iconFunction": "Кнопка Тікток",
