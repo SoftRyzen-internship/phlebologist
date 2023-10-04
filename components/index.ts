@@ -17,6 +17,12 @@ export { default as IconBtn } from '@/components/Buttons/IconBtn/IconBtn';
 export { default as SliderBeforeAfter } from '@/components/SliderBeforeAfter/SliderBeforeAfter';
 export { default as SliderBeforeAfterHandle } from '@/components/SliderBeforeAfterHandle/SliderBeforeAfterHandle';
 
+// slider
+export { default as Slider } from '@/components/Slider/Slider';
+
+// feedback
+export { default as FeedbackSlide } from '@/components/FeedbackSlide/FeedbackSlide';
+
 // section About
 export { default as AboutTabs } from '@/components/AboutTabs/AboutTabs';
 export { default as AboutGeneral } from '@/components/AboutGeneral/AboutGeneral';
