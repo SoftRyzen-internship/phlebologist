@@ -5,6 +5,8 @@ import { fetchGeneral } from '@/api';
 
 import { Test } from '@/components';
 
+import { AdvantagesSection } from '@/sections';
+
 import {
   ButtonPrimary,
   SliderBeforeAfter,
@@ -133,6 +135,7 @@ export default async function Home({
         slide={FeedbackSlide}
         slideClassName="bg-secondary-dark"
       />
+      <AdvantagesSection staticData={page.home.advantages} />
     </main>
   );
 }

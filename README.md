@@ -199,7 +199,7 @@ folder. This is a list of most common components and their API.
 | ----------- | ----------- | ------------------------------------------------- |
 | `tag`       | `h2`        | choose the tag of title you'd need: `h1` - `h3`   |
 | `view`      | `undefined` | if the heading is in Hero section, specify `hero` |
-| `variant`   | `primary`   | `main`, `primary`, `secondary`, `tertiary`        |
+| `variant`   | `primary`   | `main`, `primary`, `secondary`                    |
 | `children`  | `undefined` | required, any content                             |
 | `className` | `undefined` | add custom or additional css class you'd need     |
 
