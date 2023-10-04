@@ -1,4 +1,4 @@
-type AdvantageItem = {
+export type AdvantageItem = {
   id: string;
   title: string;
   description: string;

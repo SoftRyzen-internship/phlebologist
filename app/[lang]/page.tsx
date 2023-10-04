@@ -1,7 +1,7 @@
 import { Locale } from '@/i18n.config';
 import { getDictionary } from '@/utils/dictionary';
 import { AdvantagesSection } from '@/sections';
-import { About } from '@/sections';
+import { AboutSection } from '@/sections';
 import {
   ButtonPrimary,
   SliderBeforeAfter,
@@ -38,7 +38,7 @@ export default async function Home({
         <SliderBeforeAfter page={page} />
       </div>
 
-      <About lang={lang} staticData={page.home.about} />
+      <AboutSection lang={lang} staticData={page.home.about} />
 
       <IconBtn
         icon="tiktok"
