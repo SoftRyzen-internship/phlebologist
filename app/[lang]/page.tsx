@@ -1,12 +1,7 @@
 import { Locale } from '@/i18n.config';
 import { getDictionary } from '@/utils/dictionary';
-
-import { fetchGeneral } from '@/api';
-
-import { Test } from '@/components';
-
 import { AdvantagesSection } from '@/sections';
-
+import { About } from '@/sections';
 import {
   ButtonPrimary,
   SliderBeforeAfter,
@@ -24,8 +19,6 @@ export default async function Home({
 }) {
   // fetching local data for the selected lang
   const { page } = await getDictionary(lang);
-  // fetching admin data for the selected lang
-  const general = await fetchGeneral(lang);
 
   const slides = [
     { __typename: 2367289350 },
@@ -38,18 +31,14 @@ export default async function Home({
 
   return (
     <main>
-      {/* local data rendering */}
-      <h1 className="text-2xl">{page.home.title}</h1>
-      <p className="text-base text-gray-700">{page.home.description}</p>
-
-      {/* admin data rendering */}
-      <Test data={general} />
       <div className="flex flex-col items-center justify-center gap-6 py-12">
         <ButtonPrimary>Записатись на консультацію</ButtonPrimary>
         <ButtonSecondary linkto="">Записатись</ButtonSecondary>
         <ButtonTertiary>Написати у Telegram</ButtonTertiary>
         <SliderBeforeAfter page={page} />
       </div>
+
+      <About lang={lang} staticData={page.home.about} />
 
       <IconBtn
         icon="tiktok"
