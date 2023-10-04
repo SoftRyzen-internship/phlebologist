@@ -1,5 +1,7 @@
+'use client';
+
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-scroll';
 import classnames from 'classnames';
 
 import { ButtonSecondaryProps } from './ButtonSecondary.props';
@@ -9,6 +11,7 @@ const ButtonSecondary: React.FC<ButtonSecondaryProps> = ({
   view = undefined,
   className = '',
   children,
+  actionHandler,
 }) => {
   const secondaryBtnClass = classnames(
     {
@@ -25,7 +28,15 @@ const ButtonSecondary: React.FC<ButtonSecondaryProps> = ({
   );
 
   return (
-    <Link href={linkto} className={secondaryBtnClass}>
+    <Link
+      className={secondaryBtnClass}
+      to={linkto}
+      spy={true}
+      smooth={true}
+      offset={0}
+      duration={500}
+      onClick={actionHandler}
+    >
       {children}
     </Link>
   );

@@ -1,2 +1,3 @@
-export { default as TestSection } from '@/sections/TestSection/TestSection';
-export { default as About } from '@/sections/About/About';
+export { default as AboutSection } from '@/sections/About/About';
+
+export { default as AdvantagesSection } from '@/sections/Advantages/Advantages';

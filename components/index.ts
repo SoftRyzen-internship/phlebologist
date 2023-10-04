@@ -30,6 +30,9 @@ export { default as AboutEducation } from '@/components/AboutEducation/AboutEduc
 export { default as AboutCareer } from '@/components/AboutCareer/AboutCareer';
 export { default as AboutCertificates } from '@/components/AboutCertificates/AboutCertificates';
 
+// section Advantages
+export { default as AdvantagesList } from '@/components/AdvantagesList/AdvantagesList';
+
 // error
 export { default as ErrorMessage } from '@/components/ErrorMessage/ErrorMessage';
 

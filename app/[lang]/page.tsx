@@ -1,7 +1,7 @@
 import { Locale } from '@/i18n.config';
 import { getDictionary } from '@/utils/dictionary';
-
-import { About } from '@/sections';
+import { AdvantagesSection } from '@/sections';
+import { AboutSection } from '@/sections';
 import {
   ButtonPrimary,
   SliderBeforeAfter,
@@ -39,7 +39,7 @@ export default async function Home({
         <SliderBeforeAfter page={page} />
       </div>
       <SocialsList variant="footer" staticData={page.home.iconBtnData} />
-      <About lang={lang} staticData={page.home.about} />
+      <AboutSection lang={lang} staticData={page.home.about} />
 
       <IconBtn
         icon="tiktok"
@@ -125,6 +125,7 @@ export default async function Home({
         slide={FeedbackSlide}
         slideClassName="bg-secondary-dark"
       />
+      <AdvantagesSection staticData={page.home.advantages} />
     </main>
   );
 }

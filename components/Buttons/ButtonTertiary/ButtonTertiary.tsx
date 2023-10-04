@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-scroll';
 import classnames from 'classnames';
 
 import { ButtonTertiaryProps } from './ButtonTertiary.props';
@@ -35,7 +35,15 @@ const ButtonTertiary: React.FC<ButtonTertiaryProps> = ({
   return (
     <>
       {isLink ? (
-        <Link href={linkto} className={tertiaryBtnClass}>
+        <Link
+          className={tertiaryBtnClass}
+          to={linkto}
+          spy={true}
+          smooth={true}
+          offset={0}
+          duration={500}
+          onClick={actionHandler}
+        >
           {children}
         </Link>
       ) : (
