@@ -1,16 +1,111 @@
 {
   "navigation": {
-    "home": "Startseite",
-    "about": "Über"
+    "home": "Головна",
+    "about": "Про Лікаря"
   },
   "page": {
     "home": {
-      "title": "Willkommen bei NextJs i18n",
-      "description": "Internationalisierung im NextJs 13 App-Router"
-    },
-    "about": {
-      "title": "Über uns",
-      "description": "Dies ist die About-Seite"
+      "advantages": {
+        "title": "Переваги",
+        "mainQuestion": "Чому варто працювати \nсаме зі мною?",
+        "advList": [
+          {
+            "id": "01",
+            "title": "Міжнародний досвід",
+            "description": "Член європейської асоціації судинних хірургів. Обмін досвідом з провідними лікарями світу"
+          },
+          {
+            "id": "02",
+            "title": "Швидка реабілітація",
+            "description": "Завдяки лікуванню сучасними малоінвазивними методами ви одразу після процедури можете повернутись до звичайного життя та вже на наступний день повернутись до роботи"
+          },
+          {
+            "id": "03",
+            "title": "Зручність і комфорт",
+            "description": "Затишна атмосфера клініки та підтримка пацієнтів протягом усього лікування"
+          },
+          {
+            "id": "04",
+            "title": "Експертність",
+            "description": "Високий рівень професійної кваліфікації та досвід у лікуванні венозних та артеріальних захворювань"
+          },
+          {
+            "id": "05",
+            "title": "УЗ навігація",
+            "description": "Усі операції виконуються за допомогою УЗ навігації, завдяки якій, вплив здійснюється максимально точно тільки на уражені вени, не пошкоджуючи при цьому здорові"
+          },
+          {
+            "id": "06",
+            "title": "Прозорість",
+            "description": "Ми не навʼязуємо операцій, якщо у цьому немає необхідності. Чітке пояснення процедур, ризиків та очікуваних результатів лікування"
+          }
+        ],
+        "enrollText": "Запишіться на консультацію \nта переконайтесь у професіоналізмі \nлікаря",
+        "buttonText": "Записатись"
+      },
+      "iconBtnData": {
+        "tiktok": {
+          "iconFunction": "Кнопка Тікток",
+          "iconLabel": "Іконка Тікток"
+        },
+        "facebook": {
+          "iconFunction": "Кнопка Фейсбук",
+          "iconLabel": "Іконка Фейсбук"
+        },
+        "instagram": {
+          "iconFunction": "Кнопка Інстаграм",
+          "iconLabel": "Іконка Фейсбук"
+        },
+        "arrowRight": {
+          "iconFunction": "Наступний слайд",
+          "iconLabel": "Стрілка праворуч"
+        },
+        "arrowLeft": {
+          "iconFunction": "Попередній слайд",
+          "iconLabel": "Стрілка ліворуч"
+        },
+        "location": {
+          "iconFunction": "Кнопка місцезнаходження",
+          "iconLabel": "Іконка геолокації"
+        }
+      },
+      "about": {
+        "title": "Про лікаря",
+        "firstSubtitle": "Досвід:",
+        "secondSubtitle": "Освіта:",
+        "menu": [
+          {
+            "item": "Загальна інформація",
+            "collection": "general"
+          },
+          {
+            "item": "Освіта",
+            "collection": "education"
+          },
+          {
+            "item": "Кар'єра",
+            "collection": "career"
+          },
+          {
+            "item": "Сертифікати",
+            "collection": "certificates"
+          }
+        ]
+      },
+      "patient_results": {
+        "slider": {
+          "beforeAltText": "Зображення до лікування",
+          "afterAltText": "Зображення після лікування",
+          "beforeHandleText": "До",
+          "afterHandleText": "Після"
+        }
+      }
     }
+  },
+  "socials": {
+    "telegram": "https://t.me/Sergii_Voitsitskyi",
+    "instagram": "https://www.instagram.com/dr_voitsitskyi/",
+    "tiktok": "https://www.tiktok.com/@dr_voitsitskyi",
+    "facebook": "https://www.facebook.com/dr.SergiiVoitsitskyi"
   }
 }

@@ -5,12 +5,111 @@
   },
   "page": {
     "home": {
-      "title": "Welcome to NextJs i18n",
-      "description": "Internationalization in NextJs 13 App router"
+      "advantages": {
+        "title": "Переваги",
+        "mainQuestion": "Чому варто працювати \nсаме зі мною?",
+        "advList": [
+          {
+            "id": "01",
+            "title": "Міжнародний досвід",
+            "description": "Член європейської асоціації судинних хірургів. Обмін досвідом з провідними лікарями світу"
+          },
+          {
+            "id": "02",
+            "title": "Швидка реабілітація",
+            "description": "Завдяки лікуванню сучасними малоінвазивними методами ви одразу після процедури можете повернутись до звичайного життя та вже на наступний день повернутись до роботи"
+          },
+          {
+            "id": "03",
+            "title": "Зручність і комфорт",
+            "description": "Затишна атмосфера клініки та підтримка пацієнтів протягом усього лікування"
+          },
+          {
+            "id": "04",
+            "title": "Експертність",
+            "description": "Високий рівень професійної кваліфікації та досвід у лікуванні венозних захворювань"
+          },
+          {
+            "id": "05",
+            "title": "УЗ навігація",
+            "description": "Усі операції виконуються за допомогою УЗ навігації, завдяки якій, вплив здійснюється максимально точно тільки на уражені вени, не пошкоджуючи при цьому здорові"
+          },
+          {
+            "id": "06",
+            "title": "Прозорість",
+            "description": "Ми не навʼязуємо операцій, якщо у цьому немає необхідності. Чітке пояснення процедур, ризиків та очікуваних результатів лікування"
+          }
+        ],
+        "enrollText": "Запишіться на консультацію та переконайтесь у професіоналізмі лікаря",
+        "buttonText": "Записатись"
+      },
+      "iconBtnData": {
+        "tiktok": {
+          "iconFunction": "Tiktok Button",
+          "iconLabel": "Tiktok Icon"
+        },
+        "facebook": {
+          "iconFunction": "Facebook Button",
+          "iconLabel": "Facebook Icon"
+        },
+        "instagram": {
+          "iconFunction": "Instagram Button",
+          "iconLabel": "Instagram Icon"
+        },
+        "arrowRight": {
+          "iconFunction": "Next Slide Button",
+          "iconLabel": "Arrow Right Icon"
+        },
+        "arrowLeft": {
+          "iconFunction": "Previuos Slide Button",
+          "iconLabel": "Arrow Left Icon"
+        },
+        "location": {
+          "iconFunction": "Location Button",
+          "iconLabel": "Geolocation Icon"
+        }
+      },
+      "about": {
+        "title": "About",
+        "firstSubtitle": "Experience:",
+        "secondSubtitle": "Education:",
+        "menu": [
+          {
+            "item": "General info",
+            "collection": "general"
+          },
+          {
+            "item": "Education",
+            "collection": "education"
+          },
+          {
+            "item": "Career",
+            "collection": "career"
+          },
+          {
+            "item": "Certificates",
+            "collection": "certificates"
+          }
+        ]
+      },
+      "patient_results": {
+        "slider": {
+          "beforeAltText": "Before treatment image",
+          "afterAltText": "After treatment image",
+          "beforeHandleText": "Before",
+          "afterHandleText": "After"
+        }
+      }
     },
     "about": {
       "title": "About Us",
       "description": "This is the about page"
     }
+  },
+  "socials": {
+    "telegram": "https://t.me/Sergii_Voitsitskyi",
+    "instagram": "https://www.instagram.com/dr_voitsitskyi/",
+    "tiktok": "https://www.tiktok.com/@dr_voitsitskyi",
+    "facebook": "https://www.facebook.com/dr.SergiiVoitsitskyi"
   }
 }

@@ -27,8 +27,10 @@ git@github.com:SoftRyzen-internship/phlebologist.git
 1. Recommended for use **npm** - `npm i` or `npm install`
 2. Create file `.env.local` in the project root using `.env.local.example` as a
    template
-3. Run the local server via `npm run dev` command
-4. Open `http://localhost:3000`.
+3. Run the local server via `npm run dev` command. The `dev` command launches
+   CMS first and then launches the main server.
+4. Access the website at `http://localhost:3000`. The admin panel is available
+   at `http://localhost:3000/admin`.
 
 ### Personal branch
 
@@ -45,15 +47,18 @@ git@github.com:SoftRyzen-internship/phlebologist.git
    GH.
 3. Fix the errors and if there are none - you can go ahead with commiting your
    changes to your branch.
+4. Make sure to give your commit a name that clearly states what has been done:
+   **add/update/fix/remove** + **feature/component name**. Example: _"update
+   Header types & styles"_.
 
 ### Pull requests
 
 1. Before creating a PR, make sure to `git pull` the current version of **dev**
    into your branch and resolve the conflicts locally.
-2. When creating a PR, make sure to chose **dev** as a branch to merge your
+2. When creating a PR, make sure to choose **dev** as a branch to merge your
    working branch into.
-3. Request your PR to be reviewed by the Team Lead - Yana Palamarchuk
-   (Yana-Palam).
+3. Request your PR to be reviewed by the Team Lead - **Yana Palamarchuk**
+   (**Yana-Palam**).
 
 ## Project structure
 
@@ -188,13 +193,136 @@ export { default as Header } from '@/components/Header/Header';
 Each reusable component has its own API. You can find it in the component's
 folder. This is a list of most common components and their API.
 
-This is example of API for component `Title`
+- ### Heading
 
-- ### Title
+| Prop        | Default     | Description                                       |
+| ----------- | ----------- | ------------------------------------------------- |
+| `tag`       | `h2`        | choose the tag of title you'd need: `h1` - `h3`   |
+| `view`      | `undefined` | if the heading is in Hero section, specify `hero` |
+| `variant`   | `primary`   | `main`, `primary`, `secondary`                    |
+| `children`  | `undefined` | required, any content                             |
+| `className` | `undefined` | add custom or additional css class you'd need     |
 
-| Prop        | Default     | Description                                     |
-| ----------- | ----------- | ----------------------------------------------- |
-| `tag`       | `h2`        | choose the tag of title you'd need: `h1` - `h3` |
-| `variant`   | `primary`   | `main`, `primary`, `secondary`                  |
-| `children`  | `undefined` | required, any content                           |
-| `className` | `undefined` | add custom or additional css class you'd need   |
+- ### ButtonPrimary
+
+The Primary Button has `button` tag and performs an action when clicked.
+
+| Prop            | Default     | Description                                               |
+| --------------- | ----------- | --------------------------------------------------------- |
+| `view`          | `undefined` | if the button is used in Header, specify `header`         |
+| `variant`       | `light`     | choose the color variant of the button: `light` or `dark` |
+| `className`     | `undefined` | add any custom styles                                     |
+| `children`      | `undefined` | a necessary prop. any text content                        |
+| `actionHandler` | `undefined` | a function that is executed when clicked                  |
+
+- ### ButtonSecondary
+
+The Secondary Button has `a` tag and performs a transition to another part of
+the site when pressed.
+
+| Prop        | Default     | Description                                           |
+| ----------- | ----------- | ----------------------------------------------------- |
+| `linkto `   | `undefined` | a necessary prop. the address of the link             |
+| `view`      | `undefined` | if the button is used in Hero section, specify `hero` |
+| `className` | `undefined` | add any custom styles                                 |
+| `children`  | `undefined` | a necessary prop. any text content                    |
+
+- ### SubmitButton
+
+The button of `Form`.
+
+| Prop            | Default     | Description                              |
+| --------------- | ----------- | ---------------------------------------- |
+| `className`     | `undefined` | add any custom styles                    |
+| `children`      | `undefined` | a necessary prop. any text content       |
+| `actionHandler` | `undefined` | a function that is executed when clicked |
+
+- ### ExternalLinkButton
+
+Has `a` tag and leads to an external source.
+
+| Prop        | Default     | Description                        |
+| ----------- | ----------- | ---------------------------------- |
+| `linkto `   | `undefined` | the address of the link            |
+| `className` | `undefined` | add any custom styles              |
+| `children`  | `undefined` | a necessary prop. any text content |
+
+- ### RoutingLinkButton
+
+Has `a` tag and provides navigation between routes.
+
+| Prop        | Default     | Description                        |
+| ----------- | ----------- | ---------------------------------- |
+| `linkto `   | `undefined` | the address of the route           |
+| `className` | `undefined` | add any custom styles              |
+| `children`  | `undefined` | a necessary prop. any text content |
+
+- ### ScrollLinkButton
+
+Has `a` tag and provide scrolling to the appropriate `section`.
+
+| Prop        | Default     | Description                                |
+| ----------- | ----------- | ------------------------------------------ |
+| `linkto `   | `undefined` | the address of the link                    |
+| `variant`   | `light`     | choose the color variant `light` or `dark` |
+| `className` | `undefined` | add any custom styles                      |
+| `children`  | `undefined` | a necessary prop. any text content         |
+
+- ### IconBtn
+
+The Icon Button has either `anchor` or `button` tag.
+
+| Prop           | Type          | Description                                           |
+| -------------- | ------------- | ----------------------------------------------------- |
+| `icon`         | 'tiktok'      | - Anchor that leads to Tiktok page,                   |
+|                | 'facebook'    | - Anchor that leads to Facebook page,                 |
+|                | 'instagram'   | - Anchor that leads to Instagram page,                |
+|                | 'arrow'       | - Navigation button with arrow to the right,          |
+|                | 'location'    | - Geolocation anchor,                                 |
+|                |               |                                                       |
+| `variant`      | 'result'      | - Button in treatment result section,                 |
+|                | 'feedback'    | - Button in feedback section,                         |
+|                | 'contacts'    | - Button in contacts section,                         |
+|                | 'footer'      | - Button in footer section,                           |
+|                | 'location'    | - Geolocation button,                                 |
+|                |               |                                                       |
+| `onClick`      | void function | Optional, click handler                               |
+|                |               |                                                       |
+| `reverse`      | boolean       | Optional, false by default, turns icon by 180 degrees |
+|                |               |                                                       |
+| `className`    | string        | Optional, add additional tailwind classes,            |
+|                |               | e.g. to position component                            |
+|                |               |                                                       |
+| `iconFunction` | string        | Aria-label on button/anchor element,                  |
+|                |               | taken from dictionary.ts                              |
+|                |               |                                                       |
+| `iconLabel`    | string        | Aria-label on svg element, taken from dictionary.ts   |
+|                |               |                                                       |
+| `url`          | string        | Optional, url address, applies anchor element         |
+|                |               | instead of button element,                            |
+|                |               | and is used inside `href` attribute                   |
+|                |               |                                                       |
+
+- ### Slider
+
+The `Slider` component is created using `keen slider` library.
+
+| Prop             | Type       | Description                                                    |
+| ---------------- | ---------- | -------------------------------------------------------------- |
+| `slides `        | `array`    | Array of objects fetched from backend and to be mapped inside  |
+|                  |            | slider. Each object must contain `__typename` field (string).  |
+|                  |            |                                                                |
+| `staticData`     | `object`   | Data from dictionary. const staticData = page.home.iconBtnData |
+|                  |            |                                                                |
+| `section`        | `result`   | In which section the slider will be used - treatment results   |
+|                  | `feedback` | patients' feedback.                                            |
+|                  |            |                                                                |
+| `slide`          | `function` | A function component that will be used as a slide              |
+|                  |            | inside the slider. The component must have two props:          |
+|                  |            | 1. data - an object from slides array (see above)              |
+|                  |            | 2. className - optional prop with additional tailwind classes  |
+|                  |            | IMPORTANT! - the component must have "use client" directive    |
+|                  |            | specified explicitly at the top!                               |
+|                  |            |                                                                |
+| `slideClassName` | `string`   | Optional, additional tailwind classes string that              |
+|                  |            | will be passed to the slide component (see above)              |

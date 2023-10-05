@@ -16,16 +16,20 @@
   },
   "dependencies": {
     "@formatjs/intl-localematcher": "^0.4.2",
+    "@headlessui/react": "^1.7.17",
     "@tinacms/cli": "^1.5.29",
     "@typescript-eslint/eslint-plugin": "^6.7.3",
     "@typescript-eslint/parser": "^6.7.3",
     "classnames": "^2.3.2",
+    "keen-slider": "^6.8.6",
     "negotiator": "^0.6.3",
     "next": "latest",
     "react": "latest",
+    "react-compare-image": "^3.4.0",
     "react-dom": "latest",
     "react-hook-form": "^7.46.2",
     "react-hook-form-persist": "^3.0.0",
+    "react-scroll": "^1.8.9",
     "tinacms": "^1.5.20"
   },
   "devDependencies": {
@@ -33,17 +37,18 @@
     "@types/node": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
+    "@types/react-scroll": "^1.8.8",
     "autoprefixer": "latest",
     "eslint": "latest",
     "eslint-config-next": "latest",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.33.2",
+    "husky": "^8.0.0",
     "postcss": "latest",
     "prettier": "^2.8.4",
     "prettier-plugin-tailwindcss": "^0.3.0",
     "tailwindcss": "latest",
-    "typescript": "latest",
-    "husky": "^8.0.0"
+    "typescript": "latest"
   }
 }
