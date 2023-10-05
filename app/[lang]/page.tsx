@@ -1,7 +1,6 @@
 import { Locale } from '@/i18n.config';
 import { getDictionary } from '@/utils/dictionary';
-import { AdvantagesSection } from '@/sections';
-import { AboutSection } from '@/sections';
+import { AdvantagesSection, AboutSection } from '@/sections';
 import {
   ButtonPrimary,
   SliderBeforeAfter,
@@ -19,7 +18,7 @@ export default async function Home({
   params: { lang: Locale };
 }) {
   // fetching local data for the selected lang
-  const { page } = await getDictionary(lang);
+  const { page, socials } = await getDictionary(lang);
 
   const slides = [
     { __typename: 2367289350 },
@@ -36,9 +35,18 @@ export default async function Home({
         <ButtonPrimary>Записатись на консультацію</ButtonPrimary>
         <ButtonSecondary linkto="">Записатись</ButtonSecondary>
         <ButtonTertiary>Написати у Telegram</ButtonTertiary>
+
         <SliderBeforeAfter page={page} />
       </div>
-      <SocialsList variant="footer" staticData={page.home.iconBtnData} />
+
+      <SocialsList
+        variant="footer"
+        staticData={{
+          iconBtnData: page.home.iconBtnData,
+          socials: socials,
+        }}
+      />
+
       <AboutSection lang={lang} staticData={page.home.about} />
 
       <IconBtn
@@ -125,6 +133,7 @@ export default async function Home({
         slide={FeedbackSlide}
         slideClassName="bg-secondary-dark"
       />
+
       <AdvantagesSection staticData={page.home.advantages} />
     </main>
   );

@@ -126,5 +126,11 @@
       "title": "About Us",
       "description": "This is the about page"
     }
+  },
+  "socials": {
+    "telegram": "https://t.me/Sergii_Voitsitskyi",
+    "instagram": "https://www.instagram.com/dr_voitsitskyi/",
+    "tiktok": "https://www.tiktok.com/@dr_voitsitskyi",
+    "facebook": "https://www.facebook.com/dr.SergiiVoitsitskyi"
   }
 }

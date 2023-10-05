@@ -1,20 +1,20 @@
 import React, { FC } from 'react';
 import { IconBtn } from '@/components';
+import { socialsList } from '@/data/socials';
 import { SocialsListProps } from './SocialsList.props';
 
-import { socials } from '@/data/socials';
-
 const SocialsList: FC<SocialsListProps> = ({ variant, staticData }) => {
+  const { socials, iconBtnData } = staticData;
   return (
     <ul className="flex gap-3">
-      {socials.map(({ name, url }, index) => (
+      {socialsList.map((name, index) => (
         <li key={index}>
           <IconBtn
             icon={name}
-            url={url}
+            url={socials[name]}
             variant={variant}
-            iconLabel={staticData[name].iconLabel}
-            iconFunction={staticData[name].iconFunction}
+            iconLabel={iconBtnData[name].iconLabel}
+            iconFunction={iconBtnData[name].iconFunction}
           />
         </li>
       ))}
