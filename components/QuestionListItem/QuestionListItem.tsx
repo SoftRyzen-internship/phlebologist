@@ -10,6 +10,7 @@ import { QuestionsListItemProps } from './QuestionListItem.props';
 const QuestionListItem: React.FC<QuestionsListItemProps> = ({
   item,
   index,
+  aria,
 }) => {
   return (
     <Disclosure
@@ -28,6 +29,7 @@ const QuestionListItem: React.FC<QuestionsListItemProps> = ({
               width={24}
               height={24}
               className={classNames({ 'rotate-[270deg]': !open })}
+              aria-label={aria}
             />
             {item.question}
           </Disclosure.Button>

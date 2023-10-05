@@ -1,5 +1,8 @@
 export interface QuestionsListProps {
-  data: QuestionsType[];
+  data: {
+    questions: QuestionsType[];
+    aria: string;
+  };
 }
 
 type QuestionsType = {

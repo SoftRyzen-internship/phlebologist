@@ -3,7 +3,7 @@ import { Heading, QuestionsList, ExternalLinkButton } from '@/components';
 import { FAQProps } from './FAQ.props';
 
 const FAQ: React.FC<FAQProps> = ({ staticData: { faq, socials } }) => {
-  const { title, description, button, questions } = faq;
+  const { title, description, button, questions, aria } = faq;
   const { telegram } = socials;
 
   return (
@@ -18,7 +18,7 @@ const FAQ: React.FC<FAQProps> = ({ staticData: { faq, socials } }) => {
           <Heading className="mb-8 md:mb-10 md:w-[428px] xl:mb-0 xl:w-[360px]">
             {title}
           </Heading>
-          <QuestionsList data={questions} />
+          <QuestionsList data={{ questions, aria }} />
 
           <div className="xl:absolute xl:top-[640px]">
             <p

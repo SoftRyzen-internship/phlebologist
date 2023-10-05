@@ -11,6 +11,7 @@ type FAQDataType = {
   title: string;
   description: string;
   button: string;
+  aria: string;
   questions: QuestionsType[];
 };
 
