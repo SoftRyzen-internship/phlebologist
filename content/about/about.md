@@ -2,7 +2,7 @@
 photo: /uploads/about/about-img.webp
 general:
   uk:
-    name: Войціцький Сергій ня
+    name: Войціцький Сергій
     profession: |
       Судинний хірург 1 категорії
 
