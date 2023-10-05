@@ -392,3 +392,47 @@ The `Slider` component is created using `keen slider` library.
 |                  |            |                                                                |
 | `slideClassName` | `string`   | Optional, additional tailwind classes string that              |
 |                  |            | will be passed to the slide component (see above)              |
+
+- ### InfoBlock
+
+The `InfoBlock` is a universal component that always has a title and optionally
+some content of different type - text, url, list or other component.
+
+- IMPORTANT! The `InfoBlock` does not have a container, therefore you can wrap
+  it in any kind of container you need - div, li, article etc.
+- IMPORTANT! The component only receives one prop -`config` which is an object
+  of the following properties:
+
+| Property           | Type        | Description                                        |
+| ------------------ | ----------- | -------------------------------------------------- |
+| `section`          | 'treatment' | Specifies, in which section the component is used: |
+|                    | 'contacts'  | `Treatment Methods` or `Contacts`                  |
+|                    |             |                                                    |
+| `title`            | string      | Text of the block title                            |
+|                    |             |                                                    |
+| `titleClassName`   | string      | Optional, add additional tailwind classes to title |
+|                    |             |                                                    |
+| `contentType`      |             | Optional, 'text' by default, defines content type: |
+|                    | 'text'      | - if content is an ordinary text string (<p>)      |
+|                    | 'link'      | - if content is a url string (<a>),                |
+|                    | 'list'      | - if content is a list of text strings,            |
+|                    | 'component' | - if content is a component/components             |
+|                    |             |                                                    |
+| `content`          |             | Optional, pass the content that goes under title:  |
+|                    | string      | - necessary if `contentType` is 'text' or 'link'   |
+|                    |             | (`<p>{string}</p>` or `<a>{string}</a>`)           |
+|                    |             |                                                    |
+|                    | string[]    | - necessary if `contentType` is 'list',            |
+|                    |             |                                                    |
+|                    | 'list'      | - if content is a list of text strings,            |
+|                    |             |                                                    |
+|                    |             | - IMPORTANT! if `contentType` is 'component' -     |
+|                    |             | content is inserted as children, not as a prop     |
+|                    |             |                                                    |
+| `link`             | string      | Optional, necessary if `contentType` is 'link',    |
+|                    |             | a url that is passed into href attribute           |
+|                    |             | (`<a href={string}></a>`)                          |
+|                    |             |                                                    |
+| `contentClassName` | string      | Optional, add additional tailwind classes to       |
+|                    |             | text content in a text, link or list item          |
+|                    |             |                                                    |

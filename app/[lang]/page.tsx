@@ -14,6 +14,7 @@ import {
   // RoutingLinkButton,
   // ScrollLinkButton,
   SocialsList,
+  InfoBlock,
 } from '@/components';
 
 export default async function Home({
@@ -142,6 +143,18 @@ export default async function Home({
 
       <AdvantagesSection staticData={page.home.advantages} />
       <FAQSection staticData={{ faq: page.home.faq, socials }} />
+
+      {/* Simple InfoBlock with text */}
+
+      <div>
+        <InfoBlock
+          config={{
+            section: 'treatment',
+            title: 'Lorem ipsum',
+            content: 'Lorem ipsum dolor',
+          }}
+        />
+      </div>
     </main>
   );
 }
