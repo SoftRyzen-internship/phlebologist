@@ -16,4 +16,31 @@ export { default as IconBtn } from '@/components/Buttons/IconBtn/IconBtn';
 // slider before-after
 export { default as SliderBeforeAfter } from '@/components/SliderBeforeAfter/SliderBeforeAfter';
 export { default as SliderBeforeAfterHandle } from '@/components/SliderBeforeAfterHandle/SliderBeforeAfterHandle';
+
+// slider
+export { default as Slider } from '@/components/Slider/Slider';
+
+// feedback
+export { default as FeedbackSlide } from '@/components/FeedbackSlide/FeedbackSlide';
+
+// section About
+export { default as AboutTabs } from '@/components/AboutTabs/AboutTabs';
+export { default as AboutGeneral } from '@/components/AboutGeneral/AboutGeneral';
+export { default as AboutEducation } from '@/components/AboutEducation/AboutEducation';
+export { default as AboutCareer } from '@/components/AboutCareer/AboutCareer';
+export { default as AboutCertificates } from '@/components/AboutCertificates/AboutCertificates';
+
+// section Advantages
+export { default as AdvantagesList } from '@/components/AdvantagesList/AdvantagesList';
+
+// error
+export { default as ErrorMessage } from '@/components/ErrorMessage/ErrorMessage';
+
+//socials-list
+export { default as SocialsList } from '@/components/SocialSList/SocialsList';
+
+//footer
 export { default as Footer } from '@/components/Footer/Footer';
+
+//logo
+export { default as Logo } from '@/components/Logo/Logo';

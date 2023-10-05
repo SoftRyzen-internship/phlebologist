@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@formatjs/intl-localematcher": "^0.4.2",
+    "@headlessui/react": "^1.7.17",
     "@tinacms/cli": "^1.5.29",
     "@typescript-eslint/eslint-plugin": "^6.7.3",
     "@typescript-eslint/parser": "^6.7.3",
@@ -28,6 +29,7 @@
     "react-dom": "latest",
     "react-hook-form": "^7.46.2",
     "react-hook-form-persist": "^3.0.0",
+    "react-scroll": "^1.8.9",
     "tinacms": "^1.5.20"
   },
   "devDependencies": {
@@ -35,6 +37,7 @@
     "@types/node": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
+    "@types/react-scroll": "^1.8.8",
     "autoprefixer": "latest",
     "eslint": "latest",
     "eslint-config-next": "latest",

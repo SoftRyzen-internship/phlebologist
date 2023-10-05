@@ -1,11 +1,12 @@
-'use client';
+// 'use client';
 
-import React, { useState, useEffect } from 'react';
+// import React, { useState, useEffect } from 'react';
+import React from 'react';
 import classnames from 'classnames';
 
 import { ButtonPrimaryProps } from './ButtonPrimary.props';
-import { SCREEN_TABLET, SCREEN_DESKTOP } from '@/constants';
-import SvgButtonArrow from '@/public/icons/list-chevron.svg';
+// import { SCREEN_TABLET, SCREEN_DESKTOP } from '@/constants';
+// import SvgButtonArrow from '@/public/icons/list-chevron.svg';
 
 const ButtonPrimary: React.FC<ButtonPrimaryProps> = ({
   view = undefined,
@@ -13,27 +14,27 @@ const ButtonPrimary: React.FC<ButtonPrimaryProps> = ({
   className = '',
   children,
   actionHandler,
-}: ButtonPrimaryProps) => {
-  const [width, setWidth] = useState<number | null>(null);
+}) => {
+  // const [width, setWidth] = useState<number | null>(null);
 
-  useEffect(() => {
-    if (!width) {
-      setWidth(window.innerWidth);
-    }
+  // useEffect(() => {
+  //   if (!width) {
+  //     setWidth(window.innerWidth);
+  //   }
 
-    const handleResize = (event: Event): void => {
-      if (event.target instanceof Window) {
-        setWidth(event.target.innerWidth);
-      }
-    };
+  //   const handleResize = (event: Event): void => {
+  //     if (event.target instanceof Window) {
+  //       setWidth(event.target.innerWidth);
+  //     }
+  //   };
 
-    window.addEventListener('resize', handleResize);
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, [width]);
+  //   window.addEventListener('resize', handleResize);
+  //   return () => {
+  //     window.removeEventListener('resize', handleResize);
+  //   };
+  // }, [width]);
 
-  const isScreenTablet = width! >= SCREEN_TABLET && width! < SCREEN_DESKTOP;
+  // const isScreenTablet = width! >= SCREEN_TABLET && width! < SCREEN_DESKTOP;
 
   const primaryBtnClass = classnames(
     {
@@ -62,7 +63,7 @@ const ButtonPrimary: React.FC<ButtonPrimaryProps> = ({
   return (
     <button type="button" onClick={actionHandler} className={primaryBtnClass}>
       {children}
-      {isScreenTablet && <SvgButtonArrow width={16} aria-hidden />}
+      {/* {isScreenTablet && <SvgButtonArrow width={16} aria-hidden />} */}
     </button>
   );
 };

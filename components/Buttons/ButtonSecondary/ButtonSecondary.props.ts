@@ -3,4 +3,5 @@ export interface ButtonSecondaryProps {
   view?: 'hero' | undefined;
   className?: string;
   children: string;
+  actionHandler?: () => void;
 }

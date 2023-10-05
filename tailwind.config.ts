@@ -10,6 +10,7 @@ module.exports = {
   theme: {
     // MEDIA QUERIES
     screens: {
+      xs: '320px',
       sm: '480px',
       md: '768px',
       xl: '1280px',
@@ -27,13 +28,21 @@ module.exports = {
       // fontFamily: { inter: ['var(--font-inter)'] },
       fontSize: {},
       // BORDER
-      borderRadius: { normal: '8px', extended: '10px' },
+      borderRadius: {
+        normal: '8px',
+        extended: '10px',
+        medium: '20px',
+        large: '24px',
+        extraLarge: '36px',
+        max: '48px',
+      },
       // ALL COLORS
       colors: {
         body: '#F3F3F3',
         black: {
           DEFAULT: '#000000', // class="bg-black text-black border-black"
           dark: '#303036', // class="bg-black-light text-black-light border-black-light"
+          extra: '#919194',
         },
         white: {
           DEFAULT: '#FFFFFF',

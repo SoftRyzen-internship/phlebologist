@@ -195,12 +195,13 @@ folder. This is a list of most common components and their API.
 
 - ### Heading
 
-| Prop        | Default     | Description                                     |
-| ----------- | ----------- | ----------------------------------------------- |
-| `tag`       | `h2`        | choose the tag of title you'd need: `h1` - `h3` |
-| `variant`   | `primary`   | `main`, `primary`, `secondary`, `tertiary`      |
-| `children`  | `undefined` | required, any content                           |
-| `className` | `undefined` | add custom or additional css class you'd need   |
+| Prop        | Default     | Description                                       |
+| ----------- | ----------- | ------------------------------------------------- |
+| `tag`       | `h2`        | choose the tag of title you'd need: `h1` - `h3`   |
+| `view`      | `undefined` | if the heading is in Hero section, specify `hero` |
+| `variant`   | `primary`   | `main`, `primary`, `secondary`                    |
+| `children`  | `undefined` | required, any content                             |
+| `className` | `undefined` | add custom or additional css class you'd need     |
 
 - ### ButtonPrimary
 
@@ -273,3 +274,27 @@ The Icon Button has either `anchor` or `button` tag.
 |                |               | instead of button element,                            |
 |                |               | and is used inside `href` attribute                   |
 |                |               |                                                       |
+
+- ### Slider
+
+The `Slider` component is created using `keen slider` library.
+
+| Prop             | Type       | Description                                                    |
+| ---------------- | ---------- | -------------------------------------------------------------- |
+| `slides `        | `array`    | Array of objects fetched from backend and to be mapped inside  |
+|                  |            | slider. Each object must contain `__typename` field (string).  |
+|                  |            |                                                                |
+| `staticData`     | `object`   | Data from dictionary. const staticData = page.home.iconBtnData |
+|                  |            |                                                                |
+| `section`        | `result`   | In which section the slider will be used - treatment results   |
+|                  | `feedback` | patients' feedback.                                            |
+|                  |            |                                                                |
+| `slide`          | `function` | A function component that will be used as a slide              |
+|                  |            | inside the slider. The component must have two props:          |
+|                  |            | 1. data - an object from slides array (see above)              |
+|                  |            | 2. className - optional prop with additional tailwind classes  |
+|                  |            | IMPORTANT! - the component must have "use client" directive    |
+|                  |            | specified explicitly at the top!                               |
+|                  |            |                                                                |
+| `slideClassName` | `string`   | Optional, additional tailwind classes string that              |
+|                  |            | will be passed to the slide component (see above)              |
