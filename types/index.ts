@@ -68,3 +68,8 @@ export type SocialsDataType = {
   tiktok: string;
   facebook: string;
 };
+
+export interface ISocials {
+  name: IconBtnName;
+  url: string;
+}

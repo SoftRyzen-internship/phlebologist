@@ -40,7 +40,7 @@ const IconBtn: FC<IconBtnProps> = ({
       variant.toLowerCase() === 'feedback',
     'w-[36px] h-[36px] text-black-dark bg-gray-light hover:bg-white-light focus:hover:bg-white-light rounded-extended':
       variant.toLowerCase() === 'contacts',
-    'hidden md:flex w-[36px] h-[36px] text-black-dark md:bg-gray-light xl:bg-white hover:bg-white-light focus:hover:bg-white-light xl:hover:bg-secondary xl:focus:bg-secondary xl:hover:text-white xl:focus:text-white rounded-extended':
+    'hidden md:flex w-[36px] h-[36px] text-black-dark bg-white hover:bg-white-light hover:bg-secondary focus:bg-secondary hover:text-white focus:text-white rounded-extended':
       variant.toLowerCase() === 'footer',
     'w-[32px] h-[32px]': variant.toLowerCase() === 'location',
   });
@@ -51,6 +51,8 @@ const IconBtn: FC<IconBtnProps> = ({
         <a
           href={url}
           onClick={onClick}
+          rel="noopener noreferrer nofollow"
+          target="_blank"
           className={`${btnStyles} ${className && className}`}
           aria-label={iconFunction}
         >

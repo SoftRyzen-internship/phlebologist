@@ -1,16 +1,17 @@
 import { Locale } from '@/i18n.config';
 import { getDictionary } from '@/utils/dictionary';
 
-import { AboutSection, FAQSection } from '@/sections';
-// import {
-//   ButtonPrimary,
-//   SliderBeforeAfter,
-//   IconBtn,
-//   Slider,
-//   FeedbackSlide,
-//   ButtonSecondary,
-// ButtonTertiary,
-// } from '@/components';
+import { AboutSection, AdvantagesSection, FAQSection } from '@/sections';
+import {
+  ButtonPrimary,
+  SliderBeforeAfter,
+  IconBtn,
+  Slider,
+  FeedbackSlide,
+  ButtonSecondary,
+  ButtonTertiary,
+  SocialsList,
+} from '@/components';
 
 export default async function Home({
   params: { lang },
@@ -20,27 +21,27 @@ export default async function Home({
   // fetching local data for the selected lang
   const { page, socials } = await getDictionary(lang);
 
-  // const slides = [
-  //   { __typename: 2367289350 },
-  //   { __typename: 2367289351 },
-  //   { __typename: 2367289352 },
-  //   { __typename: 2367289353 },
-  //   { __typename: 2367289354 },
-  // ];
-  // const iconData = page?.home?.iconBtnData;
+  const slides = [
+    { __typename: 2367289350 },
+    { __typename: 2367289351 },
+    { __typename: 2367289352 },
+    { __typename: 2367289353 },
+    { __typename: 2367289354 },
+  ];
+  const iconData = page?.home?.iconBtnData;
 
   return (
     <main>
-      {/* <div className="flex flex-col items-center justify-center gap-6 py-12">
+      <div className="flex flex-col items-center justify-center gap-6 py-12">
         <ButtonPrimary>Записатись на консультацію</ButtonPrimary>
         <ButtonSecondary linkto="">Записатись</ButtonSecondary>
         <ButtonTertiary>Написати у Telegram</ButtonTertiary>
         <SliderBeforeAfter page={page} />
-      </div> */}
-
+      </div>
+      <SocialsList variant="footer" staticData={page.home.iconBtnData} />
       <AboutSection lang={lang} staticData={page.home.about} />
 
-      {/* <IconBtn
+      <IconBtn
         icon="tiktok"
         variant="contacts"
         iconFunction={page.home.iconBtnData.tiktok.iconFunction}
@@ -123,8 +124,9 @@ export default async function Home({
         section="feedback"
         slide={FeedbackSlide}
         slideClassName="bg-secondary-dark"
-      /> */}
+      />
 
+      <AdvantagesSection staticData={page.home.advantages} />
       <FAQSection staticData={{ faq: page.home.faq, socials }} />
     </main>
   );

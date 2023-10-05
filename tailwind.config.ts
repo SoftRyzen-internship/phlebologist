@@ -42,6 +42,7 @@ module.exports = {
         black: {
           DEFAULT: '#000000', // class="bg-black text-black border-black"
           dark: '#303036', // class="bg-black-light text-black-light border-black-light"
+          extra: '#919194',
         },
         white: {
           DEFAULT: '#FFFFFF',
