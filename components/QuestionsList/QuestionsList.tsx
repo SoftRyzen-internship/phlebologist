@@ -2,7 +2,7 @@ import { QuestionListItem } from '@/components';
 
 const QuestionsList = ({ data }) => {
   return (
-    <ul className="flex flex-col gap-4">
+    <ul className="flex flex-col gap-4 md:mx-auto md:w-[560px] xl:mx-0">
       {data.map((item, index) => {
         return (
           <QuestionListItem

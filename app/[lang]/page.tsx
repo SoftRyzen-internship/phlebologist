@@ -9,7 +9,7 @@ import { AboutSection, FAQSection } from '@/sections';
 //   Slider,
 //   FeedbackSlide,
 //   ButtonSecondary,
-//   ButtonTertiary,
+// ButtonTertiary,
 // } from '@/components';
 
 export default async function Home({
@@ -18,7 +18,7 @@ export default async function Home({
   params: { lang: Locale };
 }) {
   // fetching local data for the selected lang
-  const { page } = await getDictionary(lang);
+  const { page, socials } = await getDictionary(lang);
 
   // const slides = [
   //   { __typename: 2367289350 },
@@ -125,7 +125,7 @@ export default async function Home({
         slideClassName="bg-secondary-dark"
       /> */}
 
-      <FAQSection staticData={page.home.faq} />
+      <FAQSection staticData={{ faq: page.home.faq, socials }} />
     </main>
   );
 }

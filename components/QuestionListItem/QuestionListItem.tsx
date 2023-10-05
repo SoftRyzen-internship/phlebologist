@@ -16,7 +16,8 @@ const QuestionListItem = ({ item, index }) => {
         <>
           <Disclosure.Button
             className="flex gap-2 bg-gray-light text-start 
-              text-base font-medium leading-5 tracking-[-0.64px]"
+              text-base font-medium leading-5 tracking-[-0.64px]
+              md:text-xl md:leading-6 md:tracking-[-0.8px]"
           >
             <Arrow
               width={24}
@@ -42,10 +43,11 @@ const QuestionListItem = ({ item, index }) => {
             <Disclosure.Panel
               static
               className={classNames(
-                'pt-4 text-gray-500',
+                'pt-4',
                 'text-justify text-sm font-normal leading-[18px] tracking-[-0.56px]',
-                { maxHeight: open ? '1000px' : '0' },
+                { 'm-h-0': !open, 'm-h-[1000px]': open },
                 'transition duration-300',
+                'md:text-base md:leading-6 md:tracking-[-0.64px]',
               )}
             >
               {item.answer}
