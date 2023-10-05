@@ -60,6 +60,8 @@ export type AboutCertificateType = {
   };
 };
 
+// === static data types ===
+
 export interface IIconBtnData {
   tiktok: {
     iconFunction: string;

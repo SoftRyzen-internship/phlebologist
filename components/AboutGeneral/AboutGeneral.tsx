@@ -13,7 +13,7 @@ const AboutGeneral: React.FC<AboutGeneralProps> = ({
 
   return (
     <div className="text-base font-normal tracking-[-0.64px] text-black-dark">
-      <Heading variant="secondary" className="mt-6">
+      <Heading variant="secondary" tag="h3" className="mt-6">
         {name}
       </Heading>
       <p
@@ -23,9 +23,9 @@ const AboutGeneral: React.FC<AboutGeneralProps> = ({
         {profession}
       </p>
 
-      <h4 className="mb-1 mt-6 font-semibold uppercase md:mt-7">
+      <p className="mb-1 mt-6 font-semibold uppercase md:mt-7">
         {firstSubtitle}
-      </h4>
+      </p>
       <ul className="flex flex-col gap-1">
         {experience &&
           experience.map((item, index) => (
@@ -33,7 +33,7 @@ const AboutGeneral: React.FC<AboutGeneralProps> = ({
           ))}
       </ul>
 
-      <h4 className="mb-1 mt-6 font-semibold uppercase">{secondSubtitle}</h4>
+      <p className="mb-1 mt-6 font-semibold uppercase">{secondSubtitle}</p>
       <ul className="flex flex-col gap-6">
         {education &&
           education.map((item, index) => (
