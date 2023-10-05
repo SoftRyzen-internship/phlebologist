@@ -36,9 +36,18 @@ export default async function Home({
         <ButtonPrimary>Записатись на консультацію</ButtonPrimary>
         <ButtonSecondary linkto="">Записатись</ButtonSecondary>
         <ButtonTertiary>Написати у Telegram</ButtonTertiary>
+
         <SliderBeforeAfter page={page} />
       </div>
-      <SocialsList variant="footer" staticData={page.home.iconBtnData} />
+
+      <SocialsList
+        variant="footer"
+        staticData={{
+          iconBtnData: page.home.iconBtnData,
+          socials: socials,
+        }}
+      />
+
       <AboutSection lang={lang} staticData={page.home.about} />
 
       <IconBtn

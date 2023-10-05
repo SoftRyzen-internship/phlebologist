@@ -89,14 +89,9 @@ export interface IIconBtnData {
   };
 }
 
-export interface ISocial {
+export interface ISocials {
   tiktok: string;
   telegram: string;
   facebook: string;
   instagram: string;
-}
-
-export interface ISocials {
-  name: IconBtnName;
-  url: string;
 }

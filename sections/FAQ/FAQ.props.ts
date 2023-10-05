@@ -1,9 +1,9 @@
-import { ISocial } from '@/types';
+import { ISocials } from '@/types';
 
 export interface FAQProps {
   staticData: {
     faq: FAQDataType;
-    socials: ISocial;
+    socials: ISocials;
   };
 }
 
