@@ -62,12 +62,39 @@ export type AboutCertificateType = {
 
 // === static data types ===
 
-export type SocialsDataType = {
-  telegram: string;
-  instagram: string;
+export interface IIconBtnData {
+  tiktok: {
+    iconFunction: string;
+    iconLabel: string;
+  };
+  facebook: {
+    iconFunction: string;
+    iconLabel: string;
+  };
+  instagram: {
+    iconFunction: string;
+    iconLabel: string;
+  };
+  arrowRight: {
+    iconFunction: string;
+    iconLabel: string;
+  };
+  arrowLeft: {
+    iconFunction: string;
+    iconLabel: string;
+  };
+  location: {
+    iconFunction: string;
+    iconLabel: string;
+  };
+}
+
+export interface ISocial {
   tiktok: string;
+  telegram: string;
   facebook: string;
-};
+  instagram: string;
+}
 
 export interface ISocials {
   name: IconBtnName;
