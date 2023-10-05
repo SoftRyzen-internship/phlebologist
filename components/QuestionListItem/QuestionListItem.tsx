@@ -5,7 +5,12 @@ import classNames from 'classnames';
 
 import Arrow from '@/public/icons/faq-arrow.svg';
 
-const QuestionListItem = ({ item, index }) => {
+import { QuestionsListItemProps } from './QuestionListItem.props';
+
+const QuestionListItem: React.FC<QuestionsListItemProps> = ({
+  item,
+  index,
+}) => {
   return (
     <Disclosure
       as={'li'}

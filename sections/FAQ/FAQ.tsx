@@ -1,7 +1,10 @@
-import { Heading, QuestionsList } from '@/components';
 import classNames from 'classnames';
 
-const FAQ = ({ staticData: { faq, socials } }) => {
+import { Heading, QuestionsList } from '@/components';
+
+import { FAQProps } from './FAQ.props';
+
+const FAQ: React.FC<FAQProps> = ({ staticData: { faq, socials } }) => {
   const { title, description, button, questions } = faq;
   const { telegram } = socials;
 

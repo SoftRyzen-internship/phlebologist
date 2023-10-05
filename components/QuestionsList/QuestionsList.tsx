@@ -1,6 +1,8 @@
 import { QuestionListItem } from '@/components';
 
-const QuestionsList = ({ data }) => {
+import { QuestionsListProps } from './QuestionsList.props';
+
+const QuestionsList: React.FC<QuestionsListProps> = ({ data }) => {
   return (
     <ul className="flex flex-col gap-4 md:mx-auto md:w-[560px] xl:mx-0">
       {data.map((item, index) => {

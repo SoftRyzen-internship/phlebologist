@@ -59,3 +59,12 @@ export type AboutCertificateType = {
     alt: string;
   };
 };
+
+// === static data types ===
+
+export type SocialsDataType = {
+  telegram: string;
+  instagram: string;
+  tiktok: string;
+  facebook: string;
+};
