@@ -3,7 +3,7 @@
 import { FC } from 'react';
 
 import { AdvantagesProps } from './Advantages.props';
-import { Heading, AdvantagesList, ButtonTertiary } from '@/components';
+import { Heading, AdvantagesList, ScrollLinkButton } from '@/components';
 import { useWindowWidth } from '@/hooks';
 
 const Advantages: FC<AdvantagesProps> = ({ staticData, className = '' }) => {
@@ -26,15 +26,9 @@ const Advantages: FC<AdvantagesProps> = ({ staticData, className = '' }) => {
               <p className="mb-6 whitespace-pre-wrap text-center text-sm leading-normal -tracking-[0.56]">
                 {enrollText}
               </p>
-              <ButtonTertiary
-                isLink
-                className="mx-auto bg-white focus:bg-white mediaHover:hover:bg-white"
-                actionHandler={() =>
-                  console.log('Clicked button in AdvantagesSection!')
-                }
-              >
+              <ScrollLinkButton className="mx-auto" linkto="">
                 {buttonText}
-              </ButtonTertiary>
+              </ScrollLinkButton>
             </>
           ) : (
             <div className="flex justify-between">
@@ -46,15 +40,9 @@ const Advantages: FC<AdvantagesProps> = ({ staticData, className = '' }) => {
                   <p className="mb-6 w-[240px] text-start text-base leading-[1.5] -tracking-[0.64] xl:w-[391px] xl:text-xl xl:leading-[1.2] xl:-tracking-[0.8px]">
                     {enrollText}
                   </p>
-                  <ButtonTertiary
-                    isLink
-                    className="mr-auto bg-white focus:bg-white xl:w-auto mediaHover:hover:bg-white"
-                    actionHandler={() =>
-                      console.log('Clicked button in AdvantagesSection!')
-                    }
-                  >
+                  <ScrollLinkButton className="mr-auto" linkto="">
                     {buttonText}
-                  </ButtonTertiary>
+                  </ScrollLinkButton>
                 </div>
               </div>
               <AdvantagesList advList={advList} />
