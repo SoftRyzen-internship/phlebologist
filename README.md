@@ -175,6 +175,46 @@ export { default as AboutSection } from '@/sections/About/About';
 
 ---
 
+**☝️ Static data and CMS-stored data usage**
+
+Static data is stored within the dictionaries and can be accessed via
+`getDictionary(lang)`. Fetch functions for requesting data from admin system
+also require passing `lang` as an argument. The CMS stores the data in the
+following collections:
+
+- About (AboutSection - tab data)
+- Banner (Banner, Section 5 - text data)
+- Reviews (ReviewsSection - slider data)
+- Results (ResultsSection - slider data)
+
+<details>
+
+<summary><b>💡 Examples:</b></summary>
+
+<br/>
+
+```ts
+// page.tsx
+
+export default async function Home({
+  params: { lang },
+}: {
+  params: { lang: Locale };
+}) {
+  // fetching local data for the selected lang
+  const { page, socials } = await getDictionary(lang);
+  ...
+}
+
+// @sections/About/About.tsx
+
+const data = await fetchAbout(lang);
+```
+
+</details>
+
+---
+
 **☝️ Description of object structure**
 
 <details>

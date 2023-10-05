@@ -1,6 +1,4 @@
-import classNames from 'classnames';
-
-import { Heading, QuestionsList } from '@/components';
+import { Heading, QuestionsList, ExternalLinkButton } from '@/components';
 
 import { FAQProps } from './FAQ.props';
 
@@ -13,8 +11,8 @@ const FAQ: React.FC<FAQProps> = ({ staticData: { faq, socials } }) => {
     <section className="mt-[-60px]">
       <div className="main-container">
         <div
-          className="wrapper rounded-t-medium bg-white pb-[90px] pt-8 
-            md:rounded-extraLarge md:pb-[80px] md:pt-[18px] 
+          className="wrapper rounded-t-medium bg-white pb-[90px] pt-8  
+            md:rounded-t-extraLarge md:pb-[80px] md:pt-[18px] 
             xl:relative xl:flex xl:min-h-[864px] xl:justify-between xl:rounded-t-max xl:pt-16"
         >
           <Heading className="mb-8 md:mb-10 md:w-[428px] xl:mb-0 xl:w-[360px]">
@@ -32,21 +30,12 @@ const FAQ: React.FC<FAQProps> = ({ staticData: { faq, socials } }) => {
               {description}
             </p>
 
-            {/* separate component in development, temp solution */}
-            <a
-              href={telegram}
-              rel="noopener noreferrer nofollow"
-              target="_blank"
-              className={classNames(
-                'w-[256px] font-normal md:w-[248px] md:px-12 xl:bg-white-light xl:focus:font-bold xl:mediaHover:hover:font-bold',
-                'mt-6 md:mx-auto md:mt-9 xl:mx-0 xl:w-[252px]',
-                'outline-without flex h-[51px] items-center justify-center rounded-normal bg-gray-light text-base leading-normal -tracking-[0.64px] text-black-dark',
-                'focus:bg-gray-light mediaHover:hover:cursor-pointer mediaHover:hover:bg-gray-light',
-                'transition-all duration-300',
-              )}
+            <ExternalLinkButton
+              linkto={telegram}
+              className="mx-auto mt-6 md:mt-9 md:w-[248px] xl:mx-0 xl:w-[252px]"
             >
               {button}
-            </a>
+            </ExternalLinkButton>
           </div>
         </div>
       </div>

@@ -35,24 +35,19 @@ const QuestionListItem: React.FC<QuestionsListItemProps> = ({
           <Transition
             show={open}
             enter="transition duration-300 transform"
-            // enterFrom="opacity-0 -translate-y-full"
-            // enterTo="visible opacity-100 translate-y-0"
             enterFrom="opacity-0"
             enterTo="opacity-100"
             leave="transition duration-100 transform"
-            // leaveFrom="opacity-100 translate-y-0"
-            // leaveTo="opacity-0 -translate-y-full"
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
             <Disclosure.Panel
               static
               className={classNames(
-                'pt-4',
-                'text-justify text-sm font-normal leading-[18px] tracking-[-0.56px]',
+                'pt-4 text-justify text-sm font-normal leading-[18px] tracking-[-0.56px]',
+                'md:text-base md:leading-6 md:tracking-[-0.64px]',
                 { 'm-h-0': !open, 'm-h-[1000px]': open },
                 'transition duration-300',
-                'md:text-base md:leading-6 md:tracking-[-0.64px]',
               )}
             >
               {item.answer}
