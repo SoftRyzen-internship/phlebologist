@@ -2,33 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-.main-container {
-  max-width: 480px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
 .wrapper {
   padding-left: 12px;
   padding-right: 12px;
 }
 
 @media screen and (min-width: 768px) {
-  .main-container {
-    max-width: 768px;
-    padding: 0 32px;
-  }
-
   .wrapper {
     padding-left: 24px;
     padding-right: 24px;
-  }
-}
-
-@media screen and (min-width: 1280px) {
-  .main-container {
-    max-width: 1280px;
-    padding: 0 20px;
   }
 }
 

@@ -9,7 +9,7 @@ const FAQ: React.FC<FAQProps> = ({ staticData: { faq, socials } }) => {
   return (
     // test-margin
     <section className="mt-[-60px]">
-      <div className="main-container">
+      <div className="container">
         <div
           className="wrapper rounded-t-medium bg-white pb-[90px] pt-8  
             md:rounded-t-extraLarge md:pb-[80px] md:pt-[18px] 
