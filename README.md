@@ -25,12 +25,13 @@ git@github.com:SoftRyzen-internship/phlebologist.git
 > [@LanaSvetCat](https://t.me/LanaSvetCat) in telegram
 
 1. Recommended for use **npm** - `npm i` or `npm install`
-2. Create file `.env.local` in the project root using `.env.local.example` as a
-   template
-3. Run the local server via `npm run dev` command. The `dev` command launches
-   CMS first and then launches the main server.
-4. Access the website at `http://localhost:3000`. The admin panel is available
-   at `http://localhost:3000/admin`.
+2. Create file `.env` in the project root using `.env.local.example` as a
+   template.
+3. Run the CMS via `npm run cms-build` and wait for the build to compile.
+4. Run the local server via `npm run dev` command.
+5. Access the website at `http://localhost:3000`. The admin panel is available
+   at `http://localhost:3000/admin`. Note, that you need to be logged in at Tina
+   Cloud to be able to access the CMS.
 
 ### Personal branch
 

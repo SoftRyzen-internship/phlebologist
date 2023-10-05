@@ -1,9 +1,9 @@
 import { defineConfig } from 'tinacms';
 
 export default defineConfig({
-  branch: 'main',
-  clientId: process.env.TINA_CLIENT_ID,
-  token: process.env.TINA_TOKEN,
+  branch: process.env.VERSEL_GIT_COMMIT_REF || '',
+  clientId: process.env.TINA_CLIENT_ID || '',
+  token: process.env.TINA_TOKEN || '',
   build: {
     publicFolder: 'public',
     outputFolder: 'admin',
