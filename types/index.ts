@@ -60,7 +60,36 @@ export type AboutCertificateType = {
   };
 };
 
+export interface IIconBtnData {
+  tiktok: {
+    iconFunction: string;
+    iconLabel: string;
+  };
+  facebook: {
+    iconFunction: string;
+    iconLabel: string;
+  };
+  instagram: {
+    iconFunction: string;
+    iconLabel: string;
+  };
+  arrowRight: {
+    iconFunction: string;
+    iconLabel: string;
+  };
+  arrowLeft: {
+    iconFunction: string;
+    iconLabel: string;
+  };
+  location: {
+    iconFunction: string;
+    iconLabel: string;
+  };
+}
+
 export interface ISocials {
-  name: IconBtnName;
-  url: string;
+  tiktok: string;
+  telegram: string;
+  facebook: string;
+  instagram: string;
 }
