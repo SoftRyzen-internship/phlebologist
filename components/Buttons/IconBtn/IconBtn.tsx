@@ -40,7 +40,7 @@ const IconBtn: FC<IconBtnProps> = ({
       variant.toLowerCase() === 'feedback',
     'w-[36px] h-[36px] text-black-dark bg-gray-light hover:bg-white-light focus:hover:bg-white-light rounded-extended':
       variant.toLowerCase() === 'contacts',
-    'hidden md:flex w-[36px] h-[36px] text-black-dark bg-white hover:bg-white-light hover:bg-secondary focus:bg-secondary hover:text-white focus:text-white rounded-extended':
+    'hidden md:flex w-[36px] h-[36px] text-black-dark bg-white hover:bg-secondary focus:bg-secondary hover:text-white focus:text-white rounded-extended':
       variant.toLowerCase() === 'footer',
     'w-[32px] h-[32px]': variant.toLowerCase() === 'location',
   });
