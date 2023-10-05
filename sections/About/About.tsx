@@ -14,7 +14,7 @@ const About: React.FC<AboutProps> = async ({ lang, staticData }) => {
 
     return (
       // temp styles while the design is not final
-      <section>
+      <section className="p-12">
         <Heading className="mb-6 md:mb-9">{title}</Heading>
 
         <Image

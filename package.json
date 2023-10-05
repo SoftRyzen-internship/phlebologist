@@ -3,8 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "tinacms dev -c \"next dev\"",
-    "build": "next build",
+    "dev": "next dev",
+    "build": "tinacms build && next build",
+    "cms-build": "tinacms build",
     "start": "next start",
     "lint": "next lint",
     "format": "prettier --write .",

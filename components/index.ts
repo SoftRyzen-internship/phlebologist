@@ -40,3 +40,9 @@ export { default as AdvantagesList } from '@/components/AdvantagesList/Advantage
 export { default as ErrorMessage } from '@/components/ErrorMessage/ErrorMessage';
 
 export { default as SocialsList } from '@/components/SocialSList/SocialsList';
+
+// section FAQ
+export { default as QuestionsList } from '@/components/QuestionsList/QuestionsList';
+export { default as QuestionListItem } from '@/components/QuestionListItem/QuestionListItem';
+
+export { default as InfoBlock } from '@/components/InfoBlock/InfoBlock';
