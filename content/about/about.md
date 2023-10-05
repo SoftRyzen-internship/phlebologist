@@ -61,6 +61,8 @@ certificates:
     description:
       uk:
         alt: Тестуємо сертифікат
+      en:
+        alt: Testing testing
   - photo: /uploads/about/certificate.jpg
     description:
       uk:
