@@ -227,18 +227,46 @@ the site when pressed.
 | `className` | `undefined` | add any custom styles                                 |
 | `children`  | `undefined` | a necessary prop. any text content                    |
 
-- ### ButtonTertiary
+- ### SubmitButton
 
-The Tertiary Button has `button` or `a` tag.
+The button of `Form`.
 
-| Prop            | Default     | Description                                            |
-| --------------- | ----------- | ------------------------------------------------------ |
-| `isLink`        | `false`     | if the component needs to have `a` tag, choose `true`  |
-| `type`          | `button`    | choose the button type `button` or `submit`            |
-| `linkto `       | `undefined` | add if `isLink` was specified. The address of the link |
-| `className`     | `undefined` | add any custom styles                                  |
-| `children`      | `undefined` | a necessary prop. any text content                     |
-| `actionHandler` | `undefined` | a function that is executed when clicked               |
+| Prop            | Default     | Description                              |
+| --------------- | ----------- | ---------------------------------------- |
+| `className`     | `undefined` | add any custom styles                    |
+| `children`      | `undefined` | a necessary prop. any text content       |
+| `actionHandler` | `undefined` | a function that is executed when clicked |
+
+- ### ExternalLinkButton
+
+Has `a` tag and leads to an external source.
+
+| Prop        | Default     | Description                        |
+| ----------- | ----------- | ---------------------------------- |
+| `linkto `   | `undefined` | the address of the link            |
+| `className` | `undefined` | add any custom styles              |
+| `children`  | `undefined` | a necessary prop. any text content |
+
+- ### RoutingLinkButton
+
+Has `a` tag and provides navigation between routes.
+
+| Prop        | Default     | Description                        |
+| ----------- | ----------- | ---------------------------------- |
+| `linkto `   | `undefined` | the address of the route           |
+| `className` | `undefined` | add any custom styles              |
+| `children`  | `undefined` | a necessary prop. any text content |
+
+- ### ScrollLinkButton
+
+Has `a` tag and provide scrolling to the appropriate `section`.
+
+| Prop        | Default     | Description                                |
+| ----------- | ----------- | ------------------------------------------ |
+| `linkto `   | `undefined` | the address of the link                    |
+| `variant`   | `light`     | choose the color variant `light` or `dark` |
+| `className` | `undefined` | add any custom styles                      |
+| `children`  | `undefined` | a necessary prop. any text content         |
 
 - ### IconBtn
 

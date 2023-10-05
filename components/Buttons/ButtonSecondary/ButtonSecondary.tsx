@@ -21,7 +21,7 @@ const ButtonSecondary: React.FC<ButtonSecondaryProps> = ({
 
     'outline-without flex items-center justify-center w-[256px] h-[51px] rounded-normal bg-white-light font-bold xl:px-12 xl:font-medium xl:bg-gray-light text-primary-dark-400 text-base leading-normal -tracking-[0.64px]',
 
-    'mediaHover:hover:bg-white focus:bg-white mediaHover:hover:font-bold focus:font-bold',
+    'mediaHover:hover:bg-white focus:bg-white mediaHover:hover:font-bold focus:font-bold mediaHover:hover:cursor-pointer',
 
     'transition-all duration-300',
     className,

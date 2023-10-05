@@ -1,14 +1,18 @@
 import { Locale } from '@/i18n.config';
 import { getDictionary } from '@/utils/dictionary';
-import { AdvantagesSection, AboutSection } from '@/sections';
+// import { AdvantagesSection } from '@/sections';
+import { AboutSection } from '@/sections';
 import {
-  ButtonPrimary,
-  SliderBeforeAfter,
+  // SliderBeforeAfter,
   IconBtn,
   Slider,
   FeedbackSlide,
-  ButtonSecondary,
-  ButtonTertiary,
+  // ButtonPrimary,
+  // ButtonSecondary,
+  // SubmitButton,
+  // ExternalLinkButton,
+  // RoutingLinkButton,
+  // ScrollLinkButton,
   SocialsList,
 } from '@/components';
 
@@ -32,11 +36,13 @@ export default async function Home({
   return (
     <main>
       <div className="flex flex-col items-center justify-center gap-6 py-12">
-        <ButtonPrimary>Записатись на консультацію</ButtonPrimary>
-        <ButtonSecondary linkto="">Записатись</ButtonSecondary>
-        <ButtonTertiary>Написати у Telegram</ButtonTertiary>
-
-        <SliderBeforeAfter page={page} />
+        {/* <ButtonPrimary>Записатись на консультацію</ButtonPrimary> */}
+        {/* <ButtonSecondary linkto="">Записатись</ButtonSecondary> */}
+        {/* <SubmitButton>Відправити</SubmitButton> */}
+        {/* <ExternalLinkButton linkto="">Написати у Telegram</ExternalLinkButton> */}
+        {/* <RoutingLinkButton linkto="">Детальніше про метод</RoutingLinkButton> */}
+        {/* <ScrollLinkButton linkto="">Записатись</ScrollLinkButton> */}
+        {/* <SliderBeforeAfter page={page} /> */}
       </div>
 
       <SocialsList
@@ -133,8 +139,7 @@ export default async function Home({
         slide={FeedbackSlide}
         slideClassName="bg-secondary-dark"
       />
-
-      <AdvantagesSection staticData={page.home.advantages} />
+      {/* <AdvantagesSection staticData={page.home.advantages} /> */}
     </main>
   );
 }
