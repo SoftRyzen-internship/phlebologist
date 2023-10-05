@@ -10,7 +10,10 @@ export { default as Heading } from '@/components/Heading/Heading';
 // buttons
 export { default as ButtonPrimary } from '@/components/Buttons/ButtonPrimary/ButtonPrimary';
 export { default as ButtonSecondary } from '@/components/Buttons/ButtonSecondary/ButtonSecondary';
-export { default as ButtonTertiary } from '@/components/Buttons/ButtonTertiary/ButtonTertiary';
+export { default as SubmitButton } from '@/components/Buttons/SubmitButton/SubmitButton';
+export { default as ExternalLinkButton } from '@/components/Buttons/ExternalLinkButton/ExternalLinkButton';
+export { default as RoutingLinkButton } from '@/components/Buttons/RoutingLinkButton/RoutingLinkButton';
+export { default as ScrollLinkButton } from '@/components/Buttons/ScrollLinkButton/ScrollLinkButton';
 export { default as IconBtn } from '@/components/Buttons/IconBtn/IconBtn';
 
 // slider before-after
