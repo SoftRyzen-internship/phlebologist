@@ -9,6 +9,7 @@ export type IconBtnName =
 
 export type AboutDataType = {
   image: string;
+  video?: string;
   general: AboutGeneralDataType;
   education: AboutEducationDataType;
   career: AboutCareerDataType;
@@ -59,6 +60,8 @@ export type AboutCertificateType = {
     alt: string;
   };
 };
+
+// === static data types ===
 
 export interface IIconBtnData {
   tiktok: {

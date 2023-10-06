@@ -1,6 +1,6 @@
+// tina/config.ts
 import { defineConfig } from 'tinacms';
-
-export default defineConfig({
+var config_default = defineConfig({
   branch: process.env.NEXT_PUBLIC_VERSEL_GIT_COMMIT_REF || '',
   clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID || '',
   token: process.env.NEXT_PUBLIC_TINA_TOKEN || '',
@@ -675,6 +675,4 @@ export default defineConfig({
     },
   },
 });
-
-// https://tina.io/docs/tina-cloud/
-// add authentication later when we have an account
+export { config_default as default };
