@@ -9,6 +9,15 @@
     { "title": "Питання-Відповіді", "linkTo": "faq" },
     { "title": "Контакти", "linkTo": "contacts" }
   ],
+  "header": {
+    "linkButton": "Напишіть нам",
+    "formButton": "Записатись на консультацію",
+    "langButton": {
+      "headerBtn": "Eng",
+      "menuBtn": "Change to English"
+    },
+    "menuButton": "Меню"
+  },
   "page": {
     "home": {
       "advantages": {

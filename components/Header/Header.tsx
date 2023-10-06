@@ -1,21 +1,22 @@
 import { Locale } from '@/i18n.config';
 import Link from 'next/link';
 import { getDictionary } from '@/utils/dictionary';
-import LocaleSwitcher from '@/components/LocaleSwitcher/LocaleSwitcher';
+import { LocaleSwitcher, BurgerMenu } from '@/components';
 
 const Header = async ({ lang }: { lang: Locale }) => {
-  const { navigation } = await getDictionary(lang);
+  const { navigation, header } = await getDictionary(lang);
 
   return (
-    <header className="py-6">
-      <nav className="container flex items-center justify-between">
+    <header className="container py-6">
+      <div className="wrapper relative flex items-center justify-between">
         <ul className="flex gap-x-8">
           <li>
             <Link href={`/${lang}`}>{navigation[0].title}</Link>
           </li>
         </ul>
         <LocaleSwitcher />
-      </nav>
+        <BurgerMenu data={header} />
+      </div>
     </header>
   );
 };
