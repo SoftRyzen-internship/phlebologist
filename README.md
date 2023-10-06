@@ -25,12 +25,13 @@ git@github.com:SoftRyzen-internship/phlebologist.git
 > [@LanaSvetCat](https://t.me/LanaSvetCat) in telegram
 
 1. Recommended for use **npm** - `npm i` or `npm install`
-2. Create file `.env.local` in the project root using `.env.local.example` as a
-   template
-3. Run the local server via `npm run dev` command. The `dev` command launches
-   CMS first and then launches the main server.
-4. Access the website at `http://localhost:3000`. The admin panel is available
-   at `http://localhost:3000/admin`.
+2. Create file `.env` in the project root using `.env.local.example` as a
+   template.
+3. Run the CMS via `npm run cms-build` and wait for the build to compile.
+4. Run the local server via `npm run dev` command.
+5. Access the website at `http://localhost:3000`. The admin panel is available
+   at `http://localhost:3000/admin`. Note, that you need to be logged in at Tina
+   Cloud to be able to access the CMS.
 
 ### Personal branch
 
@@ -127,6 +128,32 @@ export { default as Header } from '@/components/Header/Header';
 
 ---
 
+**☝️ Add `Section` to the section name when performing a re-export**
+
+<details>
+
+<summary><b>💡 Example:</b></summary>
+
+<br/>
+
+```ts
+# ✅ Good
+
+// @/sections/About/About.tsx
+
+const About = () => { ... }
+
+export default About;
+
+// @/sections/index.ts
+
+export { default as AboutSection } from '@/sections/About/About';
+```
+
+</details>
+
+---
+
 **☝️ Reusable css classes should be placed in the `styles` folder .**
 
 <details>
@@ -143,6 +170,46 @@ export { default as Header } from '@/components/Header/Header';
     @apply ...;
   }
 }
+```
+
+</details>
+
+---
+
+**☝️ Static data and CMS-stored data usage**
+
+Static data is stored within the dictionaries and can be accessed via
+`getDictionary(lang)`. Fetch functions for requesting data from admin system
+also require passing `lang` as an argument. The CMS stores the data in the
+following collections:
+
+- About (AboutSection - tab data)
+- Banner (Banner, Section 5 - text data)
+- Reviews (ReviewsSection - slider data)
+- Results (ResultsSection - slider data)
+
+<details>
+
+<summary><b>💡 Examples:</b></summary>
+
+<br/>
+
+```ts
+// page.tsx
+
+export default async function Home({
+  params: { lang },
+}: {
+  params: { lang: Locale };
+}) {
+  // fetching local data for the selected lang
+  const { page, socials } = await getDictionary(lang);
+  ...
+}
+
+// @sections/About/About.tsx
+
+const data = await fetchAbout(lang);
 ```
 
 </details>
@@ -326,3 +393,47 @@ The `Slider` component is created using `keen slider` library.
 |                  |            |                                                                |
 | `slideClassName` | `string`   | Optional, additional tailwind classes string that              |
 |                  |            | will be passed to the slide component (see above)              |
+
+- ### InfoBlock
+
+The `InfoBlock` is a universal component that always has a title and optionally
+some content of different type - text, url, list or other component.
+
+- IMPORTANT! The `InfoBlock` does not have a container, therefore you can wrap
+  it in any kind of container you need - div, li, article etc.
+- IMPORTANT! The component only receives one prop -`config` which is an object
+  of the following properties:
+
+| Property           | Type        | Description                                        |
+| ------------------ | ----------- | -------------------------------------------------- |
+| `section`          | 'treatment' | Specifies, in which section the component is used: |
+|                    | 'contacts'  | `Treatment Methods` or `Contacts`                  |
+|                    |             |                                                    |
+| `title`            | string      | Text of the block title                            |
+|                    |             |                                                    |
+| `titleClassName`   | string      | Optional, add additional tailwind classes to title |
+|                    |             |                                                    |
+| `contentType`      |             | Optional, 'text' by default, defines content type: |
+|                    | 'text'      | - if content is an ordinary text string (<p>)      |
+|                    | 'link'      | - if content is a url string (<a>),                |
+|                    | 'list'      | - if content is a list of text strings,            |
+|                    | 'component' | - if content is a component/components             |
+|                    |             |                                                    |
+| `content`          |             | Optional, pass the content that goes under title:  |
+|                    | string      | - necessary if `contentType` is 'text' or 'link'   |
+|                    |             | (`<p>{string}</p>` or `<a>{string}</a>`)           |
+|                    |             |                                                    |
+|                    | string[]    | - necessary if `contentType` is 'list',            |
+|                    |             |                                                    |
+|                    | 'list'      | - if content is a list of text strings,            |
+|                    |             |                                                    |
+|                    |             | - IMPORTANT! if `contentType` is 'component' -     |
+|                    |             | content is inserted as children, not as a prop     |
+|                    |             |                                                    |
+| `link`             | string      | Optional, necessary if `contentType` is 'link',    |
+|                    |             | a url that is passed into href attribute           |
+|                    |             | (`<a href={string}></a>`)                          |
+|                    |             |                                                    |
+| `contentClassName` | string      | Optional, add additional tailwind classes to       |
+|                    |             | text content in a text, link or list item          |
+|                    |             |                                                    |

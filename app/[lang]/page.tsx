@@ -1,7 +1,7 @@
 import { Locale } from '@/i18n.config';
 import { getDictionary } from '@/utils/dictionary';
-// import { AdvantagesSection } from '@/sections';
-import { AboutSection } from '@/sections';
+
+import { AboutSection, AdvantagesSection, FAQSection } from '@/sections';
 import {
   // SliderBeforeAfter,
   IconBtn,
@@ -14,6 +14,7 @@ import {
   // RoutingLinkButton,
   // ScrollLinkButton,
   SocialsList,
+  InfoBlock,
 } from '@/components';
 
 export default async function Home({
@@ -118,7 +119,21 @@ export default async function Home({
         slide={FeedbackSlide}
         slideClassName="bg-secondary-dark"
       />
-      {/* <AdvantagesSection staticData={page.home.advantages} /> */}
+
+      <AdvantagesSection staticData={page.home.advantages} />
+      <FAQSection staticData={{ faq: page.home.faq, socials }} />
+
+      {/* Simple InfoBlock with text */}
+
+      <div>
+        <InfoBlock
+          config={{
+            section: 'treatment',
+            title: 'Lorem ipsum',
+            content: 'Lorem ipsum dolor',
+          }}
+        />
+      </div>
     </main>
   );
 }

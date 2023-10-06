@@ -31,7 +31,7 @@ export default async function RootLayout({
 
   return (
     <html lang={lang}>
-      <body className={inter.className}>
+      <body className={`${inter.className} bg-white-dark`}>
         <Header lang={lang} />
         {children}
         <Footer
