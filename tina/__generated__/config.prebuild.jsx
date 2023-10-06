@@ -1,9 +1,9 @@
 // tina/config.ts
 import { defineConfig } from 'tinacms';
 var config_default = defineConfig({
-  branch: process.env.VERSEL_GIT_COMMIT_REF || '',
-  clientId: process.env.TINA_CLIENT_ID || '',
-  token: process.env.TINA_TOKEN || '',
+  branch: process.env.NEXT_PUBLIC_VERSEL_GIT_COMMIT_REF || '',
+  clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID || '',
+  token: process.env.NEXT_PUBLIC_TINA_TOKEN || '',
   build: {
     publicFolder: 'public',
     outputFolder: 'admin',
@@ -21,6 +21,11 @@ var config_default = defineConfig({
             label: 'Photo',
             type: 'image',
             required: true,
+          },
+          {
+            name: 'video',
+            label: 'Video',
+            type: 'string',
           },
           {
             name: 'general',
@@ -577,16 +582,20 @@ var config_default = defineConfig({
                     required: true,
                   },
                   {
+                    name: 'video',
+                    label: 'Video',
+                    type: 'string',
+                  },
+                  {
                     name: 'name',
                     label: 'Name',
                     type: 'string',
                     required: true,
                   },
                   {
-                    name: 'procedure',
-                    label: 'Procedure',
+                    name: 'telegram',
+                    label: 'Telegram',
                     type: 'string',
-                    required: true,
                   },
                   {
                     name: 'review',
@@ -630,16 +639,20 @@ var config_default = defineConfig({
                     required: true,
                   },
                   {
+                    name: 'video',
+                    label: 'Video',
+                    type: 'string',
+                  },
+                  {
                     name: 'name',
                     label: 'Name',
                     type: 'string',
                     required: true,
                   },
                   {
-                    name: 'procedure',
-                    label: 'Procedure',
+                    name: 'telegram',
+                    label: 'Telegram',
                     type: 'string',
-                    required: true,
                   },
                   {
                     name: 'review',

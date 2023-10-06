@@ -1,5 +1,6 @@
 fragment AboutParts on About {
   photo
+  video
   general {
     __typename
     uk {
@@ -128,8 +129,9 @@ fragment ReviewsParts on Reviews {
       __typename
       date
       photo
+      video
       name
-      procedure
+      telegram
       review
     }
   }
@@ -139,8 +141,9 @@ fragment ReviewsParts on Reviews {
       __typename
       date
       photo
+      video
       name
-      procedure
+      telegram
       review
     }
   }

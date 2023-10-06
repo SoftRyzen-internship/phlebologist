@@ -343,6 +343,7 @@ export type About = Node &
   Document & {
     __typename?: 'About';
     photo: Scalars['String']['output'];
+    video?: Maybe<Scalars['String']['output']>;
     general: AboutGeneral;
     education: AboutEducation;
     career: AboutCareer;
@@ -469,6 +470,7 @@ export type AboutCertificatesFilter = {
 
 export type AboutFilter = {
   photo?: InputMaybe<ImageFilter>;
+  video?: InputMaybe<StringFilter>;
   general?: InputMaybe<AboutGeneralFilter>;
   education?: InputMaybe<AboutEducationFilter>;
   career?: InputMaybe<AboutCareerFilter>;
@@ -630,8 +632,9 @@ export type ReviewsUkCase = {
   __typename?: 'ReviewsUkCase';
   date: Scalars['String']['output'];
   photo: Scalars['String']['output'];
+  video?: Maybe<Scalars['String']['output']>;
   name: Scalars['String']['output'];
-  procedure: Scalars['String']['output'];
+  telegram?: Maybe<Scalars['String']['output']>;
   review: Scalars['JSON']['output'];
 };
 
@@ -644,8 +647,9 @@ export type ReviewsEnCase = {
   __typename?: 'ReviewsEnCase';
   date: Scalars['String']['output'];
   photo: Scalars['String']['output'];
+  video?: Maybe<Scalars['String']['output']>;
   name: Scalars['String']['output'];
-  procedure: Scalars['String']['output'];
+  telegram?: Maybe<Scalars['String']['output']>;
   review: Scalars['JSON']['output'];
 };
 
@@ -667,8 +671,9 @@ export type Reviews = Node &
 export type ReviewsUkCaseFilter = {
   date?: InputMaybe<DatetimeFilter>;
   photo?: InputMaybe<ImageFilter>;
+  video?: InputMaybe<StringFilter>;
   name?: InputMaybe<StringFilter>;
-  procedure?: InputMaybe<StringFilter>;
+  telegram?: InputMaybe<StringFilter>;
   review?: InputMaybe<RichTextFilter>;
 };
 
@@ -679,8 +684,9 @@ export type ReviewsUkFilter = {
 export type ReviewsEnCaseFilter = {
   date?: InputMaybe<DatetimeFilter>;
   photo?: InputMaybe<ImageFilter>;
+  video?: InputMaybe<StringFilter>;
   name?: InputMaybe<StringFilter>;
-  procedure?: InputMaybe<StringFilter>;
+  telegram?: InputMaybe<StringFilter>;
   review?: InputMaybe<RichTextFilter>;
 };
 
@@ -911,6 +917,7 @@ export type AboutCertificatesMutation = {
 
 export type AboutMutation = {
   photo?: InputMaybe<Scalars['String']['input']>;
+  video?: InputMaybe<Scalars['String']['input']>;
   general?: InputMaybe<AboutGeneralMutation>;
   education?: InputMaybe<AboutEducationMutation>;
   career?: InputMaybe<AboutCareerMutation>;
@@ -961,8 +968,9 @@ export type ResultsMutation = {
 export type ReviewsUkCaseMutation = {
   date?: InputMaybe<Scalars['String']['input']>;
   photo?: InputMaybe<Scalars['String']['input']>;
+  video?: InputMaybe<Scalars['String']['input']>;
   name?: InputMaybe<Scalars['String']['input']>;
-  procedure?: InputMaybe<Scalars['String']['input']>;
+  telegram?: InputMaybe<Scalars['String']['input']>;
   review?: InputMaybe<Scalars['JSON']['input']>;
 };
 
@@ -973,8 +981,9 @@ export type ReviewsUkMutation = {
 export type ReviewsEnCaseMutation = {
   date?: InputMaybe<Scalars['String']['input']>;
   photo?: InputMaybe<Scalars['String']['input']>;
+  video?: InputMaybe<Scalars['String']['input']>;
   name?: InputMaybe<Scalars['String']['input']>;
-  procedure?: InputMaybe<Scalars['String']['input']>;
+  telegram?: InputMaybe<Scalars['String']['input']>;
   review?: InputMaybe<Scalars['JSON']['input']>;
 };
 
@@ -990,6 +999,7 @@ export type ReviewsMutation = {
 export type AboutPartsFragment = {
   __typename?: 'About';
   photo: string;
+  video?: string | null;
   general: {
     __typename: 'AboutGeneral';
     uk?: {
@@ -1107,8 +1117,9 @@ export type ReviewsPartsFragment = {
       __typename: 'ReviewsUkCase';
       date: string;
       photo: string;
+      video?: string | null;
       name: string;
-      procedure: string;
+      telegram?: string | null;
       review: any;
     } | null> | null;
   } | null;
@@ -1118,8 +1129,9 @@ export type ReviewsPartsFragment = {
       __typename: 'ReviewsEnCase';
       date: string;
       photo: string;
+      video?: string | null;
       name: string;
-      procedure: string;
+      telegram?: string | null;
       review: any;
     } | null> | null;
   } | null;
@@ -1135,6 +1147,7 @@ export type AboutQuery = {
     __typename?: 'About';
     id: string;
     photo: string;
+    video?: string | null;
     _sys: {
       __typename?: 'SystemInfo';
       filename: string;
@@ -1259,6 +1272,7 @@ export type AboutConnectionQuery = {
         __typename?: 'About';
         id: string;
         photo: string;
+        video?: string | null;
         _sys: {
           __typename?: 'SystemInfo';
           filename: string;
@@ -1551,8 +1565,9 @@ export type ReviewsQuery = {
         __typename: 'ReviewsUkCase';
         date: string;
         photo: string;
+        video?: string | null;
         name: string;
-        procedure: string;
+        telegram?: string | null;
         review: any;
       } | null> | null;
     } | null;
@@ -1562,8 +1577,9 @@ export type ReviewsQuery = {
         __typename: 'ReviewsEnCase';
         date: string;
         photo: string;
+        video?: string | null;
         name: string;
-        procedure: string;
+        telegram?: string | null;
         review: any;
       } | null> | null;
     } | null;
@@ -1612,8 +1628,9 @@ export type ReviewsConnectionQuery = {
             __typename: 'ReviewsUkCase';
             date: string;
             photo: string;
+            video?: string | null;
             name: string;
-            procedure: string;
+            telegram?: string | null;
             review: any;
           } | null> | null;
         } | null;
@@ -1623,8 +1640,9 @@ export type ReviewsConnectionQuery = {
             __typename: 'ReviewsEnCase';
             date: string;
             photo: string;
+            video?: string | null;
             name: string;
-            procedure: string;
+            telegram?: string | null;
             review: any;
           } | null> | null;
         } | null;
@@ -1636,6 +1654,7 @@ export type ReviewsConnectionQuery = {
 export const AboutPartsFragmentDoc = gql`
   fragment AboutParts on About {
     photo
+    video
     general {
       __typename
       uk {
@@ -1767,8 +1786,9 @@ export const ReviewsPartsFragmentDoc = gql`
         __typename
         date
         photo
+        video
         name
-        procedure
+        telegram
         review
       }
     }
@@ -1778,8 +1798,9 @@ export const ReviewsPartsFragmentDoc = gql`
         __typename
         date
         photo
+        video
         name
-        procedure
+        telegram
         review
       }
     }
