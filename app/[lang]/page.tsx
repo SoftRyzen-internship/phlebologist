@@ -104,27 +104,6 @@ export default async function Home({
         iconLabel={page.home.iconBtnData.tiktok.iconLabel}
       />
       <IconBtn
-        icon="tiktok"
-        variant="footer"
-        iconFunction={page.home.iconBtnData.tiktok.iconFunction}
-        iconLabel={page.home.iconBtnData.tiktok.iconLabel}
-        url="#"
-      />
-      <IconBtn
-        icon="facebook"
-        variant="footer"
-        iconFunction={page.home.iconBtnData.facebook.iconFunction}
-        iconLabel={page.home.iconBtnData.facebook.iconLabel}
-        url="#"
-      />
-      <IconBtn
-        icon="instagram"
-        variant="footer"
-        iconFunction={page.home.iconBtnData.instagram.iconFunction}
-        iconLabel={page.home.iconBtnData.instagram.iconLabel}
-        url="#"
-      />
-      <IconBtn
         icon="location"
         variant="location"
         iconFunction={page.home.iconBtnData.location.iconFunction}

@@ -39,7 +39,17 @@ export { default as AdvantagesList } from '@/components/AdvantagesList/Advantage
 // error
 export { default as ErrorMessage } from '@/components/ErrorMessage/ErrorMessage';
 
+//socials-list
 export { default as SocialsList } from '@/components/SocialSList/SocialsList';
+
+//footer
+export { default as Footer } from '@/components/Footer/Footer';
+
+//logo
+export { default as Logo } from '@/components/Logo/Logo';
+
+//navigation
+export { default as Navigation } from '@/components/Navigation/Navigation';
 
 // section FAQ
 export { default as QuestionsList } from '@/components/QuestionsList/QuestionsList';
