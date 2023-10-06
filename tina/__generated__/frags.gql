@@ -1,0 +1,147 @@
+fragment AboutParts on About {
+  photo
+  general {
+    __typename
+    uk {
+      __typename
+      name
+      profession
+      education {
+        __typename
+        institution
+      }
+      experience {
+        __typename
+        point
+      }
+    }
+    en {
+      __typename
+      name
+      profession
+      education {
+        __typename
+        institution
+      }
+      experience {
+        __typename
+        point
+      }
+    }
+  }
+  education {
+    __typename
+    uk {
+      __typename
+      title
+      institutions {
+        __typename
+        institution
+      }
+    }
+    en {
+      __typename
+      title
+      institutions {
+        __typename
+        institution
+      }
+    }
+  }
+  career {
+    __typename
+    uk {
+      __typename
+      title
+      institutions {
+        __typename
+        period
+        institution
+      }
+    }
+    en {
+      __typename
+      title
+      institutions {
+        __typename
+        period
+        institution
+      }
+    }
+  }
+  certificates {
+    __typename
+    photo
+    description {
+      __typename
+      uk {
+        __typename
+        alt
+      }
+      en {
+        __typename
+        alt
+      }
+    }
+  }
+}
+
+fragment BannerParts on Banner {
+  uk {
+    __typename
+    title
+    description
+  }
+  en {
+    __typename
+    title
+    description
+  }
+}
+
+fragment ResultsParts on Results {
+  case {
+    __typename
+    date
+    content {
+      __typename
+      uk {
+        __typename
+        title
+        description
+      }
+      en {
+        __typename
+        title
+        description
+      }
+    }
+    before
+    after
+  }
+}
+
+fragment ReviewsParts on Reviews {
+  uk {
+    __typename
+    case {
+      __typename
+      date
+      photo
+      name
+      procedure
+      review
+    }
+  }
+  en {
+    __typename
+    case {
+      __typename
+      date
+      photo
+      name
+      procedure
+      review
+    }
+  }
+}
