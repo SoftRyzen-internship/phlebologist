@@ -26,7 +26,7 @@ export default async function RootLayout({
   children: React.ReactNode;
   params: { lang: Locale };
 }) {
-  const { footer, page } = await getDictionary(lang);
+  const { footer, page, socials, navigation } = await getDictionary(lang);
   const { iconBtnData } = page.home;
 
   return (
@@ -34,7 +34,9 @@ export default async function RootLayout({
       <body className={inter.className}>
         <Header lang={lang} />
         {children}
-        <Footer staticData={footer} iconBtnData={iconBtnData} />
+        <Footer
+          staticData={{ footerData: footer, socials, iconBtnData, navigation }}
+        />
       </body>
     </html>
   );

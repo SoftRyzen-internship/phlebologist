@@ -1,11 +1,15 @@
+import {
+  ISocials,
+  IIconBtnData,
+  INavigationItemData,
+  IFooterData,
+} from '@/types';
+
 export interface FooterProps {
   staticData: {
-    address: string;
-    menuBtn: string;
-    navigation: {
-      id: string;
-      item: string;
-    }[];
+    socials: ISocials;
+    iconBtnData: IIconBtnData;
+    footerData: IFooterData;
+    navigation: INavigationItemData[];
   };
-  iconBtnData: any;
 }

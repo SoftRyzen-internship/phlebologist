@@ -8,9 +8,9 @@ export interface AdvantagesProps {
   staticData: {
     title: string;
     mainQuestion: string;
-    mainAnswer: string;
-    advListMobile: AdvantageItem[];
-    advListTabletDesktop: AdvantageItem[];
+    advList: AdvantageItem[];
+    enrollText: string;
+    buttonText: string;
   };
   className?: string;
 }

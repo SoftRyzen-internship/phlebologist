@@ -1,18 +1,18 @@
 import React, { FC } from 'react';
-// import { Link } from 'react-scroll';
-import { ButtonPrimary, Logo, SocialsList } from '@/components';
-import { navigationLinks } from '@/data/navigation';
+import { ButtonPrimary, Logo, SocialsList, Navigation } from '@/components';
 import { FooterProps } from './Footer.props';
 
-const Footer: FC<FooterProps> = ({ staticData, iconBtnData }) => {
-  const { address, menuBtn, navigation } = staticData;
+const Footer: FC<FooterProps> = ({
+  staticData: { footerData, socials, navigation, iconBtnData },
+}) => {
+  const { address, menuBtn, phone } = footerData;
 
   return (
-    <footer className="pb-4 pt-6">
+    <footer className="py-6 md:py-14">
       <div className="main-container text-center">
         <div className="md:hidden">
           <div className="mb-6 flex items-start justify-between">
-            <Logo variant="footer" />
+            <Logo />
             <ButtonPrimary
               variant="light"
               view="header"
@@ -26,29 +26,29 @@ const Footer: FC<FooterProps> = ({ staticData, iconBtnData }) => {
               {address}
             </p>
 
-            {/* link or p */}
-            <a
-              href="tel:+380933521235"
-              className="max-w-[158px] text-[12px] leading-loose -tracking-[0.48px] text-black-dark  opacity-50"
-            >
-              +380933521235
-            </a>
+            <p className="max-w-[158px] text-[12px] leading-loose -tracking-[0.48px] text-black-dark  opacity-50">
+              {phone}
+            </p>
           </div>
-          <ul className="hidden md:block">
-            {navigation.map(({ id, item }, index) => {
-              console.log(navigationLinks[index]);
-              const linkTo =
-                id === navigationLinks[index].id
-                  ? navigationLinks[index].linkTo
-                  : '#';
-              console.log(linkTo);
+          <Navigation data={navigation} />
+          {/* <ul className="hidden md:block">
+            {navigation.map(({ id, text, linkTo }) => {
               return (
                 <li key={id}>
-                  <a href={linkTo}>{item}</a>
+                  <Link
+                    spy={true}
+                    smooth={true}
+                    offset={50}
+                    duration={500}
+                    delay={1000}
+                    to={linkTo}
+                  >
+                    {text}
+                  </Link>
                 </li>
               );
             })}
-          </ul>
+          </ul> */}
 
           <p className="text-[12px] leading-tight -tracking-[0.48px] text-black-dark ">
             <span className="opacity-50"> Made by </span>
@@ -66,29 +66,33 @@ const Footer: FC<FooterProps> = ({ staticData, iconBtnData }) => {
 
         <div className="hidden justify-between text-left md:flex ">
           <div className="flex flex-col justify-between">
-            <Logo variant="footer" />
+            <Logo />
             <div>
-              {/* link or p */}
-              <a
-                href="tel:+380933521235"
-                className="max-w-[158px] text-[12px] leading-loose -tracking-[0.48px] text-black-dark  opacity-50"
-              >
-                +380933521235
-              </a>
+              <p className="max-w-[158px] text-[12px] leading-loose -tracking-[0.48px] text-black-dark  opacity-50">
+                {phone}
+              </p>
               <p className="w-[158px] text-xs -tracking-[0.48px] text-black-dark  opacity-50 xl:w-[281px]">
                 {address}
               </p>
             </div>
           </div>
-          <ul className="hidden md:block">
-            {navigation.map(({ id, item }) => (
+          <Navigation
+            data={navigation}
+            itemClassName="mb-4 last:mb-0"
+            variant="footer"
+          />
+          {/* <ul className="hidden md:block">
+            {navigation.map(({ text, linkTo }) => (
               <li key={id}>
-                <a href="#">{item}</a>
+                <a href={linkTo}>{text}</a>
               </li>
             ))}
-          </ul>
+          </ul> */}
           <div className="flex flex-col justify-between text-right">
-            <SocialsList variant="footer" staticData={iconBtnData} />
+            <SocialsList
+              variant="footer"
+              staticData={{ iconBtnData, socials }}
+            />
             <p className="text-[12px] leading-tight -tracking-[0.48px] text-black-dark ">
               <span className="opacity-50"> Made by </span>
 

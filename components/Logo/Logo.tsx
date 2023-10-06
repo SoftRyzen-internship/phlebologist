@@ -2,18 +2,11 @@ import React, { FC } from 'react';
 import Link from 'next/link';
 import classnames from 'classnames';
 import data from '@/data/logo.json';
+import { LogoProps } from './Logo.props';
 
-interface LogoProps {
-  variant?: 'header' | 'footer';
-  className?: string;
-}
-
-const Logo: FC<LogoProps> = ({ variant = 'header', className }) => {
+const Logo: FC<LogoProps> = ({ className }) => {
   const logoClass = classnames(
-    {
-      'text-[16px] leading-[1.19] -tracking-[0.64px] ': variant === 'footer',
-    },
-    'uppercase font-semibold text-black-dark focus:font-bold hover:font-bold hover:text-primary-dark-300 focus:text-primary-dark-300',
+    'text-[16px] leading-[1.19] -tracking-[0.64px] uppercase font-semibold text-black-dark focus:font-bold hover:font-bold hover:text-primary-dark-300 focus:text-primary-dark-300',
     'transition-all duration-300',
     className,
   );
