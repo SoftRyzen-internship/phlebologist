@@ -9,6 +9,7 @@ export type IconBtnName =
 
 export type AboutDataType = {
   image: string;
+  video?: string;
   general: AboutGeneralDataType;
   education: AboutEducationDataType;
   career: AboutCareerDataType;
