@@ -4,6 +4,7 @@ import client from '@/tina/__generated__/client';
 export const fetchAbout = async (lang: Locale) => {
   try {
     const image = await fetchImage();
+    const video = await fetchVideo();
     const general = await fetchGeneral(lang);
     const education = await fetchEducation(lang);
     const career = await fetchCareer(lang);
@@ -11,6 +12,7 @@ export const fetchAbout = async (lang: Locale) => {
 
     const about = {
       image,
+      video,
       general,
       education,
       career,
@@ -29,6 +31,20 @@ const fetchImage = async () => {
     const { data } = await client.queries.about({ relativePath: 'about.md' });
 
     const result = data.about.photo;
+
+    return result;
+  } catch (error) {
+    console.log(error);
+
+    return null;
+  }
+};
+
+const fetchVideo = async () => {
+  try {
+    const { data } = await client.queries.about({ relativePath: 'about.md' });
+
+    const result = data.about.video;
 
     return result;
   } catch (error) {
