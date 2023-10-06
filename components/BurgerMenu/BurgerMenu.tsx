@@ -40,20 +40,20 @@ const BurgerMenu = ({ data }) => {
 
   return (
     <>
-      <BurgerMenuButton onClick={handleMenuToggle} variant="header">
+      <BurgerMenuButton onClick={handleMenuToggle}>
         {menuButton}
       </BurgerMenuButton>
 
       {showMenu && (
         <div
-          className="modal-backdrop fixed left-0 top-0  h-[100vh] w-[100vw]"
+          className="modal-backdrop fixed left-0 top-0 h-[100vh] w-[100vw]"
           // onClick={handleOverlayClick}
         >
           <div
             className="absolute right-3 top-[28px]
                         w-full max-w-[308px] text-center md:right-[100px]"
           >
-            <BurgerMenuButton onClick={handleMenuToggle} variant="menu">
+            <BurgerMenuButton onClick={handleMenuToggle} isMenu={true}>
               {menuButton}
             </BurgerMenuButton>
 
