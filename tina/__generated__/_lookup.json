@@ -1,0 +1,62 @@
+{
+  "DocumentConnection": {
+    "type": "DocumentConnection",
+    "resolveType": "multiCollectionDocumentList",
+    "collections": ["about", "banner", "results", "reviews"]
+  },
+  "Node": { "type": "Node", "resolveType": "nodeDocument" },
+  "DocumentNode": {
+    "type": "DocumentNode",
+    "resolveType": "multiCollectionDocument",
+    "createDocument": "create",
+    "updateDocument": "update"
+  },
+  "About": {
+    "type": "About",
+    "resolveType": "collectionDocument",
+    "collection": "about",
+    "createAbout": "create",
+    "updateAbout": "update"
+  },
+  "AboutConnection": {
+    "type": "AboutConnection",
+    "resolveType": "collectionDocumentList",
+    "collection": "about"
+  },
+  "Banner": {
+    "type": "Banner",
+    "resolveType": "collectionDocument",
+    "collection": "banner",
+    "createBanner": "create",
+    "updateBanner": "update"
+  },
+  "BannerConnection": {
+    "type": "BannerConnection",
+    "resolveType": "collectionDocumentList",
+    "collection": "banner"
+  },
+  "Results": {
+    "type": "Results",
+    "resolveType": "collectionDocument",
+    "collection": "results",
+    "createResults": "create",
+    "updateResults": "update"
+  },
+  "ResultsConnection": {
+    "type": "ResultsConnection",
+    "resolveType": "collectionDocumentList",
+    "collection": "results"
+  },
+  "Reviews": {
+    "type": "Reviews",
+    "resolveType": "collectionDocument",
+    "collection": "reviews",
+    "createReviews": "create",
+    "updateReviews": "update"
+  },
+  "ReviewsConnection": {
+    "type": "ReviewsConnection",
+    "resolveType": "collectionDocumentList",
+    "collection": "reviews"
+  }
+}
