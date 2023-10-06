@@ -22,6 +22,13 @@
           "searchable": false
         },
         {
+          "name": "video",
+          "label": "Video",
+          "type": "string",
+          "namespace": ["about", "video"],
+          "searchable": true
+        },
+        {
           "name": "general",
           "label": "General",
           "type": "object",

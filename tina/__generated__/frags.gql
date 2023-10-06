@@ -1,5 +1,6 @@
 fragment AboutParts on About {
   photo
+  video
   general {
     __typename
     uk {

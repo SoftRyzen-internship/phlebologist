@@ -241,6 +241,7 @@ type AboutCertificates {
 
 type About implements Node & Document {
   photo: String!
+  video: String
   general: AboutGeneral!
   education: AboutEducation!
   career: AboutCareer!
@@ -367,6 +368,7 @@ input AboutCertificatesFilter {
 
 input AboutFilter {
   photo: ImageFilter
+  video: StringFilter
   general: AboutGeneralFilter
   education: AboutEducationFilter
   career: AboutCareerFilter
@@ -725,6 +727,7 @@ input AboutCertificatesMutation {
 
 input AboutMutation {
   photo: String
+  video: String
   general: AboutGeneralMutation
   education: AboutEducationMutation
   career: AboutCareerMutation

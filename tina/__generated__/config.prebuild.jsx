@@ -1,7 +1,7 @@
 // tina/config.ts
 import { defineConfig } from 'tinacms';
 var config_default = defineConfig({
-  branch: process.env.VERSEL_GIT_COMMIT_REF || '',
+  branch: 'update-admin-collections-birkovska',
   clientId: process.env.TINA_CLIENT_ID || '',
   token: process.env.TINA_TOKEN || '',
   build: {
@@ -21,6 +21,11 @@ var config_default = defineConfig({
             label: 'Photo',
             type: 'image',
             required: true,
+          },
+          {
+            name: 'video',
+            label: 'Video',
+            type: 'string',
           },
           {
             name: 'general',

@@ -343,6 +343,7 @@ export type About = Node &
   Document & {
     __typename?: 'About';
     photo: Scalars['String']['output'];
+    video?: Maybe<Scalars['String']['output']>;
     general: AboutGeneral;
     education: AboutEducation;
     career: AboutCareer;
@@ -469,6 +470,7 @@ export type AboutCertificatesFilter = {
 
 export type AboutFilter = {
   photo?: InputMaybe<ImageFilter>;
+  video?: InputMaybe<StringFilter>;
   general?: InputMaybe<AboutGeneralFilter>;
   education?: InputMaybe<AboutEducationFilter>;
   career?: InputMaybe<AboutCareerFilter>;
@@ -911,6 +913,7 @@ export type AboutCertificatesMutation = {
 
 export type AboutMutation = {
   photo?: InputMaybe<Scalars['String']['input']>;
+  video?: InputMaybe<Scalars['String']['input']>;
   general?: InputMaybe<AboutGeneralMutation>;
   education?: InputMaybe<AboutEducationMutation>;
   career?: InputMaybe<AboutCareerMutation>;
@@ -990,6 +993,7 @@ export type ReviewsMutation = {
 export type AboutPartsFragment = {
   __typename?: 'About';
   photo: string;
+  video?: string | null;
   general: {
     __typename: 'AboutGeneral';
     uk?: {
@@ -1135,6 +1139,7 @@ export type AboutQuery = {
     __typename?: 'About';
     id: string;
     photo: string;
+    video?: string | null;
     _sys: {
       __typename?: 'SystemInfo';
       filename: string;
@@ -1259,6 +1264,7 @@ export type AboutConnectionQuery = {
         __typename?: 'About';
         id: string;
         photo: string;
+        video?: string | null;
         _sys: {
           __typename?: 'SystemInfo';
           filename: string;
@@ -1636,6 +1642,7 @@ export type ReviewsConnectionQuery = {
 export const AboutPartsFragmentDoc = gql`
   fragment AboutParts on About {
     photo
+    video
     general {
       __typename
       uk {
@@ -2209,7 +2216,7 @@ export const ExperimentalGetTinaClient = () =>
   getSdk(
     generateRequester(
       createClient({
-        url: 'https://content.tinajs.io/1.4/content/112741f1-bcd7-4118-ba69-e56683058d98/github/main',
+        url: 'https://content.tinajs.io/1.4/content/112741f1-bcd7-4118-ba69-e56683058d98/github/update-admin-collections-birkovska',
         queries,
       }),
     ),
