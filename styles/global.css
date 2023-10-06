@@ -2,33 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-.main-container {
-  max-width: 480px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
 .wrapper {
   padding-left: 12px;
   padding-right: 12px;
 }
 
 @media screen and (min-width: 768px) {
-  .main-container {
-    max-width: 768px;
-    padding: 0 32px;
-  }
-
   .wrapper {
     padding-left: 24px;
     padding-right: 24px;
-  }
-}
-
-@media screen and (min-width: 1280px) {
-  .main-container {
-    max-width: 1280px;
-    padding: 0 20px;
   }
 }
 
@@ -36,4 +18,34 @@
 [data-testid='container'] {
   width: 100% !important;
   height: 100% !important;
+}
+
+/* Hero Section */
+/* .hero-bg {
+  background-image: image-set(
+    url('/images/home/hero/hero-md.webp') 1x,
+    url('/images/home/hero/hero-md-2x.webp') 2x
+  );
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+} */
+
+@media screen and (min-width: 768px) {
+  .hero-bg {
+    background-image: image-set(
+      url('/images/home/hero/hero-md.webp') 1x,
+      url('/images/home/hero/hero-md-2x.webp') 2x
+    );
+    background-repeat: no-repeat;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .hero-bg {
+    background-image: image-set(
+      url('/images/home/hero/hero-xl.webp') 1x,
+      url('/images/home/hero/hero-xl-2x.webp') 2x
+    );
+  }
 }

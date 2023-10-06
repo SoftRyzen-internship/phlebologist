@@ -10,7 +10,6 @@ module.exports = {
   theme: {
     // MEDIA QUERIES
     screens: {
-      xs: '320px',
       sm: '480px',
       md: '768px',
       xl: '1280px',
@@ -74,6 +73,16 @@ module.exports = {
       },
       // LINE-HEIGHTS
       lineHeight: { normal: '1.21' },
+      // CONTAINER
+      container: {
+        center: true,
+        padding: {
+          DEFAULT: '20px',
+          sm: '20px',
+          md: '32px',
+          xl: '20px',
+        },
+      },
       // KEYFRAMES
       keyframes: {
         side: {},
