@@ -513,8 +513,9 @@ type ResultsConnection implements Connection {
 type ReviewsUkCase {
   date: String!
   photo: String!
+  video: String
   name: String!
-  procedure: String!
+  telegram: String
   review: JSON!
 }
 
@@ -525,8 +526,9 @@ type ReviewsUk {
 type ReviewsEnCase {
   date: String!
   photo: String!
+  video: String
   name: String!
-  procedure: String!
+  telegram: String
   review: JSON!
 }
 
@@ -545,8 +547,9 @@ type Reviews implements Node & Document {
 input ReviewsUkCaseFilter {
   date: DatetimeFilter
   photo: ImageFilter
+  video: StringFilter
   name: StringFilter
-  procedure: StringFilter
+  telegram: StringFilter
   review: RichTextFilter
 }
 
@@ -557,8 +560,9 @@ input ReviewsUkFilter {
 input ReviewsEnCaseFilter {
   date: DatetimeFilter
   photo: ImageFilter
+  video: StringFilter
   name: StringFilter
-  procedure: StringFilter
+  telegram: StringFilter
   review: RichTextFilter
 }
 
@@ -778,8 +782,9 @@ input ResultsMutation {
 input ReviewsUkCaseMutation {
   date: String
   photo: String
+  video: String
   name: String
-  procedure: String
+  telegram: String
   review: JSON
 }
 
@@ -790,8 +795,9 @@ input ReviewsUkMutation {
 input ReviewsEnCaseMutation {
   date: String
   photo: String
+  video: String
   name: String
-  procedure: String
+  telegram: String
   review: JSON
 }
 

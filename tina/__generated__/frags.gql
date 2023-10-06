@@ -129,8 +129,9 @@ fragment ReviewsParts on Reviews {
       __typename
       date
       photo
+      video
       name
-      procedure
+      telegram
       review
     }
   }
@@ -140,8 +141,9 @@ fragment ReviewsParts on Reviews {
       __typename
       date
       photo
+      video
       name
-      procedure
+      telegram
       review
     }
   }

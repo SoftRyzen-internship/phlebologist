@@ -23,6 +23,13 @@
             "searchable": false
           },
           {
+            "name": "video",
+            "label": "Video",
+            "type": "string",
+            "namespace": ["about", "video"],
+            "searchable": true
+          },
+          {
             "name": "general",
             "label": "General",
             "type": "object",
@@ -699,6 +706,13 @@
                     "searchable": false
                   },
                   {
+                    "name": "video",
+                    "label": "Video",
+                    "type": "string",
+                    "namespace": ["reviews", "uk", "case", "video"],
+                    "searchable": true
+                  },
+                  {
                     "name": "name",
                     "label": "Name",
                     "type": "string",
@@ -707,11 +721,10 @@
                     "searchable": true
                   },
                   {
-                    "name": "procedure",
-                    "label": "Procedure",
+                    "name": "telegram",
+                    "label": "Telegram",
                     "type": "string",
-                    "required": true,
-                    "namespace": ["reviews", "uk", "case", "procedure"],
+                    "namespace": ["reviews", "uk", "case", "telegram"],
                     "searchable": true
                   },
                   {
@@ -760,6 +773,13 @@
                     "searchable": false
                   },
                   {
+                    "name": "video",
+                    "label": "Video",
+                    "type": "string",
+                    "namespace": ["reviews", "en", "case", "video"],
+                    "searchable": true
+                  },
+                  {
                     "name": "name",
                     "label": "Name",
                     "type": "string",
@@ -768,11 +788,10 @@
                     "searchable": true
                   },
                   {
-                    "name": "procedure",
-                    "label": "Procedure",
+                    "name": "telegram",
+                    "label": "Telegram",
                     "type": "string",
-                    "required": true,
-                    "namespace": ["reviews", "en", "case", "procedure"],
+                    "namespace": ["reviews", "en", "case", "telegram"],
                     "searchable": true
                   },
                   {
@@ -2550,6 +2569,15 @@
           },
           {
             "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "video" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
             "name": { "kind": "Name", "value": "general" },
             "arguments": [],
             "type": {
@@ -3210,6 +3238,14 @@
             "type": {
               "kind": "NamedType",
               "name": { "kind": "Name", "value": "ImageFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "video" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
             }
           },
           {
@@ -4115,6 +4151,15 @@
           },
           {
             "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "video" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
             "name": { "kind": "Name", "value": "name" },
             "arguments": [],
             "type": {
@@ -4127,14 +4172,11 @@
           },
           {
             "kind": "FieldDefinition",
-            "name": { "kind": "Name", "value": "procedure" },
+            "name": { "kind": "Name", "value": "telegram" },
             "arguments": [],
             "type": {
-              "kind": "NonNullType",
-              "type": {
-                "kind": "NamedType",
-                "name": { "kind": "Name", "value": "String" }
-              }
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
             }
           },
           {
@@ -4203,6 +4245,15 @@
           },
           {
             "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "video" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
             "name": { "kind": "Name", "value": "name" },
             "arguments": [],
             "type": {
@@ -4215,14 +4266,11 @@
           },
           {
             "kind": "FieldDefinition",
-            "name": { "kind": "Name", "value": "procedure" },
+            "name": { "kind": "Name", "value": "telegram" },
             "arguments": [],
             "type": {
-              "kind": "NonNullType",
-              "type": {
-                "kind": "NamedType",
-                "name": { "kind": "Name", "value": "String" }
-              }
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
             }
           },
           {
@@ -4349,6 +4397,14 @@
           },
           {
             "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "video" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
             "name": { "kind": "Name", "value": "name" },
             "type": {
               "kind": "NamedType",
@@ -4357,7 +4413,7 @@
           },
           {
             "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "procedure" },
+            "name": { "kind": "Name", "value": "telegram" },
             "type": {
               "kind": "NamedType",
               "name": { "kind": "Name", "value": "StringFilter" }
@@ -4409,6 +4465,14 @@
           },
           {
             "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "video" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
             "name": { "kind": "Name", "value": "name" },
             "type": {
               "kind": "NamedType",
@@ -4417,7 +4481,7 @@
           },
           {
             "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "procedure" },
+            "name": { "kind": "Name", "value": "telegram" },
             "type": {
               "kind": "NamedType",
               "name": { "kind": "Name", "value": "StringFilter" }
@@ -5605,6 +5669,14 @@
           },
           {
             "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "video" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
             "name": { "kind": "Name", "value": "general" },
             "type": {
               "kind": "NamedType",
@@ -5855,6 +5927,14 @@
           },
           {
             "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "video" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
             "name": { "kind": "Name", "value": "name" },
             "type": {
               "kind": "NamedType",
@@ -5863,7 +5943,7 @@
           },
           {
             "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "procedure" },
+            "name": { "kind": "Name", "value": "telegram" },
             "type": {
               "kind": "NamedType",
               "name": { "kind": "Name", "value": "String" }
@@ -5918,6 +5998,14 @@
           },
           {
             "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "video" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
             "name": { "kind": "Name", "value": "name" },
             "type": {
               "kind": "NamedType",
@@ -5926,7 +6014,7 @@
           },
           {
             "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "procedure" },
+            "name": { "kind": "Name", "value": "telegram" },
             "type": {
               "kind": "NamedType",
               "name": { "kind": "Name", "value": "String" }

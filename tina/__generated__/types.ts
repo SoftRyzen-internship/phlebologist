@@ -632,8 +632,9 @@ export type ReviewsUkCase = {
   __typename?: 'ReviewsUkCase';
   date: Scalars['String']['output'];
   photo: Scalars['String']['output'];
+  video?: Maybe<Scalars['String']['output']>;
   name: Scalars['String']['output'];
-  procedure: Scalars['String']['output'];
+  telegram?: Maybe<Scalars['String']['output']>;
   review: Scalars['JSON']['output'];
 };
 
@@ -646,8 +647,9 @@ export type ReviewsEnCase = {
   __typename?: 'ReviewsEnCase';
   date: Scalars['String']['output'];
   photo: Scalars['String']['output'];
+  video?: Maybe<Scalars['String']['output']>;
   name: Scalars['String']['output'];
-  procedure: Scalars['String']['output'];
+  telegram?: Maybe<Scalars['String']['output']>;
   review: Scalars['JSON']['output'];
 };
 
@@ -669,8 +671,9 @@ export type Reviews = Node &
 export type ReviewsUkCaseFilter = {
   date?: InputMaybe<DatetimeFilter>;
   photo?: InputMaybe<ImageFilter>;
+  video?: InputMaybe<StringFilter>;
   name?: InputMaybe<StringFilter>;
-  procedure?: InputMaybe<StringFilter>;
+  telegram?: InputMaybe<StringFilter>;
   review?: InputMaybe<RichTextFilter>;
 };
 
@@ -681,8 +684,9 @@ export type ReviewsUkFilter = {
 export type ReviewsEnCaseFilter = {
   date?: InputMaybe<DatetimeFilter>;
   photo?: InputMaybe<ImageFilter>;
+  video?: InputMaybe<StringFilter>;
   name?: InputMaybe<StringFilter>;
-  procedure?: InputMaybe<StringFilter>;
+  telegram?: InputMaybe<StringFilter>;
   review?: InputMaybe<RichTextFilter>;
 };
 
@@ -964,8 +968,9 @@ export type ResultsMutation = {
 export type ReviewsUkCaseMutation = {
   date?: InputMaybe<Scalars['String']['input']>;
   photo?: InputMaybe<Scalars['String']['input']>;
+  video?: InputMaybe<Scalars['String']['input']>;
   name?: InputMaybe<Scalars['String']['input']>;
-  procedure?: InputMaybe<Scalars['String']['input']>;
+  telegram?: InputMaybe<Scalars['String']['input']>;
   review?: InputMaybe<Scalars['JSON']['input']>;
 };
 
@@ -976,8 +981,9 @@ export type ReviewsUkMutation = {
 export type ReviewsEnCaseMutation = {
   date?: InputMaybe<Scalars['String']['input']>;
   photo?: InputMaybe<Scalars['String']['input']>;
+  video?: InputMaybe<Scalars['String']['input']>;
   name?: InputMaybe<Scalars['String']['input']>;
-  procedure?: InputMaybe<Scalars['String']['input']>;
+  telegram?: InputMaybe<Scalars['String']['input']>;
   review?: InputMaybe<Scalars['JSON']['input']>;
 };
 
@@ -1111,8 +1117,9 @@ export type ReviewsPartsFragment = {
       __typename: 'ReviewsUkCase';
       date: string;
       photo: string;
+      video?: string | null;
       name: string;
-      procedure: string;
+      telegram?: string | null;
       review: any;
     } | null> | null;
   } | null;
@@ -1122,8 +1129,9 @@ export type ReviewsPartsFragment = {
       __typename: 'ReviewsEnCase';
       date: string;
       photo: string;
+      video?: string | null;
       name: string;
-      procedure: string;
+      telegram?: string | null;
       review: any;
     } | null> | null;
   } | null;
@@ -1557,8 +1565,9 @@ export type ReviewsQuery = {
         __typename: 'ReviewsUkCase';
         date: string;
         photo: string;
+        video?: string | null;
         name: string;
-        procedure: string;
+        telegram?: string | null;
         review: any;
       } | null> | null;
     } | null;
@@ -1568,8 +1577,9 @@ export type ReviewsQuery = {
         __typename: 'ReviewsEnCase';
         date: string;
         photo: string;
+        video?: string | null;
         name: string;
-        procedure: string;
+        telegram?: string | null;
         review: any;
       } | null> | null;
     } | null;
@@ -1618,8 +1628,9 @@ export type ReviewsConnectionQuery = {
             __typename: 'ReviewsUkCase';
             date: string;
             photo: string;
+            video?: string | null;
             name: string;
-            procedure: string;
+            telegram?: string | null;
             review: any;
           } | null> | null;
         } | null;
@@ -1629,8 +1640,9 @@ export type ReviewsConnectionQuery = {
             __typename: 'ReviewsEnCase';
             date: string;
             photo: string;
+            video?: string | null;
             name: string;
-            procedure: string;
+            telegram?: string | null;
             review: any;
           } | null> | null;
         } | null;
@@ -1774,8 +1786,9 @@ export const ReviewsPartsFragmentDoc = gql`
         __typename
         date
         photo
+        video
         name
-        procedure
+        telegram
         review
       }
     }
@@ -1785,8 +1798,9 @@ export const ReviewsPartsFragmentDoc = gql`
         __typename
         date
         photo
+        video
         name
-        procedure
+        telegram
         review
       }
     }
@@ -2216,7 +2230,7 @@ export const ExperimentalGetTinaClient = () =>
   getSdk(
     generateRequester(
       createClient({
-        url: 'https://content.tinajs.io/1.4/content/112741f1-bcd7-4118-ba69-e56683058d98/github/update-admin-collections-birkovska',
+        url: 'http://localhost:4001/graphql',
         queries,
       }),
     ),
