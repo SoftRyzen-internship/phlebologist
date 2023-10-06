@@ -23,6 +23,11 @@ export default defineConfig({
             required: true,
           },
           {
+            name: 'video',
+            label: 'Video',
+            type: 'string',
+          },
+          {
             name: 'general',
             label: 'General',
             type: 'object',
