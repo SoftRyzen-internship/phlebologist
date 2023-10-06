@@ -57,12 +57,6 @@ career:
       - period: '2023'
         institution: Клініка “Medeira” - судинний хірург / флеболог
 certificates:
-  - photo: /uploads/about/21.11.2020.jpg
-    description:
-      uk:
-        alt: Тестуємо сертифікат
-      en:
-        alt: Testing testing
   - photo: /uploads/about/certificate.jpg
     description:
       uk:
