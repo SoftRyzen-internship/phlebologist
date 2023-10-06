@@ -17,6 +17,7 @@ const About: React.FC<AboutProps> = async ({ lang, staticData }) => {
       <section className="p-12">
         <Heading className="mb-6 md:mb-9">{title}</Heading>
 
+        {/* set up image sizes & alt properly */}
         <Image
           src={data?.image as string}
           alt={''}
@@ -24,6 +25,9 @@ const About: React.FC<AboutProps> = async ({ lang, staticData }) => {
           height={265}
           className="mb-6 rounded-3xl"
         />
+
+        {/* this is an example: add proper conditions for video rendering */}
+        {data?.video && <div>{data?.video}</div>}
 
         <AboutTabs
           staticData={{ menu, firstSubtitle, secondSubtitle }}
