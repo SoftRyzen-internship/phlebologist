@@ -14,18 +14,18 @@ const ScrollLinkButton: React.FC<ScrollLinkButtonProps> = ({
   actionHandler,
 }) => {
   const btnClass = classnames(
-    'outline-without flex items-center justify-center h-[51px] md:w-auto text-black-dark text-base rounded-normal leading-normal -tracking-[0.64px]',
+    'outline-without flex items-center justify-center text-black-dark text-base rounded-normal leading-normal -tracking-[0.64px]',
 
     'mediaHover:hover:cursor-pointer mediaHover:hover:font-bold focus:font-bold',
 
     'transition-all duration-300',
 
     {
-      'w-[256px] md:w-auto md:px-12 bg-white': variant === 'light',
+      'w-[256px] h-[51px] md:w-auto md:px-12 bg-white': variant === 'light',
     },
 
     {
-      'w-[224px] md:w-[448px] bg-gray-light xl:bg-white mediaHover:hover:bg-gray-light focus:bg-gray-light':
+      'w-[224px] h-[51px] md:w-[448px] bg-gray-light xl:bg-white mediaHover:hover:bg-gray-light focus:bg-gray-light':
         variant === 'dark',
     },
 

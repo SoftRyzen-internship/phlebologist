@@ -45,6 +45,7 @@ const Navigation: FC<NavigationProps> = ({
               duration={500}
               to={linkTo}
               href={`#${linkTo}`}
+              onClick={actionHandler}
             >
               {title}
             </LinkScroll>
