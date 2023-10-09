@@ -18,7 +18,6 @@
             "name": "photo",
             "label": "Photo",
             "type": "image",
-            "required": true,
             "namespace": ["about", "photo"],
             "searchable": false
           },
@@ -420,6 +419,7 @@
                 "name": "description",
                 "label": "Description",
                 "type": "object",
+                "required": true,
                 "fields": [
                   {
                     "name": "uk",
@@ -489,7 +489,6 @@
             "name": "uk",
             "label": "UK",
             "type": "object",
-            "required": true,
             "fields": [
               {
                 "name": "title",
@@ -555,7 +554,6 @@
                 "name": "date",
                 "label": "Date",
                 "type": "datetime",
-                "required": true,
                 "namespace": ["results", "case", "date"],
                 "searchable": true
               },
@@ -731,7 +729,6 @@
                     "name": "review",
                     "label": "Review",
                     "type": "rich-text",
-                    "required": true,
                     "namespace": ["reviews", "uk", "case", "review"],
                     "searchable": true,
                     "parser": { "type": "markdown" }
@@ -798,7 +795,6 @@
                     "name": "review",
                     "label": "Review",
                     "type": "rich-text",
-                    "required": true,
                     "namespace": ["reviews", "en", "case", "review"],
                     "searchable": true,
                     "parser": { "type": "markdown" }
@@ -2534,10 +2530,13 @@
             "name": { "kind": "Name", "value": "description" },
             "arguments": [],
             "type": {
-              "kind": "NamedType",
-              "name": {
-                "kind": "Name",
-                "value": "AboutCertificatesDescription"
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": {
+                  "kind": "Name",
+                  "value": "AboutCertificatesDescription"
+                }
               }
             }
           }
@@ -2560,11 +2559,8 @@
             "name": { "kind": "Name", "value": "photo" },
             "arguments": [],
             "type": {
-              "kind": "NonNullType",
-              "type": {
-                "kind": "NamedType",
-                "name": { "kind": "Name", "value": "String" }
-              }
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
             }
           },
           {
@@ -3441,11 +3437,8 @@
             "name": { "kind": "Name", "value": "uk" },
             "arguments": [],
             "type": {
-              "kind": "NonNullType",
-              "type": {
-                "kind": "NamedType",
-                "name": { "kind": "Name", "value": "BannerUk" }
-              }
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "BannerUk" }
             }
           },
           {
@@ -3740,11 +3733,8 @@
             "name": { "kind": "Name", "value": "date" },
             "arguments": [],
             "type": {
-              "kind": "NonNullType",
-              "type": {
-                "kind": "NamedType",
-                "name": { "kind": "Name", "value": "String" }
-              }
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
             }
           },
           {
@@ -4184,11 +4174,8 @@
             "name": { "kind": "Name", "value": "review" },
             "arguments": [],
             "type": {
-              "kind": "NonNullType",
-              "type": {
-                "kind": "NamedType",
-                "name": { "kind": "Name", "value": "JSON" }
-              }
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "JSON" }
             }
           }
         ]
@@ -4278,11 +4265,8 @@
             "name": { "kind": "Name", "value": "review" },
             "arguments": [],
             "type": {
-              "kind": "NonNullType",
-              "type": {
-                "kind": "NamedType",
-                "name": { "kind": "Name", "value": "JSON" }
-              }
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "JSON" }
             }
           }
         ]
