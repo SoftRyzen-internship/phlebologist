@@ -19,3 +19,8 @@
   width: 100% !important;
   height: 100% !important;
 }
+
+.modal-backdrop {
+  background: rgba(149, 149, 149, 0.25);
+  backdrop-filter: blur(12.5px);
+}

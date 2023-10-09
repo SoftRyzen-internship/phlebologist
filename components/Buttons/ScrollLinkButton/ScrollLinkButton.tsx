@@ -11,6 +11,7 @@ const ScrollLinkButton: React.FC<ScrollLinkButtonProps> = ({
   variant = 'light',
   className = '',
   children,
+  actionHandler,
 }) => {
   const btnClass = classnames(
     'outline-without flex items-center justify-center text-black-dark text-base rounded-normal leading-normal -tracking-[0.64px]',
@@ -44,6 +45,7 @@ const ScrollLinkButton: React.FC<ScrollLinkButtonProps> = ({
       smooth={true}
       offset={0}
       duration={500}
+      onClick={actionHandler}
     >
       {children}
     </Link>

@@ -3,4 +3,5 @@ export interface ScrollLinkButtonProps {
   variant?: 'light' | 'dark' | 'menu';
   className?: string;
   children: string;
+  actionHandler?: () => void;
 }
