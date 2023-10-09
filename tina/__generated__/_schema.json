@@ -17,7 +17,6 @@
           "name": "photo",
           "label": "Photo",
           "type": "image",
-          "required": true,
           "namespace": ["about", "photo"],
           "searchable": false
         },
@@ -419,6 +418,7 @@
               "name": "description",
               "label": "Description",
               "type": "object",
+              "required": true,
               "fields": [
                 {
                   "name": "uk",
@@ -488,7 +488,6 @@
           "name": "uk",
           "label": "UK",
           "type": "object",
-          "required": true,
           "fields": [
             {
               "name": "title",
@@ -554,7 +553,6 @@
               "name": "date",
               "label": "Date",
               "type": "datetime",
-              "required": true,
               "namespace": ["results", "case", "date"],
               "searchable": true
             },
@@ -730,7 +728,6 @@
                   "name": "review",
                   "label": "Review",
                   "type": "rich-text",
-                  "required": true,
                   "namespace": ["reviews", "uk", "case", "review"],
                   "searchable": true,
                   "parser": { "type": "markdown" }
@@ -797,7 +794,6 @@
                   "name": "review",
                   "label": "Review",
                   "type": "rich-text",
-                  "required": true,
                   "namespace": ["reviews", "en", "case", "review"],
                   "searchable": true,
                   "parser": { "type": "markdown" }

@@ -20,7 +20,6 @@ export default defineConfig({
             name: 'photo',
             label: 'Photo',
             type: 'image',
-            required: true,
           },
           {
             name: 'video',
@@ -366,6 +365,7 @@ export default defineConfig({
                 name: 'description',
                 label: 'Description',
                 type: 'object',
+                required: true,
                 fields: [
                   {
                     name: 'uk',
@@ -421,7 +421,6 @@ export default defineConfig({
             name: 'uk',
             label: 'UK',
             type: 'object',
-            required: true,
             fields: [
               {
                 name: 'title',
@@ -474,7 +473,6 @@ export default defineConfig({
                 name: 'date',
                 label: 'Date',
                 type: 'datetime',
-                required: true,
               },
               {
                 name: 'content',
@@ -601,7 +599,6 @@ export default defineConfig({
                     name: 'review',
                     label: 'Review',
                     type: 'rich-text',
-                    required: true,
                   },
                 ],
                 ui: {
@@ -658,7 +655,6 @@ export default defineConfig({
                     name: 'review',
                     label: 'Review',
                     type: 'rich-text',
-                    required: true,
                   },
                 ],
               },
@@ -675,6 +671,3 @@ export default defineConfig({
     },
   },
 });
-
-// https://tina.io/docs/tina-cloud/
-// add authentication later when we have an account
