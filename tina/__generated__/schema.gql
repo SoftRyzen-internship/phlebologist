@@ -236,11 +236,11 @@ type AboutCertificatesDescription {
 
 type AboutCertificates {
   photo: String!
-  description: AboutCertificatesDescription
+  description: AboutCertificatesDescription!
 }
 
 type About implements Node & Document {
-  photo: String!
+  photo: String
   video: String
   general: AboutGeneral!
   education: AboutEducation!
@@ -397,7 +397,7 @@ type BannerEn {
 }
 
 type Banner implements Node & Document {
-  uk: BannerUk!
+  uk: BannerUk
   en: BannerEn
   id: ID!
   _sys: SystemInfo!
@@ -446,7 +446,7 @@ type ResultsCaseContent {
 }
 
 type ResultsCase {
-  date: String!
+  date: String
   content: ResultsCaseContent
   before: String!
   after: String!
@@ -516,7 +516,7 @@ type ReviewsUkCase {
   video: String
   name: String!
   telegram: String
-  review: JSON!
+  review: JSON
 }
 
 type ReviewsUk {
@@ -529,7 +529,7 @@ type ReviewsEnCase {
   video: String
   name: String!
   telegram: String
-  review: JSON!
+  review: JSON
 }
 
 type ReviewsEn {

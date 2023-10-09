@@ -20,7 +20,6 @@ var config_default = defineConfig({
             name: 'photo',
             label: 'Photo',
             type: 'image',
-            required: true,
           },
           {
             name: 'video',
@@ -366,6 +365,7 @@ var config_default = defineConfig({
                 name: 'description',
                 label: 'Description',
                 type: 'object',
+                required: true,
                 fields: [
                   {
                     name: 'uk',
@@ -421,7 +421,6 @@ var config_default = defineConfig({
             name: 'uk',
             label: 'UK',
             type: 'object',
-            required: true,
             fields: [
               {
                 name: 'title',
@@ -474,7 +473,6 @@ var config_default = defineConfig({
                 name: 'date',
                 label: 'Date',
                 type: 'datetime',
-                required: true,
               },
               {
                 name: 'content',
@@ -601,7 +599,6 @@ var config_default = defineConfig({
                     name: 'review',
                     label: 'Review',
                     type: 'rich-text',
-                    required: true,
                   },
                 ],
                 ui: {
@@ -658,7 +655,6 @@ var config_default = defineConfig({
                     name: 'review',
                     label: 'Review',
                     type: 'rich-text',
-                    required: true,
                   },
                 ],
               },
