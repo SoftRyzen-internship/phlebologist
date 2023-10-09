@@ -78,8 +78,8 @@ case:
           questions, providing the necessary support. As a result, I not only
           received high-quality treatment but also a sense of care and support
           from the doctor and his team. Thank you very much for this!
-    before: ''
-    after: ''
+    before: /uploads/results/results-3-1.webp
+    after: /uploads/results/results-3-2.webp
   - date: 2023-10-02T21:00:00.000Z
     content:
       uk:
