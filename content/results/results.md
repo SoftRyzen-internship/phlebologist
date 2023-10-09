@@ -1,5 +1,13 @@
 ---
 case:
+  - date: 2023-10-01T21:00:00.000Z
+    content:
+      uk:
+        title: ''
+      en:
+        title: ''
+    before: /uploads/results/results-1-1.jpg
+    after: /uploads/results/results-1-2.jpg
   - date: 2023-09-19T21:00:00.000Z
     content:
       uk:
@@ -25,3 +33,4 @@ case:
     before: /uploads/results/0000-0000-3154833-696.jpg
     after: /uploads/results/0000-0000-3154836-696.jpg
 ---
+
