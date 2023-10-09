@@ -4,7 +4,7 @@ import { getDictionary } from '@/utils/dictionary';
 import { LocaleSwitcher, BurgerMenu } from '@/components';
 
 const Header = async ({ lang }: { lang: Locale }) => {
-  const { navigation, header } = await getDictionary(lang);
+  const { navigation, header, socials } = await getDictionary(lang);
 
   return (
     <header className="container py-6">
@@ -15,7 +15,7 @@ const Header = async ({ lang }: { lang: Locale }) => {
           </li>
         </ul>
         <LocaleSwitcher />
-        <BurgerMenu data={header} />
+        <BurgerMenu data={{ navigation, header, socials }} />
       </div>
     </header>
   );
