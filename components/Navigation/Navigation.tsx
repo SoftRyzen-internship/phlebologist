@@ -25,32 +25,34 @@ const Navigation: FC<NavigationProps> = ({
   );
 
   return (
-    <ul className={className}>
-      {data.map(({ title, linkTo }) => {
-        if (linkTo.includes('/')) {
+    <nav>
+      <ul className={className}>
+        {data.map(({ title, linkTo }) => {
+          if (linkTo.includes('/')) {
+            return (
+              <li className={itemClass} key={linkTo}>
+                <Link href={linkTo}>{title}</Link>
+              </li>
+            );
+          }
+
           return (
             <li className={itemClass} key={linkTo}>
-              <Link href={linkTo}>{title}</Link>
+              <LinkScroll
+                spy={true}
+                smooth={true}
+                offset={0}
+                duration={500}
+                to={linkTo}
+                href={`#${linkTo}`}
+              >
+                {title}
+              </LinkScroll>
             </li>
           );
-        }
-
-        return (
-          <li className={itemClass} key={linkTo}>
-            <LinkScroll
-              spy={true}
-              smooth={true}
-              offset={0}
-              duration={500}
-              to={linkTo}
-              href={`#${linkTo}`}
-            >
-              {title}
-            </LinkScroll>
-          </li>
-        );
-      })}
-    </ul>
+        })}
+      </ul>
+    </nav>
   );
 };
 

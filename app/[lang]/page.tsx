@@ -18,7 +18,7 @@ import {
   // ExternalLinkButton,
   // RoutingLinkButton,
   // ScrollLinkButton,
-  SocialsList,
+  // SocialsList,
   // InfoBlock,
 } from '@/components';
 
@@ -41,23 +41,23 @@ export default async function Home({
 
   return (
     <main>
-      <div className="flex flex-col items-center justify-center gap-6 py-12">
-        {/* <ButtonPrimary>Записатись на консультацію</ButtonPrimary> */}
-        {/* <ButtonSecondary linkto="">Записатись</ButtonSecondary> */}
-        {/* <SubmitButton>Відправити</SubmitButton> */}
-        {/* <ExternalLinkButton linkto="">Написати у Telegram</ExternalLinkButton> */}
-        {/* <RoutingLinkButton linkto="">Детальніше про метод</RoutingLinkButton> */}
-        {/* <ScrollLinkButton linkto="">Записатись</ScrollLinkButton> */}
-        {/* <SliderBeforeAfter page={page} /> */}
-      </div>
+      {/* <div className="flex flex-col items-center justify-center gap-6 py-12"> */}
+      {/* <ButtonPrimary>Записатись на консультацію</ButtonPrimary> */}
+      {/* <ButtonSecondary linkto="">Записатись</ButtonSecondary> */}
+      {/* <SubmitButton>Відправити</SubmitButton> */}
+      {/* <ExternalLinkButton linkto="">Написати у Telegram</ExternalLinkButton> */}
+      {/* <RoutingLinkButton linkto="">Детальніше про метод</RoutingLinkButton> */}
+      {/* <ScrollLinkButton linkto="">Записатись</ScrollLinkButton> */}
+      {/* <SliderBeforeAfter page={page} /> */}
+      {/* </div> */}
 
-      <SocialsList
+      {/* <SocialsList
         variant="footer"
         staticData={{
           iconBtnData: page.home.iconBtnData,
           socials: socials,
         }}
-      />
+      /> */}
 
       <AboutSection lang={lang} staticData={page.home.about} />
 
