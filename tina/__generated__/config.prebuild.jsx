@@ -1,6 +1,6 @@
+// tina/config.ts
 import { defineConfig } from 'tinacms';
-
-export default defineConfig({
+var config_default = defineConfig({
   branch: process.env.NEXT_PUBLIC_VERSEL_GIT_COMMIT_REF || '',
   clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID || '',
   token: process.env.NEXT_PUBLIC_TINA_TOKEN || '',
@@ -671,3 +671,4 @@ export default defineConfig({
     },
   },
 });
+export { config_default as default };

@@ -1,5 +1,6 @@
 ---
-title: about
+photo: /uploads/about/about-img.webp
+video: ''
 general:
   uk:
     name: Войціцький Сергій
@@ -16,7 +17,6 @@ general:
       - point: 4000+ проведених операцій
       - point: Більше 10 років практики
       - point: 5000+ вилікуваних пацієнтів
-photo: /uploads/about/about-img.webp
 education:
   uk:
     title: Освіта лікаря

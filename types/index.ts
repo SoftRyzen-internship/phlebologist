@@ -9,6 +9,7 @@ export type IconBtnName =
 
 export type AboutDataType = {
   image: string;
+  video?: string;
   general: AboutGeneralDataType;
   education: AboutEducationDataType;
   career: AboutCareerDataType;
@@ -94,4 +95,15 @@ export interface ISocials {
   telegram: string;
   facebook: string;
   instagram: string;
+}
+
+export interface IFooterData {
+  menuBtn: string;
+  address: string;
+  phone: string;
+}
+
+export interface INavigationItemData {
+  title: string;
+  linkTo: string;
 }

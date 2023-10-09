@@ -1,8 +1,14 @@
 {
-  "navigation": {
-    "home": "Home",
-    "about": "About"
-  },
+  "navigation": [
+    { "title": "На головну", "linkTo": "/" },
+    { "title": "Про лікаря", "linkTo": "about" },
+    { "title": "Переваги", "linkTo": "advantages" },
+    { "title": "Методи лікування", "linkTo": "methods" },
+    { "title": "Результати пацієнтів", "linkTo": "results" },
+    { "title": "Відгуки", "linkTo": "feedback" },
+    { "title": "Питання-Відповіді", "linkTo": "faq" },
+    { "title": "Контакти", "linkTo": "contacts" }
+  ],
   "page": {
     "home": {
       "advantages": {
@@ -180,5 +186,10 @@
     "instagram": "https://www.instagram.com/dr_voitsitskyi/",
     "tiktok": "https://www.tiktok.com/@dr_voitsitskyi",
     "facebook": "https://www.facebook.com/dr.SergiiVoitsitskyi"
+  },
+  "footer": {
+    "menuBtn": "Меню",
+    "address": "Клініка “Медейра” - м. Київ, проспект Перемоги, 67",
+    "phone": "+380933521235"
   }
 }

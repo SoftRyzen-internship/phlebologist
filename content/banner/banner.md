@@ -1,7 +1,9 @@
 ---
 uk:
   title: Вилікуйте варикоз за один сеанс!
-  description:
+  description: >-
     Запишіться на консультацію та отримайте індивідуальний план лікування від
     досвідченого флеболога
+en:
+  title: Cure varicose veins in one session!
 ---
