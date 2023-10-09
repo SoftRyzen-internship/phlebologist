@@ -148,11 +148,24 @@
             "caption": "Адреса:",
             "content": "Клініка “Медейра” - м. Київ, проспект Перемоги, 67"
           },
+          "schedule": {
+            "caption": "Графік роботи:",
+            "content": "Пн-Пт: 09:00 - 19:00"
+          },
           "media": { "caption": "Соціальні мережі:" },
           "location": {
-            "caption": "Де нас знайти?",
-            "content": "Клініка “Медейра”\nм. Київ, проспект Перемоги, 67",
-            "placename": { "firstRow": "Клініка", "secondRow": "Медейра" }
+            "placename": { "firstRow": "Клініка", "secondRow": "Медейра" },
+            "url": "https://maps.app.goo.gl/V33L4LrBKHKBTiqy6",
+            "images": {
+              "map": {
+                "img": "/images/contacts/contacts-map-img@2x.webp",
+                "alt": "Мапа"
+              },
+              "office": {
+                "img": "/images/contacts/contacts-office-img@2x.webp",
+                "alt": "Офіс"
+              }
+            }
           }
         },
         "action": {

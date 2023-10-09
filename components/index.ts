@@ -46,3 +46,4 @@ export { default as QuestionsList } from '@/components/QuestionsList/QuestionsLi
 export { default as QuestionListItem } from '@/components/QuestionListItem/QuestionListItem';
 
 export { default as InfoBlock } from '@/components/InfoBlock/InfoBlock';
+export { default as Location } from '@/components/Location/Location';
