@@ -55,17 +55,18 @@ case:
       en:
         title: Result 3
         description: >
-          !!!EN!!! У мене вже давно був варикоз, але останнім часом ситуація
-          стала гірше, і супроводжувалася сильним болем та набряками. Однак,
-          завдяки рішучості звернутися до професіонала, я отримала необхідну
-          допомогу. Під час консультації лікар докладно пояснив мені процес
-          операції, запевнив, що вона пройде швидко та безболісно, і що після
-          операції я зможу ходити. І справді, все виявилося таким, як обіцяли.
-          Під час операції я не відчула болі. Після операції лікар залишався
-          завжди на зв'язку та відповідав на всі мої запитання, надаючи
-          необхідну підтримку. В результаті я отримала не тільки високоякісне
-          лікування, але й відчуття дбайливості та підтримки від лікаря та його
-          команди. Велике спасибі за це! !!!EN!!!
+          I had been suffering from varicose veins for a long time, but
+          recently, the situation got worse and was accompanied by severe pain
+          and swelling. However, thanks to the determination to seek help from a
+          professional, I received the necessary assistance. During the
+          consultation, the doctor explained the surgery process in detail,
+          assured me that it would be quick and painless, and that I would be
+          able to walk after the operation. And indeed, everything turned out
+          just as promised. I didn't feel any pain during the operation. After
+          the surgery, the doctor was always available and answered all my
+          questions, providing the necessary support. As a result, I not only
+          received high-quality treatment but also a sense of care and support
+          from the doctor and his team. Thank you very much for this!
     before: /uploads/results/results-3-1.jpg
     after: /uploads/results/results-3-2.jpg
   - date: 2023-10-02T21:00:00.000Z
