@@ -10,12 +10,7 @@ import { BurgerMenuProps } from './BurgerMenu.props';
 
 const BurgerMenu: React.FC<BurgerMenuProps> = ({ staticData }) => {
   const [showMenu, setShowMenu] = useState(false);
-  const {
-    linkButton,
-    formButton,
-    langButton: { menuBtn },
-    menuButton,
-  } = staticData.header;
+  const { linkButton, formButton, langButton, menuButton } = staticData.header;
   const {
     navigation,
     socials: { telegram },
@@ -56,7 +51,7 @@ const BurgerMenu: React.FC<BurgerMenuProps> = ({ staticData }) => {
     menuBtnStyles,
     'px-6 py-2 outline-without flex items-center justify-center',
     'uppercase font-medium text-black-dark text-xs leading-normal -tracking-[0.48px]',
-    'rounded-normal bg-white-light mediaHover:hover:bg-gray-light focus:bg-gray-light mediaHover:hover:cursor-pointer',
+    'rounded-normal bg-white-light mediaHover:hover:bg-gray-extra focus:bg-gray-extra mediaHover:hover:cursor-pointer',
     'transition-all duration-300',
   );
 
@@ -90,7 +85,7 @@ const BurgerMenu: React.FC<BurgerMenuProps> = ({ staticData }) => {
                 />
 
                 <MenuActions
-                  data={{ formButton, linkButton, menuBtn, telegram }}
+                  data={{ formButton, linkButton, langButton, telegram }}
                   actionHandler={handleMenuToggle}
                 />
               </div>

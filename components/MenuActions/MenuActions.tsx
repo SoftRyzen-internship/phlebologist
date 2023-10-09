@@ -1,13 +1,13 @@
 import {
-  ButtonPrimary,
   ExternalLinkButton,
   ScrollLinkButton,
+  LocaleSwitcher,
 } from '@/components';
 
 import { MenuActionsProps } from './MenuActions.props';
 
 const MenuActions: React.FC<MenuActionsProps> = ({ data, actionHandler }) => {
-  const { formButton, linkButton, menuBtn, telegram } = data;
+  const { formButton, linkButton, langButton, telegram } = data;
   return (
     <div className="flex flex-col gap-2">
       <ScrollLinkButton
@@ -26,13 +26,7 @@ const MenuActions: React.FC<MenuActionsProps> = ({ data, actionHandler }) => {
         {linkButton}
       </ExternalLinkButton>
 
-      {/* replace with lang switcher */}
-      <ButtonPrimary
-        className={'h-auto w-full px-6 py-2'}
-        actionHandler={actionHandler}
-      >
-        {menuBtn}
-      </ButtonPrimary>
+      <LocaleSwitcher variant="burger-menu" data={langButton} />
     </div>
   );
 };

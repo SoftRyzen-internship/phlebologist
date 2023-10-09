@@ -1,3 +1,5 @@
+import { ILocaleSwitcherData } from '@/types';
+
 export interface MenuActionsProps {
   data: MenuActionData;
   actionHandler: () => void;
@@ -6,6 +8,6 @@ export interface MenuActionsProps {
 type MenuActionData = {
   formButton: string;
   linkButton: string;
-  menuBtn: string;
+  langButton: ILocaleSwitcherData;
   telegram: string;
 };

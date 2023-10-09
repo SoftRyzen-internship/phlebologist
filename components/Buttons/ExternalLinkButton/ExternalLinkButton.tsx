@@ -20,7 +20,7 @@ const ExternalLinkButton: React.FC<ExternalLinkButtonProps> = ({
     'transition-all duration-300',
 
     {
-      'w-full h-auto px-6 py-2 font-medium uppercase text-xs -tracking-[0.48px] bg-white-light text-black-dark mediaHover:hover:bg-gray-light focus:bg-gray-light mediaHover:hover:font-medium focus:font-medium':
+      'w-full h-auto px-6 py-2 font-semibold uppercase text-xs -tracking-[0.48px] bg-white-light text-black-dark mediaHover:hover:bg-gray-extra focus:bg-gray-extra mediaHover:hover:font-semibold focus:font-semibold xl:mediaHover:hover:bg-gray-extra':
         variant === 'menu',
     },
 

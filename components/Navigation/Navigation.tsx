@@ -37,23 +37,24 @@ const Navigation: FC<NavigationProps> = ({
             );
           }
 
-        return (
-          <li className={itemClass} key={linkTo} onClick={actionHandler}>
-            <LinkScroll
-              spy={true}
-              smooth={true}
-              offset={0}
-              duration={500}
-              to={linkTo}
-              href={`#${linkTo}`}
-              onClick={actionHandler}
-            >
-              {title}
-            </LinkScroll>
-          </li>
-        );
-      })}
-    </ul>
+          return (
+            <li className={itemClass} key={linkTo} onClick={actionHandler}>
+              <LinkScroll
+                spy={true}
+                smooth={true}
+                offset={0}
+                duration={500}
+                to={linkTo}
+                href={`#${linkTo}`}
+                onClick={actionHandler}
+              >
+                {title}
+              </LinkScroll>
+            </li>
+          );
+        })}
+      </ul>
+    </nav>
   );
 };
 
