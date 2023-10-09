@@ -107,3 +107,13 @@ export interface INavigationItemData {
   title: string;
   linkTo: string;
 }
+
+export interface IHeaderButtonsData {
+  linkButton: string;
+  formButton: string;
+  langButton: {
+    headerBtn: string;
+    menuBtn: string;
+  };
+  menuButton: string;
+}

@@ -2,21 +2,31 @@
 
 import { useState, useEffect } from 'react';
 import classNames from 'classnames';
+import { animated, useTransition } from '@react-spring/web';
 
 import { BurgerMenuButton, Navigation, MenuActions } from '@/components';
 
-const BurgerMenu = ({ data }) => {
+import { BurgerMenuProps } from './BurgerMenu.props';
+
+const BurgerMenu: React.FC<BurgerMenuProps> = ({ staticData }) => {
   const [showMenu, setShowMenu] = useState(false);
   const {
     linkButton,
     formButton,
     langButton: { menuBtn },
     menuButton,
-  } = data.header;
+  } = staticData.header;
   const {
     navigation,
     socials: { telegram },
-  } = data;
+  } = staticData;
+
+  const transition = useTransition(showMenu, {
+    from: { opacity: 0 },
+    enter: { opacity: 1 },
+    leave: { opacity: 0 },
+    config: { duration: 300 },
+  });
 
   useEffect(() => {
     const onKeyDown = (e: KeyboardEvent) => {
@@ -56,32 +66,36 @@ const BurgerMenu = ({ data }) => {
         {menuButton}
       </BurgerMenuButton>
 
-      {showMenu && (
-        <div
-          className="modal-backdrop fixed left-0 top-0 h-[100vh] w-[100vw]"
-          onClick={handleOverlayClick}
-        >
-          <div
-            className="absolute right-0 top-6 w-full max-w-[320px] text-center md:right-[56px]
-                        md:max-w-[308px] xl:right-[100px] xl:top-[28px] smOnly:px-8"
-          >
-            <BurgerMenuButton onClick={handleMenuToggle} isMenu={true}>
-              {menuButton}
-            </BurgerMenuButton>
+      {transition(
+        (style, item) =>
+          item && (
+            <animated.div
+              className="modal-backdrop fixed left-0 top-0 h-[100vh] w-[100vw]"
+              onClick={handleOverlayClick}
+              style={style}
+            >
+              <div
+                className="absolute right-0 top-6 w-full max-w-[320px] text-center md:right-[56px]
+                          md:max-w-[308px] xl:right-[100px] xl:top-[28px] smOnly:px-8"
+              >
+                <BurgerMenuButton onClick={handleMenuToggle} isMenu={true}>
+                  {menuButton}
+                </BurgerMenuButton>
 
-            <Navigation
-              data={navigation}
-              className="flex flex-col gap-2 pb-2"
-              itemClassName={navBtnStyles}
-              actionHandler={handleMenuToggle}
-            />
+                <Navigation
+                  data={navigation}
+                  className="flex flex-col gap-2 pb-2"
+                  itemClassName={navBtnStyles}
+                  actionHandler={handleMenuToggle}
+                />
 
-            <MenuActions
-              data={{ formButton, linkButton, menuBtn, telegram }}
-              actionHandler={handleMenuToggle}
-            />
-          </div>
-        </div>
+                <MenuActions
+                  data={{ formButton, linkButton, menuBtn, telegram }}
+                  actionHandler={handleMenuToggle}
+                />
+              </div>
+            </animated.div>
+          ),
       )}
     </>
   );

@@ -4,7 +4,9 @@ import {
   ScrollLinkButton,
 } from '@/components';
 
-const MenuActions = ({ data, actionHandler }) => {
+import { MenuActionsProps } from './MenuActions.props';
+
+const MenuActions: React.FC<MenuActionsProps> = ({ data, actionHandler }) => {
   const { formButton, linkButton, menuBtn, telegram } = data;
   return (
     <div className="flex flex-col gap-2">

@@ -15,7 +15,7 @@ const Header = async ({ lang }: { lang: Locale }) => {
           </li>
         </ul>
         <LocaleSwitcher />
-        <BurgerMenu data={{ navigation, header, socials }} />
+        <BurgerMenu staticData={{ navigation, header, socials }} />
       </div>
     </header>
   );
