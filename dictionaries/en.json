@@ -99,11 +99,14 @@
         ]
       },
       "patient_results": {
+        "title": "Результати наших пацієнтів",
+        "buttonTextMobile": "Запис на консультацію",
+        "buttonText": "Записатись на консультацію",
         "slider": {
-          "beforeAltText": "Before treatment image",
-          "afterAltText": "After treatment image",
-          "beforeHandleText": "Before",
-          "afterHandleText": "After"
+          "beforeAltText": "Зображення до лікування",
+          "afterAltText": "Зображення після лікування",
+          "beforeHandleText": "До",
+          "afterHandleText": "Після"
         }
       },
       "faq": {

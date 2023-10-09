@@ -1,7 +1,12 @@
 import { Locale } from '@/i18n.config';
 import { getDictionary } from '@/utils/dictionary';
 
-import { AboutSection, AdvantagesSection, FAQSection } from '@/sections';
+import {
+  AboutSection,
+  AdvantagesSection,
+  ResultsSection,
+  FAQSection,
+} from '@/sections';
 import {
   // SliderBeforeAfter,
   IconBtn,
@@ -121,6 +126,11 @@ export default async function Home({
       />
 
       <AdvantagesSection staticData={page.home.advantages} />
+      <ResultsSection
+        staticData={page.home.patient_results}
+        iconData={page.home.iconBtnData}
+        className="mb-40"
+      />
       <FAQSection staticData={{ faq: page.home.faq, socials }} />
 
       {/* Simple InfoBlock with text */}
