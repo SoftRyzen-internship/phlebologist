@@ -1,7 +1,22 @@
 {
-  "navigation": {
-    "home": "Home",
-    "about": "About"
+  "navigation": [
+    { "title": "На головну", "linkTo": "/" },
+    { "title": "Про лікаря", "linkTo": "about" },
+    { "title": "Переваги", "linkTo": "advantages" },
+    { "title": "Методи лікування", "linkTo": "methods" },
+    { "title": "Результати пацієнтів", "linkTo": "results" },
+    { "title": "Відгуки", "linkTo": "feedback" },
+    { "title": "Питання-Відповіді", "linkTo": "faq" },
+    { "title": "Контакти", "linkTo": "contacts" }
+  ],
+  "header": {
+    "linkButton": "Напишіть нам",
+    "formButton": "Записатись на консультацію",
+    "langButton": {
+      "headerBtn": "Укр",
+      "menuBtn": "Змінити на українську"
+    },
+    "menuButton": "Menu"
   },
   "page": {
     "home": {
@@ -139,6 +154,39 @@
             "answer": "Враховуючи мінімальні доступи, що дозволяють виконати діаметри вен, при виконанні операцій практично не лишається рубців. Хоча в результаті виконання сучасних флебологічних операцій отримується мінімальна травматизація тканин в будь якій стадії захворювання все ж ранні та не ускладнені варіанти захворювання легше переносяться пацієнтами та дають кращий естетичний результат."
           }
         ]
+      },
+      "contacts": {
+        "heading": "Контакти",
+        "contactData": {
+          "phone": { "caption": "Телефон:", "content": "+380933521235" },
+          "address": {
+            "caption": "Адреса:",
+            "content": "Клініка “Медейра” - м. Київ, проспект Берестейський, 67"
+          },
+          "schedule": {
+            "caption": "Графік роботи:",
+            "content": "Пн-Пт: 09:00 - 19:00"
+          },
+          "media": { "caption": "Соціальні мережі:" },
+          "location": {
+            "placename": { "firstRow": "Клініка", "secondRow": "Медейра" },
+            "url": "https://maps.app.goo.gl/V33L4LrBKHKBTiqy6",
+            "images": {
+              "map": {
+                "img": "/images/contacts/contacts-map-img@2x.webp",
+                "alt": "Мапа"
+              },
+              "office": {
+                "img": "/images/contacts/contacts-office-img@2x.webp",
+                "alt": "Офіс"
+              }
+            }
+          }
+        },
+        "action": {
+          "instruction": "Напишіть нам у месенджері",
+          "actionName": "Написати у Telegram"
+        }
       }
     }
   },
@@ -147,5 +195,9 @@
     "instagram": "https://www.instagram.com/dr_voitsitskyi/",
     "tiktok": "https://www.tiktok.com/@dr_voitsitskyi",
     "facebook": "https://www.facebook.com/dr.SergiiVoitsitskyi"
+  },
+  "footer": {
+    "address": "Клініка “Медейра” - м. Київ, проспект Перемоги, 67",
+    "phone": "+380933521235"
   }
 }

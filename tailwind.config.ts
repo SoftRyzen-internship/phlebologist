@@ -72,7 +72,7 @@ module.exports = {
         },
       },
       // LINE-HEIGHTS
-      lineHeight: { normal: '1.21' },
+      lineHeight: { small: '1', normal: '1.21', large: '1.5' },
       // CONTAINER
       container: {
         center: true,

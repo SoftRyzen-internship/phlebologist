@@ -96,3 +96,28 @@ export interface ISocials {
   facebook: string;
   instagram: string;
 }
+
+export interface IFooterData {
+  address: string;
+  phone: string;
+}
+
+export interface INavigationItemData {
+  title: string;
+  linkTo: string;
+}
+
+export interface IHeaderButtonsData {
+  linkButton: string;
+  formButton: string;
+  langButton: {
+    headerBtn: string;
+    menuBtn: string;
+  };
+  menuButton: string;
+}
+
+export interface ILocaleSwitcherData {
+  headerBtn: string;
+  menuBtn: string;
+}
