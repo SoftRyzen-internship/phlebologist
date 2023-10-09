@@ -86,17 +86,18 @@ case:
       en:
         title: Result 4
         description: >
-          !!!EN!!! Завжди соромилась своїх ніг через вени, постійно ховала їх
-          під одягом. Боялась, що після операції будуть рубці через розрізи, і
-          це мене тримало від вирішального кроку. Проте коли я звернулася до
-          лікаря, він підібрав для мене сучасну методику та провів операцію без
-          розрізів. Все це відбулося дуже швидко, всього за 1,5 години. Жалкую,
-          що я не звернулася раніше, адже результати дійсно вражаючі. Тепер мої
-          ноги виглядають просто чудово, і я можу з радістю показувати їх світу.
-          Крім того, зникли всі неприємні відчуття - біль і набряки стали
-          минулим. Величезне спасибі лікарю Войціцькому за вашу неймовірну
-          роботу і те, що ви повернули мені впевненість у собі та здорові ноги!
-          !!!EN!!!
+          I had always been ashamed of my legs because of the veins, constantly
+          hiding them under clothing. I was afraid that there would be scars
+          after the surgery due to incisions, which held me back from taking the
+          decisive step. However, when I consulted with the doctor, he
+          recommended a modern technique for me and performed the operation
+          without incisions. All of this happened very quickly, in just 1.5
+          hours. I regret not seeking help earlier because the results are truly
+          impressive. Now my legs look simply amazing, and I can proudly show
+          them to the world. Moreover, all the unpleasant sensations - pain and
+          swelling - have become a thing of the past. Many thanks to Dr.
+          Voitsitskyi for your incredible work and for giving me confidence in
+          myself and healthy legs!
     before: /uploads/results/results-4-1.jpg
     after: /uploads/results/results-4-2.jpg
 ---
