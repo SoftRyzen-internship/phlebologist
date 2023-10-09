@@ -45,8 +45,8 @@ case:
           and, most importantly, it left minimal traces - no scars! In just an
           hour, I got rid of pain and swelling, and my legs look great. Thank
           you, Dr. Yuriovych, for giving me a new life!
-    before: ''
-    after: ''
+    before: /uploads/results/results-2-1.webp
+    after: /uploads/results/results-2-2.webp
   - date: 2023-10-02T21:00:00.000Z
     content:
       uk:
