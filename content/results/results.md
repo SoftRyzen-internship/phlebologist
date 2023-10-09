@@ -47,7 +47,7 @@ case:
         description: ''
     before: /uploads/results/1294303696_x_5c4ad3be.jpg
     after: /uploads/results/0000-0000-3154841-696.jpg
-  - date: 2023-08-31T21:00:00.000Z
+  - date: 2023-10-02T21:00:00.000Z
     content:
       uk:
         title: Результати склеротерапії
@@ -58,7 +58,7 @@ case:
           пройшла швидко і безболісно, і що ще важливіше - без залишених рубців.
           За 1,5 години я знову мав здорові ноги, біль відступив, а набряки
           зникли.
-    before: /uploads/results/0000-0000-3154833-696.jpg
-    after: /uploads/results/0000-0000-3154836-696.jpg
+    before: /uploads/results/results-3-1.jpg
+    after: /uploads/results/results-3-2.jpg
 ---
 
