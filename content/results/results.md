@@ -26,14 +26,14 @@ case:
       en:
         title: Result 2
         description: >
-          !!!EN!!! Варикоз став невіддільною частиною мого життя. Біль і набряки
-          супроводжували мене безперервно, і я вже подумувала, що немає виходу.
-          Тоді подруга порадила мені звернутися до Сергія Юрійовича. Цей лікар
-          не лише змінив моє життя, але й надав відчуття здорових ніг. Операція
-          пройшла неймовірно швидко та безболісно, і, що найголовніше, залишила
-          мінімум слідів - ніяких рубців! Лише за годину я позбулася болю та
-          набряків, і мої ноги виглядають чудово. Дякую, лікарю Юрійовичу, за
-          нове життя! !!!EN!!!
+          Varicose veins became an inseparable part of my life. Pain and
+          swelling accompanied me continuously, and I was starting to think
+          there was no way out. Then, a friend recommended that I see Dr. Sergii
+          Yuriovych. This doctor not only changed my life but also gave me the
+          feeling of healthy legs. The surgery was incredibly fast and painless,
+          and, most importantly, it left minimal traces - no scars! In just an
+          hour, I got rid of pain and swelling, and my legs look great. Thank
+          you, Dr. Yuriovych, for giving me a new life!
     before: /uploads/results/results-2-1.jpg
     after: /uploads/results/results-2-2.jpg
   - date: 2023-10-02T21:00:00.000Z
