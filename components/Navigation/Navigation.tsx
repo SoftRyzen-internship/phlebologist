@@ -12,6 +12,7 @@ const Navigation: FC<NavigationProps> = ({
   variant = 'header',
   className = '',
   itemClassName = '',
+  actionHandler,
 }) => {
   const itemClass = classnames(
     {
@@ -29,14 +30,14 @@ const Navigation: FC<NavigationProps> = ({
       {data.map(({ title, linkTo }) => {
         if (linkTo.includes('/')) {
           return (
-            <li className={itemClass} key={linkTo}>
+            <li className={itemClass} key={linkTo} onClick={actionHandler}>
               <Link href={linkTo}>{title}</Link>
             </li>
           );
         }
 
         return (
-          <li className={itemClass} key={linkTo}>
+          <li className={itemClass} key={linkTo} onClick={actionHandler}>
             <LinkScroll
               spy={true}
               smooth={true}

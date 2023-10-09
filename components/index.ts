@@ -1,6 +1,7 @@
 export { default as Header } from '@/components/Header/Header';
 export { default as LocaleSwitcher } from '@/components/LocaleSwitcher/LocaleSwitcher';
 export { default as BurgerMenu } from '@/components/BurgerMenu/BurgerMenu';
+export { default as MenuActions } from '@/components/MenuActions/MenuActions';
 
 // tina testing
 export { default as Test } from '@/components/Test/Test';

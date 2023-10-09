@@ -5,4 +5,5 @@ export interface NavigationProps {
   variant?: 'header' | 'footer';
   className?: string;
   itemClassName?: string;
+  actionHandler?: () => void;
 }

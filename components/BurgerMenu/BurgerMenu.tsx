@@ -3,13 +3,7 @@
 import { useState, useEffect } from 'react';
 import classNames from 'classnames';
 
-import {
-  BurgerMenuButton,
-  ButtonPrimary,
-  Navigation,
-  ExternalLinkButton,
-  ScrollLinkButton,
-} from '@/components';
+import { BurgerMenuButton, Navigation, MenuActions } from '@/components';
 
 const BurgerMenu = ({ data }) => {
   const [showMenu, setShowMenu] = useState(false);
@@ -48,25 +42,11 @@ const BurgerMenu = ({ data }) => {
 
   const menuBtnStyles = classNames('w-full h-auto px-6 py-2');
 
-  const externalBtnStyles = classNames(
-    menuBtnStyles,
-    'font-medium bg-white-light text-black-dark mediaHover:hover:bg-gray-light focus:bg-gray-light',
-    'uppercase outline-without flex items-center justify-center gap-[10px] rounded-normal text-xs leading-normal -tracking-[0.48px]',
-    'mediaHover:hover:cursor-pointer mediaHover:hover:font-medium focus:font-medium',
-  );
-
-  const scrollBtnStyles = classNames(
-    menuBtnStyles,
-    'font-semibold uppercase text-xs leading-normal -tracking-[0.48px] text-white bg-primary-dark-400 xl:bg-primary-dark-400',
-    'flex items-center justify-center',
-    'mediaHover:hover:bg-primary-dark-300 focus:bg-primary-dark-300',
-    'mediaHover:hover:cursor-pointer mediaHover:hover:font-semibold focus:font-semibold',
-  );
-
   const navBtnStyles = classNames(
     menuBtnStyles,
-    'px-6 py-2 font-medium bg-white-light text-black-dark mediaHover:hover:bg-gray-light focus:bg-gray-light',
-    'uppercase outline-without flex items-center justify-center gap-[10px] rounded-normal text-black-dark text-xs leading-normal -tracking-[0.48px] mediaHover:hover:cursor-pointer',
+    'px-6 py-2 outline-without flex items-center justify-center',
+    'uppercase font-medium text-black-dark text-xs leading-normal -tracking-[0.48px]',
+    'rounded-normal bg-white-light mediaHover:hover:bg-gray-light focus:bg-gray-light mediaHover:hover:cursor-pointer',
     'transition-all duration-300',
   );
 
@@ -82,8 +62,8 @@ const BurgerMenu = ({ data }) => {
           onClick={handleOverlayClick}
         >
           <div
-            className="absolute right-3 top-[28px]
-                        w-full max-w-[308px] text-center md:right-[100px]"
+            className="absolute right-0 top-6 w-full max-w-[320px] text-center md:right-[56px]
+                        md:max-w-[308px] xl:right-[100px] xl:top-[28px] smOnly:px-8"
           >
             <BurgerMenuButton onClick={handleMenuToggle} isMenu={true}>
               {menuButton}
@@ -93,25 +73,13 @@ const BurgerMenu = ({ data }) => {
               data={navigation}
               className="flex flex-col gap-2 pb-2"
               itemClassName={navBtnStyles}
+              actionHandler={handleMenuToggle}
             />
 
-            <div className="flex flex-col gap-2">
-              <ScrollLinkButton
-                className={scrollBtnStyles}
-                linkto="consultation"
-              >
-                {formButton}
-              </ScrollLinkButton>
-
-              <ExternalLinkButton
-                linkto={telegram}
-                className={externalBtnStyles}
-              >
-                {linkButton}
-              </ExternalLinkButton>
-
-              <ButtonPrimary className={menuBtnStyles}>{menuBtn}</ButtonPrimary>
-            </div>
+            <MenuActions
+              data={{ formButton, linkButton, menuBtn, telegram }}
+              actionHandler={handleMenuToggle}
+            />
           </div>
         </div>
       )}
