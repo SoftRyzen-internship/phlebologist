@@ -98,7 +98,6 @@ export interface ISocials {
 }
 
 export interface IFooterData {
-  menuBtn: string;
   address: string;
   phone: string;
 }
@@ -116,4 +115,9 @@ export interface IHeaderButtonsData {
     menuBtn: string;
   };
   menuButton: string;
+}
+
+export interface ILocaleSwitcherData {
+  headerBtn: string;
+  menuBtn: string;
 }

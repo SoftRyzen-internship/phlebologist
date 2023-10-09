@@ -26,15 +26,16 @@ const Navigation: FC<NavigationProps> = ({
   );
 
   return (
-    <ul className={className}>
-      {data.map(({ title, linkTo }) => {
-        if (linkTo.includes('/')) {
-          return (
-            <li className={itemClass} key={linkTo} onClick={actionHandler}>
-              <Link href={linkTo}>{title}</Link>
-            </li>
-          );
-        }
+    <nav>
+      <ul className={className}>
+        {data.map(({ title, linkTo }) => {
+          if (linkTo.includes('/')) {
+            return (
+              <li className={itemClass} key={linkTo} onClick={actionHandler}>
+                <Link href={linkTo}>{title}</Link>
+              </li>
+            );
+          }
 
         return (
           <li className={itemClass} key={linkTo} onClick={actionHandler}>

@@ -1,7 +1,12 @@
 import { Locale } from '@/i18n.config';
 import { getDictionary } from '@/utils/dictionary';
 
-import { AboutSection, AdvantagesSection, FAQSection } from '@/sections';
+import {
+  AboutSection,
+  AdvantagesSection,
+  FAQSection,
+  ContactsSection,
+} from '@/sections';
 import {
   // SliderBeforeAfter,
   IconBtn,
@@ -13,8 +18,8 @@ import {
   // ExternalLinkButton,
   // RoutingLinkButton,
   // ScrollLinkButton,
-  SocialsList,
-  InfoBlock,
+  // SocialsList,
+  // InfoBlock,
 } from '@/components';
 
 export default async function Home({
@@ -36,23 +41,23 @@ export default async function Home({
 
   return (
     <main>
-      <div className="flex flex-col items-center justify-center gap-6 py-12">
-        {/* <ButtonPrimary>Записатись на консультацію</ButtonPrimary> */}
-        {/* <ButtonSecondary linkto="">Записатись</ButtonSecondary> */}
-        {/* <SubmitButton>Відправити</SubmitButton> */}
-        {/* <ExternalLinkButton linkto="">Написати у Telegram</ExternalLinkButton> */}
-        {/* <RoutingLinkButton linkto="">Детальніше про метод</RoutingLinkButton> */}
-        {/* <ScrollLinkButton linkto="">Записатись</ScrollLinkButton> */}
-        {/* <SliderBeforeAfter page={page} /> */}
-      </div>
+      {/* <div className="flex flex-col items-center justify-center gap-6 py-12"> */}
+      {/* <ButtonPrimary>Записатись на консультацію</ButtonPrimary> */}
+      {/* <ButtonSecondary linkto="">Записатись</ButtonSecondary> */}
+      {/* <SubmitButton>Відправити</SubmitButton> */}
+      {/* <ExternalLinkButton linkto="">Написати у Telegram</ExternalLinkButton> */}
+      {/* <RoutingLinkButton linkto="">Детальніше про метод</RoutingLinkButton> */}
+      {/* <ScrollLinkButton linkto="">Записатись</ScrollLinkButton> */}
+      {/* <SliderBeforeAfter page={page} /> */}
+      {/* </div> */}
 
-      <SocialsList
+      {/* <SocialsList
         variant="footer"
         staticData={{
           iconBtnData: page.home.iconBtnData,
           socials: socials,
         }}
-      />
+      /> */}
 
       <AboutSection lang={lang} staticData={page.home.about} />
 
@@ -123,17 +128,9 @@ export default async function Home({
       <AdvantagesSection staticData={page.home.advantages} />
       <FAQSection staticData={{ faq: page.home.faq, socials }} />
 
-      {/* Simple InfoBlock with text */}
-
-      <div>
-        <InfoBlock
-          config={{
-            section: 'treatment',
-            title: 'Lorem ipsum',
-            content: 'Lorem ipsum dolor',
-          }}
-        />
-      </div>
+      <ContactsSection
+        staticData={{ pageData: page.home, socialData: socials }}
+      />
     </main>
   );
 }
