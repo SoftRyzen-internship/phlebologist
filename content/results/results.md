@@ -45,8 +45,8 @@ case:
           and, most importantly, it left minimal traces - no scars! In just an
           hour, I got rid of pain and swelling, and my legs look great. Thank
           you, Dr. Yuriovych, for giving me a new life!
-    before: /uploads/results/results-2-1.jpg
-    after: /uploads/results/results-2-2.jpg
+    before: ''
+    after: ''
   - date: 2023-10-02T21:00:00.000Z
     content:
       uk:
@@ -78,8 +78,8 @@ case:
           questions, providing the necessary support. As a result, I not only
           received high-quality treatment but also a sense of care and support
           from the doctor and his team. Thank you very much for this!
-    before: /uploads/results/results-3-1.jpg
-    after: /uploads/results/results-3-2.jpg
+    before: ''
+    after: ''
   - date: 2023-10-02T21:00:00.000Z
     content:
       uk:
@@ -110,7 +110,7 @@ case:
           swelling - have become a thing of the past. Many thanks to Dr.
           Voitsitskyi for your incredible work and for giving me confidence in
           myself and healthy legs!
-    before: /uploads/results/results-4-1.jpg
-    after: /uploads/results/results-4-2.jpg
+    before: ''
+    after: ''
 ---
 
