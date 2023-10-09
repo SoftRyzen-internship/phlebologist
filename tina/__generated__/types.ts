@@ -336,13 +336,13 @@ export type AboutCertificatesDescription = {
 export type AboutCertificates = {
   __typename?: 'AboutCertificates';
   photo: Scalars['String']['output'];
-  description?: Maybe<AboutCertificatesDescription>;
+  description: AboutCertificatesDescription;
 };
 
 export type About = Node &
   Document & {
     __typename?: 'About';
-    photo: Scalars['String']['output'];
+    photo?: Maybe<Scalars['String']['output']>;
     video?: Maybe<Scalars['String']['output']>;
     general: AboutGeneral;
     education: AboutEducation;
@@ -505,7 +505,7 @@ export type BannerEn = {
 export type Banner = Node &
   Document & {
     __typename?: 'Banner';
-    uk: BannerUk;
+    uk?: Maybe<BannerUk>;
     en?: Maybe<BannerEn>;
     id: Scalars['ID']['output'];
     _sys: SystemInfo;
@@ -560,7 +560,7 @@ export type ResultsCaseContent = {
 
 export type ResultsCase = {
   __typename?: 'ResultsCase';
-  date: Scalars['String']['output'];
+  date?: Maybe<Scalars['String']['output']>;
   content?: Maybe<ResultsCaseContent>;
   before: Scalars['String']['output'];
   after: Scalars['String']['output'];
@@ -635,7 +635,7 @@ export type ReviewsUkCase = {
   video?: Maybe<Scalars['String']['output']>;
   name: Scalars['String']['output'];
   telegram?: Maybe<Scalars['String']['output']>;
-  review: Scalars['JSON']['output'];
+  review?: Maybe<Scalars['JSON']['output']>;
 };
 
 export type ReviewsUk = {
@@ -650,7 +650,7 @@ export type ReviewsEnCase = {
   video?: Maybe<Scalars['String']['output']>;
   name: Scalars['String']['output'];
   telegram?: Maybe<Scalars['String']['output']>;
-  review: Scalars['JSON']['output'];
+  review?: Maybe<Scalars['JSON']['output']>;
 };
 
 export type ReviewsEn = {
@@ -998,7 +998,7 @@ export type ReviewsMutation = {
 
 export type AboutPartsFragment = {
   __typename?: 'About';
-  photo: string;
+  photo?: string | null;
   video?: string | null;
   general: {
     __typename: 'AboutGeneral';
@@ -1072,17 +1072,17 @@ export type AboutPartsFragment = {
   certificates: Array<{
     __typename: 'AboutCertificates';
     photo: string;
-    description?: {
+    description: {
       __typename: 'AboutCertificatesDescription';
       uk?: { __typename: 'AboutCertificatesDescriptionUk'; alt: string } | null;
       en?: { __typename: 'AboutCertificatesDescriptionEn'; alt: string } | null;
-    } | null;
+    };
   }>;
 };
 
 export type BannerPartsFragment = {
   __typename?: 'Banner';
-  uk: { __typename: 'BannerUk'; title: string; description: string };
+  uk?: { __typename: 'BannerUk'; title: string; description: string } | null;
   en?: { __typename: 'BannerEn'; title: string; description: string } | null;
 };
 
@@ -1090,7 +1090,7 @@ export type ResultsPartsFragment = {
   __typename?: 'Results';
   case?: Array<{
     __typename: 'ResultsCase';
-    date: string;
+    date?: string | null;
     before: string;
     after: string;
     content?: {
@@ -1120,7 +1120,7 @@ export type ReviewsPartsFragment = {
       video?: string | null;
       name: string;
       telegram?: string | null;
-      review: any;
+      review?: any | null;
     } | null> | null;
   } | null;
   en?: {
@@ -1132,7 +1132,7 @@ export type ReviewsPartsFragment = {
       video?: string | null;
       name: string;
       telegram?: string | null;
-      review: any;
+      review?: any | null;
     } | null> | null;
   } | null;
 };
@@ -1146,7 +1146,7 @@ export type AboutQuery = {
   about: {
     __typename?: 'About';
     id: string;
-    photo: string;
+    photo?: string | null;
     video?: string | null;
     _sys: {
       __typename?: 'SystemInfo';
@@ -1229,7 +1229,7 @@ export type AboutQuery = {
     certificates: Array<{
       __typename: 'AboutCertificates';
       photo: string;
-      description?: {
+      description: {
         __typename: 'AboutCertificatesDescription';
         uk?: {
           __typename: 'AboutCertificatesDescriptionUk';
@@ -1239,7 +1239,7 @@ export type AboutQuery = {
           __typename: 'AboutCertificatesDescriptionEn';
           alt: string;
         } | null;
-      } | null;
+      };
     }>;
   };
 };
@@ -1271,7 +1271,7 @@ export type AboutConnectionQuery = {
       node?: {
         __typename?: 'About';
         id: string;
-        photo: string;
+        photo?: string | null;
         video?: string | null;
         _sys: {
           __typename?: 'SystemInfo';
@@ -1354,7 +1354,7 @@ export type AboutConnectionQuery = {
         certificates: Array<{
           __typename: 'AboutCertificates';
           photo: string;
-          description?: {
+          description: {
             __typename: 'AboutCertificatesDescription';
             uk?: {
               __typename: 'AboutCertificatesDescriptionUk';
@@ -1364,7 +1364,7 @@ export type AboutConnectionQuery = {
               __typename: 'AboutCertificatesDescriptionEn';
               alt: string;
             } | null;
-          } | null;
+          };
         }>;
       } | null;
     } | null> | null;
@@ -1389,7 +1389,7 @@ export type BannerQuery = {
       relativePath: string;
       extension: string;
     };
-    uk: { __typename: 'BannerUk'; title: string; description: string };
+    uk?: { __typename: 'BannerUk'; title: string; description: string } | null;
     en?: { __typename: 'BannerEn'; title: string; description: string } | null;
   };
 };
@@ -1430,7 +1430,11 @@ export type BannerConnectionQuery = {
           relativePath: string;
           extension: string;
         };
-        uk: { __typename: 'BannerUk'; title: string; description: string };
+        uk?: {
+          __typename: 'BannerUk';
+          title: string;
+          description: string;
+        } | null;
         en?: {
           __typename: 'BannerEn';
           title: string;
@@ -1461,7 +1465,7 @@ export type ResultsQuery = {
     };
     case?: Array<{
       __typename: 'ResultsCase';
-      date: string;
+      date?: string | null;
       before: string;
       after: string;
       content?: {
@@ -1519,7 +1523,7 @@ export type ResultsConnectionQuery = {
         };
         case?: Array<{
           __typename: 'ResultsCase';
-          date: string;
+          date?: string | null;
           before: string;
           after: string;
           content?: {
@@ -1568,7 +1572,7 @@ export type ReviewsQuery = {
         video?: string | null;
         name: string;
         telegram?: string | null;
-        review: any;
+        review?: any | null;
       } | null> | null;
     } | null;
     en?: {
@@ -1580,7 +1584,7 @@ export type ReviewsQuery = {
         video?: string | null;
         name: string;
         telegram?: string | null;
-        review: any;
+        review?: any | null;
       } | null> | null;
     } | null;
   };
@@ -1631,7 +1635,7 @@ export type ReviewsConnectionQuery = {
             video?: string | null;
             name: string;
             telegram?: string | null;
-            review: any;
+            review?: any | null;
           } | null> | null;
         } | null;
         en?: {
@@ -1643,7 +1647,7 @@ export type ReviewsConnectionQuery = {
             video?: string | null;
             name: string;
             telegram?: string | null;
-            review: any;
+            review?: any | null;
           } | null> | null;
         } | null;
       } | null;
@@ -2230,7 +2234,7 @@ export const ExperimentalGetTinaClient = () =>
   getSdk(
     generateRequester(
       createClient({
-        url: 'https://content.tinajs.io/1.4/content/112741f1-bcd7-4118-ba69-e56683058d98/github/main',
+        url: 'http://localhost:4001/graphql',
         queries,
       }),
     ),
