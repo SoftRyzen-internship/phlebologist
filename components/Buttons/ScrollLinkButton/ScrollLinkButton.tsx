@@ -18,7 +18,7 @@ const ScrollLinkButton: React.FC<ScrollLinkButtonProps> = ({
     },
 
     {
-      'w-[224px] md:w-[448px] bg-gray-light xl:bg-white mediaHover:hover:bg-gray-light focus:bg-gray-light':
+      'w-[224px] md:w-[448px] bg-gray-light xl:bg-white mediaHover:hover:bg-gray-light focus:bg-gray-light uppercase':
         variant === 'dark',
     },
 

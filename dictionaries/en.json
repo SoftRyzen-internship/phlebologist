@@ -9,6 +9,15 @@
     { "title": "Питання-Відповіді", "linkTo": "faq" },
     { "title": "Контакти", "linkTo": "contacts" }
   ],
+  "header": {
+    "linkButton": "Напишіть нам",
+    "formButton": "Записатись на консультацію",
+    "langButton": {
+      "headerBtn": "Укр",
+      "menuBtn": "Change to Укр"
+    },
+    "menuButton": "Меню"
+  },
   "page": {
     "home": {
       "advantages": {
@@ -155,7 +164,6 @@
     "facebook": "https://www.facebook.com/dr.SergiiVoitsitskyi"
   },
   "footer": {
-    "menuBtn": "Меню",
     "address": "Клініка “Медейра” - м. Київ, проспект Перемоги, 67",
     "phone": "+380933521235"
   }
