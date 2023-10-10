@@ -9,18 +9,16 @@ import { SliderBeforeAfterProps } from './SliderBeforeAfter.props';
 import { SliderBeforeAfterHandle } from '@/components';
 
 const SliderBeforeAfter: React.FC<SliderBeforeAfterProps> = ({
-  page,
+  data,
+  staticData,
   className = '',
 }) => {
-  // TODO get photos from Tina
-  const before = 'images/before-after/1.jpg';
-  const after = 'images/before-after/2.jpg';
+  const { before, after } = data;
 
-  // TODO get ALT-text from Tina
-  const { beforeAltText, afterAltText } = page.home.patient_results.slider;
+  const { beforeAltText, afterAltText } = staticData;
 
   const sliderWrapperClass = classnames(
-    'w-[256px] h-[380px] rounded-[20px] md:w-[320px] md:h-[497px] md:rounded-3xl xl:w-[560px] xl:h-[503px] bg-gray-light overflow-hidden',
+    'w-full h-[380px] shrink-0 rounded-medium md:w-[448px] md:h-[497px] md:rounded-large xl:w-[560px] xl:h-full bg-gray-light overflow-hidden mb-5 md:mb-8 xl:mb-0',
     className,
   );
 
@@ -31,7 +29,7 @@ const SliderBeforeAfter: React.FC<SliderBeforeAfterProps> = ({
         leftImageAlt={beforeAltText}
         rightImage={after}
         rightImageAlt={afterAltText}
-        handle={<SliderBeforeAfterHandle page={page} />}
+        handle={<SliderBeforeAfterHandle staticData={staticData} />}
         sliderLineWidth={3}
         sliderLineColor="#ECEEF2"
       />

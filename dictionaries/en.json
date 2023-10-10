@@ -115,9 +115,13 @@
         ]
       },
       "patient_results": {
+        "title": "Results of our patients",
+        "secondaryTitle": "Patient's history",
+        "buttonTextMobile": "Schedule a consultation",
+        "buttonText": "Schedule a consultation",
         "slider": {
-          "beforeAltText": "Before treatment image",
-          "afterAltText": "After treatment image",
+          "beforeAltText": "Image of a condition before treatment",
+          "afterAltText": "Image of a condition after treatment",
           "beforeHandleText": "Before",
           "afterHandleText": "After"
         }
