@@ -12,6 +12,7 @@ const Navigation: FC<NavigationProps> = ({
   variant = 'header',
   className = '',
   itemClassName = '',
+  actionHandler,
 }) => {
   const itemClass = classnames(
     {
@@ -25,32 +26,35 @@ const Navigation: FC<NavigationProps> = ({
   );
 
   return (
-    <ul className={className}>
-      {data.map(({ title, linkTo }) => {
-        if (linkTo.includes('/')) {
+    <nav>
+      <ul className={className}>
+        {data.map(({ title, linkTo }) => {
+          if (linkTo.includes('/')) {
+            return (
+              <li className={itemClass} key={linkTo} onClick={actionHandler}>
+                <Link href={linkTo}>{title}</Link>
+              </li>
+            );
+          }
+
           return (
-            <li className={itemClass} key={linkTo}>
-              <Link href={linkTo}>{title}</Link>
+            <li className={itemClass} key={linkTo} onClick={actionHandler}>
+              <LinkScroll
+                spy={true}
+                smooth={true}
+                offset={0}
+                duration={500}
+                to={linkTo}
+                href={`#${linkTo}`}
+                onClick={actionHandler}
+              >
+                {title}
+              </LinkScroll>
             </li>
           );
-        }
-
-        return (
-          <li className={itemClass} key={linkTo}>
-            <LinkScroll
-              spy={true}
-              smooth={true}
-              offset={0}
-              duration={500}
-              to={linkTo}
-              href={`#${linkTo}`}
-            >
-              {title}
-            </LinkScroll>
-          </li>
-        );
-      })}
-    </ul>
+        })}
+      </ul>
+    </nav>
   );
 };
 

@@ -308,11 +308,12 @@ The button of `Form`.
 
 Has `a` tag and leads to an external source.
 
-| Prop        | Default     | Description                        |
-| ----------- | ----------- | ---------------------------------- |
-| `linkto `   | `undefined` | the address of the link            |
-| `className` | `undefined` | add any custom styles              |
-| `children`  | `undefined` | a necessary prop. any text content |
+| Prop        | Default     | Description                                   |
+| ----------- | ----------- | --------------------------------------------- |
+| `linkto `   | `undefined` | the address of the link                       |
+| `className` | `undefined` | add any custom styles                         |
+| `children`  | `undefined` | a necessary prop. any text content            |
+| `variant`   | `default`   | choose the style variant: `default` or `menu` |
 
 - ### RoutingLinkButton
 
@@ -328,12 +329,12 @@ Has `a` tag and provides navigation between routes.
 
 Has `a` tag and provide scrolling to the appropriate `section`.
 
-| Prop        | Default     | Description                                |
-| ----------- | ----------- | ------------------------------------------ |
-| `linkto `   | `undefined` | the address of the link                    |
-| `variant`   | `light`     | choose the color variant `light` or `dark` |
-| `className` | `undefined` | add any custom styles                      |
-| `children`  | `undefined` | a necessary prop. any text content         |
+| Prop        | Default     | Description                                         |
+| ----------- | ----------- | --------------------------------------------------- |
+| `linkto `   | `undefined` | the address of the link                             |
+| `variant`   | `light`     | choose the color variant: `light`, `dark` or `menu` |
+| `className` | `undefined` | add any custom styles                               |
+| `children`  | `undefined` | a necessary prop. any text content                  |
 
 - ### IconBtn
 

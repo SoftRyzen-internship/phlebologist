@@ -7,6 +7,8 @@ const ExternalLinkButton: React.FC<ExternalLinkButtonProps> = ({
   linkto,
   className = '',
   children,
+  variant = 'default',
+  actionHandler,
 }) => {
   const btnClass = classnames(
     'xl:bg-white-light xl:mediaHover:hover:bg-gray-light xl:focus:bg-gray-light',
@@ -16,6 +18,12 @@ const ExternalLinkButton: React.FC<ExternalLinkButtonProps> = ({
     'mediaHover:hover:cursor-pointer mediaHover:hover:font-bold focus:font-bold',
 
     'transition-all duration-300',
+
+    {
+      'w-full h-auto px-6 py-2 font-semibold uppercase text-xs -tracking-[0.48px] bg-white-light text-black-dark mediaHover:hover:bg-gray-extra focus:bg-gray-extra mediaHover:hover:font-semibold focus:font-semibold xl:mediaHover:hover:bg-gray-extra':
+        variant === 'menu',
+    },
+
     className,
   );
 
@@ -25,6 +33,7 @@ const ExternalLinkButton: React.FC<ExternalLinkButtonProps> = ({
       className={btnClass}
       rel="noopener noreferrer nofollow"
       target="_blank"
+      onClick={actionHandler}
     >
       {children}
     </a>
