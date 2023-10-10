@@ -1,27 +1,18 @@
 import React, { FC } from 'react';
-import { ButtonPrimary, Logo, SocialsList, Navigation } from '@/components';
+import { Logo, SocialsList, Navigation } from '@/components';
 import { FooterProps } from './Footer.props';
 
 const Footer: FC<FooterProps> = ({
   staticData: { footerData, socials, navigation, iconBtnData },
 }) => {
-  const { address, menuBtn, phone } = footerData;
+  const { address, phone } = footerData;
 
   return (
     <footer className="pb-8 pt-5 md:py-12 xl:pb-[66px] xl:pt-[54px]">
       <div className="container text-center">
         <div className="wrapper">
           <div className="md:hidden">
-            <div className="mb-6 flex items-baseline justify-between">
-              <Logo />
-              <ButtonPrimary
-                variant="light"
-                view="header"
-                className="px-6 md:hidden"
-              >
-                {menuBtn}
-              </ButtonPrimary>
-            </div>
+            <Logo className="mb-6 text-left" />
             <div className="mb-6 flex items-start justify-between text-left md:block">
               <p className="max-w-[158px] text-xs -tracking-[0.48px] text-black-dark  opacity-50">
                 {address}

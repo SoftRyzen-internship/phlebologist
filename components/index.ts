@@ -1,5 +1,7 @@
 export { default as Header } from '@/components/Header/Header';
 export { default as LocaleSwitcher } from '@/components/LocaleSwitcher/LocaleSwitcher';
+export { default as BurgerMenu } from '@/components/BurgerMenu/BurgerMenu';
+export { default as MenuActions } from '@/components/MenuActions/MenuActions';
 
 // tina testing
 export { default as Test } from '@/components/Test/Test';
@@ -15,6 +17,7 @@ export { default as ExternalLinkButton } from '@/components/Buttons/ExternalLink
 export { default as RoutingLinkButton } from '@/components/Buttons/RoutingLinkButton/RoutingLinkButton';
 export { default as ScrollLinkButton } from '@/components/Buttons/ScrollLinkButton/ScrollLinkButton';
 export { default as IconBtn } from '@/components/Buttons/IconBtn/IconBtn';
+export { default as BurgerMenuButton } from '@/components/Buttons/BurgerMenuButton/BurgerMenuButton';
 
 // slider before-after
 export { default as SliderBeforeAfter } from '@/components/SliderBeforeAfter/SliderBeforeAfter';
@@ -56,3 +59,4 @@ export { default as QuestionsList } from '@/components/QuestionsList/QuestionsLi
 export { default as QuestionListItem } from '@/components/QuestionListItem/QuestionListItem';
 
 export { default as InfoBlock } from '@/components/InfoBlock/InfoBlock';
+export { default as Location } from '@/components/Location/Location';
