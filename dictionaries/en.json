@@ -21,7 +21,7 @@
   "page": {
     "home": {
       "hero": {
-        "title": "I TREAT VARICOSE VEINS",
+        "title": "I treat varicose veins",
         "topText": "Fast Efficient Painless",
         "middleText": "You'll return to your regular life immediately after the session",
         "bottomText": "Schedule a consultation and find out \nwhich treatment method is right for you!",
@@ -29,7 +29,7 @@
       },
       "advantages": {
         "title": "Advantages",
-        "mainQuestion": "Why should you choose to work with me?",
+        "mainQuestion": "Why should you choose \nto work with me?",
         "advList": [
           {
             "id": "01",

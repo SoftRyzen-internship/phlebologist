@@ -10,7 +10,7 @@ import { formatSlideNumber } from '@/utils/formatSlideNumber';
 
 const ResultsSlide: FC<ResultsSlideProps> = ({
   data,
-  staticData,
+  optionalStaticData,
   currentSlideIdx,
   totalQty,
   className = '',
@@ -24,7 +24,7 @@ const ResultsSlide: FC<ResultsSlideProps> = ({
 
   return (
     <div className={slideClass}>
-      <SliderBeforeAfter data={data} staticData={staticData} />
+      <SliderBeforeAfter data={data} staticData={optionalStaticData} />
       <div className="flex h-full w-full flex-col justify-between rounded-extended bg-white-light p-4 text-black-dark md:rounded-large md:px-10 md:py-9 xl:px-16">
         <div>
           <span className="mr-auto text-xs leading-normal -tracking-[0.48px]">
@@ -32,7 +32,7 @@ const ResultsSlide: FC<ResultsSlideProps> = ({
             <span>/{formatSlideNumber(totalQty)}</span>
           </span>
           <p className="mb-5 mt-5 text-[18px] font-medium leading-[1.11] -tracking-[0.72px] md:mb-8 md:mt-6 md:text-xl md:leading-[1.2] md:-tracking-[0.8px] xl:mb-6 xl:mt-12">
-            {staticData.secondaryTitle}
+            {optionalStaticData.secondaryTitle}
           </p>
           <div className="mb-5 text-justify text-sm leading-[1.21] -tracking-[0.56px] md:mb-10 md:text-base md:-tracking-[0.64px]">
             <TinaMarkdown content={description} />
@@ -43,7 +43,7 @@ const ResultsSlide: FC<ResultsSlideProps> = ({
           linkto="consultation"
           variant="dark"
         >
-          {staticData.buttonTextMobile}
+          {optionalStaticData.buttonTextMobile}
         </ScrollLinkButton>
       </div>
     </div>
