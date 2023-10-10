@@ -3,6 +3,7 @@
 import 'keen-slider/keen-slider.min.css';
 import React, { useState } from 'react';
 import { useKeenSlider } from 'keen-slider/react';
+import classNames from 'classnames';
 
 import { IconBtn } from '@/components';
 
@@ -21,7 +22,7 @@ const Slider: React.FC<SliderProps> = ({
   const resultConfig = {
     loop: true,
     defaultAnimation: { duration: 1000 },
-    drag: false,
+    drag: section.toLowerCase() === 'result' ? false : true,
     slides: { origin: 'center' as 'center', perView: 1 },
     initial: 0,
     rubberband: false,
@@ -29,7 +30,6 @@ const Slider: React.FC<SliderProps> = ({
 
   const feedbackConfig = {
     ...resultConfig,
-    drag: true,
     dragSpeed: 0.4,
     breakpoints: {
       '(min-width: 1280px)': {
@@ -39,7 +39,9 @@ const Slider: React.FC<SliderProps> = ({
   };
 
   const defaultConfig =
-    section.toLowerCase() === 'result' ? resultConfig : feedbackConfig;
+    section.toLowerCase() === 'result' || 'doctor'
+      ? resultConfig
+      : feedbackConfig;
 
   const [sliderRef, instanceRef] = useKeenSlider(
     {
@@ -53,8 +55,16 @@ const Slider: React.FC<SliderProps> = ({
   );
 
   return (
-    <div>
-      <div className="mb-[24px] flex items-center justify-center gap-[24px] md:mb-[40px] md:justify-end xl:mb-[64px] xl:gap-[48px]">
+    <div className="relative">
+      <div
+        className={classNames({
+          'mb-[24px] flex items-center justify-center gap-[24px] ': true,
+          'md:mb-[40px] md:justify-end xl:mb-[64px] xl:gap-[48px]':
+            section.toLowerCase() !== 'doctor',
+          'md:absolute md:left-[50%] md:top-[50%] md:z-10 md:-translate-x-[50%] md:gap-[528px] xl:gap-[726px]':
+            section.toLowerCase() === 'doctor',
+        })}
+      >
         <IconBtn
           icon="arrow"
           variant={section}

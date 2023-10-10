@@ -37,6 +37,7 @@ export default async function RootLayout({
         <Footer
           staticData={{ footerData: footer, socials, iconBtnData, navigation }}
         />
+        <div id="modal" />
       </body>
     </html>
   );

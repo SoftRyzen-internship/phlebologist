@@ -23,25 +23,30 @@ const IconBtn: FC<IconBtnProps> = ({
     'fill-current': true,
     'w-full h-full text-secondary-dark fill-transparent':
       variant.toLowerCase() === 'result' ||
-      variant.toLowerCase() === 'feedback',
+      variant.toLowerCase() === 'feedback' ||
+      'doctor',
     'w-[24px] h-[24px]':
       variant.toLowerCase() === 'contacts' ||
       variant.toLowerCase() === 'footer',
     'w-[32px] h-[32px] text-notify-error': variant.toLowerCase() === 'location',
+    'h-[16px] w-[16px] md:h-[24px] md:w-[24px] text-black':
+      variant.toLowerCase() === 'close',
     'rotate-180': reverse,
   });
 
   const btnStyles = classNames({
-    'flex justify-center items-center': true,
+    'flex justify-center items-center rounded-extended': true,
     'transition-colors duration-300': variant.toLowerCase() !== 'location',
-    'w-[48px] h-[48px] bg-gray-light hover:bg-white-light focus:hover:bg-white-light rounded-extended overflow-hidden':
-      variant.toLowerCase() === 'result',
-    'w-[48px] h-[48px] bg-white-light hover:bg-white focus:hover:bg-white rounded-extended overflow-hidden':
+    'w-[48px] h-[48px] bg-gray-light hover:bg-white-light focus:hover:bg-white-light overflow-hidden':
+      variant.toLowerCase() === 'result' || 'doctor',
+    'w-[48px] h-[48px] bg-white-light hover:bg-white focus:hover:bg-white overflow-hidden':
       variant.toLowerCase() === 'feedback',
-    'w-[36px] h-[36px] text-black-dark bg-gray-light hover:bg-white-light focus:hover:bg-white-light rounded-extended':
+    'w-[36px] h-[36px] text-black-dark bg-gray-light hover:bg-white-light focus:hover:bg-white-light ':
       variant.toLowerCase() === 'contacts',
-    'hidden md:flex w-[36px] h-[36px] text-black-dark bg-white hover:bg-secondary focus:bg-secondary hover:text-white focus:text-white rounded-extended':
+    'hidden md:flex w-[36px] h-[36px] text-black-dark bg-white hover:bg-secondary focus:bg-secondary hover:text-white focus:text-white':
       variant.toLowerCase() === 'footer',
+    'absolute right-0 top-0 h-[56px] w-[56px] md:h-[80px] md:w-[80px]':
+      variant.toLowerCase() === 'close',
     'w-[32px] h-[32px]': variant.toLowerCase() === 'location',
   });
 
