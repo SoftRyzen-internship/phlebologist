@@ -75,6 +75,10 @@ certificates:
         alt: >-
           Certificate of attendance - International Interdisciplinary Eastern
           European Forum
+      en:
+        alt: >-
+          Certificate of attendance - International Interdisciplinary Eastern
+          European Forum
   - photo: /uploads/about/certificate.jpg
     description:
       uk:
