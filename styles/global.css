@@ -24,3 +24,32 @@
   background: rgba(149, 149, 149, 0.25);
   backdrop-filter: blur(12.5px);
 }
+
+/* Hero Section */
+.hero-bg {
+  background-image: image-set(
+    url('/images/home/hero/hero.webp') 1x,
+    url('/images/home/hero/hero-2x.webp') 2x
+  );
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+@media screen and (min-width: 768px) {
+  .hero-bg {
+    background-image: image-set(
+      url('/images/home/hero/hero-md.webp') 1x,
+      url('/images/home/hero/hero-md-2x.webp') 2x
+    );
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .hero-bg {
+    background-image: image-set(
+      url('/images/home/hero/hero-xl.webp') 1x,
+      url('/images/home/hero/hero-xl-2x.webp') 2x
+    );
+  }
+}
