@@ -44,6 +44,29 @@ education:
       - institution: >-
           Управлінням охорони здоров’я присвоєно першу кваліфікаційну категорію
           за спеціальністю «Судинна хірургія».
+  en:
+    title: Educational Background
+    institutions:
+      - institution: >-
+          Since 2021: Awarded the first qualification category in Vascular
+          Surgery by the Ministry of Health.
+      - institution: 'Since 2018: Member of the European Association for Vascular Surgeons.'
+      - institution: >-
+          2019: Attended The 9th MUNICH VASCULAR CONFERENCE (MAC) in Munich,
+          Germany.
+      - institution: >-
+          2020: Specialization in "Ultrasound Diagnostics" at Uzhhorod National
+          University.
+      - institution: >-
+          2018: Internship in Vascular Surgery at Lviv Regional Clinical
+          Hospital.
+      - institution: >-
+          2013-2017: National Medical Academy of Postgraduate Education named
+          after P.L. Shupyk, National Institute of Surgery and Transplantology
+          named after A.A. Shalimov.
+      - institution: >-
+          2007-2013: National Medical University named after O.O. Bogomolets,
+          1st Medical Faculty.
 career:
   uk:
     title: Карʼєра лікаря
