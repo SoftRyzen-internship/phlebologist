@@ -1,6 +1,6 @@
 export interface ResultsSlideProps {
   data?: any;
-  staticData: any;
+  optionalStaticData: any;
   currentSlideIdx: number;
   totalQty: number;
   className?: string;

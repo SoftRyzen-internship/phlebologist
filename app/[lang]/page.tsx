@@ -21,7 +21,10 @@ export default async function Home({
   return (
     <main>
       <HeroSection staticData={page.home.hero} lang={lang} />
-      <AdvantagesSection staticData={page.home.advantages} />
+      <AdvantagesSection
+        staticData={page.home.advantages}
+        className="-mt-5 mb-10 md:-mt-8 xl:-mt-10"
+      />
       <FAQSection staticData={{ faq: page.home.faq, socials }} />
       <ContactsSection
         staticData={{ pageData: page.home, socialData: socials }}
