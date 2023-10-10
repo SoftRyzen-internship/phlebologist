@@ -22,7 +22,7 @@ const Slider: React.FC<SliderProps> = ({
   const resultConfig = {
     loop: true,
     defaultAnimation: { duration: 1000 },
-    drag: section.toLocaleLowerCase() === 'result' ? false : true,
+    drag: section.toLowerCase() === 'result' ? false : true,
     slides: { origin: 'center' as 'center', perView: 1 },
     initial: 0,
     rubberband: false,
