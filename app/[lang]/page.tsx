@@ -37,6 +37,7 @@ export default async function Home({
     { __typename: 2367289353 },
     { __typename: 2367289354 },
   ];
+
   const iconData = page?.home?.iconBtnData;
 
   return (

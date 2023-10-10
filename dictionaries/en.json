@@ -82,6 +82,10 @@
         "location": {
           "iconFunction": "Location Button",
           "iconLabel": "Geolocation Icon"
+        },
+        "close": {
+          "iconFunction": "Close Button",
+          "iconLabel": "Cross Icon"
         }
       },
       "about": {

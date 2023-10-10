@@ -82,6 +82,10 @@
         "location": {
           "iconFunction": "Кнопка місцезнаходження",
           "iconLabel": "Іконка геолокації"
+        },
+        "close": {
+          "iconFunction": "Кнопка Закрити",
+          "iconLabel": "Іконка хрестик"
         }
       },
       "about": {

@@ -60,3 +60,7 @@ export { default as QuestionListItem } from '@/components/QuestionListItem/Quest
 
 export { default as InfoBlock } from '@/components/InfoBlock/InfoBlock';
 export { default as Location } from '@/components/Location/Location';
+
+// modal window
+
+export { default as Modal } from '@/components/Modal/Modal';
