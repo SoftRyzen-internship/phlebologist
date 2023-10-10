@@ -16,6 +16,17 @@ general:
       - point: 4000+ проведених операцій
       - point: Більше 10 років практики
       - point: 5000+ вилікуваних пацієнтів
+  en:
+    name: Sergii Voitsitskyi
+    profession: Surgеon of the 1st Qualification Category in Vascular Surgery Phlebologist
+    education:
+      - institution: Internship in Vascular Surgery at Lviv Regional Clinical Hospital
+      - institution: National Medical Academy named after P.L. Shupyk
+      - institution: National Medical University named after O.O. Bogomolets
+    experience:
+      - point: Over 4000 surgeries performed
+      - point: 'Over 5000 successfully treated patients '
+      - point: More than 10 years of practice
 education:
   uk:
     title: Освіта лікаря
