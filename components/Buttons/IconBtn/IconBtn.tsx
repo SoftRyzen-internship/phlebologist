@@ -23,7 +23,8 @@ const IconBtn: FC<IconBtnProps> = ({
     'fill-current': true,
     'w-full h-full text-secondary-dark fill-transparent':
       variant.toLowerCase() === 'result' ||
-      variant.toLowerCase() === 'feedback',
+      variant.toLowerCase() === 'feedback' ||
+      'doctor',
     'w-[24px] h-[24px]':
       variant.toLowerCase() === 'contacts' ||
       variant.toLowerCase() === 'footer',
@@ -37,7 +38,7 @@ const IconBtn: FC<IconBtnProps> = ({
     'flex justify-center items-center rounded-extended': true,
     'transition-colors duration-300': variant.toLowerCase() !== 'location',
     'w-[48px] h-[48px] bg-gray-light hover:bg-white-light focus:hover:bg-white-light overflow-hidden':
-      variant.toLowerCase() === 'result',
+      variant.toLowerCase() === 'result' || 'doctor',
     'w-[48px] h-[48px] bg-white-light hover:bg-white focus:hover:bg-white overflow-hidden':
       variant.toLowerCase() === 'feedback',
     'w-[36px] h-[36px] text-black-dark bg-gray-light hover:bg-white-light focus:hover:bg-white-light ':

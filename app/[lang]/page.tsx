@@ -7,6 +7,7 @@ import {
   FAQSection,
   ResultsSection,
   ContactsSection,
+  FeedbackSection,
 } from '@/sections';
 
 export default async function Home({
@@ -31,6 +32,7 @@ export default async function Home({
         lang={lang}
         className="-mt-5 mb-10 md:-mt-8 xl:-mt-10"
       />
+      <FeedbackSection staticData={page.home.iconBtnData} />
     </main>
   );
 }

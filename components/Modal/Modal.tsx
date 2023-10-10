@@ -4,11 +4,11 @@ import classNames from 'classnames';
 import { createPortal } from 'react-dom';
 import { useState, useEffect, useCallback } from 'react';
 
-import CloseIcon from '@/public/icons/close-icon.svg';
-
+import { IconBtn } from '@/components';
 import { ModalProps } from './Modal.props';
 
 const Modal: React.FC<ModalProps> = ({
+  staticData,
   isOpen = false,
   onCloseClick,
   children,
@@ -74,13 +74,13 @@ const Modal: React.FC<ModalProps> = ({
         onClick={handleBackdropClose}
       >
         <div className="relative bg-white px-[20px] pb-[40px] pt-[56px] md:p-[80px]">
-          <button
-            className="absolute right-0 top-0 flex h-[56px] w-[56px] items-center justify-center rounded-extended md:h-[80px] md:w-[80px]"
+          <IconBtn
+            variant="close"
+            icon="close"
+            iconFunction={staticData.close.iconFunction}
+            iconLabel={staticData.close.iconLabel}
             onClick={handleClose}
-          >
-            <CloseIcon className="h-[16px] w-[16px] md:h-[24px] md:w-[24px]" />
-          </button>
-
+          />
           {children}
         </div>
       </div>,

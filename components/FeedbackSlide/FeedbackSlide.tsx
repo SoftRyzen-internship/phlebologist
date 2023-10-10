@@ -13,6 +13,7 @@ import { Modal } from '@/components';
 
 const FeedbackSlide: React.FC<FeedbackSlideProps> = ({
   // data,
+  staticData,
   className,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -67,7 +68,11 @@ const FeedbackSlide: React.FC<FeedbackSlideProps> = ({
         Дочитати
       </button>
 
-      <Modal onCloseClick={() => setIsOpen(false)} isOpen={isOpen}>
+      <Modal
+        staticData={staticData}
+        onCloseClick={() => setIsOpen(false)}
+        isOpen={isOpen}
+      >
         <div className=" relative h-[92px] w-[92px] overflow-hidden rounded-extended bg-gray-blur md:h-[124px] md:w-[124px]">
           <Image
             src="/images/feedback/user.webp"
