@@ -65,7 +65,7 @@ const BurgerMenu: React.FC<BurgerMenuProps> = ({ staticData }) => {
         (style, item) =>
           item && (
             <animated.div
-              className="modal-backdrop fixed left-0 top-0 h-[100vh] w-[100vw]"
+              className="modal-backdrop fixed left-0 top-0 z-20 h-[100vh] w-[100vw]"
               onClick={handleOverlayClick}
               style={style}
             >

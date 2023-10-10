@@ -13,7 +13,7 @@ const Heading: FC<HeadingComponentProps> = ({
 }) => {
   const headingClass = classnames(
     {
-      'font-medium text-[32px] text-white -tracking-[1.28px] md:text-[56px] md:-tracking-[2.24px]':
+      'font-medium text-[32px] text-white -tracking-[1.28px] md:text-[56px] md:-tracking-[2.24px] xl:text-[100px] xl:leading-[1] xl:-tracking-[4px]':
         variant === 'main',
     },
     {

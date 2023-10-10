@@ -11,9 +11,9 @@ const Advantages: FC<AdvantagesProps> = ({ staticData, className = '' }) => {
   const { title, mainQuestion, advList, enrollText, buttonText } = staticData;
 
   return (
-    <section className={className}>
-      <div className="main-container">
-        <div className="wrapper rounded-t-medium bg-gray-light pb-[132px] pt-8 md:pt-10 xl:pb-[122px] xl:pt-16">
+    <section id="advantages" className={className}>
+      <div className="container">
+        <div className="wrapper rounded-t-medium bg-gray-light pb-[132px] pt-8 md:rounded-t-extraLarge md:pt-10 xl:rounded-t-max xl:pb-[122px] xl:pt-16">
           <Heading tag="h2" className="mb-6 md:mb-[41px] xl:mb-9">
             {title}
           </Heading>
