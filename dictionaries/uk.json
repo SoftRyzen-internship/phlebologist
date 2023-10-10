@@ -108,6 +108,10 @@
         ]
       },
       "patient_results": {
+        "title": "Результати наших пацієнтів",
+        "secondaryTitle": "Історія пацієнта",
+        "buttonTextMobile": "Запис на консультацію",
+        "buttonText": "Записатись на консультацію",
         "slider": {
           "beforeAltText": "Зображення до лікування",
           "afterAltText": "Зображення після лікування",

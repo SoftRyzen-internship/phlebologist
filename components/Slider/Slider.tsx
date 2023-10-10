@@ -1,6 +1,7 @@
 'use client';
 
 import 'keen-slider/keen-slider.min.css';
+import React, { useState } from 'react';
 import { useKeenSlider } from 'keen-slider/react';
 
 import { IconBtn } from '@/components';
@@ -15,6 +16,8 @@ const Slider: React.FC<SliderProps> = ({
   slide: Component,
   slideClassName,
 }) => {
+  const [activeIdx, setActiveIdx] = useState<number>(0);
+
   const resultConfig = {
     loop: true,
     defaultAnimation: { duration: 1000 },
@@ -38,7 +41,16 @@ const Slider: React.FC<SliderProps> = ({
   const defaultConfig =
     section.toLowerCase() === 'result' ? resultConfig : feedbackConfig;
 
-  const [sliderRef, instanceRef] = useKeenSlider({ ...defaultConfig }, []);
+  const [sliderRef, instanceRef] = useKeenSlider(
+    {
+      ...defaultConfig,
+      slideChanged() {
+        if (instanceRef.current?.track.details.rel !== undefined)
+          setActiveIdx(instanceRef.current.track.details.rel);
+      },
+    },
+    [],
+  );
 
   return (
     <div>
@@ -71,7 +83,8 @@ const Slider: React.FC<SliderProps> = ({
                 data={slide}
                 staticData={optionalStaticData}
                 className={slideClassName}
-                currentSlideIdx={instanceRef.current?.track.details.abs}
+                currentSlideIdx={activeIdx + 1}
+                totalQty={slides.length}
               />
             </li>
           ))}
