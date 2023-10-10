@@ -81,7 +81,8 @@ const Slider: React.FC<SliderProps> = ({
             >
               <Component
                 data={slide}
-                staticData={optionalStaticData}
+                staticData={staticData}
+                optionalStaticData={optionalStaticData}
                 className={slideClassName}
                 currentSlideIdx={activeIdx + 1}
                 totalQty={slides.length}
