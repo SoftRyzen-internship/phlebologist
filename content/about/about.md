@@ -91,6 +91,33 @@ career:
         institution: Клініка “Oxford Medical” - судинний хірург / флеболог
       - period: '2023'
         institution: Клініка “Medeira” - судинний хірург / флеболог
+  en:
+    title: Career
+    institutions:
+      - period: Since 2023
+        institution: '"Medeira" Clinic - Vascular Surgeon / Phlebologist.'
+      - period: Since 2020
+        institution: '"Oxford Medical" Clinic - Vascular Surgeon / Phlebologist.'
+      - period: 2021-2023
+        institution: '"ProHealth" Clinic - Vascular Surgeon / Phlebologist.'
+      - period: 2020-2022
+        institution: '"Institute Vein" Clinic - Vascular Surgeon / Phlebologist.'
+      - period: 2016-2020
+        institution: >-
+          Cherkasy Regional Hospital of the Cherkasy Regional Council, Vascular
+          Surgeon.
+      - period: 2016-2020
+        institution: >-
+          Regional Center for Emergency Medical Assistance and Medical
+          Disasters, Vascular Surgeon on emergency calls to medical facilities.
+      - period: 2013-2016
+        institution: >-
+          Cherkasy Regional Hospital of the Cherkasy Regional Council, Vascular
+          Surgery Center, Vascular Surgeon.
+      - period: 2013-2016
+        institution: >-
+          Central Municipal Clinical Hospital No. 6, Surgical Departments #1 and
+          #2
 certificates:
   - photo: /uploads/about/13.04.2019.webp
     description:
