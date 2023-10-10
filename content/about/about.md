@@ -69,6 +69,12 @@ career:
       - period: '2023'
         institution: Клініка “Medeira” - судинний хірург / флеболог
 certificates:
+  - photo: /uploads/about/13.04.2019.webp
+    description:
+      uk:
+        alt: >-
+          Certificate of attendance - International Interdisciplinary Eastern
+          European Forum
   - photo: /uploads/about/certificate.jpg
     description:
       uk:
