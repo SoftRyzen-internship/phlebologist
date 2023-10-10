@@ -1,6 +1,9 @@
+import { Locale } from '@/i18n.config';
+
 export interface ResultsProps {
   staticData: {
     title: string;
+    secondaryTitle: string;
     buttonTextMobile: string;
     buttonText: string;
     slider: {
@@ -11,5 +14,6 @@ export interface ResultsProps {
     };
   };
   iconData: any;
+  lang: Locale;
   className?: string;
 }

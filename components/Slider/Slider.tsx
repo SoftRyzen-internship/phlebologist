@@ -1,6 +1,7 @@
 'use client';
 
 import 'keen-slider/keen-slider.min.css';
+import React, { useState } from 'react';
 import { useKeenSlider } from 'keen-slider/react';
 
 import { IconBtn } from '@/components';
@@ -10,14 +11,17 @@ import { SliderProps } from './Slider.props';
 const Slider: React.FC<SliderProps> = ({
   slides,
   staticData,
+  optionalStaticData = undefined,
   section,
   slide: Component,
   slideClassName,
 }) => {
+  const [activeIdx, setActiveIdx] = useState<number>(0);
+
   const resultConfig = {
     loop: true,
     defaultAnimation: { duration: 1000 },
-    dragSpeed: 0.4,
+    drag: false,
     slides: { origin: 'center' as 'center', perView: 1 },
     initial: 0,
     rubberband: false,
@@ -25,6 +29,8 @@ const Slider: React.FC<SliderProps> = ({
 
   const feedbackConfig = {
     ...resultConfig,
+    drag: true,
+    dragSpeed: 0.4,
     breakpoints: {
       '(min-width: 1280px)': {
         slides: { origin: 'center' as 'center', perView: 3, spacing: 29 },
@@ -35,7 +41,16 @@ const Slider: React.FC<SliderProps> = ({
   const defaultConfig =
     section.toLowerCase() === 'result' ? resultConfig : feedbackConfig;
 
-  const [sliderRef, instanceRef] = useKeenSlider({ ...defaultConfig }, []);
+  const [sliderRef, instanceRef] = useKeenSlider(
+    {
+      ...defaultConfig,
+      slideChanged() {
+        if (instanceRef.current?.track.details.rel !== undefined)
+          setActiveIdx(instanceRef.current.track.details.rel);
+      },
+    },
+    [],
+  );
 
   return (
     <div>
@@ -64,7 +79,13 @@ const Slider: React.FC<SliderProps> = ({
               key={`${slide.__typename}${idx}`}
               className="keen-slider__slide flex cursor-pointer"
             >
-              <Component data={slide} className={slideClassName} />
+              <Component
+                data={slide}
+                staticData={optionalStaticData}
+                className={slideClassName}
+                currentSlideIdx={activeIdx + 1}
+                totalQty={slides.length}
+              />
             </li>
           ))}
       </ul>
