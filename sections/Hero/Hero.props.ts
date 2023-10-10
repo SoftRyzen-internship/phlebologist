@@ -1,3 +1,5 @@
+import { Locale } from '@/i18n.config';
+
 export interface HeroProps {
   staticData: {
     title: string;
@@ -6,5 +8,6 @@ export interface HeroProps {
     bottomText: string;
     buttonText: string;
   };
+  lang: Locale;
   className?: string;
 }

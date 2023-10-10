@@ -18,7 +18,7 @@ export default async function Home({
 
   return (
     <main>
-      <HeroSection staticData={page.home.hero} />
+      <HeroSection staticData={page.home.hero} lang={lang} />
       <AdvantagesSection staticData={page.home.advantages} />
       <FAQSection staticData={{ faq: page.home.faq, socials }} />
       <ContactsSection
