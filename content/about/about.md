@@ -119,6 +119,12 @@ career:
           Central Municipal Clinical Hospital No. 6, Surgical Departments #1 and
           #2
 certificates:
+  - photo: /uploads/about/07.10.2022_2.webp
+    description:
+      uk:
+        alt: Сертифікат про участь - Судинні втручання
+      en:
+        alt: Certificate of attendance - Vascular Interventions
   - photo: /uploads/about/07.10.2022.webp
     description:
       uk:
