@@ -119,6 +119,16 @@ career:
           Central Municipal Clinical Hospital No. 6, Surgical Departments #1 and
           #2
 certificates:
+  - photo: /uploads/about/01.10.2021.webp
+    description:
+      uk:
+        alt: >-
+          Сертифікат про участь у 1272-му засіданні асоціації хірургів Одеської
+          області
+      en:
+        alt: >-
+          Certificate of participation in the 1272nd meeting of the Association
+          of Surgeons of Odesa Region
   - photo: /uploads/about/13.04.2019.webp
     description:
       uk:
