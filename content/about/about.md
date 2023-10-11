@@ -119,6 +119,16 @@ career:
           Central Municipal Clinical Hospital No. 6, Surgical Departments #1 and
           #2
 certificates:
+  - photo: /uploads/about/05.10.2021_2.webp
+    description:
+      uk:
+        alt: >-
+          Сертифікат участі  - Практична конференція "ниркова
+          інсулінорезистентність"
+      en:
+        alt: >-
+          Certificate of participation - Practical conference "renal insulin
+          resistance"
   - photo: /uploads/about/04.06.2021.webp
     description:
       uk:
