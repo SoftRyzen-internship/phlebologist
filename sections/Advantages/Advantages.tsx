@@ -11,9 +11,9 @@ const Advantages: FC<AdvantagesProps> = ({ staticData, className = '' }) => {
   const { title, mainQuestion, advList, enrollText, buttonText } = staticData;
 
   return (
-    <section className={className}>
+    <section id="advantages" className={className}>
       <div className="container">
-        <div className="wrapper rounded-t-medium bg-gray-light pb-[132px] pt-8 md:rounded-t-extraLarge md:pt-10 xl:pb-[122px] xl:pt-16">
+        <div className="wrapper rounded-t-medium bg-gray-light pb-[132px] pt-8 md:rounded-t-extraLarge md:pt-10 xl:rounded-t-max xl:pb-[122px] xl:pt-16">
           <Heading tag="h2" className="mb-6 md:mb-[41px] xl:mb-9">
             {title}
           </Heading>
@@ -26,7 +26,7 @@ const Advantages: FC<AdvantagesProps> = ({ staticData, className = '' }) => {
               <p className="mb-6 whitespace-pre-wrap text-center text-sm leading-normal -tracking-[0.56]">
                 {enrollText}
               </p>
-              <ScrollLinkButton className="mx-auto" linkto="">
+              <ScrollLinkButton className="mx-auto" linkto="consultation">
                 {buttonText}
               </ScrollLinkButton>
             </>
@@ -40,7 +40,10 @@ const Advantages: FC<AdvantagesProps> = ({ staticData, className = '' }) => {
                   <p className="mb-6 w-[240px] text-start text-base leading-[1.5] -tracking-[0.64] xl:w-[391px] xl:text-xl xl:leading-[1.2] xl:-tracking-[0.8px]">
                     {enrollText}
                   </p>
-                  <ScrollLinkButton className="mr-auto" linkto="">
+                  <ScrollLinkButton
+                    className="mr-auto mdOnly:p-6"
+                    linkto="consultation"
+                  >
                     {buttonText}
                   </ScrollLinkButton>
                 </div>

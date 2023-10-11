@@ -1,7 +1,14 @@
 import { Locale } from '@/i18n.config';
 import { getDictionary } from '@/utils/dictionary';
 
-import { AdvantagesSection, FAQSection, ContactsSection } from '@/sections';
+import {
+  HeroSection,
+  AdvantagesSection,
+  FAQSection,
+  ResultsSection,
+  ContactsSection,
+  FeedbackSection,
+} from '@/sections';
 
 export default async function Home({
   params: { lang },
@@ -13,11 +20,22 @@ export default async function Home({
 
   return (
     <main>
-      <AdvantagesSection staticData={page.home.advantages} />
+      <HeroSection staticData={page.home.hero} lang={lang} />
+      <AdvantagesSection
+        staticData={page.home.advantages}
+        className="-mt-5 mb-10 md:-mt-8 xl:-mt-10"
+      />
       <FAQSection staticData={{ faq: page.home.faq, socials }} />
       <ContactsSection
         staticData={{ pageData: page.home, socialData: socials }}
       />
+      <ResultsSection
+        staticData={page.home.patient_results}
+        iconData={page.home.iconBtnData}
+        lang={lang}
+        className="-mt-5 mb-10 md:-mt-8 xl:-mt-10"
+      />
+      <FeedbackSection staticData={page.home.iconBtnData} />
     </main>
   );
 }

@@ -12,6 +12,7 @@ const BurgerMenuButton: React.FC<BurgerMenuButtonProps> = ({
 }) => {
   const btnStyles = classNames('px-6', {
     'mb-[11px] w-full bg-white flex justify-between': isMenu,
+    'w-[90px]': !isMenu,
   });
   return (
     <ButtonPrimary className={btnStyles} actionHandler={onClick} view="header">

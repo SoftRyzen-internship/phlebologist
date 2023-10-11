@@ -347,12 +347,16 @@ The Icon Button has either `anchor` or `button` tag.
 |                | 'instagram'   | - Anchor that leads to Instagram page,                |
 |                | 'arrow'       | - Navigation button with arrow to the right,          |
 |                | 'location'    | - Geolocation anchor,                                 |
+|                | 'close'       | - Modal close button,                                 |
+|                |               |                                                       |
 |                |               |                                                       |
 | `variant`      | 'result'      | - Button in treatment result section,                 |
 |                | 'feedback'    | - Button in feedback section,                         |
 |                | 'contacts'    | - Button in contacts section,                         |
 |                | 'footer'      | - Button in footer section,                           |
 |                | 'location'    | - Geolocation button,                                 |
+|                | 'close'       | - Modal close button,                                 |
+|                |               |                                                       |
 |                |               |                                                       |
 | `onClick`      | void function | Optional, click handler                               |
 |                |               |                                                       |

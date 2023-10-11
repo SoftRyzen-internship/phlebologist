@@ -3,7 +3,8 @@ export type IconBtnName =
   | 'facebook'
   | 'instagram'
   | 'arrow'
-  | 'location';
+  | 'location'
+  | 'close';
 
 // === fetched data types - About collection ===
 

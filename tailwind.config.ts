@@ -42,6 +42,7 @@ module.exports = {
           DEFAULT: '#000000', // class="bg-black text-black border-black"
           dark: '#303036', // class="bg-black-light text-black-light border-black-light"
           extra: '#919194',
+          backdrop: '#959595',
         },
         white: {
           DEFAULT: '#FFFFFF',
@@ -53,6 +54,8 @@ module.exports = {
           light: '#ECEEF2',
           dark: '#EAEAEA',
           extra: '#E3E3E3',
+          dim: '#BCBCBC',
+          blur: ' #D9D9D9',
         },
         primary: {
           light: { 100: 'rgba(48, 48, 54, 0.5)' },
@@ -72,7 +75,7 @@ module.exports = {
         },
       },
       // LINE-HEIGHTS
-      lineHeight: { small: '1', normal: '1.21', large: '1.5' },
+      lineHeight: { small: '1', normal: '1.21', medium: '1.25', large: '1.5' },
       // CONTAINER
       container: {
         center: true,
@@ -93,5 +96,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require('@headlessui/tailwindcss')],
 };
