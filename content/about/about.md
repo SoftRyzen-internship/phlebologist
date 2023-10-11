@@ -119,6 +119,12 @@ career:
           Central Municipal Clinical Hospital No. 6, Surgical Departments #1 and
           #2
 certificates:
+  - photo: /uploads/about/06.12.2019.webp
+    description:
+      uk:
+        alt: Сертифікат про участь - Мюнхенська судинна конференція
+      en:
+        alt: Certificate of attendance - Munich vascular conference
   - photo: /uploads/about/06.07.2019.webp
     description:
       uk:
