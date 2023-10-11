@@ -119,6 +119,16 @@ career:
           Central Municipal Clinical Hospital No. 6, Surgical Departments #1 and
           #2
 certificates:
+  - photo: /uploads/about/07.05.2020.webp
+    description:
+      uk:
+        alt: >-
+          Сертифікат про участь - Практичні аспекти міждисціплінарних питань
+          судинної патології
+      en:
+        alt: >-
+          Certificate of participation - Practical aspects of interdisciplinary
+          issues of vascular pathology
   - photo: /uploads/about/06.12.2019.webp
     description:
       uk:
