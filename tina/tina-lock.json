@@ -212,6 +212,19 @@
                     "list": true,
                     "fields": [
                       {
+                        "name": "period",
+                        "label": "Period",
+                        "type": "string",
+                        "namespace": [
+                          "about",
+                          "education",
+                          "uk",
+                          "institutions",
+                          "period"
+                        ],
+                        "searchable": true
+                      },
+                      {
                         "name": "institution",
                         "label": "Institution",
                         "type": "string",
@@ -253,6 +266,19 @@
                     "type": "object",
                     "list": true,
                     "fields": [
+                      {
+                        "name": "period",
+                        "label": "Period",
+                        "type": "string",
+                        "namespace": [
+                          "about",
+                          "education",
+                          "en",
+                          "institutions",
+                          "period"
+                        ],
+                        "searchable": true
+                      },
                       {
                         "name": "institution",
                         "label": "Institution",
@@ -2171,6 +2197,15 @@
         "fields": [
           {
             "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "period" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
             "name": { "kind": "Name", "value": "institution" },
             "arguments": [],
             "type": {
@@ -2221,6 +2256,15 @@
         "directives": [],
         "name": { "kind": "Name", "value": "AboutEducationEnInstitutions" },
         "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "period" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
           {
             "kind": "FieldDefinition",
             "name": { "kind": "Name", "value": "institution" },
@@ -2921,6 +2965,14 @@
         "fields": [
           {
             "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "period" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
             "name": { "kind": "Name", "value": "institution" },
             "type": {
               "kind": "NamedType",
@@ -2961,6 +3013,14 @@
           "value": "AboutEducationEnInstitutionsFilter"
         },
         "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "period" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          },
           {
             "kind": "InputValueDefinition",
             "name": { "kind": "Name", "value": "institution" },
@@ -5318,6 +5378,14 @@
         "fields": [
           {
             "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "period" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
             "name": { "kind": "Name", "value": "institution" },
             "type": {
               "kind": "NamedType",
@@ -5361,6 +5429,14 @@
           "value": "AboutEducationEnInstitutionsMutation"
         },
         "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "period" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
           {
             "kind": "InputValueDefinition",
             "name": { "kind": "Name", "value": "institution" },

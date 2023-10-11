@@ -37,6 +37,7 @@ fragment AboutParts on About {
       title
       institutions {
         __typename
+        period
         institution
       }
     }
@@ -45,6 +46,7 @@ fragment AboutParts on About {
       title
       institutions {
         __typename
+        period
         institution
       }
     }

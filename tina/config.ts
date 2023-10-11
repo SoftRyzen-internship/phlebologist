@@ -190,6 +190,11 @@ export default defineConfig({
                     list: true,
                     fields: [
                       {
+                        name: 'period',
+                        label: 'Period',
+                        type: 'string',
+                      },
+                      {
                         name: 'institution',
                         label: 'Institution',
                         type: 'string',
@@ -228,6 +233,11 @@ export default defineConfig({
                     type: 'object',
                     list: true,
                     fields: [
+                      {
+                        name: 'period',
+                        label: 'Period',
+                        type: 'string',
+                      },
                       {
                         name: 'institution',
                         label: 'Institution',
