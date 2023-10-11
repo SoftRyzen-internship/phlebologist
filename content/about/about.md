@@ -119,6 +119,26 @@ career:
           Central Municipal Clinical Hospital No. 6, Surgical Departments #1 and
           #2
 certificates:
+  - photo: /uploads/about/10.09.2021.webp
+    description:
+      uk:
+        alt: >-
+          Сертифікат участі - Конференція Судинна хірургія, флебологія та
+          ангіологія в епоху covid-19
+      en:
+        alt: >-
+          Certificate of participation - Conference Vascular surgery, phlebology
+          and angiology in the era of covid-19
+  - photo: /uploads/about/08.11.2019.webp
+    description:
+      uk:
+        alt: >-
+          Сертифікат участі - Конференція Мультидисциплінарні ендоваскулярні
+          втручання
+      en:
+        alt: >-
+          Certificate of participation - Conference Multidisciplinary
+          endovascular interventions
   - photo: /uploads/about/07.10.2022_2.webp
     description:
       uk:
