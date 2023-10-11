@@ -119,6 +119,17 @@ career:
           Central Municipal Clinical Hospital No. 6, Surgical Departments #1 and
           #2
 certificates:
+  - photo: /uploads/about/04.06.2021.webp
+    description:
+      uk:
+        alt: >-
+          Сертифікат участі  - Конгрес з міжнародною участю тромбози та
+          кровотечі як міждисциплінарна проблема
+      en:
+        alt: >-
+          Certificate of participation - Congress with international
+          participation on thrombosis and bleeding as an interdisciplinary
+          problem
   - photo: /uploads/about/03.12.2022.webp
     description:
       uk:
