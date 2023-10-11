@@ -119,6 +119,16 @@ career:
           Central Municipal Clinical Hospital No. 6, Surgical Departments #1 and
           #2
 certificates:
+  - photo: /uploads/about/07.10.2022.webp
+    description:
+      uk:
+        alt: >-
+          Сертифікат про участь - Конференція Мультидисциплінарний підхід в
+          лікуванні ускладнень цукрового діабету
+      en:
+        alt: >-
+          Certificate of participation - Conference Multidisciplinary approach
+          in the treatment of complications of diabetes
   - photo: /uploads/about/07.05.2020.webp
     description:
       uk:
