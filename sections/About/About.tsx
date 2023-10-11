@@ -17,7 +17,7 @@ const About: React.FC<AboutProps> = async ({ lang, staticData }) => {
       <section id="about" className="-mt-5 md:-mt-8 xl:-mt-10">
         <div className="container">
           <div className="wrapper rounded-t-medium bg-white pb-[52px] pt-6 md:rounded-t-extraLarge md:pb-[76px] md:pt-10 xl:rounded-t-max xl:pb-28 xl:pt-16">
-            <Heading className="mb-6 md:mb-9">{title}</Heading>
+            <Heading className="mb-6 md:mb-8">{title}</Heading>
 
             {/* set up image sizes & alt properly */}
             <Image
@@ -25,7 +25,7 @@ const About: React.FC<AboutProps> = async ({ lang, staticData }) => {
               alt={''}
               width={324}
               height={265}
-              className="mb-6 rounded-3xl"
+              className="mb-5 rounded-medium md:mb-8 md:rounded-large"
             />
 
             {/* this is an example: add proper conditions for video rendering */}

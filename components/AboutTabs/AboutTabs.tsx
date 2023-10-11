@@ -26,11 +26,17 @@ const AboutTabs: React.FC<AboutTabsProps> = ({
         selectedIndex={selectedIndex}
         onChange={setSelectedIndex}
       >
-        <Tab.List as={'ul'} className={'mb-5 flex flex-wrap gap-3 md:mb-8'}>
+        <Tab.List
+          as={'ul'}
+          className={'mb-5 flex flex-wrap gap-3 md:mb-8 xl:mb-12'}
+        >
           {menu.map((item, index) => (
             <Tab key={`${item.collection}${index}`} as={'li'}>
               {({ selected }) => (
-                <ButtonPrimary variant={selected ? 'dark' : 'light'}>
+                <ButtonPrimary
+                  className="px-4"
+                  variant={selected ? 'dark' : 'light'}
+                >
                   {item.item}
                 </ButtonPrimary>
               )}
