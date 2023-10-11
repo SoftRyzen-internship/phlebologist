@@ -250,7 +250,7 @@ certificates:
         alt: >-
           Certificate of attendance - International Interdisciplinary Eastern
           European Forum
-  - photo: /uploads/about/certificate.jpg
+  - photo: /uploads/about/19.02.2021.webp
     description:
       uk:
         alt: >-
