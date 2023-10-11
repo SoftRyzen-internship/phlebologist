@@ -143,8 +143,8 @@ certificates:
     description:
       uk:
         alt: >-
-          Certificate of attendance - Ukrainian scientific virtual conference
-          with international participation
+          Сертифікат про участь - Всеукраїнська наукова віртуальна конференція з
+          міжнародною участю
       en:
         alt: >-
           Certificate of attendance - Ukrainian scientific virtual conference
