@@ -18,6 +18,7 @@
   "dependencies": {
     "@formatjs/intl-localematcher": "^0.4.2",
     "@headlessui/react": "^1.7.17",
+    "@headlessui/tailwindcss": "^0.2.0",
     "@react-spring/web": "^9.7.3",
     "@tinacms/cli": "^1.5.29",
     "@typescript-eslint/eslint-plugin": "^6.7.3",
@@ -32,6 +33,7 @@
     "react-hook-form": "^7.46.2",
     "react-hook-form-persist": "^3.0.0",
     "react-scroll": "^1.8.9",
+    "react-transition-group": "^4.4.5",
     "tinacms": "^1.5.20"
   },
   "devDependencies": {
