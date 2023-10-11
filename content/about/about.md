@@ -133,8 +133,8 @@ certificates:
     description:
       uk:
         alt: >-
-          Certificate of attendance - International Interdisciplinary Eastern
-          European Forum
+          Сертифікат про участь - Міжнародний міждисциплінарний
+          східноєвропейський форум
       en:
         alt: >-
           Certificate of attendance - International Interdisciplinary Eastern
