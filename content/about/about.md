@@ -119,12 +119,90 @@ career:
           Central Municipal Clinical Hospital No. 6, Surgical Departments #1 and
           #2
 certificates:
+  - photo: /uploads/about/ESVS_membership certificate_Sergii Voitsitskyi.webp
+    description:
+      uk:
+        alt: Сертифікат членства Європейського товариства судинної хірургії
+      en:
+        alt: Certificate of Membership of European Society for Vascular Syrgery
+  - photo: /uploads/about/29.10.2022.webp
+    description:
+      uk:
+        alt: >-
+          Сертифікат про участь - Конференція актуальні питання загальної та
+          судинної хірургії
+      en:
+        alt: >-
+          Certificate of participation - Conference current issues of general
+          and vascular surgery
+  - photo: /uploads/about/29.04.2021.webp
+    description:
+      uk:
+        alt: >-
+          Сертифікат про участь - Конференція актуальні питання невідкладної
+          хірургії
+      en:
+        alt: >-
+          Certificate of participation - Conference topical issues of emergency
+          surgery
+  - photo: /uploads/about/27.11.2020.webp
+    description:
+      uk:
+        alt: >-
+          Сертифікат про участь - Конференція клініко-технологічні виклики в
+          етапній та реконстуктивній хірургії
+      en:
+        alt: >-
+          Certificate of participation - Conference clinical and technological
+          challenges in staging and reconstructive surgery
+  - photo: /uploads/about/24.11.2020.webp
+    description:
+      uk:
+        alt: Сертифікат про участь - Захворювання периферичних артерій
+      en:
+        alt: Certificate of attendance - Peripheral artery disease
+  - photo: /uploads/about/24.09.2020.webp
+    description:
+      uk:
+        alt: >-
+          Сертифікат про участь - Конгрес асоціації судинних хірургів,
+          флебологів та ангіологів України
+      en:
+        alt: >-
+          Certificate of participation - Congress of the Association of Vascular
+          Surgeons, Phlebologists and Angiologists of Ukraine
+  - photo: /uploads/about/21.11.2020.webp
+    description:
+      uk:
+        alt: Сертифікат про участь - Міжнародний конгрес у Відні
+      en:
+        alt: Certificate of attendance - International Congress Vienna
+  - photo: /uploads/about/19.05.2021.webp
+    description:
+      uk:
+        alt: Сертифікат учасника - Конференція «Uncharted» Phlebology
+      en:
+        alt: Certificate of participation - Conference 'Uncharted' Phlebology
+  - photo: /uploads/about/18.12.2020.webp
+    description:
+      uk:
+        alt: >-
+          Сертифікат участі - Особливості лікування пацієнтів із судинною
+          патологією в умовах пандемії SARS-CoV-2
+      en:
+        alt: >-
+          Certificate of participation - Peculiarities of treatment of patients
+          with vascular pathology in the conditions of the SARS-CoV-2 pandemic
   - photo: /uploads/about/16.09.2020.webp
     description:
       uk:
         alt: >-
           Сертифікат про участь - Сучасні підходи до діагностики та лікування
           хронічного тазового болю
+      en:
+        alt: >-
+          Certificate of attendance - Modern approaches to the diagnostics and
+          treatment of chronic pelvic pain
   - photo: /uploads/about/14.11.2021.webp
     description:
       uk:
