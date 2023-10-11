@@ -1,5 +1,5 @@
 ---
-photo: /uploads/about/about-img.webp
+photo: /uploads/about/about.webp
 video: ''
 general:
   uk:
