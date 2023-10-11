@@ -261,6 +261,7 @@ export type AboutGeneral = {
 
 export type AboutEducationUkInstitutions = {
   __typename?: 'AboutEducationUkInstitutions';
+  period?: Maybe<Scalars['String']['output']>;
   institution?: Maybe<Scalars['String']['output']>;
 };
 
@@ -272,6 +273,7 @@ export type AboutEducationUk = {
 
 export type AboutEducationEnInstitutions = {
   __typename?: 'AboutEducationEnInstitutions';
+  period?: Maybe<Scalars['String']['output']>;
   institution?: Maybe<Scalars['String']['output']>;
 };
 
@@ -403,6 +405,7 @@ export type AboutGeneralFilter = {
 };
 
 export type AboutEducationUkInstitutionsFilter = {
+  period?: InputMaybe<StringFilter>;
   institution?: InputMaybe<StringFilter>;
 };
 
@@ -412,6 +415,7 @@ export type AboutEducationUkFilter = {
 };
 
 export type AboutEducationEnInstitutionsFilter = {
+  period?: InputMaybe<StringFilter>;
   institution?: InputMaybe<StringFilter>;
 };
 
@@ -842,6 +846,7 @@ export type AboutGeneralMutation = {
 };
 
 export type AboutEducationUkInstitutionsMutation = {
+  period?: InputMaybe<Scalars['String']['input']>;
   institution?: InputMaybe<Scalars['String']['input']>;
 };
 
@@ -853,6 +858,7 @@ export type AboutEducationUkMutation = {
 };
 
 export type AboutEducationEnInstitutionsMutation = {
+  period?: InputMaybe<Scalars['String']['input']>;
   institution?: InputMaybe<Scalars['String']['input']>;
 };
 
@@ -1036,6 +1042,7 @@ export type AboutPartsFragment = {
       title: string;
       institutions?: Array<{
         __typename: 'AboutEducationUkInstitutions';
+        period?: string | null;
         institution?: string | null;
       } | null> | null;
     } | null;
@@ -1044,6 +1051,7 @@ export type AboutPartsFragment = {
       title: string;
       institutions?: Array<{
         __typename: 'AboutEducationEnInstitutions';
+        period?: string | null;
         institution?: string | null;
       } | null> | null;
     } | null;
@@ -1193,6 +1201,7 @@ export type AboutQuery = {
         title: string;
         institutions?: Array<{
           __typename: 'AboutEducationUkInstitutions';
+          period?: string | null;
           institution?: string | null;
         } | null> | null;
       } | null;
@@ -1201,6 +1210,7 @@ export type AboutQuery = {
         title: string;
         institutions?: Array<{
           __typename: 'AboutEducationEnInstitutions';
+          period?: string | null;
           institution?: string | null;
         } | null> | null;
       } | null;
@@ -1318,6 +1328,7 @@ export type AboutConnectionQuery = {
             title: string;
             institutions?: Array<{
               __typename: 'AboutEducationUkInstitutions';
+              period?: string | null;
               institution?: string | null;
             } | null> | null;
           } | null;
@@ -1326,6 +1337,7 @@ export type AboutConnectionQuery = {
             title: string;
             institutions?: Array<{
               __typename: 'AboutEducationEnInstitutions';
+              period?: string | null;
               institution?: string | null;
             } | null> | null;
           } | null;
@@ -1695,6 +1707,7 @@ export const AboutPartsFragmentDoc = gql`
         title
         institutions {
           __typename
+          period
           institution
         }
       }
@@ -1703,6 +1716,7 @@ export const AboutPartsFragmentDoc = gql`
         title
         institutions {
           __typename
+          period
           institution
         }
       }
@@ -2234,7 +2248,7 @@ export const ExperimentalGetTinaClient = () =>
   getSdk(
     generateRequester(
       createClient({
-        url: 'https://content.tinajs.io/1.4/content/112741f1-bcd7-4118-ba69-e56683058d98/github/main',
+        url: 'http://localhost:4001/graphql',
         queries,
       }),
     ),

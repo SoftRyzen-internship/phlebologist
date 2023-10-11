@@ -9,7 +9,8 @@ general:
 
       Флеболог
     education:
-      - institution: Стажування з судинної хірургії у Львівській обласній клінічній лікарні
+      - institution:
+          Стажування з судинної хірургії у Львівській обласній клінічній лікарні
       - institution: Національна медична академія П.Л. Шупика
       - institution: Національний медичний університету О.О.Богомольця
     experience:
@@ -18,9 +19,11 @@ general:
       - point: 5000+ вилікуваних пацієнтів
   en:
     name: Sergii Voitsitskyi
-    profession: Surgеon of the 1st Qualification Category in Vascular Surgery Phlebologist
+    profession:
+      Surgеon of the 1st Qualification Category in Vascular Surgery Phlebologist
     education:
-      - institution: Internship in Vascular Surgery at Lviv Regional Clinical Hospital
+      - institution:
+          Internship in Vascular Surgery at Lviv Regional Clinical Hospital
       - institution: National Medical Academy named after P.L. Shupyk
       - institution: National Medical University named after O.O. Bogomolets
     experience:
@@ -34,12 +37,18 @@ education:
       - institution: >-
           Національний медичний університету імені О.О.Богомольця 1-й медичний
           факультет.
-      - institution: "Національна медична академія післядипломної освіти ім. П.Л. Шупика «Національний інститут хірургії та трансплантології ім. О.О. Шалімова»\_"
+      - institution:
+          "Національна медична академія післядипломної освіти ім. П.Л. Шупика
+          «Національний інститут хірургії та трансплантології ім. О.О.
+          Шалімова»\_"
       - institution: >-
           Стажування з судинної хірургії на базі Львівської обласної клінічної
           лікарні.
-      - institution: "Цикл спеціалізації «Ультразвукова діагностика» Ужгородський національний університет\_"
-      - institution: 'The 9th MUNICH VASCULAR CONFERENCE (MAC), Munich, Germany.'
+      - institution:
+          "Цикл спеціалізації «Ультразвукова діагностика» Ужгородський
+          національний університет\_"
+      - institution:
+          'The 9th MUNICH VASCULAR CONFERENCE (MAC), Munich, Germany.'
       - institution: Член Європейської асоціації судинних хірургів.
       - institution: >-
           Управлінням охорони здоров’я присвоєно першу кваліфікаційну категорію
@@ -50,7 +59,8 @@ education:
       - institution: >-
           Since 2021: Awarded the first qualification category in Vascular
           Surgery by the Ministry of Health.
-      - institution: 'Since 2018: Member of the European Association for Vascular Surgeons.'
+      - institution:
+          'Since 2018: Member of the European Association for Vascular Surgeons.'
       - institution: >-
           2019: Attended The 9th MUNICH VASCULAR CONFERENCE (MAC) in Munich,
           Germany.
@@ -74,7 +84,9 @@ career:
       - period: 2013-2016
         institution: 'КМКЛ №6 / Хірургічне відділення №1, №2'
       - period: 2013-2016
-        institution: "КНП «Черкаська обласна лікарня Черкаської обласної ради» Центр судинної хірургії,\_ Лікар-хірург"
+        institution:
+          "КНП «Черкаська обласна лікарня Черкаської обласної ради» Центр
+          судинної хірургії,\_ Лікар-хірург"
       - period: 2016-2020
         institution: >-
           Обласний центр екстреної медичної допомоги та медичних катастроф,
@@ -97,11 +109,13 @@ career:
       - period: Since 2023
         institution: '"Medeira" Clinic - Vascular Surgeon / Phlebologist.'
       - period: Since 2020
-        institution: '"Oxford Medical" Clinic - Vascular Surgeon / Phlebologist.'
+        institution:
+          '"Oxford Medical" Clinic - Vascular Surgeon / Phlebologist.'
       - period: 2021-2023
         institution: '"ProHealth" Clinic - Vascular Surgeon / Phlebologist.'
       - period: 2020-2022
-        institution: '"Institute Vein" Clinic - Vascular Surgeon / Phlebologist.'
+        institution:
+          '"Institute Vein" Clinic - Vascular Surgeon / Phlebologist.'
       - period: 2016-2020
         institution: >-
           Cherkasy Regional Hospital of the Cherkasy Regional Council, Vascular
@@ -253,4 +267,3 @@ certificates:
           Certificate of attendance - Ukrainian scientific virtual conference
           with international participation
 ---
-
