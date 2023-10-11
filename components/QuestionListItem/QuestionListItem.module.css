@@ -1,12 +1,3 @@
-@keyframes rollout {
-  0% {
-    transform: translateY(-100px);
-  }
-  100% {
-    transform: none;
-  }
-}
-
 @keyframes fade {
   0% {
     opacity: 0;
@@ -16,10 +7,6 @@
   }
 }
 
-.roll {
-  animation: rollout 1s;
-  /* animation: 
-    0.5s linear 0s rollout,
-    1s linear 0s fade; */
-  /* animation: fade 1s; */
+.fade {
+  animation: fade 0.3s;
 }

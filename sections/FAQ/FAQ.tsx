@@ -7,7 +7,6 @@ const FAQ: React.FC<FAQProps> = ({ staticData: { faq, socials } }) => {
   const { telegram } = socials;
 
   return (
-    // test-margin
     <section className="xl:mt[-48px] mt-[-20px] md:mt-[-36px]" id="faq">
       <div className="container">
         <div
