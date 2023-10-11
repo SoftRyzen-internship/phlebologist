@@ -1,7 +1,7 @@
 import { FC } from 'react';
 
 import { FormCheckboxProps } from './FormCheckbox.props';
-import { Controller, Control } from 'react-hook-form';
+// import { Controller, Control } from 'react-hook-form';
 
 const FormCheckbox: FC<FormCheckboxProps> = ({
   staticData,
@@ -10,8 +10,8 @@ const FormCheckbox: FC<FormCheckboxProps> = ({
   control,
   isChecked,
   setIsChecked,
-  handleInputChange,
 }) => {
+  console.log(staticData, register, errors, control, isChecked, setIsChecked);
   return <div>FORM-CHECKBOX</div>;
 };
 

@@ -23,6 +23,7 @@ const Form: FC<FormProps> = ({ staticData, className = '' }) => {
   const { sendText, sentText, loadingText, errorText } = button;
 
   const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [isChecked, setIsChecked] = useState<boolean>(false);
   const [buttonCurrentText, setButtonCurrentText] = useState<string>(sendText);
 
   const FORM_DATA_KEY = 'form_session_data';
@@ -31,6 +32,7 @@ const Form: FC<FormProps> = ({ staticData, className = '' }) => {
     register,
     reset,
     watch,
+    control,
     setValue,
     handleSubmit,
     formState: { errors, isSubmitSuccessful },
@@ -82,7 +84,14 @@ const Form: FC<FormProps> = ({ staticData, className = '' }) => {
       <FormInput staticData={input.name} register={register} errors={errors} />
       <FormInput staticData={input.phone} register={register} errors={errors} />
       <FormTextarea staticData={textarea} register={register} errors={errors} />
-      <FormCheckbox staticData={checkbox} register={register} errors={errors} />
+      <FormCheckbox
+        staticData={checkbox}
+        register={register}
+        errors={errors}
+        control={control}
+        setIsChecked={setIsChecked}
+        isChecked={isChecked}
+      />
       <SubmitButton className={buttonClass} disabled={isLoading}>
         {isLoading ? loadingText : buttonCurrentText}
       </SubmitButton>

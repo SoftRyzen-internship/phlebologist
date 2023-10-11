@@ -9,5 +9,4 @@ export interface FormCheckboxProps {
   control: Control<any>;
   isChecked: boolean;
   setIsChecked: (b: boolean) => void;
-  handleInputChange: (field: string, value: boolean) => void;
 }
