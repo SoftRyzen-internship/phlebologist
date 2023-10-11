@@ -54,26 +54,29 @@ education:
   en:
     title: Educational Background
     institutions:
-      - institution: >-
-          Since 2021: Awarded the first qualification category in Vascular
-          Surgery by the Ministry of Health.
-      - institution: 'Since 2018: Member of the European Association for Vascular Surgeons.'
-      - institution: >-
-          2019: Attended The 9th MUNICH VASCULAR CONFERENCE (MAC) in Munich,
-          Germany.
-      - institution: >-
-          2020: Specialization in "Ultrasound Diagnostics" at Uzhhorod National
+      - period: Since 2021
+        institution: >-
+          Awarded the first qualification category in Vascular Surgery by the
+          Ministry of Health.
+      - period: Since 2018
+        institution: Member of the European Association for Vascular Surgeons.
+      - period: '2019'
+        institution: 'Attended The 9th MUNICH VASCULAR CONFERENCE (MAC) in Munich, Germany.'
+      - period: '2020'
+        institution: >-
+          Specialization in "Ultrasound Diagnostics" at Uzhhorod National
           University.
-      - institution: >-
-          2018: Internship in Vascular Surgery at Lviv Regional Clinical
-          Hospital.
-      - institution: >-
-          2013-2017: National Medical Academy of Postgraduate Education named
-          after P.L. Shupyk, National Institute of Surgery and Transplantology
-          named after A.A. Shalimov.
-      - institution: >-
-          2007-2013: National Medical University named after O.O. Bogomolets,
-          1st Medical Faculty.
+      - period: '2018'
+        institution: Internship in Vascular Surgery at Lviv Regional Clinical Hospital.
+      - period: 2013-2017
+        institution: >-
+          National Medical Academy of Postgraduate Education named after P.L.
+          Shupyk, National Institute of Surgery and Transplantology named after
+          A.A. Shalimov.
+      - period: 2007-2013
+        institution: >-
+          National Medical University named after O.O. Bogomolets, 1st Medical
+          Faculty.
 career:
   uk:
     title: Карʼєра лікаря
