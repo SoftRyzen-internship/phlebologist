@@ -7,6 +7,7 @@ import { SubmitButtonProps } from './SubmitButton.props';
 
 const SubmitButton: React.FC<SubmitButtonProps> = ({
   className = '',
+  disabled = false,
   children,
   actionHandler,
 }) => {
@@ -22,7 +23,12 @@ const SubmitButton: React.FC<SubmitButtonProps> = ({
   );
 
   return (
-    <button type="submit" onClick={actionHandler} className={btnClass}>
+    <button
+      type="submit"
+      onClick={actionHandler}
+      className={btnClass}
+      disabled={disabled}
+    >
       {children}
     </button>
   );

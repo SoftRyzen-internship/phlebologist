@@ -67,3 +67,9 @@ export { default as Location } from '@/components/Location/Location';
 // modal window
 
 export { default as Modal } from '@/components/Modal/Modal';
+
+// section Consultation
+export { default as Form } from '@/components/Form/Form';
+export { default as FormInput } from '@/components/FormInput/FormInput';
+export { default as FormTextarea } from '@/components/FormTextarea/FormTextarea';
+export { default as FormCheckbox } from '@/components/FormCheckbox/FormCheckbox';

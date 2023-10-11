@@ -71,7 +71,9 @@ module.exports = {
           dark: '#263850',
         },
         notify: {
+          success: '#53B82F',
           error: '#FF5660',
+          disabled: '#CCCCCC',
         },
       },
       // LINE-HEIGHTS

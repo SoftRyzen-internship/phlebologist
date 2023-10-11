@@ -5,6 +5,7 @@ import {
   HeroSection,
   AdvantagesSection,
   FAQSection,
+  ConsultationSection,
   ResultsSection,
   ContactsSection,
   FeedbackSection,
@@ -26,6 +27,10 @@ export default async function Home({
         className="-mt-5 mb-10 md:-mt-8 xl:-mt-10"
       />
       <FAQSection staticData={{ faq: page.home.faq, socials }} />
+      <ConsultationSection
+        staticData={page.home.consultation}
+        className="-mt-5 mb-10 md:-mt-8 xl:-mt-10"
+      />
       <ContactsSection
         staticData={{ pageData: page.home, socialData: socials }}
       />
