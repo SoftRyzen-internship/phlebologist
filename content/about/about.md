@@ -119,6 +119,22 @@ career:
           Central Municipal Clinical Hospital No. 6, Surgical Departments #1 and
           #2
 certificates:
+  - photo: /uploads/about/16.09.2020.webp
+    description:
+      uk:
+        alt: >-
+          Сертифікат про участь - Сучасні підходи до діагностики та лікування
+          хронічного тазового болю
+  - photo: /uploads/about/14.11.2021.webp
+    description:
+      uk:
+        alt: >-
+          Сертифікат учасника - Міжнародний конгрес "Антибіотикорезистентність
+          STOP"
+      en:
+        alt: >-
+          Certificate of participation - International Congress "Antibiotic
+          resistance STOP"
   - photo: /uploads/about/12.12.2020.webp
     description:
       uk:
