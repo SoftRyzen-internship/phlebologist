@@ -119,6 +119,16 @@ career:
           Central Municipal Clinical Hospital No. 6, Surgical Departments #1 and
           #2
 certificates:
+  - photo: /uploads/about/03.12.2022.webp
+    description:
+      uk:
+        alt: >-
+          Сертифікат участі  - З'їзд судинних хірургів, флебологів та ангіологів
+          України
+      en:
+        alt: >-
+          Certificate of participation - Congress of vascular surgeons,
+          phlebologists and angiologists of Ukraine
   - photo: /uploads/about/01.12.2020_2.webp
     description:
       uk:
