@@ -1,5 +1,6 @@
 import { Locale } from '@/i18n.config';
 import { getDictionary } from '@/utils/dictionary';
+import Link from 'next/link';
 
 import {
   HeroSection,
@@ -20,6 +21,38 @@ export default async function Home({
 
   return (
     <main>
+      <div className="mx-auto w-[440px] py-10">
+        <h2 className="text-center font-semibold uppercase">
+          temp treatment nav
+        </h2>
+        <div className="mt-4 flex gap-4">
+          <Link
+            href={`${lang}/treatment/1`}
+            className="rounded-md bg-gray-extra p-3"
+          >
+            Method 1
+          </Link>
+          <Link
+            href={`${lang}/treatment/2`}
+            className="rounded-md bg-gray-extra p-3"
+          >
+            Method 2
+          </Link>
+          <Link
+            href={`${lang}/treatment/3`}
+            className="rounded-md bg-gray-extra p-3"
+          >
+            Method 3
+          </Link>
+          <Link
+            href={`${lang}/treatment/4`}
+            className="rounded-md bg-gray-extra p-3"
+          >
+            Method 4
+          </Link>
+        </div>
+      </div>
+
       <HeroSection staticData={page.home.hero} lang={lang} />
       <AdvantagesSection
         staticData={page.home.advantages}

@@ -67,3 +67,7 @@ export { default as Location } from '@/components/Location/Location';
 // modal window
 
 export { default as Modal } from '@/components/Modal/Modal';
+
+// Treatment Details page
+export { default as TreatmentQAList } from '@/components/TreatmentQAList/TreatmentQAList';
+export { default as TreatmentQAItem } from '@/components/TreatmentQAItem/TreatmentQAItem';
