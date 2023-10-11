@@ -10,4 +10,5 @@ type AboutTabsDataType = {
 export interface AboutTabsProps {
   staticData: AboutTabsDataType;
   data: AboutDataType;
+  iconData: any;
 }

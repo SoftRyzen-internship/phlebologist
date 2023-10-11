@@ -3,6 +3,7 @@ import { ErrorMessage, Heading } from '@/components';
 import { AboutEducationProps } from './AboutEducation.props';
 
 const AboutEducation: React.FC<AboutEducationProps> = ({ data }) => {
+  console.log(data);
   if (!data) {
     return <ErrorMessage />;
   }

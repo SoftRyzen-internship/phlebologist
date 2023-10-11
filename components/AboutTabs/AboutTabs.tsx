@@ -15,6 +15,7 @@ import {
 const AboutTabs: React.FC<AboutTabsProps> = ({
   staticData: { menu, firstSubtitle, secondSubtitle },
   data: { general, education, career, certificates },
+  iconData,
 }) => {
   const [selectedIndex, setSelectedIndex] = useState(0);
 
@@ -25,7 +26,7 @@ const AboutTabs: React.FC<AboutTabsProps> = ({
         selectedIndex={selectedIndex}
         onChange={setSelectedIndex}
       >
-        <Tab.List as={'ul'} className={'flex flex-wrap gap-3'}>
+        <Tab.List as={'ul'} className={'mb-5 flex flex-wrap gap-3 md:mb-8'}>
           {menu.map((item, index) => (
             <Tab key={`${item.collection}${index}`} as={'li'}>
               {({ selected }) => (
@@ -51,7 +52,7 @@ const AboutTabs: React.FC<AboutTabsProps> = ({
             <AboutCareer data={career} />
           </Tab.Panel>
           <Tab.Panel>
-            <AboutCertificates data={certificates} />
+            <AboutCertificates data={certificates} iconData={iconData} />
           </Tab.Panel>
         </Tab.Panels>
       </Tab.Group>

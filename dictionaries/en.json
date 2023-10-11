@@ -1,17 +1,17 @@
 {
   "navigation": [
-    { "title": "На головну", "linkTo": "/" },
-    { "title": "Про лікаря", "linkTo": "about" },
-    { "title": "Переваги", "linkTo": "advantages" },
-    { "title": "Методи лікування", "linkTo": "methods" },
-    { "title": "Результати пацієнтів", "linkTo": "results" },
-    { "title": "Відгуки", "linkTo": "feedback" },
-    { "title": "Питання-Відповіді", "linkTo": "faq" },
-    { "title": "Контакти", "linkTo": "contacts" }
+    { "title": "Homepage", "linkTo": "/" },
+    { "title": "About the doctor", "linkTo": "about" },
+    { "title": "Advantages", "linkTo": "advantages" },
+    { "title": "Treatment methods", "linkTo": "methods" },
+    { "title": "Patient results", "linkTo": "results" },
+    { "title": "Reviews", "linkTo": "reviews" },
+    { "title": "FAQ", "linkTo": "faq" },
+    { "title": "Contacts", "linkTo": "contacts" }
   ],
   "header": {
-    "linkButton": "Напишіть нам",
-    "formButton": "Записатись на консультацію",
+    "linkButton": "Contact Us",
+    "formButton": "Schedule a Consultation",
     "langButton": {
       "headerBtn": "Укр",
       "menuBtn": "Змінити на українську"
@@ -96,7 +96,7 @@
         }
       },
       "about": {
-        "title": "About",
+        "title": "About the Doctor",
         "firstSubtitle": "Experience:",
         "secondSubtitle": "Education:",
         "menu": [
@@ -212,7 +212,7 @@
     "facebook": "https://www.facebook.com/dr.SergiiVoitsitskyi"
   },
   "footer": {
-    "address": "Клініка “Медейра” - м. Київ, проспект Перемоги, 67",
+    "address": "Medeira Clinic - Kyiv, Beresteiskyi Avenue, 67",
     "phone": "+380933521235"
   }
 }

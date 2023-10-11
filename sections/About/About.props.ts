@@ -14,5 +14,8 @@ type AboutStaticDataType = {
 
 export interface AboutProps {
   lang: Locale;
-  staticData: AboutStaticDataType;
+  staticData: {
+    about: AboutStaticDataType;
+    iconData: any;
+  };
 }
