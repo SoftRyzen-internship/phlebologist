@@ -119,6 +119,16 @@ career:
           Central Municipal Clinical Hospital No. 6, Surgical Departments #1 and
           #2
 certificates:
+  - photo: /uploads/about/01.12.2020_2.webp
+    description:
+      uk:
+        alt: >-
+          Сертифікат участі Міжнародної конференції "Актуальні питання
+          ангіології"
+      en:
+        alt: >-
+          Certificate of participation in the International Conference "Current
+          Issues of Angiology"
   - photo: /uploads/about/01.10.2021.webp
     description:
       uk:
