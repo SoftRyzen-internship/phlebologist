@@ -119,6 +119,16 @@ career:
           Central Municipal Clinical Hospital No. 6, Surgical Departments #1 and
           #2
 certificates:
+  - photo: /uploads/about/06.07.2019.webp
+    description:
+      uk:
+        alt: >-
+          Сертифікат участі  - Актуальні питання флебології. Венозний
+          тромбоемболізм та його наслідки
+      en:
+        alt: >-
+          Certificate of participation - Current issues of phlebology. Venous
+          thromboembolism and its consequences
   - photo: /uploads/about/05.10.2021_2.webp
     description:
       uk:
