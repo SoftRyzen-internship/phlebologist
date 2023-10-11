@@ -1,17 +1,17 @@
 {
   "navigation": [
-    { "title": "На головну", "linkTo": "/" },
-    { "title": "Про лікаря", "linkTo": "about" },
-    { "title": "Переваги", "linkTo": "advantages" },
-    { "title": "Методи лікування", "linkTo": "methods" },
-    { "title": "Результати пацієнтів", "linkTo": "results" },
-    { "title": "Відгуки", "linkTo": "feedback" },
-    { "title": "Питання-Відповіді", "linkTo": "faq" },
-    { "title": "Контакти", "linkTo": "contacts" }
+    { "title": "Homepage", "linkTo": "/" },
+    { "title": "About the doctor", "linkTo": "about" },
+    { "title": "Advantages", "linkTo": "advantages" },
+    { "title": "Treatment methods", "linkTo": "methods" },
+    { "title": "Patient results", "linkTo": "results" },
+    { "title": "Reviews", "linkTo": "feedback" },
+    { "title": "FAQ", "linkTo": "faq" },
+    { "title": "Contacts", "linkTo": "contacts" }
   ],
   "header": {
-    "linkButton": "Напишіть нам",
-    "formButton": "Записатись на консультацію",
+    "linkButton": "Contact us",
+    "formButton": "Schedule a Consultation",
     "langButton": {
       "headerBtn": "Укр",
       "menuBtn": "Змінити на українську"
@@ -131,42 +131,42 @@
         }
       },
       "faq": {
-        "title": "Відповіді на поширенні запитання",
-        "description": "Якщо у вас залишились запитання, напишіть нам і ми дамо відповіді на все, що вас цікавить",
-        "button": "Написати у Telegram",
+        "title": "Answers to Common Questions",
+        "description": "If you have any questions left, feel free to ask, and we will provide answers to anything you're curious about.",
+        "button": "Contact in Telegram",
         "aria": "Arrow icon",
         "questions": [
           {
-            "question": "Які зрозуміти що в мене варикоз?",
-            "answer": "Ознаками захворювання є судинна сітка, розширені вени які випирають над шкірою, зміни в кольорі чи структурі шкіри, судоми, важкість або біль у ногах, набряки надвечір. Багато людей не йдуть до лікаря поки не відчують біль, проте треба розуміти що біль є ознакою ускладнень, наприклад, тромбозу або флебіту."
+            "question": "How to understand that I have varicose veins disease?",
+            "answer": "The signs of the condition include a spider web of veins, enlarged veins protruding above the skin, changes in skin color or texture, spider veins, heaviness or pain in the legs, and swelling at the end of the day. Many people don't see a doctor until they feel pain, but it's important to understand that pain is a sign of complications, such as thrombosis or phlebitis."
           },
           {
-            "question": "Як проходить консультація у флеболога?",
-            "answer": "Лікар вислухає ваші скарги, збере анамнез, проведе огляд. Після чого лікар за допомогою УЗД перевірить роботу клапанів, наявність рефлюксу та точно визначить ділянки уражених вен. На основі проведеного повного обстеження поставить точний діагноз, складе індивідуальний план лікування, за необхідності підбере компресійний трикотаж та надасть рекомендації щодо профілактики захворювання."
+            "question": "How does a consultation with a phlebologist go?",
+            "answer": "The doctor will listen to your complaints, take a medical history, and conduct an examination. Afterward, using ultrasound (Doppler ultrasound), the doctor will check the functioning of the valves, the presence of reflux, and accurately determine the affected vein segments. Based on a comprehensive examination, the doctor will make an accurate diagnosis, create an individual treatment plan, if necessary, select compression hosiery, and provide recommendations for disease prevention."
           },
           {
-            "question": "Яка анестезія застосовується під час операції?",
-            "answer": "Операції проводяться під місцевою тумесцентною анестезією, яка забезпечує швидке та повне знеболення ділянки проведення процедури. Важливо відзначити, що після такої анестезії відсутні інтоксикаційні ефекти на організм і гематоми в найближчих тканинах. Що цікаво, пацієнти можуть покинути лікарню вже через 1-2 години після завершення операції."
+            "question": "What type of anesthesia is used during the surgery?",
+            "answer": "The surgeries are performed under local tumescent anesthesia, which provides rapid and complete numbing of the procedure area. It's important to note that after this type of anesthesia, there are no intoxication effects on the body and no hematomas in the surrounding tissues. Interestingly, patients can leave the hospital just 1-2 hours after the surgery is completed."
           },
           {
-            "question": "Чи можна лікувати варикоз мазями? ",
-            "answer": "Мазі не лікують варикоз, а лише частково знімають симптоми! Варикоз - це хронічне захворювання, яке може призвести до серйозних ускладнень, якщо не лікувати його належним чином, таких як венозні виразки, тромбози або прогресуюча венозна недостатність."
+            "question": "Can varicose veins be treated with ointments?",
+            "answer": "Ointments do not treat varicose veins, they only partially relieve symptoms! Varicose veins are a chronic condition that can lead to serious complications if not treated properly, such as venous ulcers, thrombosis, or progressing venous insufficiency."
           },
           {
-            "question": "Я боюся йти на операцію",
-            "answer": "Страх перед операцією - це абсолютно нормальна реакція людини. Однак страх потрібно контролювати. Також слід знати, що не у всіх випадках єдиним рішенням вашої проблеми є операція. Метод лікування визначає лікар лише після повного обстеження. Також слід розуміти, що варикозна хвороба може призвести до різних ускладнень і погіршити якість життя пацієнта. Тому найкраще при подібних проблемах одразу звертатись до лікаря та лікувати хворобу на ранній стадії."
+            "question": "I'm afraid to have surgery.",
+            "answer": "Fear of surgery is a completely normal human reaction. However, it's important to manage that fear. Also, it's important to know that not in all cases, surgery is the only solution to your problem. The treatment method is determined by the doctor only after a full examination. It's also important to understand that varicose disease can lead to various complications and worsen the quality of the patient's life. Therefore, it's best to consult a doctor and treat the disease at an early stage."
           },
           {
-            "question": "Коли краще робити операцію?",
-            "answer": "При виборі найкращої дати для операції, я не просто дивлюся на календар, а звертаю увагу на те, як пацієнт відчуває себе, як розвивається хвороба. Сучасне лікування вже не обмежене сезонами. Операції проводяться у будь-яку пору року."
+            "question": "When is the best time to have surgery?",
+            "answer": "When choosing the best date for surgery, I don't just look at the calendar, but also consider how the patient feels and how the disease is developing. Modern treatment is no longer limited by seasons. Surgeries can be performed at any time of the year."
           },
           {
-            "question": "Які ускладнення можуть бути якщо не лікувати варикоз?",
-            "answer": "Не лікуваний варикоз може призвести до шкірних ускладнень, виразок, тромбофлебіту, наростання венозної недостатності, кровотечі при затримці з лікуванням. Рекомендується на ранніх стадіях звернутися до лікаря для діагностики, призначення лікування, щоб уникнути цих ускладнень."
+            "question": "What complications can occur if varicose veins are not treated?",
+            "answer": "Untreated varicose veins can lead to skin complications, ulcers, thrombophlebitis, worsening of venous insufficiency, and bleeding if treatment is delayed. It is recommended to seek medical attention at an early stage for diagnosis and treatment to avoid these complications."
           },
           {
-            "question": "Чи залишаються рубці після операції?",
-            "answer": "Враховуючи мінімальні доступи, що дозволяють виконати діаметри вен, при виконанні операцій практично не лишається рубців. Хоча в результаті виконання сучасних флебологічних операцій отримується мінімальна травматизація тканин в будь якій стадії захворювання все ж ранні та не ускладнені варіанти захворювання легше переносяться пацієнтами та дають кращий естетичний результат."
+            "question": "Do scars remain after the surgery?",
+            "answer": "Considering the minimal access required to perform vein procedures, there are usually no significant scars left after the surgery. Modern phlebological procedures aim to minimize tissue trauma, resulting in minimal scarring. While early and uncomplicated cases of varicose veins are easier for patients to tolerate and offer better aesthetic results."
           }
         ]
       },

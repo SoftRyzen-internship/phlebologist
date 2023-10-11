@@ -11,16 +11,19 @@ const ExternalLinkButton: React.FC<ExternalLinkButtonProps> = ({
   actionHandler,
 }) => {
   const btnClass = classnames(
-    'xl:bg-white-light xl:mediaHover:hover:bg-gray-light xl:focus:bg-gray-light',
-
-    'outline-without flex items-center justify-center w-[256px] h-[51px] bg-gray-light text-black-dark text-base rounded-normal leading-normal -tracking-[0.64px]',
+    'outline-without flex items-center justify-center w-[256px] h-[51px] md:px-12 bg-gray-light text-black-dark text-base rounded-normal leading-normal -tracking-[0.64px]',
 
     'mediaHover:hover:cursor-pointer mediaHover:hover:font-bold focus:font-bold',
 
     'transition-all duration-300',
 
     {
-      'w-full h-auto px-6 py-2 font-semibold uppercase text-xs -tracking-[0.48px] bg-white-light text-black-dark mediaHover:hover:bg-gray-extra focus:bg-gray-extra mediaHover:hover:font-semibold focus:font-semibold xl:mediaHover:hover:bg-gray-extra':
+      'xl:bg-white-light xl:mediaHover:hover:bg-gray-light xl:focus:bg-gray-light':
+        variant === 'default',
+    },
+
+    {
+      'w-full h-auto px-6 py-2 font-semibold uppercase text-xs -tracking-[0.48px] bg-white-light text-black-dark mediaHover:hover:bg-gray-extra focus:bg-gray-extra mediaHover:hover:font-semibold focus:font-semibold':
         variant === 'menu',
     },
 
