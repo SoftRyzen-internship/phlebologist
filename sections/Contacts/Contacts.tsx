@@ -18,7 +18,7 @@ const Contacts: React.FC<ContactsProps> = ({
       <div className="container">
         <div className="wrapper rounded-medium bg-white pb-[32px] pt-[24px] md:py-[40px] xl:py-[64px]">
           <Heading variant="primary">{sectionData.heading}</Heading>
-          <address className="mt-[20px] flex flex-col gap-[20px] not-italic md:mt-[32px] md:flex-row md:gap-[56px] xl:mt-[64px] xl:justify-between xl:gap-0">
+          <address className="mt-[20px] flex flex-col gap-[20px] not-italic md:mt-[32px] md:flex-row md:gap-[80px] xl:mt-[48px] xl:justify-between xl:gap-0">
             <ul className="flex flex-col gap-[20px] md:gap-[32px] xl:gap-[64px]">
               <li>
                 <InfoBlock
@@ -60,7 +60,7 @@ const Contacts: React.FC<ContactsProps> = ({
                   </p>
                   <ExternalLinkButton
                     linkto={socialData.telegram}
-                    className="mx-auto mt-[8px] md:ml-0 md:mt-[24px]"
+                    className="mx-auto mt-[8px] md:ml-0 md:mt-[24px] md:w-[248px] md:px-11"
                   >
                     {sectionData.action.actionName}
                   </ExternalLinkButton>

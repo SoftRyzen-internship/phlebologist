@@ -20,43 +20,50 @@
   },
   "page": {
     "home": {
+      "hero": {
+        "title": "I treat varicose veins",
+        "topText": "Fast Efficient Painless",
+        "middleText": "You'll return to your regular life immediately after the session",
+        "bottomText": "Schedule a consultation and find out \nwhich treatment method is right for you!",
+        "buttonText": "Schedule a Consultation"
+      },
       "advantages": {
-        "title": "Переваги",
-        "mainQuestion": "Чому варто працювати \nсаме зі мною?",
+        "title": "Advantages",
+        "mainQuestion": "Why should you choose \nto work with me?",
         "advList": [
           {
             "id": "01",
-            "title": "Міжнародний досвід",
-            "description": "Член європейської асоціації судинних хірургів. Обмін досвідом з провідними лікарями світу"
+            "title": "International Experience",
+            "description": "A member of the European Association for Vascular Surgeons. Knowledge exchange with leading doctors worldwide"
           },
           {
             "id": "02",
-            "title": "Швидка реабілітація",
-            "description": "Завдяки лікуванню сучасними малоінвазивними методами ви одразу після процедури можете повернутись до звичайного життя та вже на наступний день повернутись до роботи"
+            "title": "Quick Rehabilitation",
+            "description": "Thanks to modern minimally invasive treatments, you can return to your normal life immediately after the procedure and be back to work the next day"
           },
           {
             "id": "03",
-            "title": "Зручність і комфорт",
-            "description": "Затишна атмосфера клініки та підтримка пацієнтів протягом усього лікування"
+            "title": "Convenience and Comfort",
+            "description": "A comfortable clinic atmosphere and patient support throughout the entire treatment process"
           },
           {
             "id": "04",
-            "title": "Експертність",
-            "description": "Високий рівень професійної кваліфікації та досвід у лікуванні венозних захворювань"
+            "title": "Expertise",
+            "description": "High levels of professional qualifications and experience in treating venous and arterial diseases"
           },
           {
             "id": "05",
-            "title": "УЗ навігація",
-            "description": "Усі операції виконуються за допомогою УЗ навігації, завдяки якій, вплив здійснюється максимально точно тільки на уражені вени, не пошкоджуючи при цьому здорові"
+            "title": "Ultrasound Navigation",
+            "description": "All procedures are performed using ultrasound navigation, ensuring precise treatment only on affected veins without harming healthy ones"
           },
           {
             "id": "06",
-            "title": "Прозорість",
-            "description": "Ми не навʼязуємо операцій, якщо у цьому немає необхідності. Чітке пояснення процедур, ризиків та очікуваних результатів лікування"
+            "title": "Transparency",
+            "description": "We do not recommend surgery unless necessary. Clear explanations of procedures, risks, and expected treatment outcomes"
           }
         ],
-        "enrollText": "Запишіться на консультацію та переконайтесь у професіоналізмі лікаря",
-        "buttonText": "Записатись"
+        "enrollText": "Schedule a consultation and witness the doctor's professionalism",
+        "buttonText": "Schedule an Appointment"
       },
       "iconBtnData": {
         "tiktok": {
@@ -82,6 +89,10 @@
         "location": {
           "iconFunction": "Location Button",
           "iconLabel": "Geolocation Icon"
+        },
+        "close": {
+          "iconFunction": "Close Button",
+          "iconLabel": "Cross Icon"
         }
       },
       "about": {
@@ -108,9 +119,13 @@
         ]
       },
       "patient_results": {
+        "title": "Results of our patients",
+        "secondaryTitle": "Patient's history",
+        "buttonTextMobile": "Schedule a consultation",
+        "buttonText": "Schedule a consultation",
         "slider": {
-          "beforeAltText": "Before treatment image",
-          "afterAltText": "After treatment image",
+          "beforeAltText": "Image of a condition before treatment",
+          "afterAltText": "Image of a condition after treatment",
           "beforeHandleText": "Before",
           "afterHandleText": "After"
         }
@@ -161,7 +176,7 @@
           "phone": { "caption": "Телефон:", "content": "+380933521235" },
           "address": {
             "caption": "Адреса:",
-            "content": "Клініка “Медейра” - м. Київ, проспект Перемоги, 67"
+            "content": "Клініка “Медейра” - м. Київ, проспект Берестейський, 67"
           },
           "schedule": {
             "caption": "Графік роботи:",

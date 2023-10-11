@@ -13,7 +13,7 @@ const Location = ({ pageData }) => {
   const [isPhotoShown, setIsPhotoShown] = useState(false);
 
   const photoBoxStyles = classNames(
-    'absolute inset-0 rounded-extended overflow-hidden px-[41px] md:px-[79px] xl:px-[180px] pt-[12px] md:pt-[34px] xl:pt-[24px] transition-opacity duration-300',
+    'absolute inset-0 px-[41px] md:px-[79px] xl:px-[180px] pt-[12px] md:pt-[34px] xl:pt-[24px] transition-opacity duration-300',
     {
       'xl:opacity-100': isPhotoShown,
       'xl:opacity-0': !isPhotoShown,
@@ -40,14 +40,16 @@ const Location = ({ pageData }) => {
         />
 
         <div className={photoBoxStyles}>
-          <Image
-            src={sectionData.contactData.location.images.office.img}
-            alt={sectionData.contactData.location.images.office.alt}
-            width={174}
-            height={115}
-            sizes="(max-width: 767px) 328px, (max-width: 1279px) 600px, (max-width: 1751px) 493px, 716px"
-            className="aspect-auto w-full object-cover object-center"
-          />
+          <div className="aspect-auto w-full overflow-hidden rounded-extended ">
+            <Image
+              src={sectionData.contactData.location.images.office.img}
+              alt={sectionData.contactData.location.images.office.alt}
+              width={174}
+              height={115}
+              sizes="(max-width: 767px) 328px, (max-width: 1279px) 600px, (max-width: 1751px) 493px, 716px"
+              className="h-full w-full object-cover object-center"
+            />
+          </div>
         </div>
 
         <div className="absolute bottom-[10%] left-[50%] -translate-x-[50%] md:bottom-[76px] xl:bottom-[64px]">

@@ -27,7 +27,7 @@ const InfoBlock: React.FC<InfoBlockProps> = ({
     'leading-normal': section.toLowerCase() === 'treatment',
     'leading-large xl:text-[20px] xl:leading-normal':
       section.toLowerCase() === 'contacts',
-    'font-bold text-primary-dark-300 xl:font-normal xl:text-black-dark xl:hover:font-bold xl:focus:font-bold xl:hover:text-primary-dark-300 xl:focus:text-primary-dark-300 transition-colors duration-300':
+    'font-bold text-primary-dark-300 xl:font-normal xl:text-black-dark xl:hover:font-bold xl:focus:font-bold xl:hover:text-primary-dark-300 xl:focus:text-primary-dark-300 transition-all duration-300':
       link,
     [contentClassName ? contentClassName : '']: contentClassName,
   });

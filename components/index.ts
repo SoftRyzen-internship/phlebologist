@@ -39,6 +39,9 @@ export { default as AboutCertificates } from '@/components/AboutCertificates/Abo
 // section Advantages
 export { default as AdvantagesList } from '@/components/AdvantagesList/AdvantagesList';
 
+// section Results
+export { default as ResultsSlide } from '@/components/ResultsSlide/ResultsSlide';
+
 // error
 export { default as ErrorMessage } from '@/components/ErrorMessage/ErrorMessage';
 
@@ -60,3 +63,7 @@ export { default as QuestionListItem } from '@/components/QuestionListItem/Quest
 
 export { default as InfoBlock } from '@/components/InfoBlock/InfoBlock';
 export { default as Location } from '@/components/Location/Location';
+
+// modal window
+
+export { default as Modal } from '@/components/Modal/Modal';
