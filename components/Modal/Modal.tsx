@@ -66,14 +66,14 @@ const Modal: React.FC<ModalProps> = ({
     createPortal(
       <div
         className={classNames({
-          'fixed inset-0 z-20 flex items-center justify-center rounded-extended bg-black-backdrop/25 backdrop-blur-sm transition-all duration-300':
+          'fixed inset-0 z-20 flex items-center justify-center rounded-extended  bg-black-backdrop/25 backdrop-blur-sm transition-all duration-300':
             true,
           'invisible opacity-0': !isModalOpen,
           'visible opacity-100': isModalOpen,
         })}
         onClick={handleBackdropClose}
       >
-        <div className="relative bg-white px-[20px] pb-[40px] pt-[56px] md:p-[80px]">
+        <div className=" relative max-h-[497px] max-w-[280px] overflow-hidden rounded-extended bg-white px-[20px] pb-[40px] pt-[56px] md:max-h-[639px] md:max-w-[700px] md:p-[80px] xl:max-w-[1000px]">
           <IconBtn
             variant="close"
             icon="close"

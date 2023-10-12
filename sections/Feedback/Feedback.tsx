@@ -1,8 +1,9 @@
-import { Slider, FeedbackSlide } from '@/components';
+import { fetchReviews } from '@/api';
 
+import { Slider, FeedbackSlide } from '@/components';
 import { FeedbackProps } from './Feedback.props';
 
-const Feedback: React.FC<FeedbackProps> = ({ staticData }) => {
+const Feedback: React.FC<FeedbackProps> = async ({ staticData, lang }) => {
   const slides = [
     { __typename: 2367289350 },
     { __typename: 2367289351 },
@@ -10,6 +11,9 @@ const Feedback: React.FC<FeedbackProps> = ({ staticData }) => {
     { __typename: 2367289353 },
     { __typename: 2367289354 },
   ];
+
+  const reviews = await fetchReviews(lang);
+  console.log(reviews);
 
   return (
     <section className="-mt-[20px] text-black-dark  md:-mt-[36px] xl:-mt-[48px]">

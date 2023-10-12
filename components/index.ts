@@ -27,7 +27,11 @@ export { default as SliderBeforeAfterHandle } from '@/components/SliderBeforeAft
 export { default as Slider } from '@/components/Slider/Slider';
 
 // feedback
-export { default as FeedbackSlide } from '@/components/FeedbackSlide/FeedbackSlide';
+export { default as FeedbackSlide } from '@/components/Feedbacks/FeedbackSlide/FeedbackSlide';
+export { default as FeedbackCard } from '@/components/Feedbacks/FeedbackCard/FeedbackCard';
+export { default as FeedbackFrame } from '@/components/Feedbacks/FeedbackFrame/FeedbackFrame';
+export { default as FeedbackCap } from '@/components/Feedbacks/FeedbackCap/FeedbackCap';
+export { default as FeedbackVideo } from '@/components/Feedbacks/FeedbackVideo/FeedbackVideo';
 
 // section About
 export { default as AboutTabs } from '@/components/AboutTabs/AboutTabs';
