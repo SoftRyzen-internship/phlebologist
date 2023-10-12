@@ -1,6 +1,10 @@
 ---
 uk:
   case:
+    - date: 2023-10-15T21:00:00.000Z
+      photo: /uploads/reviews/Screenshot_92.jpg
+      video: 'https://youtube.com/shorts/V0UFf0W4e0E?si=dDFmOKq6r2m7h5EJ'
+      name: Етельред Нерозумний
     - date: 2023-10-09T21:00:00.000Z
       photo: /uploads/reviews/Alfred_-_MS_Royal_14_B_VI.jpg
       video: 'https://youtube.com/shorts/SfoCe-cZqoI?si=74LJv13CzwzfiBl4'
