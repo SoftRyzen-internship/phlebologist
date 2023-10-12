@@ -211,6 +211,19 @@
                   "list": true,
                   "fields": [
                     {
+                      "name": "period",
+                      "label": "Period",
+                      "type": "string",
+                      "namespace": [
+                        "about",
+                        "education",
+                        "uk",
+                        "institutions",
+                        "period"
+                      ],
+                      "searchable": true
+                    },
+                    {
                       "name": "institution",
                       "label": "Institution",
                       "type": "string",
@@ -252,6 +265,19 @@
                   "type": "object",
                   "list": true,
                   "fields": [
+                    {
+                      "name": "period",
+                      "label": "Period",
+                      "type": "string",
+                      "namespace": [
+                        "about",
+                        "education",
+                        "en",
+                        "institutions",
+                        "period"
+                      ],
+                      "searchable": true
+                    },
                     {
                       "name": "institution",
                       "label": "Institution",

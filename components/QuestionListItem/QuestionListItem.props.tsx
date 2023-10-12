@@ -1,5 +1,5 @@
 export interface QuestionsListItemProps {
-  item: QuestionsType;
+  data: QuestionsType;
   index: number;
   aria: string;
 }
