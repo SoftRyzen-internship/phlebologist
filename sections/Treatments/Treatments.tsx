@@ -1,7 +1,6 @@
 import { Heading, TreatmentTabList } from '@/components';
 
 const Treatments = ({ staticData, lang }) => {
-  // console.log(staticData)
   const { title, button, more, notes, methods } = staticData;
 
   return (

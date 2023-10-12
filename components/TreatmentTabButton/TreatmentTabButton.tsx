@@ -1,8 +1,6 @@
 import classNames from 'classnames';
 
 const TreatmentTabButton = ({ variant, data }) => {
-  // console.log(data);
-
   const { name, description, slideNum, more } = data;
 
   const boxStyles = classNames({
