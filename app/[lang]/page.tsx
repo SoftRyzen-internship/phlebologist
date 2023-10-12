@@ -19,48 +19,27 @@ export default async function Home({
   // fetching local data for the selected lang
   const { page, socials } = await getDictionary(lang);
 
+  // temp - for treatment nav
+  const ids = ['1', '2', '3', '4'];
   return (
     <main>
-      <div className="mx-auto w-[440px] py-10">
-        <h2 className="text-center font-semibold uppercase">
-          temp treatment nav
-        </h2>
-        <div className="mt-4 flex gap-4">
+      {/* temp treatment nav */}
+      <div className="mx-auto mt-4 flex w-[440px] gap-4 py-10">
+        {ids.map((item, index) => (
           <Link
-            href={`${lang}/treatment/1`}
+            href={`${lang}/treatment/${item}`}
             className="rounded-md bg-gray-extra p-3"
+            key={`${item}${index}`}
           >
-            Method 1
+            Method {item}
           </Link>
-          <Link
-            href={`${lang}/treatment/2`}
-            className="rounded-md bg-gray-extra p-3"
-          >
-            Method 2
-          </Link>
-          <Link
-            href={`${lang}/treatment/3`}
-            className="rounded-md bg-gray-extra p-3"
-          >
-            Method 3
-          </Link>
-          <Link
-            href={`${lang}/treatment/4`}
-            className="rounded-md bg-gray-extra p-3"
-          >
-            Method 4
-          </Link>
-        </div>
+        ))}
       </div>
 
       <HeroSection staticData={page.home.hero} lang={lang} />
       <AdvantagesSection
         staticData={page.home.advantages}
         className="-mt-5 mb-10 md:-mt-8 xl:-mt-10"
-      />
-      <FAQSection staticData={{ faq: page.home.faq, socials }} />
-      <ContactsSection
-        staticData={{ pageData: page.home, socialData: socials }}
       />
       <ResultsSection
         staticData={page.home.patient_results}
@@ -69,6 +48,10 @@ export default async function Home({
         className="-mt-5 mb-10 md:-mt-8 xl:-mt-10"
       />
       <FeedbackSection staticData={page.home.iconBtnData} />
+      <FAQSection staticData={{ faq: page.home.faq, socials }} />
+      <ContactsSection
+        staticData={{ pageData: page.home, socialData: socials }}
+      />
     </main>
   );
 }

@@ -1,8 +1,8 @@
-import Image from 'next/image';
+import { Heading, TreatmentQAList, TreatmentQAImage } from '@/components';
 
-import { Heading, TreatmentQAList } from '@/components';
+import { TreatmentDetailsProps } from './TreatmentDetails.props';
 
-const TreatmentDetails = ({ staticData }) => {
+const TreatmentDetails: React.FC<TreatmentDetailsProps> = ({ staticData }) => {
   const { title, description, image, questions } = staticData;
 
   return (
@@ -13,22 +13,18 @@ const TreatmentDetails = ({ staticData }) => {
                         md:rounded-t-extraLarge md:pb-[76px] md:pt-[40px] 
                         xl:rounded-t-max xl:pb-[112px] xl:pt-16"
         >
-          <Heading className="mb-8">{title}</Heading>
+          <Heading className="mb-8 md:mb-12 xl:mb-[64px] smOnly:text-[28px]">
+            {title}
+          </Heading>
 
-          <p className="mb-8 text-base font-normal leading-5 tracking-[-0.64px] text-black-dark">
+          <p
+            className="mb-8 ml-auto text-base font-normal leading-5 tracking-[-0.64px]
+            text-black-dark md:mb-12 md:w-[319px] xl:mb-[64px] xl:w-[560px]"
+          >
             {description}
           </p>
 
-          <div className="mb-8 h-[148px] w-[256px] rounded-medium">
-            {/* mob w 256 h 148 */}
-            <Image
-              src={image}
-              alt={title}
-              width={600}
-              height={400}
-              className="h-[148px] w-[256px] rounded-medium object-cover"
-            />
-          </div>
+          <TreatmentQAImage image={image} alt={title} />
 
           <TreatmentQAList data={questions} />
         </div>

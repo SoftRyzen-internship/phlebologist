@@ -71,3 +71,4 @@ export { default as Modal } from '@/components/Modal/Modal';
 // Treatment Details page
 export { default as TreatmentQAList } from '@/components/TreatmentQAList/TreatmentQAList';
 export { default as TreatmentQAItem } from '@/components/TreatmentQAItem/TreatmentQAItem';
+export { default as TreatmentQAImage } from '@/components/TreatmentQAImage/TreatmentQAImage';

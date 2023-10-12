@@ -1,8 +1,10 @@
 import { TreatmentQAItem } from '@/components';
 
-const TreatmentQAList = ({ data }) => {
+import { TreatmentQAListProps } from './TreatmentQAList.props';
+
+const TreatmentQAList: React.FC<TreatmentQAListProps> = ({ data }) => {
   return (
-    <ul className="flex flex-col gap-8">
+    <ul className="flex flex-col gap-8 md:gap-12">
       {data.map((item, index) => (
         <TreatmentQAItem key={index} data={item} />
       ))}
