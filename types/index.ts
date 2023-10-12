@@ -135,3 +135,22 @@ export type TinaType = {
 };
 
 export type TinaChildren = TinaType[];
+
+// === Treatment page ===
+
+export interface ITreatmentDetails {
+  title: string;
+  description: string;
+  image: string;
+  questions: ITreatmentQuestion[];
+}
+
+export interface ITreatmentQuestion {
+  question: string;
+  answer: {
+    text?: string;
+    subtext?: string;
+    list: string[];
+    aftertext?: string;
+  };
+}
