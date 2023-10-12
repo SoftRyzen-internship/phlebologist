@@ -9,6 +9,7 @@ uk:
     - date: 2023-09-30T21:00:00.000Z
       photo: /uploads/reviews/th_4fc6358d91559f0a4df4671a536c697d.jpg
       name: Лоїк Оксана
+      telegram: 'https://t.me/Sergii_Voitsitskyi'
       review: >
         Лікар Сергій - справжній професіонал у своєму ділі! Під час
         склеротерапії він продемонстрував високу кваліфікацію і надав мені
