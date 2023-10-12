@@ -20,7 +20,7 @@ const ButtonPrimary: React.FC<ButtonPrimaryProps> = ({
         view === 'header' && variant === 'dark',
     },
     {
-      'px-6 py-2 font-medium bg-primary-dark-300 text-white':
+      'px-6 py-2 font-medium bg-primary-dark-400 text-white':
         view !== 'header' && variant === 'dark',
     },
     {

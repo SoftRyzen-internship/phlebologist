@@ -36,12 +36,12 @@ const LocaleSwitcher: FC<LocaleSwitcherProps> = ({
   };
 
   const linkClass = classnames(
-    ' px-12 w-auto',
+    ' px-10 w-auto',
     'outline-without flex text-[12px] uppercase -tracking-[0.48px] items-center justify-center text-black-dark rounded-normal leading-normal ',
-    'mediaHover:hover:cursor-pointer  mediaHover:hover:bg-gray-extra focus:bg-gray-extra',
+    'mediaHover:hover:cursor-pointer mediaHover:hover:bg-gray-extra focus:bg-gray-extra',
     'transition-all duration-300',
     {
-      'font-medium py-3 mediaHover:hover:font-bold focus:font-bold bg-white':
+      'font-medium py-3 mediaHover:hover:font-bold focus:font-bold bg-white flex items-center justify-center':
         variant === 'header',
     },
     {

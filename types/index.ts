@@ -28,6 +28,7 @@ export type AboutGeneralDataType = {
 type GeneralEducationType = {
   __typename: string;
   institution: string;
+  period: string;
 };
 
 type GeneralExperienceType = {

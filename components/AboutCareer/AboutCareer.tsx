@@ -15,17 +15,19 @@ const AboutCareer: React.FC<AboutCareerProps> = ({ data }) => {
         {title}
       </Heading>
 
-      <ul className="ml-4 mt-4 md:mt-8">
+      <ul className="mt-5 list-none md:mt-8 md:grid md:grid-cols-2 md:gap-x-6 xl:block">
         {institutions &&
           institutions.map((item, index) => (
             <li
               key={`${item.__typename}${index}`}
-              className="flex items-baseline gap-2"
+              className="mb-4 last:mb-0 md:flex md:items-baseline md:gap-2"
             >
-              <span className="min-w-[62px] text-end text-xs">
+              <span className="block text-xs leading-normal -tracking-[0.48px] md:min-w-[62px] md:text-end smOnly:mb-2">
                 {item.period}
               </span>
-              <span>{item.institution}</span>
+              <p className="font-medium leading-normal -tracking-[0.64px]">
+                {item.institution}
+              </p>
             </li>
           ))}
       </ul>

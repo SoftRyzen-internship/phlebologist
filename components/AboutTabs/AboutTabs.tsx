@@ -1,6 +1,7 @@
 'use client';
 
 import { Tab } from '@headlessui/react';
+import classNames from 'classnames';
 import { useState } from 'react';
 
 import { AboutTabsProps } from './AboutTabs.props';
@@ -20,7 +21,7 @@ const AboutTabs: React.FC<AboutTabsProps> = ({
   const [selectedIndex, setSelectedIndex] = useState(0);
 
   return (
-    <>
+    <div>
       <Tab.Group
         manual
         selectedIndex={selectedIndex}
@@ -28,13 +29,20 @@ const AboutTabs: React.FC<AboutTabsProps> = ({
       >
         <Tab.List
           as={'ul'}
-          className={'mb-5 flex flex-wrap gap-3 md:mb-8 xl:mb-12'}
+          className={'mb-5 flex flex-wrap gap-3 md:mb-8 xl:mb-[64px]'}
         >
           {menu.map((item, index) => (
-            <Tab key={`${item.collection}${index}`} as={'li'}>
+            <Tab
+              className={'outline-none'}
+              key={`${item.collection}${index}`}
+              as={'li'}
+            >
               {({ selected }) => (
                 <ButtonPrimary
-                  className="px-4"
+                  className={classNames(
+                    'smOnly:px-4',
+                    selected ? '' : '!bg-gray-light',
+                  )}
                   variant={selected ? 'dark' : 'light'}
                 >
                   {item.item}
@@ -62,7 +70,7 @@ const AboutTabs: React.FC<AboutTabsProps> = ({
           </Tab.Panel>
         </Tab.Panels>
       </Tab.Group>
-    </>
+    </div>
   );
 };
 

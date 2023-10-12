@@ -19,7 +19,7 @@ const AboutCertificatesSlide: FC<AboutCertificatesSlideProps> = ({
   } = data;
   console.log(data);
   const slideClass = classnames(
-    'mx-auto w-full md:w-[500px] h-[200px] md:h-[352px] xl:h-[480px] xl:w-[679px]',
+    'mx-auto w-full md:w-[500px] h-[200px] md:h-[352px] xl:mx-0 xl:w-[508px]',
     className,
   );
 
