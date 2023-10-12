@@ -4,7 +4,7 @@ uk:
     - date: 2023-10-09T21:00:00.000Z
       photo: /uploads/reviews/Alfred_-_MS_Royal_14_B_VI.jpg
       video: 'https://youtube.com/shorts/SfoCe-cZqoI?si=74LJv13CzwzfiBl4'
-      name: Alfred the Great
+      name: Альфред Велкикий
       review: ''
     - date: 2023-09-30T21:00:00.000Z
       photo: /uploads/reviews/th_4fc6358d91559f0a4df4671a536c697d.jpg
