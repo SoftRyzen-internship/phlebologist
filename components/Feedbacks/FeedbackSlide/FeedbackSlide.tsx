@@ -15,12 +15,13 @@ import {
 const FeedbackSlide: React.FC<FeedbackSlideProps> = ({
   data,
   staticData,
+  optionalStaticData,
   className,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleOpen = () => setIsOpen(true);
-  const isVideo = true;
+  const isVideo = data.video ? true : false;
 
   return (
     <div
@@ -31,20 +32,29 @@ const FeedbackSlide: React.FC<FeedbackSlideProps> = ({
       })}
     >
       {isVideo ? (
-        <FeedbackFrame data={data} onClick={handleOpen} />
+        <FeedbackFrame
+          data={data}
+          onClick={handleOpen}
+          staticData={optionalStaticData}
+        />
       ) : (
-        <FeedbackCard data={data} onClick={handleOpen} />
+        <FeedbackCard
+          data={data}
+          onClick={handleOpen}
+          staticData={optionalStaticData}
+        />
       )}
 
       <Modal
         staticData={staticData}
         onCloseClick={() => setIsOpen(false)}
         isOpen={isOpen}
+        isReview
       >
         {isVideo ? (
           <FeedbackVideo data={data} />
         ) : (
-          <FeedbackCard data={data} isModal />
+          <FeedbackCard data={data} isModal staticData={optionalStaticData} />
         )}
       </Modal>
     </div>

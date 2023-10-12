@@ -122,3 +122,16 @@ export interface ILocaleSwitcherData {
   headerBtn: string;
   menuBtn: string;
 }
+
+export type TextData = {
+  doesFit: boolean;
+  text: string;
+};
+
+export type TinaType = {
+  children: {
+    0: { text: string };
+  };
+};
+
+export type TinaChildren = TinaType[];

@@ -1,13 +1,17 @@
 'use client';
 
+import setupVideoUrl from '@/utils/setupVideoUrl';
+
 import { FeedbackVideoProps } from './FeedbackVideo.props';
 
 const FeedbackVideo: React.FC<FeedbackVideoProps> = ({ data }) => {
+  const transformedUrl = setupVideoUrl(data?.video);
+
   return (
-    <div className="bg-cover-center h-[401px] w-[240px] overflow-hidden rounded-extended border-transparent">
+    <div className="bg-cover-center aspect-[1/1.78] w-[240px] overflow-hidden rounded-extended border-transparent">
       <iframe
         className="h-[101%] w-[101%] -translate-x-[2px] -translate-y-[2px] rounded-lg"
-        src="https://youtube.com/embed/FTQ-_9n2KV8?si=68-LZUb0GB0ZZy1y"
+        src={transformedUrl}
         title="YouTube video player"
         allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowFullScreen

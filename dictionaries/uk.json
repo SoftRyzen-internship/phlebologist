@@ -172,6 +172,7 @@
       },
       "contacts": {
         "heading": "Контакти",
+        "anchor": "contacts",
         "contactData": {
           "phone": { "caption": "Телефон:", "content": "+380933521235" },
           "address": {
@@ -201,6 +202,16 @@
         "action": {
           "instruction": "Напишіть нам у месенджері",
           "actionName": "Написати у Telegram"
+        }
+      },
+      "feedback": {
+        "heading": "Відгуки пацієнтів",
+        "anchor": "feedback",
+        "photo": { "alt": "Patient Photo" },
+        "links": {
+          "send": { "text": "Написати", "icon": "Іконка Телеграм" },
+          "read": { "text": "Дочитати" },
+          "video": { "icon": "Іконка Увімкнути відео" }
         }
       }
     }

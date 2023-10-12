@@ -171,20 +171,21 @@
         ]
       },
       "contacts": {
-        "heading": "Контакти",
+        "heading": "Contacts",
+        "anchor": "contacts",
         "contactData": {
-          "phone": { "caption": "Телефон:", "content": "+380933521235" },
+          "phone": { "caption": "Phone:", "content": "+380933521235" },
           "address": {
-            "caption": "Адреса:",
-            "content": "Клініка “Медейра” - м. Київ, проспект Берестейський, 67"
+            "caption": "Address:",
+            "content": "Medeira Clinic - Kyiv, Beresteiskyi Avenue, 67"
           },
           "schedule": {
-            "caption": "Графік роботи:",
-            "content": "Пн-Пт: 09:00 - 19:00"
+            "caption": "Working hours:",
+            "content": "Mon-Fri: 09:00 - 19:00"
           },
-          "media": { "caption": "Соціальні мережі:" },
+          "media": { "caption": "Social media:" },
           "location": {
-            "placename": { "firstRow": "Клініка", "secondRow": "Медейра" },
+            "placename": { "firstRow": "Clinic", "secondRow": "Medeira" },
             "url": "https://maps.app.goo.gl/V33L4LrBKHKBTiqy6",
             "images": {
               "map": {
@@ -199,8 +200,18 @@
           }
         },
         "action": {
-          "instruction": "Напишіть нам у месенджері",
-          "actionName": "Написати у Telegram"
+          "instruction": "Feel free to contact us",
+          "actionName": "Contact in Telegram"
+        }
+      },
+      "feedback": {
+        "heading": "Reviews",
+        "anchor": "feedback",
+        "photo": { "alt": "Patient Photo" },
+        "links": {
+          "send": { "text": "Contact", "icon": "Telegram Icon" },
+          "read": { "text": "Read more" },
+          "video": { "icon": "Watch Video Icon" }
         }
       }
     }

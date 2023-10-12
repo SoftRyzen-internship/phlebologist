@@ -10,6 +10,7 @@ import { ModalProps } from './Modal.props';
 const Modal: React.FC<ModalProps> = ({
   staticData,
   isOpen = false,
+  isReview,
   onCloseClick,
   children,
 }) => {
@@ -73,7 +74,14 @@ const Modal: React.FC<ModalProps> = ({
         })}
         onClick={handleBackdropClose}
       >
-        <div className=" relative max-h-[497px] max-w-[280px] overflow-hidden rounded-extended bg-white px-[20px] pb-[40px] pt-[56px] md:max-h-[639px] md:max-w-[700px] md:p-[80px] xl:max-w-[1000px]">
+        <div
+          className={classNames({
+            'relative max-h-[497px] max-w-[280px] overflow-hidden rounded-extended bg-white px-[20px] pb-[40px] pt-[56px] md:max-h-[639px] md:max-w-[704px] xl:max-h-[664px]  xl:max-w-[1240px]':
+              true,
+            'md:p-[80px]': isReview,
+            'md:px-[24px] md:py-[60px] xl:px-[100px] xl:py-[80px]': !isReview,
+          })}
+        >
           <IconBtn
             variant="close"
             icon="close"
