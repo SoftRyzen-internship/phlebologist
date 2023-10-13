@@ -10,11 +10,16 @@ const TreatmentTabImage: React.FC<TreatmentTabImageProps> = ({
   const sizes = classNames(
     'smOnly:hidden',
     'md:h-[300px] md:w-[656px]',
-    'xl:w-[560px]',
+    'xl:h-[290px] xl:w-[540px]',
   );
 
   return (
-    <div className={classNames(sizes, 'mx-auto mb-8 rounded-medium md:mb-0')}>
+    <div
+      className={classNames(
+        sizes,
+        'mx-auto mb-8 rounded-medium md:mb-0 xl:mx-0 xl:ml-auto',
+      )}
+    >
       <Image
         src={image}
         alt={alt}
@@ -22,7 +27,7 @@ const TreatmentTabImage: React.FC<TreatmentTabImageProps> = ({
         height={300}
         className={classNames(sizes, 'rounded-medium object-cover')}
         priority
-        sizes="(max-width: 1279px) 656px, 560px"
+        sizes="(max-width: 1279px) 656px, 540px"
       />
     </div>
   );

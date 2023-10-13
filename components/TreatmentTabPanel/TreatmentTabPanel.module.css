@@ -26,3 +26,9 @@
     grid-area: box-4;
   }
 }
+
+@media screen and (min-width: 1280px) {
+  .grid-container {
+    gap: 28px 0px;
+  }
+}

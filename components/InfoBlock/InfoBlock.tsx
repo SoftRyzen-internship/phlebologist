@@ -16,7 +16,8 @@ const InfoBlock: React.FC<InfoBlockProps> = ({
 }) => {
   const titleStyles = classNames({
     'mb-[8px] font-medium text-black-dark -tracking-[0.04em]': true,
-    'text-[18px] leading-normal': section.toLowerCase() === 'treatment',
+    'xl:mb-[4px] text-[18px] leading-normal':
+      section.toLowerCase() === 'treatment',
     'text-[16px] leading-large xl:text-[20px] xl:leading-normal':
       section.toLowerCase() === 'contacts',
     [titleClassName ? titleClassName : '']: titleClassName,

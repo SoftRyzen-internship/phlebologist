@@ -16,12 +16,12 @@ const Treatments = ({ staticData, lang }) => {
 
           <TreatmentTabList lang={lang} data={{ button, more, methods }} />
 
-          <div className="xl:absolute xl:bottom-[100px] xl:left-8">
+          <div className="w-full xl:absolute xl:bottom-[110px] xl:left-1/2 xl:-translate-x-1/2 ">
             {notes.map((note, index) => (
               <p
                 key={`${note}${index}`}
                 className="text-center text-xs font-normal tracking-[-0.48px] text-primary-dark-200 
-                  md:text-justify "
+                  md:text-justify xl:text-center"
               >
                 {note}
               </p>
