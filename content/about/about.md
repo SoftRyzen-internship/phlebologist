@@ -1,5 +1,5 @@
 ---
-photo: /uploads/about/doctor.jpg
+photo: /uploads/about/about-doctor.jpg
 video: ''
 general:
   uk:
