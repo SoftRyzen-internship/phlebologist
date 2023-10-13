@@ -2,11 +2,11 @@
 
 import { FC } from 'react';
 
-import { FormCheckboxProps } from './FormCheckbox.props';
 import classnames from 'classnames';
 import { Controller } from 'react-hook-form';
 
 import SvgCheck from '@/public/icons/check-icon.svg';
+import { FormCheckboxProps } from './FormCheckbox.props';
 
 const FormCheckbox: FC<FormCheckboxProps> = ({
   staticData,
