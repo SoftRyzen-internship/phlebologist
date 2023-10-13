@@ -61,7 +61,7 @@ const Slider: React.FC<SliderProps> = ({
           'mb-[24px] flex items-center justify-center gap-[24px] ': true,
           'md:mb-[40px] md:justify-end xl:mb-[64px] xl:gap-[48px]':
             section.toLowerCase() !== 'doctor',
-          'xl:mb-[40px] xl:mb-[64px] xl:justify-start xl:gap-[48px] mdOnly:absolute mdOnly:left-[50%] mdOnly:top-[50%] mdOnly:z-10 mdOnly:-translate-x-[50%] mdOnly:-translate-y-[50%] mdOnly:gap-[528px]':
+          'xl:mb-[64px] xl:justify-end xl:gap-[48px] mdOnly:absolute mdOnly:left-[50%] mdOnly:top-[50%] mdOnly:z-10 mdOnly:-translate-x-[50%] mdOnly:-translate-y-[50%] mdOnly:gap-[528px]':
             section.toLowerCase() === 'doctor',
         })}
       >

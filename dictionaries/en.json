@@ -99,6 +99,14 @@
         "title": "About the Doctor",
         "firstSubtitle": "Experience:",
         "secondSubtitle": "Education:",
+        "educationBtns": {
+          "btnShow": "Review the full list of the doctor's education",
+          "btnHide": "Review the main stages of the doctor's education"
+        },
+        "careerBtns": {
+          "btnShow": "Review the entire career history of the doctor",
+          "btnHide": "Review the key stages of the doctor's career"
+        },
         "menu": [
           {
             "item": "General info",

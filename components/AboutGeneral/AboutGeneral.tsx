@@ -9,6 +9,7 @@ const AboutGeneral: React.FC<AboutGeneralProps> = ({
   if (!data) {
     return <ErrorMessage />;
   }
+
   const { name, profession, education, experience } = data;
 
   return (

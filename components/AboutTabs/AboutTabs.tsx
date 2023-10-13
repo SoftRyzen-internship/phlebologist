@@ -4,7 +4,6 @@ import { Tab } from '@headlessui/react';
 import classNames from 'classnames';
 import { useState } from 'react';
 
-import { AboutTabsProps } from './AboutTabs.props';
 import {
   ButtonPrimary,
   AboutGeneral,
@@ -13,15 +12,23 @@ import {
   AboutCertificates,
 } from '@/components';
 
+import { AboutTabsProps } from './AboutTabs.props';
+
 const AboutTabs: React.FC<AboutTabsProps> = ({
-  staticData: { menu, firstSubtitle, secondSubtitle },
+  staticData: {
+    menu,
+    firstSubtitle,
+    secondSubtitle,
+    educationBtns,
+    careerBtns,
+  },
   data: { general, education, career, certificates },
   iconData,
 }) => {
   const [selectedIndex, setSelectedIndex] = useState(0);
 
   return (
-    <div>
+    <div className="overflow-hidden">
       <Tab.Group
         manual
         selectedIndex={selectedIndex}
@@ -41,7 +48,7 @@ const AboutTabs: React.FC<AboutTabsProps> = ({
                 <ButtonPrimary
                   className={classNames(
                     'smOnly:px-4',
-                    selected ? '' : '!bg-gray-light',
+                    selected ? '' : 'notXl:!bg-gray-light',
                   )}
                   variant={selected ? 'dark' : 'light'}
                 >
@@ -60,10 +67,10 @@ const AboutTabs: React.FC<AboutTabsProps> = ({
             />
           </Tab.Panel>
           <Tab.Panel>
-            <AboutEducation data={education} />
+            <AboutEducation data={education} staticData={educationBtns} />
           </Tab.Panel>
           <Tab.Panel>
-            <AboutCareer data={career} />
+            <AboutCareer data={career} staticData={careerBtns} />
           </Tab.Panel>
           <Tab.Panel>
             <AboutCertificates data={certificates} iconData={iconData} />

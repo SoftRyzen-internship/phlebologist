@@ -1,6 +1,6 @@
-import { AboutCertificateType } from '@/types';
+import { AboutCertificateType, IIconBtnData } from '@/types';
 
 export interface AboutCertificatesProps {
   data: AboutCertificateType[];
-  iconData: string;
+  iconData: IIconBtnData;
 }

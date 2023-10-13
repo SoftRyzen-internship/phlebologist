@@ -3,11 +3,7 @@
 import { FC } from 'react';
 import Image from 'next/image';
 import classnames from 'classnames';
-
-interface AboutCertificatesSlideProps {
-  data: any;
-  className: string;
-}
+import { AboutCertificatesSlideProps } from './AboutCertificatesSlide.props';
 
 const AboutCertificatesSlide: FC<AboutCertificatesSlideProps> = ({
   data,
@@ -17,7 +13,7 @@ const AboutCertificatesSlide: FC<AboutCertificatesSlideProps> = ({
     photo,
     description: { alt },
   } = data;
-  console.log(data);
+
   const slideClass = classnames(
     'mx-auto w-full md:w-[500px] h-[200px] md:h-[352px] xl:mx-0 xl:w-[508px]',
     className,

@@ -25,7 +25,7 @@ export type AboutGeneralDataType = {
   experience: GeneralExperienceType[];
 };
 
-type GeneralEducationType = {
+export type GeneralEducationType = {
   __typename: string;
   institution: string;
   period: string;
@@ -48,7 +48,7 @@ export type AboutCareerDataType = {
   institutions: CareerInstitutionType[];
 };
 
-type CareerInstitutionType = {
+export type CareerInstitutionType = {
   __typename: string;
   period: string;
   institution: string;
