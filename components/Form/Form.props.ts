@@ -1,3 +1,10 @@
+export interface FormInputs {
+  userName: string;
+  phoneNumber: string;
+  userMessage: string;
+  userAgree: boolean;
+}
+
 export interface FormProps {
   staticData: {
     input: {
@@ -25,6 +32,7 @@ export interface FormProps {
       loadingText: string;
       errorText: string;
     };
+    toastMessage: { success: string; error: string };
   };
   className?: string;
 }

@@ -5,4 +5,9 @@ export interface FormTextareaProps {
   };
   register: any;
   errors: any;
+  options: {
+    name: string;
+    required: boolean;
+    maxLength: number;
+  };
 }

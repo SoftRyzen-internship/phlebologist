@@ -6,4 +6,11 @@ export interface FormInputProps {
   };
   register: any;
   errors: any;
+  options: {
+    name: string;
+    required: boolean;
+    pattern: string;
+    minLength: number;
+    maxLength: number;
+  };
 }

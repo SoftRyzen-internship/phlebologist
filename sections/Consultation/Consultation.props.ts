@@ -29,6 +29,7 @@ export interface ConsultationProps {
         loadingText: string;
         errorText: string;
       };
+      toastMessage: { success: string; error: string };
     };
   };
   className?: string;

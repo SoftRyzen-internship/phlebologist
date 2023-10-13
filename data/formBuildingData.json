@@ -1,22 +1,24 @@
 {
   "options": {
     "name": {
+      "name": "userName",
       "required": true,
       "pattern": "^(?![\\s-]*[\\s-])(?!.*--)(?!.*- )(?!.*'-)(?=.*[A-Za-zА-Яа-яЇїІіЄєҐґ])[A-Za-zА-Яа-яЇїІіЄєҐґ' -]+$",
       "minLength": 2,
       "maxLength": 70
     },
     "phone": {
+      "name": "phoneNumber",
       "required": true,
       "pattern": "^\\+[0-9]+$",
       "minLength": 12,
       "maxLength": 13
     },
     "message": {
+      "name": "userMessage",
       "required": false,
-      "pattern": "^[A-Za-zА-Яа-яЇїІіЄєҐґ0-9()s',.!? \n-]+$",
-      "maxLength": 500
+      "maxLength": 700
     },
-    "checkbox": { "required": true }
+    "agree": { "name": "userAgree", "required": true }
   }
 }

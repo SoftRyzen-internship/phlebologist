@@ -199,6 +199,10 @@
             "sentText": "Sent",
             "loadingText": "Sending...",
             "errorText": "Error occurred"
+          },
+          "toastMessage": {
+            "success": "Your request has been successfully sent! A doctor will be in touch with you shortly!",
+            "error": "Whoops! Something went wrong..."
           }
         }
       },

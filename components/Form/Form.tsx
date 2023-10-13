@@ -1,15 +1,16 @@
 'use client';
 
-import { FC, useState, useEffect } from 'react';
-import { useForm, FieldValues, SubmitHandler } from 'react-hook-form';
+import { FC, useState } from 'react';
+import { useForm, SubmitHandler } from 'react-hook-form';
 import useFormPersist from 'react-hook-form-persist';
 import classnames from 'classnames';
 
-import { FormProps } from './Form.props';
+import { FormProps, FormInputs } from './Form.props';
 
 //TODO import sendDataToTelegram function
 //TODO import sendDataToGoogleSheets function
-// import { FormProps, InputT, FormData } from '@/types';
+import formBuildingData from '@/data/formBuildingData.json';
+import { showToast } from '@/utils/showToast';
 
 import {
   FormInput,
@@ -18,15 +19,17 @@ import {
   SubmitButton,
 } from '@/components';
 
+import { FORM_DATA_KEY } from '@/constants';
+
 const Form: FC<FormProps> = ({ staticData, className = '' }) => {
-  const { input, textarea, checkbox, button } = staticData;
+  const { input, textarea, checkbox, button, toastMessage } = staticData;
   const { sendText, sentText, loadingText, errorText } = button;
+  const {
+    options: { name, phone, message, agree },
+  } = formBuildingData;
 
   const [isLoading, setIsLoading] = useState<boolean>(false);
-  const [isChecked, setIsChecked] = useState<boolean>(false);
   const [buttonCurrentText, setButtonCurrentText] = useState<string>(sendText);
-
-  const FORM_DATA_KEY = 'form_session_data';
 
   const {
     register,
@@ -35,62 +38,82 @@ const Form: FC<FormProps> = ({ staticData, className = '' }) => {
     control,
     setValue,
     handleSubmit,
-    formState: { errors, isSubmitSuccessful },
-  } = useForm<FieldValues>();
+    formState: { errors },
+  } = useForm<FormInputs>();
 
   useFormPersist(FORM_DATA_KEY, { watch, setValue });
 
-  useEffect(() => {
-    if (isSubmitSuccessful) {
-      reset();
-    }
-  }, [reset, isSubmitSuccessful]);
-
   const buttonClass = classnames(
     { 'text-notify-disabled': isLoading },
-    { 'text-notify-success': buttonCurrentText === sentText },
-    { 'text-notify-error': buttonCurrentText === errorText },
+    {
+      'text-notify-success': buttonCurrentText === sentText,
+    },
+    {
+      'text-notify-error': buttonCurrentText === errorText,
+    },
+    'mx-auto md:mx-0 md:ml-auto xl:ml-0 xl:mr-auto',
   );
 
-  const onSubmit: SubmitHandler<FieldValues> = async (formData: FormData) => {
-    const resolveForm = (isSuccess: boolean): void => {
-      setIsLoading(false);
-      const buttonCurrentText = isSuccess ? sentText : errorText;
-      setButtonCurrentText(buttonCurrentText);
-      if (isSuccess) {
-        reset();
-        sessionStorage.removeItem(FORM_DATA_KEY);
-      }
-    };
-
-    const sendDataToTelegram = (formData: FormData) => {
+  const onSubmit: SubmitHandler<FormInputs> = async (formData: FormInputs) => {
+    const sendDataToTelegram = (formData: FormInputs) => {
       // DELETE this function!
       console.log(formData);
       return Math.random() < 0.5;
     };
-
     try {
       setIsLoading(true);
       //   const isSuccess: boolean = await sendDataToTelegram(formData);
       const isSuccess: boolean = sendDataToTelegram(formData);
-      resolveForm(isSuccess);
+      const buttonCurrentText = isSuccess ? sentText : errorText;
+      setButtonCurrentText(buttonCurrentText);
+
+      setTimeout(() => {
+        setButtonCurrentText(sendText);
+      }, 3000);
+
+      if (isSuccess) {
+        reset();
+      }
+
+      if (typeof document !== 'undefined') {
+        const submitButton = document?.getElementById('submitButton');
+        submitButton && submitButton.blur();
+      }
+
+      showToast(isSuccess, toastMessage);
     } catch (error) {
-      resolveForm(false);
+      console.log(error);
+    } finally {
+      setIsLoading(false);
     }
   };
 
   return (
     <form className={className} noValidate onSubmit={handleSubmit(onSubmit)}>
-      <FormInput staticData={input.name} register={register} errors={errors} />
-      <FormInput staticData={input.phone} register={register} errors={errors} />
-      <FormTextarea staticData={textarea} register={register} errors={errors} />
-      <FormCheckbox
-        staticData={checkbox}
+      <FormInput
+        staticData={input.name}
         register={register}
         errors={errors}
+        options={name}
+      />
+      <FormInput
+        staticData={input.phone}
+        register={register}
+        errors={errors}
+        options={phone}
+      />
+      <FormTextarea
+        staticData={textarea}
+        register={register}
+        errors={errors}
+        options={message}
+      />
+      <FormCheckbox
+        staticData={checkbox}
+        errors={errors}
         control={control}
-        setIsChecked={setIsChecked}
-        isChecked={isChecked}
+        isChecked={!!watch().userAgree}
+        options={agree}
       />
       <SubmitButton className={buttonClass} disabled={isLoading}>
         {isLoading ? loadingText : buttonCurrentText}

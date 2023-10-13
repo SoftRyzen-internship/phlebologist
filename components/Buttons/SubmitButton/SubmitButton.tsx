@@ -14,7 +14,7 @@ const SubmitButton: React.FC<SubmitButtonProps> = ({
   const btnClass = classnames(
     'xl:bg-white-light xl:mediaHover:hover:bg-gray-light xl:focus:bg-gray-light',
 
-    'outline-without flex items-center justify-center w-[224px] h-[51px] bg-gray-light md:w-auto md:px-12 text-black-dark text-base rounded-normal leading-extended -tracking-[0.64px]',
+    'outline-without flex items-center justify-center w-[224px] h-[51px] bg-gray-light md:w-[179px] text-black-dark text-base rounded-normal leading-extended -tracking-[0.64px]',
 
     'mediaHover:hover:cursor-pointer mediaHover:hover:font-bold focus:font-bold',
 
@@ -24,6 +24,7 @@ const SubmitButton: React.FC<SubmitButtonProps> = ({
 
   return (
     <button
+      id="submitButton"
       type="submit"
       onClick={actionHandler}
       className={btnClass}
