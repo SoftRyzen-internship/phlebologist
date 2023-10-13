@@ -239,6 +239,187 @@
           "actionName": "Написати у Telegram"
         }
       }
+    },
+    "treatment": {
+      "1": {
+        "title": "Endovenous Laser Coagulation",
+        "description": "is a minimally invasive procedure that uses laser radiation to close and destroy varicose veins from the inside, improving circulation and reducing the symptoms of varicose veins.",
+        "image": "/images/treatment/treatment-temp.jpg",
+        "questions": [
+          {
+            "question": "Who needs Endovenous Laser Coagulation (EVLA)?",
+            "answer": {
+              "subtext": "The indications for this procedure include the following symptoms:",
+              "list": [
+                "Varicose veins in the subcutaneous layer.",
+                "Swelling of the lower limbs, which occurs due to issues with subcutaneous veins, accompanied by rapid leg fatigue and a burning sensation along the course of the varicose veins, which does not subside with the use of lympho-venotonic drugs.",
+                "Trophic ulcers.",
+                "Ineffectiveness of conservative treatment."
+              ]
+            }
+          },
+          {
+            "question": "The main advantages of EVLA are:",
+            "answer": {
+              "list": [
+                "It does not require hospitalization and bed rest (patients can typically return to their normal life on the same day, depending on the stage of the condition).",
+                "Local anesthesia is used, sometimes with sedation, eliminating the need for general anesthesia.",
+                "Provides a highly aesthetic result.",
+                "Minimizes trauma without leaving scars.",
+                "Has a short duration.",
+                "Fast recovery period after the procedure.",
+                "Reduces the risk of bleeding, hematomas, and deep vein thrombosis."
+              ]
+            }
+          },
+          {
+            "question": "When will I feel the results?",
+            "answer": {
+              "list": [
+                "Patients typically experience noticeable relief from the symptoms of varicose veins within a few days after EVLA. Fatigue, pain, swelling, and other discomforts are significantly reduced or disappear.",
+                "You can return to your regular activities on the same day, start working the next day, and resume sports within 2 weeks.",
+                "To achieve the maximum and long-lasting results and relief from symptoms, it's important to follow the recommendations of the phlebologist and consider your individual body's characteristics."
+              ]
+            }
+          }
+        ]
+      },
+      "2": {
+        "title": "Miniphlebectomy",
+        "description": "is a minimally invasive method for removing varicose veins through small punctures. No incisions are made during the procedure, which speeds up recovery and avoids scarring.",
+        "image": "/images/treatment/treatment-temp.jpg",
+        "questions": [
+          {
+            "question": "Who needs it?",
+            "answer": {
+              "list": [
+                "Patients with varicose veins that are dilated, nodular, and enlarged subcutaneous veins. ",
+                "Patients with varicose veins larger than 3 mm outside the area of trophic disorders."
+              ]
+            }
+          },
+          {
+            "question": "Main advantages?",
+            "answer": {
+              "list": [
+                "Minimally Invasive: Allows for the removal of only damaged veins without injuring surrounding tissues. ",
+                "Minimal Scarring: Thanks to small punctures made during mini-phlebectomy, there are minimal scars, making this method more aesthetically pleasing compared to open phlebectomy.",
+                "Quick Recovery: Patients who undergo mini-phlebectomy can typically return to their normal lives fairly quickly, as it does not require hospitalization and allows for a speedy recovery.",
+                "Local Anesthesia: The mini-phlebectomy procedure is usually performed under local anesthesia, reducing the risk associated with general anesthesia.",
+                "Effectiveness: This method can be applied to treat varicose veins in patients with various degrees of severity, providing an effective result."
+              ]
+            }
+          },
+          {
+            "question": "When will I feel the results?",
+            "answer": {
+              "text": "The time it takes for you to feel the results of mini-phlebectomy can depend on several factors, including your condition before the procedure and the degree of varicose vein enlargement.",
+              "list": [
+                "Pain and vein prominence typically reduce or disappear quite quickly after the procedure.",
+                "Immediate improvement in appearance may become noticeable right after mini-phlebectomy since the varicose veins are removed.",
+                "Your ability to return to your normal lifestyle and physical activity will depend on individual factors and your doctor's advice. Usually, patients can return to normal activities within a few days after the procedure.",
+                "Full clearance of varicose veins and post-operative bruising may take time. Results may gradually improve over several weeks or months after mini-phlebectomy as the body resolves any remaining subcutaneous hematomas."
+              ]
+            }
+          }
+        ]
+      },
+      "3": {
+        "title": "Microsclerotherapy",
+        "description": "is a minimally invasive procedure performed to treat small-diameter varicose veins, measuring just millimeters in size, such as reticular veins and 'spider veins'. During sclerotherapy, a low-concentration sclerosing solution is injected into the affected vein using an ultra-fine needle. This solution irritates the vein's lining, causing it to break down and the vein to seal shut. Over time, the vein transforms into scar tissue and completely disappears.",
+        "image": "/images/treatment/treatment-temp.jpg",
+        "questions": [
+          {
+            "question": "Who needs it?",
+            "answer": {
+              "text": "This procedure is used to address small reticular veins, telangiectasias, as well as small-caliber vessels, which can be either initial signs of varicose disease or a result of long-standing conditions.",
+              "subtext": "Typically, it is needed by:",
+              "list": [
+                "Patients with spider veins (telangiectasias): This procedure can improve the appearance and evenness of the skin.",
+                "Patients with small-diameter varicose veins: Microsclerotherapy can be used to treat small-diameter varicose veins or those that are not suitable for other more invasive methods.",
+                "Individuals with vascular anomalies: Patients with vascular anomalies, such as venous malformation, may also require microsclerotherapy for treatment or improvement of the vein condition.",
+                "Those seeking cosmetic defect correction: Microsclerotherapy can be used for cosmetic enhancement of skin and veins, reducing the visibility of spider veins and other small vessels.",
+                "Patients for whom other methods are not suitable: In some cases, other treatment methods may not be recommended or available for the patient, and microsclerotherapy can serve as an alternative."
+              ]
+            }
+          },
+          {
+            "question": "The main advantages are as follows:",
+            "answer": {
+              "list": [
+                "Minimally invasive: Microsclerotherapy uses a fine needle to introduce the substance into the vein, reducing trauma and discomfort.",
+                "Effectiveness for small vessels: This method effectively treats small vessels, including telangiectasias and small varicose veins.",
+                "Quick recovery: Patients can return to their regular activities with minimal delay, and prolonged hospitalization is not required.",
+                "Absence of scars, as access to the vessel is through a tiny skin puncture.",
+                "Cosmetic improvement: It helps enhance the skin's appearance by reducing the visibility of spider veins and telangiectasias.",
+                "Compatibility with other methods: It can be combined with other treatments to maximize effectiveness.",
+                "Minimal restrictions after the procedure: Patients are not significantly limited in physical activity or behavior following the procedure.",
+                "Method versatility: It can be adapted for treating various types and sizes of vessels.",
+                "Absence of general anesthesia: Microsclerotherapy is typically performed under local anesthesia, reducing the risk associated with general anesthesia."
+              ]
+            }
+          },
+          {
+            "question": "When will I feel the results?",
+            "answer": {
+              "text": "The time it takes to feel the results of microsclerotherapy can depend on several factors, including the size of the treated vessels and individual characteristics of the body's absorption of sclerosed vessels.",
+              "list": [
+                "The method has an advantage in minimal recovery time; in fact, there is virtually no need for recovery.",
+                "After completing the procedure, the doctor provides guidance on the ongoing care of your legs, which can be easily incorporated into your daily routine without significant effort.",
+                "Depending on the size of the vessels, the visible effect can appear within a few weeks to several months."
+              ]
+            }
+          }
+        ]
+      },
+      "4": {
+        "title": "Foam sclerotherapy",
+        "description": "(or foam sclerotherapy with ultrasound guidance) is a non-surgical method for treating varicose veins. The essence of this procedure involves the injection of a special sclerosing agent (typically in the form of a foam made of polidocanol) into the affected vein, often administered through intravenous catheters. This agent triggers inflammation within the vein, leading to its closure. As a result, blood can no longer flow through it, the vein's diameter decreases, and it eventually transforms into scar tissue.",
+        "image": "/images/treatment/treatment-temp.jpg",
+        "questions": [
+          {
+            "question": "Who needs it?",
+            "answer": {
+              "text": "This procedure is used for addressing small veins with a diameter of up to 3 mm. It serves as an alternative to blocking the main superficial veins in cases of pronounced tortuous varicose veins and in anatomical areas where the application of thermal methods (such as endovenous laser ablation) is not recommended. Additionally, this method is the preferred choice for treating recurrences of varicose vein disease.",
+              "subtext": "Typically, it is needed for:",
+              "list": [
+                "Specific Anatomical Situations: Patients with anatomical peculiarities in the course of main superficial veins.",
+                "Complications: Cases of complicated varicose vein disease with the extension of pathological dilation to deep-seated veins in areas where thermal methods are not feasible.",
+                "Recurrences of Varicose Vein Disease: After open surgeries, particularly when there is pronounced scar tissue and insufficient neovascularization (the growth of small-caliber tortuous veins with abnormal blood flow), which can be effectively treated with sclerosing foam.",
+                "Individuals with Vascular Anomalies: Patients with vascular anomalies such as venous malformations, where foam sclerotherapy is the preferred method.",
+                "Cosmetic Enhancement: Foam sclerotherapy can also be used for cosmetic improvements, reducing the visibility of spider veins and other small blood vessels, enhancing the appearance of the skin."
+              ]
+            }
+          },
+          {
+            "question": "Main advantages include:",
+            "answer": {
+              "list": [
+                "Minimal Trauma: The procedure is minimally invasive, virtually devoid of surgical trauma.",
+                "No Incisions and Scarring: There are no incisions made during the procedure, which means no post-procedure scarring.",
+                "Pain-Free: The use of local anesthesia ensures a pain-free experience for the patient.",
+                "Quick Recovery: Patients can return to their normal activities relatively quickly, as prolonged hospitalization is not required.",
+                "Achievement of Aesthetic Results: The procedure can improve the appearance of the skin and reduce the visibility of veins, contributing to an aesthetic enhancement.",
+                "No Hospitalization: It doesn't necessitate hospitalization or bed rest after the procedure.",
+                "Short Procedure Duration: The procedure typically lasts 15-30 minutes on average.",
+                "Safe for Older Adults and Those with Chronic Conditions: It is considered safe for elderly individuals and those with chronic medical conditions."
+              ]
+            }
+          },
+          {
+            "question": "When will I feel the results?",
+            "answer": {
+              "text": "When you will feel the results of sclerotherapy can vary depending on several factors, including the size of the treated veins and individual characteristics of your body's response to the sclerotherapy.",
+              "list": [
+                "The method offers the advantage of a quick recovery, with minimal to no need for actual downtime.",
+                "You may experience mild discomfort along the course of the treated vein for several weeks after the procedure.",
+                "After completing the procedure, your doctor will provide guidance on further care for your legs, which can be easily integrated into your daily routine and require minimal effort."
+              ],
+              "aftertext": "Depending on the size of the treated veins, you may begin to see visible results within a few weeks to a few months."
+            }
+          }
+        ]
+      }
     }
   },
   "socials": {
