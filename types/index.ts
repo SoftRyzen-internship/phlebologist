@@ -123,6 +123,19 @@ export interface ILocaleSwitcherData {
   menuBtn: string;
 }
 
+export type TextData = {
+  doesFit: boolean;
+  text: string;
+};
+
+export type TinaType = {
+  children: {
+    0: { text: string };
+  };
+};
+
+export type TinaChildren = TinaType[];
+
 // === Treatment page ===
 
 export interface ITreatmentDetails {

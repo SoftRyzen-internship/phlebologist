@@ -47,7 +47,7 @@ export default async function Home({
         lang={lang}
         className="-mt-5 mb-10 md:-mt-8 xl:-mt-10"
       />
-      <FeedbackSection staticData={page.home.iconBtnData} />
+      <FeedbackSection staticData={page.home} lang={lang} />
       <FAQSection staticData={{ faq: page.home.faq, socials }} />
       <ContactsSection
         staticData={{ pageData: page.home, socialData: socials }}
