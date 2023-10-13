@@ -5,12 +5,7 @@ import { useState } from 'react';
 
 import { FeedbackSlideProps } from './FeedbackSlide.props';
 
-import {
-  Modal,
-  FeedbackCard,
-  FeedbackFrame,
-  FeedbackVideo,
-} from '@/components';
+import { Modal, FeedbackCard, FeedbackFrame, VideoPlayer } from '@/components';
 
 const FeedbackSlide: React.FC<FeedbackSlideProps> = ({
   data,
@@ -52,7 +47,7 @@ const FeedbackSlide: React.FC<FeedbackSlideProps> = ({
         isReview
       >
         {isVideo ? (
-          <FeedbackVideo data={data} isShown={isOpen} />
+          <VideoPlayer data={data} isShown={isOpen} isReview />
         ) : (
           <FeedbackCard data={data} isModal staticData={optionalStaticData} />
         )}
