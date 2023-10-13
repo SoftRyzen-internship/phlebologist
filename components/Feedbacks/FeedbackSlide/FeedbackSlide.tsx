@@ -52,7 +52,7 @@ const FeedbackSlide: React.FC<FeedbackSlideProps> = ({
         isReview
       >
         {isVideo ? (
-          <FeedbackVideo data={data} />
+          <FeedbackVideo data={data} isShown={isOpen} />
         ) : (
           <FeedbackCard data={data} isModal staticData={optionalStaticData} />
         )}
