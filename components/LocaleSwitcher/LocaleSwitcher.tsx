@@ -36,16 +36,16 @@ const LocaleSwitcher: FC<LocaleSwitcherProps> = ({
   };
 
   const linkClass = classnames(
-    ' px-12 w-auto',
-    'outline-without flex text-[12px] uppercase -tracking-[0.48px] items-center justify-center text-black-dark rounded-normal leading-normal ',
+    'flex text-[12px] uppercase -tracking-[0.48px] items-center justify-center text-black-dark rounded-normal leading-normal ',
     'mediaHover:hover:cursor-pointer  mediaHover:hover:bg-gray-extra focus:bg-gray-extra',
     'transition-all duration-300',
     {
-      'font-medium py-3 mediaHover:hover:font-bold focus:font-bold bg-white':
+      'w-[120px] font-medium py-3 mediaHover:hover:font-bold focus:font-bold bg-white':
         variant === 'header',
     },
     {
-      'bg-white-light font-semibold py-2 w-full': variant === 'burger-menu',
+      'px-12 w-auto bg-white-light font-semibold py-2 w-full':
+        variant === 'burger-menu',
     },
     className,
   );

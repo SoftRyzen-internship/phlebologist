@@ -154,3 +154,10 @@ export interface ITreatmentQuestion {
     aftertext?: string;
   };
 }
+
+// === Toast notification messages ===
+
+export interface IToastMessage {
+  success: string;
+  error: string;
+}

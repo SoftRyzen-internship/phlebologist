@@ -43,11 +43,7 @@ const FormCheckbox: FC<FormCheckboxProps> = ({
         }}
         control={control}
         render={({ field }) => (
-          <input
-            {...field}
-            className="hidden-checkbox outline-without"
-            type="checkbox"
-          />
+          <input {...field} className="hidden-checkbox" type="checkbox" />
         )}
       />
       <span className={checkboxClass} aria-label="Confirmation checkbox">

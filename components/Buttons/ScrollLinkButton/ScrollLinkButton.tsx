@@ -4,6 +4,7 @@ import React from 'react';
 import { Link } from 'react-scroll';
 import classnames from 'classnames';
 
+import { handleOnKeyUp } from '@/utils/handleOnKeyUp';
 import { ScrollLinkButtonProps } from './ScrollLinkButton.props';
 
 const ScrollLinkButton: React.FC<ScrollLinkButtonProps> = ({
@@ -14,7 +15,7 @@ const ScrollLinkButton: React.FC<ScrollLinkButtonProps> = ({
   actionHandler,
 }) => {
   const btnClass = classnames(
-    'outline-without flex items-center justify-center text-black-dark text-base rounded-normal leading-normal -tracking-[0.64px]',
+    'flex items-center justify-center text-black-dark text-base rounded-normal leading-normal -tracking-[0.64px]',
 
     'mediaHover:hover:cursor-pointer mediaHover:hover:font-bold focus:font-bold',
 
@@ -41,11 +42,16 @@ const ScrollLinkButton: React.FC<ScrollLinkButtonProps> = ({
     <Link
       className={btnClass}
       to={linkto}
+      onClick={actionHandler}
       spy={true}
       smooth={true}
       offset={0}
       duration={500}
-      onClick={actionHandler}
+      //=============
+      role="button"
+      tabIndex={0}
+      activeClass="active"
+      onKeyUp={e => handleOnKeyUp(e, linkto)}
     >
       {children}
     </Link>
