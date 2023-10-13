@@ -4,6 +4,7 @@ export { default as AdvantagesSection } from '@/sections/Advantages/Advantages';
 export { default as BannerSection } from '@/sections/Banner/Banner';
 export { default as ResultsSection } from '@/sections/Results/Results';
 export { default as FAQSection } from '@/sections/FAQ/FAQ';
+export { default as ConsultationSection } from '@/sections/Consultation/Consultation';
 export { default as ContactsSection } from '@/sections/Contacts/Contacts';
 export { default as FeedbackSection } from '@/sections/Feedback/Feedback';
 export { default as TreatmentDetailsSection } from '@/sections/TreatmentDetails/TreatmentDetails';
