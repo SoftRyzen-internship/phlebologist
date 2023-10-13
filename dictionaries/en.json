@@ -170,6 +170,42 @@
           }
         ]
       },
+      "consultation": {
+        "title": "Schedule a consultation",
+        "callTextMobile": "Schedule a consultation right now and get a special discount on your first visit!",
+        "callText": "Schedule a consultation right now and get a special discount on your first visit!",
+        "form": {
+          "input": {
+            "name": {
+              "label": "Your name *",
+              "placeholder": "Ivanchuk Ivan",
+              "error": "You have provided the incorrect name"
+            },
+            "phone": {
+              "label": "Your phone number *",
+              "placeholder": "+380981234567",
+              "error": "You have entered the phone number incorrectly"
+            }
+          },
+          "textarea": {
+            "label": "Your message",
+            "placeholder": "Ask your question"
+          },
+          "checkbox": {
+            "label": "I consent to the processing of personal data"
+          },
+          "button": {
+            "sendText": "Send",
+            "sentText": "Sent",
+            "loadingText": "Sending...",
+            "errorText": "Error occurred"
+          },
+          "toastMessage": {
+            "success": "Your request has been successfully sent! A doctor will be in touch with you shortly!",
+            "error": "Whoops! Something went wrong..."
+          }
+        }
+      },
       "contacts": {
         "heading": "Contacts",
         "anchor": "contacts",

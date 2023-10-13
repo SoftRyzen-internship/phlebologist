@@ -5,6 +5,7 @@ import type { Metadata } from 'next';
 import { Locale } from '@/i18n.config';
 import { getDictionary } from '@/utils/dictionary';
 import { Inter } from 'next/font/google';
+import { Toaster } from 'react-hot-toast';
 
 import { Footer, Header } from '@/components';
 
@@ -38,6 +39,7 @@ export default async function RootLayout({
           staticData={{ footerData: footer, socials, iconBtnData, navigation }}
         />
         <div id="modal" />
+        <Toaster />
       </body>
     </html>
   );

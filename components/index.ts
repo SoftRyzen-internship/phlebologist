@@ -77,3 +77,9 @@ export { default as TreatmentQAItem } from '@/components/TreatmentQAItem/Treatme
 export { default as TreatmentQAImage } from '@/components/TreatmentQAImage/TreatmentQAImage';
 
 export { default as VideoPlayer } from '@/components/VideoPlayer/VideoPlayer';
+
+// section Consultation
+export { default as Form } from '@/components/Form/Form';
+export { default as FormInput } from '@/components/FormInput/FormInput';
+export { default as FormTextarea } from '@/components/FormTextarea/FormTextarea';
+export { default as FormCheckbox } from '@/components/FormCheckbox/FormCheckbox';
