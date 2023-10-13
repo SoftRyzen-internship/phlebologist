@@ -26,6 +26,7 @@ const TreatmentTabList = ({ lang, data }) => {
                   ...method,
                   more,
                 }}
+                selected={selected}
               />
             )}
           </Tab>

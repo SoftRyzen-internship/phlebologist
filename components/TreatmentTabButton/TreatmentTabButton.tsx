@@ -2,7 +2,7 @@ import classNames from 'classnames';
 
 import css from './TreatmentTabButton.module.css';
 
-const TreatmentTabButton = ({ variant, data }) => {
+const TreatmentTabButton = ({ variant, data, selected }) => {
   const { name, description, slideNum, more } = data;
 
   const boxStyles = classNames(
@@ -41,6 +41,7 @@ const TreatmentTabButton = ({ variant, data }) => {
         className={classNames(
           'absolute bottom-6 left-6 opacity-0 transition-all duration-300 notXl:hidden',
           css.more,
+          { '!hidden': selected },
         )}
       >
         {more}

@@ -1,4 +1,7 @@
+'use client';
+
 import classNames from 'classnames';
+// import { animated, useTransition } from '@react-spring/web';
 
 import { MethodButton, InfoBlock, TreatmentTabImage } from '@/components';
 
@@ -9,6 +12,22 @@ const TreatmentTabPanel = ({ data, lang }) => {
     method: { id, name, info, image },
     button,
   } = data;
+
+  // const transition = useTransition(info, {
+  //   exitBeforeEnter: true,
+  //   from: {
+  //     opacity: 0,
+  //   },
+  //   enter: {
+  //     opacity: 1,
+  //   },
+  //   leave: {
+  //     opacity: 0,
+  //   },
+  //   config: (item, index, phase) => ({
+  //     duration: phase === 'enter' ? 700 : 500,
+  //   }),
+  // });
 
   const contentStyle = classNames(
     'flex flex-col gap-4 text-black-dark',
@@ -22,6 +41,21 @@ const TreatmentTabPanel = ({ data, lang }) => {
       {/* === grid === */}
       <div className={contentStyle}>
         {info.map((item, index) => (
+          // {transition(style =>
+          //   <animated.div
+          //     key={`${item.question}${index}`}
+          //     className={`md:ml-[37px] md:w-[246px] ${css[`box-${index + 1}`]}`}
+          //     style={style}
+          //   >
+          //     <InfoBlock
+          //       config={{
+          //         section: 'treatment',
+          //         title: item.question,
+          //         content: item.answer,
+          //       }}
+          //     />
+          //   </animated.div>
+          // )}
           <div
             key={`${item.question}${index}`}
             className={`md:ml-[37px] md:w-[246px] ${css[`box-${index + 1}`]}`}
