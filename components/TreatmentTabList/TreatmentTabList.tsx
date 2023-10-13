@@ -9,9 +9,16 @@ const TreatmentTabList = ({ lang, data }) => {
 
   return (
     <Tab.Group manual>
-      <Tab.List as={'ul'}>
+      <Tab.List
+        as={'ul'}
+        className="mb-5 flex flex-col gap-2 md:mb-8 md:grid md:grid-cols-2 md:gap-4 xl:mb-0 xl:w-[592px] xl:gap-7"
+      >
         {methods.map((method, index) => (
-          <Tab key={`${method.slideNum}${index}`} as={'li'}>
+          <Tab
+            key={`${method.slideNum}${index}`}
+            as={'li'}
+            className="outline-none"
+          >
             {({ selected }) => (
               <TreatmentTabButton
                 variant={selected ? 'dark' : 'light'}
