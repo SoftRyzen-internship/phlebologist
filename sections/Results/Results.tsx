@@ -2,9 +2,9 @@
 
 import { FC, useState, useEffect } from 'react';
 
-import { ResultsProps } from './Results.props';
-import { fetchResults } from '@/api';
 import { Heading, Slider, ResultsSlide } from '@/components';
+import { fetchResults } from '@/api';
+import { ResultsProps } from './Results.props';
 
 const Results: FC<ResultsProps> = ({
   staticData,

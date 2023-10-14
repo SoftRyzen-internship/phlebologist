@@ -45,6 +45,7 @@ export default async function Home({
       />
       <BannerSection
         staticData={page.home.banner}
+        lang={lang}
         className="-mt-5 md:-mt-8 xl:-mt-10"
       />
       <ResultsSection

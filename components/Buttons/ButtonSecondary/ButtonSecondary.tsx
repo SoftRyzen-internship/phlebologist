@@ -18,7 +18,7 @@ const ButtonSecondary: React.FC<ButtonSecondaryProps> = ({
     {
       'md:w-[262px] xl:w-auto': view === 'hero',
     },
-    { 'md:w-[186px] xl:w-auto': view !== 'hero' },
+    { 'md:w-[186px]': view !== 'hero' },
 
     'flex items-center justify-center w-[256px] h-[51px] rounded-normal bg-white-light font-bold xl:px-12 xl:font-medium xl:bg-gray-light text-primary-dark-400 text-base leading-normal -tracking-[0.64px]',
 
