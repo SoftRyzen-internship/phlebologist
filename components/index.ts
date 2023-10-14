@@ -31,7 +31,6 @@ export { default as FeedbackSlide } from '@/components/Feedbacks/FeedbackSlide/F
 export { default as FeedbackCard } from '@/components/Feedbacks/FeedbackCard/FeedbackCard';
 export { default as FeedbackFrame } from '@/components/Feedbacks/FeedbackFrame/FeedbackFrame';
 export { default as FeedbackCap } from '@/components/Feedbacks/FeedbackCap/FeedbackCap';
-export { default as FeedbackVideo } from '@/components/Feedbacks/FeedbackVideo/FeedbackVideo';
 
 // section About
 export { default as AboutTabs } from '@/components/AboutTabs/AboutTabs';
@@ -78,6 +77,8 @@ export { default as Modal } from '@/components/Modal/Modal';
 export { default as TreatmentQAList } from '@/components/TreatmentQAList/TreatmentQAList';
 export { default as TreatmentQAItem } from '@/components/TreatmentQAItem/TreatmentQAItem';
 export { default as TreatmentQAImage } from '@/components/TreatmentQAImage/TreatmentQAImage';
+
+export { default as VideoPlayer } from '@/components/VideoPlayer/VideoPlayer';
 
 // section Consultation
 export { default as Form } from '@/components/Form/Form';
