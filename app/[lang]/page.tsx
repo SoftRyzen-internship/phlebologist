@@ -26,7 +26,7 @@ export default async function Home({
   return (
     <main>
       {/* temp treatment nav */}
-      <div className="mx-auto mt-4 flex w-[440px] gap-4 py-10">
+      <div className="mx-auto mt-4 flex flex-wrap gap-4 py-10 md:w-[440px]">
         {ids.map((item, index) => (
           <Link
             href={`${lang}/treatment/${item}`}

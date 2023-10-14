@@ -93,6 +93,10 @@
         "close": {
           "iconFunction": "Кнопка Закрити",
           "iconLabel": "Іконка хрестик"
+        },
+        "play": {
+          "iconFunction": "Кнопка Включити відео",
+          "iconLabel": "Іконка Включити відео"
         }
       },
       "about": {

@@ -93,6 +93,10 @@
         "close": {
           "iconFunction": "Close Button",
           "iconLabel": "Cross Icon"
+        },
+        "play": {
+          "iconFunction": "Play Video Button",
+          "iconLabel": "Play Icon"
         }
       },
       "about": {

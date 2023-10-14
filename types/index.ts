@@ -90,6 +90,10 @@ export interface IIconBtnData {
     iconFunction: string;
     iconLabel: string;
   };
+  play: {
+    iconFunction: string;
+    iconLabel: string;
+  };
 }
 
 export interface ISocials {

@@ -37,7 +37,7 @@ const Slider: React.FC<SliderProps> = ({
   };
 
   const defaultConfig =
-    section.toLowerCase() === ('result' || 'doctor')
+    section.toLowerCase() === 'result' || section.toLowerCase() === 'doctor'
       ? resultConfig
       : feedbackConfig;
 
