@@ -28,7 +28,7 @@ const ButtonPrimary: React.FC<ButtonPrimaryProps> = ({
         view !== 'header' && variant === 'light',
     },
 
-    'uppercase outline-without flex items-center justify-center gap-[10px] rounded-normal text-xs leading-normal -tracking-[0.48px] mediaHover:hover:cursor-pointer',
+    'uppercase flex items-center justify-center gap-[10px] rounded-normal text-xs leading-normal -tracking-[0.48px] mediaHover:hover:cursor-pointer',
 
     'transition-all duration-300',
     className,

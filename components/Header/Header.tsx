@@ -22,7 +22,7 @@ const Header = async ({ lang }: { lang: Locale }) => {
             <div className="hidden items-center gap-3 md:flex xl:gap-2">
               <a
                 href={telegram}
-                className="outline-without flex items-center justify-center rounded-normal bg-white 
+                className="flex items-center justify-center rounded-normal bg-white 
                   px-6 py-3 text-[12px] font-medium uppercase leading-normal -tracking-[0.48px] text-black-dark 
                   transition-all duration-300 hover:bg-gray-extra hover:font-bold focus:bg-gray-extra focus:font-bold xl:px-12"
                 rel="noopener noreferrer nofollow"
