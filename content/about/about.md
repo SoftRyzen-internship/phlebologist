@@ -6,13 +6,13 @@ general:
     name: Войціцький Сергій
     profession: Судинний хірург 1 категорії Флеболог
     education:
-      - institution: Стажування з судинної хірургії у Львівській обласній клінічній лікарні
-      - institution: Національна медична академія П.Л. Шупика
       - institution: Національний медичний університету О.О.Богомольця
+      - institution: Національна медична академія П.Л. Шупика
+      - institution: Стажування з судинної хірургії у Львівській обласній клінічній лікарні
     experience:
-      - point: 4000+ проведених операцій
       - point: Більше 10 років практики
       - point: 5000+ вилікуваних пацієнтів
+      - point: 4000+ проведених операцій
   en:
     name: Sergii Voitsitskyi
     profession: Surgеon of the 1st Qualification Category in Vascular Surgery Phlebologist
