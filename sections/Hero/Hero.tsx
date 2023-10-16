@@ -27,7 +27,7 @@ const Hero: FC<HeroProps> = ({ staticData, lang, className }) => {
   );
 
   return (
-    <section className={className}>
+    <section id="hero" className={className}>
       <div className="container">
         <div className={wrapperClass}>
           <div>

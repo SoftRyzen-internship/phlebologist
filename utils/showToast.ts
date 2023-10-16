@@ -1,11 +1,8 @@
 import toast from 'react-hot-toast';
 
-interface toastMessage {
-  success: string;
-  error: string;
-}
+import { IToastMessage } from '@/types';
 
-export const showToast = (isSuccess: boolean, toastMessage: toastMessage) => {
+export const showToast = (isSuccess: boolean, toastMessage: IToastMessage) => {
   const { success, error } = toastMessage;
 
   if (isSuccess) {

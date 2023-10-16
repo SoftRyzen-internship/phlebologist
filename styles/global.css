@@ -54,6 +54,35 @@
   }
 }
 
+/* Banner Section */
+.banner-bg {
+  background-image: image-set(
+    url('/images/home/banner/bg.webp') 1x,
+    url('/images/home/banner/bg-2x.webp') 2x
+  );
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+@media screen and (min-width: 768px) {
+  .banner-bg {
+    background-image: image-set(
+      url('/images/home/banner/bg-md.webp') 1x,
+      url('/images/home/banner/bg-md-2x.webp') 2x
+    );
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .banner-bg {
+    background-image: image-set(
+      url('/images/home/banner/bg-xl.webp') 1x,
+      url('/images/home/banner/bg-xl-2x.webp') 2x
+    );
+  }
+}
+
 /* Consultation Section */
 @media screen and (min-width: 1280px) {
   .consultation-bg {

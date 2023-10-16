@@ -130,6 +130,9 @@
           }
         ]
       },
+      "banner": {
+        "buttonText": "Make an appointment"
+      },
       "patient_results": {
         "title": "Results of our patients",
         "secondaryTitle": "Patient's history",
