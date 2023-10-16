@@ -23,7 +23,7 @@ const FeedbackFrame = ({ data, staticData, onClick }) => {
       onClick={onClick}
     >
       <PlayIcon
-        className="absolute left-[50%] top-[50%] z-10 h-[64px] w-[64px] -translate-x-[50%] -translate-y-[50%]"
+        className="absolute left-[50%] top-[50%] z-10 h-[64px] w-[64px] -translate-x-[50%] -translate-y-[50%] fill-current text-black"
         aria-label={staticData?.links?.video?.icon}
       />
       <FeedbackCap isVideo data={data} staticData={staticData} />
