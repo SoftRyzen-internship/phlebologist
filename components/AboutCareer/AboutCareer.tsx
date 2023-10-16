@@ -2,6 +2,8 @@
 
 import { useState, FC } from 'react';
 
+import classNames from 'classnames';
+
 import { ErrorMessage, Heading, AboutItem } from '@/components';
 
 import { useWindowWidth } from '@/hooks';
@@ -45,7 +47,10 @@ const AboutCareer: FC<AboutCareerProps> = ({ data, staticData }) => {
           </ul>
           {institutions.length > COUNT_VISIBLE_ITEMS && (
             <button
-              className="mt-6 text-left leading-normal -tracking-[0.64px] text-primary-dark-400 underline xl:ml-[70px] xl:mt-5"
+              className={classNames(
+                'mt-6 text-left leading-normal -tracking-[0.64px] text-primary-dark-400 underline xl:ml-[70px]',
+                isShowAll ? 'xl:mt-5' : 'xl:mt-12',
+              )}
               onClick={() => setIsShowAll(prev => !prev)}
               type="button"
             >
