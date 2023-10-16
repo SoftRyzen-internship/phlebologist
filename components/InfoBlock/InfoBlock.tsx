@@ -1,4 +1,7 @@
+'use client';
+
 import classNames from 'classnames';
+import { animated, useTransition } from '@react-spring/web';
 
 import { InfoBlockProps } from './InfoBlock.props';
 
@@ -16,7 +19,8 @@ const InfoBlock: React.FC<InfoBlockProps> = ({
 }) => {
   const titleStyles = classNames({
     'mb-[8px] font-medium text-black-dark -tracking-[0.04em]': true,
-    'text-[18px] leading-normal': section.toLowerCase() === 'treatment',
+    'xl:mb-[4px] text-[18px] leading-normal':
+      section.toLowerCase() === 'treatment',
     'text-[16px] leading-large xl:text-[20px] xl:leading-normal':
       section.toLowerCase() === 'contacts',
     [titleClassName ? titleClassName : '']: titleClassName,
@@ -32,12 +36,37 @@ const InfoBlock: React.FC<InfoBlockProps> = ({
     [contentClassName ? contentClassName : '']: contentClassName,
   });
 
+  const transition = useTransition([content], {
+    exitBeforeEnter: true,
+    from: {
+      opacity: 0,
+    },
+    enter: {
+      opacity: 1,
+    },
+    leave: {
+      opacity: 0,
+    },
+    config: {
+      duration: 800,
+    },
+  });
+
   return (
     <>
       <p className={titleStyles}>{title}</p>
 
       {contentType.toLowerCase() === 'text' && (
-        <p className={contentStyles}>{content}</p>
+        <>
+          {transition(
+            (style, item) =>
+              item && (
+                <animated.p className={contentStyles} style={style}>
+                  {content}
+                </animated.p>
+              ),
+          )}
+        </>
       )}
 
       {contentType.toLowerCase() === 'link' && (

@@ -1,9 +1,9 @@
 import { Locale } from '@/i18n.config';
 import { getDictionary } from '@/utils/dictionary';
-// import Link from 'next/link';
 
 import {
   HeroSection,
+  AboutSection,
   AdvantagesSection,
   FAQSection,
   BannerSection,
@@ -11,6 +11,7 @@ import {
   ResultsSection,
   ContactsSection,
   FeedbackSection,
+  TreatmentsSection,
 } from '@/sections';
 
 export default async function Home({
@@ -18,31 +19,20 @@ export default async function Home({
 }: {
   params: { lang: Locale };
 }) {
-  // fetching local data for the selected lang
   const { page, socials } = await getDictionary(lang);
 
-  // temp - for treatment nav
-  // const ids = ['1', '2', '3', '4'];
   return (
     <main>
-      {/* temp treatment nav */}
-      {/* <div className="mx-auto mt-4 flex w-[440px] gap-4 py-10">
-        {ids.map((item, index) => (
-          <Link
-            href={`${lang}/treatment/${item}`}
-            className="rounded-md bg-gray-extra p-3"
-            key={`${item}${index}`}
-          >
-            Method {item}
-          </Link>
-        ))}
-      </div> */}
-
       <HeroSection staticData={page.home.hero} lang={lang} />
+      <AboutSection
+        lang={lang}
+        staticData={{ about: page.home.about, iconData: page.home.iconBtnData }}
+      />
       <AdvantagesSection
         staticData={page.home.advantages}
         className="-mt-5 md:-mt-8 xl:-mt-10"
       />
+      <TreatmentsSection lang={lang} staticData={page.home.treatments} />
       <BannerSection
         staticData={page.home.banner}
         lang={lang}

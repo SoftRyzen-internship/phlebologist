@@ -1,0 +1,11 @@
+@media screen and (min-width: 1280px) {
+  .box:hover .more,
+  .box:focus .more {
+    opacity: 1;
+  }
+
+  .box:hover .text,
+  .box:focus .text {
+    opacity: 0;
+  }
+}

@@ -25,9 +25,10 @@ export type AboutGeneralDataType = {
   experience: GeneralExperienceType[];
 };
 
-type GeneralEducationType = {
+export type GeneralEducationType = {
   __typename: string;
   institution: string;
+  period: string;
 };
 
 type GeneralExperienceType = {
@@ -47,7 +48,7 @@ export type AboutCareerDataType = {
   institutions: CareerInstitutionType[];
 };
 
-type CareerInstitutionType = {
+export type CareerInstitutionType = {
   __typename: string;
   period: string;
   institution: string;
@@ -86,6 +87,10 @@ export interface IIconBtnData {
     iconLabel: string;
   };
   location: {
+    iconFunction: string;
+    iconLabel: string;
+  };
+  play: {
     iconFunction: string;
     iconLabel: string;
   };
@@ -135,6 +140,41 @@ export type TinaType = {
 };
 
 export type TinaChildren = TinaType[];
+
+export interface IFAQData {
+  title: string;
+  description: string;
+  button: string;
+  aria: string;
+  questions: FAQQuestionsType[];
+}
+
+type FAQQuestionsType = {
+  question: string;
+  answer: string;
+};
+
+export interface ITreatmentsData {
+  title: string;
+  button: string;
+  more: string;
+  notes: string[];
+  methods: IMethodData[];
+}
+
+export interface IMethodData {
+  id: string;
+  slideNum: string;
+  name: string;
+  description: string;
+  image: string;
+  info: IMethodInfoData[];
+}
+
+export interface IMethodInfoData {
+  question: string;
+  answer: string;
+}
 
 // === Treatment page ===
 
