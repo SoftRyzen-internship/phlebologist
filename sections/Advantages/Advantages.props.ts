@@ -4,13 +4,15 @@ export type AdvantageItem = {
   description: string;
 };
 
+type StaticDataType = {
+  title: string;
+  mainQuestion: string;
+  advList: AdvantageItem[];
+  enrollText: string;
+  buttonText: string;
+};
+
 export interface AdvantagesProps {
-  staticData: {
-    title: string;
-    mainQuestion: string;
-    advList: AdvantageItem[];
-    enrollText: string;
-    buttonText: string;
-  };
+  staticData: StaticDataType;
   className?: string;
 }
