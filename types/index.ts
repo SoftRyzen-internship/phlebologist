@@ -123,6 +123,19 @@ export interface ILocaleSwitcherData {
   menuBtn: string;
 }
 
+export interface IFAQData {
+  title: string;
+  description: string;
+  button: string;
+  aria: string;
+  questions: FAQQuestionsType[];
+}
+
+type FAQQuestionsType = {
+  question: string;
+  answer: string;
+};
+
 export interface ITreatmentsData {
   title: string;
   button: string;
