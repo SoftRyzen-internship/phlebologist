@@ -93,12 +93,24 @@
         "close": {
           "iconFunction": "Close Button",
           "iconLabel": "Cross Icon"
+        },
+        "play": {
+          "iconFunction": "Play Video Button",
+          "iconLabel": "Play Icon"
         }
       },
       "about": {
-        "title": "About",
+        "title": "About the Doctor",
         "firstSubtitle": "Experience:",
         "secondSubtitle": "Education:",
+        "educationBtns": {
+          "btnShow": "Review the full list of the doctor's education",
+          "btnHide": "Review the main stages of the doctor's education"
+        },
+        "careerBtns": {
+          "btnShow": "Review the entire career history of the doctor",
+          "btnHide": "Review the key stages of the doctor's career"
+        },
         "menu": [
           {
             "item": "General info",
@@ -443,7 +455,7 @@
     "facebook": "https://www.facebook.com/dr.SergiiVoitsitskyi"
   },
   "footer": {
-    "address": "Клініка “Медейра” - м. Київ, проспект Перемоги, 67",
+    "address": "Medeira Clinic - Kyiv, Beresteiskyi Avenue, 67",
     "phone": "+380933521235"
   }
 }

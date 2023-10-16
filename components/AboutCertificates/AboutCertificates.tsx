@@ -1,26 +1,21 @@
-import Image from 'next/image';
+import { FC } from 'react';
 
-import { ErrorMessage } from '@/components';
+import { ErrorMessage, Slider, AboutCertificatesSlide } from '@/components';
 
 import { AboutCertificatesProps } from './AboutCertificates.props';
 
-const AboutCertificates: React.FC<AboutCertificatesProps> = ({ data }) => {
+const AboutCertificates: FC<AboutCertificatesProps> = ({ data, iconData }) => {
   if (!data) {
     return <ErrorMessage />;
   }
 
   return (
-    <ul className="flex flex-wrap justify-center p-6">
-      {data.map((item, index) => (
-        <Image
-          key={`${item.__typename}${index}`}
-          src={item.photo}
-          alt={item.description.alt}
-          width={300}
-          height={270}
-        />
-      ))}
-    </ul>
+    <Slider
+      slides={data}
+      staticData={iconData}
+      section="doctor"
+      slide={AboutCertificatesSlide}
+    />
   );
 };
 

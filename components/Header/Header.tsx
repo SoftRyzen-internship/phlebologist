@@ -22,9 +22,9 @@ const Header = async ({ lang }: { lang: Locale }) => {
             <div className="hidden items-center gap-3 md:flex xl:gap-2">
               <a
                 href={telegram}
-                className="flex items-center justify-center rounded-normal bg-white 
-                  px-6 py-3 text-[12px] font-medium uppercase leading-normal -tracking-[0.48px] text-black-dark 
-                  transition-all duration-300 hover:bg-gray-extra hover:font-bold focus:bg-gray-extra focus:font-bold xl:px-12"
+                className="outline-without flex items-center justify-center rounded-normal bg-white px-3 
+                  py-3 text-[12px] font-medium uppercase leading-normal -tracking-[0.48px] text-black-dark transition-all 
+                  duration-300 hover:bg-gray-extra hover:font-bold focus:bg-gray-extra focus:font-bold md:w-[140px] xl:w-[187px] "
                 rel="noopener noreferrer nofollow"
                 target="_blank"
               >
@@ -33,14 +33,14 @@ const Header = async ({ lang }: { lang: Locale }) => {
               <ScrollLinkButton
                 variant="menu"
                 linkto="consultation"
-                className=" py-3 -tracking-[0.48px] md:w-auto xl:px-12"
+                className=" py-3 -tracking-[0.48px] md:w-[242px] xl:w-[290px] "
               >
                 {formButton}
               </ScrollLinkButton>
               <LocaleSwitcher
                 variant="header"
                 data={langButton}
-                className="hidden xl:block xl:px-12"
+                className="hidden xl:flex xl:min-w-[120px] xl:px-10"
               />
             </div>
             <BurgerMenu staticData={{ navigation, header, socials }} />

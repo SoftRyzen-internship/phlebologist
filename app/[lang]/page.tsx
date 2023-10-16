@@ -4,6 +4,7 @@ import { getDictionary } from '@/utils/dictionary';
 
 import {
   HeroSection,
+  AboutSection,
   AdvantagesSection,
   FAQSection,
   BannerSection,
@@ -39,6 +40,10 @@ export default async function Home({
       </div> */}
 
       <HeroSection staticData={page.home.hero} lang={lang} />
+      <AboutSection
+        lang={lang}
+        staticData={{ about: page.home.about, iconData: page.home.iconBtnData }}
+      />
       <AdvantagesSection
         staticData={page.home.advantages}
         className="-mt-5 md:-mt-8 xl:-mt-10"
