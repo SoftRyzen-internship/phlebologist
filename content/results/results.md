@@ -60,8 +60,61 @@ case:
           бридлива, охайна корова. Ми це знали.
       en:
         title: Testing test
-        description: |
-          Test text
+        description: >
+          Once, when Java grabbed Contribucia by the ear, she looked at him
+          reproachfully with her sad eyes and said:
+
+
+          "Moo!"
+
+
+          In bovine translation, this probably meant, "Go away, boys, leave me
+          alone."
+
+
+          However, we didn't heed the warning in time.
+
+
+          Chuckling, we circled around her, provoking her to a duel. I could see
+          that Java was embarrassed in front of me because of his Contribucia.
+
+
+          Finally, an angered Java shouted,
+
+
+          "Come on, hit her, Pavlusha, give her a good one! What, are you
+          scared? Well, I'll do it myself!"
+
+
+          He swung and kicked Contribucia in the mouth.
+
+
+          And suddenly... Suddenly, I saw Java high up in the sky.
+
+
+          From up there, from the sky, I heard his desperate and shrill cry:
+
+
+          "Moo-moo!"
+
+
+          He started running, I think, even in the sky. Because when his feet
+          touched the ground, he was already sprinting for the pond. I ran after
+          him. It was our only salvation.
+
+
+          We crashed into the pond at full speed, sending up huge geysers of
+          water and mud. We finally stopped somewhere in the middle. To be
+          honest, what we had flown into could only be loosely called a pond.
+          Once, there really was a fairly large dug-out pond here. But it had
+          long dried up, silted over, and turned into an ordinary puddle. In the
+          deepest part, the water was up to our necks. It was right there that
+          we now stood, catching our breath.
+
+
+          Contribucia was running around the puddle, uttering some bovine curses
+          in our direction. She didn't want to get into the puddle. She was a
+          fastidious, tidy cow. We knew that.
     before: /uploads/results/0000-0000-3154841-696.jpg
     after: /uploads/results/1294303696_x_5c4ad3be.jpg
   - date: 2023-10-01T21:00:00.000Z
