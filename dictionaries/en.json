@@ -133,6 +133,117 @@
       "banner": {
         "buttonText": "Make an appointment"
       },
+      "treatments": {
+        "title": "Treatment Methods",
+        "button": "More about the method",
+        "more": "Learn more",
+        "notes": [
+          "*It's important to note that the treatment of varicose veins may involve a combination of methods, depending on the individual needs of the patient. Treatment outcomes can also vary individually.",
+          "The choice of vein treatment method depends on the stage of the condition and is recommended by a doctor only after a thorough examination."
+        ],
+        "methods": [
+          {
+            "id": "1",
+            "slideNum": "01",
+            "name": "Endovenous Laser Coagulation",
+            "description": "Treatment of varicose veins using laser inside the veins",
+            "image": "/images/treatment/treatment-1.jpg",
+            "info": [
+              {
+                "question": "How it works?",
+                "answer": "The doctor inserts a catheter into the vein and introduces the laser through it, which seals the vein through thermal energy. After this, blood no longer flows into the treated vein and is redirected to healthy veins."
+              },
+              {
+                "question": "It is safe?",
+                "answer": "A safe method with a high success rate."
+              },
+              {
+                "question": "Is it painful?",
+                "answer": "It is performed under local anesthesia, so you won't feel pain."
+              },
+              {
+                "question": "Is it time-consuming?",
+                "answer": "It typically takes 30-40 minutes."
+              }
+            ]
+          },
+          {
+            "id": "2",
+            "slideNum": "02",
+            "name": "Microsclerotherapy",
+            "description": "A non-surgical method that uses injections to close affected veins",
+            "image": "/images/treatment/treatment-2.jpg",
+            "info": [
+              {
+                "question": "How it works?",
+                "answer": "The doctor uses an ultra-fine needle to inject a special solution into the varicose veins, causing them to glue together and close. This makes the appearance of spider veins virtually invisible."
+              },
+              {
+                "question": "It is safe?",
+                "answer": "It is typically a safe method, but there can be an allergic reaction to the sclerosing solution."
+              },
+              {
+                "question": "Is it painful?",
+                "answer": "There may be slight discomfort during the procedure."
+              },
+              {
+                "question": "Is it time-consuming?",
+                "answer": "It depends on the volume, but typically takes around 15 minutes."
+              }
+            ]
+          },
+          {
+            "id": "3",
+            "slideNum": "03",
+            "name": "Foam-form sclerotherapy",
+            "description": "Closure of varicose veins with foam-form sclerosant",
+            "image": "/images/treatment/treatment-3.jpg",
+            "info": [
+              {
+                "question": "How it works?",
+                "answer": "A special liquid is mixed with air to form-foam, which is then injected into the affected vein. The vein seals shut, and the blood flow is redirected into healthy veins."
+              },
+              {
+                "question": "It is safe?",
+                "answer": "The procedure is considered safe."
+              },
+              {
+                "question": "Is it painful?",
+                "answer": "It is performed under local anesthesia, ensuring the absence of pain."
+              },
+              {
+                "question": "Is it time-consuming?",
+                "answer": "It depends on the volume of affected veins but typically takes about 30 minutes."
+              }
+            ]
+          },
+          {
+            "id": "4",
+            "slideNum": "04",
+            "name": "Miniphlebectomy",
+            "description": "Removal of varicose veins through small punctures in the skin",
+            "image": "/images/treatment/treatment-4.jpg",
+            "info": [
+              {
+                "question": "How it works?",
+                "answer": "The surgeon removes the affected section of the vein using a special medical instrument through punctures measuring 1-2 mm in size."
+              },
+              {
+                "question": "It is safe?",
+                "answer": "Typically, this is a safe procedure, but like any surgery, it carries certain risks."
+              },
+              {
+                "question": "Is it painful?",
+                "answer": "The operation is painless. There may be some pain after the operation, which can be controlled with painkillers."
+              },
+              {
+                "question": "Is it time-consuming?",
+                "answer": "It typically takes 30-40 minutes."
+              }
+            ]
+          }
+        ]
+      },
       "patient_results": {
         "title": "Results of our patients",
         "secondaryTitle": "Patient's history",
@@ -310,7 +421,7 @@
           }
         ]
       },
-      "2": {
+      "4": {
         "title": "Miniphlebectomy",
         "description": "is a minimally invasive method for removing varicose veins through small punctures. No incisions are made during the procedure, which speeds up recovery and avoids scarring.",
         "image": "/images/treatment/treatment-temp.jpg",
@@ -350,7 +461,7 @@
           }
         ]
       },
-      "3": {
+      "2": {
         "title": "Microsclerotherapy",
         "description": "is a minimally invasive procedure performed to treat small-diameter varicose veins, measuring just millimeters in size, such as reticular veins and 'spider veins'. During sclerotherapy, a low-concentration sclerosing solution is injected into the affected vein using an ultra-fine needle. This solution irritates the vein's lining, causing it to break down and the vein to seal shut. Over time, the vein transforms into scar tissue and completely disappears.",
         "image": "/images/treatment/treatment-temp.jpg",
@@ -398,7 +509,7 @@
           }
         ]
       },
-      "4": {
+      "3": {
         "title": "Foam sclerotherapy",
         "description": "(or foam sclerotherapy with ultrasound guidance) is a non-surgical method for treating varicose veins. The essence of this procedure involves the injection of a special sclerosing agent (typically in the form of a foam made of polidocanol) into the affected vein, often administered through intravenous catheters. This agent triggers inflammation within the vein, leading to its closure. As a result, blood can no longer flow through it, the vein's diameter decreases, and it eventually transforms into scar tissue.",
         "image": "/images/treatment/treatment-temp.jpg",

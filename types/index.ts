@@ -141,6 +141,41 @@ export type TinaType = {
 
 export type TinaChildren = TinaType[];
 
+export interface IFAQData {
+  title: string;
+  description: string;
+  button: string;
+  aria: string;
+  questions: FAQQuestionsType[];
+}
+
+type FAQQuestionsType = {
+  question: string;
+  answer: string;
+};
+
+export interface ITreatmentsData {
+  title: string;
+  button: string;
+  more: string;
+  notes: string[];
+  methods: IMethodData[];
+}
+
+export interface IMethodData {
+  id: string;
+  slideNum: string;
+  name: string;
+  description: string;
+  image: string;
+  info: IMethodInfoData[];
+}
+
+export interface IMethodInfoData {
+  question: string;
+  answer: string;
+}
+
 // === Treatment page ===
 
 export interface ITreatmentDetails {

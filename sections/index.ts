@@ -8,3 +8,4 @@ export { default as ConsultationSection } from '@/sections/Consultation/Consulta
 export { default as ContactsSection } from '@/sections/Contacts/Contacts';
 export { default as FeedbackSection } from '@/sections/Feedback/Feedback';
 export { default as TreatmentDetailsSection } from '@/sections/TreatmentDetails/TreatmentDetails';
+export { default as TreatmentsSection } from '@/sections/Treatments/Treatments';

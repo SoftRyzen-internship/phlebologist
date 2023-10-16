@@ -3,9 +3,6 @@ export { default as LocaleSwitcher } from '@/components/LocaleSwitcher/LocaleSwi
 export { default as BurgerMenu } from '@/components/BurgerMenu/BurgerMenu';
 export { default as MenuActions } from '@/components/MenuActions/MenuActions';
 
-// tina testing
-export { default as Test } from '@/components/Test/Test';
-
 // heading
 export { default as Heading } from '@/components/Heading/Heading';
 
@@ -18,6 +15,7 @@ export { default as RoutingLinkButton } from '@/components/Buttons/RoutingLinkBu
 export { default as ScrollLinkButton } from '@/components/Buttons/ScrollLinkButton/ScrollLinkButton';
 export { default as IconBtn } from '@/components/Buttons/IconBtn/IconBtn';
 export { default as BurgerMenuButton } from '@/components/Buttons/BurgerMenuButton/BurgerMenuButton';
+export { default as MethodButton } from '@/components/Buttons/MethodButton/MethodButton';
 
 // slider before-after
 export { default as SliderBeforeAfter } from '@/components/SliderBeforeAfter/SliderBeforeAfter';
@@ -70,8 +68,13 @@ export { default as InfoBlock } from '@/components/InfoBlock/InfoBlock';
 export { default as Location } from '@/components/Location/Location';
 
 // modal window
-
 export { default as Modal } from '@/components/Modal/Modal';
+
+// Treatments section
+export { default as TreatmentTabList } from '@/components/TreatmentTabList/TreatmentTabList';
+export { default as TreatmentTabButton } from '@/components/TreatmentTabButton/TreatmentTabButton';
+export { default as TreatmentTabPanel } from '@/components/TreatmentTabPanel/TreatmentTabPanel';
+export { default as TreatmentTabImage } from '@/components/TreatmentTabImage/TreatmentTabImage';
 
 // Treatment Details page
 export { default as TreatmentQAList } from '@/components/TreatmentQAList/TreatmentQAList';
