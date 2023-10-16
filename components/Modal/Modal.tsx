@@ -78,8 +78,9 @@ const Modal: React.FC<ModalProps> = ({
           className={classNames({
             'relative max-h-[497px] max-w-[280px] overflow-hidden rounded-extended bg-white px-[20px] pb-[40px] pt-[56px] md:max-h-[639px] md:max-w-[704px] xl:max-h-[664px]  xl:max-w-[1240px]':
               true,
-            'md:p-[80px]': isReview,
-            'md:px-[24px] md:py-[60px] xl:px-[100px] xl:py-[80px]': !isReview,
+            'md:p-[80px] ': isReview,
+            'md:px-[24px] md:py-[60px] xl:px-[100px] xl:py-[80px] smOnly:w-[80%] smOnly:max-w-[440px]':
+              !isReview,
           })}
         >
           <IconBtn

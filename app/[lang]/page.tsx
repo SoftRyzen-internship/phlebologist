@@ -1,6 +1,5 @@
 import { Locale } from '@/i18n.config';
 import { getDictionary } from '@/utils/dictionary';
-import Link from 'next/link';
 
 import {
   HeroSection,
@@ -21,23 +20,8 @@ export default async function Home({
   // fetching local data for the selected lang
   const { page, socials } = await getDictionary(lang);
 
-  // temp - for treatment nav
-  const ids = ['1', '2', '3', '4'];
   return (
     <main>
-      {/* temp treatment nav */}
-      <div className="mx-auto mt-4 flex flex-wrap gap-4 py-10 md:w-[440px]">
-        {ids.map((item, index) => (
-          <Link
-            href={`${lang}/treatment/${item}`}
-            className="rounded-md bg-gray-extra p-3"
-            key={`${item}${index}`}
-          >
-            Method {item}
-          </Link>
-        ))}
-      </div>
-
       <HeroSection staticData={page.home.hero} lang={lang} />
       <AboutSection
         lang={lang}

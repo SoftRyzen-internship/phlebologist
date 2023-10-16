@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 import { fetchAbout } from '@/api';
 
-import { AboutTabs, ErrorMessage, Heading, AboutImage } from '@/components';
+import { AboutTabs, ErrorMessage, Heading, AboutVideo } from '@/components';
 
 import { AboutProps } from './About.props';
 
@@ -26,7 +26,7 @@ const About: React.FC<AboutProps> = async ({ lang, staticData }) => {
             <div className="xl:min-w-[558px]">
               <Heading className="mb-6 md:mb-8 xl:mb-[48px]">{title}</Heading>
               {data?.video ? (
-                <AboutImage
+                <AboutVideo
                   data={data}
                   staticData={staticData.iconData}
                   lang={lang}

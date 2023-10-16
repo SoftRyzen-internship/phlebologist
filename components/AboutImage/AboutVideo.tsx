@@ -4,26 +4,26 @@ import { FC, useState } from 'react';
 
 import Image from 'next/image';
 
-import { Modal } from '@/components';
+import { Modal, VideoPlayer } from '@/components';
 
 import PlayIcon from '@/public/icons/player.svg';
 
-import { AboutImageProps } from './AboutImage.props';
+import { AboutVideoProps } from './AboutVideo.props';
 
-const AboutImage: FC<AboutImageProps> = ({ data, lang, staticData }) => {
+const AboutVideo: FC<AboutVideoProps> = ({ data, lang, staticData }) => {
   const [isOpen, setIsOpen] = useState(false);
-  console.log(isOpen);
+  const { image, video } = data;
 
   return (
     <>
       <button
         onClick={() => setIsOpen(true)}
         type="button"
-        className="relative mx-auto md:block"
+        className="relative mx-auto smOnly:w-full notXl:block"
         aria-label={staticData.play.iconFunction}
       >
         <Image
-          src={data?.image as string}
+          src={image}
           alt={lang === 'uk' ? 'Фото лікаря' : 'Photo of the doctor'}
           width={256}
           height={191}
@@ -42,21 +42,10 @@ const AboutImage: FC<AboutImageProps> = ({ data, lang, staticData }) => {
         isOpen={isOpen}
         isReview={false}
       >
-        {/* video */}
-        <Image
-          src={data?.image as string}
-          alt={
-            lang === 'uk'
-              ? 'Лікар сидить за столом'
-              : 'The doctor is sitting at the table'
-          }
-          width={256}
-          height={191}
-          className="h-[504px] w-[1040px] object-cover object-top"
-        />
+        <VideoPlayer data={video} isShown={isOpen} />
       </Modal>
     </>
   );
 };
 
-export default AboutImage;
+export default AboutVideo;

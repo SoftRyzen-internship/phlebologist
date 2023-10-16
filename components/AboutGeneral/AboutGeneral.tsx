@@ -18,8 +18,8 @@ const AboutGeneral: React.FC<AboutGeneralProps> = ({
         {name}
       </Heading>
       <p
-        className="mt-5 font-medium uppercase leading-6
-        md:mt-8 md:w-[234px] xl:mt-[64px] xl:w-[296px] xl:text-xl"
+        className="mt-5 w-[234px] font-medium uppercase
+        leading-6 md:mt-8 xl:mt-[64px] xl:w-[296px] xl:text-xl"
       >
         {profession}
       </p>
