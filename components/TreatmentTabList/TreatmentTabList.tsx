@@ -4,7 +4,9 @@ import { Tab } from '@headlessui/react';
 
 import { TreatmentTabButton, TreatmentTabPanel } from '@/components';
 
-const TreatmentTabList = ({ lang, data }) => {
+import { TreatmentTabListProps } from './TreatmentTabList.props';
+
+const TreatmentTabList: React.FC<TreatmentTabListProps> = ({ lang, data }) => {
   const { button, more, methods } = data;
 
   return (
@@ -23,7 +25,7 @@ const TreatmentTabList = ({ lang, data }) => {
               <TreatmentTabButton
                 variant={selected ? 'dark' : 'light'}
                 data={{
-                  ...method,
+                  method,
                   more,
                 }}
                 selected={selected}

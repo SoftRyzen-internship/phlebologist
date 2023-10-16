@@ -123,6 +123,28 @@ export interface ILocaleSwitcherData {
   menuBtn: string;
 }
 
+export interface ITreatmentsData {
+  title: string;
+  button: string;
+  more: string;
+  notes: string[];
+  methods: IMethodData[];
+}
+
+export interface IMethodData {
+  id: string;
+  slideNum: string;
+  name: string;
+  description: string;
+  image: string;
+  info: IMethodInfoData[];
+}
+
+export interface IMethodInfoData {
+  question: string;
+  answer: string;
+}
+
 // === Treatment page ===
 
 export interface ITreatmentDetails {

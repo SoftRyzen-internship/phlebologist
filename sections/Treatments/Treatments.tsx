@@ -1,6 +1,7 @@
 import { Heading, TreatmentTabList } from '@/components';
+import { TreatmentsProps } from './Treatments.props';
 
-const Treatments = ({ staticData, lang }) => {
+const Treatments: React.FC<TreatmentsProps> = ({ staticData, lang }) => {
   const { title, button, more, notes, methods } = staticData;
 
   return (

@@ -1,9 +1,17 @@
 import classNames from 'classnames';
 
+import { TreatmentTabButtonProps } from './TreatmentTabButton.props';
 import css from './TreatmentTabButton.module.css';
 
-const TreatmentTabButton = ({ variant, data, selected }) => {
-  const { name, description, slideNum, more } = data;
+const TreatmentTabButton: React.FC<TreatmentTabButtonProps> = ({
+  variant,
+  data,
+  selected,
+}) => {
+  const {
+    method: { name, description, slideNum },
+    more,
+  } = data;
 
   const boxStyles = classNames(
     'cursor-pointer rounded-xl',

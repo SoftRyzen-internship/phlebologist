@@ -2,9 +2,13 @@ import classNames from 'classnames';
 
 import { MethodButton, InfoBlock, TreatmentTabImage } from '@/components';
 
+import { TreatmentTabPanelProps } from './TreatmentTabPanel.props';
 import css from './TreatmentTabPanel.module.css';
 
-const TreatmentTabPanel = ({ data, lang }) => {
+const TreatmentTabPanel: React.FC<TreatmentTabPanelProps> = ({
+  data,
+  lang,
+}) => {
   const {
     method: { id, name, info, image },
     button,
