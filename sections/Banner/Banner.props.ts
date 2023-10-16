@@ -5,10 +5,10 @@ export interface IFetchedBannerData {
   description: string;
 }
 
+type StaticDataType = { buttonText: string };
+
 export interface BannerProps {
-  staticData: {
-    buttonText: string;
-  };
+  staticData: StaticDataType;
   lang: Locale;
   className?: string;
 }

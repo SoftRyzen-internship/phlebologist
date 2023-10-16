@@ -1,36 +1,13 @@
+import { IForm } from '@/components/Form/Form.props';
+
+type StaticDataType = {
+  title: string;
+  callTextMobile: string;
+  callText: string;
+  form: IForm;
+};
+
 export interface ConsultationProps {
-  staticData: {
-    title: string;
-    callTextMobile: string;
-    callText: string;
-    form: {
-      input: {
-        name: {
-          label: string;
-          placeholder: string;
-          error: string;
-        };
-        phone: {
-          label: string;
-          placeholder: string;
-          error: string;
-        };
-      };
-      textarea: {
-        label: string;
-        placeholder: string;
-      };
-      checkbox: {
-        label: string;
-      };
-      button: {
-        sendText: string;
-        sentText: string;
-        loadingText: string;
-        errorText: string;
-      };
-      toastMessage: { success: string; error: string };
-    };
-  };
+  staticData: StaticDataType;
   className?: string;
 }
