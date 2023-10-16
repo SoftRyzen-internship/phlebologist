@@ -71,7 +71,7 @@ const InfoBlock: React.FC<InfoBlockProps> = ({
 
       {contentType.toLowerCase() === 'link' && (
         <a
-          href={`tel:+${link}`}
+          href={`tel:${link}`}
           target="_blank"
           rel="noreferrer noopener nofollow"
           className={contentStyles}

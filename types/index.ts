@@ -25,9 +25,10 @@ export type AboutGeneralDataType = {
   experience: GeneralExperienceType[];
 };
 
-type GeneralEducationType = {
+export type GeneralEducationType = {
   __typename: string;
   institution: string;
+  period: string;
 };
 
 type GeneralExperienceType = {
@@ -47,7 +48,7 @@ export type AboutCareerDataType = {
   institutions: CareerInstitutionType[];
 };
 
-type CareerInstitutionType = {
+export type CareerInstitutionType = {
   __typename: string;
   period: string;
   institution: string;
@@ -89,6 +90,10 @@ export interface IIconBtnData {
     iconFunction: string;
     iconLabel: string;
   };
+  play: {
+    iconFunction: string;
+    iconLabel: string;
+  };
 }
 
 export interface ISocials {
@@ -122,6 +127,19 @@ export interface ILocaleSwitcherData {
   headerBtn: string;
   menuBtn: string;
 }
+
+export type TextData = {
+  doesFit: boolean;
+  text: string;
+};
+
+export type TinaType = {
+  children: {
+    0: { text: string };
+  };
+};
+
+export type TinaChildren = TinaType[];
 
 export interface IFAQData {
   title: string;
@@ -175,4 +193,11 @@ export interface ITreatmentQuestion {
     list: string[];
     aftertext?: string;
   };
+}
+
+// === Toast notification messages ===
+
+export interface IToastMessage {
+  success: string;
+  error: string;
 }

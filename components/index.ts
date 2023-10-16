@@ -25,7 +25,10 @@ export { default as SliderBeforeAfterHandle } from '@/components/SliderBeforeAft
 export { default as Slider } from '@/components/Slider/Slider';
 
 // feedback
-export { default as FeedbackSlide } from '@/components/FeedbackSlide/FeedbackSlide';
+export { default as FeedbackSlide } from '@/components/Feedbacks/FeedbackSlide/FeedbackSlide';
+export { default as FeedbackCard } from '@/components/Feedbacks/FeedbackCard/FeedbackCard';
+export { default as FeedbackFrame } from '@/components/Feedbacks/FeedbackFrame/FeedbackFrame';
+export { default as FeedbackCap } from '@/components/Feedbacks/FeedbackCap/FeedbackCap';
 
 // section About
 export { default as AboutTabs } from '@/components/AboutTabs/AboutTabs';
@@ -33,7 +36,9 @@ export { default as AboutGeneral } from '@/components/AboutGeneral/AboutGeneral'
 export { default as AboutEducation } from '@/components/AboutEducation/AboutEducation';
 export { default as AboutCareer } from '@/components/AboutCareer/AboutCareer';
 export { default as AboutCertificates } from '@/components/AboutCertificates/AboutCertificates';
-
+export { default as AboutCertificatesSlide } from '@/components/AboutCertificatesSlide/AboutCertificatesSlide';
+export { default as AboutItem } from '@/components/AboutEducationItem/AboutItem';
+export { default as AboutVideo } from '@/components/AboutImage/AboutVideo';
 // section Advantages
 export { default as AdvantagesList } from '@/components/AdvantagesList/AdvantagesList';
 
@@ -75,3 +80,11 @@ export { default as TreatmentTabImage } from '@/components/TreatmentTabImage/Tre
 export { default as TreatmentQAList } from '@/components/TreatmentQAList/TreatmentQAList';
 export { default as TreatmentQAItem } from '@/components/TreatmentQAItem/TreatmentQAItem';
 export { default as TreatmentQAImage } from '@/components/TreatmentQAImage/TreatmentQAImage';
+
+export { default as VideoPlayer } from '@/components/VideoPlayer/VideoPlayer';
+
+// section Consultation
+export { default as Form } from '@/components/Form/Form';
+export { default as FormInput } from '@/components/FormInput/FormInput';
+export { default as FormTextarea } from '@/components/FormTextarea/FormTextarea';
+export { default as FormCheckbox } from '@/components/FormCheckbox/FormCheckbox';

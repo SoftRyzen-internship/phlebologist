@@ -93,12 +93,24 @@
         "close": {
           "iconFunction": "Close Button",
           "iconLabel": "Cross Icon"
+        },
+        "play": {
+          "iconFunction": "Play Video Button",
+          "iconLabel": "Play Icon"
         }
       },
       "about": {
-        "title": "About",
+        "title": "About the Doctor",
         "firstSubtitle": "Experience:",
         "secondSubtitle": "Education:",
+        "educationBtns": {
+          "btnShow": "Review the full list of the doctor's education",
+          "btnHide": "Review the main stages of the doctor's education"
+        },
+        "careerBtns": {
+          "btnShow": "Review the entire career history of the doctor",
+          "btnHide": "Review the key stages of the doctor's career"
+        },
         "menu": [
           {
             "item": "General info",
@@ -117,6 +129,9 @@
             "collection": "certificates"
           }
         ]
+      },
+      "banner": {
+        "buttonText": "Make an appointment"
       },
       "treatments": {
         "title": "Treatment Methods",
@@ -281,21 +296,58 @@
           }
         ]
       },
+      "consultation": {
+        "title": "Schedule a consultation",
+        "callTextMobile": "Schedule a consultation right now and get a special discount on your first visit!",
+        "callText": "Schedule a consultation right now and get a special discount on your first visit!",
+        "form": {
+          "input": {
+            "name": {
+              "label": "Your name *",
+              "placeholder": "Ivanchuk Ivan",
+              "error": "You have provided the incorrect name"
+            },
+            "phone": {
+              "label": "Your phone number *",
+              "placeholder": "+380981234567",
+              "error": "You have entered the phone number incorrectly"
+            }
+          },
+          "textarea": {
+            "label": "Your message",
+            "placeholder": "Ask your question"
+          },
+          "checkbox": {
+            "label": "I consent to the processing of personal data"
+          },
+          "button": {
+            "sendText": "Send",
+            "sentText": "Sent",
+            "loadingText": "Sending...",
+            "errorText": "Error occurred"
+          },
+          "toastMessage": {
+            "success": "Your request has been successfully sent! A doctor will be in touch with you shortly!",
+            "error": "Whoops! Something went wrong..."
+          }
+        }
+      },
       "contacts": {
-        "heading": "Контакти",
+        "heading": "Contacts",
+        "anchor": "contacts",
         "contactData": {
-          "phone": { "caption": "Телефон:", "content": "+380933521235" },
+          "phone": { "caption": "Phone:", "content": "+380933521235" },
           "address": {
-            "caption": "Адреса:",
-            "content": "Клініка “Медейра” - м. Київ, проспект Берестейський, 67"
+            "caption": "Address:",
+            "content": "Medeira Clinic - Kyiv, Beresteiskyi Avenue, 67"
           },
           "schedule": {
-            "caption": "Графік роботи:",
-            "content": "Пн-Пт: 09:00 - 19:00"
+            "caption": "Working hours:",
+            "content": "Mon-Fri: 09:00 - 19:00"
           },
-          "media": { "caption": "Соціальні мережі:" },
+          "media": { "caption": "Social media:" },
           "location": {
-            "placename": { "firstRow": "Клініка", "secondRow": "Медейра" },
+            "placename": { "firstRow": "Clinic", "secondRow": "Medeira" },
             "url": "https://maps.app.goo.gl/V33L4LrBKHKBTiqy6",
             "images": {
               "map": {
@@ -310,8 +362,18 @@
           }
         },
         "action": {
-          "instruction": "Напишіть нам у месенджері",
-          "actionName": "Написати у Telegram"
+          "instruction": "Feel free to contact us",
+          "actionName": "Contact in Telegram"
+        }
+      },
+      "feedback": {
+        "heading": "Reviews",
+        "anchor": "feedback",
+        "photo": { "alt": "Patient Photo" },
+        "links": {
+          "send": { "text": "Contact", "icon": "Telegram Icon" },
+          "read": { "text": "Read more" },
+          "video": { "icon": "Watch Video Icon" }
         }
       }
     },
@@ -504,7 +566,7 @@
     "facebook": "https://www.facebook.com/dr.SergiiVoitsitskyi"
   },
   "footer": {
-    "address": "Клініка “Медейра” - м. Київ, проспект Перемоги, 67",
+    "address": "Medeira Clinic - Kyiv, Beresteiskyi Avenue, 67",
     "phone": "+380933521235"
   }
 }

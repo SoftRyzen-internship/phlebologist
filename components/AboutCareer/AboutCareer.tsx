@@ -1,34 +1,68 @@
-import { ErrorMessage, Heading } from '@/components';
+'use client';
+
+import { useState, FC } from 'react';
+
+import { ErrorMessage, Heading, AboutItem } from '@/components';
+
+import { useWindowWidth } from '@/hooks';
 
 import { AboutCareerProps } from './AboutCareer.props';
 
-const AboutCareer: React.FC<AboutCareerProps> = ({ data }) => {
+const COUNT_VISIBLE_ITEMS = 5;
+
+const AboutCareer: FC<AboutCareerProps> = ({ data, staticData }) => {
+  const [isShowAll, setIsShowAll] = useState(false);
+  const { isScreenMobile, isScreenDesktop } = useWindowWidth();
+
   if (!data) {
     return <ErrorMessage />;
   }
 
   const { title, institutions } = data;
+  const { btnHide, btnShow } = staticData;
 
   return (
     <div className="text-base font-normal tracking-[-0.64px] text-black-dark">
       <Heading variant="secondary" className="mt-6">
         {title}
       </Heading>
+      {(isScreenDesktop || isScreenMobile) && (
+        <>
+          <ul className="mt-5 list-none md:mt-8 md:grid md:grid-cols-2 md:gap-x-6 xl:block">
+            {institutions &&
+              isShowAll &&
+              institutions.map((item, index) => (
+                <AboutItem key={`${item.__typename}${index}`} item={item} />
+              ))}
 
-      <ul className="ml-4 mt-4 md:mt-8">
-        {institutions &&
-          institutions.map((item, index) => (
-            <li
-              key={`${item.__typename}${index}`}
-              className="flex items-baseline gap-2"
+            {institutions &&
+              !isShowAll &&
+              institutions
+                .slice(0, COUNT_VISIBLE_ITEMS)
+                .map((item, index) => (
+                  <AboutItem key={`${item.__typename}${index}`} item={item} />
+                ))}
+          </ul>
+          {institutions.length > COUNT_VISIBLE_ITEMS && (
+            <button
+              className="mt-6 text-left leading-normal -tracking-[0.64px] text-primary-dark-400 underline xl:ml-[70px] xl:mt-5"
+              onClick={() => setIsShowAll(prev => !prev)}
+              type="button"
             >
-              <span className="min-w-[62px] text-end text-xs">
-                {item.period}
-              </span>
-              <span>{item.institution}</span>
-            </li>
-          ))}
-      </ul>
+              {!isShowAll ? btnShow : btnHide}
+            </button>
+          )}
+        </>
+      )}
+
+      {!isScreenDesktop && !isScreenMobile && (
+        <ul className="mt-5 list-none md:mt-8 md:grid md:grid-cols-2 md:gap-x-6 xl:block">
+          {institutions &&
+            institutions.map((item, index) => (
+              <AboutItem key={`${item.__typename}${index}`} item={item} />
+            ))}
+        </ul>
+      )}
     </div>
   );
 };
