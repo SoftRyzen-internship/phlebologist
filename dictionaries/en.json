@@ -132,7 +132,7 @@
             "slideNum": "01",
             "name": "Endovenous Laser Coagulation",
             "description": "Treatment of varicose veins using laser inside the veins",
-            "image": "/images/treatment/treatment-sect-temp.jpg",
+            "image": "/images/treatment/treatment-1.jpg",
             "info": [
               {
                 "question": "How it works?",
@@ -157,7 +157,7 @@
             "slideNum": "02",
             "name": "Microsclerotherapy",
             "description": "A non-surgical method that uses injections to close affected veins",
-            "image": "/images/treatment/treatment-sect-temp.jpg",
+            "image": "/images/treatment/treatment-2.jpg",
             "info": [
               {
                 "question": "How it works?",
@@ -182,7 +182,7 @@
             "slideNum": "03",
             "name": "Foam-form sclerotherapy",
             "description": "Closure of varicose veins with foam-form sclerosant",
-            "image": "/images/treatment/treatment-sect-temp.jpg",
+            "image": "/images/treatment/treatment-3.jpg",
             "info": [
               {
                 "question": "How it works?",
@@ -207,7 +207,7 @@
             "slideNum": "04",
             "name": "Miniphlebectomy",
             "description": "Removal of varicose veins through small punctures in the skin",
-            "image": "/images/treatment/treatment-sect-temp.jpg",
+            "image": "/images/treatment/treatment-4.jpg",
             "info": [
               {
                 "question": "How it works?",

@@ -132,7 +132,7 @@
             "slideNum": "01",
             "name": "Ендовазальна лазерна коагуляція",
             "description": "Лікування варикозу лазером всередині вен",
-            "image": "/images/treatment/treatment-sect-temp.jpg",
+            "image": "/images/treatment/treatment-1.jpg",
             "info": [
               {
                 "question": "Як відбувається?",
@@ -157,7 +157,7 @@
             "slideNum": "02",
             "name": "Мікросклеротерапія",
             "description": "Нехірургічний метод - використання ін'єкцій для закриття вражених вен",
-            "image": "/images/treatment/treatment-sect-temp.jpg",
+            "image": "/images/treatment/treatment-2.jpg",
             "info": [
               {
                 "question": "Як відбувається?",
@@ -182,7 +182,7 @@
             "slideNum": "03",
             "name": "Пінне склерозування",
             "description": "Закриття варикозних вен пінним склерозантом",
-            "image": "/images/treatment/treatment-sect-temp.jpg",
+            "image": "/images/treatment/treatment-3.jpg",
             "info": [
               {
                 "question": "Як відбувається?",
@@ -207,7 +207,7 @@
             "slideNum": "04",
             "name": "Мініфлебектомія",
             "description": "Видалення варикозних вен через маленькі проколи на шкірі",
-            "image": "/images/treatment/treatment-sect-temp.jpg",
+            "image": "/images/treatment/treatment-4.jpg",
             "info": [
               {
                 "question": "Як відбувається?",

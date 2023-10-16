@@ -14,7 +14,7 @@ const TreatmentTabButton = ({ variant, data, selected }) => {
         variant === 'light',
       'bg-primary-dark-400 text-white text-black-dark': variant === 'dark',
     },
-    'transition-all duration-300',
+    'transition-all duration-300 ease-in',
     css.box,
   );
 
@@ -33,6 +33,7 @@ const TreatmentTabButton = ({ variant, data, selected }) => {
         className={classNames(
           'absolute bottom-6 left-6 w-[234px] opacity-100 transition-all duration-300 notXl:hidden',
           css.text,
+          { '!block !opacity-100': selected },
         )}
       >
         {description}
