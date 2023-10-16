@@ -9,71 +9,832 @@
     "meta": { "flags": ["experimentalData"] },
     "collections": [
       {
-        "name": "page",
-        "label": "Page",
-        "path": "content/page",
+        "name": "about",
+        "label": "About",
+        "path": "content/about",
         "format": "md",
         "fields": [
           {
-            "name": "title",
+            "name": "photo",
+            "label": "Photo",
+            "type": "image",
+            "namespace": ["about", "photo"],
+            "searchable": false
+          },
+          {
+            "name": "video",
+            "label": "Video",
             "type": "string",
-            "namespace": ["page", "title"],
+            "namespace": ["about", "video"],
             "searchable": true
           },
           {
-            "name": "sections",
-            "label": "Sections",
+            "name": "general",
+            "label": "General",
             "type": "object",
-            "list": true,
-            "templates": [
+            "required": true,
+            "fields": [
               {
-                "name": "hero",
-                "label": "Hero",
+                "name": "uk",
+                "label": "UK",
+                "type": "object",
                 "fields": [
                   {
-                    "name": "title",
-                    "type": "rich-text",
-                    "namespace": ["page", "sections", "hero", "title"],
-                    "searchable": true,
-                    "parser": { "type": "markdown" }
+                    "name": "name",
+                    "label": "Name",
+                    "type": "string",
+                    "required": true,
+                    "namespace": ["about", "general", "uk", "name"],
+                    "searchable": true
                   },
                   {
-                    "name": "subtitle",
-                    "type": "rich-text",
-                    "namespace": ["page", "sections", "hero", "subtitle"],
-                    "searchable": true,
-                    "parser": { "type": "markdown" }
+                    "name": "profession",
+                    "label": "Profession",
+                    "type": "string",
+                    "required": true,
+                    "namespace": ["about", "general", "uk", "profession"],
+                    "searchable": true
+                  },
+                  {
+                    "name": "education",
+                    "label": "Education",
+                    "type": "object",
+                    "list": true,
+                    "fields": [
+                      {
+                        "name": "institution",
+                        "label": "Institution",
+                        "type": "string",
+                        "namespace": [
+                          "about",
+                          "general",
+                          "uk",
+                          "education",
+                          "institution"
+                        ],
+                        "searchable": true
+                      }
+                    ],
+                    "ui": { "defaultItem": { "institution": "" } },
+                    "namespace": ["about", "general", "uk", "education"],
+                    "searchable": true
+                  },
+                  {
+                    "name": "experience",
+                    "label": "Experience",
+                    "type": "object",
+                    "list": true,
+                    "fields": [
+                      {
+                        "name": "point",
+                        "label": "Point",
+                        "type": "string",
+                        "namespace": [
+                          "about",
+                          "general",
+                          "uk",
+                          "experience",
+                          "point"
+                        ],
+                        "searchable": true
+                      }
+                    ],
+                    "ui": { "defaultItem": { "point": "" } },
+                    "namespace": ["about", "general", "uk", "experience"],
+                    "searchable": true
                   }
                 ],
-                "namespace": ["page", "sections", "hero"]
+                "ui": { "defaultItem": { "name": "" } },
+                "namespace": ["about", "general", "uk"],
+                "searchable": true
               },
               {
-                "name": "about",
-                "label": "About",
+                "name": "en",
+                "label": "EN",
+                "type": "object",
+                "fields": [
+                  {
+                    "name": "name",
+                    "label": "Name",
+                    "type": "string",
+                    "required": true,
+                    "namespace": ["about", "general", "en", "name"],
+                    "searchable": true
+                  },
+                  {
+                    "name": "profession",
+                    "label": "Profession",
+                    "type": "string",
+                    "required": true,
+                    "namespace": ["about", "general", "en", "profession"],
+                    "searchable": true
+                  },
+                  {
+                    "name": "education",
+                    "label": "Education",
+                    "type": "object",
+                    "list": true,
+                    "fields": [
+                      {
+                        "name": "institution",
+                        "label": "Institution",
+                        "type": "string",
+                        "namespace": [
+                          "about",
+                          "general",
+                          "en",
+                          "education",
+                          "institution"
+                        ],
+                        "searchable": true
+                      }
+                    ],
+                    "ui": { "defaultItem": { "institution": "" } },
+                    "namespace": ["about", "general", "en", "education"],
+                    "searchable": true
+                  },
+                  {
+                    "name": "experience",
+                    "label": "Experience",
+                    "type": "object",
+                    "list": true,
+                    "fields": [
+                      {
+                        "name": "point",
+                        "label": "Point",
+                        "type": "string",
+                        "namespace": [
+                          "about",
+                          "general",
+                          "en",
+                          "experience",
+                          "point"
+                        ],
+                        "searchable": true
+                      }
+                    ],
+                    "ui": { "defaultItem": { "point": "" } },
+                    "namespace": ["about", "general", "en", "experience"],
+                    "searchable": true
+                  }
+                ],
+                "ui": { "defaultItem": { "name": "" } },
+                "namespace": ["about", "general", "en"],
+                "searchable": true
+              }
+            ],
+            "namespace": ["about", "general"],
+            "searchable": true
+          },
+          {
+            "name": "education",
+            "label": "Education",
+            "type": "object",
+            "required": true,
+            "fields": [
+              {
+                "name": "uk",
+                "label": "UK",
+                "type": "object",
                 "fields": [
                   {
                     "name": "title",
-                    "type": "rich-text",
-                    "namespace": ["page", "sections", "about", "title"],
-                    "searchable": true,
-                    "parser": { "type": "markdown" }
+                    "label": "Title",
+                    "type": "string",
+                    "required": true,
+                    "namespace": ["about", "education", "uk", "title"],
+                    "searchable": true
                   },
                   {
-                    "name": "description",
-                    "type": "rich-text",
-                    "namespace": ["page", "sections", "about", "description"],
-                    "searchable": true,
-                    "parser": { "type": "markdown" }
+                    "name": "institutions",
+                    "label": "Institutions",
+                    "type": "object",
+                    "list": true,
+                    "fields": [
+                      {
+                        "name": "period",
+                        "label": "Period",
+                        "type": "string",
+                        "namespace": [
+                          "about",
+                          "education",
+                          "uk",
+                          "institutions",
+                          "period"
+                        ],
+                        "searchable": true
+                      },
+                      {
+                        "name": "institution",
+                        "label": "Institution",
+                        "type": "string",
+                        "namespace": [
+                          "about",
+                          "education",
+                          "uk",
+                          "institutions",
+                          "institution"
+                        ],
+                        "searchable": true
+                      }
+                    ],
+                    "ui": { "defaultItem": { "institution": "" } },
+                    "namespace": ["about", "education", "uk", "institutions"],
+                    "searchable": true
                   }
                 ],
-                "namespace": ["page", "sections", "about"]
+                "ui": { "defaultItem": { "title": "" } },
+                "namespace": ["about", "education", "uk"],
+                "searchable": true
+              },
+              {
+                "name": "en",
+                "label": "EN",
+                "type": "object",
+                "fields": [
+                  {
+                    "name": "title",
+                    "label": "Title",
+                    "type": "string",
+                    "required": true,
+                    "namespace": ["about", "education", "en", "title"],
+                    "searchable": true
+                  },
+                  {
+                    "name": "institutions",
+                    "label": "Institutions",
+                    "type": "object",
+                    "list": true,
+                    "fields": [
+                      {
+                        "name": "period",
+                        "label": "Period",
+                        "type": "string",
+                        "namespace": [
+                          "about",
+                          "education",
+                          "en",
+                          "institutions",
+                          "period"
+                        ],
+                        "searchable": true
+                      },
+                      {
+                        "name": "institution",
+                        "label": "Institution",
+                        "type": "string",
+                        "namespace": [
+                          "about",
+                          "education",
+                          "en",
+                          "institutions",
+                          "institution"
+                        ],
+                        "searchable": true
+                      }
+                    ],
+                    "ui": { "defaultItem": { "institution": "" } },
+                    "namespace": ["about", "education", "en", "institutions"],
+                    "searchable": true
+                  }
+                ],
+                "ui": { "defaultItem": { "title": "" } },
+                "namespace": ["about", "education", "en"],
+                "searchable": true
               }
             ],
-            "namespace": ["page", "sections"],
+            "namespace": ["about", "education"],
+            "searchable": true
+          },
+          {
+            "name": "career",
+            "label": "Career",
+            "type": "object",
+            "required": true,
+            "fields": [
+              {
+                "name": "uk",
+                "label": "UK",
+                "type": "object",
+                "fields": [
+                  {
+                    "name": "title",
+                    "label": "Title",
+                    "type": "string",
+                    "required": true,
+                    "namespace": ["about", "career", "uk", "title"],
+                    "searchable": true
+                  },
+                  {
+                    "name": "institutions",
+                    "label": "Institutions",
+                    "type": "object",
+                    "list": true,
+                    "fields": [
+                      {
+                        "name": "period",
+                        "label": "Period",
+                        "type": "string",
+                        "namespace": [
+                          "about",
+                          "career",
+                          "uk",
+                          "institutions",
+                          "period"
+                        ],
+                        "searchable": true
+                      },
+                      {
+                        "name": "institution",
+                        "label": "Institution",
+                        "type": "string",
+                        "namespace": [
+                          "about",
+                          "career",
+                          "uk",
+                          "institutions",
+                          "institution"
+                        ],
+                        "searchable": true
+                      }
+                    ],
+                    "ui": { "defaultItem": { "institution": "" } },
+                    "namespace": ["about", "career", "uk", "institutions"],
+                    "searchable": true
+                  }
+                ],
+                "ui": { "defaultItem": { "title": "" } },
+                "namespace": ["about", "career", "uk"],
+                "searchable": true
+              },
+              {
+                "name": "en",
+                "label": "EN",
+                "type": "object",
+                "fields": [
+                  {
+                    "name": "title",
+                    "label": "Title",
+                    "type": "string",
+                    "required": true,
+                    "namespace": ["about", "career", "en", "title"],
+                    "searchable": true
+                  },
+                  {
+                    "name": "institutions",
+                    "label": "Institutions",
+                    "type": "object",
+                    "list": true,
+                    "fields": [
+                      {
+                        "name": "period",
+                        "label": "Period",
+                        "type": "string",
+                        "namespace": [
+                          "about",
+                          "career",
+                          "en",
+                          "institutions",
+                          "period"
+                        ],
+                        "searchable": true
+                      },
+                      {
+                        "name": "institution",
+                        "label": "Institution",
+                        "type": "string",
+                        "namespace": [
+                          "about",
+                          "career",
+                          "en",
+                          "institutions",
+                          "institution"
+                        ],
+                        "searchable": true
+                      }
+                    ],
+                    "ui": { "defaultItem": { "institution": "" } },
+                    "namespace": ["about", "career", "en", "institutions"],
+                    "searchable": true
+                  }
+                ],
+                "ui": { "defaultItem": { "title": "" } },
+                "namespace": ["about", "career", "en"],
+                "searchable": true
+              }
+            ],
+            "namespace": ["about", "career"],
+            "searchable": true
+          },
+          {
+            "name": "certificates",
+            "label": "Certificates",
+            "type": "object",
+            "required": true,
+            "list": true,
+            "fields": [
+              {
+                "name": "photo",
+                "label": "Photo",
+                "type": "image",
+                "required": true,
+                "namespace": ["about", "certificates", "photo"],
+                "searchable": false
+              },
+              {
+                "name": "description",
+                "label": "Description",
+                "type": "object",
+                "required": true,
+                "fields": [
+                  {
+                    "name": "uk",
+                    "label": "UK",
+                    "type": "object",
+                    "fields": [
+                      {
+                        "name": "alt",
+                        "label": "Alt",
+                        "type": "string",
+                        "required": true,
+                        "namespace": [
+                          "about",
+                          "certificates",
+                          "description",
+                          "uk",
+                          "alt"
+                        ],
+                        "searchable": true
+                      }
+                    ],
+                    "namespace": ["about", "certificates", "description", "uk"],
+                    "searchable": true
+                  },
+                  {
+                    "name": "en",
+                    "label": "EN",
+                    "type": "object",
+                    "fields": [
+                      {
+                        "name": "alt",
+                        "label": "Alt",
+                        "type": "string",
+                        "required": true,
+                        "namespace": [
+                          "about",
+                          "certificates",
+                          "description",
+                          "en",
+                          "alt"
+                        ],
+                        "searchable": true
+                      }
+                    ],
+                    "namespace": ["about", "certificates", "description", "en"],
+                    "searchable": true
+                  }
+                ],
+                "namespace": ["about", "certificates", "description"],
+                "searchable": true
+              }
+            ],
+            "ui": { "defaultItem": { "description": { "uk": { "alt": "" } } } },
+            "namespace": ["about", "certificates"],
             "searchable": true
           }
         ],
-        "namespace": ["page"]
+        "namespace": ["about"]
+      },
+      {
+        "name": "banner",
+        "label": "Banner",
+        "path": "content/banner",
+        "format": "md",
+        "fields": [
+          {
+            "name": "uk",
+            "label": "UK",
+            "type": "object",
+            "fields": [
+              {
+                "name": "title",
+                "label": "Title",
+                "type": "string",
+                "required": true,
+                "namespace": ["banner", "uk", "title"],
+                "searchable": true
+              },
+              {
+                "name": "description",
+                "label": "Description",
+                "type": "string",
+                "required": true,
+                "namespace": ["banner", "uk", "description"],
+                "searchable": true
+              }
+            ],
+            "namespace": ["banner", "uk"],
+            "searchable": true
+          },
+          {
+            "name": "en",
+            "label": "EN",
+            "type": "object",
+            "fields": [
+              {
+                "name": "title",
+                "label": "Title",
+                "type": "string",
+                "required": true,
+                "namespace": ["banner", "en", "title"],
+                "searchable": true
+              },
+              {
+                "name": "description",
+                "label": "Description",
+                "type": "string",
+                "required": true,
+                "namespace": ["banner", "en", "description"],
+                "searchable": true
+              }
+            ],
+            "namespace": ["banner", "en"],
+            "searchable": true
+          }
+        ],
+        "namespace": ["banner"]
+      },
+      {
+        "name": "results",
+        "label": "Results",
+        "path": "content/results",
+        "format": "md",
+        "fields": [
+          {
+            "name": "case",
+            "label": "Case",
+            "type": "object",
+            "list": true,
+            "fields": [
+              {
+                "name": "date",
+                "label": "Date",
+                "type": "datetime",
+                "namespace": ["results", "case", "date"],
+                "searchable": true
+              },
+              {
+                "name": "content",
+                "label": "Content",
+                "type": "object",
+                "fields": [
+                  {
+                    "name": "uk",
+                    "label": "UK",
+                    "type": "object",
+                    "fields": [
+                      {
+                        "name": "title",
+                        "label": "Title",
+                        "type": "string",
+                        "required": true,
+                        "namespace": [
+                          "results",
+                          "case",
+                          "content",
+                          "uk",
+                          "title"
+                        ],
+                        "searchable": true
+                      },
+                      {
+                        "name": "description",
+                        "label": "Description",
+                        "type": "rich-text",
+                        "required": true,
+                        "namespace": [
+                          "results",
+                          "case",
+                          "content",
+                          "uk",
+                          "description"
+                        ],
+                        "searchable": true,
+                        "parser": { "type": "markdown" }
+                      }
+                    ],
+                    "namespace": ["results", "case", "content", "uk"],
+                    "searchable": true
+                  },
+                  {
+                    "name": "en",
+                    "label": "EN",
+                    "type": "object",
+                    "fields": [
+                      {
+                        "name": "title",
+                        "label": "Title",
+                        "type": "string",
+                        "required": true,
+                        "namespace": [
+                          "results",
+                          "case",
+                          "content",
+                          "en",
+                          "title"
+                        ],
+                        "searchable": true
+                      },
+                      {
+                        "name": "description",
+                        "label": "Description",
+                        "type": "rich-text",
+                        "required": true,
+                        "namespace": [
+                          "results",
+                          "case",
+                          "content",
+                          "en",
+                          "description"
+                        ],
+                        "searchable": true,
+                        "parser": { "type": "markdown" }
+                      }
+                    ],
+                    "namespace": ["results", "case", "content", "en"],
+                    "searchable": true
+                  }
+                ],
+                "namespace": ["results", "case", "content"],
+                "searchable": true
+              },
+              {
+                "name": "before",
+                "label": "Before",
+                "type": "image",
+                "required": true,
+                "namespace": ["results", "case", "before"],
+                "searchable": false
+              },
+              {
+                "name": "after",
+                "label": "After",
+                "type": "image",
+                "required": true,
+                "namespace": ["results", "case", "after"],
+                "searchable": false
+              }
+            ],
+            "ui": {
+              "defaultItem": {
+                "content": { "uk": { "title": "" }, "en": { "title": "" } }
+              }
+            },
+            "namespace": ["results", "case"],
+            "searchable": true
+          }
+        ],
+        "namespace": ["results"]
+      },
+      {
+        "name": "reviews",
+        "label": "Reviews",
+        "path": "content/reviews",
+        "format": "md",
+        "fields": [
+          {
+            "name": "uk",
+            "label": "UK",
+            "type": "object",
+            "fields": [
+              {
+                "name": "case",
+                "label": "Case",
+                "type": "object",
+                "list": true,
+                "fields": [
+                  {
+                    "name": "date",
+                    "label": "Date",
+                    "type": "datetime",
+                    "required": true,
+                    "namespace": ["reviews", "uk", "case", "date"],
+                    "searchable": true
+                  },
+                  {
+                    "name": "photo",
+                    "label": "Photo",
+                    "type": "image",
+                    "required": true,
+                    "namespace": ["reviews", "uk", "case", "photo"],
+                    "searchable": false
+                  },
+                  {
+                    "name": "video",
+                    "label": "Video",
+                    "type": "string",
+                    "namespace": ["reviews", "uk", "case", "video"],
+                    "searchable": true
+                  },
+                  {
+                    "name": "name",
+                    "label": "Name",
+                    "type": "string",
+                    "required": true,
+                    "namespace": ["reviews", "uk", "case", "name"],
+                    "searchable": true
+                  },
+                  {
+                    "name": "telegram",
+                    "label": "Telegram",
+                    "type": "string",
+                    "namespace": ["reviews", "uk", "case", "telegram"],
+                    "searchable": true
+                  },
+                  {
+                    "name": "review",
+                    "label": "Review",
+                    "type": "rich-text",
+                    "namespace": ["reviews", "uk", "case", "review"],
+                    "searchable": true,
+                    "parser": { "type": "markdown" }
+                  }
+                ],
+                "ui": { "defaultItem": { "name": "" } },
+                "namespace": ["reviews", "uk", "case"],
+                "searchable": true
+              }
+            ],
+            "namespace": ["reviews", "uk"],
+            "searchable": true
+          },
+          {
+            "name": "en",
+            "label": "EN",
+            "type": "object",
+            "fields": [
+              {
+                "name": "case",
+                "label": "Case",
+                "type": "object",
+                "list": true,
+                "fields": [
+                  {
+                    "name": "date",
+                    "label": "Date",
+                    "type": "datetime",
+                    "required": true,
+                    "namespace": ["reviews", "en", "case", "date"],
+                    "searchable": true
+                  },
+                  {
+                    "name": "photo",
+                    "label": "Photo",
+                    "type": "image",
+                    "required": true,
+                    "namespace": ["reviews", "en", "case", "photo"],
+                    "searchable": false
+                  },
+                  {
+                    "name": "video",
+                    "label": "Video",
+                    "type": "string",
+                    "namespace": ["reviews", "en", "case", "video"],
+                    "searchable": true
+                  },
+                  {
+                    "name": "name",
+                    "label": "Name",
+                    "type": "string",
+                    "required": true,
+                    "namespace": ["reviews", "en", "case", "name"],
+                    "searchable": true
+                  },
+                  {
+                    "name": "telegram",
+                    "label": "Telegram",
+                    "type": "string",
+                    "namespace": ["reviews", "en", "case", "telegram"],
+                    "searchable": true
+                  },
+                  {
+                    "name": "review",
+                    "label": "Review",
+                    "type": "rich-text",
+                    "namespace": ["reviews", "en", "case", "review"],
+                    "searchable": true,
+                    "parser": { "type": "markdown" }
+                  }
+                ],
+                "namespace": ["reviews", "en", "case"],
+                "searchable": true
+              }
+            ],
+            "namespace": ["reviews", "en"],
+            "searchable": true
+          }
+        ],
+        "namespace": ["reviews"]
       }
     ],
     "config": {
@@ -84,7 +845,7 @@
     "DocumentConnection": {
       "type": "DocumentConnection",
       "resolveType": "multiCollectionDocumentList",
-      "collections": ["page"]
+      "collections": ["about", "banner", "results", "reviews"]
     },
     "Node": { "type": "Node", "resolveType": "nodeDocument" },
     "DocumentNode": {
@@ -93,22 +854,53 @@
       "createDocument": "create",
       "updateDocument": "update"
     },
-    "PageSections": {
-      "type": "PageSections",
-      "resolveType": "unionData",
-      "typeMap": { "hero": "PageSectionsHero", "about": "PageSectionsAbout" }
-    },
-    "Page": {
-      "type": "Page",
+    "About": {
+      "type": "About",
       "resolveType": "collectionDocument",
-      "collection": "page",
-      "createPage": "create",
-      "updatePage": "update"
+      "collection": "about",
+      "createAbout": "create",
+      "updateAbout": "update"
     },
-    "PageConnection": {
-      "type": "PageConnection",
+    "AboutConnection": {
+      "type": "AboutConnection",
       "resolveType": "collectionDocumentList",
-      "collection": "page"
+      "collection": "about"
+    },
+    "Banner": {
+      "type": "Banner",
+      "resolveType": "collectionDocument",
+      "collection": "banner",
+      "createBanner": "create",
+      "updateBanner": "update"
+    },
+    "BannerConnection": {
+      "type": "BannerConnection",
+      "resolveType": "collectionDocumentList",
+      "collection": "banner"
+    },
+    "Results": {
+      "type": "Results",
+      "resolveType": "collectionDocument",
+      "collection": "results",
+      "createResults": "create",
+      "updateResults": "update"
+    },
+    "ResultsConnection": {
+      "type": "ResultsConnection",
+      "resolveType": "collectionDocumentList",
+      "collection": "results"
+    },
+    "Reviews": {
+      "type": "Reviews",
+      "resolveType": "collectionDocument",
+      "collection": "reviews",
+      "createReviews": "create",
+      "updateReviews": "update"
+    },
+    "ReviewsConnection": {
+      "type": "ReviewsConnection",
+      "resolveType": "collectionDocumentList",
+      "collection": "reviews"
     }
   },
   "graphql": {
@@ -562,7 +1354,7 @@
           },
           {
             "kind": "FieldDefinition",
-            "name": { "kind": "Name", "value": "page" },
+            "name": { "kind": "Name", "value": "about" },
             "arguments": [
               {
                 "kind": "InputValueDefinition",
@@ -577,13 +1369,13 @@
               "kind": "NonNullType",
               "type": {
                 "kind": "NamedType",
-                "name": { "kind": "Name", "value": "Page" }
+                "name": { "kind": "Name", "value": "About" }
               }
             }
           },
           {
             "kind": "FieldDefinition",
-            "name": { "kind": "Name", "value": "pageConnection" },
+            "name": { "kind": "Name", "value": "aboutConnection" },
             "arguments": [
               {
                 "kind": "InputValueDefinition",
@@ -630,7 +1422,7 @@
                 "name": { "kind": "Name", "value": "filter" },
                 "type": {
                   "kind": "NamedType",
-                  "name": { "kind": "Name", "value": "PageFilter" }
+                  "name": { "kind": "Name", "value": "AboutFilter" }
                 }
               }
             ],
@@ -638,7 +1430,253 @@
               "kind": "NonNullType",
               "type": {
                 "kind": "NamedType",
-                "name": { "kind": "Name", "value": "PageConnection" }
+                "name": { "kind": "Name", "value": "AboutConnection" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "banner" },
+            "arguments": [
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "relativePath" },
+                "type": {
+                  "kind": "NamedType",
+                  "name": { "kind": "Name", "value": "String" }
+                }
+              }
+            ],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "Banner" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "bannerConnection" },
+            "arguments": [
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "before" },
+                "type": {
+                  "kind": "NamedType",
+                  "name": { "kind": "Name", "value": "String" }
+                }
+              },
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "after" },
+                "type": {
+                  "kind": "NamedType",
+                  "name": { "kind": "Name", "value": "String" }
+                }
+              },
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "first" },
+                "type": {
+                  "kind": "NamedType",
+                  "name": { "kind": "Name", "value": "Float" }
+                }
+              },
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "last" },
+                "type": {
+                  "kind": "NamedType",
+                  "name": { "kind": "Name", "value": "Float" }
+                }
+              },
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "sort" },
+                "type": {
+                  "kind": "NamedType",
+                  "name": { "kind": "Name", "value": "String" }
+                }
+              },
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "filter" },
+                "type": {
+                  "kind": "NamedType",
+                  "name": { "kind": "Name", "value": "BannerFilter" }
+                }
+              }
+            ],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "BannerConnection" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "results" },
+            "arguments": [
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "relativePath" },
+                "type": {
+                  "kind": "NamedType",
+                  "name": { "kind": "Name", "value": "String" }
+                }
+              }
+            ],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "Results" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "resultsConnection" },
+            "arguments": [
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "before" },
+                "type": {
+                  "kind": "NamedType",
+                  "name": { "kind": "Name", "value": "String" }
+                }
+              },
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "after" },
+                "type": {
+                  "kind": "NamedType",
+                  "name": { "kind": "Name", "value": "String" }
+                }
+              },
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "first" },
+                "type": {
+                  "kind": "NamedType",
+                  "name": { "kind": "Name", "value": "Float" }
+                }
+              },
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "last" },
+                "type": {
+                  "kind": "NamedType",
+                  "name": { "kind": "Name", "value": "Float" }
+                }
+              },
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "sort" },
+                "type": {
+                  "kind": "NamedType",
+                  "name": { "kind": "Name", "value": "String" }
+                }
+              },
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "filter" },
+                "type": {
+                  "kind": "NamedType",
+                  "name": { "kind": "Name", "value": "ResultsFilter" }
+                }
+              }
+            ],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "ResultsConnection" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "reviews" },
+            "arguments": [
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "relativePath" },
+                "type": {
+                  "kind": "NamedType",
+                  "name": { "kind": "Name", "value": "String" }
+                }
+              }
+            ],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "Reviews" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "reviewsConnection" },
+            "arguments": [
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "before" },
+                "type": {
+                  "kind": "NamedType",
+                  "name": { "kind": "Name", "value": "String" }
+                }
+              },
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "after" },
+                "type": {
+                  "kind": "NamedType",
+                  "name": { "kind": "Name", "value": "String" }
+                }
+              },
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "first" },
+                "type": {
+                  "kind": "NamedType",
+                  "name": { "kind": "Name", "value": "Float" }
+                }
+              },
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "last" },
+                "type": {
+                  "kind": "NamedType",
+                  "name": { "kind": "Name", "value": "Float" }
+                }
+              },
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "sort" },
+                "type": {
+                  "kind": "NamedType",
+                  "name": { "kind": "Name", "value": "String" }
+                }
+              },
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "filter" },
+                "type": {
+                  "kind": "NamedType",
+                  "name": { "kind": "Name", "value": "ReviewsFilter" }
+                }
+              }
+            ],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "ReviewsConnection" }
               }
             }
           }
@@ -650,10 +1688,34 @@
         "fields": [
           {
             "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "page" },
+            "name": { "kind": "Name", "value": "about" },
             "type": {
               "kind": "NamedType",
-              "name": { "kind": "Name", "value": "PageFilter" }
+              "name": { "kind": "Name", "value": "AboutFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "banner" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "BannerFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "results" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "ResultsFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "reviews" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "ReviewsFilter" }
             }
           }
         ]
@@ -905,7 +1967,19 @@
         "name": { "kind": "Name", "value": "DocumentNode" },
         "directives": [],
         "types": [
-          { "kind": "NamedType", "name": { "kind": "Name", "value": "Page" } },
+          { "kind": "NamedType", "name": { "kind": "Name", "value": "About" } },
+          {
+            "kind": "NamedType",
+            "name": { "kind": "Name", "value": "Banner" }
+          },
+          {
+            "kind": "NamedType",
+            "name": { "kind": "Name", "value": "Results" }
+          },
+          {
+            "kind": "NamedType",
+            "name": { "kind": "Name", "value": "Reviews" }
+          },
           { "kind": "NamedType", "name": { "kind": "Name", "value": "Folder" } }
         ]
       },
@@ -913,24 +1987,15 @@
         "kind": "ObjectTypeDefinition",
         "interfaces": [],
         "directives": [],
-        "name": { "kind": "Name", "value": "PageSectionsHero" },
+        "name": { "kind": "Name", "value": "AboutGeneralUkEducation" },
         "fields": [
           {
             "kind": "FieldDefinition",
-            "name": { "kind": "Name", "value": "title" },
+            "name": { "kind": "Name", "value": "institution" },
             "arguments": [],
             "type": {
               "kind": "NamedType",
-              "name": { "kind": "Name", "value": "JSON" }
-            }
-          },
-          {
-            "kind": "FieldDefinition",
-            "name": { "kind": "Name", "value": "subtitle" },
-            "arguments": [],
-            "type": {
-              "kind": "NamedType",
-              "name": { "kind": "Name", "value": "JSON" }
+              "name": { "kind": "Name", "value": "String" }
             }
           }
         ]
@@ -939,15 +2004,569 @@
         "kind": "ObjectTypeDefinition",
         "interfaces": [],
         "directives": [],
-        "name": { "kind": "Name", "value": "PageSectionsAbout" },
+        "name": { "kind": "Name", "value": "AboutGeneralUkExperience" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "point" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": { "kind": "Name", "value": "AboutGeneralUk" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "name" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "String" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "profession" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "String" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "education" },
+            "arguments": [],
+            "type": {
+              "kind": "ListType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "AboutGeneralUkEducation" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "experience" },
+            "arguments": [],
+            "type": {
+              "kind": "ListType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "AboutGeneralUkExperience" }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": { "kind": "Name", "value": "AboutGeneralEnEducation" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "institution" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": { "kind": "Name", "value": "AboutGeneralEnExperience" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "point" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": { "kind": "Name", "value": "AboutGeneralEn" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "name" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "String" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "profession" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "String" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "education" },
+            "arguments": [],
+            "type": {
+              "kind": "ListType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "AboutGeneralEnEducation" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "experience" },
+            "arguments": [],
+            "type": {
+              "kind": "ListType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "AboutGeneralEnExperience" }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": { "kind": "Name", "value": "AboutGeneral" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "uk" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "AboutGeneralUk" }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "en" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "AboutGeneralEn" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": { "kind": "Name", "value": "AboutEducationUkInstitutions" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "period" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "institution" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": { "kind": "Name", "value": "AboutEducationUk" },
         "fields": [
           {
             "kind": "FieldDefinition",
             "name": { "kind": "Name", "value": "title" },
             "arguments": [],
             "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "String" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "institutions" },
+            "arguments": [],
+            "type": {
+              "kind": "ListType",
+              "type": {
+                "kind": "NamedType",
+                "name": {
+                  "kind": "Name",
+                  "value": "AboutEducationUkInstitutions"
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": { "kind": "Name", "value": "AboutEducationEnInstitutions" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "period" },
+            "arguments": [],
+            "type": {
               "kind": "NamedType",
-              "name": { "kind": "Name", "value": "JSON" }
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "institution" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": { "kind": "Name", "value": "AboutEducationEn" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "title" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "String" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "institutions" },
+            "arguments": [],
+            "type": {
+              "kind": "ListType",
+              "type": {
+                "kind": "NamedType",
+                "name": {
+                  "kind": "Name",
+                  "value": "AboutEducationEnInstitutions"
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": { "kind": "Name", "value": "AboutEducation" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "uk" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "AboutEducationUk" }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "en" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "AboutEducationEn" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": { "kind": "Name", "value": "AboutCareerUkInstitutions" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "period" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "institution" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": { "kind": "Name", "value": "AboutCareerUk" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "title" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "String" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "institutions" },
+            "arguments": [],
+            "type": {
+              "kind": "ListType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "AboutCareerUkInstitutions" }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": { "kind": "Name", "value": "AboutCareerEnInstitutions" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "period" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "institution" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": { "kind": "Name", "value": "AboutCareerEn" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "title" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "String" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "institutions" },
+            "arguments": [],
+            "type": {
+              "kind": "ListType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "AboutCareerEnInstitutions" }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": { "kind": "Name", "value": "AboutCareer" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "uk" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "AboutCareerUk" }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "en" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "AboutCareerEn" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": { "kind": "Name", "value": "AboutCertificatesDescriptionUk" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "alt" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "String" }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": { "kind": "Name", "value": "AboutCertificatesDescriptionEn" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "alt" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "String" }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": { "kind": "Name", "value": "AboutCertificatesDescription" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "uk" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "AboutCertificatesDescriptionUk"
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "en" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "AboutCertificatesDescriptionEn"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": { "kind": "Name", "value": "AboutCertificates" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "photo" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "String" }
+              }
             }
           },
           {
@@ -955,24 +2574,15 @@
             "name": { "kind": "Name", "value": "description" },
             "arguments": [],
             "type": {
-              "kind": "NamedType",
-              "name": { "kind": "Name", "value": "JSON" }
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": {
+                  "kind": "Name",
+                  "value": "AboutCertificatesDescription"
+                }
+              }
             }
-          }
-        ]
-      },
-      {
-        "kind": "UnionTypeDefinition",
-        "name": { "kind": "Name", "value": "PageSections" },
-        "directives": [],
-        "types": [
-          {
-            "kind": "NamedType",
-            "name": { "kind": "Name", "value": "PageSectionsHero" }
-          },
-          {
-            "kind": "NamedType",
-            "name": { "kind": "Name", "value": "PageSectionsAbout" }
           }
         ]
       },
@@ -986,11 +2596,11 @@
           }
         ],
         "directives": [],
-        "name": { "kind": "Name", "value": "Page" },
+        "name": { "kind": "Name", "value": "About" },
         "fields": [
           {
             "kind": "FieldDefinition",
-            "name": { "kind": "Name", "value": "title" },
+            "name": { "kind": "Name", "value": "photo" },
             "arguments": [],
             "type": {
               "kind": "NamedType",
@@ -999,13 +2609,64 @@
           },
           {
             "kind": "FieldDefinition",
-            "name": { "kind": "Name", "value": "sections" },
+            "name": { "kind": "Name", "value": "video" },
             "arguments": [],
             "type": {
-              "kind": "ListType",
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "general" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
               "type": {
                 "kind": "NamedType",
-                "name": { "kind": "Name", "value": "PageSections" }
+                "name": { "kind": "Name", "value": "AboutGeneral" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "education" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "AboutEducation" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "career" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "AboutCareer" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "certificates" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "ListType",
+                "type": {
+                  "kind": "NonNullType",
+                  "type": {
+                    "kind": "NamedType",
+                    "name": { "kind": "Name", "value": "AboutCertificates" }
+                  }
+                }
               }
             }
           },
@@ -1049,11 +2710,1205 @@
       },
       {
         "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "ImageFilter" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "startsWith" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "eq" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "exists" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "Boolean" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "in" },
+            "type": {
+              "kind": "ListType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "String" }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
         "name": { "kind": "Name", "value": "StringFilter" },
         "fields": [
           {
             "kind": "InputValueDefinition",
             "name": { "kind": "Name", "value": "startsWith" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "eq" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "exists" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "Boolean" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "in" },
+            "type": {
+              "kind": "ListType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "String" }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "AboutGeneralUkEducationFilter" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "institution" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "AboutGeneralUkExperienceFilter" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "point" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "AboutGeneralUkFilter" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "name" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "profession" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "education" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "AboutGeneralUkEducationFilter"
+              }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "experience" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "AboutGeneralUkExperienceFilter"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "AboutGeneralEnEducationFilter" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "institution" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "AboutGeneralEnExperienceFilter" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "point" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "AboutGeneralEnFilter" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "name" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "profession" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "education" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "AboutGeneralEnEducationFilter"
+              }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "experience" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "AboutGeneralEnExperienceFilter"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "AboutGeneralFilter" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "uk" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "AboutGeneralUkFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "en" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "AboutGeneralEnFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "AboutEducationUkInstitutionsFilter"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "period" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "institution" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "AboutEducationUkFilter" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "title" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "institutions" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "AboutEducationUkInstitutionsFilter"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "AboutEducationEnInstitutionsFilter"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "period" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "institution" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "AboutEducationEnFilter" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "title" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "institutions" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "AboutEducationEnInstitutionsFilter"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "AboutEducationFilter" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "uk" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "AboutEducationUkFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "en" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "AboutEducationEnFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "AboutCareerUkInstitutionsFilter" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "period" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "institution" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "AboutCareerUkFilter" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "title" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "institutions" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "AboutCareerUkInstitutionsFilter"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "AboutCareerEnInstitutionsFilter" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "period" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "institution" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "AboutCareerEnFilter" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "title" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "institutions" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "AboutCareerEnInstitutionsFilter"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "AboutCareerFilter" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "uk" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "AboutCareerUkFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "en" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "AboutCareerEnFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "AboutCertificatesDescriptionUkFilter"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "alt" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "AboutCertificatesDescriptionEnFilter"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "alt" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "AboutCertificatesDescriptionFilter"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "uk" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "AboutCertificatesDescriptionUkFilter"
+              }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "en" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "AboutCertificatesDescriptionEnFilter"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "AboutCertificatesFilter" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "photo" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "ImageFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "description" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "AboutCertificatesDescriptionFilter"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "AboutFilter" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "photo" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "ImageFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "video" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "general" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "AboutGeneralFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "education" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "AboutEducationFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "career" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "AboutCareerFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "certificates" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "AboutCertificatesFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": { "kind": "Name", "value": "AboutConnectionEdges" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "cursor" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "String" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "node" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "About" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [
+          {
+            "kind": "NamedType",
+            "name": { "kind": "Name", "value": "Connection" }
+          }
+        ],
+        "directives": [],
+        "name": { "kind": "Name", "value": "AboutConnection" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "pageInfo" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "PageInfo" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "totalCount" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "Float" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "edges" },
+            "arguments": [],
+            "type": {
+              "kind": "ListType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "AboutConnectionEdges" }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": { "kind": "Name", "value": "BannerUk" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "title" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "String" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "description" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "String" }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": { "kind": "Name", "value": "BannerEn" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "title" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "String" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "description" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "String" }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [
+          { "kind": "NamedType", "name": { "kind": "Name", "value": "Node" } },
+          {
+            "kind": "NamedType",
+            "name": { "kind": "Name", "value": "Document" }
+          }
+        ],
+        "directives": [],
+        "name": { "kind": "Name", "value": "Banner" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "uk" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "BannerUk" }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "en" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "BannerEn" }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "id" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "ID" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "_sys" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "SystemInfo" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "_values" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "JSON" }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "BannerUkFilter" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "title" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "description" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "BannerEnFilter" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "title" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "description" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "BannerFilter" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "uk" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "BannerUkFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "en" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "BannerEnFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": { "kind": "Name", "value": "BannerConnectionEdges" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "cursor" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "String" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "node" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "Banner" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [
+          {
+            "kind": "NamedType",
+            "name": { "kind": "Name", "value": "Connection" }
+          }
+        ],
+        "directives": [],
+        "name": { "kind": "Name", "value": "BannerConnection" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "pageInfo" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "PageInfo" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "totalCount" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "Float" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "edges" },
+            "arguments": [],
+            "type": {
+              "kind": "ListType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "BannerConnectionEdges" }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": { "kind": "Name", "value": "ResultsCaseContentUk" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "title" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "String" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "description" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "JSON" }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": { "kind": "Name", "value": "ResultsCaseContentEn" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "title" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "String" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "description" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "JSON" }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": { "kind": "Name", "value": "ResultsCaseContent" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "uk" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "ResultsCaseContentUk" }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "en" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "ResultsCaseContentEn" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": { "kind": "Name", "value": "ResultsCase" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "date" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "content" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "ResultsCaseContent" }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "before" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "String" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "after" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "String" }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [
+          { "kind": "NamedType", "name": { "kind": "Name", "value": "Node" } },
+          {
+            "kind": "NamedType",
+            "name": { "kind": "Name", "value": "Document" }
+          }
+        ],
+        "directives": [],
+        "name": { "kind": "Name", "value": "Results" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "case" },
+            "arguments": [],
+            "type": {
+              "kind": "ListType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "ResultsCase" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "id" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "ID" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "_sys" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "SystemInfo" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "_values" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "JSON" }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "DatetimeFilter" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "after" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "before" },
             "type": {
               "kind": "NamedType",
               "name": { "kind": "Name", "value": "String" }
@@ -1120,36 +3975,14 @@
       },
       {
         "kind": "InputObjectTypeDefinition",
-        "name": { "kind": "Name", "value": "PageSectionsHeroFilter" },
+        "name": { "kind": "Name", "value": "ResultsCaseContentUkFilter" },
         "fields": [
           {
             "kind": "InputValueDefinition",
             "name": { "kind": "Name", "value": "title" },
             "type": {
               "kind": "NamedType",
-              "name": { "kind": "Name", "value": "RichTextFilter" }
-            }
-          },
-          {
-            "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "subtitle" },
-            "type": {
-              "kind": "NamedType",
-              "name": { "kind": "Name", "value": "RichTextFilter" }
-            }
-          }
-        ]
-      },
-      {
-        "kind": "InputObjectTypeDefinition",
-        "name": { "kind": "Name", "value": "PageSectionsAboutFilter" },
-        "fields": [
-          {
-            "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "title" },
-            "type": {
-              "kind": "NamedType",
-              "name": { "kind": "Name", "value": "RichTextFilter" }
+              "name": { "kind": "Name", "value": "StringFilter" }
             }
           },
           {
@@ -1164,29 +3997,7 @@
       },
       {
         "kind": "InputObjectTypeDefinition",
-        "name": { "kind": "Name", "value": "PageSectionsFilter" },
-        "fields": [
-          {
-            "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "hero" },
-            "type": {
-              "kind": "NamedType",
-              "name": { "kind": "Name", "value": "PageSectionsHeroFilter" }
-            }
-          },
-          {
-            "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "about" },
-            "type": {
-              "kind": "NamedType",
-              "name": { "kind": "Name", "value": "PageSectionsAboutFilter" }
-            }
-          }
-        ]
-      },
-      {
-        "kind": "InputObjectTypeDefinition",
-        "name": { "kind": "Name", "value": "PageFilter" },
+        "name": { "kind": "Name", "value": "ResultsCaseContentEnFilter" },
         "fields": [
           {
             "kind": "InputValueDefinition",
@@ -1198,10 +4009,84 @@
           },
           {
             "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "sections" },
+            "name": { "kind": "Name", "value": "description" },
             "type": {
               "kind": "NamedType",
-              "name": { "kind": "Name", "value": "PageSectionsFilter" }
+              "name": { "kind": "Name", "value": "RichTextFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "ResultsCaseContentFilter" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "uk" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "ResultsCaseContentUkFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "en" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "ResultsCaseContentEnFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "ResultsCaseFilter" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "date" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "DatetimeFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "content" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "ResultsCaseContentFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "before" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "ImageFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "after" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "ImageFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "ResultsFilter" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "case" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "ResultsCaseFilter" }
             }
           }
         ]
@@ -1210,7 +4095,7 @@
         "kind": "ObjectTypeDefinition",
         "interfaces": [],
         "directives": [],
-        "name": { "kind": "Name", "value": "PageConnectionEdges" },
+        "name": { "kind": "Name", "value": "ResultsConnectionEdges" },
         "fields": [
           {
             "kind": "FieldDefinition",
@@ -1230,7 +4115,7 @@
             "arguments": [],
             "type": {
               "kind": "NamedType",
-              "name": { "kind": "Name", "value": "Page" }
+              "name": { "kind": "Name", "value": "Results" }
             }
           }
         ]
@@ -1244,7 +4129,7 @@
           }
         ],
         "directives": [],
-        "name": { "kind": "Name", "value": "PageConnection" },
+        "name": { "kind": "Name", "value": "ResultsConnection" },
         "fields": [
           {
             "kind": "FieldDefinition",
@@ -1278,7 +4163,493 @@
               "kind": "ListType",
               "type": {
                 "kind": "NamedType",
-                "name": { "kind": "Name", "value": "PageConnectionEdges" }
+                "name": { "kind": "Name", "value": "ResultsConnectionEdges" }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": { "kind": "Name", "value": "ReviewsUkCase" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "date" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "String" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "photo" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "String" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "video" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "name" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "String" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "telegram" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "review" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "JSON" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": { "kind": "Name", "value": "ReviewsUk" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "case" },
+            "arguments": [],
+            "type": {
+              "kind": "ListType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "ReviewsUkCase" }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": { "kind": "Name", "value": "ReviewsEnCase" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "date" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "String" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "photo" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "String" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "video" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "name" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "String" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "telegram" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "review" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "JSON" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": { "kind": "Name", "value": "ReviewsEn" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "case" },
+            "arguments": [],
+            "type": {
+              "kind": "ListType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "ReviewsEnCase" }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [
+          { "kind": "NamedType", "name": { "kind": "Name", "value": "Node" } },
+          {
+            "kind": "NamedType",
+            "name": { "kind": "Name", "value": "Document" }
+          }
+        ],
+        "directives": [],
+        "name": { "kind": "Name", "value": "Reviews" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "uk" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "ReviewsUk" }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "en" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "ReviewsEn" }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "id" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "ID" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "_sys" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "SystemInfo" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "_values" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "JSON" }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "ReviewsUkCaseFilter" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "date" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "DatetimeFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "photo" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "ImageFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "video" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "name" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "telegram" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "review" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "RichTextFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "ReviewsUkFilter" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "case" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "ReviewsUkCaseFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "ReviewsEnCaseFilter" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "date" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "DatetimeFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "photo" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "ImageFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "video" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "name" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "telegram" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "StringFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "review" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "RichTextFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "ReviewsEnFilter" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "case" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "ReviewsEnCaseFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "ReviewsFilter" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "uk" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "ReviewsUkFilter" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "en" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "ReviewsEnFilter" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [],
+        "directives": [],
+        "name": { "kind": "Name", "value": "ReviewsConnectionEdges" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "cursor" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "String" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "node" },
+            "arguments": [],
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "Reviews" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "ObjectTypeDefinition",
+        "interfaces": [
+          {
+            "kind": "NamedType",
+            "name": { "kind": "Name", "value": "Connection" }
+          }
+        ],
+        "directives": [],
+        "name": { "kind": "Name", "value": "ReviewsConnection" },
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "pageInfo" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "PageInfo" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "totalCount" },
+            "arguments": [],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "Float" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "edges" },
+            "arguments": [],
+            "type": {
+              "kind": "ListType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "ReviewsConnectionEdges" }
               }
             }
           }
@@ -1456,7 +4827,7 @@
           },
           {
             "kind": "FieldDefinition",
-            "name": { "kind": "Name", "value": "updatePage" },
+            "name": { "kind": "Name", "value": "updateAbout" },
             "arguments": [
               {
                 "kind": "InputValueDefinition",
@@ -1476,7 +4847,7 @@
                   "kind": "NonNullType",
                   "type": {
                     "kind": "NamedType",
-                    "name": { "kind": "Name", "value": "PageMutation" }
+                    "name": { "kind": "Name", "value": "AboutMutation" }
                   }
                 }
               }
@@ -1485,13 +4856,13 @@
               "kind": "NonNullType",
               "type": {
                 "kind": "NamedType",
-                "name": { "kind": "Name", "value": "Page" }
+                "name": { "kind": "Name", "value": "About" }
               }
             }
           },
           {
             "kind": "FieldDefinition",
-            "name": { "kind": "Name", "value": "createPage" },
+            "name": { "kind": "Name", "value": "createAbout" },
             "arguments": [
               {
                 "kind": "InputValueDefinition",
@@ -1511,7 +4882,7 @@
                   "kind": "NonNullType",
                   "type": {
                     "kind": "NamedType",
-                    "name": { "kind": "Name", "value": "PageMutation" }
+                    "name": { "kind": "Name", "value": "AboutMutation" }
                   }
                 }
               }
@@ -1520,7 +4891,217 @@
               "kind": "NonNullType",
               "type": {
                 "kind": "NamedType",
-                "name": { "kind": "Name", "value": "Page" }
+                "name": { "kind": "Name", "value": "About" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "updateBanner" },
+            "arguments": [
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "relativePath" },
+                "type": {
+                  "kind": "NonNullType",
+                  "type": {
+                    "kind": "NamedType",
+                    "name": { "kind": "Name", "value": "String" }
+                  }
+                }
+              },
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "params" },
+                "type": {
+                  "kind": "NonNullType",
+                  "type": {
+                    "kind": "NamedType",
+                    "name": { "kind": "Name", "value": "BannerMutation" }
+                  }
+                }
+              }
+            ],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "Banner" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "createBanner" },
+            "arguments": [
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "relativePath" },
+                "type": {
+                  "kind": "NonNullType",
+                  "type": {
+                    "kind": "NamedType",
+                    "name": { "kind": "Name", "value": "String" }
+                  }
+                }
+              },
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "params" },
+                "type": {
+                  "kind": "NonNullType",
+                  "type": {
+                    "kind": "NamedType",
+                    "name": { "kind": "Name", "value": "BannerMutation" }
+                  }
+                }
+              }
+            ],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "Banner" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "updateResults" },
+            "arguments": [
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "relativePath" },
+                "type": {
+                  "kind": "NonNullType",
+                  "type": {
+                    "kind": "NamedType",
+                    "name": { "kind": "Name", "value": "String" }
+                  }
+                }
+              },
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "params" },
+                "type": {
+                  "kind": "NonNullType",
+                  "type": {
+                    "kind": "NamedType",
+                    "name": { "kind": "Name", "value": "ResultsMutation" }
+                  }
+                }
+              }
+            ],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "Results" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "createResults" },
+            "arguments": [
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "relativePath" },
+                "type": {
+                  "kind": "NonNullType",
+                  "type": {
+                    "kind": "NamedType",
+                    "name": { "kind": "Name", "value": "String" }
+                  }
+                }
+              },
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "params" },
+                "type": {
+                  "kind": "NonNullType",
+                  "type": {
+                    "kind": "NamedType",
+                    "name": { "kind": "Name", "value": "ResultsMutation" }
+                  }
+                }
+              }
+            ],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "Results" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "updateReviews" },
+            "arguments": [
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "relativePath" },
+                "type": {
+                  "kind": "NonNullType",
+                  "type": {
+                    "kind": "NamedType",
+                    "name": { "kind": "Name", "value": "String" }
+                  }
+                }
+              },
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "params" },
+                "type": {
+                  "kind": "NonNullType",
+                  "type": {
+                    "kind": "NamedType",
+                    "name": { "kind": "Name", "value": "ReviewsMutation" }
+                  }
+                }
+              }
+            ],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "Reviews" }
+              }
+            }
+          },
+          {
+            "kind": "FieldDefinition",
+            "name": { "kind": "Name", "value": "createReviews" },
+            "arguments": [
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "relativePath" },
+                "type": {
+                  "kind": "NonNullType",
+                  "type": {
+                    "kind": "NamedType",
+                    "name": { "kind": "Name", "value": "String" }
+                  }
+                }
+              },
+              {
+                "kind": "InputValueDefinition",
+                "name": { "kind": "Name", "value": "params" },
+                "type": {
+                  "kind": "NonNullType",
+                  "type": {
+                    "kind": "NamedType",
+                    "name": { "kind": "Name", "value": "ReviewsMutation" }
+                  }
+                }
+              }
+            ],
+            "type": {
+              "kind": "NonNullType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "Reviews" }
               }
             }
           }
@@ -1532,10 +5113,34 @@
         "fields": [
           {
             "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "page" },
+            "name": { "kind": "Name", "value": "about" },
             "type": {
               "kind": "NamedType",
-              "name": { "kind": "Name", "value": "PageMutation" }
+              "name": { "kind": "Name", "value": "AboutMutation" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "banner" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "BannerMutation" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "results" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "ResultsMutation" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "reviews" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "ReviewsMutation" }
             }
           },
           {
@@ -1554,46 +5159,695 @@
         "fields": [
           {
             "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "page" },
+            "name": { "kind": "Name", "value": "about" },
             "type": {
               "kind": "NamedType",
-              "name": { "kind": "Name", "value": "PageMutation" }
-            }
-          }
-        ]
-      },
-      {
-        "kind": "InputObjectTypeDefinition",
-        "name": { "kind": "Name", "value": "PageSectionsHeroMutation" },
-        "fields": [
-          {
-            "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "title" },
-            "type": {
-              "kind": "NamedType",
-              "name": { "kind": "Name", "value": "JSON" }
+              "name": { "kind": "Name", "value": "AboutMutation" }
             }
           },
           {
             "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "subtitle" },
+            "name": { "kind": "Name", "value": "banner" },
             "type": {
               "kind": "NamedType",
-              "name": { "kind": "Name", "value": "JSON" }
+              "name": { "kind": "Name", "value": "BannerMutation" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "results" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "ResultsMutation" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "reviews" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "ReviewsMutation" }
             }
           }
         ]
       },
       {
         "kind": "InputObjectTypeDefinition",
-        "name": { "kind": "Name", "value": "PageSectionsAboutMutation" },
+        "name": { "kind": "Name", "value": "AboutGeneralUkEducationMutation" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "institution" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "AboutGeneralUkExperienceMutation" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "point" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "AboutGeneralUkMutation" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "name" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "profession" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "education" },
+            "type": {
+              "kind": "ListType",
+              "type": {
+                "kind": "NamedType",
+                "name": {
+                  "kind": "Name",
+                  "value": "AboutGeneralUkEducationMutation"
+                }
+              }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "experience" },
+            "type": {
+              "kind": "ListType",
+              "type": {
+                "kind": "NamedType",
+                "name": {
+                  "kind": "Name",
+                  "value": "AboutGeneralUkExperienceMutation"
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "AboutGeneralEnEducationMutation" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "institution" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "AboutGeneralEnExperienceMutation" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "point" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "AboutGeneralEnMutation" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "name" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "profession" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "education" },
+            "type": {
+              "kind": "ListType",
+              "type": {
+                "kind": "NamedType",
+                "name": {
+                  "kind": "Name",
+                  "value": "AboutGeneralEnEducationMutation"
+                }
+              }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "experience" },
+            "type": {
+              "kind": "ListType",
+              "type": {
+                "kind": "NamedType",
+                "name": {
+                  "kind": "Name",
+                  "value": "AboutGeneralEnExperienceMutation"
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "AboutGeneralMutation" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "uk" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "AboutGeneralUkMutation" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "en" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "AboutGeneralEnMutation" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "AboutEducationUkInstitutionsMutation"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "period" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "institution" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "AboutEducationUkMutation" },
         "fields": [
           {
             "kind": "InputValueDefinition",
             "name": { "kind": "Name", "value": "title" },
             "type": {
               "kind": "NamedType",
-              "name": { "kind": "Name", "value": "JSON" }
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "institutions" },
+            "type": {
+              "kind": "ListType",
+              "type": {
+                "kind": "NamedType",
+                "name": {
+                  "kind": "Name",
+                  "value": "AboutEducationUkInstitutionsMutation"
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "AboutEducationEnInstitutionsMutation"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "period" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "institution" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "AboutEducationEnMutation" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "title" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "institutions" },
+            "type": {
+              "kind": "ListType",
+              "type": {
+                "kind": "NamedType",
+                "name": {
+                  "kind": "Name",
+                  "value": "AboutEducationEnInstitutionsMutation"
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "AboutEducationMutation" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "uk" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "AboutEducationUkMutation" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "en" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "AboutEducationEnMutation" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "AboutCareerUkInstitutionsMutation"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "period" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "institution" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "AboutCareerUkMutation" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "title" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "institutions" },
+            "type": {
+              "kind": "ListType",
+              "type": {
+                "kind": "NamedType",
+                "name": {
+                  "kind": "Name",
+                  "value": "AboutCareerUkInstitutionsMutation"
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "AboutCareerEnInstitutionsMutation"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "period" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "institution" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "AboutCareerEnMutation" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "title" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "institutions" },
+            "type": {
+              "kind": "ListType",
+              "type": {
+                "kind": "NamedType",
+                "name": {
+                  "kind": "Name",
+                  "value": "AboutCareerEnInstitutionsMutation"
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "AboutCareerMutation" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "uk" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "AboutCareerUkMutation" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "en" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "AboutCareerEnMutation" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "AboutCertificatesDescriptionUkMutation"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "alt" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "AboutCertificatesDescriptionEnMutation"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "alt" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": {
+          "kind": "Name",
+          "value": "AboutCertificatesDescriptionMutation"
+        },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "uk" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "AboutCertificatesDescriptionUkMutation"
+              }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "en" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "AboutCertificatesDescriptionEnMutation"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "AboutCertificatesMutation" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "photo" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "description" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "AboutCertificatesDescriptionMutation"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "AboutMutation" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "photo" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "video" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "general" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "AboutGeneralMutation" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "education" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "AboutEducationMutation" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "career" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "AboutCareerMutation" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "certificates" },
+            "type": {
+              "kind": "ListType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "AboutCertificatesMutation" }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "BannerUkMutation" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "title" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "description" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "BannerEnMutation" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "title" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "description" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "BannerMutation" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "uk" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "BannerUkMutation" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "en" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "BannerEnMutation" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "ResultsCaseContentUkMutation" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "title" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
             }
           },
           {
@@ -1608,29 +5862,7 @@
       },
       {
         "kind": "InputObjectTypeDefinition",
-        "name": { "kind": "Name", "value": "PageSectionsMutation" },
-        "fields": [
-          {
-            "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "hero" },
-            "type": {
-              "kind": "NamedType",
-              "name": { "kind": "Name", "value": "PageSectionsHeroMutation" }
-            }
-          },
-          {
-            "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "about" },
-            "type": {
-              "kind": "NamedType",
-              "name": { "kind": "Name", "value": "PageSectionsAboutMutation" }
-            }
-          }
-        ]
-      },
-      {
-        "kind": "InputObjectTypeDefinition",
-        "name": { "kind": "Name", "value": "PageMutation" },
+        "name": { "kind": "Name", "value": "ResultsCaseContentEnMutation" },
         "fields": [
           {
             "kind": "InputValueDefinition",
@@ -1642,13 +5874,257 @@
           },
           {
             "kind": "InputValueDefinition",
-            "name": { "kind": "Name", "value": "sections" },
+            "name": { "kind": "Name", "value": "description" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "JSON" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "ResultsCaseContentMutation" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "uk" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "ResultsCaseContentUkMutation"
+              }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "en" },
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "ResultsCaseContentEnMutation"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "ResultsCaseMutation" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "date" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "content" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "ResultsCaseContentMutation" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "before" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "after" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "ResultsMutation" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "case" },
             "type": {
               "kind": "ListType",
               "type": {
                 "kind": "NamedType",
-                "name": { "kind": "Name", "value": "PageSectionsMutation" }
+                "name": { "kind": "Name", "value": "ResultsCaseMutation" }
               }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "ReviewsUkCaseMutation" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "date" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "photo" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "video" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "name" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "telegram" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "review" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "JSON" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "ReviewsUkMutation" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "case" },
+            "type": {
+              "kind": "ListType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "ReviewsUkCaseMutation" }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "ReviewsEnCaseMutation" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "date" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "photo" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "video" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "name" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "telegram" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "String" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "review" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "JSON" }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "ReviewsEnMutation" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "case" },
+            "type": {
+              "kind": "ListType",
+              "type": {
+                "kind": "NamedType",
+                "name": { "kind": "Name", "value": "ReviewsEnCaseMutation" }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "kind": "InputObjectTypeDefinition",
+        "name": { "kind": "Name", "value": "ReviewsMutation" },
+        "fields": [
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "uk" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "ReviewsUkMutation" }
+            }
+          },
+          {
+            "kind": "InputValueDefinition",
+            "name": { "kind": "Name", "value": "en" },
+            "type": {
+              "kind": "NamedType",
+              "name": { "kind": "Name", "value": "ReviewsEnMutation" }
             }
           }
         ]

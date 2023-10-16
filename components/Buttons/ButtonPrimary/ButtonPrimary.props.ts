@@ -1,11 +1,7 @@
-type ButtonPrimaryVariants = 'small' | 'medium' | 'large' | undefined;
-
 export interface ButtonPrimaryProps {
-  buttonsize?: ButtonPrimaryVariants;
-  type?: 'button' | 'submit' | undefined;
-  disabled?: boolean;
-  loading?: boolean;
+  view?: 'header' | undefined;
+  variant?: 'light' | 'dark';
   className?: string;
-  children: string;
+  children: React.ReactNode;
   actionHandler?: () => void;
 }

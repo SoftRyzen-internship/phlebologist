@@ -1,3 +1,114 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.wrapper {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+@media screen and (min-width: 768px) {
+  .wrapper {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+/* Slider Before-After */
+[data-testid='container'] {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.modal-backdrop {
+  background: rgba(149, 149, 149, 0.25);
+  backdrop-filter: blur(12.5px);
+}
+
+/* Hero Section */
+.hero-bg {
+  background-image: image-set(
+    url('/images/home/hero/hero.webp') 1x,
+    url('/images/home/hero/hero-2x.webp') 2x
+  );
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+@media screen and (min-width: 768px) {
+  .hero-bg {
+    background-image: image-set(
+      url('/images/home/hero/hero-md.webp') 1x,
+      url('/images/home/hero/hero-md-2x.webp') 2x
+    );
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .hero-bg {
+    background-image: image-set(
+      url('/images/home/hero/hero-xl.webp') 1x,
+      url('/images/home/hero/hero-xl-2x.webp') 2x
+    );
+  }
+}
+
+/* Banner Section */
+.banner-bg {
+  background-image: image-set(
+    url('/images/home/banner/bg.webp') 1x,
+    url('/images/home/banner/bg-2x.webp') 2x
+  );
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+@media screen and (min-width: 768px) {
+  .banner-bg {
+    background-image: image-set(
+      url('/images/home/banner/bg-md.webp') 1x,
+      url('/images/home/banner/bg-md-2x.webp') 2x
+    );
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .banner-bg {
+    background-image: image-set(
+      url('/images/home/banner/bg-xl.webp') 1x,
+      url('/images/home/banner/bg-xl-2x.webp') 2x
+    );
+  }
+}
+
+/* Consultation Section */
+@media screen and (min-width: 1280px) {
+  .consultation-bg {
+    background-image: image-set(
+      url('/images/home/consultation/bg.webp') 1x,
+      url('/images/home/consultation/bg-2x.webp') 2x
+    );
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+  }
+}
+
+.outline-without {
+  outline: none;
+  outline-offset: 0;
+}
+
+.hidden-checkbox {
+  position: absolute;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.hidden-checkbox:hover + .custom-checkbox,
+.hidden-checkbox:focus + .custom-checkbox {
+  border-color: #bcbcbc;
+}

@@ -1,7 +1,7 @@
 export interface ButtonSecondaryProps {
   linkto: string;
-  buttonsize?: 'medium' | 'large' | undefined;
-  loading?: boolean;
+  view?: 'hero' | undefined;
   className?: string;
   children: string;
+  actionHandler?: () => void;
 }

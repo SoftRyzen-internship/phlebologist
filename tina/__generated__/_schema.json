@@ -1,0 +1,842 @@
+{
+  "version": {
+    "fullVersion": "1.4.25",
+    "major": "1",
+    "minor": "4",
+    "patch": "25"
+  },
+  "meta": { "flags": ["experimentalData"] },
+  "collections": [
+    {
+      "name": "about",
+      "label": "About",
+      "path": "content/about",
+      "format": "md",
+      "fields": [
+        {
+          "name": "photo",
+          "label": "Photo",
+          "type": "image",
+          "namespace": ["about", "photo"],
+          "searchable": false
+        },
+        {
+          "name": "video",
+          "label": "Video",
+          "type": "string",
+          "namespace": ["about", "video"],
+          "searchable": true
+        },
+        {
+          "name": "general",
+          "label": "General",
+          "type": "object",
+          "required": true,
+          "fields": [
+            {
+              "name": "uk",
+              "label": "UK",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "name",
+                  "label": "Name",
+                  "type": "string",
+                  "required": true,
+                  "namespace": ["about", "general", "uk", "name"],
+                  "searchable": true
+                },
+                {
+                  "name": "profession",
+                  "label": "Profession",
+                  "type": "string",
+                  "required": true,
+                  "namespace": ["about", "general", "uk", "profession"],
+                  "searchable": true
+                },
+                {
+                  "name": "education",
+                  "label": "Education",
+                  "type": "object",
+                  "list": true,
+                  "fields": [
+                    {
+                      "name": "institution",
+                      "label": "Institution",
+                      "type": "string",
+                      "namespace": [
+                        "about",
+                        "general",
+                        "uk",
+                        "education",
+                        "institution"
+                      ],
+                      "searchable": true
+                    }
+                  ],
+                  "ui": { "defaultItem": { "institution": "" } },
+                  "namespace": ["about", "general", "uk", "education"],
+                  "searchable": true
+                },
+                {
+                  "name": "experience",
+                  "label": "Experience",
+                  "type": "object",
+                  "list": true,
+                  "fields": [
+                    {
+                      "name": "point",
+                      "label": "Point",
+                      "type": "string",
+                      "namespace": [
+                        "about",
+                        "general",
+                        "uk",
+                        "experience",
+                        "point"
+                      ],
+                      "searchable": true
+                    }
+                  ],
+                  "ui": { "defaultItem": { "point": "" } },
+                  "namespace": ["about", "general", "uk", "experience"],
+                  "searchable": true
+                }
+              ],
+              "ui": { "defaultItem": { "name": "" } },
+              "namespace": ["about", "general", "uk"],
+              "searchable": true
+            },
+            {
+              "name": "en",
+              "label": "EN",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "name",
+                  "label": "Name",
+                  "type": "string",
+                  "required": true,
+                  "namespace": ["about", "general", "en", "name"],
+                  "searchable": true
+                },
+                {
+                  "name": "profession",
+                  "label": "Profession",
+                  "type": "string",
+                  "required": true,
+                  "namespace": ["about", "general", "en", "profession"],
+                  "searchable": true
+                },
+                {
+                  "name": "education",
+                  "label": "Education",
+                  "type": "object",
+                  "list": true,
+                  "fields": [
+                    {
+                      "name": "institution",
+                      "label": "Institution",
+                      "type": "string",
+                      "namespace": [
+                        "about",
+                        "general",
+                        "en",
+                        "education",
+                        "institution"
+                      ],
+                      "searchable": true
+                    }
+                  ],
+                  "ui": { "defaultItem": { "institution": "" } },
+                  "namespace": ["about", "general", "en", "education"],
+                  "searchable": true
+                },
+                {
+                  "name": "experience",
+                  "label": "Experience",
+                  "type": "object",
+                  "list": true,
+                  "fields": [
+                    {
+                      "name": "point",
+                      "label": "Point",
+                      "type": "string",
+                      "namespace": [
+                        "about",
+                        "general",
+                        "en",
+                        "experience",
+                        "point"
+                      ],
+                      "searchable": true
+                    }
+                  ],
+                  "ui": { "defaultItem": { "point": "" } },
+                  "namespace": ["about", "general", "en", "experience"],
+                  "searchable": true
+                }
+              ],
+              "ui": { "defaultItem": { "name": "" } },
+              "namespace": ["about", "general", "en"],
+              "searchable": true
+            }
+          ],
+          "namespace": ["about", "general"],
+          "searchable": true
+        },
+        {
+          "name": "education",
+          "label": "Education",
+          "type": "object",
+          "required": true,
+          "fields": [
+            {
+              "name": "uk",
+              "label": "UK",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "title",
+                  "label": "Title",
+                  "type": "string",
+                  "required": true,
+                  "namespace": ["about", "education", "uk", "title"],
+                  "searchable": true
+                },
+                {
+                  "name": "institutions",
+                  "label": "Institutions",
+                  "type": "object",
+                  "list": true,
+                  "fields": [
+                    {
+                      "name": "period",
+                      "label": "Period",
+                      "type": "string",
+                      "namespace": [
+                        "about",
+                        "education",
+                        "uk",
+                        "institutions",
+                        "period"
+                      ],
+                      "searchable": true
+                    },
+                    {
+                      "name": "institution",
+                      "label": "Institution",
+                      "type": "string",
+                      "namespace": [
+                        "about",
+                        "education",
+                        "uk",
+                        "institutions",
+                        "institution"
+                      ],
+                      "searchable": true
+                    }
+                  ],
+                  "ui": { "defaultItem": { "institution": "" } },
+                  "namespace": ["about", "education", "uk", "institutions"],
+                  "searchable": true
+                }
+              ],
+              "ui": { "defaultItem": { "title": "" } },
+              "namespace": ["about", "education", "uk"],
+              "searchable": true
+            },
+            {
+              "name": "en",
+              "label": "EN",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "title",
+                  "label": "Title",
+                  "type": "string",
+                  "required": true,
+                  "namespace": ["about", "education", "en", "title"],
+                  "searchable": true
+                },
+                {
+                  "name": "institutions",
+                  "label": "Institutions",
+                  "type": "object",
+                  "list": true,
+                  "fields": [
+                    {
+                      "name": "period",
+                      "label": "Period",
+                      "type": "string",
+                      "namespace": [
+                        "about",
+                        "education",
+                        "en",
+                        "institutions",
+                        "period"
+                      ],
+                      "searchable": true
+                    },
+                    {
+                      "name": "institution",
+                      "label": "Institution",
+                      "type": "string",
+                      "namespace": [
+                        "about",
+                        "education",
+                        "en",
+                        "institutions",
+                        "institution"
+                      ],
+                      "searchable": true
+                    }
+                  ],
+                  "ui": { "defaultItem": { "institution": "" } },
+                  "namespace": ["about", "education", "en", "institutions"],
+                  "searchable": true
+                }
+              ],
+              "ui": { "defaultItem": { "title": "" } },
+              "namespace": ["about", "education", "en"],
+              "searchable": true
+            }
+          ],
+          "namespace": ["about", "education"],
+          "searchable": true
+        },
+        {
+          "name": "career",
+          "label": "Career",
+          "type": "object",
+          "required": true,
+          "fields": [
+            {
+              "name": "uk",
+              "label": "UK",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "title",
+                  "label": "Title",
+                  "type": "string",
+                  "required": true,
+                  "namespace": ["about", "career", "uk", "title"],
+                  "searchable": true
+                },
+                {
+                  "name": "institutions",
+                  "label": "Institutions",
+                  "type": "object",
+                  "list": true,
+                  "fields": [
+                    {
+                      "name": "period",
+                      "label": "Period",
+                      "type": "string",
+                      "namespace": [
+                        "about",
+                        "career",
+                        "uk",
+                        "institutions",
+                        "period"
+                      ],
+                      "searchable": true
+                    },
+                    {
+                      "name": "institution",
+                      "label": "Institution",
+                      "type": "string",
+                      "namespace": [
+                        "about",
+                        "career",
+                        "uk",
+                        "institutions",
+                        "institution"
+                      ],
+                      "searchable": true
+                    }
+                  ],
+                  "ui": { "defaultItem": { "institution": "" } },
+                  "namespace": ["about", "career", "uk", "institutions"],
+                  "searchable": true
+                }
+              ],
+              "ui": { "defaultItem": { "title": "" } },
+              "namespace": ["about", "career", "uk"],
+              "searchable": true
+            },
+            {
+              "name": "en",
+              "label": "EN",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "title",
+                  "label": "Title",
+                  "type": "string",
+                  "required": true,
+                  "namespace": ["about", "career", "en", "title"],
+                  "searchable": true
+                },
+                {
+                  "name": "institutions",
+                  "label": "Institutions",
+                  "type": "object",
+                  "list": true,
+                  "fields": [
+                    {
+                      "name": "period",
+                      "label": "Period",
+                      "type": "string",
+                      "namespace": [
+                        "about",
+                        "career",
+                        "en",
+                        "institutions",
+                        "period"
+                      ],
+                      "searchable": true
+                    },
+                    {
+                      "name": "institution",
+                      "label": "Institution",
+                      "type": "string",
+                      "namespace": [
+                        "about",
+                        "career",
+                        "en",
+                        "institutions",
+                        "institution"
+                      ],
+                      "searchable": true
+                    }
+                  ],
+                  "ui": { "defaultItem": { "institution": "" } },
+                  "namespace": ["about", "career", "en", "institutions"],
+                  "searchable": true
+                }
+              ],
+              "ui": { "defaultItem": { "title": "" } },
+              "namespace": ["about", "career", "en"],
+              "searchable": true
+            }
+          ],
+          "namespace": ["about", "career"],
+          "searchable": true
+        },
+        {
+          "name": "certificates",
+          "label": "Certificates",
+          "type": "object",
+          "required": true,
+          "list": true,
+          "fields": [
+            {
+              "name": "photo",
+              "label": "Photo",
+              "type": "image",
+              "required": true,
+              "namespace": ["about", "certificates", "photo"],
+              "searchable": false
+            },
+            {
+              "name": "description",
+              "label": "Description",
+              "type": "object",
+              "required": true,
+              "fields": [
+                {
+                  "name": "uk",
+                  "label": "UK",
+                  "type": "object",
+                  "fields": [
+                    {
+                      "name": "alt",
+                      "label": "Alt",
+                      "type": "string",
+                      "required": true,
+                      "namespace": [
+                        "about",
+                        "certificates",
+                        "description",
+                        "uk",
+                        "alt"
+                      ],
+                      "searchable": true
+                    }
+                  ],
+                  "namespace": ["about", "certificates", "description", "uk"],
+                  "searchable": true
+                },
+                {
+                  "name": "en",
+                  "label": "EN",
+                  "type": "object",
+                  "fields": [
+                    {
+                      "name": "alt",
+                      "label": "Alt",
+                      "type": "string",
+                      "required": true,
+                      "namespace": [
+                        "about",
+                        "certificates",
+                        "description",
+                        "en",
+                        "alt"
+                      ],
+                      "searchable": true
+                    }
+                  ],
+                  "namespace": ["about", "certificates", "description", "en"],
+                  "searchable": true
+                }
+              ],
+              "namespace": ["about", "certificates", "description"],
+              "searchable": true
+            }
+          ],
+          "ui": { "defaultItem": { "description": { "uk": { "alt": "" } } } },
+          "namespace": ["about", "certificates"],
+          "searchable": true
+        }
+      ],
+      "namespace": ["about"]
+    },
+    {
+      "name": "banner",
+      "label": "Banner",
+      "path": "content/banner",
+      "format": "md",
+      "fields": [
+        {
+          "name": "uk",
+          "label": "UK",
+          "type": "object",
+          "fields": [
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "string",
+              "required": true,
+              "namespace": ["banner", "uk", "title"],
+              "searchable": true
+            },
+            {
+              "name": "description",
+              "label": "Description",
+              "type": "string",
+              "required": true,
+              "namespace": ["banner", "uk", "description"],
+              "searchable": true
+            }
+          ],
+          "namespace": ["banner", "uk"],
+          "searchable": true
+        },
+        {
+          "name": "en",
+          "label": "EN",
+          "type": "object",
+          "fields": [
+            {
+              "name": "title",
+              "label": "Title",
+              "type": "string",
+              "required": true,
+              "namespace": ["banner", "en", "title"],
+              "searchable": true
+            },
+            {
+              "name": "description",
+              "label": "Description",
+              "type": "string",
+              "required": true,
+              "namespace": ["banner", "en", "description"],
+              "searchable": true
+            }
+          ],
+          "namespace": ["banner", "en"],
+          "searchable": true
+        }
+      ],
+      "namespace": ["banner"]
+    },
+    {
+      "name": "results",
+      "label": "Results",
+      "path": "content/results",
+      "format": "md",
+      "fields": [
+        {
+          "name": "case",
+          "label": "Case",
+          "type": "object",
+          "list": true,
+          "fields": [
+            {
+              "name": "date",
+              "label": "Date",
+              "type": "datetime",
+              "namespace": ["results", "case", "date"],
+              "searchable": true
+            },
+            {
+              "name": "content",
+              "label": "Content",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "uk",
+                  "label": "UK",
+                  "type": "object",
+                  "fields": [
+                    {
+                      "name": "title",
+                      "label": "Title",
+                      "type": "string",
+                      "required": true,
+                      "namespace": [
+                        "results",
+                        "case",
+                        "content",
+                        "uk",
+                        "title"
+                      ],
+                      "searchable": true
+                    },
+                    {
+                      "name": "description",
+                      "label": "Description",
+                      "type": "rich-text",
+                      "required": true,
+                      "namespace": [
+                        "results",
+                        "case",
+                        "content",
+                        "uk",
+                        "description"
+                      ],
+                      "searchable": true,
+                      "parser": { "type": "markdown" }
+                    }
+                  ],
+                  "namespace": ["results", "case", "content", "uk"],
+                  "searchable": true
+                },
+                {
+                  "name": "en",
+                  "label": "EN",
+                  "type": "object",
+                  "fields": [
+                    {
+                      "name": "title",
+                      "label": "Title",
+                      "type": "string",
+                      "required": true,
+                      "namespace": [
+                        "results",
+                        "case",
+                        "content",
+                        "en",
+                        "title"
+                      ],
+                      "searchable": true
+                    },
+                    {
+                      "name": "description",
+                      "label": "Description",
+                      "type": "rich-text",
+                      "required": true,
+                      "namespace": [
+                        "results",
+                        "case",
+                        "content",
+                        "en",
+                        "description"
+                      ],
+                      "searchable": true,
+                      "parser": { "type": "markdown" }
+                    }
+                  ],
+                  "namespace": ["results", "case", "content", "en"],
+                  "searchable": true
+                }
+              ],
+              "namespace": ["results", "case", "content"],
+              "searchable": true
+            },
+            {
+              "name": "before",
+              "label": "Before",
+              "type": "image",
+              "required": true,
+              "namespace": ["results", "case", "before"],
+              "searchable": false
+            },
+            {
+              "name": "after",
+              "label": "After",
+              "type": "image",
+              "required": true,
+              "namespace": ["results", "case", "after"],
+              "searchable": false
+            }
+          ],
+          "ui": {
+            "defaultItem": {
+              "content": { "uk": { "title": "" }, "en": { "title": "" } }
+            }
+          },
+          "namespace": ["results", "case"],
+          "searchable": true
+        }
+      ],
+      "namespace": ["results"]
+    },
+    {
+      "name": "reviews",
+      "label": "Reviews",
+      "path": "content/reviews",
+      "format": "md",
+      "fields": [
+        {
+          "name": "uk",
+          "label": "UK",
+          "type": "object",
+          "fields": [
+            {
+              "name": "case",
+              "label": "Case",
+              "type": "object",
+              "list": true,
+              "fields": [
+                {
+                  "name": "date",
+                  "label": "Date",
+                  "type": "datetime",
+                  "required": true,
+                  "namespace": ["reviews", "uk", "case", "date"],
+                  "searchable": true
+                },
+                {
+                  "name": "photo",
+                  "label": "Photo",
+                  "type": "image",
+                  "required": true,
+                  "namespace": ["reviews", "uk", "case", "photo"],
+                  "searchable": false
+                },
+                {
+                  "name": "video",
+                  "label": "Video",
+                  "type": "string",
+                  "namespace": ["reviews", "uk", "case", "video"],
+                  "searchable": true
+                },
+                {
+                  "name": "name",
+                  "label": "Name",
+                  "type": "string",
+                  "required": true,
+                  "namespace": ["reviews", "uk", "case", "name"],
+                  "searchable": true
+                },
+                {
+                  "name": "telegram",
+                  "label": "Telegram",
+                  "type": "string",
+                  "namespace": ["reviews", "uk", "case", "telegram"],
+                  "searchable": true
+                },
+                {
+                  "name": "review",
+                  "label": "Review",
+                  "type": "rich-text",
+                  "namespace": ["reviews", "uk", "case", "review"],
+                  "searchable": true,
+                  "parser": { "type": "markdown" }
+                }
+              ],
+              "ui": { "defaultItem": { "name": "" } },
+              "namespace": ["reviews", "uk", "case"],
+              "searchable": true
+            }
+          ],
+          "namespace": ["reviews", "uk"],
+          "searchable": true
+        },
+        {
+          "name": "en",
+          "label": "EN",
+          "type": "object",
+          "fields": [
+            {
+              "name": "case",
+              "label": "Case",
+              "type": "object",
+              "list": true,
+              "fields": [
+                {
+                  "name": "date",
+                  "label": "Date",
+                  "type": "datetime",
+                  "required": true,
+                  "namespace": ["reviews", "en", "case", "date"],
+                  "searchable": true
+                },
+                {
+                  "name": "photo",
+                  "label": "Photo",
+                  "type": "image",
+                  "required": true,
+                  "namespace": ["reviews", "en", "case", "photo"],
+                  "searchable": false
+                },
+                {
+                  "name": "video",
+                  "label": "Video",
+                  "type": "string",
+                  "namespace": ["reviews", "en", "case", "video"],
+                  "searchable": true
+                },
+                {
+                  "name": "name",
+                  "label": "Name",
+                  "type": "string",
+                  "required": true,
+                  "namespace": ["reviews", "en", "case", "name"],
+                  "searchable": true
+                },
+                {
+                  "name": "telegram",
+                  "label": "Telegram",
+                  "type": "string",
+                  "namespace": ["reviews", "en", "case", "telegram"],
+                  "searchable": true
+                },
+                {
+                  "name": "review",
+                  "label": "Review",
+                  "type": "rich-text",
+                  "namespace": ["reviews", "en", "case", "review"],
+                  "searchable": true,
+                  "parser": { "type": "markdown" }
+                }
+              ],
+              "namespace": ["reviews", "en", "case"],
+              "searchable": true
+            }
+          ],
+          "namespace": ["reviews", "en"],
+          "searchable": true
+        }
+      ],
+      "namespace": ["reviews"]
+    }
+  ],
+  "config": {
+    "media": { "tina": { "publicFolder": "public", "mediaRoot": "uploads" } }
+  }
+}

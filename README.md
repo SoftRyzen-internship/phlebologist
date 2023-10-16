@@ -25,12 +25,13 @@ git@github.com:SoftRyzen-internship/phlebologist.git
 > [@LanaSvetCat](https://t.me/LanaSvetCat) in telegram
 
 1. Recommended for use **npm** - `npm i` or `npm install`
-2. Create file `.env.local` in the project root using `.env.local.example` as a
-   template
-3. Run the local server via `npm run dev` command. The `dev` command launches
-   CMS first and then launches the main server.
-4. Access the website at `http://localhost:3000`. The admin panel is available
-   at `http://localhost:3000/admin`.
+2. Create file `.env` in the project root using `.env.local.example` as a
+   template.
+3. Run the CMS via `npm run cms-build` and wait for the build to compile.
+4. Run the local server via `npm run dev` command.
+5. Access the website at `http://localhost:3000`. The admin panel is available
+   at `http://localhost:3000/admin`. Note, that you need to be logged in at Tina
+   Cloud to be able to access the CMS.
 
 ### Personal branch
 
@@ -127,6 +128,32 @@ export { default as Header } from '@/components/Header/Header';
 
 ---
 
+**☝️ Add `Section` to the section name when performing a re-export**
+
+<details>
+
+<summary><b>💡 Example:</b></summary>
+
+<br/>
+
+```ts
+# ✅ Good
+
+// @/sections/About/About.tsx
+
+const About = () => { ... }
+
+export default About;
+
+// @/sections/index.ts
+
+export { default as AboutSection } from '@/sections/About/About';
+```
+
+</details>
+
+---
+
 **☝️ Reusable css classes should be placed in the `styles` folder .**
 
 <details>
@@ -143,6 +170,46 @@ export { default as Header } from '@/components/Header/Header';
     @apply ...;
   }
 }
+```
+
+</details>
+
+---
+
+**☝️ Static data and CMS-stored data usage**
+
+Static data is stored within the dictionaries and can be accessed via
+`getDictionary(lang)`. Fetch functions for requesting data from admin system
+also require passing `lang` as an argument. The CMS stores the data in the
+following collections:
+
+- About (AboutSection - tab data)
+- Banner (Banner, Section 5 - text data)
+- Reviews (ReviewsSection - slider data)
+- Results (ResultsSection - slider data)
+
+<details>
+
+<summary><b>💡 Examples:</b></summary>
+
+<br/>
+
+```ts
+// page.tsx
+
+export default async function Home({
+  params: { lang },
+}: {
+  params: { lang: Locale };
+}) {
+  // fetching local data for the selected lang
+  const { page, socials } = await getDictionary(lang);
+  ...
+}
+
+// @sections/About/About.tsx
+
+const data = await fetchAbout(lang);
 ```
 
 </details>
@@ -195,35 +262,183 @@ folder. This is a list of most common components and their API.
 
 - ### Heading
 
-| Prop        | Default     | Description                                     |
-| ----------- | ----------- | ----------------------------------------------- |
-| `tag`       | `h2`        | choose the tag of title you'd need: `h1` - `h3` |
-| `variant`   | `primary`   | `main`, `primary`, `secondary`, `tertiary`      |
-| `children`  | `undefined` | required, any content                           |
-| `className` | `undefined` | add custom or additional css class you'd need   |
+| Prop        | Default     | Description                                       |
+| ----------- | ----------- | ------------------------------------------------- |
+| `tag`       | `h2`        | choose the tag of title you'd need: `h1` - `h3`   |
+| `view`      | `undefined` | if the heading is in Hero section, specify `hero` |
+| `variant`   | `primary`   | `main`, `primary`, `secondary`                    |
+| `children`  | `undefined` | required, any content                             |
+| `className` | `undefined` | add custom or additional css class you'd need     |
 
 - ### ButtonPrimary
 
 The Primary Button has `button` tag and performs an action when clicked.
 
-| Prop            | Default     | Description                                      |
-| --------------- | ----------- | ------------------------------------------------ |
-| `buttonsize`    | `small`     | choose the size: `small`, `medium` or `large`    |
-| `type`          | `button`    | optional, can be `button`, `submit` or undefined |
-| `disabled`      | `false`     | choose the disabled state: `false` or `true`     |
-| `className`     | `undefined` | add any custom styles                            |
-| `children`      | `undefined` | a necessary prop. any text content               |
-| `actionHandler` | `black`     | a function that is executed when clicked         |
+| Prop            | Default     | Description                                               |
+| --------------- | ----------- | --------------------------------------------------------- |
+| `view`          | `undefined` | if the button is used in Header, specify `header`         |
+| `variant`       | `light`     | choose the color variant of the button: `light` or `dark` |
+| `className`     | `undefined` | add any custom styles                                     |
+| `children`      | `undefined` | a necessary prop. any text content                        |
+| `actionHandler` | `undefined` | a function that is executed when clicked                  |
 
 - ### ButtonSecondary
 
 The Secondary Button has `a` tag and performs a transition to another part of
 the site when pressed.
 
-| Prop         | Default     | Description                                 |
-| ------------ | ----------- | ------------------------------------------- |
-| `linkto `    | `undefined` | a necessary prop. the address of the link   |
-| `buttonsize` | `medium`    | choose the size: `medium` or `large`        |
-| `loading`    | `false`     | choose the loading state: `false` or `true` |
-| `className`  | `undefined` | add any custom styles                       |
-| `children`   | `undefined` | a necessary prop. any text content          |
+| Prop        | Default     | Description                                           |
+| ----------- | ----------- | ----------------------------------------------------- |
+| `linkto `   | `undefined` | a necessary prop. the address of the link             |
+| `view`      | `undefined` | if the button is used in Hero section, specify `hero` |
+| `className` | `undefined` | add any custom styles                                 |
+| `children`  | `undefined` | a necessary prop. any text content                    |
+
+- ### SubmitButton
+
+The button of `Form`.
+
+| Prop            | Default     | Description                              |
+| --------------- | ----------- | ---------------------------------------- |
+| `className`     | `undefined` | add any custom styles                    |
+| `children`      | `undefined` | a necessary prop. any text content       |
+| `actionHandler` | `undefined` | a function that is executed when clicked |
+
+- ### ExternalLinkButton
+
+Has `a` tag and leads to an external source.
+
+| Prop        | Default     | Description                                   |
+| ----------- | ----------- | --------------------------------------------- |
+| `linkto `   | `undefined` | the address of the link                       |
+| `className` | `undefined` | add any custom styles                         |
+| `children`  | `undefined` | a necessary prop. any text content            |
+| `variant`   | `default`   | choose the style variant: `default` or `menu` |
+
+- ### RoutingLinkButton
+
+Has `a` tag and provides navigation between routes.
+
+| Prop        | Default     | Description                        |
+| ----------- | ----------- | ---------------------------------- |
+| `linkto `   | `undefined` | the address of the route           |
+| `className` | `undefined` | add any custom styles              |
+| `children`  | `undefined` | a necessary prop. any text content |
+
+- ### ScrollLinkButton
+
+Has `a` tag and provide scrolling to the appropriate `section`.
+
+| Prop        | Default     | Description                                         |
+| ----------- | ----------- | --------------------------------------------------- |
+| `linkto `   | `undefined` | the address of the link                             |
+| `variant`   | `light`     | choose the color variant: `light`, `dark` or `menu` |
+| `className` | `undefined` | add any custom styles                               |
+| `children`  | `undefined` | a necessary prop. any text content                  |
+
+- ### IconBtn
+
+The Icon Button has either `anchor` or `button` tag.
+
+| Prop           | Type          | Description                                           |
+| -------------- | ------------- | ----------------------------------------------------- |
+| `icon`         | 'tiktok'      | - Anchor that leads to Tiktok page,                   |
+|                | 'facebook'    | - Anchor that leads to Facebook page,                 |
+|                | 'instagram'   | - Anchor that leads to Instagram page,                |
+|                | 'arrow'       | - Navigation button with arrow to the right,          |
+|                | 'location'    | - Geolocation anchor,                                 |
+|                | 'close'       | - Modal close button,                                 |
+|                |               |                                                       |
+|                |               |                                                       |
+| `variant`      | 'result'      | - Button in treatment result section,                 |
+|                | 'feedback'    | - Button in feedback section,                         |
+|                | 'contacts'    | - Button in contacts section,                         |
+|                | 'footer'      | - Button in footer section,                           |
+|                | 'location'    | - Geolocation button,                                 |
+|                | 'close'       | - Modal close button,                                 |
+|                |               |                                                       |
+|                |               |                                                       |
+| `onClick`      | void function | Optional, click handler                               |
+|                |               |                                                       |
+| `reverse`      | boolean       | Optional, false by default, turns icon by 180 degrees |
+|                |               |                                                       |
+| `className`    | string        | Optional, add additional tailwind classes,            |
+|                |               | e.g. to position component                            |
+|                |               |                                                       |
+| `iconFunction` | string        | Aria-label on button/anchor element,                  |
+|                |               | taken from dictionary.ts                              |
+|                |               |                                                       |
+| `iconLabel`    | string        | Aria-label on svg element, taken from dictionary.ts   |
+|                |               |                                                       |
+| `url`          | string        | Optional, url address, applies anchor element         |
+|                |               | instead of button element,                            |
+|                |               | and is used inside `href` attribute                   |
+|                |               |                                                       |
+
+- ### Slider
+
+The `Slider` component is created using `keen slider` library.
+
+| Prop             | Type       | Description                                                    |
+| ---------------- | ---------- | -------------------------------------------------------------- |
+| `slides `        | `array`    | Array of objects fetched from backend and to be mapped inside  |
+|                  |            | slider. Each object must contain `__typename` field (string).  |
+|                  |            |                                                                |
+| `staticData`     | `object`   | Data from dictionary. const staticData = page.home.iconBtnData |
+|                  |            |                                                                |
+| `section`        | `result`   | In which section the slider will be used - treatment results   |
+|                  | `feedback` | patients' feedback.                                            |
+|                  |            |                                                                |
+| `slide`          | `function` | A function component that will be used as a slide              |
+|                  |            | inside the slider. The component must have two props:          |
+|                  |            | 1. data - an object from slides array (see above)              |
+|                  |            | 2. className - optional prop with additional tailwind classes  |
+|                  |            | IMPORTANT! - the component must have "use client" directive    |
+|                  |            | specified explicitly at the top!                               |
+|                  |            |                                                                |
+| `slideClassName` | `string`   | Optional, additional tailwind classes string that              |
+|                  |            | will be passed to the slide component (see above)              |
+
+- ### InfoBlock
+
+The `InfoBlock` is a universal component that always has a title and optionally
+some content of different type - text, url, list or other component.
+
+- IMPORTANT! The `InfoBlock` does not have a container, therefore you can wrap
+  it in any kind of container you need - div, li, article etc.
+- IMPORTANT! The component only receives one prop -`config` which is an object
+  of the following properties:
+
+| Property           | Type        | Description                                        |
+| ------------------ | ----------- | -------------------------------------------------- |
+| `section`          | 'treatment' | Specifies, in which section the component is used: |
+|                    | 'contacts'  | `Treatment Methods` or `Contacts`                  |
+|                    |             |                                                    |
+| `title`            | string      | Text of the block title                            |
+|                    |             |                                                    |
+| `titleClassName`   | string      | Optional, add additional tailwind classes to title |
+|                    |             |                                                    |
+| `contentType`      |             | Optional, 'text' by default, defines content type: |
+|                    | 'text'      | - if content is an ordinary text string (<p>)      |
+|                    | 'link'      | - if content is a url string (<a>),                |
+|                    | 'list'      | - if content is a list of text strings,            |
+|                    | 'component' | - if content is a component/components             |
+|                    |             |                                                    |
+| `content`          |             | Optional, pass the content that goes under title:  |
+|                    | string      | - necessary if `contentType` is 'text' or 'link'   |
+|                    |             | (`<p>{string}</p>` or `<a>{string}</a>`)           |
+|                    |             |                                                    |
+|                    | string[]    | - necessary if `contentType` is 'list',            |
+|                    |             |                                                    |
+|                    | 'list'      | - if content is a list of text strings,            |
+|                    |             |                                                    |
+|                    |             | - IMPORTANT! if `contentType` is 'component' -     |
+|                    |             | content is inserted as children, not as a prop     |
+|                    |             |                                                    |
+| `link`             | string      | Optional, necessary if `contentType` is 'link',    |
+|                    |             | a url that is passed into href attribute           |
+|                    |             | (`<a href={string}></a>`)                          |
+|                    |             |                                                    |
+| `contentClassName` | string      | Optional, add additional tailwind classes to       |
+|                    |             | text content in a text, link or list item          |
+|                    |             |                                                    |

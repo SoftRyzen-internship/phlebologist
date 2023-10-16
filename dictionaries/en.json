@@ -1,16 +1,572 @@
 {
-  "navigation": {
-    "home": "Home",
-    "about": "About"
+  "navigation": [
+    { "title": "Homepage", "linkTo": "/" },
+    { "title": "About the doctor", "linkTo": "about" },
+    { "title": "Advantages", "linkTo": "advantages" },
+    { "title": "Treatment methods", "linkTo": "methods" },
+    { "title": "Patient results", "linkTo": "results" },
+    { "title": "Reviews", "linkTo": "feedback" },
+    { "title": "FAQ", "linkTo": "faq" },
+    { "title": "Contacts", "linkTo": "contacts" }
+  ],
+  "header": {
+    "linkButton": "Contact us",
+    "formButton": "Schedule a Consultation",
+    "langButton": {
+      "headerBtn": "Укр",
+      "menuBtn": "Змінити на українську"
+    },
+    "menuButton": "Menu"
   },
   "page": {
     "home": {
-      "title": "Welcome to NextJs i18n",
-      "description": "Internationalization in NextJs 13 App router"
+      "hero": {
+        "title": "I treat varicose veins",
+        "topText": "Fast Efficient Painless",
+        "middleText": "You'll return to your regular life immediately after the session",
+        "bottomText": "Schedule a consultation and find out \nwhich treatment method is right for you!",
+        "buttonText": "Schedule a Consultation"
+      },
+      "advantages": {
+        "title": "Advantages",
+        "mainQuestion": "Why should you choose \nto work with me?",
+        "advList": [
+          {
+            "id": "01",
+            "title": "International Experience",
+            "description": "A member of the European Association for Vascular Surgeons. Knowledge exchange with leading doctors worldwide"
+          },
+          {
+            "id": "02",
+            "title": "Quick Rehabilitation",
+            "description": "Thanks to modern minimally invasive treatments, you can return to your normal life immediately after the procedure and be back to work the next day"
+          },
+          {
+            "id": "03",
+            "title": "Convenience and Comfort",
+            "description": "A comfortable clinic atmosphere and patient support throughout the entire treatment process"
+          },
+          {
+            "id": "04",
+            "title": "Expertise",
+            "description": "High levels of professional qualifications and experience in treating venous and arterial diseases"
+          },
+          {
+            "id": "05",
+            "title": "Ultrasound Navigation",
+            "description": "All procedures are performed using ultrasound navigation, ensuring precise treatment only on affected veins without harming healthy ones"
+          },
+          {
+            "id": "06",
+            "title": "Transparency",
+            "description": "We do not recommend surgery unless necessary. Clear explanations of procedures, risks, and expected treatment outcomes"
+          }
+        ],
+        "enrollText": "Schedule a consultation and witness the doctor's professionalism",
+        "buttonText": "Schedule an Appointment"
+      },
+      "iconBtnData": {
+        "tiktok": {
+          "iconFunction": "Tiktok Button",
+          "iconLabel": "Tiktok Icon"
+        },
+        "facebook": {
+          "iconFunction": "Facebook Button",
+          "iconLabel": "Facebook Icon"
+        },
+        "instagram": {
+          "iconFunction": "Instagram Button",
+          "iconLabel": "Instagram Icon"
+        },
+        "arrowRight": {
+          "iconFunction": "Next Slide Button",
+          "iconLabel": "Arrow Right Icon"
+        },
+        "arrowLeft": {
+          "iconFunction": "Previuos Slide Button",
+          "iconLabel": "Arrow Left Icon"
+        },
+        "location": {
+          "iconFunction": "Location Button",
+          "iconLabel": "Geolocation Icon"
+        },
+        "close": {
+          "iconFunction": "Close Button",
+          "iconLabel": "Cross Icon"
+        },
+        "play": {
+          "iconFunction": "Play Video Button",
+          "iconLabel": "Play Icon"
+        }
+      },
+      "about": {
+        "title": "About the Doctor",
+        "firstSubtitle": "Experience:",
+        "secondSubtitle": "Education:",
+        "educationBtns": {
+          "btnShow": "Review the full list of the doctor's education",
+          "btnHide": "Review the main stages of the doctor's education"
+        },
+        "careerBtns": {
+          "btnShow": "Review the entire career history of the doctor",
+          "btnHide": "Review the key stages of the doctor's career"
+        },
+        "menu": [
+          {
+            "item": "General info",
+            "collection": "general"
+          },
+          {
+            "item": "Education",
+            "collection": "education"
+          },
+          {
+            "item": "Career",
+            "collection": "career"
+          },
+          {
+            "item": "Certificates",
+            "collection": "certificates"
+          }
+        ]
+      },
+      "banner": {
+        "buttonText": "Make an appointment"
+      },
+      "treatments": {
+        "title": "Treatment Methods",
+        "button": "More about the method",
+        "more": "Learn more",
+        "notes": [
+          "*It's important to note that the treatment of varicose veins may involve a combination of methods, depending on the individual needs of the patient. Treatment outcomes can also vary individually.",
+          "The choice of vein treatment method depends on the stage of the condition and is recommended by a doctor only after a thorough examination."
+        ],
+        "methods": [
+          {
+            "id": "1",
+            "slideNum": "01",
+            "name": "Endovenous Laser Coagulation",
+            "description": "Treatment of varicose veins using laser inside the veins",
+            "image": "/images/treatment/treatment-1.jpg",
+            "info": [
+              {
+                "question": "How it works?",
+                "answer": "The doctor inserts a catheter into the vein and introduces the laser through it, which seals the vein through thermal energy. After this, blood no longer flows into the treated vein and is redirected to healthy veins."
+              },
+              {
+                "question": "It is safe?",
+                "answer": "A safe method with a high success rate."
+              },
+              {
+                "question": "Is it painful?",
+                "answer": "It is performed under local anesthesia, so you won't feel pain."
+              },
+              {
+                "question": "Is it time-consuming?",
+                "answer": "It typically takes 30-40 minutes."
+              }
+            ]
+          },
+          {
+            "id": "2",
+            "slideNum": "02",
+            "name": "Microsclerotherapy",
+            "description": "A non-surgical method that uses injections to close affected veins",
+            "image": "/images/treatment/treatment-2.jpg",
+            "info": [
+              {
+                "question": "How it works?",
+                "answer": "The doctor uses an ultra-fine needle to inject a special solution into the varicose veins, causing them to glue together and close. This makes the appearance of spider veins virtually invisible."
+              },
+              {
+                "question": "It is safe?",
+                "answer": "It is typically a safe method, but there can be an allergic reaction to the sclerosing solution."
+              },
+              {
+                "question": "Is it painful?",
+                "answer": "There may be slight discomfort during the procedure."
+              },
+              {
+                "question": "Is it time-consuming?",
+                "answer": "It depends on the volume, but typically takes around 15 minutes."
+              }
+            ]
+          },
+          {
+            "id": "3",
+            "slideNum": "03",
+            "name": "Foam-form sclerotherapy",
+            "description": "Closure of varicose veins with foam-form sclerosant",
+            "image": "/images/treatment/treatment-3.jpg",
+            "info": [
+              {
+                "question": "How it works?",
+                "answer": "A special liquid is mixed with air to form-foam, which is then injected into the affected vein. The vein seals shut, and the blood flow is redirected into healthy veins."
+              },
+              {
+                "question": "It is safe?",
+                "answer": "The procedure is considered safe."
+              },
+              {
+                "question": "Is it painful?",
+                "answer": "It is performed under local anesthesia, ensuring the absence of pain."
+              },
+              {
+                "question": "Is it time-consuming?",
+                "answer": "It depends on the volume of affected veins but typically takes about 30 minutes."
+              }
+            ]
+          },
+          {
+            "id": "4",
+            "slideNum": "04",
+            "name": "Miniphlebectomy",
+            "description": "Removal of varicose veins through small punctures in the skin",
+            "image": "/images/treatment/treatment-4.jpg",
+            "info": [
+              {
+                "question": "How it works?",
+                "answer": "The surgeon removes the affected section of the vein using a special medical instrument through punctures measuring 1-2 mm in size."
+              },
+              {
+                "question": "It is safe?",
+                "answer": "Typically, this is a safe procedure, but like any surgery, it carries certain risks."
+              },
+              {
+                "question": "Is it painful?",
+                "answer": "The operation is painless. There may be some pain after the operation, which can be controlled with painkillers."
+              },
+              {
+                "question": "Is it time-consuming?",
+                "answer": "It typically takes 30-40 minutes."
+              }
+            ]
+          }
+        ]
+      },
+      "patient_results": {
+        "title": "Results of our patients",
+        "secondaryTitle": "Patient's history",
+        "buttonTextMobile": "Schedule a consultation",
+        "buttonText": "Schedule a consultation",
+        "slider": {
+          "beforeAltText": "Image of a condition before treatment",
+          "afterAltText": "Image of a condition after treatment",
+          "beforeHandleText": "Before",
+          "afterHandleText": "After"
+        }
+      },
+      "faq": {
+        "title": "Answers to Common Questions",
+        "description": "If you have any questions left, feel free to ask, and we will provide answers to anything you're curious about.",
+        "button": "Contact in Telegram",
+        "aria": "Arrow icon",
+        "questions": [
+          {
+            "question": "How to understand that I have varicose veins disease?",
+            "answer": "The signs of the condition include a spider web of veins, enlarged veins protruding above the skin, changes in skin color or texture, spider veins, heaviness or pain in the legs, and swelling at the end of the day. Many people don't see a doctor until they feel pain, but it's important to understand that pain is a sign of complications, such as thrombosis or phlebitis."
+          },
+          {
+            "question": "How does a consultation with a phlebologist go?",
+            "answer": "The doctor will listen to your complaints, take a medical history, and conduct an examination. Afterward, using ultrasound (Doppler ultrasound), the doctor will check the functioning of the valves, the presence of reflux, and accurately determine the affected vein segments. Based on a comprehensive examination, the doctor will make an accurate diagnosis, create an individual treatment plan, if necessary, select compression hosiery, and provide recommendations for disease prevention."
+          },
+          {
+            "question": "What type of anesthesia is used during the surgery?",
+            "answer": "The surgeries are performed under local tumescent anesthesia, which provides rapid and complete numbing of the procedure area. It's important to note that after this type of anesthesia, there are no intoxication effects on the body and no hematomas in the surrounding tissues. Interestingly, patients can leave the hospital just 1-2 hours after the surgery is completed."
+          },
+          {
+            "question": "Can varicose veins be treated with ointments?",
+            "answer": "Ointments do not treat varicose veins, they only partially relieve symptoms! Varicose veins are a chronic condition that can lead to serious complications if not treated properly, such as venous ulcers, thrombosis, or progressing venous insufficiency."
+          },
+          {
+            "question": "I'm afraid to have surgery.",
+            "answer": "Fear of surgery is a completely normal human reaction. However, it's important to manage that fear. Also, it's important to know that not in all cases, surgery is the only solution to your problem. The treatment method is determined by the doctor only after a full examination. It's also important to understand that varicose disease can lead to various complications and worsen the quality of the patient's life. Therefore, it's best to consult a doctor and treat the disease at an early stage."
+          },
+          {
+            "question": "When is the best time to have surgery?",
+            "answer": "When choosing the best date for surgery, I don't just look at the calendar, but also consider how the patient feels and how the disease is developing. Modern treatment is no longer limited by seasons. Surgeries can be performed at any time of the year."
+          },
+          {
+            "question": "What complications can occur if varicose veins are not treated?",
+            "answer": "Untreated varicose veins can lead to skin complications, ulcers, thrombophlebitis, worsening of venous insufficiency, and bleeding if treatment is delayed. It is recommended to seek medical attention at an early stage for diagnosis and treatment to avoid these complications."
+          },
+          {
+            "question": "Do scars remain after the surgery?",
+            "answer": "Considering the minimal access required to perform vein procedures, there are usually no significant scars left after the surgery. Modern phlebological procedures aim to minimize tissue trauma, resulting in minimal scarring. While early and uncomplicated cases of varicose veins are easier for patients to tolerate and offer better aesthetic results."
+          }
+        ]
+      },
+      "consultation": {
+        "title": "Schedule a consultation",
+        "callTextMobile": "Schedule a consultation right now and get a special discount on your first visit!",
+        "callText": "Schedule a consultation right now and get a special discount on your first visit!",
+        "form": {
+          "input": {
+            "name": {
+              "label": "Your name *",
+              "placeholder": "Ivanchuk Ivan",
+              "error": "You have provided the incorrect name"
+            },
+            "phone": {
+              "label": "Your phone number *",
+              "placeholder": "+380981234567",
+              "error": "You have entered the phone number incorrectly"
+            }
+          },
+          "textarea": {
+            "label": "Your message",
+            "placeholder": "Ask your question"
+          },
+          "checkbox": {
+            "label": "I consent to the processing of personal data"
+          },
+          "button": {
+            "sendText": "Send",
+            "sentText": "Sent",
+            "loadingText": "Sending...",
+            "errorText": "Error occurred"
+          },
+          "toastMessage": {
+            "success": "Your request has been successfully sent! A doctor will be in touch with you shortly!",
+            "error": "Whoops! Something went wrong..."
+          }
+        }
+      },
+      "contacts": {
+        "heading": "Contacts",
+        "anchor": "contacts",
+        "contactData": {
+          "phone": { "caption": "Phone:", "content": "+380933521235" },
+          "address": {
+            "caption": "Address:",
+            "content": "Medeira Clinic - Kyiv, Beresteiskyi Avenue, 67"
+          },
+          "schedule": {
+            "caption": "Working hours:",
+            "content": "Mon-Fri: 09:00 - 19:00"
+          },
+          "media": { "caption": "Social media:" },
+          "location": {
+            "placename": { "firstRow": "Clinic", "secondRow": "Medeira" },
+            "url": "https://maps.app.goo.gl/V33L4LrBKHKBTiqy6",
+            "images": {
+              "map": {
+                "img": "/images/contacts/contacts-map-img@2x.webp",
+                "alt": "Мапа"
+              },
+              "office": {
+                "img": "/images/contacts/contacts-office-img@2x.webp",
+                "alt": "Офіс"
+              }
+            }
+          }
+        },
+        "action": {
+          "instruction": "Feel free to contact us",
+          "actionName": "Contact in Telegram"
+        }
+      },
+      "feedback": {
+        "heading": "Reviews",
+        "anchor": "feedback",
+        "photo": { "alt": "Patient Photo" },
+        "links": {
+          "send": { "text": "Contact", "icon": "Telegram Icon" },
+          "read": { "text": "Read more" },
+          "video": { "icon": "Watch Video Icon" }
+        }
+      }
     },
-    "about": {
-      "title": "About Us",
-      "description": "This is the about page"
+    "treatment": {
+      "1": {
+        "title": "Endovenous Laser Coagulation",
+        "description": "is a minimally invasive procedure that uses laser radiation to close and destroy varicose veins from the inside, improving circulation and reducing the symptoms of varicose veins.",
+        "image": "/images/treatment/treatment-temp.jpg",
+        "questions": [
+          {
+            "question": "Who needs Endovenous Laser Coagulation (EVLA)?",
+            "answer": {
+              "subtext": "The indications for this procedure include the following symptoms:",
+              "list": [
+                "Varicose veins in the subcutaneous layer.",
+                "Swelling of the lower limbs, which occurs due to issues with subcutaneous veins, accompanied by rapid leg fatigue and a burning sensation along the course of the varicose veins, which does not subside with the use of lympho-venotonic drugs.",
+                "Trophic ulcers.",
+                "Ineffectiveness of conservative treatment."
+              ]
+            }
+          },
+          {
+            "question": "The main advantages of EVLA are:",
+            "answer": {
+              "list": [
+                "It does not require hospitalization and bed rest (patients can typically return to their normal life on the same day, depending on the stage of the condition).",
+                "Local anesthesia is used, sometimes with sedation, eliminating the need for general anesthesia.",
+                "Provides a highly aesthetic result.",
+                "Minimizes trauma without leaving scars.",
+                "Has a short duration.",
+                "Fast recovery period after the procedure.",
+                "Reduces the risk of bleeding, hematomas, and deep vein thrombosis."
+              ]
+            }
+          },
+          {
+            "question": "When will I feel the results?",
+            "answer": {
+              "list": [
+                "Patients typically experience noticeable relief from the symptoms of varicose veins within a few days after EVLA. Fatigue, pain, swelling, and other discomforts are significantly reduced or disappear.",
+                "You can return to your regular activities on the same day, start working the next day, and resume sports within 2 weeks.",
+                "To achieve the maximum and long-lasting results and relief from symptoms, it's important to follow the recommendations of the phlebologist and consider your individual body's characteristics."
+              ]
+            }
+          }
+        ]
+      },
+      "4": {
+        "title": "Miniphlebectomy",
+        "description": "is a minimally invasive method for removing varicose veins through small punctures. No incisions are made during the procedure, which speeds up recovery and avoids scarring.",
+        "image": "/images/treatment/treatment-temp.jpg",
+        "questions": [
+          {
+            "question": "Who needs it?",
+            "answer": {
+              "list": [
+                "Patients with varicose veins that are dilated, nodular, and enlarged subcutaneous veins. ",
+                "Patients with varicose veins larger than 3 mm outside the area of trophic disorders."
+              ]
+            }
+          },
+          {
+            "question": "Main advantages?",
+            "answer": {
+              "list": [
+                "Minimally Invasive: Allows for the removal of only damaged veins without injuring surrounding tissues. ",
+                "Minimal Scarring: Thanks to small punctures made during mini-phlebectomy, there are minimal scars, making this method more aesthetically pleasing compared to open phlebectomy.",
+                "Quick Recovery: Patients who undergo mini-phlebectomy can typically return to their normal lives fairly quickly, as it does not require hospitalization and allows for a speedy recovery.",
+                "Local Anesthesia: The mini-phlebectomy procedure is usually performed under local anesthesia, reducing the risk associated with general anesthesia.",
+                "Effectiveness: This method can be applied to treat varicose veins in patients with various degrees of severity, providing an effective result."
+              ]
+            }
+          },
+          {
+            "question": "When will I feel the results?",
+            "answer": {
+              "text": "The time it takes for you to feel the results of mini-phlebectomy can depend on several factors, including your condition before the procedure and the degree of varicose vein enlargement.",
+              "list": [
+                "Pain and vein prominence typically reduce or disappear quite quickly after the procedure.",
+                "Immediate improvement in appearance may become noticeable right after mini-phlebectomy since the varicose veins are removed.",
+                "Your ability to return to your normal lifestyle and physical activity will depend on individual factors and your doctor's advice. Usually, patients can return to normal activities within a few days after the procedure.",
+                "Full clearance of varicose veins and post-operative bruising may take time. Results may gradually improve over several weeks or months after mini-phlebectomy as the body resolves any remaining subcutaneous hematomas."
+              ]
+            }
+          }
+        ]
+      },
+      "2": {
+        "title": "Microsclerotherapy",
+        "description": "is a minimally invasive procedure performed to treat small-diameter varicose veins, measuring just millimeters in size, such as reticular veins and 'spider veins'. During sclerotherapy, a low-concentration sclerosing solution is injected into the affected vein using an ultra-fine needle. This solution irritates the vein's lining, causing it to break down and the vein to seal shut. Over time, the vein transforms into scar tissue and completely disappears.",
+        "image": "/images/treatment/treatment-temp.jpg",
+        "questions": [
+          {
+            "question": "Who needs it?",
+            "answer": {
+              "text": "This procedure is used to address small reticular veins, telangiectasias, as well as small-caliber vessels, which can be either initial signs of varicose disease or a result of long-standing conditions.",
+              "subtext": "Typically, it is needed by:",
+              "list": [
+                "Patients with spider veins (telangiectasias): This procedure can improve the appearance and evenness of the skin.",
+                "Patients with small-diameter varicose veins: Microsclerotherapy can be used to treat small-diameter varicose veins or those that are not suitable for other more invasive methods.",
+                "Individuals with vascular anomalies: Patients with vascular anomalies, such as venous malformation, may also require microsclerotherapy for treatment or improvement of the vein condition.",
+                "Those seeking cosmetic defect correction: Microsclerotherapy can be used for cosmetic enhancement of skin and veins, reducing the visibility of spider veins and other small vessels.",
+                "Patients for whom other methods are not suitable: In some cases, other treatment methods may not be recommended or available for the patient, and microsclerotherapy can serve as an alternative."
+              ]
+            }
+          },
+          {
+            "question": "The main advantages are as follows:",
+            "answer": {
+              "list": [
+                "Minimally invasive: Microsclerotherapy uses a fine needle to introduce the substance into the vein, reducing trauma and discomfort.",
+                "Effectiveness for small vessels: This method effectively treats small vessels, including telangiectasias and small varicose veins.",
+                "Quick recovery: Patients can return to their regular activities with minimal delay, and prolonged hospitalization is not required.",
+                "Absence of scars, as access to the vessel is through a tiny skin puncture.",
+                "Cosmetic improvement: It helps enhance the skin's appearance by reducing the visibility of spider veins and telangiectasias.",
+                "Compatibility with other methods: It can be combined with other treatments to maximize effectiveness.",
+                "Minimal restrictions after the procedure: Patients are not significantly limited in physical activity or behavior following the procedure.",
+                "Method versatility: It can be adapted for treating various types and sizes of vessels.",
+                "Absence of general anesthesia: Microsclerotherapy is typically performed under local anesthesia, reducing the risk associated with general anesthesia."
+              ]
+            }
+          },
+          {
+            "question": "When will I feel the results?",
+            "answer": {
+              "text": "The time it takes to feel the results of microsclerotherapy can depend on several factors, including the size of the treated vessels and individual characteristics of the body's absorption of sclerosed vessels.",
+              "list": [
+                "The method has an advantage in minimal recovery time; in fact, there is virtually no need for recovery.",
+                "After completing the procedure, the doctor provides guidance on the ongoing care of your legs, which can be easily incorporated into your daily routine without significant effort.",
+                "Depending on the size of the vessels, the visible effect can appear within a few weeks to several months."
+              ]
+            }
+          }
+        ]
+      },
+      "3": {
+        "title": "Foam sclerotherapy",
+        "description": "(or foam sclerotherapy with ultrasound guidance) is a non-surgical method for treating varicose veins. The essence of this procedure involves the injection of a special sclerosing agent (typically in the form of a foam made of polidocanol) into the affected vein, often administered through intravenous catheters. This agent triggers inflammation within the vein, leading to its closure. As a result, blood can no longer flow through it, the vein's diameter decreases, and it eventually transforms into scar tissue.",
+        "image": "/images/treatment/treatment-temp.jpg",
+        "questions": [
+          {
+            "question": "Who needs it?",
+            "answer": {
+              "text": "This procedure is used for addressing small veins with a diameter of up to 3 mm. It serves as an alternative to blocking the main superficial veins in cases of pronounced tortuous varicose veins and in anatomical areas where the application of thermal methods (such as endovenous laser ablation) is not recommended. Additionally, this method is the preferred choice for treating recurrences of varicose vein disease.",
+              "subtext": "Typically, it is needed for:",
+              "list": [
+                "Specific Anatomical Situations: Patients with anatomical peculiarities in the course of main superficial veins.",
+                "Complications: Cases of complicated varicose vein disease with the extension of pathological dilation to deep-seated veins in areas where thermal methods are not feasible.",
+                "Recurrences of Varicose Vein Disease: After open surgeries, particularly when there is pronounced scar tissue and insufficient neovascularization (the growth of small-caliber tortuous veins with abnormal blood flow), which can be effectively treated with sclerosing foam.",
+                "Individuals with Vascular Anomalies: Patients with vascular anomalies such as venous malformations, where foam sclerotherapy is the preferred method.",
+                "Cosmetic Enhancement: Foam sclerotherapy can also be used for cosmetic improvements, reducing the visibility of spider veins and other small blood vessels, enhancing the appearance of the skin."
+              ]
+            }
+          },
+          {
+            "question": "Main advantages include:",
+            "answer": {
+              "list": [
+                "Minimal Trauma: The procedure is minimally invasive, virtually devoid of surgical trauma.",
+                "No Incisions and Scarring: There are no incisions made during the procedure, which means no post-procedure scarring.",
+                "Pain-Free: The use of local anesthesia ensures a pain-free experience for the patient.",
+                "Quick Recovery: Patients can return to their normal activities relatively quickly, as prolonged hospitalization is not required.",
+                "Achievement of Aesthetic Results: The procedure can improve the appearance of the skin and reduce the visibility of veins, contributing to an aesthetic enhancement.",
+                "No Hospitalization: It doesn't necessitate hospitalization or bed rest after the procedure.",
+                "Short Procedure Duration: The procedure typically lasts 15-30 minutes on average.",
+                "Safe for Older Adults and Those with Chronic Conditions: It is considered safe for elderly individuals and those with chronic medical conditions."
+              ]
+            }
+          },
+          {
+            "question": "When will I feel the results?",
+            "answer": {
+              "text": "When you will feel the results of sclerotherapy can vary depending on several factors, including the size of the treated veins and individual characteristics of your body's response to the sclerotherapy.",
+              "list": [
+                "The method offers the advantage of a quick recovery, with minimal to no need for actual downtime.",
+                "You may experience mild discomfort along the course of the treated vein for several weeks after the procedure.",
+                "After completing the procedure, your doctor will provide guidance on further care for your legs, which can be easily integrated into your daily routine and require minimal effort."
+              ],
+              "aftertext": "Depending on the size of the treated veins, you may begin to see visible results within a few weeks to a few months."
+            }
+          }
+        ]
+      }
     }
+  },
+  "socials": {
+    "telegram": "https://t.me/Sergii_Voitsitskyi",
+    "instagram": "https://www.instagram.com/dr_voitsitskyi/",
+    "tiktok": "https://www.tiktok.com/@dr_voitsitskyi",
+    "facebook": "https://www.facebook.com/dr.SergiiVoitsitskyi"
+  },
+  "footer": {
+    "address": "Medeira Clinic - Kyiv, Beresteiskyi Avenue, 67",
+    "phone": "+380933521235"
   }
 }
