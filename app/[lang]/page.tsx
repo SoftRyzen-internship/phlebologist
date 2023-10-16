@@ -48,7 +48,7 @@ export default async function Home({
       <FAQSection staticData={{ faq: page.home.faq, socials }} />
       <ConsultationSection
         staticData={page.home.consultation}
-        className="-mt-5 mb-10 md:-mt-8 xl:-mt-10"
+        className="-mt-5 md:-mt-8 xl:-mt-10"
       />
       <ContactsSection
         staticData={{ pageData: page.home, socialData: socials }}

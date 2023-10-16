@@ -30,7 +30,7 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
         url={data}
         config={{
           youtube: {
-            playerVars: { origin: 'http://localhost:3000' },
+            playerVars: { origin: 'https://phlebologist.vercel.app' },
           },
         }}
       />
