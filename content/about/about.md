@@ -17,8 +17,8 @@ general:
     name: Sergii Voitsitskyi
     profession: Surgеon of the 1st Qualification Category in Vascular Surgery Phlebologist
     education:
-      - institution: National Medical University named after O.O. Bogomolets
-      - institution: National Medical Academy named after P.L. Shupyk
+      - institution: National Medical University named after O.O.Bogomolets
+      - institution: National Medical Academy named after P.L.Shupyk
       - institution: Internship in Vascular Surgery at Lviv Regional Clinical Hospital
     experience:
       - point: More than 10 years of practice
