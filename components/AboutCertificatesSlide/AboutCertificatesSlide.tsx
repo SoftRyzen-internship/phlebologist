@@ -24,9 +24,10 @@ const AboutCertificatesSlide: FC<AboutCertificatesSlideProps> = ({
       <Image
         src={photo}
         alt={alt}
-        width={256}
-        height={200}
+        width={499}
+        height={352}
         className="mx-auto h-full w-auto rounded-medium md:rounded-large"
+        sizes="(max-width: 767px) 256px,  499px"
       />
     </div>
   );

@@ -30,6 +30,11 @@ const Header = async ({ lang }: { lang: Locale }) => {
               >
                 {linkButton}
               </a>
+              <LocaleSwitcher
+                variant="header"
+                data={langButton}
+                className="hidden xl:flex xl:min-w-[120px] xl:px-10"
+              />
               <ScrollLinkButton
                 variant="menu"
                 linkto="consultation"
@@ -37,11 +42,6 @@ const Header = async ({ lang }: { lang: Locale }) => {
               >
                 {formButton}
               </ScrollLinkButton>
-              <LocaleSwitcher
-                variant="header"
-                data={langButton}
-                className="hidden xl:flex xl:min-w-[120px] xl:px-10"
-              />
             </div>
             <BurgerMenu staticData={{ navigation, header, socials }} />
           </div>
