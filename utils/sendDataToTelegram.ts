@@ -1,8 +1,9 @@
 import axios from 'axios';
 
-export const sendContactDataToTelegram = async (data: any) => {
-  //???type
-  let message = 'Заявка з сайту:\n';
+import { IDataToSend } from '@/types';
+
+export const sendDataToTelegram = async (data: IDataToSend) => {
+  let message = '<b>Заявка з сайту:</b>\n';
 
   for (const [key, value] of Object.entries(data)) {
     message += `${key}: ${value}\n`;

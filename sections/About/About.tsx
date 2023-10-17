@@ -38,6 +38,7 @@ const About: React.FC<AboutProps> = async ({ lang, staticData }) => {
                   width={256}
                   height={191}
                   className="object-center-top mb-5 rounded-medium object-cover md:mx-auto md:mb-8 md:h-[338px] md:w-[416px] md:rounded-large xl:mb-0 xl:h-[480px] xl:w-full smOnly:w-full"
+                  sizes="(max-width: 767px) 256px, (max-width: 1279px) 656px, 1192px"
                 />
               )}
             </div>

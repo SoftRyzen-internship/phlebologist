@@ -2,8 +2,8 @@ import axios from 'axios';
 import { NextResponse } from 'next/server';
 
 export async function POST(req: Request) {
-  const TG_BOT_TOKEN = process.env.TG_BOT_TOKEN;
-  const TG_CHAT_ID = process.env.TG_CHAT_ID;
+  const TG_BOT_TOKEN = process.env.NEXT_PUBLIC_TG_BOT_TOKEN;
+  const TG_CHAT_ID = process.env.NEXT_PUBLIC_TG_CHAT_ID;
   const URI_API = `https://api.telegram.org/bot${TG_BOT_TOKEN}/sendMessage`;
 
   const message = await req.json();

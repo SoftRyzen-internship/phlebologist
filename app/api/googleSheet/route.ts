@@ -2,9 +2,10 @@ import { google } from 'googleapis';
 
 import { NextResponse } from 'next/server';
 
-const GOOGLE_CLIENT_EMAIL = process.env.GOOGLE_CLIENT_EMAIL as string;
-const GOOGLE_PRIVATE_KEY = process.env.GOOGLE_PRIVATE_KEY as string;
-const GOOGLE_SHEET_ID = process.env.GOOGLE_SHEET_ID as string;
+const GOOGLE_CLIENT_EMAIL = process.env
+  .NEXT_PUBLIC_GOOGLE_CLIENT_EMAIL as string;
+const GOOGLE_PRIVATE_KEY = process.env.NEXT_PUBLIC_GOOGLE_PRIVATE_KEY as string;
+const GOOGLE_SHEET_ID = process.env.NEXT_PUBLIC_GOOGLE_SHEET_ID as string;
 
 export async function POST(req: Request) {
   const body = await req.json();
@@ -29,12 +30,10 @@ export async function POST(req: Request) {
 
     const response = await sheets.spreadsheets.values.append({
       spreadsheetId: GOOGLE_SHEET_ID,
-      range: 'A1:C1', //????
+      range: 'A1:C1',
       valueInputOption: 'USER_ENTERED',
       requestBody: {
-        values: [
-          [body.name, body.phone, body.message], //????
-        ],
+        values: [[body.userName, body.phoneNumber, body.userMessage]],
       },
     });
 

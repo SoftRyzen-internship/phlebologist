@@ -1,10 +1,9 @@
 import axios from 'axios';
+import { IDataToSend } from '@/types';
 
-export const sendDataToGoogleSheets = async (data: any) => {
-  //???type
-  const reqData = { ...data, phone: data.phone.replace('+', ' +') };
+export const sendDataToGoogleSheets = async (data: IDataToSend) => {
   try {
-    await axios.post('/api/googleSheet', reqData);
+    await axios.post('/api/googleSheet', data);
   } catch (error) {
     throw new Error();
   }
