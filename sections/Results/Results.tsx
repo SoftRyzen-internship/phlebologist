@@ -28,7 +28,7 @@ const Results: FC<ResultsProps> = ({
     getData();
   }, [lang]);
 
-  return data ? (
+  return (
     <section id="results" className={className}>
       <div className="container">
         <div className="wrapper rounded-t-medium bg-white pb-[52px] pt-6 md:relative md:rounded-t-extraLarge md:pt-[67px] xl:rounded-t-max xl:pt-[135px]">
@@ -38,22 +38,24 @@ const Results: FC<ResultsProps> = ({
           >
             {title}
           </Heading>
-          <Slider
-            section="result"
-            staticData={iconData}
-            optionalStaticData={{
-              ...slider,
-              secondaryTitle,
-              buttonText,
-              buttonTextMobile,
-            }}
-            slides={data}
-            slide={ResultsSlide}
-          />
+          {data ? (
+            <Slider
+              section="result"
+              staticData={iconData}
+              optionalStaticData={{
+                ...slider,
+                secondaryTitle,
+                buttonText,
+                buttonTextMobile,
+              }}
+              slides={data}
+              slide={ResultsSlide}
+            />
+          ) : null}
         </div>
       </div>
     </section>
-  ) : null;
+  );
 };
 
 export default Results;

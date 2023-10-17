@@ -8,7 +8,7 @@ import { BurgerMenuButton, Navigation, MenuActions } from '@/components';
 
 import { BurgerMenuProps } from './BurgerMenu.props';
 
-const BurgerMenu: React.FC<BurgerMenuProps> = ({ staticData }) => {
+const BurgerMenu: React.FC<BurgerMenuProps> = ({ staticData, lang }) => {
   const [showMenu, setShowMenu] = useState(false);
   const { linkButton, formButton, langButton, menuButton } = staticData.header;
   const {
@@ -79,6 +79,7 @@ const BurgerMenu: React.FC<BurgerMenuProps> = ({ staticData }) => {
 
                 <Navigation
                   data={navigation}
+                  lang={lang}
                   className="flex flex-col gap-2 pb-2"
                   itemClassName={navBtnStyles}
                   actionHandler={handleMenuToggle}

@@ -4,6 +4,7 @@ import { FooterProps } from './Footer.props';
 
 const Footer: FC<FooterProps> = ({
   staticData: { footerData, socials, navigation, iconBtnData },
+  lang,
 }) => {
   const { address, phone } = footerData;
 
@@ -41,13 +42,14 @@ const Footer: FC<FooterProps> = ({
                 <p className="max-w-[158px] text-[12px] leading-loose -tracking-[0.48px] text-black-dark  opacity-50">
                   {phone}
                 </p>
-                <p className="w-[158px] w-[281px] text-[12px] leading-loose -tracking-[0.48px]  text-black-dark opacity-50">
+                <p className="w-[158px] text-[12px] leading-loose -tracking-[0.48px] text-black-dark  opacity-50 md:w-[281px]">
                   {address}
                 </p>
               </div>
             </div>
             <Navigation
               data={navigation}
+              lang={lang}
               itemClassName="mb-4 last:mb-0"
               variant="footer"
             />

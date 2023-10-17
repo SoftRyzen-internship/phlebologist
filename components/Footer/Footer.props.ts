@@ -1,3 +1,5 @@
+import { Locale } from '@/i18n.config';
+
 import {
   ISocials,
   IIconBtnData,
@@ -12,4 +14,5 @@ export interface FooterProps {
     footerData: IFooterData;
     navigation: INavigationItemData[];
   };
+  lang: Locale;
 }

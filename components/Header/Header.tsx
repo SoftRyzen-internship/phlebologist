@@ -43,7 +43,10 @@ const Header = async ({ lang }: { lang: Locale }) => {
                 className="hidden xl:flex xl:min-w-[120px] xl:px-10"
               />
             </div>
-            <BurgerMenu staticData={{ navigation, header, socials }} />
+            <BurgerMenu
+              staticData={{ navigation, header, socials }}
+              lang={lang}
+            />
           </div>
         </div>
       </div>
