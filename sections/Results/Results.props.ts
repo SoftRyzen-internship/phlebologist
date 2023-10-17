@@ -1,4 +1,5 @@
 import { Locale } from '@/i18n.config';
+import { IIconBtnData } from '@/types';
 
 type SliderDataType = {
   beforeAltText: string;
@@ -17,6 +18,6 @@ type StaticDataType = {
 
 export interface ResultsProps {
   staticData: StaticDataType;
-  iconData: any;
+  iconData: IIconBtnData;
   lang: Locale;
 }

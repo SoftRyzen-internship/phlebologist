@@ -51,7 +51,9 @@ const Navigation: FC<NavigationProps> = ({
           if (
             pathname.includes('treatment') &&
             !linkTo.includes('consultation') &&
-            !linkTo.includes('contacts')
+            !linkTo.includes('contacts') &&
+            !linkTo.includes('results') &&
+            !linkTo.includes('feedback')
           ) {
             return (
               <li className={itemClass} key={linkTo} onClick={actionHandler}>
@@ -62,22 +64,24 @@ const Navigation: FC<NavigationProps> = ({
             );
           }
 
-          return (
-            <li className={itemClass} key={linkTo} onClick={actionHandler}>
-              <LinkScroll
-                spy={true}
-                smooth={true}
-                offset={0}
-                duration={500}
-                to={linkTo}
-                href={`#${linkTo}`}
-                onClick={actionHandler}
-                className={linkClass}
-              >
-                {title}
-              </LinkScroll>
-            </li>
-          );
+          if (!linkTo.includes('results') && !linkTo.includes('feedback')) {
+            return (
+              <li className={itemClass} key={linkTo} onClick={actionHandler}>
+                <LinkScroll
+                  spy={true}
+                  smooth={true}
+                  offset={0}
+                  duration={500}
+                  to={linkTo}
+                  href={`#${linkTo}`}
+                  onClick={actionHandler}
+                  className={linkClass}
+                >
+                  {title}
+                </LinkScroll>
+              </li>
+            );
+          }
         })}
       </ul>
     </nav>

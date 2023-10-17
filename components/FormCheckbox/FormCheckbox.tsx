@@ -35,7 +35,7 @@ const FormCheckbox: FC<FormCheckboxProps> = ({
   );
 
   return (
-    <label className="relative mb-4 flex pl-6 text-black-dark hover:cursor-pointer">
+    <label className="relative mb-4 flex max-w-fit pl-6 text-black-dark hover:cursor-pointer">
       <Controller
         name={name}
         rules={{
