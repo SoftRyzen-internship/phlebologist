@@ -38,7 +38,7 @@ const TreatmentQAItem: React.FC<TreatmentQAItemProps> = ({ data }) => {
         )}
 
         <ul className="ml-6 list-outside list-disc">
-          {answer.list.map((item, index) => (
+          {answer.list.map((item: string, index: number) => (
             <li key={`${item}${index}`} className={textStyles}>
               {item}
             </li>

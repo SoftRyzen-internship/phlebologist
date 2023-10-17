@@ -1,6 +1,7 @@
 import classNames from 'classnames';
 
 import { MethodButton, InfoBlock, TreatmentTabImage } from '@/components';
+import { IMethodInfoData } from '@/types';
 
 import { TreatmentTabPanelProps } from './TreatmentTabPanel.props';
 import css from './TreatmentTabPanel.module.css';
@@ -20,11 +21,11 @@ const TreatmentTabPanel: React.FC<TreatmentTabPanelProps> = ({
   );
 
   return (
-    <div className="relative flex flex-col md:mb-10 md:gap-8 xl:mb-0 xl:gap-7">
+    <div className="relative flex flex-col md:mb-10 md:gap-8 xl:mb-0 xl:ml-[3px] xl:gap-7">
       <TreatmentTabImage image={image} alt={name} />
 
       <div className={contentStyle}>
-        {info.map((method, index) => (
+        {info.map((method: IMethodInfoData, index: number) => (
           <div
             key={`${method.question}${index}`}
             className={`md:ml-[37px] md:w-[246px] ${css[`box-${index + 1}`]}`}

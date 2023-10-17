@@ -13,7 +13,7 @@ const Treatments: React.FC<TreatmentsProps> = ({ staticData, lang }) => {
           <TreatmentTabList lang={lang} data={{ button, more, methods }} />
 
           <div className="w-full xl:absolute xl:bottom-[110px] xl:left-1/2 xl:-translate-x-1/2 ">
-            {notes.map((note, index) => (
+            {notes.map((note: string, index: number) => (
               <p
                 key={`${note}${index}`}
                 className="text-center text-xs font-normal tracking-[-0.48px] text-primary-dark-200 
