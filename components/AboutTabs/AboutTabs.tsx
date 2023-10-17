@@ -28,7 +28,7 @@ const AboutTabs: React.FC<AboutTabsProps> = ({
   const [selectedIndex, setSelectedIndex] = useState(0);
 
   return (
-    <div className="overflow-hidden">
+    <div className="grow overflow-hidden">
       <Tab.Group
         manual
         selectedIndex={selectedIndex}

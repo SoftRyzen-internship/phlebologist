@@ -26,7 +26,6 @@
     "classnames": "^2.3.2",
     "googleapis": "^127.0.0",
     "keen-slider": "^6.8.6",
-    "negotiator": "^0.6.3",
     "next": "latest",
     "react": "latest",
     "react-compare-image": "^3.4.0",

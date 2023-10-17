@@ -1,82 +1,90 @@
 ---
-photo: /uploads/about/about-img.webp
-video: ''
+photo: /uploads/about/about-doctor.webp
+video: 'https://www.youtube.com/watch?v=RQZUC2Lk65A&t=40s'
 general:
   uk:
     name: Войціцький Сергій
-    profession: |
-      Судинний хірург 1 категорії
-
-      Флеболог
+    profession: Судинний хірург 1 категорії Флеболог
     education:
+      - institution: Національний медичний університет О.О.Богомольця
+      - institution: Національна медична академія П.Л.Шупика
       - institution:
           Стажування з судинної хірургії у Львівській обласній клінічній лікарні
-      - institution: Національна медична академія П.Л. Шупика
-      - institution: Національний медичний університету О.О.Богомольця
     experience:
-      - point: 4000+ проведених операцій
       - point: Більше 10 років практики
       - point: 5000+ вилікуваних пацієнтів
+      - point: 4000+ проведених операцій
   en:
     name: Sergii Voitsitskyi
     profession:
       Surgеon of the 1st Qualification Category in Vascular Surgery Phlebologist
     education:
+      - institution: National Medical University named after O.O.Bogomolets
+      - institution: National Medical Academy named after P.L.Shupyk
       - institution:
           Internship in Vascular Surgery at Lviv Regional Clinical Hospital
-      - institution: National Medical Academy named after P.L. Shupyk
-      - institution: National Medical University named after O.O. Bogomolets
     experience:
-      - point: Over 4000 surgeries performed
-      - point: 'Over 5000 successfully treated patients '
       - point: More than 10 years of practice
+      - point: 'Over 5000 successfully treated patients '
+      - point: Over 4000 surgeries performed
 education:
   uk:
     title: Освіта лікаря
     institutions:
-      - institution: >-
-          Національний медичний університету імені О.О.Богомольця 1-й медичний
-          факультет.
-      - institution:
+      - period: з 2021
+        institution: >-
+          Управлінням охорони здоров’я присвоєно першу кваліфікаційну категорію
+          за спеціальністю «Судинна хірургія».
+      - period: '2020'
+        institution:
+          "Цикл спеціалізації «Ультразвукова діагностика» Ужгородський
+          національний університет\_"
+      - period: '2019'
+        institution:
+          'The 9th MUNICH VASCULAR CONFERENCE (MAC), Munich, Germany.'
+      - period: з 2018
+        institution: Член Європейської асоціації судинних хірургів.
+      - period: '2018'
+        institution: >-
+          Стажування з судинної хірургії на базі Львівської обласної клінічної
+          лікарні.
+      - period: 2013-2017
+        institution:
           "Національна медична академія післядипломної освіти ім. П.Л. Шупика
           «Національний інститут хірургії та трансплантології ім. О.О.
           Шалімова»\_"
-      - institution: >-
-          Стажування з судинної хірургії на базі Львівської обласної клінічної
-          лікарні.
-      - institution:
-          "Цикл спеціалізації «Ультразвукова діагностика» Ужгородський
-          національний університет\_"
-      - institution:
-          'The 9th MUNICH VASCULAR CONFERENCE (MAC), Munich, Germany.'
-      - institution: Член Європейської асоціації судинних хірургів.
-      - institution: >-
-          Управлінням охорони здоров’я присвоєно першу кваліфікаційну категорію
-          за спеціальністю «Судинна хірургія».
+      - period: 2007-2013
+        institution: >-
+          Національний медичний університет імені О.О.Богомольця 1-й медичний
+          факультет.
   en:
     title: Educational Background
     institutions:
-      - institution: >-
-          Since 2021: Awarded the first qualification category in Vascular
-          Surgery by the Ministry of Health.
-      - institution:
-          'Since 2018: Member of the European Association for Vascular Surgeons.'
-      - institution: >-
-          2019: Attended The 9th MUNICH VASCULAR CONFERENCE (MAC) in Munich,
-          Germany.
-      - institution: >-
-          2020: Specialization in "Ultrasound Diagnostics" at Uzhhorod National
+      - period: Since 2021
+        institution: >-
+          Awarded the first qualification category in Vascular Surgery by the
+          Ministry of Health.
+      - period: Since 2018
+        institution: Member of the European Association for Vascular Surgeons.
+      - period: '2019'
+        institution:
+          'Attended The 9th MUNICH VASCULAR CONFERENCE (MAC) in Munich, Germany.'
+      - period: '2020'
+        institution: >-
+          Specialization in "Ultrasound Diagnostics" at Uzhhorod National
           University.
-      - institution: >-
-          2018: Internship in Vascular Surgery at Lviv Regional Clinical
-          Hospital.
-      - institution: >-
-          2013-2017: National Medical Academy of Postgraduate Education named
-          after P.L. Shupyk, National Institute of Surgery and Transplantology
-          named after A.A. Shalimov.
-      - institution: >-
-          2007-2013: National Medical University named after O.O. Bogomolets,
-          1st Medical Faculty.
+      - period: '2018'
+        institution:
+          Internship in Vascular Surgery at Lviv Regional Clinical Hospital.
+      - period: 2013-2017
+        institution: >-
+          National Medical Academy of Postgraduate Education named after P.L.
+          Shupyk, National Institute of Surgery and Transplantology named after
+          A.A. Shalimov.
+      - period: 2007-2013
+        institution: >-
+          National Medical University named after O.O. Bogomolets, 1st Medical
+          Faculty.
 career:
   uk:
     title: Карʼєра лікаря
@@ -133,6 +141,108 @@ career:
           Central Municipal Clinical Hospital No. 6, Surgical Departments #1 and
           #2
 certificates:
+  - photo: /uploads/about/ESVS_membership certificate_Sergii Voitsitskyi.webp
+    description:
+      uk:
+        alt: Сертифікат членства Європейського товариства судинної хірургії
+      en:
+        alt: Certificate of Membership of European Society for Vascular Syrgery
+  - photo: /uploads/about/29.10.2022.webp
+    description:
+      uk:
+        alt: >-
+          Сертифікат про участь - Конференція актуальні питання загальної та
+          судинної хірургії
+      en:
+        alt: >-
+          Certificate of participation - Conference current issues of general
+          and vascular surgery
+  - photo: /uploads/about/29.04.2021.webp
+    description:
+      uk:
+        alt: >-
+          Сертифікат про участь - Конференція актуальні питання невідкладної
+          хірургії
+      en:
+        alt: >-
+          Certificate of participation - Conference topical issues of emergency
+          surgery
+  - photo: /uploads/about/27.11.2020.webp
+    description:
+      uk:
+        alt: >-
+          Сертифікат про участь - Конференція клініко-технологічні виклики в
+          етапній та реконстуктивній хірургії
+      en:
+        alt: >-
+          Certificate of participation - Conference clinical and technological
+          challenges in staging and reconstructive surgery
+  - photo: /uploads/about/24.11.2020.webp
+    description:
+      uk:
+        alt: Сертифікат про участь - Захворювання периферичних артерій
+      en:
+        alt: Certificate of attendance - Peripheral artery disease
+  - photo: /uploads/about/24.09.2020.webp
+    description:
+      uk:
+        alt: >-
+          Сертифікат про участь - Конгрес асоціації судинних хірургів,
+          флебологів та ангіологів України
+      en:
+        alt: >-
+          Certificate of participation - Congress of the Association of Vascular
+          Surgeons, Phlebologists and Angiologists of Ukraine
+  - photo: /uploads/about/21.11.2020.webp
+    description:
+      uk:
+        alt: Сертифікат про участь - Міжнародний конгрес у Відні
+      en:
+        alt: Certificate of attendance - International Congress Vienna
+  - photo: /uploads/about/19.05.2021.webp
+    description:
+      uk:
+        alt: Сертифікат учасника - Конференція «Uncharted» Phlebology
+      en:
+        alt: Certificate of participation - Conference 'Uncharted' Phlebology
+  - photo: /uploads/about/18.12.2020.webp
+    description:
+      uk:
+        alt: >-
+          Сертифікат участі - Особливості лікування пацієнтів із судинною
+          патологією в умовах пандемії SARS-CoV-2
+      en:
+        alt: >-
+          Certificate of participation - Peculiarities of treatment of patients
+          with vascular pathology in the conditions of the SARS-CoV-2 pandemic
+  - photo: /uploads/about/16.09.2020.webp
+    description:
+      uk:
+        alt: >-
+          Сертифікат про участь - Сучасні підходи до діагностики та лікування
+          хронічного тазового болю
+      en:
+        alt: >-
+          Certificate of attendance - Modern approaches to the diagnostics and
+          treatment of chronic pelvic pain
+  - photo: /uploads/about/14.11.2021.webp
+    description:
+      uk:
+        alt: >-
+          Сертифікат учасника - Міжнародний конгрес "Антибіотикорезистентність
+          STOP"
+      en:
+        alt: >-
+          Certificate of participation - International Congress "Antibiotic
+          resistance STOP"
+  - photo: /uploads/about/12.12.2020.webp
+    description:
+      uk:
+        alt:
+          Сертифікат про відвідування - Досягнення в комплексній венозній освіті
+      en:
+        alt: >-
+          Certificate of attendance - Advances in Comprehensive Venous Education
   - photo: /uploads/about/10.09.2021.webp
     description:
       uk:
@@ -256,7 +366,7 @@ certificates:
         alt: >-
           Certificate of attendance - International Interdisciplinary Eastern
           European Forum
-  - photo: /uploads/about/certificate.jpg
+  - photo: /uploads/about/19.02.2021.webp
     description:
       uk:
         alt: >-

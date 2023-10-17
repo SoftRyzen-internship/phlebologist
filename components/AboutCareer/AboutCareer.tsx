@@ -30,7 +30,7 @@ const AboutCareer: FC<AboutCareerProps> = ({ data, staticData }) => {
       </Heading>
       {(isScreenDesktop || isScreenMobile) && (
         <>
-          <ul className="mt-5 list-none md:mt-8 md:grid md:grid-cols-2 md:gap-x-6 xl:block">
+          <ul className="mt-5 grid list-none gap-4">
             {institutions &&
               isShowAll &&
               institutions.map((item, index) => (
@@ -61,7 +61,7 @@ const AboutCareer: FC<AboutCareerProps> = ({ data, staticData }) => {
       )}
 
       {!isScreenDesktop && !isScreenMobile && (
-        <ul className="mt-5 list-none md:mt-8 md:grid md:grid-cols-2 md:gap-x-6 xl:block">
+        <ul className="mt-8 grid list-none gap-4 md:grid-cols-2">
           {institutions &&
             institutions.map((item, index) => (
               <AboutItem key={`${item.__typename}${index}`} item={item} />
