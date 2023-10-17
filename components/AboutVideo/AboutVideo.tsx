@@ -11,6 +11,7 @@ import PlayIcon from '@/public/icons/player.svg';
 import { AboutVideoProps } from './AboutVideo.props';
 
 const AboutVideo: FC<AboutVideoProps> = ({ data, lang, staticData }) => {
+  console.log(data);
   const [isOpen, setIsOpen] = useState(false);
   const { image, video } = data;
 
@@ -19,15 +20,16 @@ const AboutVideo: FC<AboutVideoProps> = ({ data, lang, staticData }) => {
       <button
         onClick={() => setIsOpen(true)}
         type="button"
-        className="relative mx-auto smOnly:w-full notXl:block"
+        className="relative  mx-auto mb-5 block md:mb-8 xl:mb-0 smOnly:w-full"
         aria-label={staticData.play.iconFunction}
       >
         <Image
           src={image}
           alt={lang === 'uk' ? 'Фото лікаря' : 'Photo of the doctor'}
-          width={256}
-          height={191}
-          className="object-center-top mb-5 rounded-medium object-cover  md:mb-8 md:h-[338px] md:w-[416px] md:rounded-large xl:mb-0 xl:h-[480px] xl:w-full smOnly:w-full"
+          width={592}
+          height={480}
+          sizes="(max-width: 767px) 256px, (max-width: 1279px) 416px, 592px"
+          className="rounded-medium object-cover object-top  md:h-[338px] md:w-[416px] md:rounded-large xl:h-[480px] xl:w-[592px] smOnly:max-h-[272px] smOnly:w-full"
         />
 
         <PlayIcon

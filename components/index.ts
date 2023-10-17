@@ -38,7 +38,7 @@ export { default as AboutCareer } from '@/components/AboutCareer/AboutCareer';
 export { default as AboutCertificates } from '@/components/AboutCertificates/AboutCertificates';
 export { default as AboutCertificatesSlide } from '@/components/AboutCertificatesSlide/AboutCertificatesSlide';
 export { default as AboutItem } from '@/components/AboutEducationItem/AboutItem';
-export { default as AboutVideo } from '@/components/AboutImage/AboutVideo';
+export { default as AboutVideo } from '@/components/AboutVideo/AboutVideo';
 // section Advantages
 export { default as AdvantagesList } from '@/components/AdvantagesList/AdvantagesList';
 
