@@ -53,3 +53,62 @@
     );
   }
 }
+
+/* Banner Section */
+.banner-bg {
+  background-image: image-set(
+    url('/images/home/banner/bg.webp') 1x,
+    url('/images/home/banner/bg-2x.webp') 2x
+  );
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+@media screen and (min-width: 768px) {
+  .banner-bg {
+    background-image: image-set(
+      url('/images/home/banner/bg-md.webp') 1x,
+      url('/images/home/banner/bg-md-2x.webp') 2x
+    );
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .banner-bg {
+    background-image: image-set(
+      url('/images/home/banner/bg-xl.webp') 1x,
+      url('/images/home/banner/bg-xl-2x.webp') 2x
+    );
+  }
+}
+
+/* Consultation Section */
+@media screen and (min-width: 1280px) {
+  .consultation-bg {
+    background-image: image-set(
+      url('/images/home/consultation/bg.webp') 1x,
+      url('/images/home/consultation/bg-2x.webp') 2x
+    );
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+  }
+}
+
+.outline-without {
+  outline: none;
+  outline-offset: 0;
+}
+
+.hidden-checkbox {
+  position: absolute;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.hidden-checkbox:hover + .custom-checkbox,
+.hidden-checkbox:focus + .custom-checkbox {
+  border-color: #bcbcbc;
+}

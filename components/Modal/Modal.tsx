@@ -10,6 +10,7 @@ import { ModalProps } from './Modal.props';
 const Modal: React.FC<ModalProps> = ({
   staticData,
   isOpen = false,
+  isReview,
   onCloseClick,
   children,
 }) => {
@@ -66,14 +67,22 @@ const Modal: React.FC<ModalProps> = ({
     createPortal(
       <div
         className={classNames({
-          'fixed inset-0 z-20 flex items-center justify-center rounded-extended bg-black-backdrop/25 backdrop-blur-sm transition-all duration-300':
+          'fixed inset-0 z-20 flex items-center justify-center rounded-extended  bg-black-backdrop/25 backdrop-blur-sm transition-all duration-300':
             true,
           'invisible opacity-0': !isModalOpen,
           'visible opacity-100': isModalOpen,
         })}
         onClick={handleBackdropClose}
       >
-        <div className="relative bg-white px-[20px] pb-[40px] pt-[56px] md:p-[80px]">
+        <div
+          className={classNames({
+            'relative max-h-[497px] max-w-[280px] overflow-hidden rounded-extended bg-white px-[20px] pb-[40px] pt-[56px] md:max-h-[639px] md:max-w-[704px] xl:max-h-[664px]  xl:max-w-[1240px]':
+              true,
+            'md:p-[80px] ': isReview,
+            'md:px-[24px] md:py-[60px] xl:px-[100px] xl:py-[80px] smOnly:w-[80%] smOnly:max-w-[440px]':
+              !isReview,
+          })}
+        >
           <IconBtn
             variant="close"
             icon="close"

@@ -24,7 +24,7 @@ const IconBtn: FC<IconBtnProps> = ({
     'w-full h-full text-secondary-dark fill-transparent':
       variant.toLowerCase() === 'result' ||
       variant.toLowerCase() === 'feedback' ||
-      'doctor',
+      variant.toLowerCase() === 'doctor',
     'w-[24px] h-[24px]':
       variant.toLowerCase() === 'contacts' ||
       variant.toLowerCase() === 'footer',
@@ -38,10 +38,10 @@ const IconBtn: FC<IconBtnProps> = ({
     'flex justify-center items-center rounded-extended': true,
     'transition-colors duration-300': variant.toLowerCase() !== 'location',
     'w-[48px] h-[48px] bg-gray-light hover:bg-white-light focus:hover:bg-white-light overflow-hidden':
-      variant.toLowerCase() === 'result' || 'doctor',
+      variant.toLowerCase() === 'result' || variant.toLowerCase() === 'doctor',
     'w-[48px] h-[48px] bg-white-light hover:bg-white focus:hover:bg-white overflow-hidden':
       variant.toLowerCase() === 'feedback',
-    'w-[36px] h-[36px] text-black-dark bg-gray-light hover:bg-white-light focus:hover:bg-white-light ':
+    'w-[36px] h-[36px] text-black-dark bg-gray-light xl:bg-white-light hover:bg-white-light xl:hover:bg-gray-light focus:bg-white-light xl:focus:bg-gray-light':
       variant.toLowerCase() === 'contacts',
     'hidden md:flex w-[36px] h-[36px] text-black-dark bg-white hover:bg-secondary focus:bg-secondary hover:text-white focus:text-white':
       variant.toLowerCase() === 'footer',

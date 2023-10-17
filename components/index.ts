@@ -3,9 +3,6 @@ export { default as LocaleSwitcher } from '@/components/LocaleSwitcher/LocaleSwi
 export { default as BurgerMenu } from '@/components/BurgerMenu/BurgerMenu';
 export { default as MenuActions } from '@/components/MenuActions/MenuActions';
 
-// tina testing
-export { default as Test } from '@/components/Test/Test';
-
 // heading
 export { default as Heading } from '@/components/Heading/Heading';
 
@@ -18,6 +15,7 @@ export { default as RoutingLinkButton } from '@/components/Buttons/RoutingLinkBu
 export { default as ScrollLinkButton } from '@/components/Buttons/ScrollLinkButton/ScrollLinkButton';
 export { default as IconBtn } from '@/components/Buttons/IconBtn/IconBtn';
 export { default as BurgerMenuButton } from '@/components/Buttons/BurgerMenuButton/BurgerMenuButton';
+export { default as MethodButton } from '@/components/Buttons/MethodButton/MethodButton';
 
 // slider before-after
 export { default as SliderBeforeAfter } from '@/components/SliderBeforeAfter/SliderBeforeAfter';
@@ -27,7 +25,10 @@ export { default as SliderBeforeAfterHandle } from '@/components/SliderBeforeAft
 export { default as Slider } from '@/components/Slider/Slider';
 
 // feedback
-export { default as FeedbackSlide } from '@/components/FeedbackSlide/FeedbackSlide';
+export { default as FeedbackSlide } from '@/components/Feedbacks/FeedbackSlide/FeedbackSlide';
+export { default as FeedbackCard } from '@/components/Feedbacks/FeedbackCard/FeedbackCard';
+export { default as FeedbackFrame } from '@/components/Feedbacks/FeedbackFrame/FeedbackFrame';
+export { default as FeedbackCap } from '@/components/Feedbacks/FeedbackCap/FeedbackCap';
 
 // section About
 export { default as AboutTabs } from '@/components/AboutTabs/AboutTabs';
@@ -35,7 +36,9 @@ export { default as AboutGeneral } from '@/components/AboutGeneral/AboutGeneral'
 export { default as AboutEducation } from '@/components/AboutEducation/AboutEducation';
 export { default as AboutCareer } from '@/components/AboutCareer/AboutCareer';
 export { default as AboutCertificates } from '@/components/AboutCertificates/AboutCertificates';
-
+export { default as AboutCertificatesSlide } from '@/components/AboutCertificatesSlide/AboutCertificatesSlide';
+export { default as AboutItem } from '@/components/AboutEducationItem/AboutItem';
+export { default as AboutVideo } from '@/components/AboutImage/AboutVideo';
 // section Advantages
 export { default as AdvantagesList } from '@/components/AdvantagesList/AdvantagesList';
 
@@ -65,5 +68,23 @@ export { default as InfoBlock } from '@/components/InfoBlock/InfoBlock';
 export { default as Location } from '@/components/Location/Location';
 
 // modal window
-
 export { default as Modal } from '@/components/Modal/Modal';
+
+// Treatments section
+export { default as TreatmentTabList } from '@/components/TreatmentTabList/TreatmentTabList';
+export { default as TreatmentTabButton } from '@/components/TreatmentTabButton/TreatmentTabButton';
+export { default as TreatmentTabPanel } from '@/components/TreatmentTabPanel/TreatmentTabPanel';
+export { default as TreatmentTabImage } from '@/components/TreatmentTabImage/TreatmentTabImage';
+
+// Treatment Details page
+export { default as TreatmentQAList } from '@/components/TreatmentQAList/TreatmentQAList';
+export { default as TreatmentQAItem } from '@/components/TreatmentQAItem/TreatmentQAItem';
+export { default as TreatmentQAImage } from '@/components/TreatmentQAImage/TreatmentQAImage';
+
+export { default as VideoPlayer } from '@/components/VideoPlayer/VideoPlayer';
+
+// section Consultation
+export { default as Form } from '@/components/Form/Form';
+export { default as FormInput } from '@/components/FormInput/FormInput';
+export { default as FormTextarea } from '@/components/FormTextarea/FormTextarea';
+export { default as FormCheckbox } from '@/components/FormCheckbox/FormCheckbox';

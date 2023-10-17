@@ -14,9 +14,12 @@ const Contacts: React.FC<ContactsProps> = ({
   const sectionData = pageData.contacts;
 
   return (
-    <section className="-mt-[20px] text-black-dark  md:-mt-[36px] xl:-mt-[48px]">
+    <section
+      id={sectionData?.anchor}
+      className="-mt-[20px] text-black-dark md:-mt-[36px] xl:-mt-[48px]"
+    >
       <div className="container">
-        <div className="wrapper rounded-medium bg-white pb-[32px] pt-[24px] md:py-[40px] xl:py-[64px]">
+        <div className="wrapper relative rounded-medium bg-white pb-[32px] pt-[24px] md:rounded-extraLarge md:py-[40px] xl:rounded-max xl:py-[64px]">
           <Heading variant="primary">{sectionData.heading}</Heading>
           <address className="mt-[20px] flex flex-col gap-[20px] not-italic md:mt-[32px] md:flex-row md:gap-[80px] xl:mt-[48px] xl:justify-between xl:gap-0">
             <ul className="flex flex-col gap-[20px] md:gap-[32px] xl:gap-[64px]">
