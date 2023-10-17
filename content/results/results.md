@@ -19,12 +19,6 @@ case:
           and painless, and, most importantly, left no scars. I couldn't believe
           my eyes when, after 1.5 hours, I had healthy legs again, the pain was
           gone, and the swelling disappeared.
-
-
-          For many years, I suffered from varicose veins. I consulted many
-          doctors, but none of them could help me. My condition was exacerbated
-          by numerous treatment attempts, but none of them yielded the desired
-          results. Varicose veins had become unbearable,
     before: /uploads/results/results-1-1.webp
     after: /uploads/results/results-1-2.webp
   - date: 2023-10-02T21:00:00.000Z
