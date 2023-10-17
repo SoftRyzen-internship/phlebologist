@@ -54,12 +54,8 @@ const Navigation: FC<NavigationProps> = ({
             !linkTo.includes('contacts')
           ) {
             return (
-              <li className={itemClass} key={linkTo}>
-                <Link
-                  href={`/${lang}#${linkTo}`}
-                  onClick={actionHandler}
-                  className={linkClass}
-                >
+              <li className={itemClass} key={linkTo} onClick={actionHandler}>
+                <Link href={`/${lang}#${linkTo}`} className={linkClass}>
                   {title}
                 </Link>
               </li>

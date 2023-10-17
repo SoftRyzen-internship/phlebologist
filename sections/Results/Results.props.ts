@@ -19,5 +19,4 @@ export interface ResultsProps {
   staticData: StaticDataType;
   iconData: any;
   lang: Locale;
-  className?: string;
 }
