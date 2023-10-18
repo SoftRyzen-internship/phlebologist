@@ -6,7 +6,7 @@ function checkTextLength(
     return { doesFit: true, text: str };
   }
 
-  return { doesFit: false, text: str.slice(0, limit - 100) + '...' };
+  return { doesFit: false, text: str.slice(0, limit - 110) + '...' };
 }
 
 export default checkTextLength;

@@ -43,14 +43,26 @@ export default async function Home({
         iconData={page.home.iconBtnData}
         lang={lang}
       />
-      <FeedbackSection staticData={page.home} lang={lang} />
+      <FeedbackSection
+        staticData={{
+          feedback: page.home.feedback,
+          iconBtnData: page.home.iconBtnData,
+        }}
+        lang={lang}
+      />
       <FAQSection staticData={{ faq: page.home.faq, socials }} />
       <ConsultationSection
         staticData={page.home.consultation}
         className="-mt-5 md:-mt-8 xl:-mt-10"
       />
       <ContactsSection
-        staticData={{ pageData: page.home, socialData: socials }}
+        staticData={{
+          pageData: {
+            contacts: page.home.contacts,
+            iconBtnData: page.home.iconBtnData,
+          },
+          socialData: socials,
+        }}
       />
     </main>
   );

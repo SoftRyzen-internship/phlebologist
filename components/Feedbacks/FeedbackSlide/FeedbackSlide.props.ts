@@ -1,8 +1,10 @@
+import { FeedbackSlideData, FeedbackData, IIconBtnData } from '@/types';
+
 export interface FeedbackSlideProps {
-  data: any;
+  data: FeedbackSlideData;
   className?: string;
-  staticData?: any;
-  optionalStaticData?: any;
+  staticData: IIconBtnData;
+  optionalStaticData: FeedbackData;
   currentSlideIdx?: number;
   totalQty?: number;
 }

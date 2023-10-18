@@ -1,5 +1,7 @@
+import { IIconBtnData } from '@/types';
+
 export interface ModalProps {
-  staticData: any;
+  staticData: IIconBtnData;
   isOpen?: boolean;
   isReview: boolean;
   onCloseClick: () => void;

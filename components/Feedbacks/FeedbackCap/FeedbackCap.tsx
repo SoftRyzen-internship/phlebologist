@@ -16,7 +16,7 @@ const FeedbackCap: React.FC<FeedbackCapProps> = ({
   const date = setupDateFormat(data?.date);
 
   return (
-    <div className="relative z-10 flex justify-between">
+    <div className="relative z-10 flex justify-between gap-[8px]">
       <div>
         <p
           className={classNames({
@@ -38,7 +38,7 @@ const FeedbackCap: React.FC<FeedbackCapProps> = ({
             target="_blank"
             rel="noreferrer noopener nofollow"
             className="mt-[12px] flex items-end gap-[4px] text-[12px] text-primary-dark-400 transition-colors duration-300 md:mt-[22px] xl:mt-[9px] xl:text-black-dark xl:hover:text-primary-dark-400 xl:focus:text-primary-dark-400"
-            aria-label={staticData?.links?.read?.icon}
+            aria-label={staticData?.links?.send?.icon}
           >
             <Send className="h-[16px] w-[16px] fill-current" />
             {staticData?.links?.send?.text}
