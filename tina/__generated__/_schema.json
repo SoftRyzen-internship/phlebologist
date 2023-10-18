@@ -825,6 +825,7 @@
                   "parser": { "type": "markdown" }
                 }
               ],
+              "ui": { "defaultItem": { "name": "" } },
               "namespace": ["reviews", "en", "case"],
               "searchable": true
             }
