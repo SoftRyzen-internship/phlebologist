@@ -667,6 +667,14 @@ var config_default = defineConfig({
                     type: 'rich-text',
                   },
                 ],
+                ui: {
+                  itemProps: item => {
+                    return { label: `${item?.name}` };
+                  },
+                  defaultItem: {
+                    name: '',
+                  },
+                },
               },
             ],
           },
