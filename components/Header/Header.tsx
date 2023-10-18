@@ -43,7 +43,10 @@ const Header = async ({ lang }: { lang: Locale }) => {
                 {formButton}
               </ScrollLinkButton>
             </div>
-            <BurgerMenu staticData={{ navigation, header, socials }} />
+            <BurgerMenu
+              staticData={{ navigation, header, socials }}
+              lang={lang}
+            />
           </div>
         </div>
       </div>

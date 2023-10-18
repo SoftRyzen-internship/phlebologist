@@ -42,7 +42,6 @@ export default async function Home({
         staticData={page.home.patient_results}
         iconData={page.home.iconBtnData}
         lang={lang}
-        className="-mt-5 md:-mt-8 xl:-mt-10"
       />
       <FeedbackSection staticData={page.home} lang={lang} />
       <FAQSection staticData={{ faq: page.home.faq, socials }} />

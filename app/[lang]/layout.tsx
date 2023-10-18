@@ -37,6 +37,7 @@ export default async function RootLayout({
         {children}
         <Footer
           staticData={{ footerData: footer, socials, iconBtnData, navigation }}
+          lang={lang}
         />
         <div id="modal" />
         <Toaster />
