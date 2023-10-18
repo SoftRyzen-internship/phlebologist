@@ -50,8 +50,7 @@ const Footer: FC<FooterProps> = ({
             <Navigation
               data={navigation}
               lang={lang}
-              className="flex flex-col items-start"
-              itemClassName="mb-4 last:mb-0"
+              className="flex flex-col items-start gap-4"
               variant="footer"
             />
             <div className="ml-auto flex flex-col justify-between text-right">
