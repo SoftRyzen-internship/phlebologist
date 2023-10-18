@@ -99,6 +99,18 @@ uk:
         facere eos omnis ullam culpa beatae, natus
 en:
   case:
+    - date: 2023-08-31T21:00:00.000Z
+      photo: /uploads/reviews/Євген.webp
+      name: Evgeniy
+      telegram: 'https://t.me/boyevg84'
+      review: >
+        I want to express special gratitude to Dr. SERGII VOITSITSKYI for his
+        professionalism and his special individual attention to the patient as a
+        whole for the varicose vein removal surgery he performed. I feel great
+        after the surgery. The quality of my life has improved significantly
+        after the operation. I am super happy. I highly recommend Dr. SERGII
+        VOITSITSKYI. With respect to you and the entire medical staff of the
+        clinic, EVGENIY B.
     - date: 2023-09-22T21:00:00.000Z
       photo: /uploads/reviews/Юлія Поліно.webp
       name: Julia
@@ -118,3 +130,4 @@ en:
         challenges)! I am satisfied with the results and recommend this doctor
         to my family and friends.
 ---
+
