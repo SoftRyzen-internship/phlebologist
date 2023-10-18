@@ -1,27 +1,39 @@
-export interface FormInputs {
-  userName: string;
-  phoneNumber: string;
-  userMessage: string;
-  userAgree: boolean;
+import { FormInputOptionsType } from '../FormInput/FormInput.props';
+import { FormTextareaOptionsType } from '../FormTextarea/FormTextarea.props';
+import { FormCheckboxOptionsType } from '../FormCheckbox/FormCheckbox.props';
+
+export enum NameEnum {
+  userName = 'userName',
+  phoneNumber = 'phoneNumber',
+  userMessage = 'userMessage',
+  userAgree = 'userAgree',
 }
 
-type InputStaticData = {
-  name: {
-    label: string;
-    placeholder: string;
-    error: string;
+export interface IFormBuildingData {
+  options: {
+    name: FormInputOptionsType;
+    phone: FormInputOptionsType;
+    message: FormTextareaOptionsType;
+    agree: FormCheckboxOptionsType;
   };
-  phone: {
-    label: string;
-    placeholder: string;
-    error: string;
-  };
-};
+}
 
-type TextareaStaticData = {
+export interface FormInputs {
+  userName: NameEnum;
+  phoneNumber: NameEnum;
+  userMessage: NameEnum;
+  userAgree: NameEnum;
+}
+
+type CommonInputStaticType = {
   label: string;
   placeholder: string;
   error: string;
+};
+
+type InputStaticData = {
+  name: CommonInputStaticType;
+  phone: CommonInputStaticType;
 };
 
 type CheckboxStaticData = { label: string };
@@ -33,12 +45,14 @@ type ButtonStaticData = {
   errorText: string;
 };
 
+type ToastMessageType = { success: string; error: string };
+
 export interface IForm {
   input: InputStaticData;
-  textarea: TextareaStaticData;
+  textarea: CommonInputStaticType;
   checkbox: CheckboxStaticData;
   button: ButtonStaticData;
-  toastMessage: { success: string; error: string };
+  toastMessage: ToastMessageType;
 }
 
 export interface FormProps {

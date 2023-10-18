@@ -1,11 +1,15 @@
+import { UseFormRegister, FieldErrors } from 'react-hook-form';
+
+import { NameEnum, FormInputs } from '../Form/Form.props';
+
 type StaticDataType = {
   label: string;
   placeholder: string;
   error: string;
 };
 
-type OptionsType = {
-  name: string;
+export type FormInputOptionsType = {
+  name: NameEnum;
   required: boolean;
   pattern: string;
   minLength: number;
@@ -14,7 +18,7 @@ type OptionsType = {
 
 export interface FormInputProps {
   staticData: StaticDataType;
-  register: any;
-  errors: any;
-  options: OptionsType;
+  register: UseFormRegister<FormInputs>;
+  errors: FieldErrors<FormInputs>;
+  options: FormInputOptionsType;
 }
