@@ -114,9 +114,11 @@ export interface IFooterData {
   phone: string;
 }
 
+type NavigationItemType = { title: string; linkTo: string };
+
 export interface INavigationItemData {
-  title: string;
-  linkTo: string;
+  navigation_home: NavigationItemType[];
+  navigation_treatment: NavigationItemType[];
 }
 
 export interface IHeaderButtonsData {

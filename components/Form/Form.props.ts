@@ -5,32 +5,39 @@ export interface FormInputs {
   userAgree: boolean;
 }
 
-export interface IForm {
-  input: {
-    name: {
-      label: string;
-      placeholder: string;
-      error: string;
-    };
-    phone: {
-      label: string;
-      placeholder: string;
-      error: string;
-    };
-  };
-  textarea: {
+type InputStaticData = {
+  name: {
     label: string;
     placeholder: string;
+    error: string;
   };
-  checkbox: {
+  phone: {
     label: string;
+    placeholder: string;
+    error: string;
   };
-  button: {
-    sendText: string;
-    sentText: string;
-    loadingText: string;
-    errorText: string;
-  };
+};
+
+type TextareaStaticData = {
+  label: string;
+  placeholder: string;
+  error: string;
+};
+
+type CheckboxStaticData = { label: string };
+
+type ButtonStaticData = {
+  sendText: string;
+  sentText: string;
+  loadingText: string;
+  errorText: string;
+};
+
+export interface IForm {
+  input: InputStaticData;
+  textarea: TextareaStaticData;
+  checkbox: CheckboxStaticData;
+  button: ButtonStaticData;
   toastMessage: { success: string; error: string };
 }
 

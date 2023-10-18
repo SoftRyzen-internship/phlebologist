@@ -1,14 +1,24 @@
 {
-  "navigation": [
-    { "title": "На головну", "linkTo": "/" },
-    { "title": "Про лікаря", "linkTo": "about" },
-    { "title": "Переваги", "linkTo": "advantages" },
-    { "title": "Методи лікування", "linkTo": "methods" },
-    { "title": "Результати пацієнтів", "linkTo": "results" },
-    { "title": "Відгуки", "linkTo": "feedback" },
-    { "title": "Питання-Відповіді", "linkTo": "faq" },
-    { "title": "Контакти", "linkTo": "contacts" }
-  ],
+  "navigation": {
+    "navigation_home": [
+      { "title": "На головну", "linkTo": "/" },
+      { "title": "Про лікаря", "linkTo": "about" },
+      { "title": "Переваги", "linkTo": "advantages" },
+      { "title": "Методи лікування", "linkTo": "methods" },
+      { "title": "Результати пацієнтів", "linkTo": "results" },
+      { "title": "Відгуки", "linkTo": "feedback" },
+      { "title": "Питання-Відповіді", "linkTo": "faq" },
+      { "title": "Контакти", "linkTo": "contacts" }
+    ],
+    "navigation_treatment": [
+      { "title": "На головну", "linkTo": "/" },
+      { "title": "Ендовазальна лазерна коагуляція", "linkTo": "1" },
+      { "title": "Мікросклеротерапія", "linkTo": "2" },
+      { "title": "Пінне склерозування", "linkTo": "3" },
+      { "title": "Мініфлебектомія", "linkTo": "4" },
+      { "title": "Контакти", "linkTo": "contacts" }
+    ]
+  },
   "header": {
     "linkButton": "Напишіть нам",
     "formButton": "Записатись на консультацію",
@@ -317,9 +327,10 @@
           },
           "textarea": {
             "label": "Ваше повідомлення",
-            "placeholder": "Задайте своє запитання"
+            "placeholder": "Задайте своє запитання",
+            "error": "Максимум 500 символів"
           },
-          "checkbox": { "label": "Даю згоду на обробку персональних данних" },
+          "checkbox": { "label": "Даю згоду на обробку персональних даних" },
           "button": {
             "sendText": "Відправити",
             "sentText": "Відправлено",
@@ -566,7 +577,7 @@
     "facebook": "https://www.facebook.com/dr.SergiiVoitsitskyi"
   },
   "footer": {
-    "address": "Клініка “Медейра” - м. Київ, проспект Берестейський, 67",
+    "address": "Клініка “Медейра” - м. Київ, \nпроспект Берестейський, 67",
     "phone": "+380933521235"
   }
 }

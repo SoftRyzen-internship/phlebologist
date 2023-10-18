@@ -4,6 +4,7 @@ import { FooterProps } from './Footer.props';
 
 const Footer: FC<FooterProps> = ({
   staticData: { footerData, socials, navigation, iconBtnData },
+  lang,
 }) => {
   const { address, phone } = footerData;
 
@@ -34,21 +35,22 @@ const Footer: FC<FooterProps> = ({
             </p>
           </div>
 
-          <div className="hidden  text-left md:flex">
-            <div className="mr-[46px] flex flex-col justify-between xl:mr-[350px]">
+          <div className="hidden text-left md:flex">
+            <div className="mr-[46px] flex flex-col justify-between xl:mr-[312px]">
               <Logo />
               <div>
                 <p className="max-w-[158px] text-[12px] leading-loose -tracking-[0.48px] text-black-dark  opacity-50">
                   {phone}
                 </p>
-                <p className="w-[158px] w-[281px] text-[12px] leading-loose -tracking-[0.48px]  text-black-dark opacity-50">
+                <p className="w-[158px] text-[12px] leading-loose -tracking-[0.48px] text-black-dark opacity-50 md:w-[281px] xl:w-auto mdOnly:whitespace-pre-wrap">
                   {address}
                 </p>
               </div>
             </div>
             <Navigation
               data={navigation}
-              itemClassName="mb-4 last:mb-0"
+              lang={lang}
+              className="flex flex-col items-start gap-4"
               variant="footer"
             />
             <div className="ml-auto flex flex-col justify-between text-right">

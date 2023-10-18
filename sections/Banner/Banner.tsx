@@ -39,7 +39,7 @@ const Banner: FC<BannerProps> = ({ staticData, lang, className }) => {
               {title}
             </Heading>
 
-            <div className="flex flex-col md:flex-col-reverse md:items-end md:gap-6 xl:gap-12 xl:pr-[136px]">
+            <div className="flex flex-col md:flex-col-reverse md:items-end md:gap-6 xl:gap-12">
               <ButtonSecondary
                 linkto="consultation"
                 className="mx-auto mb-2 md:mx-0 md:mb-0 md:mr-auto xl:w-[183px] xl:!px-0 xl:hover:w-[186px] xl:focus:w-[186px]"

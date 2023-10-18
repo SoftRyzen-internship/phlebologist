@@ -1,8 +1,11 @@
+type StaticDataType = {
+  label: string;
+  placeholder: string;
+  error: string;
+};
+
 export interface FormTextareaProps {
-  staticData: {
-    label: string;
-    placeholder: string;
-  };
+  staticData: StaticDataType;
   register: any;
   errors: any;
   options: {

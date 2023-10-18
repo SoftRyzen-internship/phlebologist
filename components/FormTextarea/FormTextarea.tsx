@@ -9,7 +9,7 @@ const FormTextarea: FC<FormTextareaProps> = ({
   errors,
   options,
 }) => {
-  const { label, placeholder } = staticData;
+  const { label, placeholder, error } = staticData;
   const { name } = options;
 
   const hasError = errors[name];
@@ -25,7 +25,7 @@ const FormTextarea: FC<FormTextareaProps> = ({
   );
 
   return (
-    <label className="relative mb-4 flex flex-col text-black-dark">
+    <label className="relative mb-8 flex flex-col text-black-dark">
       <span className="mb-2 text-xs leading-normal -tracking-[0.48px]">
         {label}
       </span>
@@ -34,6 +34,12 @@ const FormTextarea: FC<FormTextareaProps> = ({
         placeholder={placeholder}
         {...register(name, options)}
       />
+
+      {hasError ? (
+        <span className="absolute top-full mt-1 text-xs leading-[1.21] -tracking-[0.48px] text-notify-error">
+          {error}
+        </span>
+      ) : null}
     </label>
   );
 };
