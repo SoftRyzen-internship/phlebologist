@@ -7,16 +7,8 @@ const fetchBanner = async (lang: string) => {
 
     return result;
   } catch (error) {
-    console.log(error);
     return error;
   }
 };
 
 export default fetchBanner;
-
-// === in your component ===
-
-// import { fetchBanner } from '@/api;
-
-// const banner = await fetchBanner(lang);
-// console.log(banner);
