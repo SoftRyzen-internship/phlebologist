@@ -1,6 +1,8 @@
+import { FeedbackSlideData, FeedbackData } from '@/types';
+
 export interface FeedbackCardProps {
-  data: any;
-  staticData?: any;
+  data: FeedbackSlideData;
+  staticData: FeedbackData;
   isModal?: boolean;
   onClick?: () => void;
 }

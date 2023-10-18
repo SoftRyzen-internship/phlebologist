@@ -1,5 +1,7 @@
+import { FeedbackSlideData, FeedbackData } from '@/types';
+
 export interface FeedbackCapProps {
-  data: any;
-  staticData?: any;
+  data: FeedbackSlideData;
+  staticData: FeedbackData;
   isVideo?: boolean;
 }
