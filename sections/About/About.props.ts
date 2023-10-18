@@ -1,5 +1,5 @@
 import { Locale } from '@/i18n.config';
-import { IIconBtnData } from '@/types';
+import { IIconBtnData, AboutDataType } from '@/types';
 
 export type AboutMenuType = {
   item: string;
@@ -30,5 +30,6 @@ export interface AboutProps {
   staticData: {
     about: AboutStaticDataType;
     iconData: IIconBtnData;
+    fallback: AboutDataType;
   };
 }
