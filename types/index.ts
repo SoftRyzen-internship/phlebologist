@@ -63,6 +63,13 @@ export type AboutCertificateType = {
   };
 };
 
+// === fetched data types - Banner collection ===
+
+export interface IFetchedBannerData {
+  title: string;
+  description: string;
+}
+
 // === static data types ===
 
 export interface IIconBtnData {
@@ -174,6 +181,12 @@ export interface IMethodData {
 export interface IMethodInfoData {
   question: string;
   answer: string;
+}
+
+export interface IBannerData {
+  title: string;
+  description: string;
+  buttonText: string;
 }
 
 // === Treatment page ===

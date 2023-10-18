@@ -3,12 +3,13 @@ import Image from 'next/image';
 import { fetchAbout } from '@/api';
 
 import { AboutTabs, ErrorMessage, Heading, AboutVideo } from '@/components';
+import { AboutDataType } from '@/types';
 
 import { AboutProps } from './About.props';
 
 const About: React.FC<AboutProps> = async ({ lang, staticData }) => {
   try {
-    const data = await fetchAbout(lang);
+    const data: AboutDataType = await fetchAbout(lang);
 
     const {
       title,
