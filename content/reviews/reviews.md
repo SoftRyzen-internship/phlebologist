@@ -136,6 +136,16 @@ uk:
         facere eos omnis ullam culpa beatae, natus
 en:
   case:
+    - date: 2023-10-13T21:00:00.000Z
+      photo: /uploads/reviews/Роман Самборський.webp
+      name: Roman Samborsky
+      review: >
+        I highly recommend Dr. Voitsitskyi as a practicing surgeon-phlebologist.
+        He provided proper pre- and post-operative support. The operation under
+        local anesthesia went smoothly with minimal discomfort. It's been six
+        months, I've resumed physical activities, and there have been no
+        post-operative complications. The previous discomfort in my legs hasn't
+        returned. I am 100% satisfied with the quality of the work.
     - date: 2023-10-14T21:00:00.000Z
       photo: /uploads/reviews/Світлана Грибанова.webp
       name: Svitlana Hrybanova
