@@ -3,7 +3,7 @@
     "name": {
       "name": "userName",
       "required": true,
-      "pattern": "^(?![\\s-]*[\\s-])(?!.*--)(?!.*- )(?!.*'-)(?=.*[A-Za-zА-Яа-яЇїІіЄєҐґ])[A-Za-zА-Яа-яЇїІіЄєҐґ' -]+$",
+      "pattern": "^(?![\\s-]*[\\s-])(?!.*--)(?!.*- )(?!.* -)(?!.*'-)(?=.*[A-Za-zА-Яа-яЇїІіЄєҐґ])[A-Za-zА-Яа-яЇїІіЄєҐґ' -]+$",
       "minLength": 2,
       "maxLength": 70
     },
@@ -17,7 +17,7 @@
     "message": {
       "name": "userMessage",
       "required": false,
-      "maxLength": 700
+      "maxLength": 500
     },
     "agree": { "name": "userAgree", "required": true }
   }

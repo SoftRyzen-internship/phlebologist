@@ -1,3 +1,5 @@
+import { TinaMarkdownContent } from 'tinacms/dist/rich-text';
+
 export type IconBtnName =
   | 'tiktok'
   | 'facebook'
@@ -90,6 +92,10 @@ export interface IIconBtnData {
     iconFunction: string;
     iconLabel: string;
   };
+  close: {
+    iconFunction: string;
+    iconLabel: string;
+  };
   play: {
     iconFunction: string;
     iconLabel: string;
@@ -108,9 +114,11 @@ export interface IFooterData {
   phone: string;
 }
 
+type NavigationItemType = { title: string; linkTo: string };
+
 export interface INavigationItemData {
-  title: string;
-  linkTo: string;
+  navigation_home: NavigationItemType[];
+  navigation_treatment: NavigationItemType[];
 }
 
 export interface IHeaderButtonsData {
@@ -201,3 +209,74 @@ export interface IToastMessage {
   success: string;
   error: string;
 }
+
+//=== Data to send ===
+
+export interface IDataToSend {
+  userName: string;
+  userPhone: string;
+  userMessage: string;
+}
+
+//=== Feedback Slides ===
+
+export type FeedbackSlideData = {
+  __typename: string;
+  date: string;
+  photo: string;
+  video?: null | string | undefined;
+  name: string;
+  telegram?: null | string | undefined;
+  review: {
+    type: string;
+    children: TinaMarkdownContent[];
+  };
+};
+
+export type FeedbackData = {
+  heading: string;
+  anchor: string;
+  photo: { alt: string };
+  links: {
+    send: { text: string; icon: string };
+    read: { text: string };
+    video: { icon: string };
+  };
+};
+
+// === Contacts ===
+
+export type ContactData = {
+  heading: string;
+  anchor: string;
+  contactData: {
+    phone: { caption: string; content: string };
+    address: {
+      caption: string;
+      content: string;
+    };
+    schedule: {
+      caption: string;
+      content: string;
+    };
+    media: { caption: string };
+    location: {
+      placename: { firstRow: string; secondRow: string };
+      url: string;
+      images: {
+        map: {
+          img: string;
+          alt: string;
+        };
+        office: {
+          img: string;
+          alt: string;
+        };
+      };
+    };
+  };
+  action: {
+    instruction: string;
+    actionName: string;
+  };
+};

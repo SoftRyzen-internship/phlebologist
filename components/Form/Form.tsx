@@ -5,10 +5,10 @@ import { useForm, SubmitHandler } from 'react-hook-form';
 import useFormPersist from 'react-hook-form-persist';
 import classnames from 'classnames';
 
-import { FormProps, FormInputs } from './Form.props';
+import { FormProps, FormInputs, IFormBuildingData } from './Form.props';
 
-//TODO import sendDataToTelegram function
-//TODO import sendDataToGoogleSheets function
+import { sendDataToTelegram } from '@/utils/sendDataToTelegram';
+import { sendDataToGoogleSheets } from '@/utils/sendDataToGoogleSheets';
 import formBuildingData from '@/data/formBuildingData.json';
 import { showToast } from '@/utils/showToast';
 
@@ -20,13 +20,14 @@ import {
 } from '@/components';
 
 import { FORM_DATA_KEY } from '@/constants';
+import { IDataToSend } from '@/types';
 
 const Form: FC<FormProps> = ({ staticData, className = '' }) => {
   const { input, textarea, checkbox, button, toastMessage } = staticData;
   const { sendText, sentText, loadingText, errorText } = button;
   const {
     options: { name, phone, message, agree },
-  } = formBuildingData;
+  } = formBuildingData as IFormBuildingData;
 
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [buttonCurrentText, setButtonCurrentText] = useState<string>(sendText);
@@ -55,15 +56,24 @@ const Form: FC<FormProps> = ({ staticData, className = '' }) => {
   );
 
   const onSubmit: SubmitHandler<FormInputs> = async (formData: FormInputs) => {
-    const sendDataToTelegram = (formData: FormInputs) => {
-      // DELETE this function!
-      console.log(formData);
-      return Math.random() < 0.5;
+    const sendData = async (formData: FormInputs) => {
+      let dataToSend = {};
+      for (let key in formData) {
+        if (key !== 'userAgree') dataToSend[key] = formData[key];
+      }
+
+      try {
+        await sendDataToTelegram(dataToSend as IDataToSend);
+        await sendDataToGoogleSheets(dataToSend as IDataToSend);
+        return true;
+      } catch (error) {
+        return false;
+      }
     };
+
     try {
       setIsLoading(true);
-      //   const isSuccess: boolean = await sendDataToTelegram(formData);
-      const isSuccess: boolean = sendDataToTelegram(formData);
+      const isSuccess: boolean = await sendData(formData);
       const buttonCurrentText = isSuccess ? sentText : errorText;
       setButtonCurrentText(buttonCurrentText);
 

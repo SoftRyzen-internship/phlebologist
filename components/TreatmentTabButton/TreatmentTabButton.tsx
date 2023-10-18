@@ -39,7 +39,7 @@ const TreatmentTabButton: React.FC<TreatmentTabButtonProps> = ({
       </h3>
       <p
         className={classNames(
-          'absolute bottom-6 left-6 w-[234px] opacity-100 transition-all duration-300 notXl:hidden',
+          'absolute bottom-6 left-6 w-[234px] opacity-100 transition-all duration-300 notXl:!hidden',
           css.text,
           { '!block !opacity-100': selected },
         )}

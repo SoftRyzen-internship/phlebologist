@@ -8,7 +8,7 @@ const Feedback: React.FC<FeedbackProps> = async ({ staticData, lang }) => {
 
   return (
     <section
-      id={staticData?.feedback?.anchor}
+      id={staticData.feedback.anchor}
       className="-mt-[20px] text-black-dark  md:-mt-[36px] xl:-mt-[48px]"
     >
       <div className="container">
@@ -23,7 +23,7 @@ const Feedback: React.FC<FeedbackProps> = async ({ staticData, lang }) => {
           <Slider
             slides={feedbacks?.case}
             staticData={staticData?.iconBtnData}
-            optionalStaticData={staticData?.feedback}
+            optionalStaticData={staticData.feedback}
             section="feedback"
             slide={FeedbackSlide}
           />

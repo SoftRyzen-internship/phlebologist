@@ -20,10 +20,7 @@ const Hero: FC<HeroProps> = ({ staticData, lang, className }) => {
   );
 
   const buttonClass = classnames(
-    {
-      'xl:mr-10': lang === 'en',
-    },
-    'mx-auto mb-2 md:mx-0 md:mb-0 md:ml-auto',
+    'mx-auto mb-2 md:mx-0 md:mb-0 md:ml-auto xl:w-[307px] xl:px-8',
   );
 
   return (

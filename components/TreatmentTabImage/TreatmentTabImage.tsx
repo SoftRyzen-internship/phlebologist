@@ -13,7 +13,7 @@ const TreatmentTabImage: React.FC<TreatmentTabImageProps> = ({
   const sizes = classNames(
     'smOnly:hidden',
     'md:h-[300px] md:w-[656px]',
-    'xl:h-[290px] xl:w-[540px]',
+    'xl:h-[290px] xl:w-[560px]',
   );
 
   const transition = useTransition([image], {
@@ -40,7 +40,7 @@ const TreatmentTabImage: React.FC<TreatmentTabImageProps> = ({
             <animated.div
               className={classNames(
                 sizes,
-                'mx-auto mb-8 rounded-medium md:mb-0 xl:mx-0 xl:ml-auto',
+                'mx-auto mb-8 rounded-medium md:mb-0 xl:mx-0 xl:ml-[37px]',
               )}
               style={style}
             >
