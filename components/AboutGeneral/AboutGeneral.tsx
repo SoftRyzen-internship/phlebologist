@@ -18,13 +18,13 @@ const AboutGeneral: React.FC<AboutGeneralProps> = ({
         {name}
       </Heading>
       <p
-        className="mt-5 w-[234px] font-medium uppercase
-        leading-6 md:mt-8 xl:mt-[64px] xl:w-[296px] xl:text-xl"
+        className="mt-5 w-[234px] text-base font-medium
+        uppercase md:mt-8 xl:mt-[64px] xl:w-[296px] xl:text-xl"
       >
         {profession}
       </p>
 
-      <div className="mt-5 md:mt-7 md:flex md:gap-10 xl:mt-[88px] xl:flex-row-reverse">
+      <div className="mt-5 md:mt-7 md:flex md:gap-10 xl:mt-[70px] xl:flex-row-reverse xl:justify-end">
         <div className="md:min-w-[236px] smOnly:mb-5">
           <p className="mb-3 font-semibold uppercase md:mb-2 xl:mb-8">
             {firstSubtitle}
@@ -41,7 +41,7 @@ const AboutGeneral: React.FC<AboutGeneralProps> = ({
           <p className="mb-3 font-semibold uppercase md:mb-2 xl:mb-8">
             {secondSubtitle}
           </p>
-          <ul className="flex flex-col gap-2 xl:gap-3">
+          <ul className="flex flex-col gap-2 md:w-[274px] xl:gap-3">
             {education &&
               education.map((item, index) => (
                 <li key={`${item.__typename}${index}`}>{item.institution}</li>

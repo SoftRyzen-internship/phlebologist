@@ -28,7 +28,7 @@ const AboutEducation: FC<AboutEducationProps> = ({ data, staticData }) => {
       </Heading>
       {isScreenMobile && (
         <>
-          <ul className="mt-5 list-none md:mt-8 md:grid md:grid-cols-2 md:gap-x-6 xl:block">
+          <ul className="mt-5 grid list-none gap-4">
             {institutions &&
               !isShowAll &&
               institutions
@@ -55,7 +55,7 @@ const AboutEducation: FC<AboutEducationProps> = ({ data, staticData }) => {
         </>
       )}
       {!isScreenMobile && (
-        <ul className="mt-5 list-none md:mt-8 md:grid md:grid-cols-2 md:gap-x-6 xl:block">
+        <ul className="mt-8 grid list-none gap-4 mdOnly:grid-cols-2">
           {institutions &&
             institutions.map((item, index) => (
               <AboutItem key={`${item.__typename}${index}`} item={item} />
