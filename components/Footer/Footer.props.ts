@@ -12,7 +12,7 @@ export interface FooterProps {
     socials: ISocials;
     iconBtnData: IIconBtnData;
     footerData: IFooterData;
-    navigation: INavigationItemData[];
+    navigation: INavigationItemData;
   };
   lang: Locale;
 }

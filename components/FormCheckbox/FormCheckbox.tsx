@@ -20,27 +20,23 @@ const FormCheckbox: FC<FormCheckboxProps> = ({
 
   const hasError = errors[name];
 
-  const checkboxTextClass = classnames(
-    'block text-xs leading-normal -tracking-[0.48px]',
-    {
-      'text-notify-error': hasError,
-    },
-  );
-
   const checkboxClass = classnames(
-    'custom-checkbox absolute -ml-6 flex h-4 w-4 items-center justify-center rounded border border-gray-dark hover:border-gray-dim focus:border-gray-dim transition-all duration-300',
+    'custom-checkbox absolute -ml-6 flex h-4 w-4 items-center justify-center rounded border hover:border-gray-dim focus:border-gray-dim transition-all duration-300',
+    { 'border-gray-dark': !isChecked && !hasError },
     {
       'border-gray-dim': isChecked,
+    },
+    {
+      '!border-notify-error': hasError,
     },
   );
 
   return (
     <label className="relative mb-4 flex max-w-fit pl-6 text-black-dark hover:cursor-pointer">
       <Controller
+        shouldUnregister
         name={name}
-        rules={{
-          required,
-        }}
+        rules={{ required }}
         control={control}
         render={({ field }) => (
           <input {...field} className="hidden-checkbox" type="checkbox" />
@@ -49,7 +45,9 @@ const FormCheckbox: FC<FormCheckboxProps> = ({
       <span className={checkboxClass} aria-label="Confirmation checkbox">
         {isChecked && <SvgCheck aria-hidden />}
       </span>
-      <span className={checkboxTextClass}>{label}</span>
+      <span className="block text-xs leading-normal -tracking-[0.48px]">
+        {label}
+      </span>
     </label>
   );
 };

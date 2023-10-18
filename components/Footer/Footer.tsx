@@ -35,14 +35,14 @@ const Footer: FC<FooterProps> = ({
             </p>
           </div>
 
-          <div className="hidden  text-left md:flex">
-            <div className="mr-[46px] flex flex-col justify-between xl:mr-[350px]">
+          <div className="hidden text-left md:flex">
+            <div className="mr-[46px] flex flex-col justify-between xl:mr-[312px]">
               <Logo />
               <div>
                 <p className="max-w-[158px] text-[12px] leading-loose -tracking-[0.48px] text-black-dark  opacity-50">
                   {phone}
                 </p>
-                <p className="w-[158px] text-[12px] leading-loose -tracking-[0.48px] text-black-dark  opacity-50 md:w-[281px]">
+                <p className="w-[158px] text-[12px] leading-loose -tracking-[0.48px] text-black-dark opacity-50 md:w-[281px] xl:w-auto mdOnly:whitespace-pre-wrap">
                   {address}
                 </p>
               </div>
@@ -50,6 +50,7 @@ const Footer: FC<FooterProps> = ({
             <Navigation
               data={navigation}
               lang={lang}
+              className="flex flex-col items-start"
               itemClassName="mb-4 last:mb-0"
               variant="footer"
             />

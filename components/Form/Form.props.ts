@@ -21,6 +21,7 @@ type InputStaticData = {
 type TextareaStaticData = {
   label: string;
   placeholder: string;
+  error: string;
 };
 
 type CheckboxStaticData = { label: string };

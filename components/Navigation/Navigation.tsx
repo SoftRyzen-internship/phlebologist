@@ -17,6 +17,7 @@ const Navigation: FC<NavigationProps> = ({
   actionHandler,
 }) => {
   const pathname = usePathname();
+  const { navigation_home, navigation_treatment } = data;
 
   const itemClass = classnames(
     {
@@ -30,14 +31,15 @@ const Navigation: FC<NavigationProps> = ({
     'transition-all duration-300',
     itemClassName,
   );
+
   const linkClass = classnames(
     'flex justify-center items-center w-full h-full',
   );
 
-  return (
+  return pathname.includes('treatment') ? (
     <nav>
       <ul className={className}>
-        {data.map(({ title, linkTo }) => {
+        {navigation_treatment.map(({ title, linkTo }) => {
           if (linkTo.includes('/')) {
             return (
               <li className={itemClass} key={linkTo} onClick={actionHandler}>
@@ -49,39 +51,66 @@ const Navigation: FC<NavigationProps> = ({
           }
 
           if (
-            pathname.includes('treatment') &&
             !linkTo.includes('consultation') &&
-            !linkTo.includes('contacts') &&
-            !linkTo.includes('results') &&
-            !linkTo.includes('feedback')
+            !linkTo.includes('contacts')
           ) {
             return (
               <li className={itemClass} key={linkTo} onClick={actionHandler}>
-                <Link href={`/${lang}#${linkTo}`} className={linkClass}>
+                <Link href={linkTo} className={linkClass}>
                   {title}
                 </Link>
               </li>
             );
           }
 
-          if (!linkTo.includes('results') && !linkTo.includes('feedback')) {
+          return (
+            <li className={itemClass} key={linkTo} onClick={actionHandler}>
+              <LinkScroll
+                spy={true}
+                smooth={true}
+                offset={0}
+                duration={500}
+                to={linkTo}
+                href={`#${linkTo}`}
+                onClick={actionHandler}
+                className={linkClass}
+              >
+                {title}
+              </LinkScroll>
+            </li>
+          );
+        })}
+      </ul>
+    </nav>
+  ) : (
+    <nav>
+      <ul className={className}>
+        {navigation_home.map(({ title, linkTo }) => {
+          if (linkTo.includes('/')) {
             return (
               <li className={itemClass} key={linkTo} onClick={actionHandler}>
-                <LinkScroll
-                  spy={true}
-                  smooth={true}
-                  offset={0}
-                  duration={500}
-                  to={linkTo}
-                  href={`#${linkTo}`}
-                  onClick={actionHandler}
-                  className={linkClass}
-                >
+                <Link href={`${linkTo}${lang}`} className={linkClass}>
                   {title}
-                </LinkScroll>
+                </Link>
               </li>
             );
           }
+          return (
+            <li className={itemClass} key={linkTo} onClick={actionHandler}>
+              <LinkScroll
+                spy={true}
+                smooth={true}
+                offset={0}
+                duration={500}
+                to={linkTo}
+                href={`#${linkTo}`}
+                onClick={actionHandler}
+                className={linkClass}
+              >
+                {title}
+              </LinkScroll>
+            </li>
+          );
         })}
       </ul>
     </nav>

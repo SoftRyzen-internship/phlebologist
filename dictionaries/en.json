@@ -1,14 +1,24 @@
 {
-  "navigation": [
-    { "title": "Homepage", "linkTo": "/" },
-    { "title": "About the doctor", "linkTo": "about" },
-    { "title": "Advantages", "linkTo": "advantages" },
-    { "title": "Treatment methods", "linkTo": "methods" },
-    { "title": "Patient results", "linkTo": "results" },
-    { "title": "Reviews", "linkTo": "feedback" },
-    { "title": "FAQ", "linkTo": "faq" },
-    { "title": "Contacts", "linkTo": "contacts" }
-  ],
+  "navigation": {
+    "navigation_home": [
+      { "title": "Homepage", "linkTo": "/" },
+      { "title": "About the doctor", "linkTo": "about" },
+      { "title": "Advantages", "linkTo": "advantages" },
+      { "title": "Treatment methods", "linkTo": "methods" },
+      { "title": "Patient results", "linkTo": "results" },
+      { "title": "Reviews", "linkTo": "feedback" },
+      { "title": "FAQ", "linkTo": "faq" },
+      { "title": "Contacts", "linkTo": "contacts" }
+    ],
+    "navigation_treatment": [
+      { "title": "Homepage", "linkTo": "/" },
+      { "title": "Endovenous Laser Coagulation", "linkTo": "1" },
+      { "title": "Microsclerotherapy", "linkTo": "2" },
+      { "title": "Foam sclerotherapy", "linkTo": "3" },
+      { "title": "Miniphlebectomy", "linkTo": "4" },
+      { "title": "Contacts", "linkTo": "contacts" }
+    ]
+  },
   "header": {
     "linkButton": "Contact us",
     "formButton": "Schedule a Consultation",
@@ -315,7 +325,8 @@
           },
           "textarea": {
             "label": "Your message",
-            "placeholder": "Ask your question"
+            "placeholder": "Ask your question",
+            "error": "Maximum 500 characters"
           },
           "checkbox": {
             "label": "I consent to the processing of personal data"

@@ -7,7 +7,7 @@ export interface BurgerMenuProps {
 }
 
 type BurgerMenuData = {
-  navigation: INavigationItemData[];
+  navigation: INavigationItemData;
   header: IHeaderButtonsData;
   socials: ISocials;
 };
