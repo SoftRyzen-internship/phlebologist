@@ -97,6 +97,18 @@ uk:
         facere eos omnis ullam culpa beatae, natus
 en:
   case:
+    - date: 2023-10-04T21:00:00.000Z
+      photo: /uploads/reviews/Олена Сайног.webp
+      name: Olena Saynoh
+      telegram: 'https://t.me/ElenaSaynog'
+      review: >
+        Great thanks to the best vascular surgeon and phlebologist, Dr. Sergii
+        Voitsitskyi, for his humanity, professionalism, and care. I had several
+        consultations with different doctors, but when I came for a consultation
+        with Dr. Voitsitskyi, I understood that he was the doctor I could trust
+        with confidence that my health was in reliable hands. His attentiveness
+        as a specialist convinced me completely in my choice of a doctor. Now I
+        can wholeheartedly recommend Dr. Voitsitskyi to others.
     - date: 2023-08-31T21:00:00.000Z
       photo: /uploads/reviews/Євген.webp
       name: Evgeniy
