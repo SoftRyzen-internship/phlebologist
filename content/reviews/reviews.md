@@ -108,6 +108,18 @@ uk:
         facere eos omnis ullam culpa beatae, natus
 en:
   case:
+    - date: 2023-09-20T21:00:00.000Z
+      photo: /uploads/reviews/Людмила Мадзяновська.webp
+      name: Lyudmyla Madzianovska
+      review: >
+        I want to thank the phlebologist Dr. Voitsitskyi for the vein removal
+        surgery on my leg. He is a very attentive, sensitive, and qualified
+        doctor, a wonderful person who explained everything in an accessible
+        way. The surgery was successful and took place on September 6, 2023. I
+        feel good now. I am very satisfied with the clinic's work and Dr.
+        Voitsitskyi. To all those who have problems with varicose veins, I
+        recommend turning to Dr. Voitsitskyi. You will be satisfied. I wish the
+        doctor good health and grateful patients!
     - date: 2023-10-04T21:00:00.000Z
       photo: /uploads/reviews/Олена Сайног.webp
       name: Olena Saynoh
