@@ -72,5 +72,25 @@ uk:
         nobis eius fuga dignissimos dicta accusantium? Ipsa excepturi
         repellendus, suscipit inventore temporibus aliquid quidem at quia est
         facere eos omnis ullam culpa beatae, natus
+en:
+  case:
+    - date: 2023-09-22T21:00:00.000Z
+      photo: /uploads/reviews/Юлія Поліно.webp
+      name: Julia
+      telegram: 'https://t.me/YuliiaPolino'
+      review: >
+        Dr. Sergii Voitsitskyi is not the first phlebologist I consulted, but he
+        is the one I chose. He is an excellent specialist, a master of his
+        craft, very attentive to details. During the consultation, I received
+        direct answers to all the questions that concerned me. During the
+        ultrasound examination, the doctor showed and explained in
+        understandable words what was happening with my legs. I am not an easy
+        patient, as I am allergic to almost all medical drugs, and I turned to
+        him with quite advanced varicose veins and thrombosis. Although all the
+        necessary tests were done, my peculiarity became apparent during the
+        first surgery. I am very grateful to Dr. Sergii Voitsitskyi for not
+        refusing further treatment (not all doctors are willing to take on such
+        challenges)! I am satisfied with the results and recommend this doctor
+        to my family and friends.
 ---
 
