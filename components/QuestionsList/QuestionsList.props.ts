@@ -5,7 +5,7 @@ export interface QuestionsListProps {
   };
 }
 
-type QuestionsType = {
+export type QuestionsType = {
   question: string;
   answer: string;
 };
