@@ -125,6 +125,15 @@ uk:
         facere eos omnis ullam culpa beatae, natus
 en:
   case:
+    - date: 2023-10-14T21:00:00.000Z
+      photo: /uploads/reviews/Світлана Грибанова.webp
+      name: Svitlana Hrybanova
+      review: >
+        A young doctor par excellence, Dr. Voitsitskyi. He performed surgery on
+        my leg veins. He is attentive and a true specialist in his field.
+        Everything went well without pain or any issues. I will recommend him to
+        everyone for getting rid of these conditions. Walk with beautiful and
+        healthy legs! Wishing you health and happiness, Dr. Voitsitskyi!
     - date: 2023-10-08T21:00:00.000Z
       photo: /uploads/reviews/Юлія Кашпуренко.webp
       name: Yulia Kashpurenko
