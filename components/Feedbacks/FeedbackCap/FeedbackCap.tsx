@@ -16,7 +16,7 @@ const FeedbackCap: React.FC<FeedbackCapProps> = ({
   const date = setupDateFormat(data?.date);
 
   return (
-    <div className="relative z-10 flex justify-between">
+    <div className="relative z-10 flex justify-between gap-[8px]">
       <div>
         <p
           className={classNames({
