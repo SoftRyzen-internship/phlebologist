@@ -381,7 +381,7 @@
       "1": {
         "title": "Endovenous Laser Coagulation",
         "description": "is a minimally invasive procedure that uses laser radiation to close and destroy varicose veins from the inside, improving circulation and reducing the symptoms of varicose veins.",
-        "image": "/images/treatment/treatment-temp.webp",
+        "image": "/images/treatment/treatment-1-2.webp",
         "questions": [
           {
             "question": "Who needs Endovenous Laser Coagulation (EVLA)?",
@@ -424,7 +424,7 @@
       "4": {
         "title": "Miniphlebectomy",
         "description": "is a minimally invasive method for removing varicose veins through small punctures. No incisions are made during the procedure, which speeds up recovery and avoids scarring.",
-        "image": "/images/treatment/treatment-temp.webp",
+        "image": "/images/treatment/treatment-4.webp",
         "questions": [
           {
             "question": "Who needs it?",
@@ -464,7 +464,7 @@
       "2": {
         "title": "Microsclerotherapy",
         "description": "is a minimally invasive procedure performed to treat small-diameter varicose veins, measuring just millimeters in size, such as reticular veins and 'spider veins'. During sclerotherapy, a low-concentration sclerosing solution is injected into the affected vein using an ultra-fine needle. This solution irritates the vein's lining, causing it to break down and the vein to seal shut. Over time, the vein transforms into scar tissue and completely disappears.",
-        "image": "/images/treatment/treatment-temp.webp",
+        "image": "/images/treatment/treatment-2.webp",
         "questions": [
           {
             "question": "Who needs it?",
@@ -512,7 +512,7 @@
       "3": {
         "title": "Foam sclerotherapy",
         "description": "(or foam sclerotherapy with ultrasound guidance) is a non-surgical method for treating varicose veins. The essence of this procedure involves the injection of a special sclerosing agent (typically in the form of a foam made of polidocanol) into the affected vein, often administered through intravenous catheters. This agent triggers inflammation within the vein, leading to its closure. As a result, blood can no longer flow through it, the vein's diameter decreases, and it eventually transforms into scar tissue.",
-        "image": "/images/treatment/treatment-temp.webp",
+        "image": "/images/treatment/treatment-3.webp",
         "questions": [
           {
             "question": "Who needs it?",
