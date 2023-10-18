@@ -11,7 +11,6 @@ import PlayIcon from '@/public/icons/player.svg';
 import { AboutVideoProps } from './AboutVideo.props';
 
 const AboutVideo: FC<AboutVideoProps> = ({ data, lang, staticData }) => {
-  console.log(data);
   const [isOpen, setIsOpen] = useState(false);
   const { image, video } = data;
 

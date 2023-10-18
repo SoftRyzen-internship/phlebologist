@@ -45,7 +45,7 @@ const Navigation: FC<NavigationProps> = ({
                 offset={0}
                 duration={500}
                 to={linkTo}
-                href={`#${linkTo}`}
+                href={`${linkTo}`}
                 onClick={actionHandler}
               >
                 {title}

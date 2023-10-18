@@ -201,3 +201,11 @@ export interface IToastMessage {
   success: string;
   error: string;
 }
+
+//=== Data to send ===
+
+export interface IDataToSend {
+  userName: string;
+  userPhone: string;
+  userMessage: string;
+}

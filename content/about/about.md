@@ -8,18 +8,21 @@ general:
     education:
       - institution: Національний медичний університет О.О.Богомольця
       - institution: Національна медична академія П.Л.Шупика
-      - institution: Стажування з судинної хірургії у Львівській обласній клінічній лікарні
+      - institution:
+          Стажування з судинної хірургії у Львівській обласній клінічній лікарні
     experience:
       - point: Більше 10 років практики
       - point: 5000+ вилікуваних пацієнтів
       - point: 4000+ проведених операцій
   en:
     name: Sergii Voitsitskyi
-    profession: Surgеon of the 1st Qualification Category in Vascular Surgery Phlebologist
+    profession:
+      Surgеon of the 1st Qualification Category in Vascular Surgery Phlebologist
     education:
       - institution: National Medical University named after O.O.Bogomolets
       - institution: National Medical Academy named after P.L.Shupyk
-      - institution: Internship in Vascular Surgery at Lviv Regional Clinical Hospital
+      - institution:
+          Internship in Vascular Surgery at Lviv Regional Clinical Hospital
     experience:
       - point: More than 10 years of practice
       - point: 'Over 5000 successfully treated patients '
@@ -33,9 +36,12 @@ education:
           Управлінням охорони здоров’я присвоєно першу кваліфікаційну категорію
           за спеціальністю «Судинна хірургія».
       - period: '2020'
-        institution: "Цикл спеціалізації «Ультразвукова діагностика» Ужгородський національний університет\_"
+        institution:
+          "Цикл спеціалізації «Ультразвукова діагностика» Ужгородський
+          національний університет\_"
       - period: '2019'
-        institution: 'The 9th MUNICH VASCULAR CONFERENCE (MAC), Munich, Germany.'
+        institution:
+          'The 9th MUNICH VASCULAR CONFERENCE (MAC), Munich, Germany.'
       - period: з 2018
         institution: Член Європейської асоціації судинних хірургів.
       - period: '2018'
@@ -43,7 +49,10 @@ education:
           Стажування з судинної хірургії на базі Львівської обласної клінічної
           лікарні.
       - period: 2013-2017
-        institution: "Національна медична академія післядипломної освіти ім. П.Л. Шупика «Національний інститут хірургії та трансплантології ім. О.О. Шалімова»\_"
+        institution:
+          "Національна медична академія післядипломної освіти ім. П.Л. Шупика
+          «Національний інститут хірургії та трансплантології ім. О.О.
+          Шалімова»\_"
       - period: 2007-2013
         institution: >-
           Національний медичний університет імені О.О.Богомольця 1-й медичний
@@ -58,13 +67,15 @@ education:
       - period: Since 2018
         institution: Member of the European Association for Vascular Surgeons.
       - period: '2019'
-        institution: 'Attended The 9th MUNICH VASCULAR CONFERENCE (MAC) in Munich, Germany.'
+        institution:
+          'Attended The 9th MUNICH VASCULAR CONFERENCE (MAC) in Munich, Germany.'
       - period: '2020'
         institution: >-
           Specialization in "Ultrasound Diagnostics" at Uzhhorod National
           University.
       - period: '2018'
-        institution: Internship in Vascular Surgery at Lviv Regional Clinical Hospital.
+        institution:
+          Internship in Vascular Surgery at Lviv Regional Clinical Hospital.
       - period: 2013-2017
         institution: >-
           National Medical Academy of Postgraduate Education named after P.L.
@@ -81,7 +92,9 @@ career:
       - period: 2013-2016
         institution: 'КМКЛ №6 / Хірургічне відділення №1, №2'
       - period: 2013-2016
-        institution: "КНП «Черкаська обласна лікарня Черкаської обласної ради» Центр судинної хірургії,\_ Лікар-хірург"
+        institution:
+          "КНП «Черкаська обласна лікарня Черкаської обласної ради» Центр
+          судинної хірургії,\_ Лікар-хірург"
       - period: 2016-2020
         institution: >-
           Обласний центр екстреної медичної допомоги та медичних катастроф,
@@ -104,11 +117,13 @@ career:
       - period: Since 2023
         institution: '"Medeira" Clinic - Vascular Surgeon / Phlebologist.'
       - period: Since 2020
-        institution: '"Oxford Medical" Clinic - Vascular Surgeon / Phlebologist.'
+        institution:
+          '"Oxford Medical" Clinic - Vascular Surgeon / Phlebologist.'
       - period: 2021-2023
         institution: '"ProHealth" Clinic - Vascular Surgeon / Phlebologist.'
       - period: 2020-2022
-        institution: '"Institute Vein" Clinic - Vascular Surgeon / Phlebologist.'
+        institution:
+          '"Institute Vein" Clinic - Vascular Surgeon / Phlebologist.'
       - period: 2016-2020
         institution: >-
           Cherkasy Regional Hospital of the Cherkasy Regional Council, Vascular
@@ -223,11 +238,11 @@ certificates:
   - photo: /uploads/about/12.12.2020.webp
     description:
       uk:
-        alt: Сертифікат про відвідування - Досягнення в комплексній венозній освіті
+        alt:
+          Сертифікат про відвідування - Досягнення в комплексній венозній освіті
       en:
         alt: >-
-          Certificate of attendance - Advances in Comprehensive Venous
-          Education 
+          Certificate of attendance - Advances in Comprehensive Venous Education
   - photo: /uploads/about/10.09.2021.webp
     description:
       uk:
@@ -362,4 +377,3 @@ certificates:
           Certificate of attendance - Ukrainian scientific virtual conference
           with international participation
 ---
-

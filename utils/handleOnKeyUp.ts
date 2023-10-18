@@ -6,7 +6,6 @@ export const handleOnKeyUp = (
   to: string,
 ) => {
   if (e.key == 'Enter' || e.key === ' ') {
-    console.log('key pressed');
     scroller.scrollTo(to, { smooth: true });
   }
 };

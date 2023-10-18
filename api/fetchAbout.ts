@@ -21,7 +21,6 @@ export const fetchAbout = async (lang: Locale) => {
 
     return about;
   } catch (error) {
-    console.log(error);
     return error;
   }
 };
@@ -34,8 +33,6 @@ const fetchImage = async () => {
 
     return result;
   } catch (error) {
-    console.log(error);
-
     return null;
   }
 };
@@ -48,8 +45,6 @@ const fetchVideo = async () => {
 
     return result;
   } catch (error) {
-    console.log(error);
-
     return null;
   }
 };
@@ -62,8 +57,6 @@ const fetchGeneral = async (lang: Locale) => {
 
     return result;
   } catch (error) {
-    console.log(error);
-
     return null;
   }
 };
@@ -76,8 +69,6 @@ const fetchEducation = async (lang: Locale) => {
 
     return result;
   } catch (error) {
-    console.log(error);
-
     return null;
   }
 };
@@ -90,8 +81,6 @@ const fetchCareer = async (lang: Locale) => {
 
     return result;
   } catch (error) {
-    console.log(error);
-
     return null;
   }
 };
@@ -109,8 +98,6 @@ const fetchCertificates = async (lang: Locale) => {
 
     return result;
   } catch (error) {
-    console.log(error);
-
     return null;
   }
 };
