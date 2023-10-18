@@ -116,6 +116,15 @@ uk:
         facere eos omnis ullam culpa beatae, natus
 en:
   case:
+    - date: 2023-10-08T21:00:00.000Z
+      photo: /uploads/reviews/Юлія Кашпуренко.webp
+      name: Yulia Kashpurenko
+      review: >
+        Highly qualified specialist and a friendly doctor. My mother had an
+        advanced stage of varicose veins. Thanks to the doctor's
+        professionalism, the surgery and postoperative period went smoothly
+        without complications. We are satisfied. Don't hesitate to seek his
+        help, and stay healthy. Highly recommended!
     - date: 2023-09-20T21:00:00.000Z
       photo: /uploads/reviews/Людмила Мадзяновська.webp
       name: Lyudmyla Madzianovska
