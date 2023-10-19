@@ -138,7 +138,157 @@
             "item": "Сертифікати",
             "collection": "certificates"
           }
-        ]
+        ],
+        "fallback": {
+          "image": "/images/home/about/about-doctor.webp",
+          "general": {
+            "__typename": "AboutGeneralUk",
+            "name": "Войціцький Сергій",
+            "profession": "Судинний хірург 1 категорії Флеболог",
+            "education": [
+              {
+                "__typename": "AboutGeneralUkEducation",
+                "institution": "Національний медичний університет О.О.Богомольця"
+              },
+              {
+                "__typename": "AboutGeneralUkEducation",
+                "institution": "Національна медична академія П.Л.Шупика"
+              },
+              {
+                "__typename": "AboutGeneralUkEducation",
+                "institution": "Стажування з судинної хірургії у Львівській обласній клінічній лікарні"
+              }
+            ],
+            "experience": [
+              {
+                "__typename": "AboutGeneralUkExperience",
+                "point": "Більше 10 років практики"
+              },
+              {
+                "__typename": "AboutGeneralUkExperience",
+                "point": "5000+ вилікуваних пацієнтів"
+              },
+              {
+                "__typename": "AboutGeneralUkExperience",
+                "point": "4000+ проведених операцій"
+              }
+            ]
+          },
+          "education": {
+            "__typename": "AboutEducationUk",
+            "title": "Освіта лікаря",
+            "institutions": [
+              {
+                "__typename": "AboutEducationUkInstitutions",
+                "period": "з 2021",
+                "institution": "Управлінням охорони здоров’я присвоєно першу кваліфікаційну категорію за спеціальністю «Судинна хірургія»."
+              },
+              {
+                "__typename": "AboutEducationUkInstitutions",
+                "period": "2020",
+                "institution": "Цикл спеціалізації «Ультразвукова діагностика» Ужгородський національний університет "
+              },
+              {
+                "__typename": "AboutEducationUkInstitutions",
+                "period": "2019",
+                "institution": "The 9th MUNICH VASCULAR CONFERENCE (MAC), Munich, Germany."
+              },
+              {
+                "__typename": "AboutEducationUkInstitutions",
+                "period": "з 2018",
+                "institution": "Член Європейської асоціації судинних хірургів."
+              },
+              {
+                "__typename": "AboutEducationUkInstitutions",
+                "period": "2018",
+                "institution": "Стажування з судинної хірургії на базі Львівської обласної клінічної лікарні."
+              },
+              {
+                "__typename": "AboutEducationUkInstitutions",
+                "period": "2013-2017",
+                "institution": "Національна медична академія післядипломної освіти ім. П.Л. Шупика «Національний інститут хірургії та трансплантології ім. О.О. Шалімова» "
+              },
+              {
+                "__typename": "AboutEducationUkInstitutions",
+                "period": "2007-2013",
+                "institution": "Національний медичний університет імені О.О.Богомольця 1-й медичний факультет."
+              }
+            ]
+          },
+          "career": {
+            "__typename": "AboutCareerUk",
+            "title": "Карʼєра лікаря",
+            "institutions": [
+              {
+                "__typename": "AboutCareerUkInstitutions",
+                "period": "2013-2016",
+                "institution": "КМКЛ №6 / Хірургічне відділення №1, №2"
+              },
+              {
+                "__typename": "AboutCareerUkInstitutions",
+                "period": "2013-2016",
+                "institution": "КНП «Черкаська обласна лікарня Черкаської обласної ради» Центр судинної хірургії,  Лікар-хірург"
+              },
+              {
+                "__typename": "AboutCareerUkInstitutions",
+                "period": "2016-2020",
+                "institution": "Обласний центр екстреної медичної допомоги та медичних катастроф, Лікар-хірург судинний з екстрених викликів до медичних установ"
+              },
+              {
+                "__typename": "AboutCareerUkInstitutions",
+                "period": "2016-2020",
+                "institution": "КНП «Черкаська обласна лікарня Черкаської обласної ради», Лікар-хірург судинний"
+              },
+              {
+                "__typename": "AboutCareerUkInstitutions",
+                "period": "2020-2022",
+                "institution": "Клініка “Інститут вен” - судинний хірург / флеболог"
+              },
+              {
+                "__typename": "AboutCareerUkInstitutions",
+                "period": "2021-2023",
+                "institution": "Клініка “Pro Heals” - судинний хірург / флеболог"
+              },
+              {
+                "__typename": "AboutCareerUkInstitutions",
+                "period": "2020",
+                "institution": "Клініка “Oxford Medical” - судинний хірург / флеболог"
+              },
+              {
+                "__typename": "AboutCareerUkInstitutions",
+                "period": "2023",
+                "institution": "Клініка “Medeira” - судинний хірург / флеболог"
+              }
+            ]
+          },
+          "certificates": [
+            {
+              "__typename": "AboutCertificates",
+              "photo": "/images/home/about/certificate-membership.webp",
+              "description": {
+                "__typename": "AboutCertificatesDescriptionUk",
+                "alt": "Сертифікат членства Європейського товариства судинної хірургії"
+              }
+            },
+            {
+              "__typename": "AboutCertificates",
+              "photo": "/images/home/about/certificate-2.webp",
+
+              "description": {
+                "__typename": "AboutCertificatesDescriptionUk",
+                "alt": "Сертифікат про участь - Конференція актуальні питання загальної та судинної хірургії"
+              }
+            },
+            {
+              "__typename": "AboutCertificates",
+              "photo": "/images/home/about/certificate-3.webp",
+              "description": {
+                "__typename": "AboutCertificatesDescriptionUk",
+                "alt": "Сертифікат про участь - Конференція актуальні питання невідкладної хірургії"
+              }
+            }
+          ]
+        }
       },
       "banner": {
         "title": "Вилікуйте \nварикоз \nза один сеанс!",

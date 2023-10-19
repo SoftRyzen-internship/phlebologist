@@ -1,4 +1,4 @@
-import { ErrorMessage, Heading } from '@/components';
+import { Heading } from '@/components';
 
 import { AboutGeneralProps } from './AboutGeneral.props';
 
@@ -6,10 +6,6 @@ const AboutGeneral: React.FC<AboutGeneralProps> = ({
   data,
   staticData: { firstSubtitle, secondSubtitle },
 }) => {
-  if (!data) {
-    return <ErrorMessage />;
-  }
-
   const { name, profession, education, experience } = data;
 
   return (
