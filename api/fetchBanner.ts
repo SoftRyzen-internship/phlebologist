@@ -7,7 +7,7 @@ const fetchBanner = async (lang: string) => {
 
     return result;
   } catch (error) {
-    return error;
+    throw new Error(error);
   }
 };
 
