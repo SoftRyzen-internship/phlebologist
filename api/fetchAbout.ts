@@ -33,7 +33,7 @@ const fetchImage = async () => {
 
     return result;
   } catch (error) {
-    return null;
+    return error;
   }
 };
 
@@ -45,7 +45,7 @@ const fetchVideo = async () => {
 
     return result;
   } catch (error) {
-    return null;
+    return error;
   }
 };
 
@@ -57,7 +57,7 @@ const fetchGeneral = async (lang: Locale) => {
 
     return result;
   } catch (error) {
-    return null;
+    return error;
   }
 };
 
@@ -69,7 +69,7 @@ const fetchEducation = async (lang: Locale) => {
 
     return result;
   } catch (error) {
-    return null;
+    return error;
   }
 };
 
@@ -81,7 +81,7 @@ const fetchCareer = async (lang: Locale) => {
 
     return result;
   } catch (error) {
-    return null;
+    return error;
   }
 };
 
@@ -98,7 +98,7 @@ const fetchCertificates = async (lang: Locale) => {
 
     return result;
   } catch (error) {
-    return null;
+    return error;
   }
 };
 

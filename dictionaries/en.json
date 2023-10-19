@@ -178,7 +178,7 @@
             "info": [
               {
                 "question": "How it works?",
-                "answer": "The doctor injects a special solution into varicose veins using an ultra-fine needle, leading to their adhesive closure and the subsequent transformation into scar tissue. This process renders the appearance of vascular 'spider veins' unnoticeable."
+                "answer": "The doctor injects a special solution into varicose veins using an ultra-fine needle, leading to their adhesive closure and the subsequent transformation into scar tissue. This process makes vascular 'spider veins' practically invisible."
               },
               {
                 "question": "It is safe?",
@@ -203,7 +203,7 @@
             "info": [
               {
                 "question": "How it works?",
-                "answer": "A special fluid is mixed with air and transformed into foam using the Tessari method, then introduced through established IV catheters into the patient's veins under ultrasound control. The diseased vein, filled with active foam, is sealed, redirecting the blood flow to healthy ones."
+                "answer": "A fluid is mixed with air and transformed into foam using the Tessari method, then introduced through established vein catheters into the patient's veins under US control. The diseased vein, filled with active foam, is sealed, redirecting the blood flow to healthy ones."
               },
               {
                 "question": "It is safe?",
@@ -211,11 +211,11 @@
               },
               {
                 "question": "Is it painful?",
-                "answer": "It is performed under local anesthesia, ensuring the absence of pain."
+                "answer": "Performed under local anesthesia to ensure no pain."
               },
               {
                 "question": "Is it time-consuming?",
-                "answer": "It depends on the volume of affected veins but typically takes about 30 minutes."
+                "answer": "Usually about 30 minutes, varies with vein volume."
               }
             ]
           },
@@ -232,11 +232,11 @@
               },
               {
                 "question": "It is safe?",
-                "answer": "Typically, this is a safe procedure, but like any surgery, it carries certain risks."
+                "answer": "Usually safe, but surgery has inherent risks."
               },
               {
                 "question": "Is it painful?",
-                "answer": "The operation is painless. There may be some pain after the operation, which can be controlled with painkillers."
+                "answer": "Surgery is painless; post-op pain can be managed with painkillers."
               },
               {
                 "question": "Is it time-consuming?",
@@ -570,5 +570,41 @@
   "footer": {
     "address": "Medeira Clinic - Kyiv, Beresteiskyi Avenue, 67",
     "phone": "+380933521235"
+  },
+  "meta": {
+    "metadata": {
+      "title": "Varicose Vein Treatment in Kyiv | Vascular Surgeon - Sergii Voitsitskyi",
+      "description": "Test: це опис сайту про доктора-флеболога",
+      "base": "https://phlebologist.vercel.app/en",
+      "keywords": "флеболог, медицина, варикоз, phlebologist, varicose"
+    },
+    "twitter": {
+      "title": "Varicose Vein Treatment in Kyiv | Vascular Surgeon - Sergii Voitsitskyi",
+      "card": "summary_large_image",
+      "images": [
+        {
+          "url": "/images/ogp-image.jpg",
+          "width": 1200,
+          "height": 630,
+          "alt": "Varicose Vein Treatment in Kyiv | Vascular Surgeon - Sergii Voitsitskyi"
+        }
+      ],
+      "description": "Test: це опис сайту про доктора-флеболога"
+    },
+    "openGraph": {
+      "images": [
+        {
+          "url": "/images/ogp-image.jpg",
+          "width": 1200,
+          "height": 630,
+          "alt": "Varicose Vein Treatment in Kyiv | Vascular Surgeon - Sergii Voitsitskyi"
+        }
+      ],
+      "description": "Test: це опис сайту про доктора-флеболога",
+      "type": "website",
+      "locale": "en_US",
+      "title": "Varicose Vein Treatment in Kyiv | Vascular Surgeon - Sergii Voitsitskyi",
+      "url": "https://phlebologist.vercel.app/en"
+    }
   }
 }
