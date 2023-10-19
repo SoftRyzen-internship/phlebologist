@@ -2,7 +2,7 @@
 
 import { useState, FC } from 'react';
 
-import { ErrorMessage, Heading, AboutItem } from '@/components';
+import { Heading, AboutItem } from '@/components';
 
 import { useWindowWidth } from '@/hooks';
 
@@ -13,10 +13,6 @@ const COUNT_VISIBLE_ITEMS = 3;
 const AboutEducation: FC<AboutEducationProps> = ({ data, staticData }) => {
   const [isShowAll, setIsShowAll] = useState(false);
   const { isScreenMobile } = useWindowWidth();
-
-  if (!data) {
-    return <ErrorMessage />;
-  }
 
   const { title, institutions } = data;
   const { btnHide, btnShow } = staticData;

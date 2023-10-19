@@ -26,7 +26,11 @@ export default async function Home({
       <HeroSection staticData={page.home.hero} lang={lang} />
       <AboutSection
         lang={lang}
-        staticData={{ about: page.home.about, iconData: page.home.iconBtnData }}
+        staticData={{
+          about: page.home.about,
+          iconData: page.home.iconBtnData,
+          fallback: page.home.about.fallback,
+        }}
       />
       <AdvantagesSection
         staticData={page.home.advantages}
