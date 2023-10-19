@@ -30,7 +30,6 @@ export type AboutGeneralDataType = {
 export type GeneralEducationType = {
   __typename: string;
   institution: string;
-  period: string;
 };
 
 type GeneralExperienceType = {
@@ -41,7 +40,7 @@ type GeneralExperienceType = {
 export type AboutEducationDataType = {
   __typename: string;
   title: string;
-  institutions: GeneralEducationType[];
+  institutions: EducationInstitutionType[];
 };
 
 export type AboutCareerDataType = {
@@ -56,6 +55,12 @@ export type CareerInstitutionType = {
   institution: string;
 };
 
+export type EducationInstitutionType = {
+  __typename: string;
+  period: string;
+  institution: string;
+};
+
 export type AboutCertificateType = {
   __typename: string;
   photo: string;
@@ -64,6 +69,13 @@ export type AboutCertificateType = {
     alt: string;
   };
 };
+
+// === fetched data types - Banner collection ===
+
+export interface IFetchedBannerData {
+  title: string;
+  description: string;
+}
 
 // === static data types ===
 
@@ -184,6 +196,12 @@ export interface IMethodInfoData {
   answer: string;
 }
 
+export interface IBannerData {
+  title: string;
+  description: string;
+  buttonText: string;
+}
+
 // === Treatment page ===
 
 export interface ITreatmentDetails {
@@ -230,6 +248,8 @@ export type FeedbackSlideData = {
   review: {
     type: string;
     children: TinaMarkdownContent[];
+    template?: string;
+    isError: boolean | undefined;
   };
 };
 
@@ -242,6 +262,7 @@ export type FeedbackData = {
     read: { text: string };
     video: { icon: string };
   };
+  templates: FeedbackSlideData[];
 };
 
 // === Contacts ===

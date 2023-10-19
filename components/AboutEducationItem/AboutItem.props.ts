@@ -1,5 +1,5 @@
-import { GeneralEducationType, CareerInstitutionType } from '@/types';
+import { EducationInstitutionType, CareerInstitutionType } from '@/types';
 
 export interface AboutItemProps {
-  item: GeneralEducationType | CareerInstitutionType;
+  item: EducationInstitutionType | CareerInstitutionType;
 }

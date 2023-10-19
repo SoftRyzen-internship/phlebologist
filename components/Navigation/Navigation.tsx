@@ -28,12 +28,9 @@ const Navigation: FC<NavigationProps> = ({
       'font-semibold !p-0 !h-[31px]': variant === 'header',
     },
     'text-[12px] uppercase leading-normal -tracking-[0.48px] text-black-dark ',
+    'flex justify-center items-center w-full h-full',
     'transition-all duration-300',
     itemClassName,
-  );
-
-  const linkClass = classnames(
-    'flex justify-center items-center w-full h-full',
   );
 
   return pathname.includes('treatment') ? (
@@ -42,8 +39,8 @@ const Navigation: FC<NavigationProps> = ({
         {navigation_treatment.map(({ title, linkTo }) => {
           if (linkTo.includes('/')) {
             return (
-              <li className={itemClass} key={linkTo} onClick={actionHandler}>
-                <Link href={`${linkTo}${lang}`} className={linkClass}>
+              <li key={linkTo} onClick={actionHandler}>
+                <Link href={`${linkTo}${lang}`} className={itemClass}>
                   {title}
                 </Link>
               </li>
@@ -55,8 +52,8 @@ const Navigation: FC<NavigationProps> = ({
             !linkTo.includes('contacts')
           ) {
             return (
-              <li className={itemClass} key={linkTo} onClick={actionHandler}>
-                <Link href={linkTo} className={linkClass}>
+              <li key={linkTo} onClick={actionHandler}>
+                <Link href={linkTo} className={itemClass}>
                   {title}
                 </Link>
               </li>
@@ -64,7 +61,7 @@ const Navigation: FC<NavigationProps> = ({
           }
 
           return (
-            <li className={itemClass} key={linkTo} onClick={actionHandler}>
+            <li key={linkTo} onClick={actionHandler}>
               <LinkScroll
                 spy={true}
                 smooth={true}
@@ -73,7 +70,7 @@ const Navigation: FC<NavigationProps> = ({
                 to={linkTo}
                 href={`${linkTo}`}
                 onClick={actionHandler}
-                className={linkClass}
+                className={itemClass}
               >
                 {title}
               </LinkScroll>
@@ -88,15 +85,15 @@ const Navigation: FC<NavigationProps> = ({
         {navigation_home.map(({ title, linkTo }) => {
           if (linkTo.includes('/')) {
             return (
-              <li className={itemClass} key={linkTo} onClick={actionHandler}>
-                <Link href={`${linkTo}${lang}`} className={linkClass}>
+              <li key={linkTo} onClick={actionHandler}>
+                <Link href={`${linkTo}${lang}`} className={itemClass}>
                   {title}
                 </Link>
               </li>
             );
           }
           return (
-            <li className={itemClass} key={linkTo} onClick={actionHandler}>
+            <li key={linkTo} onClick={actionHandler}>
               <LinkScroll
                 spy={true}
                 smooth={true}
@@ -105,7 +102,7 @@ const Navigation: FC<NavigationProps> = ({
                 to={linkTo}
                 href={`#${linkTo}`}
                 onClick={actionHandler}
-                className={linkClass}
+                className={itemClass}
               >
                 {title}
               </LinkScroll>
