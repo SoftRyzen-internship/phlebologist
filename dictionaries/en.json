@@ -535,7 +535,66 @@
           "send": { "text": "Contact", "icon": "Telegram Icon" },
           "read": { "text": "Read more" },
           "video": { "icon": "Watch Video Icon" }
-        }
+        },
+        "templates": [
+          {
+            "__typename": "type01",
+            "date": "2023-03-07T22:00:00.000Z",
+            "photo": "/images/feedback/OV.webp",
+            "video": null,
+            "name": "Olha Viktorivna",
+            "telegram": null,
+            "review": {
+              "type": "string",
+              "children": [],
+              "isError": true,
+              "template": "On February 13, 2023, I had a surgery to remove varicose veins on my lower limbs performed by Dr. Voitsitskyi at the Oxford Medical Clinic. I want to express my deep gratitude to the doctor for his caring attitude and high level of professionalism! Dr. Voitsitskyi conducted the operation very attentively and provided careful post-operative care. The surgery was performed under local anesthesia. The doctor constantly informed me about each step of the procedure and where I might experience some discomfort. However, the pain was minimal! A doctor should not only be professional but also compassionate, and this perfectly describes . I was pleasantly surprised at how quickly, easily, and successfully the operation went. My small incisions are healing quickly, and I'm very happy about that. The future results depend on me (how diligently I follow the doctor's recommendations), but if anything arises, Dr. Voitsitskyi is always available. I'll have beautiful legs by summer 😁 Thank you, Doctor! 🤗"
+            }
+          },
+
+          {
+            "__typename": "type02",
+            "date": "2023-10-13T21:00:00.000Z",
+            "photo": "/images/feedback/RS.webp",
+            "video": null,
+            "name": "Roman Samborsky",
+            "telegram": "https://t.me/Roman_V_S",
+            "review": {
+              "type": "string",
+              "children": [],
+              "isError": true,
+              "template": "I highly recommend Dr. Voitsitskyi as a practicing surgeon-phlebologist. He provided proper pre- and post-operative support. The operation under local anesthesia went smoothly with minimal discomfort. It's been six months, I've resumed physical activities, and there have been no post-operative complications. The previous discomfort in my legs hasn't returned. I am 100% satisfied with the quality of the work."
+            }
+          },
+          {
+            "__typename": "type03",
+            "date": "2023-10-14T21:00:00.000Z",
+            "photo": "/images/feedback/SH.webp",
+            "video": null,
+            "name": "Svitlana Hrybanova",
+            "telegram": null,
+            "review": {
+              "type": "string",
+              "children": [],
+              "isError": true,
+              "template": "A young doctor par excellence, Dr. Voitsitskyi. He performed surgery on my leg veins. He is attentive and a true specialist in his field. Everything went well without pain or any issues. I will recommend him to everyone for getting rid of these conditions. Walk with beautiful and healthy legs! Wishing you health and happiness, Dr. Voitsitskyi!"
+            }
+          },
+          {
+            "__typename": "type04",
+            "date": "2023-10-08T21:00:00.000Z",
+            "photo": "/images/feedback/YK.webp",
+            "video": null,
+            "name": "Yulia Kashpurenko",
+            "telegram": null,
+            "review": {
+              "type": "string",
+              "children": [],
+              "isError": true,
+              "template": "Highly qualified specialist and a friendly doctor. My mother had an advanced stage of varicose veins. Thanks to the doctor's professionalism, the surgery and postoperative period went smoothly without complications. We are satisfied. Don't hesitate to seek his help, and stay healthy. Highly recommended!"
+            }
+          }
+        ]
       }
     },
     "treatment": {

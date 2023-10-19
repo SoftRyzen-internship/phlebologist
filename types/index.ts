@@ -235,6 +235,8 @@ export type FeedbackSlideData = {
   review: {
     type: string;
     children: TinaMarkdownContent[];
+    template?: string;
+    isError: boolean | undefined;
   };
 };
 
@@ -247,6 +249,7 @@ export type FeedbackData = {
     read: { text: string };
     video: { icon: string };
   };
+  templates: FeedbackSlideData[];
 };
 
 // === Contacts ===
