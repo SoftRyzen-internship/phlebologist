@@ -574,12 +574,12 @@
   "meta": {
     "metadata": {
       "title": "Varicose Vein Treatment in Kyiv | Vascular Surgeon - Sergii Voitsitskyi",
-      "description": "Test: це опис сайту про доктора-флеболога",
+      "description": "Vascular Surgeon - Sergii Voitsitskyi",
       "base": "https://phlebologist.vercel.app/en",
       "keywords": "флеболог, медицина, варикоз, phlebologist, varicose"
     },
     "twitter": {
-      "title": "Varicose Vein Treatment in Kyiv | Vascular Surgeon - Sergii Voitsitskyi",
+      "title": "Vascular Surgeon - Sergii Voitsitskyi",
       "card": "summary_large_image",
       "images": [
         {
@@ -589,7 +589,7 @@
           "alt": "Varicose Vein Treatment in Kyiv | Vascular Surgeon - Sergii Voitsitskyi"
         }
       ],
-      "description": "Test: це опис сайту про доктора-флеболога"
+      "description": "Varicose Vein Treatment in Kyiv"
     },
     "openGraph": {
       "images": [
@@ -600,10 +600,10 @@
           "alt": "Varicose Vein Treatment in Kyiv | Vascular Surgeon - Sergii Voitsitskyi"
         }
       ],
-      "description": "Test: це опис сайту про доктора-флеболога",
+      "description": "Varicose Vein Treatment in Kyiv",
       "type": "website",
       "locale": "en_US",
-      "title": "Varicose Vein Treatment in Kyiv | Vascular Surgeon - Sergii Voitsitskyi",
+      "title": "Vascular Surgeon - Sergii Voitsitskyi",
       "url": "https://phlebologist.vercel.app/en"
     }
   }
