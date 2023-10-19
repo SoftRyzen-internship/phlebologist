@@ -1,7 +1,11 @@
 function checkTextLength(
-  str: string,
+  str: string | undefined,
   limit: number = 340,
 ): { doesFit: boolean; text: string } {
+  if (str === undefined) {
+    return { doesFit: false, text: '' };
+  }
+
   if (str.length <= limit) {
     return { doesFit: true, text: str };
   }

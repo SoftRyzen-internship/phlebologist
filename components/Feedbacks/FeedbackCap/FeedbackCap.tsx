@@ -3,7 +3,7 @@
 import classNames from 'classnames';
 import Image from 'next/image';
 
-import setupDateFormat from '@/utils/setupDateFromat';
+import { useDateFormat } from '@/hooks';
 import Send from '@/public/icons/send-telegram.svg';
 
 import { FeedbackCapProps } from './FeedbackCap.props';
@@ -13,7 +13,7 @@ const FeedbackCap: React.FC<FeedbackCapProps> = ({
   staticData,
   isVideo = false,
 }) => {
-  const date = setupDateFormat(data?.date);
+  const date = useDateFormat(data?.date);
 
   return (
     <div className="relative z-10 flex justify-between gap-[8px]">
