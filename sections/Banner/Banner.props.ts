@@ -1,14 +1,8 @@
 import { Locale } from '@/i18n.config';
-
-export interface IFetchedBannerData {
-  title: string;
-  description: string;
-}
-
-type StaticDataType = { buttonText: string };
+import { IBannerData } from '@/types';
 
 export interface BannerProps {
-  staticData: StaticDataType;
+  staticData: IBannerData;
   lang: Locale;
   className?: string;
 }

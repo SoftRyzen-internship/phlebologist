@@ -291,6 +291,8 @@
         }
       },
       "banner": {
+        "title": "Cure varicose veins in one session!",
+        "description": "Запишіться на консультацію та отримайте \nіндивідуальний план лікування від \nдосвідченого флеболога",
         "buttonText": "Make an appointment"
       },
       "treatments": {
@@ -336,7 +338,7 @@
             "info": [
               {
                 "question": "How it works?",
-                "answer": "The doctor injects a special solution into varicose veins using an ultra-fine needle, leading to their adhesive closure and the subsequent transformation into scar tissue. This process renders the appearance of vascular 'spider veins' unnoticeable."
+                "answer": "The doctor injects a special solution into varicose veins using an ultra-fine needle, leading to their adhesive closure and the subsequent transformation into scar tissue. This process makes 'spider veins' practically invisible."
               },
               {
                 "question": "It is safe?",
@@ -361,7 +363,7 @@
             "info": [
               {
                 "question": "How it works?",
-                "answer": "A special fluid is mixed with air and transformed into foam using the Tessari method, then introduced through established IV catheters into the patient's veins under ultrasound control. The diseased vein, filled with active foam, is sealed, redirecting the blood flow to healthy ones."
+                "answer": "A fluid is mixed with air and transformed into foam then introduced through established vein catheters into the patient's veins under US control. The vein, filled with active foam will be blocked and redirects blood flow."
               },
               {
                 "question": "It is safe?",
@@ -369,11 +371,11 @@
               },
               {
                 "question": "Is it painful?",
-                "answer": "It is performed under local anesthesia, ensuring the absence of pain."
+                "answer": "Performed under local anesthesia to ensure no pain."
               },
               {
                 "question": "Is it time-consuming?",
-                "answer": "It depends on the volume of affected veins but typically takes about 30 minutes."
+                "answer": "Usually about 30 minutes, varies with vein volume."
               }
             ]
           },
@@ -386,15 +388,15 @@
             "info": [
               {
                 "question": "How it works?",
-                "answer": "The surgeon, under local (tumescent) anesthesia, removes the affected vein section using a special medical instrument through incisions measuring 1-2 mm. During this process, healthy veins are preserved, and the blood flow is redirected through them."
+                "answer": "Under local anesthesia, removes the affected vein section using a special medical instrument through skin punctures. During this process, healthy veins are preserved, and the blood flow is redirected through them."
               },
               {
                 "question": "It is safe?",
-                "answer": "Typically, this is a safe procedure, but like any surgery, it carries certain risks."
+                "answer": "Usually safe, but surgery has inherent risks."
               },
               {
                 "question": "Is it painful?",
-                "answer": "The operation is painless. There may be some pain after the operation, which can be controlled with painkillers."
+                "answer": "Surgery is painless; post-op pain can be managed with painkillers."
               },
               {
                 "question": "Is it time-consuming?",
@@ -544,14 +546,73 @@
           "send": { "text": "Contact", "icon": "Telegram Icon" },
           "read": { "text": "Read more" },
           "video": { "icon": "Watch Video Icon" }
-        }
+        },
+        "templates": [
+          {
+            "__typename": "type01",
+            "date": "2023-03-07T22:00:00.000Z",
+            "photo": "/images/feedback/OV.webp",
+            "video": null,
+            "name": "Olha Viktorivna",
+            "telegram": null,
+            "review": {
+              "type": "string",
+              "children": [],
+              "isError": true,
+              "template": "On February 13, 2023, I had a surgery to remove varicose veins on my lower limbs performed by Dr. Voitsitskyi at the Oxford Medical Clinic. I want to express my deep gratitude to the doctor for his caring attitude and high level of professionalism! Dr. Voitsitskyi conducted the operation very attentively and provided careful post-operative care. The surgery was performed under local anesthesia. The doctor constantly informed me about each step of the procedure and where I might experience some discomfort. However, the pain was minimal! A doctor should not only be professional but also compassionate, and this perfectly describes . I was pleasantly surprised at how quickly, easily, and successfully the operation went. My small incisions are healing quickly, and I'm very happy about that. The future results depend on me (how diligently I follow the doctor's recommendations), but if anything arises, Dr. Voitsitskyi is always available. I'll have beautiful legs by summer 😁 Thank you, Doctor! 🤗"
+            }
+          },
+
+          {
+            "__typename": "type02",
+            "date": "2023-10-13T21:00:00.000Z",
+            "photo": "/images/feedback/RS.webp",
+            "video": null,
+            "name": "Roman Samborsky",
+            "telegram": "https://t.me/Roman_V_S",
+            "review": {
+              "type": "string",
+              "children": [],
+              "isError": true,
+              "template": "I highly recommend Dr. Voitsitskyi as a practicing surgeon-phlebologist. He provided proper pre- and post-operative support. The operation under local anesthesia went smoothly with minimal discomfort. It's been six months, I've resumed physical activities, and there have been no post-operative complications. The previous discomfort in my legs hasn't returned. I am 100% satisfied with the quality of the work."
+            }
+          },
+          {
+            "__typename": "type03",
+            "date": "2023-10-14T21:00:00.000Z",
+            "photo": "/images/feedback/SH.webp",
+            "video": null,
+            "name": "Svitlana Hrybanova",
+            "telegram": null,
+            "review": {
+              "type": "string",
+              "children": [],
+              "isError": true,
+              "template": "A young doctor par excellence, Dr. Voitsitskyi. He performed surgery on my leg veins. He is attentive and a true specialist in his field. Everything went well without pain or any issues. I will recommend him to everyone for getting rid of these conditions. Walk with beautiful and healthy legs! Wishing you health and happiness, Dr. Voitsitskyi!"
+            }
+          },
+          {
+            "__typename": "type04",
+            "date": "2023-10-08T21:00:00.000Z",
+            "photo": "/images/feedback/YK.webp",
+            "video": null,
+            "name": "Yulia Kashpurenko",
+            "telegram": null,
+            "review": {
+              "type": "string",
+              "children": [],
+              "isError": true,
+              "template": "Highly qualified specialist and a friendly doctor. My mother had an advanced stage of varicose veins. Thanks to the doctor's professionalism, the surgery and postoperative period went smoothly without complications. We are satisfied. Don't hesitate to seek his help, and stay healthy. Highly recommended!"
+            }
+          }
+        ]
       }
     },
     "treatment": {
       "1": {
         "title": "Endovenous Laser Coagulation",
         "description": "is a minimally invasive procedure that uses laser radiation to close and destroy varicose veins from the inside, improving circulation and reducing the symptoms of varicose veins.",
-        "image": "/images/treatment/treatment-temp.webp",
+        "image": "/images/treatment/treatment-1-2.webp",
         "questions": [
           {
             "question": "Who needs Endovenous Laser Coagulation (EVLA)?",
@@ -594,7 +655,7 @@
       "4": {
         "title": "Miniphlebectomy",
         "description": "is a minimally invasive method for removing varicose veins through small punctures. No incisions are made during the procedure, which speeds up recovery and avoids scarring.",
-        "image": "/images/treatment/treatment-temp.webp",
+        "image": "/images/treatment/treatment-4.webp",
         "questions": [
           {
             "question": "Who needs it?",
@@ -634,7 +695,7 @@
       "2": {
         "title": "Microsclerotherapy",
         "description": "is a minimally invasive procedure performed to treat small-diameter varicose veins, measuring just millimeters in size, such as reticular veins and 'spider veins'. During sclerotherapy, a low-concentration sclerosing solution is injected into the affected vein using an ultra-fine needle. This solution irritates the vein's lining, causing it to break down and the vein to seal shut. Over time, the vein transforms into scar tissue and completely disappears.",
-        "image": "/images/treatment/treatment-temp.webp",
+        "image": "/images/treatment/treatment-2.webp",
         "questions": [
           {
             "question": "Who needs it?",
@@ -682,7 +743,7 @@
       "3": {
         "title": "Foam sclerotherapy",
         "description": "(or foam sclerotherapy with ultrasound guidance) is a non-surgical method for treating varicose veins. The essence of this procedure involves the injection of a special sclerosing agent (typically in the form of a foam made of polidocanol) into the affected vein, often administered through intravenous catheters. This agent triggers inflammation within the vein, leading to its closure. As a result, blood can no longer flow through it, the vein's diameter decreases, and it eventually transforms into scar tissue.",
-        "image": "/images/treatment/treatment-temp.webp",
+        "image": "/images/treatment/treatment-3.webp",
         "questions": [
           {
             "question": "Who needs it?",
@@ -738,5 +799,41 @@
   "footer": {
     "address": "Medeira Clinic - Kyiv, Beresteiskyi Avenue, 67",
     "phone": "+380933521235"
+  },
+  "meta": {
+    "metadata": {
+      "title": "Varicose Vein Treatment in Kyiv | Vascular Surgeon - Sergii Voitsitskyi",
+      "description": "Vascular Surgeon - Sergii Voitsitskyi",
+      "base": "https://phlebologist.vercel.app/en",
+      "keywords": "флеболог, медицина, варикоз, phlebologist, varicose"
+    },
+    "twitter": {
+      "title": "Vascular Surgeon - Sergii Voitsitskyi",
+      "card": "summary_large_image",
+      "images": [
+        {
+          "url": "/images/ogp-image.jpg",
+          "width": 1200,
+          "height": 630,
+          "alt": "Varicose Vein Treatment in Kyiv | Vascular Surgeon - Sergii Voitsitskyi"
+        }
+      ],
+      "description": "Varicose Vein Treatment in Kyiv"
+    },
+    "openGraph": {
+      "images": [
+        {
+          "url": "/images/ogp-image.jpg",
+          "width": 1200,
+          "height": 630,
+          "alt": "Varicose Vein Treatment in Kyiv | Vascular Surgeon - Sergii Voitsitskyi"
+        }
+      ],
+      "description": "Varicose Vein Treatment in Kyiv",
+      "type": "website",
+      "locale": "en_US",
+      "title": "Vascular Surgeon - Sergii Voitsitskyi",
+      "url": "https://phlebologist.vercel.app/en"
+    }
   }
 }

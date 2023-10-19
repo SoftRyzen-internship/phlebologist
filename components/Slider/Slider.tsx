@@ -1,6 +1,5 @@
 'use client';
 
-import 'keen-slider/keen-slider.min.css';
 import React from 'react';
 import { useKeenSlider } from 'keen-slider/react';
 import classNames from 'classnames';
@@ -8,6 +7,8 @@ import classNames from 'classnames';
 import { IconBtn } from '@/components';
 
 import { SliderProps } from './Slider.props';
+
+import 'keen-slider/keen-slider.min.css';
 
 const Slider: React.FC<SliderProps> = ({
   slides,
@@ -21,7 +22,7 @@ const Slider: React.FC<SliderProps> = ({
     loop: true,
     defaultAnimation: { duration: 1000 },
     drag: section.toLowerCase() === 'result' ? false : true,
-    slides: { origin: 'center' as 'center', perView: 1 },
+    slides: { origin: 'center' as 'center', perView: 1, spacing: 29 },
     initial: 0,
     rubberband: false,
   };

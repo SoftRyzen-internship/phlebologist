@@ -70,6 +70,13 @@ export type AboutCertificateType = {
   };
 };
 
+// === fetched data types - Banner collection ===
+
+export interface IFetchedBannerData {
+  title: string;
+  description: string;
+}
+
 // === static data types ===
 
 export interface IIconBtnData {
@@ -189,6 +196,12 @@ export interface IMethodInfoData {
   answer: string;
 }
 
+export interface IBannerData {
+  title: string;
+  description: string;
+  buttonText: string;
+}
+
 // === Treatment page ===
 
 export interface ITreatmentDetails {
@@ -235,6 +248,8 @@ export type FeedbackSlideData = {
   review: {
     type: string;
     children: TinaMarkdownContent[];
+    template?: string;
+    isError: boolean | undefined;
   };
 };
 
@@ -247,6 +262,7 @@ export type FeedbackData = {
     read: { text: string };
     video: { icon: string };
   };
+  templates: FeedbackSlideData[];
 };
 
 // === Contacts ===
