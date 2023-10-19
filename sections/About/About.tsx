@@ -12,9 +12,9 @@ const About: React.FC<AboutProps> = async ({ lang, staticData }) => {
   let data = staticData.fallback;
 
   try {
-    const fetchData: AboutDataType = await fetchAbout(lang);
+    const fetchData = await fetchAbout(lang);
 
-    data = { ...fetchData };
+    data = { ...(fetchData as AboutDataType) };
   } catch (error) {}
 
   const {
