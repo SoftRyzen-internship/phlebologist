@@ -25,23 +25,24 @@ const FeedbackCard: React.FC<FeedbackCardProps> = ({
     };
   }, []);
 
-  const [fullText, setFullText] = useState<string>('');
+  const [fullText, setFullText] = useState<string | undefined>('');
   const [textData, setTextData] = useState<TextData>(defaultData);
-
-  const tinaData = <TinaMarkdown content={data.review} />;
-  const tinaArr = tinaData.props.content.children;
 
   useEffect(() => {
     try {
+      if (data.review?.isError) {
+        throw new Error('no connection');
+      }
+      const tinaData = <TinaMarkdown content={data.review} />;
+      const tinaArr = tinaData.props.content.children;
       const fullText = getTextFromTina(tinaArr);
-      const textData = checkTextLength(fullText);
       setFullText(fullText);
-      setTextData(textData);
-    } catch (_) {
-      setFullText('');
-      setTextData(defaultData);
+      setTextData(checkTextLength(fullText));
+    } catch (error) {
+      setFullText(data.review.template);
+      setTextData(checkTextLength(data.review?.template));
     }
-  }, [defaultData, tinaArr]);
+  }, [data.review, data.review?.template, defaultData]);
 
   return (
     <article

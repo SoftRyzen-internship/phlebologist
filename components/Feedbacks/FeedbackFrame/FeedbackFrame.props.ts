@@ -1,5 +1,7 @@
+import { FeedbackSlideData, FeedbackData } from '@/types';
+
 export interface FeedbackFrameProps {
-  data: any;
-  staticData?: any;
+  data: FeedbackSlideData;
+  staticData: FeedbackData;
   onClick?: () => void;
 }

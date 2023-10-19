@@ -4,6 +4,7 @@ import { FooterProps } from './Footer.props';
 
 const Footer: FC<FooterProps> = ({
   staticData: { footerData, socials, navigation, iconBtnData },
+  lang,
 }) => {
   const { address, phone } = footerData;
 
@@ -12,7 +13,7 @@ const Footer: FC<FooterProps> = ({
       <div className="container text-center">
         <div className="wrapper">
           <div className="md:hidden">
-            <Logo className="mb-6 text-left" />
+            <Logo className="mb-6 max-w-fit text-left" />
             <div className="mb-6 flex items-start justify-between text-left md:block">
               <p className="max-w-[158px] text-xs -tracking-[0.48px] text-black-dark  opacity-50">
                 {address}
@@ -34,21 +35,22 @@ const Footer: FC<FooterProps> = ({
             </p>
           </div>
 
-          <div className="hidden  text-left md:flex">
-            <div className="mr-[46px] flex flex-col justify-between xl:mr-[350px]">
-              <Logo />
+          <div className="hidden text-left md:flex">
+            <div className="mr-[46px] flex flex-col justify-between xl:mr-[312px]">
+              <Logo className="max-w-fit" />
               <div>
                 <p className="max-w-[158px] text-[12px] leading-loose -tracking-[0.48px] text-black-dark  opacity-50">
                   {phone}
                 </p>
-                <p className="w-[158px] w-[281px] text-[12px] leading-loose -tracking-[0.48px]  text-black-dark opacity-50">
+                <p className="w-[158px] text-[12px] leading-loose -tracking-[0.48px] text-black-dark opacity-50 md:w-[281px] xl:w-auto mdOnly:whitespace-pre-wrap">
                   {address}
                 </p>
               </div>
             </div>
             <Navigation
               data={navigation}
-              itemClassName="mb-4 last:mb-0"
+              lang={lang}
+              className="flex flex-col items-start gap-4"
               variant="footer"
             />
             <div className="ml-auto flex flex-col justify-between text-right">

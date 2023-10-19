@@ -1,12 +1,19 @@
-import { Control } from 'react-hook-form';
-import { FormInputs } from '../Form/Form.props';
+import { Control, FieldErrors } from 'react-hook-form';
+import { NameEnum, FormInputs } from '../Form/Form.props';
+
+type StaticDataType = {
+  label: string;
+};
+
+export type FormCheckboxOptionsType = {
+  name: NameEnum;
+  required: boolean;
+};
 
 export interface FormCheckboxProps {
-  staticData: {
-    label: string;
-  };
-  errors: any;
-  control: Control<FormInputs | any>;
+  staticData: StaticDataType;
+  errors: FieldErrors<FormInputs>;
+  control: Control<FormInputs>;
   isChecked: boolean;
-  options: { name: string; required: boolean };
+  options: FormCheckboxOptionsType;
 }

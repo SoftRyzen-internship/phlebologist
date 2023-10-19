@@ -1,14 +1,28 @@
+import { TinaMarkdownContent } from 'tinacms/dist/rich-text';
+
 import { fetchReviews } from '@/api';
+import { FeedbackSlideData } from '@/types';
 
 import { Heading, Slider, FeedbackSlide } from '@/components';
 import { FeedbackProps } from './Feedback.props';
 
 const Feedback: React.FC<FeedbackProps> = async ({ staticData, lang }) => {
-  const feedbacks = await fetchReviews(lang);
+  let feedbacks = [] as FeedbackSlideData[];
+
+  try {
+    const result = await fetchReviews(lang);
+    feedbacks = result.case;
+  } catch (error) {
+    const templates = staticData.feedback.templates;
+    staticData.feedback.templates.forEach(
+      item => (item.review.children = [] as TinaMarkdownContent[]),
+    );
+    feedbacks = templates;
+  }
 
   return (
     <section
-      id={staticData?.feedback?.anchor}
+      id={staticData.feedback.anchor}
       className="-mt-[20px] text-black-dark  md:-mt-[36px] xl:-mt-[48px]"
     >
       <div className="container">
@@ -21,9 +35,9 @@ const Feedback: React.FC<FeedbackProps> = async ({ staticData, lang }) => {
           </Heading>
 
           <Slider
-            slides={feedbacks?.case}
+            slides={feedbacks}
             staticData={staticData?.iconBtnData}
-            optionalStaticData={staticData?.feedback}
+            optionalStaticData={staticData.feedback}
             section="feedback"
             slide={FeedbackSlide}
           />

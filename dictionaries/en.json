@@ -1,14 +1,24 @@
 {
-  "navigation": [
-    { "title": "Homepage", "linkTo": "/" },
-    { "title": "About the doctor", "linkTo": "about" },
-    { "title": "Advantages", "linkTo": "advantages" },
-    { "title": "Treatment methods", "linkTo": "methods" },
-    { "title": "Patient results", "linkTo": "results" },
-    { "title": "Reviews", "linkTo": "feedback" },
-    { "title": "FAQ", "linkTo": "faq" },
-    { "title": "Contacts", "linkTo": "contacts" }
-  ],
+  "navigation": {
+    "navigation_home": [
+      { "title": "Homepage", "linkTo": "/" },
+      { "title": "About the doctor", "linkTo": "about" },
+      { "title": "Advantages", "linkTo": "advantages" },
+      { "title": "Treatment methods", "linkTo": "methods" },
+      { "title": "Patient results", "linkTo": "results" },
+      { "title": "Reviews", "linkTo": "feedback" },
+      { "title": "FAQ", "linkTo": "faq" },
+      { "title": "Contacts", "linkTo": "contacts" }
+    ],
+    "navigation_treatment": [
+      { "title": "Homepage", "linkTo": "/" },
+      { "title": "Endovenous Laser Coagulation", "linkTo": "1" },
+      { "title": "Microsclerotherapy", "linkTo": "2" },
+      { "title": "Foam sclerotherapy", "linkTo": "3" },
+      { "title": "Miniphlebectomy", "linkTo": "4" },
+      { "title": "Contacts", "linkTo": "contacts" }
+    ]
+  },
   "header": {
     "linkButton": "Contact us",
     "formButton": "Schedule a Consultation",
@@ -128,7 +138,157 @@
             "item": "Certificates",
             "collection": "certificates"
           }
-        ]
+        ],
+        "fallback": {
+          "image": "/images/home/about/about-doctor.webp",
+          "general": {
+            "__typename": "AboutGeneralEn",
+            "name": "Sergii Voitsitskyi",
+            "profession": "Surgеon of the 1st Qualification Category in Vascular Surgery Phlebologist",
+            "education": [
+              {
+                "__typename": "AboutGeneralEnEducation",
+                "institution": "National Medical University named after O.O.Bogomolets"
+              },
+              {
+                "__typename": "AboutGeneralEnEducation",
+                "institution": "National Medical Academy named after P.L.Shupyk"
+              },
+              {
+                "__typename": "AboutGeneralEnEducation",
+                "institution": "Internship in Vascular Surgery at Lviv Regional Clinical Hospital"
+              }
+            ],
+            "experience": [
+              {
+                "__typename": "AboutGeneralEnExperience",
+                "point": "More than 10 years of practice"
+              },
+              {
+                "__typename": "AboutGeneralEnExperience",
+                "point": "Over 5000 successfully treated patients "
+              },
+              {
+                "__typename": "AboutGeneralEnExperience",
+                "point": "Over 4000 surgeries performed"
+              }
+            ]
+          },
+          "education": {
+            "__typename": "AboutEducationEn",
+            "title": "Educational Background",
+            "institutions": [
+              {
+                "__typename": "AboutEducationEnInstitutions",
+                "period": "Since 2021",
+                "institution": "Awarded the first qualification category in Vascular Surgery by the Ministry of Health."
+              },
+              {
+                "__typename": "AboutEducationEnInstitutions",
+                "period": "Since 2018",
+                "institution": "Member of the European Association for Vascular Surgeons."
+              },
+              {
+                "__typename": "AboutEducationEnInstitutions",
+                "period": "2019",
+                "institution": "Attended The 9th MUNICH VASCULAR CONFERENCE (MAC) in Munich, Germany."
+              },
+              {
+                "__typename": "AboutEducationEnInstitutions",
+                "period": "2020",
+                "institution": "Specialization in \"Ultrasound Diagnostics\" at Uzhhorod National University."
+              },
+              {
+                "__typename": "AboutEducationEnInstitutions",
+                "period": "2018",
+                "institution": "Internship in Vascular Surgery at Lviv Regional Clinical Hospital."
+              },
+              {
+                "__typename": "AboutEducationEnInstitutions",
+                "period": "2013-2017",
+                "institution": "National Medical Academy of Postgraduate Education named after P.L. Shupyk, National Institute of Surgery and Transplantology named after A.A. Shalimov."
+              },
+              {
+                "__typename": "AboutEducationEnInstitutions",
+                "period": "2007-2013",
+                "institution": "National Medical University named after O.O. Bogomolets, 1st Medical Faculty."
+              }
+            ]
+          },
+          "career": {
+            "__typename": "AboutCareerEn",
+            "title": "Career",
+            "institutions": [
+              {
+                "__typename": "AboutCareerEnInstitutions",
+                "period": "Since 2023",
+                "institution": "\"Medeira\" Clinic - Vascular Surgeon / Phlebologist."
+              },
+              {
+                "__typename": "AboutCareerEnInstitutions",
+                "period": "Since 2020",
+                "institution": "\"Oxford Medical\" Clinic - Vascular Surgeon / Phlebologist."
+              },
+              {
+                "__typename": "AboutCareerEnInstitutions",
+                "period": "2021-2023",
+                "institution": "\"ProHealth\" Clinic - Vascular Surgeon / Phlebologist."
+              },
+              {
+                "__typename": "AboutCareerEnInstitutions",
+                "period": "2020-2022",
+                "institution": "\"Institute Vein\" Clinic - Vascular Surgeon / Phlebologist."
+              },
+              {
+                "__typename": "AboutCareerEnInstitutions",
+                "period": "2016-2020",
+                "institution": "Cherkasy Regional Hospital of the Cherkasy Regional Council, Vascular Surgeon."
+              },
+              {
+                "__typename": "AboutCareerEnInstitutions",
+                "period": "2016-2020",
+                "institution": "Regional Center for Emergency Medical Assistance and Medical Disasters, Vascular Surgeon on emergency calls to medical facilities."
+              },
+              {
+                "__typename": "AboutCareerEnInstitutions",
+                "period": "2013-2016",
+                "institution": "Cherkasy Regional Hospital of the Cherkasy Regional Council, Vascular Surgery Center, Vascular Surgeon."
+              },
+              {
+                "__typename": "AboutCareerEnInstitutions",
+                "period": "2013-2016",
+                "institution": "Central Municipal Clinical Hospital No. 6, Surgical Departments #1 and #2"
+              }
+            ]
+          },
+          "certificates": [
+            {
+              "__typename": "AboutCertificates",
+              "photo": "/images/home/about/certificate-membership.webp",
+              "description": {
+                "__typename": "AboutCertificatesDescriptionEn",
+                "alt": "Certificate of Membership of European Society for Vascular Syrgery"
+              }
+            },
+            {
+              "__typename": "AboutCertificates",
+              "photo": "/images/home/about/certificate-2.webp",
+
+              "description": {
+                "__typename": "AboutCertificatesDescriptionEn",
+                "alt": "Certificate of participation - Conference current issues of general and vascular surgery"
+              }
+            },
+            {
+              "__typename": "AboutCertificates",
+              "photo": "/images/home/about/certificate-3.webp",
+              "description": {
+                "__typename": "AboutCertificatesDescriptionEn",
+                "alt": "Certificate of participation - Conference topical issues of emergency surgery"
+              }
+            }
+          ]
+        }
       },
       "banner": {
         "title": "Cure varicose veins in one session!",
@@ -317,7 +477,8 @@
           },
           "textarea": {
             "label": "Your message",
-            "placeholder": "Ask your question"
+            "placeholder": "Ask your question",
+            "error": "Maximum 500 characters"
           },
           "checkbox": {
             "label": "I consent to the processing of personal data"
@@ -376,7 +537,66 @@
           "send": { "text": "Contact", "icon": "Telegram Icon" },
           "read": { "text": "Read more" },
           "video": { "icon": "Watch Video Icon" }
-        }
+        },
+        "templates": [
+          {
+            "__typename": "type01",
+            "date": "2023-03-07T22:00:00.000Z",
+            "photo": "/images/feedback/OV.webp",
+            "video": null,
+            "name": "Olha Viktorivna",
+            "telegram": null,
+            "review": {
+              "type": "string",
+              "children": [],
+              "isError": true,
+              "template": "On February 13, 2023, I had a surgery to remove varicose veins on my lower limbs performed by Dr. Voitsitskyi at the Oxford Medical Clinic. I want to express my deep gratitude to the doctor for his caring attitude and high level of professionalism! Dr. Voitsitskyi conducted the operation very attentively and provided careful post-operative care. The surgery was performed under local anesthesia. The doctor constantly informed me about each step of the procedure and where I might experience some discomfort. However, the pain was minimal! A doctor should not only be professional but also compassionate, and this perfectly describes . I was pleasantly surprised at how quickly, easily, and successfully the operation went. My small incisions are healing quickly, and I'm very happy about that. The future results depend on me (how diligently I follow the doctor's recommendations), but if anything arises, Dr. Voitsitskyi is always available. I'll have beautiful legs by summer 😁 Thank you, Doctor! 🤗"
+            }
+          },
+
+          {
+            "__typename": "type02",
+            "date": "2023-10-13T21:00:00.000Z",
+            "photo": "/images/feedback/RS.webp",
+            "video": null,
+            "name": "Roman Samborsky",
+            "telegram": "https://t.me/Roman_V_S",
+            "review": {
+              "type": "string",
+              "children": [],
+              "isError": true,
+              "template": "I highly recommend Dr. Voitsitskyi as a practicing surgeon-phlebologist. He provided proper pre- and post-operative support. The operation under local anesthesia went smoothly with minimal discomfort. It's been six months, I've resumed physical activities, and there have been no post-operative complications. The previous discomfort in my legs hasn't returned. I am 100% satisfied with the quality of the work."
+            }
+          },
+          {
+            "__typename": "type03",
+            "date": "2023-10-14T21:00:00.000Z",
+            "photo": "/images/feedback/SH.webp",
+            "video": null,
+            "name": "Svitlana Hrybanova",
+            "telegram": null,
+            "review": {
+              "type": "string",
+              "children": [],
+              "isError": true,
+              "template": "A young doctor par excellence, Dr. Voitsitskyi. He performed surgery on my leg veins. He is attentive and a true specialist in his field. Everything went well without pain or any issues. I will recommend him to everyone for getting rid of these conditions. Walk with beautiful and healthy legs! Wishing you health and happiness, Dr. Voitsitskyi!"
+            }
+          },
+          {
+            "__typename": "type04",
+            "date": "2023-10-08T21:00:00.000Z",
+            "photo": "/images/feedback/YK.webp",
+            "video": null,
+            "name": "Yulia Kashpurenko",
+            "telegram": null,
+            "review": {
+              "type": "string",
+              "children": [],
+              "isError": true,
+              "template": "Highly qualified specialist and a friendly doctor. My mother had an advanced stage of varicose veins. Thanks to the doctor's professionalism, the surgery and postoperative period went smoothly without complications. We are satisfied. Don't hesitate to seek his help, and stay healthy. Highly recommended!"
+            }
+          }
+        ]
       }
     },
     "treatment": {

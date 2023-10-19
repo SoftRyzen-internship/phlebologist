@@ -5,7 +5,7 @@ import { useForm, SubmitHandler } from 'react-hook-form';
 import useFormPersist from 'react-hook-form-persist';
 import classnames from 'classnames';
 
-import { FormProps, FormInputs } from './Form.props';
+import { FormProps, FormInputs, IFormBuildingData } from './Form.props';
 
 import { sendDataToTelegram } from '@/utils/sendDataToTelegram';
 import { sendDataToGoogleSheets } from '@/utils/sendDataToGoogleSheets';
@@ -27,7 +27,7 @@ const Form: FC<FormProps> = ({ staticData, className = '' }) => {
   const { sendText, sentText, loadingText, errorText } = button;
   const {
     options: { name, phone, message, agree },
-  } = formBuildingData;
+  } = formBuildingData as IFormBuildingData;
 
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [buttonCurrentText, setButtonCurrentText] = useState<string>(sendText);
