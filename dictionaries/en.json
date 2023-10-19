@@ -414,7 +414,16 @@
           "afterAltText": "Image of a condition after treatment",
           "beforeHandleText": "Before",
           "afterHandleText": "After"
-        }
+        },
+        "template": [
+          {
+            "content": {
+              "description": "For many years, I suffered from varicose veins. I consulted many doctors, but none of them could help me. My condition was exacerbated by numerous treatment attempts, but none of them yielded the desired results. Varicose veins had become unbearable, and the pain and swelling made it impossible to live a normal life. A stroke of luck led me to Dr. Voitsitskyi - a true expert. He not only explained all the nuances of my problem but also offered an optimal treatment plan. Thanks to the correctly chosen treatment method, the surgery was quick and painless, and, most importantly, left no scars. I couldn't believe my eyes when, after 1.5 hours, I had healthy legs again, the pain was gone, and the swelling disappeared."
+            },
+            "before": "/images/results/results-1-1.webp",
+            "after": "/images/results/results-1-2.webp"
+          }
+        ]
       },
       "faq": {
         "title": "Answers to Common Questions",

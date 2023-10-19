@@ -2,7 +2,7 @@
 
 import { FC } from 'react';
 import classnames from 'classnames';
-import { TinaMarkdown } from 'tinacms/dist/rich-text';
+import { TinaMarkdown, TinaMarkdownContent } from 'tinacms/dist/rich-text';
 
 import { ResultsSlideProps } from './ResultsSlide.props';
 import { SliderBeforeAfter, ScrollLinkButton } from '@/components';
@@ -13,6 +13,7 @@ const ResultsSlide: FC<ResultsSlideProps> = ({
   optionalStaticData,
   currentSlideIdx,
   totalQty,
+  isTemplate,
   className = '',
 }) => {
   const { description } = data.content;
@@ -34,9 +35,15 @@ const ResultsSlide: FC<ResultsSlideProps> = ({
           <p className="mb-5 mt-5 text-[18px] font-medium leading-[1.11] -tracking-[0.72px] md:mb-8 md:mt-6 md:text-xl md:leading-[1.2] md:-tracking-[0.8px] xl:mb-6 xl:mt-12">
             {optionalStaticData.secondaryTitle}
           </p>
-          <div className="mb-5 text-justify text-sm leading-[1.21] -tracking-[0.56px] md:mb-10 md:text-base md:-tracking-[0.64px]">
-            <TinaMarkdown content={description} />
-          </div>
+          {isTemplate ? (
+            <p className="mb-5 text-justify text-sm leading-[1.21] -tracking-[0.56px] md:mb-10 md:text-base md:-tracking-[0.64px]">
+              {description as string}
+            </p>
+          ) : (
+            <div className="mb-5 text-justify text-sm leading-[1.21] -tracking-[0.56px] md:mb-10 md:text-base md:-tracking-[0.64px]">
+              <TinaMarkdown content={description as TinaMarkdownContent} />
+            </div>
+          )}
         </div>
         <ScrollLinkButton
           className="mx-auto"
