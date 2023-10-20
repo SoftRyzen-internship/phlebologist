@@ -13,7 +13,7 @@ const TreatmentQAItem: React.FC<TreatmentQAItemProps> = ({ data }) => {
     <li className="xl:grid xl:grid-cols-2">
       <h3
         className="md:font:medium mb-6 text-xl font-semibold tracking-[-0.8px]
-        text-black-dark md:w-[320px] md:text-2xl md:tracking-[-0.96px] xl:w-[419px]"
+        text-black-dark md:w-[320px] md:text-2xl md:tracking-[-0.96px] xl:mb-0 xl:w-[419px]"
       >
         {question}
       </h3>
