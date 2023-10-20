@@ -16,7 +16,7 @@ const Header = async ({ lang }: { lang: Locale }) => {
     <header className="pb-3 pt-6 md:pb-6 xl:pt-7">
       <div className="container">
         <div className="wrapper relative flex items-center justify-between">
-          <Logo />
+          <Logo lang={lang} />
 
           <div className="flex items-center gap-3 xl:gap-2">
             <div className="hidden items-center gap-3 md:flex xl:gap-2">

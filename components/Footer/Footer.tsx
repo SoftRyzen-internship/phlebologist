@@ -13,7 +13,7 @@ const Footer: FC<FooterProps> = ({
       <div className="container text-center">
         <div className="wrapper">
           <div className="md:hidden">
-            <Logo className="mb-6 max-w-fit text-left" />
+            <Logo className="mb-6 max-w-fit text-left" lang={lang} />
             <div className="mb-6 flex items-start justify-between text-left md:block">
               <p className="max-w-[158px] text-xs -tracking-[0.48px] text-black-dark  opacity-50">
                 {address}
@@ -37,7 +37,7 @@ const Footer: FC<FooterProps> = ({
 
           <div className="hidden text-left md:flex">
             <div className="mr-[46px] flex flex-col justify-between xl:mr-[312px]">
-              <Logo className="max-w-fit" />
+              <Logo className="max-w-fit" lang={lang} />
               <div>
                 <p className="max-w-[158px] text-[12px] leading-loose -tracking-[0.48px] text-black-dark  opacity-50">
                   {phone}
