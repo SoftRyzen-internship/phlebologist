@@ -4,5 +4,6 @@ export interface SliderProps {
   optionalStaticData?: any;
   section: 'result' | 'feedback' | 'doctor';
   slide: any;
+  isTemplate?: boolean;
   slideClassName?: string;
 }
