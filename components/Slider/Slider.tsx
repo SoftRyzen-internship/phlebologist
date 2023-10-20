@@ -17,6 +17,7 @@ const Slider: React.FC<SliderProps> = ({
   section,
   slide: Component,
   slideClassName,
+  isTemplate,
 }) => {
   const resultConfig = {
     loop: true,
@@ -88,6 +89,7 @@ const Slider: React.FC<SliderProps> = ({
                 data={slide}
                 staticData={staticData}
                 optionalStaticData={optionalStaticData}
+                isTemplate={isTemplate}
                 className={slideClassName}
                 currentSlideIdx={idx + 1}
                 totalQty={slides.length}
