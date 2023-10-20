@@ -24,6 +24,7 @@ const AboutTabs: React.FC<AboutTabsProps> = ({
   },
   data: { general, education, career, certificates },
   iconData,
+  lang,
 }) => {
   const [selectedIndex, setSelectedIndex] = useState(0);
 
@@ -64,6 +65,7 @@ const AboutTabs: React.FC<AboutTabsProps> = ({
             <AboutGeneral
               data={general}
               staticData={{ firstSubtitle, secondSubtitle }}
+              lang={lang}
             />
           </Tab.Panel>
           <Tab.Panel>

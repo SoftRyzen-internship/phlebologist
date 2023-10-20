@@ -1,3 +1,4 @@
+import { Locale } from '@/i18n.config';
 import { AboutGeneralDataType } from '@/types';
 
 type GeneralStaticDataType = {
@@ -8,4 +9,5 @@ type GeneralStaticDataType = {
 export interface AboutGeneralProps {
   data: AboutGeneralDataType;
   staticData: GeneralStaticDataType;
+  lang: Locale;
 }
