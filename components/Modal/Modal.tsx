@@ -17,6 +17,7 @@ const Modal: React.FC<ModalProps> = ({
 }) => {
   const [isReady, setIsReady] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(isOpen);
+  // const [modalRef, setModalRef] = useState<HTMLElement | null>(null)
 
   const transition = useTransition(isModalOpen, {
     from: { opacity: 0 },
@@ -31,9 +32,15 @@ const Modal: React.FC<ModalProps> = ({
 
   useEffect(() => {
     const portalRef = document.getElementById('modal');
+    // const modal = document.getElementById('mod_win');
+
     if (portalRef) {
       setIsReady(true);
     }
+
+    // if (modal) {
+    //   setModalRef(modal)
+    // }
   }, []);
 
   useEffect(() => {
@@ -80,8 +87,10 @@ const Modal: React.FC<ModalProps> = ({
             item && (
               <animated.div
                 className={classNames({
-                  'fixed inset-0 z-20 flex items-center justify-center rounded-extended bg-black-backdrop/25 backdrop-blur-sm transition-all duration-300':
+                  'fixed inset-0 z-20 flex items-center justify-center bg-black-backdrop/25 backdrop-blur-sm transition-all duration-300':
                     true,
+                  'overflow-y-scroll md:items-start': isReview,
+                  // 'overflow-y-scroll items-start': (modalRef?.offsetHeight as number > window.innerHeight)
                 })}
                 style={style}
                 onClick={handleBackdropClose}
@@ -90,10 +99,11 @@ const Modal: React.FC<ModalProps> = ({
                   className={classNames({
                     'relative max-w-[280px] overflow-hidden rounded-extended bg-white px-[20px] pb-[40px] pt-[56px] md:max-w-[704px] xl:max-w-[1240px]':
                       true,
-                    'md:p-[80px] ': isReview,
+                    'md:mb-auto md:mt-[60px] md:p-[80px]': isReview,
                     'md:px-[24px] md:py-[60px] xl:px-[100px] xl:py-[80px] smOnly:w-[80%] smOnly:max-w-[440px]':
                       !isReview,
                   })}
+                  id="mod_win"
                 >
                   <IconBtn
                     variant="close"
