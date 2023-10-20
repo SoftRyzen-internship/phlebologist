@@ -416,7 +416,16 @@
           "afterAltText": "Image of a condition after treatment",
           "beforeHandleText": "Before",
           "afterHandleText": "After"
-        }
+        },
+        "template": [
+          {
+            "content": {
+              "description": "For many years, I suffered from varicose veins. I consulted many doctors, but none of them could help me. My condition was exacerbated by numerous treatment attempts, but none of them yielded the desired results. Varicose veins had become unbearable, and the pain and swelling made it impossible to live a normal life. A stroke of luck led me to Dr. Voitsitskyi - a true expert. He not only explained all the nuances of my problem but also offered an optimal treatment plan. Thanks to the correctly chosen treatment method, the surgery was quick and painless, and, most importantly, left no scars. I couldn't believe my eyes when, after 1.5 hours, I had healthy legs again, the pain was gone, and the swelling disappeared."
+            },
+            "before": "/images/results/results-1-1.webp",
+            "after": "/images/results/results-1-2.webp"
+          }
+        ]
       },
       "faq": {
         "title": "Answers to Common Questions",
@@ -794,12 +803,12 @@
   "meta": {
     "metadata": {
       "title": "Varicose Vein Treatment in Kyiv | Vascular Surgeon - Sergii Voitsitskyi",
-      "description": "Vascular Surgeon - Sergii Voitsitskyi",
-      "base": "https://phlebologist.vercel.app/en",
-      "keywords": "флеболог, медицина, варикоз, phlebologist, varicose"
+      "description": "Consultation with a phlebologist. Effective varicose vein treatment, modern equipment, comfortable conditions. Affordable price. Treatment for thrombosis.",
+      "base": "https://phlebologist.vercel.app/",
+      "keywords": "phlebologist, varicose veins, thrombosis"
     },
     "twitter": {
-      "title": "Vascular Surgeon - Sergii Voitsitskyi",
+      "title": "Varicose Vein Treatment in Kyiv | Vascular Surgeon - Sergii Voitsitskyi",
       "card": "summary_large_image",
       "images": [
         {
@@ -809,7 +818,7 @@
           "alt": "Varicose Vein Treatment in Kyiv | Vascular Surgeon - Sergii Voitsitskyi"
         }
       ],
-      "description": "Varicose Vein Treatment in Kyiv"
+      "description": "Consultation with a phlebologist. Effective varicose vein treatment, modern equipment, comfortable conditions. Affordable price. Treatment for thrombosis."
     },
     "openGraph": {
       "images": [
@@ -820,10 +829,10 @@
           "alt": "Varicose Vein Treatment in Kyiv | Vascular Surgeon - Sergii Voitsitskyi"
         }
       ],
-      "description": "Varicose Vein Treatment in Kyiv",
+      "description": "Consultation with a phlebologist. Effective varicose vein treatment, modern equipment, comfortable conditions. Affordable price. Treatment for thrombosis.",
       "type": "website",
       "locale": "en_US",
-      "title": "Vascular Surgeon - Sergii Voitsitskyi",
+      "title": "Varicose Vein Treatment in Kyiv | Vascular Surgeon - Sergii Voitsitskyi",
       "url": "https://phlebologist.vercel.app/en"
     }
   }

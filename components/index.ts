@@ -45,9 +45,6 @@ export { default as AdvantagesList } from '@/components/AdvantagesList/Advantage
 // section Results
 export { default as ResultsSlide } from '@/components/ResultsSlide/ResultsSlide';
 
-// error
-export { default as ErrorMessage } from '@/components/ErrorMessage/ErrorMessage';
-
 //socials-list
 export { default as SocialsList } from '@/components/SocialSList/SocialsList';
 
