@@ -15,7 +15,7 @@ general:
       - point: 4000+ проведених операцій
   en:
     name: Sergii Voitsitskyi
-    profession: 'Vascular surgeon of the 1st category, phlebologist'
+    profession: Vascular surgeon of the 1st category phlebologist
     education:
       - institution: National Medical University named after O.O.Bogomolets
       - institution: National Medical Academy named after P.L.Shupyk
