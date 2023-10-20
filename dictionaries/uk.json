@@ -801,7 +801,7 @@
       "card": "summary_large_image",
       "images": [
         {
-          "url": "/images/ogp-image.jpg",
+          "url": "https://phlebologist.vercel.app/images/ogp-image.jpg",
           "width": 1200,
           "height": 630,
           "alt": "Лікування варикозу в Києві | Судинний хірург - Сергій Войціцький"
@@ -812,7 +812,7 @@
     "openGraph": {
       "images": [
         {
-          "url": "/images/ogp-image.jpg",
+          "url": "https://phlebologist.vercel.app/images/ogp-image.jpg",
           "width": 1200,
           "height": 630,
           "alt": "Лікування варикозу в Києві | Судинний хірург - Сергій Войціцький"
