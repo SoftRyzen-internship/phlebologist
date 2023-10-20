@@ -29,6 +29,10 @@ export async function generateMetadata({
     metadataBase: new URL(metadata.base),
     alternates: {
       canonical: process.env.NEXT_PUBLIC_SITE_URL,
+      languages: {
+        'uk-UA': '/uk',
+        'en-US': '/en',
+      },
     },
     keywords: metadata.keywords,
     twitter,
