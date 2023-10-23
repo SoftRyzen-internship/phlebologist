@@ -32,7 +32,7 @@ const TreatmentTabButton: React.FC<TreatmentTabButtonProps> = ({
         {slideNum}
       </span>
       <h3
-        className="font-medium, leading-5, text-lg tracking-[-0.72] 
+        className="font-medium, leading-5, text-lg tracking-[-0.72px] 
           md:mt-5 md:text-xl md:leading-6 md:tracking-[-0.8px]"
       >
         {name}
