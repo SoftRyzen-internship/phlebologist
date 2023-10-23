@@ -23,7 +23,7 @@ const Advantages: FC<AdvantagesProps> = ({ staticData, className = '' }) => {
                 {mainQuestion}
               </p>
               <AdvantagesList advList={advList} />
-              <p className="mb-6 whitespace-pre-wrap text-center text-sm leading-normal -tracking-[0.56]">
+              <p className="mb-6 whitespace-pre-wrap text-center text-sm leading-normal -tracking-[0.56px]">
                 {enrollText}
               </p>
               <ScrollLinkButton className="mx-auto" linkto="consultation">
@@ -37,7 +37,7 @@ const Advantages: FC<AdvantagesProps> = ({ staticData, className = '' }) => {
                   {mainQuestion}
                 </p>
                 <div className="flex flex-col">
-                  <p className="mb-6 w-[240px] text-start text-base leading-[1.5] -tracking-[0.64] xl:w-[391px] xl:text-xl xl:leading-[1.2] xl:-tracking-[0.8px]">
+                  <p className="mb-6 w-[240px] text-start text-base leading-[1.5] -tracking-[0.64px] xl:w-[391px] xl:text-xl xl:leading-[1.2] xl:-tracking-[0.8px]">
                     {enrollText}
                   </p>
                   <ScrollLinkButton
