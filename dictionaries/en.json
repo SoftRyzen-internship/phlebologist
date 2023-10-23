@@ -524,11 +524,11 @@
             "images": {
               "map": {
                 "img": "/images/contacts/contacts-map-img@2x.webp",
-                "alt": "Мапа"
+                "alt": "Map"
               },
               "office": {
                 "img": "/images/contacts/contacts-office-img@2x.webp",
-                "alt": "Офіс"
+                "alt": "Office"
               }
             }
           }
