@@ -27,9 +27,14 @@ const Results: FC<ResultsProps> = async ({ staticData, iconData, lang }) => {
   }
 
   return (
-    <section id="results" className="-mt-5 md:-mt-8 xl:-mt-10">
+    <section
+      id="results"
+      className="-mt-[30px] md:-mt-[52px] xl:-mt-[70px]"
+      data-aos="fade-up"
+      data-aos-duration="1500"
+    >
       <div className="container">
-        <div className="wrapper rounded-t-medium bg-white pb-[52px] pt-6 md:relative md:rounded-t-extraLarge md:pb-[76px] md:pt-[67px] xl:rounded-t-max xl:pb-[112px] xl:pt-[135px]">
+        <div className="wrapper rounded-medium bg-white pb-[62px] pt-6 md:relative md:rounded-extraLarge md:pb-[96px] md:pt-[67px] xl:rounded-max xl:pb-[142px] xl:pt-[135px]">
           <Heading
             tag="h2"
             className="mb-5 w-[260px] md:absolute md:top-10 md:mb-0 md:w-[500px] xl:top-16 xl:leading-[1]"

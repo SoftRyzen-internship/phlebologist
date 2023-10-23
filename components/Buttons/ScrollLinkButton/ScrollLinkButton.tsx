@@ -45,7 +45,7 @@ const ScrollLinkButton: React.FC<ScrollLinkButtonProps> = ({
       onClick={actionHandler}
       spy={true}
       smooth={true}
-      offset={0}
+      offset={-91}
       duration={500}
       //=============
       role="button"

@@ -15,8 +15,10 @@ const Contacts: React.FC<ContactsProps> = ({
 
   return (
     <section
+      data-aos="fade-up"
+      data-aos-duration="1500"
       id={sectionData?.anchor}
-      className="-mt-[20px] text-black-dark md:-mt-[36px] xl:-mt-[48px]"
+      className="-mt-[30px] text-black-dark md:-mt-[56px] xl:-mt-[78px]"
     >
       <div className="container">
         <div className="wrapper relative rounded-medium bg-white pb-[32px] pt-[24px] md:rounded-extraLarge md:py-[40px] xl:rounded-max xl:py-[64px]">

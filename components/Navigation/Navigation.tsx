@@ -65,7 +65,7 @@ const Navigation: FC<NavigationProps> = ({
               <LinkScroll
                 spy={true}
                 smooth={true}
-                offset={0}
+                offset={-91}
                 duration={500}
                 to={linkTo}
                 href={`${linkTo}`}
@@ -97,7 +97,7 @@ const Navigation: FC<NavigationProps> = ({
               <LinkScroll
                 spy={true}
                 smooth={true}
-                offset={0}
+                offset={-91}
                 duration={500}
                 to={linkTo}
                 href={`#${linkTo}`}
