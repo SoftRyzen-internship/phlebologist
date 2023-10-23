@@ -62,6 +62,7 @@ const About: React.FC<AboutProps> = async ({ lang, staticData }) => {
             }}
             iconData={staticData.iconData}
             data={data}
+            lang={lang}
           />
         </div>
       </div>
