@@ -1,6 +1,10 @@
 ---
 uk:
   case:
+    - date: 2022-10-11T21:00:00.000Z
+      photo: /uploads/reviews/OM.webp
+      video: 'https://youtube.com/shorts/4Y8V3XZKg-w?feature=share'
+      name: Маліченко Олександра Миколаївна
     - date: 2023-03-07T22:00:00.000Z
       photo: /uploads/reviews/Ольга Вікторівна.webp
       name: Ольга Вікторівна
