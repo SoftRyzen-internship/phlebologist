@@ -43,7 +43,7 @@ const FormCheckbox: FC<FormCheckboxProps> = ({
         )}
       />
       <span className={checkboxClass} aria-label="Confirmation checkbox">
-        {isChecked && <SvgCheck aria-hidden />}
+        {isChecked && <SvgCheck width={16} height={16} aria-hidden />}
       </span>
       <span className="block text-xs leading-normal -tracking-[0.48px]">
         {label}
