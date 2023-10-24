@@ -52,7 +52,9 @@ export default async function RootLayout({
 
   return (
     <html lang={lang}>
-      <body className={`${inter.className} bg-white-dark`}>
+      <body
+        className={`${inter.className} mt-[75px] bg-white-dark md:mt-[87px] xl:mt-[91px]`}
+      >
         <Header lang={lang} />
         {children}
         <Footer

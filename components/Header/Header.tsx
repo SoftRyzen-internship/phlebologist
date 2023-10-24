@@ -13,7 +13,7 @@ const Header = async ({ lang }: { lang: Locale }) => {
   const { telegram } = socials;
 
   return (
-    <header className="pb-3 pt-6 md:pb-6 xl:pt-7">
+    <header className="fixed top-0 z-10 w-full bg-body/90 pb-3  pt-6  md:pb-6 xl:pt-7">
       <div className="container">
         <div className="wrapper relative flex items-center justify-between">
           <Logo lang={lang} />

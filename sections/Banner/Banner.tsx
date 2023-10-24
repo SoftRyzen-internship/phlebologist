@@ -24,7 +24,11 @@ const Banner: React.FC<BannerProps> = async ({
   return (
     <section id="banner" className={className}>
       <div className="container">
-        <div className="wrapper banner-bg flex h-[647px] flex-col justify-between rounded-t-medium pb-[52px] pt-6 md:h-auto md:items-start md:gap-12 md:rounded-t-extraLarge md:pb-20 md:pt-[94px] xl:relative xl:gap-16 xl:rounded-t-max xl:pb-[239px] xl:pt-[186px]">
+        <div
+          data-aos="fade-up"
+          data-aos-duration="1500"
+          className="wrapper banner-bg flex h-[647px] flex-col justify-between rounded-medium pb-[62px] pt-6 md:h-auto md:items-start md:gap-12 md:rounded-extraLarge md:pb-[100px] md:pt-[94px] xl:relative xl:gap-16 xl:rounded-max xl:pb-[269px] xl:pt-[186px]"
+        >
           <Heading
             tag="h2"
             className="mx-auto w-[260px] text-center md:mx-0 md:w-[360px] md:text-left xl:w-[592px] xl:text-[64px] xl:!-tracking-[2.56px]"

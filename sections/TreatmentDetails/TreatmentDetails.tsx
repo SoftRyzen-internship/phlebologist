@@ -9,9 +9,9 @@ const TreatmentDetails: React.FC<TreatmentDetailsProps> = ({ staticData }) => {
     <section>
       <div className="container">
         <div
-          className="wrapper rounded-t-medium bg-white pb-[52px] pt-8  
-                        md:rounded-t-extraLarge md:pb-[76px] md:pt-[40px] 
-                        xl:rounded-t-max xl:pb-[112px] xl:pt-16"
+          className="wrapper rounded-medium bg-white pb-[62px] pt-8  
+                        md:rounded-extraLarge md:pb-[96px] md:pt-[40px] 
+                        xl:rounded-max xl:pb-[142px] xl:pt-16"
         >
           <Heading className="mb-8 md:mb-12 xl:mb-[64px] smOnly:text-[28px]">
             {title}

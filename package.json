@@ -23,6 +23,7 @@
     "@tinacms/cli": "^1.5.29",
     "@typescript-eslint/eslint-plugin": "^6.7.3",
     "@typescript-eslint/parser": "^6.7.3",
+    "aos": "^2.3.4",
     "classnames": "^2.3.2",
     "googleapis": "^127.0.0",
     "keen-slider": "^6.8.6",
@@ -40,6 +41,7 @@
   },
   "devDependencies": {
     "@svgr/webpack": "^8.1.0",
+    "@types/aos": "^3.0.6",
     "@types/node": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
