@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import { fetchAbout } from '@/api';
+import { fetchData } from '@/api';
 
 import { AboutTabs, Heading, AboutVideo } from '@/components';
 
@@ -12,9 +12,9 @@ const About: React.FC<AboutProps> = async ({ lang, staticData }) => {
   let data = staticData.fallback;
 
   try {
-    const fetchData = await fetchAbout(lang);
+    const result = await fetchData(lang, 'about');
 
-    data = { ...(fetchData as AboutDataType) };
+    data = { ...(result as AboutDataType) };
   } catch (error) {}
 
   const {

@@ -1,7 +1,12 @@
 import client from '@/tina/__generated__/client';
+import { NextResponse } from 'next/server';
 
-const fetchResults = async (lang: string) => {
+export const POST = async (request: Request) => {
   try {
+    const body: any = await request.json();
+
+    const { lang } = body;
+
     const { data } = await client.queries.results({
       relativePath: 'results.md',
     });
@@ -13,10 +18,8 @@ const fetchResults = async (lang: string) => {
       };
     });
 
-    return result;
+    return NextResponse.json(result);
   } catch (error) {
     throw new Error(error);
   }
 };
-
-export default fetchResults;

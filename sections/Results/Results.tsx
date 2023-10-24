@@ -1,7 +1,7 @@
 import { FC } from 'react';
 
 import { Heading, Slider, ResultsSlide } from '@/components';
-import { fetchResults } from '@/api';
+import { fetchData } from '@/api';
 import { ResultsProps } from './Results.props';
 
 const Results: FC<ResultsProps> = async ({ staticData, iconData, lang }) => {
@@ -17,7 +17,7 @@ const Results: FC<ResultsProps> = async ({ staticData, iconData, lang }) => {
   let isTemplate = true;
 
   try {
-    const results = await fetchResults(lang);
+    const results = await fetchData(lang, 'results');
     if (results) {
       data = results;
       isTemplate = false;
