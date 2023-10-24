@@ -10,7 +10,7 @@ export const POST = async (request: Request) => {
     const { data } = await client.queries.banner({ relativePath: 'banner.md' });
     const result = data.banner[lang];
 
-    return NextResponse.json(result);
+    return NextResponse.json(result, { status: 200 });
   } catch (error) {
     throw new Error(error);
   }

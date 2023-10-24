@@ -1,7 +1,7 @@
 import client from '@/tina/__generated__/client';
 import { NextResponse } from 'next/server';
 
-export const POST = async (request: Request) => {
+export async function POST(request: Request) {
   try {
     const body: any = await request.json();
 
@@ -12,8 +12,8 @@ export const POST = async (request: Request) => {
 
     const result = data.reviews[lang];
 
-    return NextResponse.json(result);
+    return NextResponse.json(result, { status: 200 });
   } catch (error) {
     throw new Error(error);
   }
-};
+}

@@ -1,6 +1,6 @@
 import { TinaMarkdownContent } from 'tinacms/dist/rich-text';
 
-import { fetchData } from '@/api';
+import fetchNewData from '@/utils/fetchNewData';
 import { FeedbackSlideData } from '@/types';
 
 import { Heading, Slider, FeedbackSlide } from '@/components';
@@ -10,7 +10,7 @@ const Feedback: React.FC<FeedbackProps> = async ({ staticData, lang }) => {
   let feedbacks = [] as FeedbackSlideData[];
 
   try {
-    const res = await fetchData(lang, 'reviews');
+    const res = await fetchNewData(lang, 'reviews');
     feedbacks = await res.case;
   } catch (error) {
     const templates = staticData.feedback.templates;

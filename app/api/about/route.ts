@@ -24,7 +24,7 @@ export const POST = async (request: Request) => {
       certificates,
     };
 
-    return NextResponse.json(about);
+    return NextResponse.json(about, { status: 200 });
   } catch (error) {
     throw new Error(error);
   }

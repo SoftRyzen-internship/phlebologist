@@ -1,4 +1,4 @@
-import { fetchData } from '@/api';
+import fetchNewData from '@/utils/fetchNewData';
 import { Heading, ButtonSecondary } from '@/components';
 import { IFetchedBannerData } from '@/types';
 import { BannerProps } from './Banner.props';
@@ -15,7 +15,7 @@ const Banner: React.FC<BannerProps> = async ({
   };
 
   try {
-    const results: IFetchedBannerData = await fetchData(lang, 'banner');
+    const results: IFetchedBannerData = await fetchNewData(lang, 'banner');
 
     data = { ...results };
   } catch (error) {
