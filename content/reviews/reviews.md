@@ -1,23 +1,19 @@
 ---
 uk:
   case:
+    - date: 2023-10-10T21:00:00.000Z
+      photo: /uploads/reviews/Alfred_-_MS_Royal_14_B_VI.jpg
+      video: 'https://youtube.com/shorts/4Y8V3XZKg-w?feature=share'
+      name: Альфред Великий
+    - date: 2022-10-11T21:00:00.000Z
+      photo: /uploads/reviews/OM.webp
+      video: 'https://youtube.com/shorts/4Y8V3XZKg-w?feature=share'
+      name: Маліченко Олександра Миколаївна
+      review: ''
     - date: 2023-03-07T22:00:00.000Z
       photo: /uploads/reviews/Ольга Вікторівна.webp
       name: Ольга Вікторівна
-      review:
-        "13.02.2023 робила операцію по видаленню варикозних вен нижніх кінцівок
-        у С.Ю. Войцицького в клініці Oxford medical. Хочу висловити велику
-        подяку лікарю за турботливе ставлення та високий професіоналізм! Сергій
-        Юрійович дуже дбайливо провів операцію і подальше спостереження.
-        Операція проводилася під місцевою анестезією. Лікар весь час попереджав
-        мене про кожну свою дію та де може бути боляче. Але боляче майже не
-        було! Лікар має бути людяним, окрім того що професійним, і це саме про
-        Сергія Юрійовича! Я була приємно вражена як швидко, легко і вдало
-        пройшла операція. Мої маленькі ранки швидко загоюються і я дуже рада
-        цьому. Подальше залежить вже від мене ( наскільки старанно я буду
-        виконувати рекомендації лікаря), але якщо що - то Сергій Юрійович завжди
-        на зв'язку.\_ До літа буду вже з красивими ніжками \U0001F601 Дякую,
-        Лікарю! \U0001F917\n"
+      review: "13.02.2023 робила операцію по видаленню варикозних вен нижніх кінцівок у С.Ю. Войцицького в клініці Oxford medical. Хочу висловити велику подяку лікарю за турботливе ставлення та високий професіоналізм! Сергій Юрійович дуже дбайливо провів операцію і подальше спостереження. Операція проводилася під місцевою анестезією. Лікар весь час попереджав мене про кожну свою дію та де може бути боляче. Але боляче майже не було! Лікар має бути людяним, окрім того що професійним, і це саме про Сергія Юрійовича! Я була приємно вражена як швидко, легко і вдало пройшла операція. Мої маленькі ранки швидко загоюються і я дуже рада цьому. Подальше залежить вже від мене ( наскільки старанно я буду виконувати рекомендації лікаря), але якщо що - то Сергій Юрійович завжди на зв'язку.\_ До літа буду вже з красивими ніжками \U0001F601 Дякую, Лікарю! \U0001F917\n"
     - date: 2023-10-13T21:00:00.000Z
       photo: /uploads/reviews/Роман Самборський.webp
       name: Роман Самборський
@@ -107,37 +103,12 @@ uk:
         добре, по відчуттям не було сильно боляче, лікар уважний, дуже обережно
         ставиться до  пацієнтів. Зараз пройшло 3 тижні після операції, нога
         загоїлась, вже плаваю в басейні, задоволена результатом.
-    - date: 2023-10-15T21:00:00.000Z
-      photo: /uploads/reviews/Screenshot_92.jpg
-      video: 'https://youtube.com/shorts/V0UFf0W4e0E?si=dDFmOKq6r2m7h5EJ'
-      name: Етельред Нерозумний
-      review: ''
-    - date: 2023-10-09T21:00:00.000Z
-      photo: /uploads/reviews/Alfred_-_MS_Royal_14_B_VI.jpg
-      video: 'https://youtube.com/shorts/SfoCe-cZqoI?si=74LJv13CzwzfiBl4'
-      name: Альфред Великий
-      review: ''
 en:
   case:
     - date: 2023-03-07T22:00:00.000Z
       photo: /uploads/reviews/Ольга Вікторівна.webp
       name: Olha Viktorivna
-      review:
-        "On February 13, 2023, I had a surgery to remove varicose veins on my
-        lower limbs performed by Dr. Voitsitskyi at the Oxford Medical Clinic. I
-        want to express my deep gratitude to the doctor for his caring attitude
-        and high level of professionalism! Dr. Voitsitskyi conducted the
-        operation very attentively and provided careful post-operative care. The
-        surgery was performed under local anesthesia. The doctor constantly
-        informed me about each step of the procedure and where I might
-        experience some discomfort. However, the pain was minimal! A doctor
-        should not only be professional but also compassionate, and this
-        perfectly describes . I was pleasantly surprised at how quickly, easily,
-        and successfully the operation went. My small incisions are healing
-        quickly, and I'm very happy about that. The future results depend on me
-        (how diligently I follow the doctor's recommendations), but if anything
-        arises, Dr. Voitsitskyi is always available. I'll have beautiful legs by
-        summer \U0001F601 Thank you, Doctor! \U0001F917\n"
+      review: "On February 13, 2023, I had a surgery to remove varicose veins on my lower limbs performed by Dr. Voitsitskyi at the Oxford Medical Clinic. I want to express my deep gratitude to the doctor for his caring attitude and high level of professionalism! Dr. Voitsitskyi conducted the operation very attentively and provided careful post-operative care. The surgery was performed under local anesthesia. The doctor constantly informed me about each step of the procedure and where I might experience some discomfort. However, the pain was minimal! A doctor should not only be professional but also compassionate, and this perfectly describes . I was pleasantly surprised at how quickly, easily, and successfully the operation went. My small incisions are healing quickly, and I'm very happy about that. The future results depend on me (how diligently I follow the doctor's recommendations), but if anything arises, Dr. Voitsitskyi is always available. I'll have beautiful legs by summer \U0001F601 Thank you, Doctor! \U0001F917\n"
     - date: 2023-10-13T21:00:00.000Z
       photo: /uploads/reviews/Роман Самборський.webp
       name: Roman Samborsky
@@ -221,3 +192,4 @@ en:
         challenges)! I am satisfied with the results and recommend this doctor
         to my family and friends.
 ---
+
