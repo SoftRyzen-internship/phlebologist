@@ -8,7 +8,9 @@ import { MainWrapperProps } from './MainWrapper.props';
 
 const MainWrapper: FC<MainWrapperProps> = ({ children }) => {
   useEffect(() => {
-    AOS.init({ duration: 1500 });
+    setTimeout(() => {
+      AOS.init({ duration: 1500 });
+    }, 100);
   }, []);
 
   return <main>{children}</main>;
