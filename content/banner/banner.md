@@ -1,6 +1,6 @@
 ---
 uk:
-  title: Вилікуйте варикоз за один сеанс!
+  title: Вилікуйте варикоз за один сеанс! Так!
   description: >-
     Запишіться на консультацію та oтримайте індивідуальний план лікування від
     досвідченого флеболога
@@ -10,3 +10,4 @@ en:
     Schedule a consultation and receive a personalized treatment plan from an
     experienced phlebologist
 ---
+
