@@ -1,10 +1,15 @@
 ---
 uk:
   case:
+    - date: 2023-10-10T21:00:00.000Z
+      photo: /uploads/reviews/Alfred_-_MS_Royal_14_B_VI.jpg
+      video: 'https://youtube.com/shorts/4Y8V3XZKg-w?feature=share'
+      name: Альфред Великий
     - date: 2022-10-11T21:00:00.000Z
       photo: /uploads/reviews/OM.webp
       video: 'https://youtube.com/shorts/4Y8V3XZKg-w?feature=share'
       name: Маліченко Олександра Миколаївна
+      review: ''
     - date: 2023-03-07T22:00:00.000Z
       photo: /uploads/reviews/Ольга Вікторівна.webp
       name: Ольга Вікторівна
