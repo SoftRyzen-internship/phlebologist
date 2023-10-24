@@ -27,14 +27,13 @@ const About: React.FC<AboutProps> = async ({ lang, staticData }) => {
   } = staticData.about;
 
   return (
-    <section
-      id="about"
-      className="-mt-[30px] md:-mt-[52px] xl:-mt-[70px]"
-      data-aos="fade-up"
-      data-aos-duration="1500"
-    >
+    <section id="about" className="-mt-[30px] md:-mt-[52px] xl:-mt-[70px]">
       <div className="container">
-        <div className="wrapper rounded-medium bg-white pb-[62px] pt-6 md:rounded-extraLarge md:pb-[96px] md:pt-10 xl:flex xl:items-baseline xl:gap-10 xl:rounded-max xl:pb-[142px] xl:pt-16">
+        <div
+          data-aos="fade-up"
+          data-aos-duration="1500"
+          className="wrapper rounded-medium bg-white pb-[62px] pt-6 md:rounded-extraLarge md:pb-[96px] md:pt-10 xl:flex xl:items-baseline xl:gap-10 xl:rounded-max xl:pb-[142px] xl:pt-16"
+        >
           <div className="xl:w-[592px] xl:min-w-[592px]">
             <Heading className="mb-6 md:mb-8 xl:mb-[48px]">{title}</Heading>
             {data?.video ? (

@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import classnames from 'classnames';
 import { Link as LinkScroll } from 'react-scroll';
+import { useWindowWidth } from '@/hooks';
 
 import { NavigationProps } from './Navigation.props';
 
@@ -17,6 +18,7 @@ const Navigation: FC<NavigationProps> = ({
   actionHandler,
 }) => {
   const pathname = usePathname();
+  const { isScreenMobile } = useWindowWidth();
   const { navigation_home, navigation_treatment } = data;
 
   const itemClass = classnames(
@@ -65,7 +67,7 @@ const Navigation: FC<NavigationProps> = ({
               <LinkScroll
                 spy={true}
                 smooth={true}
-                offset={-91}
+                offset={isScreenMobile ? -75 : -90}
                 duration={500}
                 to={linkTo}
                 href={`${linkTo}`}
@@ -97,7 +99,7 @@ const Navigation: FC<NavigationProps> = ({
               <LinkScroll
                 spy={true}
                 smooth={true}
-                offset={-91}
+                offset={isScreenMobile ? -75 : -90}
                 duration={500}
                 to={linkTo}
                 href={`#${linkTo}`}

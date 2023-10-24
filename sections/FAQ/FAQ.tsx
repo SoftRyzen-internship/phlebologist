@@ -7,14 +7,11 @@ const FAQ: React.FC<FAQProps> = ({ staticData: { faq, socials } }) => {
   const { telegram } = socials;
 
   return (
-    <section
-      className="mt-[-30px] md:mt-[-56px] xl:mt-[-78px]"
-      id="faq"
-      data-aos="fade-up"
-      data-aos-duration="1500"
-    >
+    <section className="mt-[-30px] md:mt-[-56px] xl:mt-[-78px]" id="faq">
       <div className="container">
         <div
+          data-aos="fade-up"
+          data-aos-duration="1500"
           className="wrapper relative rounded-medium bg-white pb-[62px] pt-6  
             md:rounded-extraLarge md:pb-[96px] md:pt-[40px] 
             xl:flex xl:min-h-[940px] xl:justify-between xl:rounded-max xl:pb-[142px] xl:pt-16"

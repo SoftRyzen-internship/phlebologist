@@ -4,6 +4,7 @@ import React from 'react';
 import { Link } from 'react-scroll';
 import classnames from 'classnames';
 
+import { useWindowWidth } from '@/hooks';
 import { handleOnKeyUp } from '@/utils/handleOnKeyUp';
 import { ScrollLinkButtonProps } from './ScrollLinkButton.props';
 
@@ -14,6 +15,8 @@ const ScrollLinkButton: React.FC<ScrollLinkButtonProps> = ({
   children,
   actionHandler,
 }) => {
+  const { isScreenMobile } = useWindowWidth();
+
   const btnClass = classnames(
     'flex items-center justify-center text-black-dark text-base rounded-normal leading-normal -tracking-[0.64px]',
 
@@ -45,7 +48,7 @@ const ScrollLinkButton: React.FC<ScrollLinkButtonProps> = ({
       onClick={actionHandler}
       spy={true}
       smooth={true}
-      offset={-91}
+      offset={isScreenMobile ? -75 : -90}
       duration={500}
       //=============
       role="button"

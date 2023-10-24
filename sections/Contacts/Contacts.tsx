@@ -15,13 +15,15 @@ const Contacts: React.FC<ContactsProps> = ({
 
   return (
     <section
-      data-aos="fade-up"
-      data-aos-duration="1500"
       id={sectionData?.anchor}
       className="-mt-[30px] text-black-dark md:-mt-[56px] xl:-mt-[78px]"
     >
       <div className="container">
-        <div className="wrapper relative rounded-medium bg-white pb-[32px] pt-[24px] md:rounded-extraLarge md:py-[40px] xl:rounded-max xl:py-[64px]">
+        <div
+          data-aos="fade-up"
+          data-aos-duration="1500"
+          className="wrapper relative rounded-medium bg-white pb-[32px] pt-[24px] md:rounded-extraLarge md:py-[40px] xl:rounded-max xl:py-[64px]"
+        >
           <Heading variant="primary">{sectionData.heading}</Heading>
           <address className="mt-[20px] flex flex-col gap-[20px] not-italic md:mt-[32px] md:flex-row md:gap-[80px] xl:mt-[48px] xl:justify-between xl:gap-0">
             <ul className="flex flex-col gap-[20px] md:gap-[32px] xl:gap-[64px]">
