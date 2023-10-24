@@ -1,6 +1,7 @@
 import { Locale } from '@/i18n.config';
 import { getDictionary } from '@/utils/dictionary';
 
+import { MainWrapper } from '@/components';
 import {
   HeroSection,
   AboutSection,
@@ -22,7 +23,7 @@ export default async function Home({
   const { page, socials } = await getDictionary(lang);
 
   return (
-    <main>
+    <MainWrapper>
       <HeroSection staticData={page.home.hero} lang={lang} />
       <AboutSection
         lang={lang}
@@ -34,13 +35,13 @@ export default async function Home({
       />
       <AdvantagesSection
         staticData={page.home.advantages}
-        className="-mt-5 md:-mt-8 xl:-mt-10"
+        className="-mt-[30px] md:-mt-[52px] xl:-mt-[70px]"
       />
       <TreatmentsSection lang={lang} staticData={page.home.treatments} />
       <BannerSection
         staticData={page.home.banner}
         lang={lang}
-        className="-mt-5 md:-mt-8 xl:-mt-10"
+        className="-mt-[30px] md:-mt-[52px] xl:-mt-[70px]"
       />
       <ResultsSection
         staticData={page.home.patient_results}
@@ -57,7 +58,7 @@ export default async function Home({
       <FAQSection staticData={{ faq: page.home.faq, socials }} />
       <ConsultationSection
         staticData={page.home.consultation}
-        className="-mt-5 md:-mt-8 xl:-mt-10"
+        className="-mt-[30px] md:-mt-[52px] xl:-mt-[70px]"
       />
       <ContactsSection
         staticData={{
@@ -68,6 +69,6 @@ export default async function Home({
           socialData: socials,
         }}
       />
-    </main>
+    </MainWrapper>
   );
 }

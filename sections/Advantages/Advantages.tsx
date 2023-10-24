@@ -13,7 +13,11 @@ const Advantages: FC<AdvantagesProps> = ({ staticData, className = '' }) => {
   return (
     <section id="advantages" className={className}>
       <div className="container">
-        <div className="wrapper rounded-t-medium bg-gray-light pb-[52px] pt-8 md:rounded-t-extraLarge md:pb-[76px] md:pt-10 xl:rounded-t-max xl:pb-[108px] xl:pt-16">
+        <div
+          data-aos="fade-up"
+          data-aos-duration="1500"
+          className="wrapper rounded-medium bg-gray-light pb-[62px] pt-8 md:rounded-extraLarge md:pb-[96px] md:pt-10 xl:rounded-max xl:pb-[128px] xl:pt-16"
+        >
           <Heading tag="h2" className="mb-6 md:mb-[41px] xl:mb-9">
             {title}
           </Heading>

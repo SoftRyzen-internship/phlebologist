@@ -1,6 +1,8 @@
 import { Locale } from '@/i18n.config';
 import { getDictionary } from '@/utils/dictionary';
 
+import { MainWrapper } from '@/components';
+
 import {
   ContactsSection,
   ConsultationSection,
@@ -15,15 +17,15 @@ export default async function Treatment({
   const { page, socials } = await getDictionary(lang);
 
   return (
-    <main>
+    <MainWrapper>
       <TreatmentDetailsSection staticData={page.treatment[id]} />
       <ConsultationSection
         staticData={page.home.consultation}
-        className="-mt-5 md:-mt-8 xl:-mt-10"
+        className="-mt-[30px] md:-mt-[52px] xl:-mt-[70px]"
       />
       <ContactsSection
         staticData={{ pageData: page.home, socialData: socials }}
       />
-    </main>
+    </MainWrapper>
   );
 }
