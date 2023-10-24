@@ -1,17 +1,19 @@
 import client from '@/tina/__generated__/client';
+import { NextResponse } from 'next/server';
 
-const fetchReviews = async (lang: string) => {
+export async function POST(request: Request) {
   try {
+    const body: any = await request.json();
+
+    const { lang } = body;
     const { data } = await client.queries.reviews({
       relativePath: 'reviews.md',
     });
 
     const result = data.reviews[lang];
 
-    return result;
+    return NextResponse.json(result, { status: 200 });
   } catch (error) {
     throw new Error(error);
   }
-};
-
-export default fetchReviews;
+}
