@@ -25,7 +25,7 @@ const ScrollLinkButton: React.FC<ScrollLinkButtonProps> = ({
     'transition-all duration-300',
 
     {
-      'w-[256px] h-[51px] md:w-auto md:px-12 bg-white': variant === 'light',
+      'w-[256px] h-[51px] md:w-[182px] bg-white': variant === 'light',
     },
 
     {
