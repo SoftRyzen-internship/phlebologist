@@ -3,7 +3,7 @@
 import React from 'react';
 import { Link } from 'react-scroll';
 import classnames from 'classnames';
-
+import { useWindowWidth } from '@/hooks';
 import { handleOnKeyUp } from '@/utils/handleOnKeyUp';
 import { ButtonSecondaryProps } from './ButtonSecondary.props';
 
@@ -14,6 +14,8 @@ const ButtonSecondary: React.FC<ButtonSecondaryProps> = ({
   children,
   actionHandler,
 }) => {
+  const { isScreenMobile } = useWindowWidth();
+
   const secondaryBtnClass = classnames(
     {
       'md:w-[262px] xl:w-auto': view === 'hero',
@@ -35,7 +37,7 @@ const ButtonSecondary: React.FC<ButtonSecondaryProps> = ({
       onClick={actionHandler}
       spy={true}
       smooth={true}
-      offset={0}
+      offset={isScreenMobile ? -75 : -90}
       duration={500}
       //=============
       role="button"
