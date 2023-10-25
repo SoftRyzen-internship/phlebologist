@@ -53,13 +53,7 @@ const FeedbackCard: React.FC<FeedbackCardProps> = ({
     >
       <FeedbackCap data={data} staticData={staticData} />
 
-      <p
-        className={classNames({
-          'mt-[20px] overflow-y-auto text-[14px] md:mt-[28px] md:text-[16px] xl:mt-[30px]':
-            true,
-          'h-[289px] md:h-[323px]': isModal,
-        })}
-      >
+      <p className="mt-[20px] overflow-y-auto text-[14px] md:mt-[28px] md:text-[16px] xl:mt-[30px]">
         {isModal ? fullText : textData.text}
       </p>
 
