@@ -301,3 +301,7 @@ export type ContactData = {
     actionName: string;
   };
 };
+
+// API
+
+export type ApiRouteT = 'about' | 'banner' | 'results' | 'reviews';

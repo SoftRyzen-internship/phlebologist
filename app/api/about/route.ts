@@ -1,8 +1,13 @@
 import { Locale } from '@/i18n.config';
 import client from '@/tina/__generated__/client';
+import { NextResponse } from 'next/server';
 
-export const fetchAbout = async (lang: Locale) => {
+export const POST = async (request: Request) => {
   try {
+    const body: any = await request.json();
+
+    const { lang } = body;
+
     const image = await fetchImage();
     const video = await fetchVideo();
     const general = await fetchGeneral(lang);
@@ -19,7 +24,7 @@ export const fetchAbout = async (lang: Locale) => {
       certificates,
     };
 
-    return about;
+    return NextResponse.json(about, { status: 200 });
   } catch (error) {
     throw new Error(error);
   }
@@ -101,5 +106,3 @@ const fetchCertificates = async (lang: Locale) => {
     throw new Error(error);
   }
 };
-
-export default fetchAbout;
