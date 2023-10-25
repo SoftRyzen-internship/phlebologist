@@ -2,6 +2,8 @@ import { Locale } from '@/i18n.config';
 import client from '@/tina/__generated__/client';
 import { NextResponse } from 'next/server';
 
+export const revalidate = 3600;
+
 export const POST = async (request: Request) => {
   try {
     const body: any = await request.json();
