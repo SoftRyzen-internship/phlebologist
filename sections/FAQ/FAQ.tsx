@@ -33,7 +33,7 @@ const FAQ: React.FC<FAQProps> = ({ staticData: { faq, socials } }) => {
 
             <ExternalLinkButton
               linkto={telegram}
-              className="mx-auto mt-6 md:mt-9 md:w-[248px] xl:mx-0 xl:hover:w-[252px]"
+              className="mx-auto mt-6 md:mt-9 md:w-[248px] xl:mx-0"
             >
               {button}
             </ExternalLinkButton>
