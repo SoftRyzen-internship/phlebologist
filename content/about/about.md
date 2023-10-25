@@ -1,6 +1,6 @@
 ---
 photo: /uploads/about/about-doctor.webp
-video: ''
+video: ' '
 general:
   uk:
     name: Войціцький Сергій
