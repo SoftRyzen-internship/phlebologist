@@ -106,7 +106,7 @@ en:
       name: Olha Viktorivna
       review: "On February 13, 2023, I had a surgery to remove varicose veins on my lower limbs performed by Dr. Voitsitskyi at the Oxford Medical Clinic. I want to express my deep gratitude to the doctor for his caring attitude and high level of professionalism! Dr. Voitsitskyi conducted the operation very attentively and provided careful post-operative care. The surgery was performed under local anesthesia. The doctor constantly informed me about each step of the procedure and where I might experience some discomfort. However, the pain was minimal! A doctor should not only be professional but also compassionate, and this perfectly describes . I was pleasantly surprised at how quickly, easily, and successfully the operation went. My small incisions are healing quickly, and I'm very happy about that. The future results depend on me (how diligently I follow the doctor's recommendations), but if anything arises, Dr. Voitsitskyi is always available. I'll have beautiful legs by summer \U0001F601 Thank you, Doctor! \U0001F917\n"
     - date: 2023-10-13T21:00:00.000Z
-      photo: /uploads/reviews/Роман Самборський.webp
+      photo: /uploads/reviews/RS.webp
       name: Roman Samborsky
       review: >
         I highly recommend Dr. Voitsitskyi as a practicing surgeon-phlebologist.
