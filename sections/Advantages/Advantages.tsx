@@ -45,7 +45,7 @@ const Advantages: FC<AdvantagesProps> = ({ staticData, className = '' }) => {
                     {enrollText}
                   </p>
                   <ScrollLinkButton
-                    className="mr-auto mdOnly:p-6"
+                    className="mr-auto md:!w-[220px] md:!px-0 mdOnly:p-6"
                     linkto="consultation"
                   >
                     {buttonText}
