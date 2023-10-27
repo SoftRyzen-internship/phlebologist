@@ -469,8 +469,8 @@
       },
       "consultation": {
         "title": "Schedule a consultation",
-        "callTextMobile": "Schedule a consultation right now and get a special discount on your first visit!",
-        "callText": "Schedule a consultation right now and get a special discount on your first visit!",
+        "callTextMobile": "Schedule a consultation right now \nand get a special discount on your first visit!",
+        "callText": "Schedule a consultation right now \nand get a special discount on your first visit!",
         "form": {
           "input": {
             "name": {
