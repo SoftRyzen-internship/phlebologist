@@ -4,9 +4,6 @@ pipeline {
             label 'master'
         }
     }
-    environment {
-        GIT_CREDENTIALS = credentials('pasha-goitacad-ssh')
-    }
     stages {
         stage('Checkout') {
             steps {
@@ -14,7 +11,7 @@ pipeline {
                     $class: 'GitSCM',
                     branches: [[name: '*/main']],
                     userRemoteConfigs: [
-                        [url: 'git@github.com:phlebolog/phlebolog.git', credentialsId: 'pasha-goitacad-ssh']
+                        [url: 'git@github.com:phlebolog/phlebolog.git', credentialsId: 'goweb-artfull']
                     ]
                 ])
             }
