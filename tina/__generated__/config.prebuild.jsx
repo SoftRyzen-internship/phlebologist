@@ -1,692 +1,694 @@
 // tina/config.ts
-import { defineConfig } from 'tinacms';
+import { defineConfig } from "tinacms";
 var config_default = defineConfig({
-  branch: process.env.NEXT_PUBLIC_VERSEL_GIT_COMMIT_REF || '',
-  clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID || '',
-  token: process.env.NEXT_PUBLIC_TINA_TOKEN || '',
+  branch: process.env.NEXT_PUBLIC_VERSEL_GIT_COMMIT_REF || "",
+  clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID || "",
+  token: process.env.NEXT_PUBLIC_TINA_TOKEN || "",
   build: {
-    publicFolder: 'public',
-    outputFolder: 'admin',
+    publicFolder: "public",
+    outputFolder: "admin"
   },
   schema: {
     collections: [
       {
-        name: 'about',
-        label: 'About',
-        path: 'content/about',
-        format: 'md',
+        name: "about",
+        label: "About",
+        path: "content/about",
+        format: "md",
         fields: [
           {
-            name: 'photo',
-            label: 'Photo',
-            type: 'image',
+            name: "photo",
+            label: "Photo",
+            type: "image"
           },
           {
-            name: 'video',
-            label: 'Video',
-            type: 'string',
+            name: "video",
+            label: "Video",
+            type: "string"
           },
           {
-            name: 'general',
-            label: 'General',
-            type: 'object',
+            name: "general",
+            label: "General",
+            type: "object",
             required: true,
             fields: [
               {
-                name: 'uk',
-                label: 'UK',
-                type: 'object',
+                name: "uk",
+                label: "UK",
+                type: "object",
                 fields: [
                   {
-                    name: 'name',
-                    label: 'Name',
-                    type: 'string',
-                    required: true,
+                    name: "name",
+                    label: "Name",
+                    type: "string",
+                    required: true
                   },
                   {
-                    name: 'profession',
-                    label: 'Profession',
-                    type: 'string',
-                    required: true,
+                    name: "profession",
+                    label: "Profession",
+                    type: "string",
+                    required: true
                   },
                   {
-                    name: 'education',
-                    label: 'Education',
-                    type: 'object',
+                    name: "education",
+                    label: "Education",
+                    type: "object",
                     list: true,
                     fields: [
                       {
-                        name: 'institution',
-                        label: 'Institution',
-                        type: 'string',
-                      },
+                        name: "institution",
+                        label: "Institution",
+                        type: "string"
+                      }
                     ],
                     ui: {
-                      itemProps: item => {
+                      itemProps: (item) => {
                         return { label: `${item?.institution}` };
                       },
                       defaultItem: {
-                        institution: '',
-                      },
-                    },
+                        institution: ""
+                      }
+                    }
                   },
                   {
-                    name: 'experience',
-                    label: 'Experience',
-                    type: 'object',
+                    name: "experience",
+                    label: "Experience",
+                    type: "object",
                     list: true,
                     fields: [
                       {
-                        name: 'point',
-                        label: 'Point',
-                        type: 'string',
-                      },
+                        name: "point",
+                        label: "Point",
+                        type: "string"
+                      }
                     ],
                     ui: {
-                      itemProps: item => {
+                      itemProps: (item) => {
                         return { label: `${item?.point}` };
                       },
                       defaultItem: {
-                        point: '',
-                      },
-                    },
-                  },
+                        point: ""
+                      }
+                    }
+                  }
                 ],
                 ui: {
                   defaultItem: {
-                    name: '',
-                  },
-                },
+                    name: ""
+                  }
+                }
               },
               {
-                name: 'en',
-                label: 'EN',
-                type: 'object',
+                name: "en",
+                label: "EN",
+                type: "object",
                 fields: [
                   {
-                    name: 'name',
-                    label: 'Name',
-                    type: 'string',
-                    required: true,
+                    name: "name",
+                    label: "Name",
+                    type: "string",
+                    required: true
                   },
                   {
-                    name: 'profession',
-                    label: 'Profession',
-                    type: 'string',
-                    required: true,
+                    name: "profession",
+                    label: "Profession",
+                    type: "string",
+                    required: true
                   },
                   {
-                    name: 'education',
-                    label: 'Education',
-                    type: 'object',
+                    name: "education",
+                    label: "Education",
+                    type: "object",
                     list: true,
                     fields: [
                       {
-                        name: 'institution',
-                        label: 'Institution',
-                        type: 'string',
-                      },
+                        name: "institution",
+                        label: "Institution",
+                        type: "string"
+                      }
                     ],
                     ui: {
-                      itemProps: item => {
+                      itemProps: (item) => {
                         return { label: `${item?.institution}` };
                       },
                       defaultItem: {
-                        institution: '',
-                      },
-                    },
+                        institution: ""
+                      }
+                    }
                   },
                   {
-                    name: 'experience',
-                    label: 'Experience',
-                    type: 'object',
+                    name: "experience",
+                    label: "Experience",
+                    type: "object",
                     list: true,
                     fields: [
                       {
-                        name: 'point',
-                        label: 'Point',
-                        type: 'string',
-                      },
+                        name: "point",
+                        label: "Point",
+                        type: "string"
+                      }
                     ],
                     ui: {
-                      itemProps: item => {
+                      itemProps: (item) => {
                         return { label: `${item?.point}` };
                       },
                       defaultItem: {
-                        point: '',
-                      },
-                    },
-                  },
+                        point: ""
+                      }
+                    }
+                  }
                 ],
                 ui: {
                   defaultItem: {
-                    name: '',
-                  },
-                },
-              },
-            ],
+                    name: ""
+                  }
+                }
+              }
+            ]
           },
           {
-            name: 'education',
-            label: 'Education',
-            type: 'object',
+            name: "education",
+            label: "Education",
+            type: "object",
             required: true,
             fields: [
               {
-                name: 'uk',
-                label: 'UK',
-                type: 'object',
+                name: "uk",
+                label: "UK",
+                type: "object",
                 fields: [
                   {
-                    name: 'title',
-                    label: 'Title',
-                    type: 'string',
-                    required: true,
+                    name: "title",
+                    label: "Title",
+                    type: "string",
+                    required: true
                   },
                   {
-                    name: 'institutions',
-                    label: 'Institutions',
-                    type: 'object',
+                    name: "institutions",
+                    label: "Institutions",
+                    type: "object",
                     list: true,
                     fields: [
                       {
-                        name: 'period',
-                        label: 'Period',
-                        type: 'string',
+                        name: "period",
+                        label: "Period",
+                        type: "string"
                       },
                       {
-                        name: 'institution',
-                        label: 'Institution',
-                        type: 'string',
-                      },
+                        name: "institution",
+                        label: "Institution",
+                        type: "string"
+                      }
                     ],
                     ui: {
-                      itemProps: item => {
+                      itemProps: (item) => {
                         return { label: `${item?.institution}` };
                       },
                       defaultItem: {
-                        institution: '',
-                      },
-                    },
-                  },
+                        institution: ""
+                      }
+                    }
+                  }
                 ],
                 ui: {
                   defaultItem: {
-                    title: '',
-                  },
-                },
+                    title: ""
+                  }
+                }
               },
               {
-                name: 'en',
-                label: 'EN',
-                type: 'object',
+                name: "en",
+                label: "EN",
+                type: "object",
                 fields: [
                   {
-                    name: 'title',
-                    label: 'Title',
-                    type: 'string',
-                    required: true,
+                    name: "title",
+                    label: "Title",
+                    type: "string",
+                    required: true
                   },
                   {
-                    name: 'institutions',
-                    label: 'Institutions',
-                    type: 'object',
+                    name: "institutions",
+                    label: "Institutions",
+                    type: "object",
                     list: true,
                     fields: [
                       {
-                        name: 'period',
-                        label: 'Period',
-                        type: 'string',
+                        name: "period",
+                        label: "Period",
+                        type: "string"
                       },
                       {
-                        name: 'institution',
-                        label: 'Institution',
-                        type: 'string',
-                      },
+                        name: "institution",
+                        label: "Institution",
+                        type: "string"
+                      }
                     ],
                     ui: {
-                      itemProps: item => {
+                      itemProps: (item) => {
                         return { label: `${item?.institution}` };
                       },
                       defaultItem: {
-                        institution: '',
-                      },
-                    },
-                  },
+                        institution: ""
+                      }
+                    }
+                  }
                 ],
                 ui: {
                   defaultItem: {
-                    title: '',
-                  },
-                },
-              },
-            ],
+                    title: ""
+                  }
+                }
+              }
+            ]
           },
           {
-            name: 'career',
-            label: 'Career',
-            type: 'object',
+            name: "career",
+            label: "Career",
+            type: "object",
             required: true,
             fields: [
               {
-                name: 'uk',
-                label: 'UK',
-                type: 'object',
+                name: "uk",
+                label: "UK",
+                type: "object",
                 fields: [
                   {
-                    name: 'title',
-                    label: 'Title',
-                    type: 'string',
-                    required: true,
+                    name: "title",
+                    label: "Title",
+                    type: "string",
+                    required: true
                   },
                   {
-                    name: 'institutions',
-                    label: 'Institutions',
-                    type: 'object',
+                    name: "institutions",
+                    label: "Institutions",
+                    type: "object",
                     list: true,
                     fields: [
                       {
-                        name: 'period',
-                        label: 'Period',
-                        type: 'string',
+                        name: "period",
+                        label: "Period",
+                        type: "string"
                       },
                       {
-                        name: 'institution',
-                        label: 'Institution',
-                        type: 'string',
-                      },
+                        name: "institution",
+                        label: "Institution",
+                        type: "string"
+                      }
                     ],
                     ui: {
-                      itemProps: item => {
+                      itemProps: (item) => {
                         return { label: `${item?.institution}` };
                       },
                       defaultItem: {
-                        institution: '',
-                      },
-                    },
-                  },
+                        institution: ""
+                      }
+                    }
+                  }
                 ],
                 ui: {
                   defaultItem: {
-                    title: '',
-                  },
-                },
+                    title: ""
+                  }
+                }
               },
               {
-                name: 'en',
-                label: 'EN',
-                type: 'object',
+                name: "en",
+                label: "EN",
+                type: "object",
                 fields: [
                   {
-                    name: 'title',
-                    label: 'Title',
-                    type: 'string',
-                    required: true,
+                    name: "title",
+                    label: "Title",
+                    type: "string",
+                    required: true
                   },
                   {
-                    name: 'institutions',
-                    label: 'Institutions',
-                    type: 'object',
+                    name: "institutions",
+                    label: "Institutions",
+                    type: "object",
                     list: true,
                     fields: [
                       {
-                        name: 'period',
-                        label: 'Period',
-                        type: 'string',
+                        name: "period",
+                        label: "Period",
+                        type: "string"
                       },
                       {
-                        name: 'institution',
-                        label: 'Institution',
-                        type: 'string',
-                      },
+                        name: "institution",
+                        label: "Institution",
+                        type: "string"
+                      }
                     ],
                     ui: {
-                      itemProps: item => {
+                      itemProps: (item) => {
                         return { label: `${item?.institution}` };
                       },
                       defaultItem: {
-                        institution: '',
-                      },
-                    },
-                  },
+                        institution: ""
+                      }
+                    }
+                  }
                 ],
                 ui: {
                   defaultItem: {
-                    title: '',
-                  },
-                },
-              },
-            ],
+                    title: ""
+                  }
+                }
+              }
+            ]
           },
           {
-            name: 'certificates',
-            label: 'Certificates',
-            type: 'object',
+            name: "certificates",
+            label: "Certificates",
+            type: "object",
             required: true,
             list: true,
             fields: [
               {
-                name: 'photo',
-                label: 'Photo',
-                type: 'image',
-                required: true,
+                name: "photo",
+                label: "Photo",
+                type: "image",
+                required: true
               },
               {
-                name: 'description',
-                label: 'Description',
-                type: 'object',
+                name: "description",
+                label: "Description",
+                type: "object",
                 required: true,
                 fields: [
                   {
-                    name: 'uk',
-                    label: 'UK',
-                    type: 'object',
+                    name: "uk",
+                    label: "UK",
+                    type: "object",
                     fields: [
                       {
-                        name: 'alt',
-                        label: 'Alt',
-                        type: 'string',
-                        required: true,
-                      },
-                    ],
+                        name: "alt",
+                        label: "Alt",
+                        type: "string",
+                        required: true
+                      }
+                    ]
                   },
                   {
-                    name: 'en',
-                    label: 'EN',
-                    type: 'object',
+                    name: "en",
+                    label: "EN",
+                    type: "object",
                     fields: [
                       {
-                        name: 'alt',
-                        label: 'Alt',
-                        type: 'string',
-                        required: true,
-                      },
-                    ],
-                  },
-                ],
-              },
+                        name: "alt",
+                        label: "Alt",
+                        type: "string",
+                        required: true
+                      }
+                    ]
+                  }
+                ]
+              }
             ],
             ui: {
-              itemProps: item => {
+              itemProps: (item) => {
                 return { label: `${item?.description.uk.alt}` };
               },
               defaultItem: {
                 description: {
                   uk: {
-                    alt: '',
-                  },
-                },
-              },
-            },
-          },
-        ],
+                    alt: ""
+                  }
+                }
+              }
+            }
+          }
+        ]
       },
       {
-        name: 'banner',
-        label: 'Banner',
-        path: 'content/banner',
-        format: 'md',
+        name: "banner",
+        label: "Banner",
+        path: "content/banner",
+        format: "md",
         fields: [
           {
-            name: 'uk',
-            label: 'UK',
-            type: 'object',
+            name: "uk",
+            label: "UK",
+            type: "object",
             fields: [
               {
-                name: 'title',
-                label: 'Title',
-                type: 'string',
-                required: true,
+                name: "title",
+                label: "Title",
+                type: "string",
+                required: true
               },
               {
-                name: 'description',
-                label: 'Description',
-                type: 'string',
-                required: true,
-              },
-            ],
+                name: "description",
+                label: "Description",
+                type: "string",
+                required: true
+              }
+            ]
           },
           {
-            name: 'en',
-            label: 'EN',
-            type: 'object',
+            name: "en",
+            label: "EN",
+            type: "object",
             fields: [
               {
-                name: 'title',
-                label: 'Title',
-                type: 'string',
-                required: true,
+                name: "title",
+                label: "Title",
+                type: "string",
+                required: true
               },
               {
-                name: 'description',
-                label: 'Description',
-                type: 'string',
-                required: true,
-              },
-            ],
-          },
-        ],
+                name: "description",
+                label: "Description",
+                type: "string",
+                required: true
+              }
+            ]
+          }
+        ]
       },
       {
-        name: 'results',
-        label: 'Results',
-        path: 'content/results',
-        format: 'md',
+        name: "results",
+        label: "Results",
+        path: "content/results",
+        format: "md",
         fields: [
           {
-            name: 'case',
-            label: 'Case',
-            type: 'object',
+            name: "case",
+            label: "Case",
+            type: "object",
             list: true,
             fields: [
               {
-                name: 'date',
-                label: 'Date',
-                type: 'datetime',
+                name: "date",
+                label: "Date",
+                type: "datetime"
               },
               {
-                name: 'content',
-                label: 'Content',
-                type: 'object',
+                name: "content",
+                label: "Content",
+                type: "object",
                 fields: [
                   {
-                    name: 'uk',
-                    label: 'UK',
-                    type: 'object',
+                    name: "uk",
+                    label: "UK",
+                    type: "object",
                     fields: [
                       {
-                        name: 'title',
-                        label: 'Title',
-                        type: 'string',
-                        required: true,
+                        name: "title",
+                        label: "Title",
+                        type: "string",
+                        required: true
                       },
                       {
-                        name: 'description',
-                        label: 'Description',
-                        type: 'rich-text',
-                        required: true,
-                      },
-                    ],
+                        name: "description",
+                        label: "Description",
+                        type: "rich-text",
+                        required: true
+                      }
+                    ]
                   },
                   {
-                    name: 'en',
-                    label: 'EN',
-                    type: 'object',
+                    name: "en",
+                    label: "EN",
+                    type: "object",
                     fields: [
                       {
-                        name: 'title',
-                        label: 'Title',
-                        type: 'string',
-                        required: true,
+                        name: "title",
+                        label: "Title",
+                        type: "string",
+                        required: true
                       },
                       {
-                        name: 'description',
-                        label: 'Description',
-                        type: 'rich-text',
-                        required: true,
-                      },
-                    ],
-                  },
-                ],
+                        name: "description",
+                        label: "Description",
+                        type: "rich-text",
+                        required: true
+                      }
+                    ]
+                  }
+                ]
               },
               {
-                name: 'before',
-                label: 'Before',
-                type: 'image',
-                required: true,
+                name: "before",
+                label: "Before",
+                type: "image",
+                required: true
               },
               {
-                name: 'after',
-                label: 'After',
-                type: 'image',
-                required: true,
-              },
+                name: "after",
+                label: "After",
+                type: "image",
+                required: true
+              }
             ],
             ui: {
-              itemProps: item => {
+              itemProps: (item) => {
                 return { label: `${item?.content?.uk?.title}` };
               },
               defaultItem: {
                 content: {
                   uk: {
-                    title: '',
+                    title: ""
                   },
                   en: {
-                    title: '',
-                  },
-                },
-              },
-            },
-          },
-        ],
+                    title: ""
+                  }
+                }
+              }
+            }
+          }
+        ]
       },
       {
-        name: 'reviews',
-        label: 'Reviews',
-        path: 'content/reviews',
-        format: 'md',
+        name: "reviews",
+        label: "Reviews",
+        path: "content/reviews",
+        format: "md",
         fields: [
           {
-            name: 'uk',
-            label: 'UK',
-            type: 'object',
+            name: "uk",
+            label: "UK",
+            type: "object",
             fields: [
               {
-                name: 'case',
-                label: 'Case',
-                type: 'object',
+                name: "case",
+                label: "Case",
+                type: "object",
                 list: true,
                 fields: [
                   {
-                    name: 'date',
-                    label: 'Date',
-                    type: 'datetime',
-                    required: true,
+                    name: "date",
+                    label: "Date",
+                    type: "datetime",
+                    required: true
                   },
                   {
-                    name: 'photo',
-                    label: 'Photo',
-                    type: 'image',
-                    required: true,
+                    name: "photo",
+                    label: "Photo",
+                    type: "image",
+                    required: true
                   },
                   {
-                    name: 'video',
-                    label: 'Video',
-                    type: 'string',
+                    name: "video",
+                    label: "Video",
+                    type: "string"
                   },
                   {
-                    name: 'name',
-                    label: 'Name',
-                    type: 'string',
-                    required: true,
+                    name: "name",
+                    label: "Name",
+                    type: "string",
+                    required: true
                   },
                   {
-                    name: 'telegram',
-                    label: 'Telegram',
-                    type: 'string',
+                    name: "telegram",
+                    label: "Telegram",
+                    type: "string"
                   },
                   {
-                    name: 'review',
-                    label: 'Review',
-                    type: 'rich-text',
-                  },
+                    name: "review",
+                    label: "Review",
+                    type: "rich-text"
+                  }
                 ],
                 ui: {
-                  itemProps: item => {
+                  itemProps: (item) => {
                     return { label: `${item?.name}` };
                   },
                   defaultItem: {
-                    name: '',
-                  },
-                },
-              },
-            ],
+                    name: ""
+                  }
+                }
+              }
+            ]
           },
           {
-            name: 'en',
-            label: 'EN',
-            type: 'object',
+            name: "en",
+            label: "EN",
+            type: "object",
             fields: [
               {
-                name: 'case',
-                label: 'Case',
-                type: 'object',
+                name: "case",
+                label: "Case",
+                type: "object",
                 list: true,
                 fields: [
                   {
-                    name: 'date',
-                    label: 'Date',
-                    type: 'datetime',
-                    required: true,
+                    name: "date",
+                    label: "Date",
+                    type: "datetime",
+                    required: true
                   },
                   {
-                    name: 'photo',
-                    label: 'Photo',
-                    type: 'image',
-                    required: true,
+                    name: "photo",
+                    label: "Photo",
+                    type: "image",
+                    required: true
                   },
                   {
-                    name: 'video',
-                    label: 'Video',
-                    type: 'string',
+                    name: "video",
+                    label: "Video",
+                    type: "string"
                   },
                   {
-                    name: 'name',
-                    label: 'Name',
-                    type: 'string',
-                    required: true,
+                    name: "name",
+                    label: "Name",
+                    type: "string",
+                    required: true
                   },
                   {
-                    name: 'telegram',
-                    label: 'Telegram',
-                    type: 'string',
+                    name: "telegram",
+                    label: "Telegram",
+                    type: "string"
                   },
                   {
-                    name: 'review',
-                    label: 'Review',
-                    type: 'rich-text',
-                  },
+                    name: "review",
+                    label: "Review",
+                    type: "rich-text"
+                  }
                 ],
                 ui: {
-                  itemProps: item => {
+                  itemProps: (item) => {
                     return { label: `${item?.name}` };
                   },
                   defaultItem: {
-                    name: '',
-                  },
-                },
-              },
-            ],
-          },
-        ],
-      },
-    ],
+                    name: ""
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   media: {
     tina: {
-      publicFolder: 'public',
-      mediaRoot: 'uploads',
-    },
-  },
+      publicFolder: "public",
+      mediaRoot: "uploads"
+    }
+  }
 });
-export { config_default as default };
+export {
+  config_default as default
+};

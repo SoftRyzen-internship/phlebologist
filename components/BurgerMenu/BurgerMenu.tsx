@@ -70,7 +70,7 @@ const BurgerMenu: React.FC<BurgerMenuProps> = ({ staticData, lang }) => {
               style={style}
             >
               <div
-                className="absolute right-0 top-6 w-full max-w-[320px] text-center md:right-[56px]
+                className="absolute right-0 top-6 w-full text-center md:right-[56px]
                           md:max-w-[308px] xl:right-[100px] xl:top-[28px] smOnly:px-8"
               >
                 <BurgerMenuButton onClick={handleMenuToggle} isMenu={true}>
