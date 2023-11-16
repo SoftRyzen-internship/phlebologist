@@ -97,7 +97,7 @@ const Modal: React.FC<ModalProps> = ({
               >
                 <div
                   className={classNames({
-                    'relative w-full max-w-[80%] overflow-hidden rounded-extended bg-white px-[20px] pb-[40px] pt-[56px] md:max-w-[704px] xl:max-w-[900px] smOnly:h-full smOnly:max-h-[80%]':
+                    'relative w-auto max-w-[80%] overflow-hidden rounded-extended bg-white px-[20px] pb-[40px] pt-[56px] md:max-w-[704px] xl:max-w-[900px] smOnly:h-full smOnly:max-h-[80vh]':
                       true,
                     'md:p-[50px]': isReview,
                     'md:mb-auto md:mt-auto xl:py-[80px]': zoom,
