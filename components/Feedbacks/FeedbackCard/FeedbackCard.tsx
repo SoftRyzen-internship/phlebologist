@@ -56,7 +56,7 @@ const FeedbackCard: React.FC<FeedbackCardProps> = ({
       <p
         className={classNames({
           'overflow-y-auto notXl:h-[70%] notXl:pr-3': isModal,
-          'mt-[20px] text-[14px] md:mt-[28px] md:text-[16px] xl:mt-[30px]':
+          'mt-5 text-[14px] md:mt-[28px] md:text-[16px] xl:mt-[30px] smOnly:mb-5':
             true,
         })}
       >
@@ -67,7 +67,7 @@ const FeedbackCard: React.FC<FeedbackCardProps> = ({
         <button
           type="button"
           onClick={onClick}
-          className="absolute bottom-[30px] left-[16px] border-b-[1px] border-b-secondary-dark text-[14px] text-secondary-dark transition-all duration-300  md:bottom-[36px] md:left-[36px] md:text-[16px] xl:bottom-[40px] xl:left-[40px] xl:border-b-black-dark xl:text-black-dark xl:hover:border-b-secondary-dark xl:hover:font-semibold xl:hover:text-secondary-dark xl:focus:border-b-secondary-dark xl:focus:font-semibold"
+          className="absolute bottom-4 left-[16px] border-b-[1px] border-b-secondary-dark text-[14px] text-secondary-dark transition-all duration-300  md:bottom-[36px] md:left-[36px] md:text-[16px] xl:bottom-[40px] xl:left-[40px] xl:border-b-black-dark xl:text-black-dark xl:hover:border-b-secondary-dark xl:hover:font-semibold xl:hover:text-secondary-dark xl:focus:border-b-secondary-dark xl:focus:font-semibold"
         >
           {staticData?.links?.read?.text}
         </button>
