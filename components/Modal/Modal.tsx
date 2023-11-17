@@ -46,9 +46,9 @@ const Modal: React.FC<ModalProps> = ({
 
   useEffect(() => {
     if (isModalOpen) {
-      document.body.classList.add('overflow-hidden');
+      document.body.classList.add('openModal');
     } else {
-      document.body.classList.remove('overflow-hidden');
+      document.body.classList.remove('openModal');
     }
   }, [isModalOpen]);
 
