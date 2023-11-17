@@ -1,6 +1,6 @@
 function checkTextLength(
   str: string | undefined,
-  limit: number = 340,
+  limit: number = 280,
 ): { doesFit: boolean; text: string } {
   if (str === undefined) {
     return { doesFit: false, text: '' };
