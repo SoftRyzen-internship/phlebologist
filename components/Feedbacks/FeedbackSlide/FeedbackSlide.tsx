@@ -21,7 +21,7 @@ const FeedbackSlide: React.FC<FeedbackSlideProps> = ({
   return (
     <div
       className={classNames({
-        'relative mx-auto h-full max-h-[372px] w-full overflow-hidden rounded-extended bg-white-light text-[16px] leading-normal -tracking-[0.04em] text-black-dark md:h-[395px] md:w-[378px] xl:h-[405px] xl:w-full':
+        'relative mx-auto h-full max-h-[450px] w-full overflow-hidden rounded-extended bg-white-light text-[16px] leading-normal -tracking-[0.04em] text-black-dark md:w-[378px]  xl:w-full':
           true,
         [className ? className : '']: className,
       })}
@@ -47,7 +47,7 @@ const FeedbackSlide: React.FC<FeedbackSlideProps> = ({
         isReview
       >
         {isVideo ? (
-          <VideoPlayer data={data.video} isShown={isOpen} isReview />
+          <VideoPlayer data={data.video} isReview />
         ) : (
           <FeedbackCard data={data} isModal staticData={optionalStaticData} />
         )}

@@ -8,7 +8,6 @@ import css from './VideoPlayer.module.css';
 
 const VideoPlayer: React.FC<VideoPlayerProps> = ({
   data,
-  isShown,
   isReview = false,
 }) => {
   return (
@@ -27,7 +26,7 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
     >
       <ReactPlayer
         controls
-        playing={isShown}
+        playing
         // muted
         url={data}
         config={{

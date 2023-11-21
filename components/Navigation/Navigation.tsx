@@ -55,7 +55,13 @@ const Navigation: FC<NavigationProps> = ({
           ) {
             return (
               <li key={linkTo} onClick={actionHandler}>
-                <Link href={linkTo} className={itemClass}>
+                <Link
+                  href={linkTo}
+                  className={classnames(itemClass, {
+                    ' font-bold text-primary-dark-100':
+                      pathname.includes(linkTo),
+                  })}
+                >
                   {title}
                 </Link>
               </li>
@@ -72,7 +78,13 @@ const Navigation: FC<NavigationProps> = ({
                 to={linkTo}
                 href={`${linkTo}`}
                 onClick={actionHandler}
-                className={itemClass}
+                className={classnames(
+                  {
+                    'font-bold text-primary-dark-100':
+                      pathname.includes(linkTo),
+                  },
+                  itemClass,
+                )}
               >
                 {title}
               </LinkScroll>
