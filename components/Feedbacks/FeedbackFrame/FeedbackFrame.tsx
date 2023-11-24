@@ -11,7 +11,7 @@ const FeedbackFrame = ({ data, staticData, onClick }) => {
   const url = `url(${data?.photo})`;
 
   return (
-    <article
+    <div
       style={{ backgroundImage: url }}
       className={classNames(
         {
@@ -27,7 +27,7 @@ const FeedbackFrame = ({ data, staticData, onClick }) => {
         aria-label={staticData?.links?.video?.icon}
       />
       <FeedbackCap isVideo data={data} staticData={staticData} />
-    </article>
+    </div>
   );
 };
 

@@ -150,7 +150,7 @@ export interface ILocaleSwitcherData {
 
 export type TextData = {
   doesFit: boolean;
-  text: string;
+  text: string | undefined;
 };
 
 export type TinaType = {

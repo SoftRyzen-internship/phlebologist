@@ -46,9 +46,9 @@ const Modal: React.FC<ModalProps> = ({
 
   useEffect(() => {
     if (isModalOpen) {
-      document.body.classList.add('overflow-hidden');
+      document.body.classList.add('openModal');
     } else {
-      document.body.classList.remove('overflow-hidden');
+      document.body.classList.remove('openModal');
     }
   }, [isModalOpen]);
 
@@ -90,17 +90,17 @@ const Modal: React.FC<ModalProps> = ({
                 className={classNames({
                   'fixed inset-0 z-20 flex items-center justify-center bg-black-backdrop/25 backdrop-blur-sm transition-all duration-300':
                     true,
-                  'overflow-y-scroll md:items-start': zoom,
+                  'md:items-start': zoom,
                 })}
                 style={style}
                 onClick={handleBackdropClose}
               >
                 <div
                   className={classNames({
-                    'relative max-w-[280px] overflow-hidden rounded-extended bg-white px-[20px] pb-[40px] pt-[56px] md:max-w-[704px] xl:max-w-[1240px]':
+                    'relative w-auto max-w-[80%] overflow-hidden rounded-extended bg-white px-[20px] pb-[40px] pt-[56px] md:max-w-[704px] xl:max-w-[900px] smOnly:h-full smOnly:max-h-[80vh]':
                       true,
-                    'md:p-[80px]': isReview,
-                    'md:mb-auto md:mt-[60px]': zoom,
+                    'md:p-[50px]': isReview,
+                    'md:mb-auto md:mt-auto xl:py-[80px]': zoom,
                     'md:px-[24px] md:py-[60px] xl:px-[100px] xl:py-[80px] smOnly:w-[80%] smOnly:max-w-[440px]':
                       !isReview,
                   })}

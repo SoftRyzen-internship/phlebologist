@@ -26,6 +26,7 @@ const AboutCertificatesSlide: FC<AboutCertificatesSlideProps> = ({
         alt={alt}
         width={499}
         height={352}
+        priority
         className="mx-auto h-full w-auto rounded-medium md:rounded-large"
         sizes="(max-width: 767px) 256px,  499px"
       />

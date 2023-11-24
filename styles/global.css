@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+.openModal {
+  overflow: hidden;
+  -webkit-overflow-scrolling: none;
+  touch-action: none;
+}
+
 .wrapper {
   padding-left: 12px;
   padding-right: 12px;

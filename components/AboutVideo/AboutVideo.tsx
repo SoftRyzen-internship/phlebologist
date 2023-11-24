@@ -43,7 +43,7 @@ const AboutVideo: FC<AboutVideoProps> = ({ data, lang, staticData }) => {
         isOpen={isOpen}
         isReview={false}
       >
-        <VideoPlayer data={video} isShown={isOpen} />
+        <VideoPlayer data={video} />
       </Modal>
     </>
   );
