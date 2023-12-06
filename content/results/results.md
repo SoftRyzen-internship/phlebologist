@@ -8,6 +8,7 @@ case:
           мів
       en:
         title: ''
+        description: ''
     before: /uploads/results/грибов_до.jpg
     after: /uploads/results/results-3-2.jpg
   - date: 2023-10-01T21:00:00.000Z
