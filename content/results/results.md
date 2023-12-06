@@ -1,5 +1,15 @@
 ---
 case:
+  - date: 2023-12-04T22:00:00.000Z
+    content:
+      uk:
+        title: Результат пацієнта
+        description: |
+          мів
+      en:
+        title: ''
+    before: /uploads/results/грибов_до.jpg
+    after: /uploads/results/results-3-2.jpg
   - date: 2023-10-01T21:00:00.000Z
     content:
       uk:
