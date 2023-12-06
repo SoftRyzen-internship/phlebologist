@@ -46,7 +46,7 @@ case:
           hour, I got rid of pain and swelling, and my legs look great. Thank
           you, Dr. Yuriovych, for giving me a new life!
     before: /uploads/results/Артем 2_до.jpg
-    after: /uploads/results/Артем 2_після.jpg
+    after: /uploads/results/Артем 2_післ.jpg
   - date: 2023-10-02T21:00:00.000Z
     content:
       uk:
