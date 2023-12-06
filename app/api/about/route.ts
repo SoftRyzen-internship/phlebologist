@@ -10,12 +10,15 @@ export const POST = async (request: Request) => {
 
     const { lang } = body;
 
-    const image = await fetchImage();
-    const video = await fetchVideo();
-    const general = await fetchGeneral(lang);
-    const education = await fetchEducation(lang);
-    const career = await fetchCareer(lang);
-    const certificates = await fetchCertificates(lang);
+    const [image, video, general, education, career, certificates] =
+      await Promise.all([
+        fetchImage(),
+        fetchVideo(),
+        fetchGeneral(lang),
+        fetchEducation(lang),
+        fetchCareer(lang),
+        fetchCertificates(lang),
+      ]);
 
     const about = {
       image,

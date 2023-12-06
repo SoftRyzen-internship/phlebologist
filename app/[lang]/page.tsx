@@ -3,12 +3,14 @@ import { getDictionary } from '@/utils/dictionary';
 import dynamic from 'next/dynamic';
 
 import { MainWrapper } from '@/components';
-import {
-  HeroSection,
-  AboutSection,
-  AdvantagesSection,
-  BannerSection,
-} from '@/sections';
+import { HeroSection, AdvantagesSection, BannerSection } from '@/sections';
+
+const AboutSection = dynamic(
+  () => import('@/sections').then(mod => mod.AboutSection),
+  {
+    ssr: false,
+  },
+);
 
 const FAQ = dynamic(() => import('@/sections').then(mod => mod.FAQSection), {
   ssr: false,
