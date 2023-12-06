@@ -107,7 +107,7 @@ uk:
         загоїлась, вже плаваю в басейні, задоволена результатом.
 en:
   case:
-    - date: 2022-10-04T21:00:00.000Z
+    - date: 2022-10-11T21:00:00.000Z
       photo: /uploads/reviews/OM.webp
       video: 'https://youtube.com/shorts/WAlBeuhcoaU'
       name: Olexandra Malichenko
