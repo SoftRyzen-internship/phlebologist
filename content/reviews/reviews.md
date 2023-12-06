@@ -107,10 +107,16 @@ uk:
         загоїлась, вже плаваю в басейні, задоволена результатом.
 en:
   case:
+    - date: 2022-11-07T22:00:00.000Z
+      photo: >-
+        /uploads/reviews/Screenshot_2023-12-06-19-55-36-72_dba69a5e82e939c3ddef13f99a115ca3_1.jpg
+      video: 'https://youtube.com/shorts/leiWn_-MzIE'
+      name: Olexandra Rozum
     - date: 2022-10-04T21:00:00.000Z
       photo: /uploads/reviews/OM.webp
       video: 'https://youtube.com/shorts/WAlBeuhcoaU'
       name: Olexandra Malichenko
+      review: ''
     - date: 2023-03-07T22:00:00.000Z
       photo: /uploads/reviews/OV.webp
       name: Olha Viktorivna
