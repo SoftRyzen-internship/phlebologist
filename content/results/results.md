@@ -67,14 +67,18 @@ case:
       en:
         title: Result 2
         description: >
+          Artem
+
+
           Varicose veins became an inseparable part of my life. Pain and
-          swelling accompanied me continuously, and I was starting to think
-          there was no way out. Then, a friend recommended that I see Dr. Sergii
-          Yuriovych. This doctor not only changed my life but also gave me the
-          feeling of healthy legs. The surgery was incredibly fast and painless,
-          and, most importantly, it left minimal traces - no scars! In just an
-          hour, I got rid of pain and swelling, and my legs look great. Thank
-          you, Dr. Yuriovych, for giving me a new life!
+          swelling accompanied me constantly, and I was beginning to think there
+          was no way out. Then a friend advised me to consult with Dr. Sergiy
+          Yuriyovich. This doctor not only changed my life but also gave me the
+          sensation of healthy legs. The surgery was incredibly quick and
+          painless, and, most importantly, left minimal traces – no scars
+          whatsoever! In just an hour, I got rid of pain and swelling, and my
+          legs look as if they were never troubled before. Thank you, Dr. Sergiy
+          Yuriyovich, for your help!
     before: /uploads/results/Артем 2_до.jpg
     after: /uploads/results/Артем 2_післ.jpg
   - date: 2023-10-02T21:00:00.000Z
