@@ -177,7 +177,7 @@ case:
           swelling - have become a thing of the past. Many thanks to Dr.
           Voitsitskyi for your incredible work and for giving me confidence in
           myself and healthy legs!
-    before: /uploads/results/results-4-1.webp
-    after: /uploads/results/results-4-2.webp
+    before: /uploads/results/железняк_до.jpg
+    after: /uploads/results/железняк_після.jpg
 ---
 
