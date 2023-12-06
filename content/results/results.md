@@ -19,8 +19,8 @@ case:
           and painless, and, most importantly, left no scars. I couldn't believe
           my eyes when, after 1.5 hours, I had healthy legs again, the pain was
           gone, and the swelling disappeared.
-    before: /uploads/results/results-1-1.webp
-    after: /uploads/results/results-1-2.webp
+    before: /uploads/results/грибов 2_до.jpg
+    after: /uploads/results/грибов 2_після.jpg
   - date: 2023-10-02T21:00:00.000Z
     content:
       uk:
