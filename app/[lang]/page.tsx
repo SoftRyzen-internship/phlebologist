@@ -1,3 +1,5 @@
+import Script from 'next/script';
+
 import { Locale } from '@/i18n.config';
 import { getDictionary } from '@/utils/dictionary';
 import dynamic from 'next/dynamic';
@@ -55,6 +57,17 @@ export default async function Home({
 
   return (
     <MainWrapper>
+      <Script
+        async
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+      ></Script>
+      <Script id="google-analytics">
+        {`window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}');`}
+      </Script>
+
       <HeroSection staticData={page.home.hero} lang={lang} />
       <AboutSection
         lang={lang}
