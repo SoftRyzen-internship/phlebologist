@@ -15,7 +15,14 @@ query about($relativePath: String!) {
   }
 }
 
-query aboutConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: AboutFilter) {
+query aboutConnection(
+  $before: String
+  $after: String
+  $first: Float
+  $last: Float
+  $sort: String
+  $filter: AboutFilter
+) {
   aboutConnection(
     before: $before
     after: $after
@@ -68,7 +75,14 @@ query banner($relativePath: String!) {
   }
 }
 
-query bannerConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: BannerFilter) {
+query bannerConnection(
+  $before: String
+  $after: String
+  $first: Float
+  $last: Float
+  $sort: String
+  $filter: BannerFilter
+) {
   bannerConnection(
     before: $before
     after: $after
@@ -121,7 +135,14 @@ query results($relativePath: String!) {
   }
 }
 
-query resultsConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: ResultsFilter) {
+query resultsConnection(
+  $before: String
+  $after: String
+  $first: Float
+  $last: Float
+  $sort: String
+  $filter: ResultsFilter
+) {
   resultsConnection(
     before: $before
     after: $after
@@ -174,7 +195,14 @@ query reviews($relativePath: String!) {
   }
 }
 
-query reviewsConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: ReviewsFilter) {
+query reviewsConnection(
+  $before: String
+  $after: String
+  $first: Float
+  $last: Float
+  $sort: String
+  $filter: ReviewsFilter
+) {
   reviewsConnection(
     before: $before
     after: $after
