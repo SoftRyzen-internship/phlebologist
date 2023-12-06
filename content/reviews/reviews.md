@@ -2,9 +2,11 @@
 uk:
   case:
     - date: 2022-10-04T21:00:00.000Z
-      photo: /uploads/reviews/Alfred_-_MS_Royal_14_B_VI.jpg
+      photo: >-
+        /uploads/reviews/Screenshot_2023-12-06-19-55-36-72_dba69a5e82e939c3ddef13f99a115ca3_1.jpg
       video: 'https://youtube.com/shorts/leiWn_-MzIE'
       name: Розум Олександра Сергіївна
+      review: ''
     - date: 2022-10-11T21:00:00.000Z
       photo: /uploads/reviews/OM.webp
       video: 'https://www.youtube.com/shorts/WAlBeuhcoaU'
