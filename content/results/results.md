@@ -6,8 +6,19 @@ case:
         title: Результат 22
         description: "Протягом багатьох років я мучився з варикозом. Я звертався до багатьох лікарів, але жоден не зміг мені допомогти. Моєму становищу сприяло безліч спроб лікування, але жодна з них не принесла бажаних результатів. Варикоз став невиносним, а біль та набряки нічим не давали жити. Щасливий випадок привів мене до доктора Войціцького - справжнього фахівця. Він не тільки пояснив мені всі нюанси моєї проблеми, але й запропонував оптимальний план лікування. Завдяки правильно підібраному методу лікування операція пройшла швидко і безболісно, і що ще важливіше - без залишених рубців.\_ Я не міг повірити своїм очам, коли через 1,5 години я знову мав здорові ноги, біль відступив, а набряки зникли.\n"
       en:
-        title: ''
-        description: ''
+        title: Result 22
+        description: >
+          For many years, I suffered from varicose veins. I consulted many
+          doctors, but none of them could help me. My condition was exacerbated
+          by numerous treatment attempts, but none of them yielded the desired
+          results. Varicose veins had become unbearable, and the pain and
+          swelling made it impossible to live a normal life. A stroke of luck
+          led me to Dr. Voitsitskyi - a true expert. He not only explained all
+          the nuances of my problem but also offered an optimal treatment plan.
+          Thanks to the correctly chosen treatment method, the surgery was quick
+          and painless, and, most importantly, left no scars. I couldn't believe
+          my eyes when, after 1.5 hours, I had healthy legs again, the pain was
+          gone, and the swelling disappeared.
     before: /uploads/results/грибов_до.jpg
     after: /uploads/results/results-3-2.jpg
   - date: 2023-10-01T21:00:00.000Z
