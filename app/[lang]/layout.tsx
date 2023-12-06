@@ -1,4 +1,5 @@
 import '@/styles/global.css';
+import { Analytics } from '@vercel/analytics/react';
 
 import React from 'react';
 import type { Metadata } from 'next';
@@ -63,6 +64,7 @@ export default async function RootLayout({
         />
         <div id="modal" />
         <Toaster />
+        <Analytics />
       </body>
     </html>
   );
