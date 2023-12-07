@@ -1,12 +1,6 @@
 ---
 uk:
   case:
-    - date: 2023-01-26T22:00:00.000Z
-      photo: >-
-        /uploads/reviews/Screenshot_2023-12-07-10-50-01-20_dba69a5e82e939c3ddef13f99a115ca3_1.jpg
-      video: 'https://youtu.be/NjwD_akGiDE'
-      name: Зайченко Вікторія Дмитрівна
-      review: ''
     - date: 2022-10-11T21:00:00.000Z
       photo: /uploads/reviews/OM.webp
       video: 'https://www.youtube.com/shorts/WAlBeuhcoaU'
@@ -33,6 +27,12 @@ uk:
         півроку, я відновив фізичні навантаження та жодних змін після операції
         загоєння не відбулося, попередній дискомфорт в ногах не повертається -
         на 100% задоволений якістю роботи.
+    - date: 2023-01-26T22:00:00.000Z
+      photo: >-
+        /uploads/reviews/Screenshot_2023-12-07-10-50-01-20_dba69a5e82e939c3ddef13f99a115ca3_1.jpg
+      video: 'https://youtu.be/NjwD_akGiDE'
+      name: Зайченко Вікторія Дмитрівна
+      review: ''
     - date: 2023-10-14T21:00:00.000Z
       photo: /uploads/reviews/Світлана Грибанова.webp
       name: Світлана Грибанова
