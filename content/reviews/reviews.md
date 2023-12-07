@@ -1,12 +1,6 @@
 ---
 uk:
   case:
-    - date: 2023-03-08T22:00:00.000Z
-      photo: >-
-        /uploads/reviews/Screenshot_2023-12-07-12-31-53-93_dba69a5e82e939c3ddef13f99a115ca3_1.jpg
-      video: 'https://youtube.com/shorts/0TkotYwpbEs'
-      name: Людмила Іванівна
-      review: ''
     - date: 2022-10-11T21:00:00.000Z
       photo: /uploads/reviews/OM.webp
       video: 'https://www.youtube.com/shorts/WAlBeuhcoaU'
@@ -48,6 +42,12 @@ uk:
         професіоналом. Все пройшло добре, без болю і будь-яких проблем. Я
         рекомендуватиму всім позбавлятися від цих хвороб і мати красиві та
         здорові ніжки! Бажаю вам здоров'я, Сергію Юрійовичу, і щастя!
+    - date: 2023-03-08T22:00:00.000Z
+      photo: >-
+        /uploads/reviews/Screenshot_2023-12-07-12-31-53-93_dba69a5e82e939c3ddef13f99a115ca3_1.jpg
+      video: 'https://youtube.com/shorts/0TkotYwpbEs'
+      name: Людмила Іванівна
+      review: ''
     - date: 2023-10-08T21:00:00.000Z
       photo: /uploads/reviews/Юлія Кашпуренко.webp
       name: Юля Кашпуренко
@@ -124,6 +124,7 @@ en:
         /uploads/reviews/Screenshot_2023-12-07-12-31-53-93_dba69a5e82e939c3ddef13f99a115ca3_1.jpg
       video: 'https://youtube.com/shorts/0TkotYwpbEs'
       name: 'Ludmila Koval '
+      review: ''
     - date: 2022-10-11T21:00:00.000Z
       photo: /uploads/reviews/OM.webp
       video: 'https://youtube.com/shorts/WAlBeuhcoaU'
