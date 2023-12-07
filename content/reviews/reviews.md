@@ -33,7 +33,7 @@ uk:
       video: 'https://youtu.be/NjwD_akGiDE'
       name: Зайченко Вікторія Дмитрівна
       review: ''
-    - date: 2023-10-14T21:00:00.000Z
+    - date: 2023-05-02T21:00:00.000Z
       photo: /uploads/reviews/Світлана Грибанова.jpg
       name: Світлана Грибанова
       review: >
