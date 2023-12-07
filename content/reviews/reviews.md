@@ -128,15 +128,6 @@ uk:
         загоїлась, вже плаваю в басейні, задоволена результатом.
 en:
   case:
-    - date: 2023-05-02T21:00:00.000Z
-      photo: /uploads/reviews/Світлана Грибанова.jpg
-      name: Svitlana Gribanova
-      review: >
-        A young doctor par excellence, Dr. Voitsitskyi. He performed surgery on
-        my leg veins. He is attentive and a true specialist in his field.
-        Everything went well without pain or any issues. I will recommend him to
-        everyone for getting rid of these conditions. Walk with beautiful and
-        healthy legs! Wishing you health and happiness, Dr. Voitsitskyi!
     - date: 2022-10-11T21:00:00.000Z
       photo: /uploads/reviews/OM.webp
       video: 'https://youtube.com/shorts/WAlBeuhcoaU'
