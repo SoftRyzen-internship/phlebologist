@@ -207,9 +207,9 @@ en:
         with confidence that my health was in reliable hands. His attentiveness
         as a specialist convinced me completely in my choice of a doctor. Now I
         can wholeheartedly recommend Dr. Voitsitskyi to others.
-    - date: 2023-08-31T21:00:00.000Z
+    - date: 2023-03-06T22:00:00.000Z
       photo: /uploads/reviews/Євген.webp
-      name: Evgeniy
+      name: Evgenii Boiko
       telegram: 'https://t.me/boyevg84'
       review: >
         I want to express special gratitude to Dr. SERGII VOITSITSKYI for his
@@ -218,7 +218,7 @@ en:
         after the surgery. The quality of my life has improved significantly
         after the operation. I am super happy. I highly recommend Dr. SERGII
         VOITSITSKYI. With respect to you and the entire medical staff of the
-        clinic, EVGENIY B.
+        clinic, EVGENII B.
     - date: 2023-09-22T21:00:00.000Z
       photo: /uploads/reviews/Юлія Поліно.webp
       name: Julia
