@@ -198,8 +198,23 @@ case:
           звертатися саме до Сергія Юрійовича. Не гайте часу і приймайте важливе
           рішення для свого здоров'я раніше
       en:
-        title: ''
-        description: ''
+        title: Result 5
+        description: >
+          For a long time, varicose veins became an integral part of my life.
+          Daily pain and swelling made me fear surgery and scars, leading me to
+          believe there was no way out, and I should resign myself to it. A
+          friend had a laser procedure performed by Sergii, so, following their
+          recommendation, I sought his expertise. From the first consultation, I
+          felt hopeful about restoring the health of my legs.
+
+
+          The laser procedure was incredibly fast and painless, leaving no
+          traces. Now, my legs look and feel as if they never encountered
+          varicose veins. Dr. Voitsitskyi is a true master of his craft. His
+          professionalism and care create an atmosphere of trust, providing
+          support at every stage of treatment. I strongly recommend anyone
+          dealing with varicose veins to consult Dr. Voitsitskyi. Don't waste
+          time; make the crucial decision for your health sooner!
     before: /uploads/results/гуляєв_до.jpg
     after: /uploads/results/гуляєв_після.jpg
 ---
