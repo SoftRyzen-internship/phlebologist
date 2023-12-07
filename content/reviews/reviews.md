@@ -159,9 +159,9 @@ en:
       video: 'https://youtu.be/NjwD_akGiDE'
       name: Viktoria Zaichenko
       review: ''
-    - date: 2023-10-14T21:00:00.000Z
-      photo: /uploads/reviews/Світлана Грибанова.webp
-      name: Svitlana Hrybanova
+    - date: 2023-05-02T21:00:00.000Z
+      photo: /uploads/reviews/Світлана Грибанова.jpg
+      name: Svitlana Gribanova
       review: >
         A young doctor par excellence, Dr. Voitsitskyi. He performed surgery on
         my leg veins. He is attentive and a true specialist in his field.
