@@ -113,11 +113,6 @@ uk:
         загоїлась, вже плаваю в басейні, задоволена результатом.
 en:
   case:
-    - date: 2023-01-26T22:00:00.000Z
-      photo: >-
-        /uploads/reviews/Screenshot_2023-12-07-10-50-01-20_dba69a5e82e939c3ddef13f99a115ca3_1.jpg
-      video: 'https://youtu.be/NjwD_akGiDE'
-      name: Viktoria Zaichenko
     - date: 2022-10-11T21:00:00.000Z
       photo: /uploads/reviews/OM.webp
       video: 'https://youtube.com/shorts/WAlBeuhcoaU'
@@ -143,6 +138,12 @@ en:
         months, I've resumed physical activities, and there have been no
         post-operative complications. The previous discomfort in my legs hasn't
         returned. I am 100% satisfied with the quality of the work.
+    - date: 2023-01-26T22:00:00.000Z
+      photo: >-
+        /uploads/reviews/Screenshot_2023-12-07-10-50-01-20_dba69a5e82e939c3ddef13f99a115ca3_1.jpg
+      video: 'https://youtu.be/NjwD_akGiDE'
+      name: Viktoria Zaichenko
+      review: ''
     - date: 2023-10-14T21:00:00.000Z
       photo: /uploads/reviews/Світлана Грибанова.webp
       name: Svitlana Hrybanova
