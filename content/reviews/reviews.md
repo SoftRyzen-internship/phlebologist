@@ -5,7 +5,7 @@ uk:
       photo: >-
         /uploads/reviews/Screenshot_2023-12-07-12-31-53-93_dba69a5e82e939c3ddef13f99a115ca3_1.jpg
       video: 'https://youtube.com/shorts/0TkotYwpbEs'
-      name: Коваль Людмила Іванівна
+      name: Людмила Іванівна
     - date: 2022-10-11T21:00:00.000Z
       photo: /uploads/reviews/OM.webp
       video: 'https://www.youtube.com/shorts/WAlBeuhcoaU'
