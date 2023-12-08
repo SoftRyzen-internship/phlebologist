@@ -146,27 +146,6 @@ uk:
         загоїлась, вже плаваю в басейні, задоволена результатом.
 en:
   case:
-    - date: 2023-07-17T21:00:00.000Z
-      photo: /uploads/reviews/Докаленко Тетяна.jpg
-      name: Tetiana Dokalenko
-      review: >
-        I ended up at Dr. Voitsitskyi office by chance, having scheduled a
-        consultation. I must say I am very glad, as he is, as they say, a
-        surgeon sent from above. Despite being young, he is already a
-        professional doctor. Any surgical procedure would make anyone tremble,
-        but after the consultation and conversation with this doctor, I
-        personally felt confident that everything would be fine. Without
-        hesitation, I agreed to the scheduled surgery date. The operation itself
-        took place in an atmosphere of trust. Every manipulation was accompanied
-        by the doctor's explanations, for which I am very grateful because I was
-        internally trembling. He performed everything so precisely that even the
-        nurse present during the operation admired his magical movements over my
-        leg. Three months have passed since the operation, and I feel very
-        comfortable - bruises disappeared, and the pain is no longer troubling
-        me. I am sincerely grateful to Sergiy Yuriyovich for the professionally
-        conducted operation and sensitivity to the patient. He is the kind of
-        doctor who will advise and do everything possible to improve your
-        health. Thank you sincerely!
     - date: 2022-10-11T21:00:00.000Z
       photo: /uploads/reviews/OM.webp
       video: 'https://youtube.com/shorts/WAlBeuhcoaU'
@@ -224,7 +203,7 @@ en:
         help, and stay healthy. Highly recommended!
     - date: 2023-09-20T21:00:00.000Z
       photo: /uploads/reviews/Людмила Мадзяновська.webp
-      name: Lyudmyla Madzianovska
+      name: Lyudmyla Medzianovska
       review: >
         I want to thank the phlebologist Dr. Voitsitskyi for the vein removal
         surgery on my leg. He is a very attentive, sensitive, and qualified
@@ -234,6 +213,27 @@ en:
         Voitsitskyi. To all those who have problems with varicose veins, I
         recommend turning to Dr. Voitsitskyi. You will be satisfied. I wish the
         doctor good health and grateful patients!
+    - date: 2023-07-17T21:00:00.000Z
+      photo: /uploads/reviews/Докаленко Тетяна.jpg
+      name: Tetiana Dokalenko
+      review: >
+        I ended up at Dr. Voitsitskyi office by chance, having scheduled a
+        consultation. I must say I am very glad, as he is, as they say, a
+        surgeon sent from above. Despite being young, he is already a
+        professional doctor. Any surgical procedure would make anyone tremble,
+        but after the consultation and conversation with this doctor, I
+        personally felt confident that everything would be fine. Without
+        hesitation, I agreed to the scheduled surgery date. The operation itself
+        took place in an atmosphere of trust. Every manipulation was accompanied
+        by the doctor's explanations, for which I am very grateful because I was
+        internally trembling. He performed everything so precisely that even the
+        nurse present during the operation admired his magical movements over my
+        leg. Three months have passed since the operation, and I feel very
+        comfortable - bruises disappeared, and the pain is no longer troubling
+        me. I am sincerely grateful to Sergiy Yuriyovich for the professionally
+        conducted operation and sensitivity to the patient. He is the kind of
+        doctor who will advise and do everything possible to improve your
+        health. Thank you sincerely!
     - date: 2023-10-04T21:00:00.000Z
       photo: /uploads/reviews/Олена Сайног.webp
       name: Olena Saynoh
