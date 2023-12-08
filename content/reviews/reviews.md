@@ -238,7 +238,7 @@ en:
         recommend turning to Dr. Voitsitskyi. You will be satisfied. I wish the
         doctor good health and grateful patients!
     - date: 2023-07-17T21:00:00.000Z
-      photo: /uploads/reviews/Докаленко Тетянаa.jpg
+      photo: /uploads/reviews/Докаленко Тетянааa.jpg
       name: Tetiana Dokalenko
       review: >
         I ended up at Dr. Voitsitskyi office by chance, having scheduled a
