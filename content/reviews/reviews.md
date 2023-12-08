@@ -1,6 +1,15 @@
 ---
 uk:
   case:
+    - date: 2023-05-01T21:00:00.000Z
+      photo: /uploads/reviews/Ковальов Ігор Геннадійович.jpg
+      name: Ігор Генадійович
+      telegram: 'https://t.me/ihor_guta'
+      review: >
+        Велика подяка Сергію Войціцькому за майстерно проведену операцію. Щиро
+        вдячний колективу Oxford Medical за високий професіоналізм, чуйність та
+        відповідальність. Бажаю вам міцного здоров'я, сил та натхнення у
+        порятунку пацієнтів від злих хвороб.
     - date: 2022-10-11T21:00:00.000Z
       photo: /uploads/reviews/OM.webp
       video: 'https://www.youtube.com/shorts/WAlBeuhcoaU'
