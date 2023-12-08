@@ -166,16 +166,6 @@ uk:
         загоїлась, вже плаваю в басейні, задоволена результатом.
 en:
   case:
-    - date: 2023-05-01T21:00:00.000Z
-      photo: /uploads/reviews/Ковальов Ігор Геннадійович.jpg
-      name: Igor Kovalov
-      telegram: 'https://t.me/ihor_guta'
-      review: >
-        A heartfelt thank you to Sergii Voitsitskyi for the expertly performed
-        operation. Sincere gratitude to the Oxford Medical team for their high
-        professionalism, sensitivity, and responsibility. Wishing you robust
-        health, strength, and inspiration in rescuing patients from serious
-        illnesses
     - date: 2022-10-11T21:00:00.000Z
       photo: /uploads/reviews/OM.webp
       video: 'https://youtube.com/shorts/WAlBeuhcoaU'
@@ -244,6 +234,16 @@ en:
         professionalism, the surgery and postoperative period went smoothly
         without complications. We are satisfied. Don't hesitate to seek his
         help, and stay healthy. Highly recommended!
+    - date: 2023-05-01T21:00:00.000Z
+      photo: /uploads/reviews/Ковальов Ігор Геннадійович.jpg
+      name: Igor Kovalov
+      telegram: 'https://t.me/ihor_guta'
+      review: >
+        A heartfelt thank you to Sergii Voitsitskyi for the expertly performed
+        operation. Sincere gratitude to the Oxford Medical team for their high
+        professionalism, sensitivity, and responsibility. Wishing you robust
+        health, strength, and inspiration in rescuing patients from serious
+        illnesses
     - date: 2023-09-20T21:00:00.000Z
       photo: /uploads/reviews/Людмила Мадзяновська.webp
       name: Lyudmyla Medzianovska
