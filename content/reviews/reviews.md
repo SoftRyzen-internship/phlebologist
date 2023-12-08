@@ -198,7 +198,7 @@ en:
         everyone for getting rid of these conditions. Walk with beautiful and
         healthy legs! Wishing you health and happiness, Dr. Voitsitskyi!
     - date: 2023-10-23T21:00:00.000Z
-      photo: /uploads/reviews/Мендрик Тетяна.jpg
+      photo: /uploads/reviews/Мендрик Тетянаа.jpg
       name: Tatiana Mendrik
       review: >
         Two weeks ago, at the "Mеdeira" clinic, Dr. Voіtsitskyі (phlebologist)
