@@ -32,26 +32,17 @@ case:
           Sergii
 
 
-          My varicose vein condition led me to complications – a trophic ulcer,
-          yet the decision to treat it became not only a defining moment in my
-          life but also evidence of the effectiveness of laser treatment by Dr.
-          Voitsitskyi.
-
-
-          Over a year ago, I decided to seek professional help due to increasing
-          pain and adverse skin conditions on my leg, which turned out to be a
-          trophic ulcer arising from varicose veins. When I first met Sergii, he
-          quickly understood my problem and devised a treatment plan. The laser
+          My varicose vein condition led to complications – a trophic ulcer, yet
+          the decision to treat it became not only a defining moment in my life
+          but also evidence of the effectiveness of laser treatment by Dr.
+          Voitsitskyi. Over a year ago, I decided to seek professional help due
+          to increasing pain and adverse skin conditions on my leg, which turned
+          out to be a trophic ulcer arising from varicose veins. The laser
           treatment procedure was unexpectedly painless and, most importantly,
-          effective.
-
-
-          Painful sensations in the ulcer area disappeared, and the skin became
-          significantly lighter and healthier just a few weeks after the
-          operation. Dr. Voitsitskyi is not only a highly qualified specialist
-          but also a compassionate doctor who cares for his patients. I
-          sincerely recommend anyone dealing with varicose vein issues to turn
-          to Phlebologist Voitsitskyi.
+          effective. Painful sensations in the ulcer area disappeared, and the
+          skin became significantly lighter and healthier just a few weeks after
+          the operation. I sincerely recommend anyone dealing with varicose vein
+          issues to turn to Phlebologist Voitsitskyi.
     before: /uploads/results/бершадський_до.jpg
     after: /uploads/results/бершадський_після.jpg
   - date: 2023-12-04T22:00:00.000Z
