@@ -1,40 +1,5 @@
 ---
 case:
-  - date: 2022-02-07T22:00:00.000Z
-    content:
-      uk:
-        title: Результат 6
-        description: >
-          Ірина
-
-
-          Моя історія з лікування варикозу стала справжнім відкриттям і
-          подарунком для моєї самооцінки та комфорту. Все почалося, коли я
-          вирішила подолати відчуття важкості і болю в лівій нозі, які турбували
-          мене більше 15 років. Сама із завзяттям розпочала пошуки цієї
-          проблеми.
-
-
-          Випадково я дізналася про доктора Войціцького, флеболога, який, як
-          потім вже виявилося, лікував мою тітку за допомогою лазера. Від самого
-          початку консультації я відчула, що це – той лікар, на якого я чекала.
-          Лікар вислухав усі мої скарги і розповів про безболісний та ефективний
-          процес лікування.
-
-
-          Місцями неприємна, але безболісна і швидка процедура залишила мене
-          приємно враженою.
-
-
-          Три місяці після завершення лікування, я відчуваю себе абсолютно
-          комфортно. Біль і важкість в нозі просто зникли, а зовні і не скажеш,
-          що в мене колись був варикоз. Сергій – це справжній спаситель і
-          професіонал у своїй справі. Не вагайтеся – ваші ноги заслуговують
-          турботи та експертного лікування.
-      en:
-        title: ''
-    before: /uploads/results/папроцька_до.jpg
-    after: /uploads/results/папроцька_після.jpg
   - date: 2023-12-04T22:00:00.000Z
     content:
       uk:
@@ -270,5 +235,61 @@ case:
           time; make the crucial decision for your health sooner!
     before: /uploads/results/гуляєв_до.jpg
     after: /uploads/results/гуляєв_після.jpg
+  - date: 2022-02-07T22:00:00.000Z
+    content:
+      uk:
+        title: Результат 6
+        description: >
+          Ірина
+
+
+          Моя історія з лікування варикозу стала справжнім відкриттям і
+          подарунком для моєї самооцінки та комфорту. Все почалося, коли я
+          вирішила подолати відчуття важкості і болю в лівій нозі, які турбували
+          мене більше 15 років. Сама із завзяттям розпочала пошуки цієї
+          проблеми.
+
+
+          Випадково я дізналася про доктора Войціцького, флеболога, який, як
+          потім вже виявилося, лікував мою тітку за допомогою лазера. Від самого
+          початку консультації я відчула, що це – той лікар, на якого я чекала.
+          Лікар вислухав усі мої скарги і розповів про безболісний та ефективний
+          процес лікування.
+
+
+          Місцями неприємна, але безболісна і швидка процедура залишила мене
+          приємно враженою.
+
+
+          Три місяці після завершення лікування, я відчуваю себе абсолютно
+          комфортно. Біль і важкість в нозі просто зникли, а зовні і не скажеш,
+          що в мене колись був варикоз. Сергій – це справжній спаситель і
+          професіонал у своїй справі. Не вагайтеся – ваші ноги заслуговують
+          турботи та експертного лікування.
+      en:
+        title: Result 6
+        description: >
+          My journey through varicose vein treatment has been a true revelation
+          and a gift to my self-esteem and comfort. It all began when I decided
+          to overcome the feelings of heaviness and pain in my left leg that had
+          been bothering me for over 15 years. I embarked on a determined quest
+          to address this issue.
+
+
+          By chance, I learned about Dr. Voitsitskyi, a phlebologist, who, as it
+          turned out, had treated my aunt using laser therapy. From the very
+          start of the consultation, I felt that he was the doctor I had been
+          waiting for. He attentively listened to all my concerns and explained
+          the painless and effective treatment process.
+
+
+          The occasionally uncomfortable but painless and swift procedure left
+          me pleasantly impressed. Three months after completing the treatment,
+          I feel absolutely comfortable. The pain and heaviness in my leg have
+          simply disappeared, and outwardly, you wouldn't guess that I once had
+          varicose veins. Sergii is a true savior and professional in his field.
+          Don't hesitate – your legs deserve the care and expertise he provides.
+    before: /uploads/results/папроцька_до.jpg
+    after: /uploads/results/папроцька_після.jpg
 ---
 
