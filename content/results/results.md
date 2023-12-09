@@ -1,50 +1,5 @@
 ---
 case:
-  - date: 2022-11-22T22:00:00.000Z
-    content:
-      uk:
-        title: Результат 7_Бершадський
-        description: >
-          Сергій
-
-
-          Моя варикозна хвороба привела мена до ускладненя – трофічної виразки,
-          але ж все ж прийняте рішення лікувати її стала не тільки визначним
-          етапом в моєму житті, але й свідченням про ефективність лазерного
-
-          лікування від лікаря Войціцького.
-
-
-          Більше року тому я вирішив звернутися до професіонала через збільшення
-          болю та несприятливий стан шкіри на моїй нозі, який виявився трофічною
-          виразкою, що виникла на фоні варикозної хвороби. Процедура лазерного
-          лікування була неочікувано безболісною і, що найголовніше,
-          результативною. Больові відчуття в ділянці виразки зникли, а шкіра
-          стала значно світлішою та здоровішою вже через декілька тижнів після
-          операції.
-
-
-          Я щиро рекомендую всім, хто стикається з проблемами варикозу,
-          звертатися саме до флеболога Войціцького.
-      en:
-        title: Result 7 Бершадський
-        description: >
-          Sergii
-
-
-          My varicose vein condition led to complications – a trophic ulcer, yet
-          the decision to treat it became not only a defining moment in my life
-          but also evidence of the effectiveness of laser treatment by Dr.
-          Voitsitskyi. Over a year ago, I decided to seek professional help due
-          to increasing pain and adverse skin conditions on my leg, which turned
-          out to be a trophic ulcer arising from varicose veins. The laser
-          treatment procedure was unexpectedly painless and, most importantly,
-          effective. Painful sensations in the ulcer area disappeared, and the
-          skin became significantly lighter and healthier just a few weeks after
-          the operation. I sincerely recommend anyone dealing with varicose vein
-          issues to turn to Phlebologist Voitsitskyi.
-    before: /uploads/results/бершадський_до.jpg
-    after: /uploads/results/бершадський_після.jpg
   - date: 2023-12-04T22:00:00.000Z
     content:
       uk:
@@ -339,5 +294,50 @@ case:
           Don't hesitate – your legs deserve the care and expertise he provides.
     before: /uploads/results/папроцька_до.jpg
     after: /uploads/results/папроцька_після.jpg
+  - date: 2022-11-22T22:00:00.000Z
+    content:
+      uk:
+        title: Результат 7_Бершадський
+        description: >
+          Сергій
+
+
+          Моя варикозна хвороба привела мена до ускладненя – трофічної виразки,
+          але ж все ж прийняте рішення лікувати її стала не тільки визначним
+          етапом в моєму житті, але й свідченням про ефективність лазерного
+
+          лікування від лікаря Войціцького.
+
+
+          Більше року тому я вирішив звернутися до професіонала через збільшення
+          болю та несприятливий стан шкіри на моїй нозі, який виявився трофічною
+          виразкою, що виникла на фоні варикозної хвороби. Процедура лазерного
+          лікування була неочікувано безболісною і, що найголовніше,
+          результативною. Больові відчуття в ділянці виразки зникли, а шкіра
+          стала значно світлішою та здоровішою вже через декілька тижнів після
+          операції.
+
+
+          Я щиро рекомендую всім, хто стикається з проблемами варикозу,
+          звертатися саме до флеболога Войціцького.
+      en:
+        title: Result 7 Бершадський
+        description: >
+          Sergii
+
+
+          My varicose vein condition led to complications – a trophic ulcer, yet
+          the decision to treat it became not only a defining moment in my life
+          but also evidence of the effectiveness of laser treatment by Dr.
+          Voitsitskyi. Over a year ago, I decided to seek professional help due
+          to increasing pain and adverse skin conditions on my leg, which turned
+          out to be a trophic ulcer arising from varicose veins. The laser
+          treatment procedure was unexpectedly painless and, most importantly,
+          effective. Painful sensations in the ulcer area disappeared, and the
+          skin became significantly lighter and healthier just a few weeks after
+          the operation. I sincerely recommend anyone dealing with varicose vein
+          issues to turn to Phlebologist Voitsitskyi.
+    before: /uploads/results/бершадський_до.jpg
+    after: /uploads/results/бершадський_після.jpg
 ---
 
