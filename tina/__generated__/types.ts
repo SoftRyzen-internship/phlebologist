@@ -1003,7 +1003,7 @@ export type ReviewsMutation = {
 };
 
 export type AboutPartsFragment = {
-  __typename?: 'About';
+  __typename: 'About';
   photo?: string | null;
   video?: string | null;
   general: {
@@ -1089,13 +1089,13 @@ export type AboutPartsFragment = {
 };
 
 export type BannerPartsFragment = {
-  __typename?: 'Banner';
+  __typename: 'Banner';
   uk?: { __typename: 'BannerUk'; title: string; description: string } | null;
   en?: { __typename: 'BannerEn'; title: string; description: string } | null;
 };
 
 export type ResultsPartsFragment = {
-  __typename?: 'Results';
+  __typename: 'Results';
   case?: Array<{
     __typename: 'ResultsCase';
     date?: string | null;
@@ -1118,7 +1118,7 @@ export type ResultsPartsFragment = {
 };
 
 export type ReviewsPartsFragment = {
-  __typename?: 'Reviews';
+  __typename: 'Reviews';
   uk?: {
     __typename: 'ReviewsUk';
     case?: Array<{
@@ -1152,7 +1152,7 @@ export type AboutQueryVariables = Exact<{
 export type AboutQuery = {
   __typename?: 'Query';
   about: {
-    __typename?: 'About';
+    __typename: 'About';
     id: string;
     photo?: string | null;
     video?: string | null;
@@ -1279,7 +1279,7 @@ export type AboutConnectionQuery = {
       __typename?: 'AboutConnectionEdges';
       cursor: string;
       node?: {
-        __typename?: 'About';
+        __typename: 'About';
         id: string;
         photo?: string | null;
         video?: string | null;
@@ -1390,7 +1390,7 @@ export type BannerQueryVariables = Exact<{
 export type BannerQuery = {
   __typename?: 'Query';
   banner: {
-    __typename?: 'Banner';
+    __typename: 'Banner';
     id: string;
     _sys: {
       __typename?: 'SystemInfo';
@@ -1431,7 +1431,7 @@ export type BannerConnectionQuery = {
       __typename?: 'BannerConnectionEdges';
       cursor: string;
       node?: {
-        __typename?: 'Banner';
+        __typename: 'Banner';
         id: string;
         _sys: {
           __typename?: 'SystemInfo';
@@ -1464,7 +1464,7 @@ export type ResultsQueryVariables = Exact<{
 export type ResultsQuery = {
   __typename?: 'Query';
   results: {
-    __typename?: 'Results';
+    __typename: 'Results';
     id: string;
     _sys: {
       __typename?: 'SystemInfo';
@@ -1522,7 +1522,7 @@ export type ResultsConnectionQuery = {
       __typename?: 'ResultsConnectionEdges';
       cursor: string;
       node?: {
-        __typename?: 'Results';
+        __typename: 'Results';
         id: string;
         _sys: {
           __typename?: 'SystemInfo';
@@ -1564,7 +1564,7 @@ export type ReviewsQueryVariables = Exact<{
 export type ReviewsQuery = {
   __typename?: 'Query';
   reviews: {
-    __typename?: 'Reviews';
+    __typename: 'Reviews';
     id: string;
     _sys: {
       __typename?: 'SystemInfo';
@@ -1627,7 +1627,7 @@ export type ReviewsConnectionQuery = {
       __typename?: 'ReviewsConnectionEdges';
       cursor: string;
       node?: {
-        __typename?: 'Reviews';
+        __typename: 'Reviews';
         id: string;
         _sys: {
           __typename?: 'SystemInfo';
@@ -1669,6 +1669,7 @@ export type ReviewsConnectionQuery = {
 
 export const AboutPartsFragmentDoc = gql`
   fragment AboutParts on About {
+    __typename
     photo
     video
     general {
@@ -1761,6 +1762,7 @@ export const AboutPartsFragmentDoc = gql`
 `;
 export const BannerPartsFragmentDoc = gql`
   fragment BannerParts on Banner {
+    __typename
     uk {
       __typename
       title
@@ -1775,6 +1777,7 @@ export const BannerPartsFragmentDoc = gql`
 `;
 export const ResultsPartsFragmentDoc = gql`
   fragment ResultsParts on Results {
+    __typename
     case {
       __typename
       date
@@ -1798,6 +1801,7 @@ export const ResultsPartsFragmentDoc = gql`
 `;
 export const ReviewsPartsFragmentDoc = gql`
   fragment ReviewsParts on Reviews {
+    __typename
     uk {
       __typename
       case {
@@ -2092,11 +2096,25 @@ export function getSdk<C>(requester: Requester<C>) {
       options?: C,
     ): Promise<{
       data: AboutQuery;
+      errors?: {
+        message: string;
+        locations: { line: number; column: number }[];
+        path: string[];
+      }[];
       variables: AboutQueryVariables;
       query: string;
     }> {
       return requester<
-        { data: AboutQuery; variables: AboutQueryVariables; query: string },
+        {
+          data: AboutQuery;
+          errors?: {
+            message: string;
+            locations: { line: number; column: number }[];
+            path: string[];
+          }[];
+          variables: AboutQueryVariables;
+          query: string;
+        },
         AboutQueryVariables
       >(AboutDocument, variables, options);
     },
@@ -2105,12 +2123,22 @@ export function getSdk<C>(requester: Requester<C>) {
       options?: C,
     ): Promise<{
       data: AboutConnectionQuery;
+      errors?: {
+        message: string;
+        locations: { line: number; column: number }[];
+        path: string[];
+      }[];
       variables: AboutConnectionQueryVariables;
       query: string;
     }> {
       return requester<
         {
           data: AboutConnectionQuery;
+          errors?: {
+            message: string;
+            locations: { line: number; column: number }[];
+            path: string[];
+          }[];
           variables: AboutConnectionQueryVariables;
           query: string;
         },
@@ -2122,11 +2150,25 @@ export function getSdk<C>(requester: Requester<C>) {
       options?: C,
     ): Promise<{
       data: BannerQuery;
+      errors?: {
+        message: string;
+        locations: { line: number; column: number }[];
+        path: string[];
+      }[];
       variables: BannerQueryVariables;
       query: string;
     }> {
       return requester<
-        { data: BannerQuery; variables: BannerQueryVariables; query: string },
+        {
+          data: BannerQuery;
+          errors?: {
+            message: string;
+            locations: { line: number; column: number }[];
+            path: string[];
+          }[];
+          variables: BannerQueryVariables;
+          query: string;
+        },
         BannerQueryVariables
       >(BannerDocument, variables, options);
     },
@@ -2135,12 +2177,22 @@ export function getSdk<C>(requester: Requester<C>) {
       options?: C,
     ): Promise<{
       data: BannerConnectionQuery;
+      errors?: {
+        message: string;
+        locations: { line: number; column: number }[];
+        path: string[];
+      }[];
       variables: BannerConnectionQueryVariables;
       query: string;
     }> {
       return requester<
         {
           data: BannerConnectionQuery;
+          errors?: {
+            message: string;
+            locations: { line: number; column: number }[];
+            path: string[];
+          }[];
           variables: BannerConnectionQueryVariables;
           query: string;
         },
@@ -2152,11 +2204,25 @@ export function getSdk<C>(requester: Requester<C>) {
       options?: C,
     ): Promise<{
       data: ResultsQuery;
+      errors?: {
+        message: string;
+        locations: { line: number; column: number }[];
+        path: string[];
+      }[];
       variables: ResultsQueryVariables;
       query: string;
     }> {
       return requester<
-        { data: ResultsQuery; variables: ResultsQueryVariables; query: string },
+        {
+          data: ResultsQuery;
+          errors?: {
+            message: string;
+            locations: { line: number; column: number }[];
+            path: string[];
+          }[];
+          variables: ResultsQueryVariables;
+          query: string;
+        },
         ResultsQueryVariables
       >(ResultsDocument, variables, options);
     },
@@ -2165,12 +2231,22 @@ export function getSdk<C>(requester: Requester<C>) {
       options?: C,
     ): Promise<{
       data: ResultsConnectionQuery;
+      errors?: {
+        message: string;
+        locations: { line: number; column: number }[];
+        path: string[];
+      }[];
       variables: ResultsConnectionQueryVariables;
       query: string;
     }> {
       return requester<
         {
           data: ResultsConnectionQuery;
+          errors?: {
+            message: string;
+            locations: { line: number; column: number }[];
+            path: string[];
+          }[];
           variables: ResultsConnectionQueryVariables;
           query: string;
         },
@@ -2182,11 +2258,25 @@ export function getSdk<C>(requester: Requester<C>) {
       options?: C,
     ): Promise<{
       data: ReviewsQuery;
+      errors?: {
+        message: string;
+        locations: { line: number; column: number }[];
+        path: string[];
+      }[];
       variables: ReviewsQueryVariables;
       query: string;
     }> {
       return requester<
-        { data: ReviewsQuery; variables: ReviewsQueryVariables; query: string },
+        {
+          data: ReviewsQuery;
+          errors?: {
+            message: string;
+            locations: { line: number; column: number }[];
+            path: string[];
+          }[];
+          variables: ReviewsQueryVariables;
+          query: string;
+        },
         ReviewsQueryVariables
       >(ReviewsDocument, variables, options);
     },
@@ -2195,12 +2285,22 @@ export function getSdk<C>(requester: Requester<C>) {
       options?: C,
     ): Promise<{
       data: ReviewsConnectionQuery;
+      errors?: {
+        message: string;
+        locations: { line: number; column: number }[];
+        path: string[];
+      }[];
       variables: ReviewsConnectionQueryVariables;
       query: string;
     }> {
       return requester<
         {
           data: ReviewsConnectionQuery;
+          errors?: {
+            message: string;
+            locations: { line: number; column: number }[];
+            path: string[];
+          }[];
           variables: ReviewsConnectionQueryVariables;
           query: string;
         },
@@ -2235,7 +2335,12 @@ const generateRequester = (
       url,
     });
 
-    return { data: data?.data, query: doc, variables: vars || {} };
+    return {
+      data: data?.data,
+      errors: data?.errors,
+      query: doc,
+      variables: vars || {},
+    };
   };
 
   return requester;
@@ -2248,7 +2353,7 @@ export const ExperimentalGetTinaClient = () =>
   getSdk(
     generateRequester(
       createClient({
-        url: 'https://content.tinajs.io/1.4/content/112741f1-bcd7-4118-ba69-e56683058d98/github/main',
+        url: 'https://content.tinajs.io/1.4/content/73b18999-041b-4d81-ae56-b35cf55ce2a9/github/main',
         queries,
       }),
     ),

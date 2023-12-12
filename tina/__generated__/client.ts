@@ -1,8 +1,8 @@
 import { createClient } from 'tinacms/dist/client';
 import { queries } from './types';
 export const client = createClient({
-  url: 'https://content.tinajs.io/1.4/content/112741f1-bcd7-4118-ba69-e56683058d98/github/main',
-  token: 'b5b88f5896700db4c768033d7ee778c7056ef617',
+  url: 'https://content.tinajs.io/1.4/content/73b18999-041b-4d81-ae56-b35cf55ce2a9/github/main',
+  token: 'a2516c0821132a76dafd2d3ee3c183f79c7459fe',
   queries,
 });
 export default client;
