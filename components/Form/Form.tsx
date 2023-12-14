@@ -99,7 +99,12 @@ const Form: FC<FormProps> = ({ staticData, className = '' }) => {
   };
 
   return (
-    <form className={className} noValidate onSubmit={handleSubmit(onSubmit)}>
+    <form
+      id="consultationForm"
+      className={className}
+      noValidate
+      onSubmit={handleSubmit(onSubmit)}
+    >
       <FormInput
         staticData={input.name}
         register={register}

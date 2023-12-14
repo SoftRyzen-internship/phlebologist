@@ -69,16 +69,16 @@ export default async function Home({
       </Script>
 
       <Script id="fb-pixel">
-        {`!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1064048701288094');
-fbq('track', 'PageView');`}
+        {` !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1064048701288094');
+  fbq('track', 'PageView');`}
       </Script>
       <noscript>
         `
@@ -92,6 +92,14 @@ fbq('track', 'PageView');`}
         }
         `
       </noscript>
+
+      <Script id="fb-pixel-submit">{`
+         document.addEventListener('submit', function(event) {
+    if (event.target.id === 'consultationForm') { 
+      fbq('track', 'Lead');
+    }
+  });
+      `}</Script>
 
       <HeroSection staticData={page.home.hero} lang={lang} />
       <AboutSection
