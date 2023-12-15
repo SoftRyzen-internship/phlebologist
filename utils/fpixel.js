@@ -4,6 +4,10 @@ export const pageview = () => {
   window.fbq('track', 'PageView');
 };
 
+export const init = () => {
+  window.fbq('init', FB_PIXEL_ID);
+};
+
 // https://developers.facebook.com/docs/facebook-pixel/advanced/
 export const event = (name, options = {}) => {
   window.fbq('track', name, options);
