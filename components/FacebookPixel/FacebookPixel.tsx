@@ -2,26 +2,20 @@
 
 import { usePathname } from 'next/navigation';
 import Script from 'next/script';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import * as pixel from '@/utils/fpixel';
 
 const FacebookPixel = () => {
-  const [loaded, setLoaded] = useState(false);
   const pathname = usePathname();
 
   useEffect(() => {
-    if (!loaded) return;
     pixel.pageview();
     pixel.pagelead();
-  }, [pathname, loaded]);
+  }, [pathname]);
 
   return (
     <>
-      <Script
-        id="fb-pixel"
-        onLoad={() => setLoaded(true)}
-        data-pixel-id={pixel.FB_PIXEL_ID}
-      >
+      <Script id="fb-pixel" data-pixel-id={pixel.FB_PIXEL_ID}>
         {`
                 !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
