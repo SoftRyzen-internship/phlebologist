@@ -11,17 +11,18 @@ const FacebookPixel = () => {
 
   useEffect(() => {
     if (!loaded) return;
-    pixel.init();
+
     pixel.pageview();
   }, [pathname, loaded]);
 
   return (
-    <Script
-      id="fb-pixel"
-      onLoad={() => setLoaded(true)}
-      data-pixel-id={pixel.FB_PIXEL_ID}
-    >
-      {`
+    <>
+      <Script
+        id="fb-pixel"
+        onLoad={() => setLoaded(true)}
+        data-pixel-id={pixel.FB_PIXEL_ID}
+      >
+        {`
                 !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
     n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -30,9 +31,18 @@ const FacebookPixel = () => {
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
-    
+    fbq('init', '1064048701288094');
               `}
-    </Script>
+      </Script>
+      <noscript>
+        <img
+          height="1"
+          width="1"
+          style={{ display: 'none' }}
+          src="https://www.facebook.com/tr?id=1064048701288094&ev=PageView&noscript=1"
+        />
+      </noscript>
+    </>
   );
 };
 
