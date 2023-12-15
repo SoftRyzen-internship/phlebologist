@@ -4,6 +4,10 @@ export const pageview = () => {
   window.fbq('track', 'PageView');
 };
 
+export const pagelead = () => {
+  window.fbq('track', 'Lead');
+};
+
 export const init = () => {
   window.fbq('init', FB_PIXEL_ID);
 };
