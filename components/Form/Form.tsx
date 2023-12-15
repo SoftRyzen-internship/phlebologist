@@ -11,6 +11,7 @@ import { sendDataToTelegram } from '@/utils/sendDataToTelegram';
 import { sendDataToGoogleSheets } from '@/utils/sendDataToGoogleSheets';
 import formBuildingData from '@/data/formBuildingData.json';
 import { showToast } from '@/utils/showToast';
+import * as pixel from '@/utils/fpixel';
 
 import {
   FormInput,
@@ -67,6 +68,7 @@ const Form: FC<FormProps> = ({ staticData, className = '' }) => {
       try {
         await sendDataToTelegram(dataToSend as IDataToSend);
         await sendDataToGoogleSheets(dataToSend as IDataToSend);
+        pixel.event('Lead');
         return true;
       } catch (error) {
         return false;
