@@ -11,8 +11,8 @@ const FacebookPixel = () => {
 
   useEffect(() => {
     if (!loaded) return;
-
     pixel.pageview();
+    pixel.pagelead();
   }, [pathname, loaded]);
 
   return (
