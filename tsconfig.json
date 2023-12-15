@@ -31,7 +31,8 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx",
-    "components/Feedbacks/FeedbackFrame"
+    "components/Feedbacks/FeedbackFrame",
+    "utils/fpixel.js"
   ],
   "exclude": ["node_modules"]
 }
