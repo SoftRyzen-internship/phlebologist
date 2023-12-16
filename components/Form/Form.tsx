@@ -66,7 +66,7 @@ const Form: FC<FormProps> = ({ staticData, className = '' }) => {
       try {
         await sendDataToTelegram(dataToSend as IDataToSend);
         await sendDataToGoogleSheets(dataToSend as IDataToSend);
-        pixel.event('Lead');
+
         return true;
       } catch (error) {
         return false;
@@ -91,7 +91,8 @@ const Form: FC<FormProps> = ({ staticData, className = '' }) => {
         const submitButton = document?.getElementById('submitButton');
         submitButton && submitButton.blur();
       }
-
+      pixel.init();
+      pixel.event('Lead');
       showToast(isSuccess, toastMessage);
     } catch (error) {
       console.log(error);

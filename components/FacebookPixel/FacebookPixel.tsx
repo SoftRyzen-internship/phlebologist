@@ -24,7 +24,7 @@ const FacebookPixel = () => {
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1064048701288094');
+
               `}
       </Script>
       <noscript>
