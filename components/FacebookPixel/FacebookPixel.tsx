@@ -10,7 +10,6 @@ const FacebookPixel = () => {
 
   useEffect(() => {
     pixel.pageview();
-    pixel.pagelead();
   }, [pathname]);
 
   return (
