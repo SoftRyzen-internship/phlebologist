@@ -11,7 +11,7 @@ import FacebookPixel from '@/components/FacebookPixel/FacebookPixel';
 import { Suspense } from 'react';
 
 import { Footer, Header } from '@/components';
-import Head from 'next/head';
+// import Head from 'next/head';
 
 const inter = Inter({
   subsets: ['latin', 'cyrillic'],

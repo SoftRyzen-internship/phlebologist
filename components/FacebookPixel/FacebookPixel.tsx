@@ -1,7 +1,7 @@
 'use client';
 
 import { usePathname, useSearchParams } from 'next/navigation';
-import Script from 'next/script';
+// import Script from 'next/script';
 import { useEffect } from 'react';
 import * as pixel from '@/utils/fpixel';
 
