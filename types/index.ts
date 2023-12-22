@@ -1,5 +1,8 @@
 import { TinaMarkdownContent } from 'tinacms/dist/rich-text';
 
+export type TReactPixel =
+  typeof import('/Users/admin/Desktop/projects/phlebolog/node_modules/react-facebook-pixel/types/index');
+
 export type IconBtnName =
   | 'tiktok'
   | 'facebook'

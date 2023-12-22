@@ -11,7 +11,6 @@ import { sendDataToTelegram } from '@/utils/sendDataToTelegram';
 import { sendDataToGoogleSheets } from '@/utils/sendDataToGoogleSheets';
 import formBuildingData from '@/data/formBuildingData.json';
 import { showToast } from '@/utils/showToast';
-import * as pixel from '@/utils/fpixel';
 
 import {
   FormInput,
@@ -22,6 +21,7 @@ import {
 
 import { FORM_DATA_KEY } from '@/constants';
 import { IDataToSend } from '@/types';
+import { useFacebookPixel } from '@/hooks';
 
 const Form: FC<FormProps> = ({ staticData, className = '' }) => {
   const { input, textarea, checkbox, button, toastMessage } = staticData;
@@ -42,6 +42,7 @@ const Form: FC<FormProps> = ({ staticData, className = '' }) => {
     handleSubmit,
     formState: { errors },
   } = useForm<FormInputs>();
+  const { reactPixel, trackEvent } = useFacebookPixel();
 
   useFormPersist(FORM_DATA_KEY, { watch, setValue });
 
@@ -85,14 +86,17 @@ const Form: FC<FormProps> = ({ staticData, className = '' }) => {
 
       if (isSuccess) {
         reset();
+        console.log(reactPixel)
+        trackEvent("Lead");
       }
 
       if (typeof document !== 'undefined') {
         const submitButton = document?.getElementById('submitButton');
         submitButton && submitButton.blur();
       }
-      pixel.init();
-      pixel.event('Lead');
+
+      // pixel.init();
+      // pixel.event('Lead');
       showToast(isSuccess, toastMessage);
     } catch (error) {
       console.log(error);
