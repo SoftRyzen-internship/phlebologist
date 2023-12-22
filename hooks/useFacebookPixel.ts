@@ -1,12 +1,11 @@
 import { useCallback, useEffect, useState } from 'react';
 import { usePathname, useSearchParams } from 'next/navigation';
 import * as pixel from '@/utils/fpixel';
-import { TReactPixel } from '@/types';
 
 export const useFacebookPixel = () => {
   const pathname = usePathname();
   const searchParams = useSearchParams();
-  const [reactPixel, setReactPixel] = useState<TReactPixel | null>(null);
+  const [reactPixel, setReactPixel] = useState<any | null>(null);
 
   useEffect(() => {
     import('react-facebook-pixel')
