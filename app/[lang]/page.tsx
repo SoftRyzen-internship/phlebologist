@@ -1,14 +1,18 @@
+import Script from 'next/script';
+
 import { Locale } from '@/i18n.config';
 import { getDictionary } from '@/utils/dictionary';
 import dynamic from 'next/dynamic';
 
 import { MainWrapper } from '@/components';
-import {
-  HeroSection,
-  AboutSection,
-  AdvantagesSection,
-  BannerSection,
-} from '@/sections';
+import { HeroSection, AdvantagesSection, BannerSection } from '@/sections';
+
+const AboutSection = dynamic(
+  () => import('@/sections').then(mod => mod.AboutSection),
+  {
+    ssr: false,
+  },
+);
 
 const FAQ = dynamic(() => import('@/sections').then(mod => mod.FAQSection), {
   ssr: false,
@@ -53,6 +57,17 @@ export default async function Home({
 
   return (
     <MainWrapper>
+      <Script
+        async
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+      ></Script>
+      <Script id="google-analytics">
+        {`window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}');`}
+      </Script>
+
       <HeroSection staticData={page.home.hero} lang={lang} />
       <AboutSection
         lang={lang}

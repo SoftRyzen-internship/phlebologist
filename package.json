@@ -2,6 +2,9 @@
   "name": "phlebologist",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=18.18.0 <19.0.0"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "tinacms build && next build",
@@ -20,9 +23,10 @@
     "@headlessui/react": "^1.7.17",
     "@headlessui/tailwindcss": "^0.2.0",
     "@react-spring/web": "^9.7.3",
-    "@tinacms/cli": "^1.5.29",
+    "@tinacms/cli": "^1.5.31",
     "@typescript-eslint/eslint-plugin": "^6.7.3",
     "@typescript-eslint/parser": "^6.7.3",
+    "@vercel/analytics": "^1.1.1",
     "aos": "^2.3.4",
     "classnames": "^2.3.2",
     "googleapis": "^127.0.0",
@@ -31,6 +35,7 @@
     "react": "latest",
     "react-compare-image": "^3.4.0",
     "react-dom": "latest",
+    "react-facebook-pixel": "^1.0.4",
     "react-hook-form": "^7.46.2",
     "react-hook-form-persist": "^3.0.0",
     "react-hot-toast": "^2.4.1",

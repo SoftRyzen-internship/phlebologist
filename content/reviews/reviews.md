@@ -3,7 +3,7 @@ uk:
   case:
     - date: 2022-10-11T21:00:00.000Z
       photo: /uploads/reviews/OM.webp
-      video: 'https://youtube.com/shorts/4Y8V3XZKg-w?feature=share'
+      video: 'https://www.youtube.com/shorts/WAlBeuhcoaU'
       name: Маліченко Олександра Миколаївна
       review: ''
     - date: 2023-03-07T22:00:00.000Z
@@ -23,6 +23,12 @@ uk:
         виконувати рекомендації лікаря), але якщо що - то Сергій Юрійович завжди
         на зв'язку.\_ До літа буду вже з красивими ніжками \U0001F601 Дякую,
         Лікарю! \U0001F917\n"
+    - date: 2022-10-04T21:00:00.000Z
+      photo: >-
+        /uploads/reviews/Screenshot_2023-12-06-19-55-36-72_dba69a5e82e939c3ddef13f99a115ca3_1.jpg
+      video: 'https://youtube.com/shorts/leiWn_-MzIE'
+      name: Розум Олександра Сергіївна
+      review: ''
     - date: 2023-10-13T21:00:00.000Z
       photo: /uploads/reviews/RS.webp
       name: Роман Самборський
@@ -34,8 +40,14 @@ uk:
         півроку, я відновив фізичні навантаження та жодних змін після операції
         загоєння не відбулося, попередній дискомфорт в ногах не повертається -
         на 100% задоволений якістю роботи.
-    - date: 2023-10-14T21:00:00.000Z
-      photo: /uploads/reviews/Світлана Грибанова.webp
+    - date: 2023-01-26T22:00:00.000Z
+      photo: >-
+        /uploads/reviews/Screenshot_2023-12-07-10-50-01-20_dba69a5e82e939c3ddef13f99a115ca3_1.jpg
+      video: 'https://youtu.be/NjwD_akGiDE'
+      name: Зайченко Вікторія Дмитрівна
+      review: ''
+    - date: 2023-05-02T21:00:00.000Z
+      photo: /uploads/reviews/Світлана Грибанова.jpg
       name: Світлана Грибанова
       review: >
         Молодий лікар, насправді від Бога – Войціцький Сергій Юрійович. Він
@@ -43,6 +55,23 @@ uk:
         професіоналом. Все пройшло добре, без болю і будь-яких проблем. Я
         рекомендуватиму всім позбавлятися від цих хвороб і мати красиві та
         здорові ніжки! Бажаю вам здоров'я, Сергію Юрійовичу, і щастя!
+    - date: 2023-10-23T21:00:00.000Z
+      photo: /uploads/reviews/Мендрик Тетянаа.jpg
+      name: Мендрик Тетяна
+      review: >
+        2 тижня тому у клініці "Медейра" доктор Войціцький (флеболог) провів
+        мені операцію на нозі з видалення варикозних вен. Дуже боялася, що буде
+        боляче, Але всупереч усьому страх пройшов після першого уколу, який я
+        навіть не відчула. Лікар дуже уважний і під час операції весь час зі
+        мною розмовляв і операція пройшла для мене зовсім безболісно. Через
+        тиждень зняв пов'язки, зробив УЗД, все з ногою чудово. Я дуже вдячна
+        доктору Войціцькому за професійно зроблену операцію!
+    - date: 2023-03-08T22:00:00.000Z
+      photo: >-
+        /uploads/reviews/Screenshot_2023-12-07-12-31-53-93_dba69a5e82e939c3ddef13f99a115ca3_1.jpg
+      video: 'https://youtube.com/shorts/0TkotYwpbEs'
+      name: Людмила Іванівна
+      review: ''
     - date: 2023-10-08T21:00:00.000Z
       photo: /uploads/reviews/Юлія Кашпуренко.webp
       name: Юля Кашпуренко
@@ -51,6 +80,15 @@ uk:
         запущену стадію варикозної хвороби. Завдяки професійності лікаря,
         операція та післяопераційний період пройшли без ускладнення. Ми
         задоволені.    Звертайтеся та будьте здорові. Рекомендую!
+    - date: 2023-05-01T21:00:00.000Z
+      photo: /uploads/reviews/Ковальов Ігор Геннадійович.jpg
+      name: Ігор Генадійович
+      telegram: 'https://t.me/ihor_guta'
+      review: >
+        Велика подяка Сергію Войціцькому за майстерно проведену операцію. Щиро
+        вдячний колективу Oxford Medical за високий професіоналізм, чуйність та
+        відповідальність. Бажаю вам міцного здоров'я, сил та натхнення у
+        порятунку пацієнтів від злих хвороб.
     - date: 2023-09-20T21:00:00.000Z
       photo: /uploads/reviews/Людмила Мадзяновська.webp
       name: Людмила Медзяновська
@@ -62,6 +100,24 @@ uk:
         клініки і лікарем Сергієм Юрійовичем. Всім,у кого є проблеми з
         варикозом,звертайтеся до лікаря Войціцького С.Ю.залишитесь задоволеними.
         Лікарю бажаю міцного здоров'я та вдячних пацієнтів!
+    - date: 2023-07-17T21:00:00.000Z
+      photo: /uploads/reviews/Докаленко Тетянааa.jpg
+      name: Докаленко Тетяна
+      review: >
+        До Сергія Юрійовича потрапила випадково записавшись на консультацію і
+        скажу що дуже рада бо він як кажуть хірург від Бога. Молодий але вже
+        професійний лікар. Така процедура як операція будь кого змусить тремтіти
+        але після консультації і спілкування з цим лікарем я особисто була
+        впевнена що в мене буде все добре і не вагаючись я погодилася на
+        призначення дати операції. Сама операція проходила в атмосфері довіри.
+        Кожна маніпуляція супроводжувалася поясненням лікаря за що я йому дуже
+        вдячна бо внутрішнє тремтіння було. Він все так чітко робив що навіть
+        сестричка яка була присутня на операції замилувалась його чаклунськими
+        рухами над моєю ногою. Пройшло три місяці після операції почуваю себе
+        дуже комфортно синці зникли біль не турбує. Я дуже вдячна Сергію
+        Юрійовичу за професійно проведену операцію та чуйність до пацієнта. Це
+        саме той лікар який і порадить і зробить все можливе для покращення
+        стану здоров’я. Щиро дякую!
     - date: 2023-10-04T21:00:00.000Z
       photo: /uploads/reviews/Олена Сайног.webp
       name: Олена Сайног
@@ -74,9 +130,9 @@ uk:
         Його уважність,як фахівця, мене остаточно переконало в моєму виборі
         лікаря. Тепер я від щирого серця можу іншим рекомендувати звертатися до
         Сергія Юрієвича.
-    - date: 2023-08-31T21:00:00.000Z
+    - date: 2023-03-06T22:00:00.000Z
       photo: /uploads/reviews/Євген.webp
-      name: Євген
+      name: Євгеній Бойко
       telegram: 'https://t.me/boyevg84'
       review: >
         Бажаю висловити особливу подяку лікарю ВОЙЦИЦЬКОМУ СЕРГІЮ ЮРІЙОВИЧУ за
@@ -114,6 +170,11 @@ uk:
         загоїлась, вже плаваю в басейні, задоволена результатом.
 en:
   case:
+    - date: 2022-10-11T21:00:00.000Z
+      photo: /uploads/reviews/OM.webp
+      video: 'https://youtube.com/shorts/WAlBeuhcoaU'
+      name: Olexandra Malichenko
+      review: ''
     - date: 2023-03-07T22:00:00.000Z
       photo: /uploads/reviews/OV.webp
       name: Olha Viktorivna
@@ -133,6 +194,12 @@ en:
         (how diligently I follow the doctor's recommendations), but if anything
         arises, Dr. Voitsitskyi is always available. I'll have beautiful legs by
         summer \U0001F601 Thank you, Doctor! \U0001F917\n"
+    - date: 2022-10-04T21:00:00.000Z
+      photo: >-
+        /uploads/reviews/Screenshot_2023-12-06-19-55-36-72_dba69a5e82e939c3ddef13f99a115ca3_1.jpg
+      video: 'https://youtube.com/shorts/leiWn_-MzIE'
+      name: Olexandra Rozum
+      review: ''
     - date: 2023-10-13T21:00:00.000Z
       photo: /uploads/reviews/RS.webp
       name: Roman Samborsky
@@ -143,15 +210,40 @@ en:
         months, I've resumed physical activities, and there have been no
         post-operative complications. The previous discomfort in my legs hasn't
         returned. I am 100% satisfied with the quality of the work.
-    - date: 2023-10-14T21:00:00.000Z
-      photo: /uploads/reviews/Світлана Грибанова.webp
-      name: Svitlana Hrybanova
+    - date: 2023-01-26T22:00:00.000Z
+      photo: >-
+        /uploads/reviews/Screenshot_2023-12-07-10-50-01-20_dba69a5e82e939c3ddef13f99a115ca3_1.jpg
+      video: 'https://youtu.be/NjwD_akGiDE'
+      name: Viktoria Zaichenko
+      review: ''
+    - date: 2023-05-02T21:00:00.000Z
+      photo: /uploads/reviews/Світлана Грибанова.jpg
+      name: Svitlana Gribanova
       review: >
         A young doctor par excellence, Dr. Voitsitskyi. He performed surgery on
         my leg veins. He is attentive and a true specialist in his field.
         Everything went well without pain or any issues. I will recommend him to
         everyone for getting rid of these conditions. Walk with beautiful and
         healthy legs! Wishing you health and happiness, Dr. Voitsitskyi!
+    - date: 2023-10-23T21:00:00.000Z
+      photo: /uploads/reviews/Мендрик Тетянаа.jpg
+      name: Tatiana Mendrik
+      review: >
+        Two weeks ago, at the "Mеdeira" clinic, Dr. Voіtsitskyі (phlebologist)
+        performed a varicose vein removal surgery on my leg. I was very afraid
+        it would be painful, but contrary to all my fears, the anxiety faded
+        after the first injection, which I didn't even feel. The doctor is very
+        attentive, and throughout the operation, he kept talking to me, making
+        the procedure completely painless for me. A week later, the bandages
+        were removed, an ultrasound was performed, and everything with the leg
+        is excellent. I am very grateful to Dr. Voіtsitskyi for the
+        professionally conducted surgery!
+    - date: 2023-03-08T22:00:00.000Z
+      photo: >-
+        /uploads/reviews/Screenshot_2023-12-07-12-31-53-93_dba69a5e82e939c3ddef13f99a115ca3_1.jpg
+      video: 'https://youtube.com/shorts/0TkotYwpbEs'
+      name: 'Ludmila Koval '
+      review: ''
     - date: 2023-10-08T21:00:00.000Z
       photo: /uploads/reviews/Юлія Кашпуренко.webp
       name: Yulia Kashpurenko
@@ -161,9 +253,19 @@ en:
         professionalism, the surgery and postoperative period went smoothly
         without complications. We are satisfied. Don't hesitate to seek his
         help, and stay healthy. Highly recommended!
+    - date: 2023-05-01T21:00:00.000Z
+      photo: /uploads/reviews/Ковальов Ігор Геннадійович.jpg
+      name: Igor Kovalov
+      telegram: 'https://t.me/ihor_guta'
+      review: >
+        A heartfelt thank you to Sergii Voitsitskyi for the expertly performed
+        operation. Sincere gratitude to the Oxford Medical team for their high
+        professionalism, sensitivity, and responsibility. Wishing you robust
+        health, strength, and inspiration in rescuing patients from serious
+        illnesses
     - date: 2023-09-20T21:00:00.000Z
       photo: /uploads/reviews/Людмила Мадзяновська.webp
-      name: Lyudmyla Madzianovska
+      name: Lyudmyla Medzianovska
       review: >
         I want to thank the phlebologist Dr. Voitsitskyi for the vein removal
         surgery on my leg. He is a very attentive, sensitive, and qualified
@@ -173,6 +275,27 @@ en:
         Voitsitskyi. To all those who have problems with varicose veins, I
         recommend turning to Dr. Voitsitskyi. You will be satisfied. I wish the
         doctor good health and grateful patients!
+    - date: 2023-07-17T21:00:00.000Z
+      photo: /uploads/reviews/Докаленко Тетянааa.jpg
+      name: Tetiana Dokalenko
+      review: >
+        I ended up at Dr. Voitsitskyi office by chance, having scheduled a
+        consultation. I must say I am very glad, as he is, as they say, a
+        surgeon sent from above. Despite being young, he is already a
+        professional doctor. Any surgical procedure would make anyone tremble,
+        but after the consultation and conversation with this doctor, I
+        personally felt confident that everything would be fine. Without
+        hesitation, I agreed to the scheduled surgery date. The operation itself
+        took place in an atmosphere of trust. Every manipulation was accompanied
+        by the doctor's explanations, for which I am very grateful because I was
+        internally trembling. He performed everything so precisely that even the
+        nurse present during the operation admired his magical movements over my
+        leg. Three months have passed since the operation, and I feel very
+        comfortable - bruises disappeared, and the pain is no longer troubling
+        me. I am sincerely grateful to Sergiy Yuriyovich for the professionally
+        conducted operation and sensitivity to the patient. He is the kind of
+        doctor who will advise and do everything possible to improve your
+        health. Thank you sincerely!
     - date: 2023-10-04T21:00:00.000Z
       photo: /uploads/reviews/Олена Сайног.webp
       name: Olena Saynoh
@@ -185,9 +308,9 @@ en:
         with confidence that my health was in reliable hands. His attentiveness
         as a specialist convinced me completely in my choice of a doctor. Now I
         can wholeheartedly recommend Dr. Voitsitskyi to others.
-    - date: 2023-08-31T21:00:00.000Z
+    - date: 2023-03-06T22:00:00.000Z
       photo: /uploads/reviews/Євген.webp
-      name: Evgeniy
+      name: Evgenii Boiko
       telegram: 'https://t.me/boyevg84'
       review: >
         I want to express special gratitude to Dr. SERGII VOITSITSKYI for his
@@ -196,7 +319,7 @@ en:
         after the surgery. The quality of my life has improved significantly
         after the operation. I am super happy. I highly recommend Dr. SERGII
         VOITSITSKYI. With respect to you and the entire medical staff of the
-        clinic, EVGENIY B.
+        clinic, EVGENII B.
     - date: 2023-09-22T21:00:00.000Z
       photo: /uploads/reviews/Юлія Поліно.webp
       name: Julia

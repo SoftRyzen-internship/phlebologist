@@ -1,15 +1,15 @@
 ---
 case:
-  - date: 2023-10-01T21:00:00.000Z
+  - date: 2023-12-04T22:00:00.000Z
     content:
       uk:
-        title: Результат 1
+        title: Результат 11
         description:
-          "Протягом багатьох років я мучився з варикозом. Я звертався до
-          багатьох лікарів, але жоден не зміг мені допомогти. Моєму становищу
-          сприяло безліч спроб лікування, але жодна з них не принесла бажаних
-          результатів. Варикоз став невиносним, а біль та набряки нічим не
-          давали жити. Щасливий випадок привів мене до доктора Войціцького -
+          "Олександр\n\nПротягом багатьох років я мучився з варикозом. Я
+          звертався до багатьох лікарів, але жоден не зміг мені допомогти. Моєму
+          становищу сприяло безліч спроб лікування, але жодна з них не принесла
+          бажаних результатів. Варикоз став невиносним, а біль та набряки нічим
+          не давали жити. Щасливий випадок привів мене до доктора Войціцького -
           справжнього фахівця. Він не тільки пояснив мені всі нюанси моєї
           проблеми, але й запропонував оптимальний план лікування. Завдяки
           правильно підібраному методу лікування операція пройшла швидко і
@@ -17,8 +17,11 @@ case:
           повірити своїм очам, коли через 1,5 години я знову мав здорові ноги,
           біль відступив, а набряки зникли.\n"
       en:
-        title: Result 1
+        title: Result 11
         description: >
+          Olexander
+
+
           For many years, I suffered from varicose veins. I consulted many
           doctors, but none of them could help me. My condition was exacerbated
           by numerous treatment attempts, but none of them yielded the desired
@@ -30,39 +33,117 @@ case:
           and painless, and, most importantly, left no scars. I couldn't believe
           my eyes when, after 1.5 hours, I had healthy legs again, the pain was
           gone, and the swelling disappeared.
-    before: /uploads/results/results-1-1.webp
-    after: /uploads/results/results-1-2.webp
+    before: /uploads/results/грибов_до0.jpg
+    after: /uploads/results/грибов_після.jpg
+  - date: 2023-10-01T21:00:00.000Z
+    content:
+      uk:
+        title: Результат 1
+        description:
+          "Олександр\n\nПротягом багатьох років я мучився з варикозом. Я
+          звертався до багатьох лікарів, але жоден не зміг мені допомогти. Моєму
+          становищу сприяло безліч спроб лікування, але жодна з них не принесла
+          бажаних результатів. Варикоз став невиносним, а біль та набряки нічим
+          не давали жити. Щасливий випадок привів мене до доктора Войціцького -
+          справжнього фахівця. Він не тільки пояснив мені всі нюанси моєї
+          проблеми, але й запропонував оптимальний план лікування. Завдяки
+          правильно підібраному методу лікування операція пройшла швидко і
+          безболісно, і що ще важливіше - без залишених рубців.\_ Я не міг
+          повірити своїм очам, коли через 1,5 години я знову мав здорові ноги,
+          біль відступив, а набряки зникли.\n"
+      en:
+        title: Result 1
+        description: >
+          Olexander
+
+
+          For many years, I suffered from varicose veins. I consulted many
+          doctors, but none of them could help me. My condition was exacerbated
+          by numerous treatment attempts, but none of them yielded the desired
+          results. Varicose veins had become unbearable, and the pain and
+          swelling made it impossible to live a normal life. A stroke of luck
+          led me to Dr. Voitsitskyi - a true expert. He not only explained all
+          the nuances of my problem but also offered an optimal treatment plan.
+          Thanks to the correctly chosen treatment method, the surgery was quick
+          and painless, and, most importantly, left no scars. I couldn't believe
+          my eyes when, after 1.5 hours, I had healthy legs again, the pain was
+          gone, and the swelling disappeared.
+    before: /uploads/results/грибов 2_до.jpg
+    after: /uploads/results/грибов 2_після.jpg
   - date: 2023-10-02T21:00:00.000Z
     content:
       uk:
         title: Результат 2
         description: >
+          Артем
+
+
           Варикоз став невіддільною частиною мого життя. Біль і набряки
-          супроводжували мене безперервно, і я вже подумувала, що немає виходу.
-          Тоді подруга порадила мені звернутися до Сергія Юрійовича. Цей лікар
-          не лише змінив моє життя, але й надав відчуття здорових ніг. Операція
+          супроводжували мене безперервно, і я вже подумував, що немає виходу.
+          Тоді товариш порадив мені звернутися до Сергія Юрійовича. Цей лікар не
+          лише змінив моє життя, але й надав відчуття здорових ніг. Операція
           пройшла неймовірно швидко та безболісно, і, що найголовніше, залишила
-          мінімум слідів - ніяких рубців! Лише за годину я позбулася болю та
-          набряків, і мої ноги виглядають чудово. Дякую, лікарю Юрійовичу, за
-          нове життя!
+          мінімум слідів - ніяких рубців! Лише за годину я позбувся болю та
+          набряку, і мої ноги виглядають наче цього раніше і не було. Дякую,
+          лікарю Сергію Юрійовичу, за допомогу!
       en:
         title: Result 2
         description: >
+          Artem
+
+
           Varicose veins became an inseparable part of my life. Pain and
-          swelling accompanied me continuously, and I was starting to think
-          there was no way out. Then, a friend recommended that I see Dr. Sergii
-          Yuriovych. This doctor not only changed my life but also gave me the
-          feeling of healthy legs. The surgery was incredibly fast and painless,
-          and, most importantly, it left minimal traces - no scars! In just an
-          hour, I got rid of pain and swelling, and my legs look great. Thank
-          you, Dr. Yuriovych, for giving me a new life!
-    before: /uploads/results/results-2-1.webp
-    after: /uploads/results/results-2-2.webp
+          swelling accompanied me constantly, and I was beginning to think there
+          was no way out. Then a friend advised me to consult with Dr. Sergiy
+          Yuriyovich. This doctor not only changed my life but also gave me the
+          sensation of healthy legs. The surgery was incredibly quick and
+          painless, and, most importantly, left minimal traces – no scars
+          whatsoever! In just an hour, I got rid of pain and swelling, and my
+          legs look as if they were never troubled before. Thank you, Dr. Sergiy
+          Yuriyovich, for your help!
+    before: /uploads/results/Артем 2_до.jpg
+    after: /uploads/results/Артем 2_післ.jpg
+  - date: 2023-12-05T22:00:00.000Z
+    content:
+      uk:
+        title: Результат 22
+        description: >
+          Артем
+
+
+          Варикоз став невіддільною частиною мого життя. Біль і набряки
+          супроводжували мене безперервно, і я вже подумував, що немає виходу.
+          Тоді товариш порадив мені звернутися до Сергія Юрійовича. Цей лікар не
+          лише змінив моє життя, але й надав відчуття здорових ніг. Операція
+          пройшла неймовірно швидко та безболісно, і, що найголовніше, залишила
+          мінімум слідів - ніяких рубців! Лише за годину я позбувся болю та
+          набряку, і мої ноги виглядають наче цього раніше і не було. Дякую,
+          лікарю Сергію Юрійовичу, за допомогу!
+      en:
+        title: Result 22
+        description: >
+          Artem
+
+
+          Varicose veins became an inseparable part of my life. Pain and
+          swelling accompanied me constantly, and I was beginning to think there
+          was no way out. Then a friend advised me to consult with Dr. Sergiy
+          Yuriyovich. This doctor not only changed my life but also gave me the
+          sensation of healthy legs. The surgery was incredibly quick and
+          painless, and, most importantly, left minimal traces – no scars
+          whatsoever! In just an hour, I got rid of pain and swelling, and my
+          legs look as if they were never troubled before. Thank you, Dr. Sergiy
+          Yuriyovich, for your help!
+    before: /uploads/results/Артем 3_до.jpg
+    after: /uploads/results/Артем 3_післяя.jpg
   - date: 2023-10-02T21:00:00.000Z
     content:
       uk:
         title: Результат 3
         description: >
+          Надія
+
+
           У мене вже давно був варикоз, але останнім часом ситуація стала гірше,
           і супроводжувалася сильним болем та набряками. Однак, завдяки
           рішучості звернутися до професіонала, я отримала необхідну допомогу.
@@ -77,6 +158,9 @@ case:
       en:
         title: Result 3
         description: >
+          Nadia
+
+
           I had been suffering from varicose veins for a long time, but
           recently, the situation got worse and was accompanied by severe pain
           and swelling. However, thanks to the determination to seek help from a
@@ -89,13 +173,16 @@ case:
           questions, providing the necessary support. As a result, I not only
           received high-quality treatment but also a sense of care and support
           from the doctor and his team. Thank you very much for this!
-    before: /uploads/results/results-3-1.webp
-    after: /uploads/results/results-3-2.webp
+    before: /uploads/results/берсенева_до.jpg
+    after: /uploads/results/берсенева_після.jpg
   - date: 2023-10-02T21:00:00.000Z
     content:
       uk:
         title: Результат 4
         description: >
+          Олена
+
+
           Завжди соромилась своїх ніг через вени, постійно ховала їх під одягом.
           Боялась, що після операції будуть рубці через розрізи, і це мене
           тримало від вирішального кроку. Проте коли я звернулася до лікаря, він
@@ -109,6 +196,9 @@ case:
       en:
         title: Result 4
         description: >
+          Olena
+
+
           I had always been ashamed of my legs because of the veins, constantly
           hiding them under clothing. I was afraid that there would be scars
           after the surgery due to incisions, which held me back from taking the
@@ -121,6 +211,154 @@ case:
           swelling - have become a thing of the past. Many thanks to Dr.
           Voitsitskyi for your incredible work and for giving me confidence in
           myself and healthy legs!
-    before: /uploads/results/results-4-1.webp
-    after: /uploads/results/results-4-2.webp
+    before: /uploads/results/железняк_до.jpg
+    after: /uploads/results/железняк_після.jpg
+  - date: 2022-03-01T22:00:00.000Z
+    content:
+      uk:
+        title: Результат 5
+        description: >
+          Ігор
+
+
+          Довгий час варикоз став невіддільною частиною мого життя. Біль і
+          набряки супроводжували мене щодня, але страшно боявся операції та
+          рубців і вже почав вірити, що немає виходу і треба здаватись. Мій друг
+          зробив операцію у Сергія за допомогою лазера, ось так і я в потрапив
+          до лікаря по рекомендації. З першого дня консультації я відчував надію
+          повернутися до здоров'я ніг. Лазерна процедура пройшла неймовірно
+          швидко та безболісно, а головне – не залишила слідів і мої ноги тепер
+          виглядають і відчуваються, наче ніколи не стикалися з варикозом. Лікар
+          – справжній магістр своєї справи. Його професіоналізм і турбота
+          створюють атмосферу довіри, і я відчував підтримку на кожному етапі
+          лікування. Я наполегливо рекомендую всім, хто стикається з варикозом,
+          звертатися саме до Сергія Юрійовича. Не гайте часу і приймайте важливе
+          рішення для свого здоров'я раніше
+      en:
+        title: Result 5
+        description: >
+          Igor
+
+
+          For a long time, varicose veins became an integral part of my life.
+          Daily pain and swelling made me fear surgery and scars, leading me to
+          believe there was no way out, and I should resign myself to it. A
+          friend had a laser procedure performed by Sergii, so, following their
+          recommendation, I sought his expertise. From the first consultation, I
+          felt hopeful about restoring the health of my legs.
+
+
+          The laser procedure was incredibly fast and painless, leaving no
+          traces. Now, my legs look and feel as if they never encountered
+          varicose veins. Dr. Voitsitskyi is a true master of his craft. His
+          professionalism and care create an atmosphere of trust, providing
+          support at every stage of treatment. I strongly recommend anyone
+          dealing with varicose veins to consult Dr. Voitsitskyi. Don't waste
+          time; make the crucial decision for your health sooner!
+    before: /uploads/results/гуляєв_до.jpg
+    after: /uploads/results/гуляєв_після.jpg
+  - date: 2022-02-07T22:00:00.000Z
+    content:
+      uk:
+        title: Результат 6
+        description: >
+          Ірина
+
+
+          Моя історія з лікування варикозу стала справжнім відкриттям і
+          подарунком для моєї самооцінки та комфорту. Все почалося, коли я
+          вирішила подолати відчуття важкості і болю в лівій нозі, які турбували
+          мене більше 15 років. Сама із завзяттям розпочала пошуки цієї
+          проблеми.
+
+
+          Випадково я дізналася про доктора Войціцького, флеболога, який, як
+          потім вже виявилося, лікував мою тітку за допомогою лазера. Від самого
+          початку консультації я відчула, що це – той лікар, на якого я чекала.
+          Лікар вислухав усі мої скарги і розповів про безболісний та ефективний
+          процес лікування.
+
+
+          Місцями неприємна, але безболісна і швидка процедура залишила мене
+          приємно враженою.
+
+
+          Три місяці після завершення лікування, я відчуваю себе абсолютно
+          комфортно. Біль і важкість в нозі просто зникли, а зовні і не скажеш,
+          що в мене колись був варикоз. Сергій – це справжній спаситель і
+          професіонал у своїй справі. Не вагайтеся – ваші ноги заслуговують
+          турботи та експертного лікування.
+      en:
+        title: Result 6
+        description: >
+          Irina
+
+
+          My journey through varicose vein treatment has been a true revelation
+          and a gift to my self-esteem and comfort. It all began when I decided
+          to overcome the feelings of heaviness and pain in my left leg that had
+          been bothering me for over 15 years. I embarked on a determined quest
+          to address this issue.
+
+
+          By chance, I learned about Dr. Voitsitskyi, a phlebologist, who, as it
+          turned out, had treated my aunt using laser therapy. From the very
+          start of the consultation, I felt that he was the doctor I had been
+          waiting for. He attentively listened to all my concerns and explained
+          the painless and effective treatment process.
+
+
+          The occasionally uncomfortable but painless and swift procedure left
+          me pleasantly impressed. Three months after completing the treatment,
+          I feel absolutely comfortable. The pain and heaviness in my leg have
+          simply disappeared, and outwardly, you wouldn't guess that I once had
+          varicose veins. Sergii is a true savior and professional in his field.
+          Don't hesitate – your legs deserve the care and expertise he provides.
+    before: /uploads/results/папроцька_до.jpg
+    after: /uploads/results/папроцька_після.jpg
+  - date: 2022-11-22T22:00:00.000Z
+    content:
+      uk:
+        title: Результат 7_Бершадський
+        description: >
+          Сергій
+
+
+          Моя варикозна хвороба привела мена до ускладненя – трофічної виразки,
+          але ж все ж прийняте рішення лікувати її стала не тільки визначним
+          етапом в моєму житті, але й свідченням про ефективність лазерного
+
+          лікування від лікаря Войціцького.
+
+
+          Більше року тому я вирішив звернутися до професіонала через збільшення
+          болю та несприятливий стан шкіри на моїй нозі, який виявився трофічною
+          виразкою, що виникла на фоні варикозної хвороби. Процедура лазерного
+          лікування була неочікувано безболісною і, що найголовніше,
+          результативною. Больові відчуття в ділянці виразки зникли, а шкіра
+          стала значно світлішою та здоровішою вже через декілька тижнів після
+          операції.
+
+
+          Я щиро рекомендую всім, хто стикається з проблемами варикозу,
+          звертатися саме до флеболога Войціцького.
+      en:
+        title: Result 7 Бершадський
+        description: >
+          Sergii
+
+
+          My varicose vein condition led to complications – a trophic ulcer, yet
+          the decision to treat it became not only a defining moment in my life
+          but also evidence of the effectiveness of laser treatment by Dr.
+          Voitsitskyi. Over a year ago, I decided to seek professional help due
+          to increasing pain and adverse skin conditions on my leg, which turned
+          out to be a trophic ulcer arising from varicose veins. The laser
+          treatment procedure was unexpectedly painless and, most importantly,
+          effective. Painful sensations in the ulcer area disappeared, and the
+          skin became significantly lighter and healthier just a few weeks after
+          the operation. I sincerely recommend anyone dealing with varicose vein
+          issues to turn to Phlebologist Voitsitskyi.
+    before: /uploads/results/бершадський_до.jpg
+    after: /uploads/results/бершадський_після.jpg
 ---

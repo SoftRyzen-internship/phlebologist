@@ -11,7 +11,7 @@ Technologies used:
 
 ## Design Layout
 
-_(in progress)_
+[Figma](https://www.figma.com/file/bNPI6P1GKpYdnDjYJYV5AO/Medical-web-site)
 
 ## Getting Started
 

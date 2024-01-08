@@ -802,7 +802,7 @@
     "metadata": {
       "title": "Лікування варикозу в Києві | Судинний хірург - Сергій Войціцький",
       "description": "Консультація лікаря флеболога. Ефективне лікування варикозу, сучасне обладнання, комфортні умови. Доступна ціна. Лікування тромбозу.",
-      "base": "https://phlebologist.vercel.app/",
+      "base": "https://doctor-voitsitskyi.com.ua/",
       "keywords": "флеболог, тромбоз, варикоз"
     },
     "twitter": {
@@ -810,7 +810,7 @@
       "card": "summary_large_image",
       "images": [
         {
-          "url": "https://phlebologist.vercel.app/images/ogp-image.jpg",
+          "url": "https://doctor-voitsitskyi.com.ua/images/ogp-image.jpg",
           "width": 1200,
           "height": 630,
           "alt": "Лікування варикозу в Києві | Судинний хірург - Сергій Войціцький"
@@ -821,7 +821,7 @@
     "openGraph": {
       "images": [
         {
-          "url": "https://phlebologist.vercel.app/images/ogp-image.jpg",
+          "url": "https://doctor-voitsitskyi.com.ua/images/ogp-image.jpg",
           "width": 1200,
           "height": 630,
           "alt": "Лікування варикозу в Києві | Судинний хірург - Сергій Войціцький"
@@ -831,7 +831,7 @@
       "type": "website",
       "locale": "uk_UA",
       "title": "Лікування варикозу в Києві | Судинний хірург - Сергій Войціцький",
-      "url": "https://phlebologist.vercel.app/uk"
+      "url": "https://doctor-voitsitskyi.com.ua/uk"
     }
   }
 }
